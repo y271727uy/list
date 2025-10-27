@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "list:block/fishpond_core" }
+  }
+}
