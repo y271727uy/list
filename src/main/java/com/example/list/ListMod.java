@@ -8,9 +8,13 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.ChatFormatting;
 
 @Mod(ListMod.MODID)
 public class ListMod
@@ -55,7 +59,17 @@ public class ListMod
             event.accept(ModItems.INDUSTRIAL_GOLD_CREDIT.get());
             event.accept(ModItems.INDUSTRIAL_PLATINUM_CREDIT.get());
             event.accept(ModItems.INDUSTRIAL_OSMIUM_CREDIT.get());
+            event.accept(ModItems.JUST_BREAD.get());
             event.accept(ModItems.FISHPOND_CORE.get());
+        }
+    }
+    
+    @SubscribeEvent
+    public void onItemTooltip(ItemTooltipEvent event) {
+        if (event.getItemStack().getItem() == ModItems.JUST_BREAD.get()) {
+            event.getToolTip().add(Component.translatable("item.list.just_bread.desc.1").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+            event.getToolTip().add(Component.translatable("item.list.just_bread.desc.2").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+            event.getToolTip().add(Component.translatable("item.list.just_bread.desc.3").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
         }
     }
     
