@@ -7,6 +7,11 @@
   "item.list.industrial_osmium_credit": "工业锇币",
   "block.list.fishpond_core": "养殖塘控制器",
   "item.list.just_bread": "平平无奇的面包",
+  "item.list.food_star": "食物之星",
+  "item.list.fishery_star": "渔业之星",
+  "item.list.farming_star": "农夫之星",
+  "item.list.forestry_star": "林业之星",
+  "item.list.wealth_star": "财富之星",
   "item.list.just_bread.desc.1": "它只是一块面包，一块平平无奇的面包；",
   "item.list.just_bread.desc.2": "吃下它，你将不再面临饥饿；",
   "item.list.just_bread.desc.3": "但那熟悉的麦香，早已消散。"

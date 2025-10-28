@@ -7,6 +7,11 @@
   "item.list.industrial_osmium_credit": "Industrial Osmium Credit",
   "block.list.fishpond_core": "Fishpond Core",
   "item.list.just_bread": "Just bread",
+  "item.list.food_star": "Food Star",
+  "item.list.fishery_star": "Fishery Star",
+  "item.list.farming_star": "Farming Star",
+  "item.list.forestry_star": "Forestry Star",
+  "item.list.wealth_star": "Wealth Star",
   "item.list.just_bread.desc.1": "It's just a piece of bread, an ordinary, unremarkable piece of bread;",
   "item.list.just_bread.desc.2": "Eat it, and you will no longer feel hungry;",
   "item.list.just_bread.desc.3": "But that familiar aroma of wheat has long since faded."

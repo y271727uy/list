@@ -33,6 +33,26 @@ public class ModItems {
     // 平平无奇的面包
     public static final RegistryObject<Item> JUST_BREAD = 
         ITEMS.register("just_bread", () -> new ModItemsExtensions.GlowingItem(new Item.Properties().rarity(net.minecraft.world.item.Rarity.EPIC)));
+        
+    // 食物之星
+    public static final RegistryObject<Item> FOOD_STAR = 
+        ITEMS.register("food_star", () -> new ModItemsExtensions.GlowingItem(new Item.Properties().rarity(net.minecraft.world.item.Rarity.EPIC)));
+        
+    // 渔业之星
+    public static final RegistryObject<Item> FISHERY_STAR = 
+        ITEMS.register("fishery_star", () -> new ModItemsExtensions.GlowingItem(new Item.Properties().rarity(net.minecraft.world.item.Rarity.EPIC)));
+        
+    // 农夫之星
+    public static final RegistryObject<Item> FARMING_STAR = 
+        ITEMS.register("farming_star", () -> new ModItemsExtensions.GlowingItem(new Item.Properties().rarity(net.minecraft.world.item.Rarity.EPIC)));
+        
+    // 林业之星
+    public static final RegistryObject<Item> FORESTRY_STAR = 
+        ITEMS.register("forestry_star", () -> new ModItemsExtensions.GlowingItem(new Item.Properties().rarity(net.minecraft.world.item.Rarity.EPIC)));
+        
+    // 财富之星
+    public static final RegistryObject<Item> WEALTH_STAR = 
+        ITEMS.register("wealth_star", () -> new ModItemsExtensions.GlowingItem(new Item.Properties().rarity(net.minecraft.world.item.Rarity.EPIC)));
 
     // 养殖塘控制器方块物品
     public static final RegistryObject<Item> FISHPOND_CORE = 

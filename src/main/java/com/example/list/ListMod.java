@@ -60,6 +60,11 @@ public class ListMod
             event.accept(ModItems.INDUSTRIAL_PLATINUM_CREDIT.get());
             event.accept(ModItems.INDUSTRIAL_OSMIUM_CREDIT.get());
             event.accept(ModItems.JUST_BREAD.get());
+            event.accept(ModItems.FOOD_STAR.get());
+            event.accept(ModItems.FISHERY_STAR.get());
+            event.accept(ModItems.FARMING_STAR.get());
+            event.accept(ModItems.FORESTRY_STAR.get());
+            event.accept(ModItems.WEALTH_STAR.get());
             event.accept(ModItems.FISHPOND_CORE.get());
         }
     }
