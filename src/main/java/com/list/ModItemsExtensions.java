@@ -1,4 +1,4 @@
-package com.example.list;
+package com.list;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

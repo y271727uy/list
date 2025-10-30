@@ -1,4 +1,4 @@
-package com.example.list;
+package com.list;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -9,7 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = 
         DeferredRegister.create(ForgeRegistries.ITEMS, ListMod.MODID);
-    
+
     // 工业铜币
     public static final RegistryObject<Item> INDUSTRIAL_COPPER_CREDIT = 
         ITEMS.register("industrial_copper_credit", () -> new Item(new Item.Properties()));
@@ -53,8 +53,25 @@ public class ModItems {
     // 财富之星
     public static final RegistryObject<Item> WEALTH_STAR = 
         ITEMS.register("wealth_star", () -> new ModItemsExtensions.GlowingItem(new Item.Properties().rarity(net.minecraft.world.item.Rarity.EPIC)));
+        
+    // 养殖之星
+    public static final RegistryObject<Item> ANIMAL_HUSBANDRY_STAR = 
+        ITEMS.register("animal_husbandry_star", () -> new ModItemsExtensions.GlowingItem(new Item.Properties().rarity(net.minecraft.world.item.Rarity.EPIC)));
+        
+    // Farmer's Ranch: Pastoral Serenade之星
+    public static final RegistryObject<Item> FARMERS_RANCH_STAR = 
+        ITEMS.register("farmers_ranch_star", () -> new ModItemsExtensions.GlowingItem(new Item.Properties().rarity(net.minecraft.world.item.Rarity.EPIC)));
+
+    // 技术性屏蔽物品
+    public static final RegistryObject<Item> BAD_ITEM =
+            ITEMS.register("bad_item", () -> new ModItemsExtensions.GlowingItem(new Item.Properties().rarity(net.minecraft.world.item.Rarity.EPIC)));
 
     // 养殖塘控制器方块物品
     public static final RegistryObject<Item> FISHPOND_CORE = 
         ITEMS.register("fishpond_core", () -> new BlockItem(ModBlocks.FISHPOND_CORE.get(), new Item.Properties()));
+
+    // 温室加热炉
+    public static final RegistryObject<Item> GREENHOUSE_FURNACE =
+            ITEMS.register("greenhouse_furnace", () -> new BlockItem(ModBlocks.GREENHOUSE_FURNACE.get(), new Item.Properties()));
+
 }

@@ -1,5 +1,6 @@
-package com.example.list;
+package com.list;
 
+import com.list.block.entity.ModBlockEntities;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -32,6 +33,9 @@ public class ListMod
         // 注册方块
         ModBlocks.BLOCKS.register(modEventBus);
         
+        // 注册方块实体
+        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        
         // 注册创造模式物品栏
         ModCreativeModeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         
@@ -58,6 +62,10 @@ public class ListMod
             event.accept(ModItems.INDUSTRIAL_SILVER_CREDIT.get());
             event.accept(ModItems.INDUSTRIAL_GOLD_CREDIT.get());
             event.accept(ModItems.INDUSTRIAL_PLATINUM_CREDIT.get());
+            event.accept(ModItems.INDUSTRIAL_COPPER_CREDIT.get());
+            event.accept(ModItems.INDUSTRIAL_SILVER_CREDIT.get());
+            event.accept(ModItems.INDUSTRIAL_GOLD_CREDIT.get());
+            event.accept(ModItems.INDUSTRIAL_PLATINUM_CREDIT.get());
             event.accept(ModItems.INDUSTRIAL_OSMIUM_CREDIT.get());
             event.accept(ModItems.JUST_BREAD.get());
             event.accept(ModItems.FOOD_STAR.get());
@@ -65,7 +73,11 @@ public class ListMod
             event.accept(ModItems.FARMING_STAR.get());
             event.accept(ModItems.FORESTRY_STAR.get());
             event.accept(ModItems.WEALTH_STAR.get());
+            event.accept(ModItems.ANIMAL_HUSBANDRY_STAR.get());
+            event.accept(ModItems.FARMERS_RANCH_STAR.get());
             event.accept(ModItems.FISHPOND_CORE.get());
+            event.accept(ModItems.GREENHOUSE_FURNACE.get());
+            // 注意：BAD_ITEM 故意不添加到创造模式物品栏
         }
     }
     
@@ -75,6 +87,11 @@ public class ListMod
             event.getToolTip().add(Component.translatable("item.list.just_bread.desc.1").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
             event.getToolTip().add(Component.translatable("item.list.just_bread.desc.2").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
             event.getToolTip().add(Component.translatable("item.list.just_bread.desc.3").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+        } else if (event.getItemStack().getItem() == ModItems.FARMERS_RANCH_STAR.get()) {
+            event.getToolTip().add(Component.translatable("item.list.farmers_ranch_star.desc.1").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+            event.getToolTip().add(Component.translatable("item.list.farmers_ranch_star.desc.2").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+        } else if (event.getItemStack().getItem() == ModItems.BAD_ITEM.get()) {
+            event.getToolTip().add(Component.translatable("item.list.bad_item.desc").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
         }
     }
     

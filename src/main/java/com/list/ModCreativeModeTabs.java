@@ -1,4 +1,4 @@
-package com.example.list;
+package com.list;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
