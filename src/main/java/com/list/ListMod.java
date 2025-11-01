@@ -1,6 +1,8 @@
 package com.list;
 
 import com.list.block.entity.ModBlockEntities;
+import com.list.network.ModMessages;
+import com.list.ModMenus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -36,6 +38,9 @@ public class ListMod
         // 注册方块实体
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         
+        // 注册菜单
+        ModMenus.MENUS.register(modEventBus);
+        
         // 注册创造模式物品栏
         ModCreativeModeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         
@@ -53,6 +58,7 @@ public class ListMod
     
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        ModMessages.register();
         LOGGER.info("List Mod setup complete");
     }
     
