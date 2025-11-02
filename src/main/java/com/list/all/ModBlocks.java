@@ -3,6 +3,7 @@ package com.list.all;
 import com.list.block.FishPondCoreBlock;
 import com.list.block.GreenhouseFurnaceBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 
@@ -26,6 +27,7 @@ public class ModBlocks {
             ).texture("particle", provider.mcLoc("block/blast_furnace_top"));
             provider.horizontalBlock(ctx.get(), model);
         })
+        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
         .register();
 
     public static final BlockEntry<FishPondCoreBlock> FISHPOND_CORE = REGISTRATE
@@ -44,6 +46,7 @@ public class ModBlocks {
             ).texture("particle", provider.mcLoc("block/smooth_stone"));
             provider.horizontalBlock(ctx.get(), model);
         })
+        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
         .register();
 
 
