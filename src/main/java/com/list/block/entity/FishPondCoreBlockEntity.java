@@ -1,10 +1,7 @@
 package com.list.block.entity;
 
-import com.list.world.inventory.FishpondcoreMenu;
-import io.netty.buffer.Unpooled;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
@@ -14,6 +11,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -25,8 +23,8 @@ public class FishPondCoreBlockEntity extends BlockEntity implements MenuProvider
     private final ItemStackHandler itemHandler = new ItemStackHandler(15);
     private final LazyOptional<IItemHandler> handlerOptional = LazyOptional.of(() -> itemHandler);
     
-    public FishPondCoreBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.FISH_POND_CORE_BE.get(), pos, state);
+    public FishPondCoreBlockEntity(BlockEntityType<FishPondCoreBlockEntity> type, BlockPos pos, BlockState state) {
+        super(type, pos, state);
     }
     
     @Override
@@ -46,7 +44,7 @@ public class FishPondCoreBlockEntity extends BlockEntity implements MenuProvider
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
         net.minecraft.network.FriendlyByteBuf buffer = new net.minecraft.network.FriendlyByteBuf(io.netty.buffer.Unpooled.buffer());
         buffer.writeBlockPos(this.worldPosition);
-        return new FishpondcoreMenu(id, inventory, buffer);
+        return null;
     }
 
     @Override

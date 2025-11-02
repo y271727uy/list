@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/blast_furnace_top",
+    "east": "minecraft:block/blast_furnace_side",
+    "north": "list:block/greenhouse_furnace/greenhouse_furnace",
+    "particle": "minecraft:block/blast_furnace_top",
+    "south": "minecraft:block/blast_furnace_side",
+    "up": "minecraft:block/blast_furnace_top",
+    "west": "minecraft:block/blast_furnace_side"
+  }
+}

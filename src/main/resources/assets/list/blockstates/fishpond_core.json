@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "list:block/fishpond_core" },
-    "facing=south": { "model": "list:block/fishpond_core", "y": 180 },
-    "facing=west": { "model": "list:block/fishpond_core", "y": 270 },
-    "facing=east": { "model": "list:block/fishpond_core", "y": 90 }
-  }
-}

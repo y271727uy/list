@@ -1,8 +1,12 @@
 package com.list;
 
-import com.list.block.entity.ModBlockEntities;
+import com.list.all.ModBlockEntities;
+import com.list.all.ModBlocks;
+import com.list.all.ModCreativeModeTabs;
+import com.list.all.ModItems;
+import com.list.data.ModDataGen;
 import com.list.network.ModMessages;
-import com.list.ModMenus;
+import com.tterrag.registrate.Registrate;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -10,13 +14,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
-import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.ChatFormatting;
 
 @Mod(ListMod.MODID)
@@ -24,31 +25,19 @@ public class ListMod
 {
     public static final String MODID = "list";
     private static final Logger LOGGER = LogUtils.getLogger();
+
+    public static final Registrate REGISTRATE = Registrate.create(MODID);
     
     public ListMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        
-        // 注册物品
-        ModItems.ITEMS.register(modEventBus);
-        
-        // 注册方块
-        ModBlocks.BLOCKS.register(modEventBus);
-        
-        // 注册方块实体
-        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
-        
-        // 注册菜单
-        ModMenus.MENUS.register(modEventBus);
-        
-        // 注册创造模式物品栏
-        ModCreativeModeTabs.CREATIVE_MODE_TABS.register(modEventBus);
+        ModItems.register();
+        ModBlocks.register();
+        ModBlockEntities.register();
+        ModCreativeModeTabs.register();
         
         // 注册通用设置事件
         modEventBus.addListener(this::commonSetup);
-        
-        // 注册创造模式物品栏内容事件
-        modEventBus.addListener(this::addCreative);
         
         // 注册服务器启动事件
         MinecraftForge.EVENT_BUS.register(this);
@@ -56,37 +45,13 @@ public class ListMod
         //我不到啊，我和ai还有mcreator一起拉了泡大的
         
         LOGGER.info("List Mod initialized");
+
+        ModDataGen.init();
     }
     
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
+    private void commonSetup(final FMLCommonSetupEvent event) {
         ModMessages.register();
         LOGGER.info("List Mod setup complete");
-    }
-    
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTab() == ModCreativeModeTabs.LIST_TAB.get()) {
-            event.accept(ModItems.INDUSTRIAL_COPPER_CREDIT.get());
-            event.accept(ModItems.INDUSTRIAL_SILVER_CREDIT.get());
-            event.accept(ModItems.INDUSTRIAL_GOLD_CREDIT.get());
-            event.accept(ModItems.INDUSTRIAL_PLATINUM_CREDIT.get());
-            event.accept(ModItems.INDUSTRIAL_COPPER_CREDIT.get());
-            event.accept(ModItems.INDUSTRIAL_SILVER_CREDIT.get());
-            event.accept(ModItems.INDUSTRIAL_GOLD_CREDIT.get());
-            event.accept(ModItems.INDUSTRIAL_PLATINUM_CREDIT.get());
-            event.accept(ModItems.INDUSTRIAL_OSMIUM_CREDIT.get());
-            event.accept(ModItems.JUST_BREAD.get());
-            event.accept(ModItems.FOOD_STAR.get());
-            event.accept(ModItems.FISHERY_STAR.get());
-            event.accept(ModItems.FARMING_STAR.get());
-            event.accept(ModItems.FORESTRY_STAR.get());
-            event.accept(ModItems.WEALTH_STAR.get());
-            event.accept(ModItems.ANIMAL_HUSBANDRY_STAR.get());
-            event.accept(ModItems.FARMERS_RANCH_STAR.get());
-            event.accept(ModItems.FISHPOND_CORE.get());
-            event.accept(ModItems.GREENHOUSE_FURNACE.get());
-            // 注意：BAD_ITEM 故意不添加到创造模式物品栏
-        }
     }
     
     @SubscribeEvent
