@@ -52,6 +52,8 @@ public class ListMod
         
         // 注册服务器启动事件
         MinecraftForge.EVENT_BUS.register(this);
+
+        //我不到啊，我和ai还有mcreator一起拉了泡大的
         
         LOGGER.info("List Mod initialized");
     }
