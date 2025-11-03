@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "list:item/industrial_gold_credit"
+    "layer0": "list:item/credit/industrial_gold_credit"
   }
 }

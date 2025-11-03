@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "list:item/farmers_ranch_star"
+    "layer0": "list:item/special_item/farmers_ranch_star"
   }
 }

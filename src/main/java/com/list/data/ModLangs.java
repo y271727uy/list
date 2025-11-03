@@ -7,5 +7,8 @@ public class ModLangs {
         provider.add("item.list.just_bread.desc.1", "It's just a piece of bread, an ordinary, unremarkable piece of bread;");
         provider.add("item.list.just_bread.desc.2", "Eat it, and you will no longer feel hungry;");
         provider.add("item.list.just_bread.desc.3", "But that familiar aroma of wheat has long since faded.");
+        provider.add("item.list.farmers_ranch_star.desc.1","§7§oA star synthesized through countless hardships, it is light with unknown mass.");
+        provider.add("item.list.farmers_ranch_star.desc.2", "§7§oThank you for playing the Farmer's Ranch: Pastoral Serenade modpack. The entire development team and contributors send their regards.");
+        provider.add("item.list.bad_item.desc", "§7§oTechnical item, please do not attempt to obtain");
     }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "list:item/animal_husbandry_star"
+    "layer0": "list:item/special_item/animal_husbandry_star"
   }
 }
