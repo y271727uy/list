@@ -95,6 +95,13 @@ public class ModItems {
         .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/farmers_ranch_star")))
         .register();
 
+    //皇帝蟹
+    public static final ItemEntry<Item> EMPEROR_CRAB = REGISTRATE
+            .item("emperor_crab", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/crustacean/emperor_crab")))
+            .register();
+
+
     // 技术性屏蔽物品
     public static final ItemEntry<GlowingItem> BAD_ITEM = REGISTRATE
         .item("bad_item", GlowingItem::new)

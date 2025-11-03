@@ -27,6 +27,8 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.WEALTH_STAR.get());
                 output.accept(ModItems.ANIMAL_HUSBANDRY_STAR.get());
                 output.accept(ModItems.FARMERS_RANCH_STAR.get());
+                output.accept(ModItems.EMPEROR_CRAB.get());
+                //方块下面
                 output.accept(ModBlocks.FISHPOND_CORE.get());
                 output.accept(ModBlocks.GREENHOUSE_FURNACE.get());
             });
