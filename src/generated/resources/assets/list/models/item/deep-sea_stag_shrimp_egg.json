@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "list:item/fish_egg/crustacean/shrimp/deep-sea_stag_shrimp_egg"
+  }
+}

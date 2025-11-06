@@ -22,5 +22,28 @@
   "item.list.just_bread.desc.1": "它只是一块面包，一块平平无奇的面包；",
   "item.list.just_bread.desc.2": "吃下它，你将不再面临饥饿；",
   "item.list.just_bread.desc.3": "但那熟悉的麦香，早已消散。",
-  "item.list.emperor_crab": "皇帝蟹"
+  "item.list.emperor_crab": "皇帝蟹",
+  "item.list.jonah_crab": "面包蟹",
+  "item.list.pelagic_swimming_crab": "花蟹",
+  "item.list.dungeness_crab": "珍宝蟹",
+  "item.list.swimming_crab": "梭子蟹",
+  "item.list.hermit_crab": "寄居蟹",
+  "item.list.river_crab": "河蟹",
+
+  "item.list.river_shrimp": "河虾",
+  "item.list.conch": "海螺",
+
+  "item.list.emperor_crab_egg": "皇帝蟹卵",
+  "item.list.jonah_crab_egg": "面包蟹卵",
+  "item.list.pelagic_swimming_crab_egg": "花蟹卵",
+  "item.list.dungeness_crab_egg": "珍宝蟹卵",
+  "item.list.swimming_crab_egg": "梭子蟹卵",
+  "item.list.hermit_crab_egg": "寄居蟹卵",
+  "item.list.river_crab_egg": "河蟹卵",
+  "item.list.blue_lobster_egg": "蓝龙虾卵",
+  "item.list.marbled_lobster_egg": "锦绣龙虾卵",
+  "item.list.deep-sea_stag_shrimp_egg": "深海鳌虾卵",
+  "item.list.vannamei_shrimp_egg": "基围虾卵",
+  "item.list.mantis_shrimp_egg": "濑尿虾卵",
+  "item.list.river_shrimp_egg": "河虾卵"
 }
