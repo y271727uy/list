@@ -91,6 +91,7 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems.青花鱼.get());
                 //output.accept(ModItems.桂鱼.get());
                 //output.accept(ModItems.带鱼.get());
+                //output.accept(ModItems.大马哈鱼.get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
