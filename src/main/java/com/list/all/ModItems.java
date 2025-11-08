@@ -300,7 +300,7 @@ public class ModItems {
 
     //草鱼卵
     public static final ItemEntry<EggItem> GRASS_CARO_EGG = REGISTRATE
-            .item("grass_carp_roe", p -> new EggItem(p, 0xAFAF60))
+            .item("grass_carp_egg", p -> new EggItem(p, 0xAFAF60))
             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
