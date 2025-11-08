@@ -29,11 +29,11 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.FARMERS_RANCH_STAR.get());
                 output.accept(ModItems.EMPEROR_CRAB.get());
                 output.accept(ModItems.JONAH_CRAB.get());
-                //output.accept(ModItems.花蟹.get());
-                //output.accept(ModItems.珍宝蟹.get());
+                output.accept(ModItems.PELAGIC_SWIMMING_CRAB.get());
+                output.accept(ModItems.DUNGENESS_CRAB.get());
                 output.accept(ModItems.SWIMMING_CRAB.get());
                 output.accept(ModItems.HERMIT_CRAB.get());
-                //output.accept(ModItems.河蟹.get());
+                output.accept(ModItems.RIVER_CRAB.get());
                 //output.accept(ModItems.蓝龙虾.get());
                 //output.accept(ModItems.锦绣龙虾.get());
                 //output.accept(ModItems.深海鳌虾.get());

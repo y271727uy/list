@@ -113,6 +113,17 @@ public class ModItems {
             .item("jonah_crab", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/crustacean/jonah_crab")))
             .register();
+    //花蟹
+    public static final ItemEntry<Item> PELAGIC_SWIMMING_CRAB = REGISTRATE
+            .item("pelagic_swimming_crab", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/crustacean/pelagic_swimming_crab")))
+            .register();
+
+    //珍宝蟹
+    public static final ItemEntry<Item> DUNGENESS_CRAB = REGISTRATE
+            .item("dungeness_crab", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/crustacean/dungeness_crab")))
+            .register();
 
     //梭子蟹
     public static final ItemEntry<Item> SWIMMING_CRAB = REGISTRATE
@@ -124,6 +135,12 @@ public class ModItems {
     public static final ItemEntry<Item> HERMIT_CRAB = REGISTRATE
             .item("hermit_crab", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/crustacean/hermit_crab")))
+            .register();
+
+    //河蟹
+    public static final ItemEntry<Item> RIVER_CRAB = REGISTRATE
+            .item("river_crab", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/crustacean/river_crab")))
             .register();
 
     //河虾
