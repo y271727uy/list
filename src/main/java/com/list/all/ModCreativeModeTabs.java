@@ -130,37 +130,37 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.PACIFIC_SAURY_EGG.get());
                 output.accept(ModItems.FIRE_RAT_FISH_EGG.get());
                 output.accept(ModItems.ICETHORN_FISH_EGG.get());
-                //output.accept(ModItems.蛇鱼卵.get());
-                //output.accept(ModItems.红鲷鱼卵.get());
-                //output.accept(ModItems.魔鬼鱼卵.get());
-                //output.accept(ModItems.长颌鲚卵.get());
-                //output.accept(ModItems.小银鱼卵.get());
-                //output.accept(ModItems.胭脂鱼卵.get());
-                //output.accept(ModItems.凤尾鱼卵.get());
-                //output.accept(ModItems.马面鱼卵.get());
-                //output.accept(ModItems.黄鳝卵.get());
-                //output.accept(ModItems.鲽鱼卵.get());
-                //output.accept(ModItems.乌青鱼卵.get());
-                //output.accept(ModItems.鳊鱼卵.get());
-                //output.accept(ModItems.沙丁鱼卵.get());
-                //output.accept(ModItems.海鲈鱼卵.get());
-                //output.accept(ModItems.红歌鲤卵.get());
-                //output.accept(ModItems.巴浪鱼卵.get());
-                //output.accept(ModItems.三刀鱼卵.get());
-                //output.accept(ModItems.马头鱼卵.get());
-                //output.accept(ModItems.花英斑卵.get());
-                //output.accept(ModItems.深海鲑鱼卵.get());
-                //output.accept(ModItems.蓝飞鱼卵.get());
-                //output.accept(ModItems.飞鱼卵.get());
-                //output.accept(ModItems.雨鱼卵.get());
-                //output.accept(ModItems.白条鱼卵.get());
-                //output.accept(ModItems.赤魟卵.get());
-                //output.accept(ModItems.针鱼卵.get());
-                //output.accept(ModItems.龙利鱼卵.get());
-                //output.accept(ModItems.青花鱼卵.get());
-                //output.accept(ModItems.桂鱼卵.get());
-                //output.accept(ModItems.带鱼卵.get());
-                //output.accept(ModItems.大马哈鱼卵.get());
+                //output.accept(ModItems.SNAKEHEAD_FISH_EGG.get());          // 蛇鱼卵
+                //output.accept(ModItems.RED_SNAPPER_EGG.get());             // 红鲷鱼卵
+                //output.accept(ModItems.DEVIL_RAY_EGG.get());               // 魔鬼鱼卵
+                //output.accept(ModItems.LONGJAW_COILIA_EGG.get());          // 长颌鲚卵
+                //output.accept(ModItems.SMALL_WHITEBAIT_EGG.get());         // 小银鱼卵
+                //output.accept(ModItems.ROSY_BARB_EGG.get());               // 胭脂鱼卵
+                //output.accept(ModItems.ANCHOVY_EGG.get());                 // 凤尾鱼卵
+                //output.accept(ModItems.HORSEFACE_FISH_EGG.get());          // 马面鱼卵
+                //output.accept(ModItems.RICE_PADDY_EEL_EGG.get());          // 黄鳝卵
+                //output.accept(ModItems.SOLE_FISH_EGG.get());               // 鲽鱼卵
+                //output.accept(ModItems.BLACK_AMUR_BREAM_EGG.get());        // 乌青鱼卵
+                //output.accept(ModItems.BREAM_EGG.get());                   // 鳊鱼卵
+                //output.accept(ModItems.SARDINE_EGG.get());                 // 沙丁鱼卵
+                //output.accept(ModItems.SEA_BASS_EGG.get());                // 海鲈鱼卵
+                //output.accept(ModItems.RED_SONG_CARP_EGG.get());           // 红歌鲤卵
+                //output.accept(ModItems.BARRACUDA_EGG.get());               // 巴浪鱼卵
+                //output.accept(ModItems.THREE_KNIFE_FISH_EGG.get());        // 三刀鱼卵
+                //output.accept(ModItems.HORSEHEAD_FISH_EGG.get());          // 马头鱼卵
+                //output.accept(ModItems.FLOWER_SPOTTED_GROUPER_EGG.get());  // 花英斑卵
+                //output.accept(ModItems.DEEP_SEA_SALMON_EGG.get());         // 深海鲑鱼卵
+                //output.accept(ModItems.BLUE_FLYING_FISH_EGG.get());        // 蓝飞鱼卵
+                //output.accept(ModItems.FLYING_FISH_EGG.get());             // 飞鱼卵
+                //output.accept(ModItems.RAINFISH_EGG.get());                // 雨鱼卵
+                //output.accept(ModItems.WHITE_STRIPE_FISH_EGG.get());       // 白条鱼卵
+                //output.accept(ModItems.RED_STINGRAY_EGG.get());            // 赤魟卵
+                //output.accept(ModItems.NEEDLEFISH_EGG.get());              // 针鱼卵
+                //output.accept(ModItems.SOLE_FISH_EGG.get());               // 龙利鱼卵
+                //output.accept(ModItems.CHUB_MACKEREL_EGG.get());           // 青花鱼卵
+                //output.accept(ModItems.MANDARIN_FISH_EGG.get());           // 桂鱼卵
+                //output.accept(ModItems.HAIRTAIL_EGG.get());                // 带鱼卵
+                //output.accept(ModItems.CHUM_SALMON_EGG.get());             // 大马哈鱼卵
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
