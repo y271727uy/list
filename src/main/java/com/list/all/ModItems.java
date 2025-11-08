@@ -105,6 +105,12 @@ public class ModItems {
         .model((ctx, provider) -> provider.generated(ctx::get, provider.mcLoc("item/book")))
         .register();
 
+    //照抄
+    public static final ItemEntry<EggItem> TEST_EGG = REGISTRATE
+            .item("test_egg", p -> new EggItem(p, 0x55ffff))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
     //皇帝蟹
     public static final ItemEntry<Item> EMPEROR_CRAB = REGISTRATE
             .item("emperor_crab", Item::new)
@@ -292,10 +298,17 @@ public class ModItems {
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish_egg/crustacean/shrimp/river_shrimp_egg")))
             .register();
 
-    public static final ItemEntry<EggItem> TEST_EGG = REGISTRATE
-        .item("test_egg", p -> new EggItem(p, 0x55ffff))
-        .model(ItemModelUtil::eggItemModel)
-        .register();
+    //草鱼卵
+    public static final ItemEntry<EggItem> GRASS_CARO_ROE = REGISTRATE
+            .item("grass_carp_roe", p -> new EggItem(p, 0xAFAF60))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+
 
 
 
