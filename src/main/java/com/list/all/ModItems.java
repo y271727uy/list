@@ -1,7 +1,10 @@
 package com.list.all;
 
+import com.list.item.EggItem;
 import com.list.item.GlowingItem;
+import com.list.util.ItemModelUtil;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 
@@ -129,7 +132,7 @@ public class ModItems {
     //河虾
     public static final ItemEntry<Item> RIVER_SHRIMP = REGISTRATE
             .item("river_shrimp", Item::new)
-            .properties(p -> p.food(new net.minecraft.world.food.FoodProperties.Builder()
+            .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -145,7 +148,7 @@ public class ModItems {
     //皇帝蟹卵
     public static final ItemEntry<Item> EMPEROR_CRAB_EGG = REGISTRATE
             .item("emperor_crab_egg", Item::new)
-             .properties(p -> p.food(new net.minecraft.world.food.FoodProperties.Builder()
+             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -155,7 +158,7 @@ public class ModItems {
     //面包蟹卵
     public static final ItemEntry<Item> JONAH_CRAB_EGG = REGISTRATE
             .item("jonah_crab_egg", Item::new)
-             .properties(p -> p.food(new net.minecraft.world.food.FoodProperties.Builder()
+             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -165,7 +168,7 @@ public class ModItems {
     //花蟹卵
     public static final ItemEntry<Item> PELAGIC_SWIMMING_CRAB_EGG = REGISTRATE
             .item("pelagic_swimming_crab_egg", Item::new)
-             .properties(p -> p.food(new net.minecraft.world.food.FoodProperties.Builder()
+             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -175,7 +178,7 @@ public class ModItems {
     //珍宝蟹卵
     public static final ItemEntry<Item> DUNGENESS_CRAB_EGG = REGISTRATE
             .item("dungeness_crab_egg", Item::new)
-             .properties(p -> p.food(new net.minecraft.world.food.FoodProperties.Builder()
+             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -185,7 +188,7 @@ public class ModItems {
     //梭子蟹卵
     public static final ItemEntry<Item> SWIMMING_CRAB_EGG = REGISTRATE
             .item("swimming_crab_egg", Item::new)
-             .properties(p -> p.food(new net.minecraft.world.food.FoodProperties.Builder()
+             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -195,7 +198,7 @@ public class ModItems {
     //寄居蟹卵
     public static final ItemEntry<Item> HERMIT_CRAB_EGG = REGISTRATE
             .item("hermit_crab_egg", Item::new)
-             .properties(p -> p.food(new net.minecraft.world.food.FoodProperties.Builder()
+             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -205,7 +208,7 @@ public class ModItems {
     //河蟹卵
     public static final ItemEntry<Item> RIVER_CRAB_EGG = REGISTRATE
             .item("river_crab_egg", Item::new)
-             .properties(p -> p.food(new net.minecraft.world.food.FoodProperties.Builder()
+             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -215,7 +218,7 @@ public class ModItems {
     //蓝龙虾卵
     public static final ItemEntry<Item> BLUE_LOBSTER_EGG = REGISTRATE
             .item("blue_lobster_egg", Item::new)
-            .properties(p -> p.food(new net.minecraft.world.food.FoodProperties.Builder()
+            .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -225,7 +228,7 @@ public class ModItems {
     //锦绣龙虾卵
     public static final ItemEntry<Item> MARBLED_LOBSTER_EGG = REGISTRATE
             .item("marbled_lobster_egg", Item::new)
-            .properties(p -> p.food(new net.minecraft.world.food.FoodProperties.Builder()
+            .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -235,7 +238,7 @@ public class ModItems {
     //深海鳌虾卵
     public static final ItemEntry<Item> DEEP_SEA_STAG_SHRIMP_EGG = REGISTRATE
             .item("deep-sea_stag_shrimp_egg", Item::new)
-            .properties(p -> p.food(new net.minecraft.world.food.FoodProperties.Builder()
+            .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -245,7 +248,7 @@ public class ModItems {
     //基围虾卵
     public static final ItemEntry<Item> VANNAMEI_SHRIMP_EGG = REGISTRATE
             .item("vannamei_shrimp_egg", Item::new)
-            .properties(p -> p.food(new net.minecraft.world.food.FoodProperties.Builder()
+            .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -255,7 +258,7 @@ public class ModItems {
     //濑尿虾卵
     public static final ItemEntry<Item> MANTIS_SHRIMP_EGG = REGISTRATE
             .item("mantis_shrimp_egg", Item::new)
-            .properties(p -> p.food(new net.minecraft.world.food.FoodProperties.Builder()
+            .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -265,12 +268,17 @@ public class ModItems {
     //河虾卵
     public static final ItemEntry<Item> RIVER_SHRIMP_EGG = REGISTRATE
             .item("river_shrimp_egg", Item::new)
-            .properties(p -> p.food(new net.minecraft.world.food.FoodProperties.Builder()
+            .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish_egg/crustacean/shrimp/river_shrimp_egg")))
             .register();
+
+    public static final ItemEntry<EggItem> TEST_EGG = REGISTRATE
+        .item("test_egg", p -> new EggItem(p, 0x55ffff))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
 
 
 
