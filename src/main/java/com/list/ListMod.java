@@ -7,6 +7,7 @@ import com.list.all.ModItems;
 import com.list.data.ModDataGen;
 import com.list.network.ModMessages;
 import com.tterrag.registrate.Registrate;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -71,5 +72,9 @@ public class ListMod
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         LOGGER.info("List Mod server starting");
+    }
+
+    public static ResourceLocation rl(String path) {
+        return new ResourceLocation(MODID, path);
     }
 }
