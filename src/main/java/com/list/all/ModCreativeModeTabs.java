@@ -92,6 +92,22 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems.桂鱼.get());
                 //output.accept(ModItems.带鱼.get());
                 //output.accept(ModItems.大马哈鱼.get());
+                //output.accept(ModItems.乌翅真鲨.get());
+                //output.accept(ModItems.血红龙.get());
+                //output.accept(ModItems.红海黄金蝶.get());
+                //output.accept(ModItems.紫海刺水母.get());
+                //output.accept(ModItems.皇冠狗头.get());
+                //output.accept(ModItems.花高头龙睛.get());
+                //output.accept(ModItems.线纹海马.get());
+                //output.accept(ModItems.黄尾蓝魔.get());
+                //output.accept(ModItems.秘鲁神仙.get());
+                //output.accept(ModItems.三间火箭.get());
+                //output.accept(ModItems.红剑.get());
+                //output.accept(ModItems.吕宋棘海星.get());
+                //output.accept(ModItems.红腹食人鲳.get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
@@ -161,6 +177,25 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.CHINESE_PERCH_EGG.get());           // 桂鱼卵
                 output.accept(ModItems.HAIRTAIL_EGG.get());                // 带鱼卵
                 output.accept(ModItems.CHUM_SALMON_EGG.get());             // 大马哈鱼卵
+                //output.accept(ModItems.乌翅真鲨.get());
+                //output.accept(ModItems.血红龙.get());
+                //output.accept(ModItems.红海黄金蝶.get());
+                //output.accept(ModItems.紫海刺水母.get());
+                //output.accept(ModItems.皇冠狗头.get());
+                //output.accept(ModItems.花高头龙睛.get());
+                //output.accept(ModItems.线纹海马.get());
+                //output.accept(ModItems.黄尾蓝魔.get());
+                //output.accept(ModItems.秘鲁神仙.get());
+                //output.accept(ModItems.三间火箭.get());
+                //output.accept(ModItems.红剑.get());
+                //output.accept(ModItems.吕宋棘海星.get());
+                //output.accept(ModItems.红腹食人鲳.get());            
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());

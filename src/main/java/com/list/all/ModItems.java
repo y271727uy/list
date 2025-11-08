@@ -469,7 +469,7 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
-    // 火鼠鱼卵 (Fire rat fish egg) - 红色
+    // 火鼠鱼卵 (Fire rat fish egg) - 特殊颜色规范：深橙色
     public static final ItemEntry<EggItem> FIRE_RAT_FISH_EGG = REGISTRATE
             .item("fire_rat_fish_egg", p -> new EggItem(p, 0xFF0000))
             .properties(p -> p.food(new FoodProperties.Builder()
@@ -479,7 +479,7 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
-    // 冰棘鱼卵 (Icethorn fish egg) - 冰蓝色
+    // 冰棘鱼卵 (Icethorn fish egg) - 特殊颜色规范：水色
     public static final ItemEntry<EggItem> ICETHORN_FISH_EGG = REGISTRATE
             .item("icethorn_fish_egg", p -> new EggItem(p, 0x00BFFF))
             .properties(p -> p.food(new FoodProperties.Builder()
