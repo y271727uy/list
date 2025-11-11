@@ -105,6 +105,19 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems.红剑.get());
                 //output.accept(ModItems.吕宋棘海星.get());
                 //output.accept(ModItems.红腹食人鲳.get());
+                //output.accept(ModItems.草鱼王.get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
@@ -189,7 +202,7 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems.三间火箭.get());
                 //output.accept(ModItems.红剑.get());
                 //output.accept(ModItems.吕宋棘海星.get());
-                //output.accept(ModItems.红腹食人鲳.get());            
+                //output.accept(ModItems.红腹食人鲳.get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
@@ -200,8 +213,8 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
-                //output.accept(ModItems..get());
-                //output.accept(ModItems..get());
+
+                output.accept(ModItems.CRAB_MEAT.get());
     
                 output.accept(ModBlocks.FISHPOND_CORE.get());
                 output.accept(ModBlocks.GREENHOUSE_FURNACE.get());

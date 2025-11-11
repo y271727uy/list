@@ -799,6 +799,29 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
+
+
+
+
+
+
+
+
+
+
+
+    // 蟹肉
+    public static final ItemEntry<Item> CRAB_MEAT = REGISTRATE
+            .item("crab_meat", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/meat/crab_meat")))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(1.2f)
+                    .build()))
+            .register();
+
+
+
     public static void register() {
     }
 }
