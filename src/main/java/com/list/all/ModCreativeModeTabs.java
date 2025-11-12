@@ -279,9 +279,20 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems.生桂鱼片.get());
                 //output.accept(ModItems.生带鱼片.get());
                 //output.accept(ModItems.生大马哈鱼片.get())
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
 
                 output.accept(ModItems.CRAB_MEAT.get());
-    
+
+                output.accept(ModBlocks.TREE_COMPOST.get());
                 output.accept(ModBlocks.FISHPOND_CORE.get());
                 output.accept(ModBlocks.GREENHOUSE_FURNACE.get());
             });

@@ -49,6 +49,25 @@ public class ModBlocks {
         .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
         .register();
 
+    //树坑
+    public static final BlockEntry<FishPondCoreBlock> TREE_COMPOST = REGISTRATE
+            .block("tree_compost", FishPondCoreBlock::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/tree_compost/rich_soil"),
+                        provider.modLoc("block/tree_compost/tree_compost"),
+                        provider.modLoc("block/tree_compost/rich_soil"),
+                        provider.modLoc("block/tree_compost/rich_soil"),
+                        provider.modLoc("block/tree_compost/rich_soil"),
+                        provider.modLoc("block/tree_compost/rich_soil")
+                ).texture("particle", provider.modLoc("block/tree_compost/tree_compost"));
+                provider.horizontalBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
 
     public static void register() {
     }

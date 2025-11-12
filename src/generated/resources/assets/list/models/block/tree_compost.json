@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/tree_compost/rich_soil",
+    "east": "list:block/tree_compost/rich_soil",
+    "north": "list:block/tree_compost/rich_soil",
+    "particle": "list:block/tree_compost/tree_compost",
+    "south": "list:block/tree_compost/rich_soil",
+    "up": "list:block/tree_compost/tree_compost",
+    "west": "list:block/tree_compost/rich_soil"
+  }
+}

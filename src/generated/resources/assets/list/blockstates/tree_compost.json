@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "list:block/tree_compost",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "list:block/tree_compost"
+    },
+    "facing=south": {
+      "model": "list:block/tree_compost",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "list:block/tree_compost",
+      "y": 270
+    }
+  }
+}
