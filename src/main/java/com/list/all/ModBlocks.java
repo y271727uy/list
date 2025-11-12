@@ -2,6 +2,7 @@ package com.list.all;
 
 import com.list.block.FishPondCoreBlock;
 import com.list.block.GreenhouseFurnaceBlock;
+import com.list.block.TreeCompostBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
@@ -50,9 +51,9 @@ public class ModBlocks {
         .register();
 
     //树坑
-    public static final BlockEntry<FishPondCoreBlock> TREE_COMPOST = REGISTRATE
-            .block("tree_compost", FishPondCoreBlock::new)
-            .initialProperties(() -> Blocks.IRON_BLOCK)
+    public static final BlockEntry<TreeCompostBlock> TREE_COMPOST = REGISTRATE
+            .block("tree_compost", TreeCompostBlock::new)
+            .initialProperties(() -> Blocks.DIRT)
             .simpleItem()
             .blockstate((ctx, provider) -> {
                 BlockModelBuilder model = provider.models().cube(
@@ -66,7 +67,7 @@ public class ModBlocks {
                 ).texture("particle", provider.modLoc("block/tree_compost/tree_compost"));
                 provider.horizontalBlock(ctx.get(), model);
             })
-            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .tag(BlockTags.MINEABLE_WITH_SHOVEL)
             .register();
 
     public static void register() {
