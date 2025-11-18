@@ -801,7 +801,41 @@ public class ModItems {
 
 
 
+    // 草菇
+    public static final ItemEntry<Item> STRAW_MUSHROOM =REGISTRATE
+            .item("straw_mushroom", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/mushroom/straw_mushroom")))
+            .register();
 
+    // 海蘑菇
+    public static final ItemEntry<Item> SEA_MUSHROOM =REGISTRATE
+            .item("sea_mushroom", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/mushroom/sea_mushroom")))
+            .register();
+
+    // 洞穴菇
+    public static final ItemEntry<Item> CAVE_MUSHROOM =REGISTRATE
+            .item("cave_mushroom", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/mushroom/cave_mushroom")))
+            .register();
+
+    // 草菇菌落
+    public static final ItemEntry<Item> STRAW_MUSHROOM_COLONY =REGISTRATE
+            .item("straw_mushroom_colony", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/colony/straw_mushroom_colony")))
+            .register();
+
+    // 海蘑菇菌落
+    public static final ItemEntry<Item> SEA_MUSHROOM_COLONY =REGISTRATE
+            .item("sea_mushroom_colony", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/colony/sea_mushroom_colony")))
+            .register();
+
+    // 洞穴菇菌落
+    public static final ItemEntry<Item> CAVE_MUSHROOM_COLONY =REGISTRATE
+            .item("cave_mushroom_colony", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/colony/cave_mushroom_colony")))
+            .register();
 
 
 

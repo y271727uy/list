@@ -290,6 +290,14 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
 
+                output.accept(ModItems.STRAW_MUSHROOM.get());
+                output.accept(ModItems.SEA_MUSHROOM.get());
+                output.accept(ModItems.CAVE_MUSHROOM.get());
+
+                output.accept(ModItems.STRAW_MUSHROOM_COLONY.get());
+                output.accept(ModItems.SEA_MUSHROOM_COLONY.get());
+                output.accept(ModItems.CAVE_MUSHROOM_COLONY.get());
+
                 output.accept(ModItems.CRAB_MEAT.get());
 
                 output.accept(ModBlocks.TREE_COMPOST.get());
