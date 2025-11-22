@@ -1,0 +1,15 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "tag": "minecraft:planks"
+    }
+  ],
+  "results": [
+    {
+      "Count": 1,
+      "id": "list:bad_item"
+    }
+  ],
+  "time": 6000
+}

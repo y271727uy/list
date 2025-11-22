@@ -6,6 +6,8 @@ import com.list.block.TreeCompostBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.grower.AcaciaTreeGrower;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 
 import static com.list.ListMod.REGISTRATE;
@@ -52,23 +54,36 @@ public class ModBlocks {
 
     //树坑
     public static final BlockEntry<TreeCompostBlock> TREE_COMPOST = REGISTRATE
-            .block("tree_compost", TreeCompostBlock::new)
-            .initialProperties(() -> Blocks.DIRT)
-            .simpleItem()
-            .blockstate((ctx, provider) -> {
-                BlockModelBuilder model = provider.models().cube(
-                        ctx.getName(),
-                        provider.modLoc("block/tree_compost/rich_soil"),
-                        provider.modLoc("block/tree_compost/tree_compost"),
-                        provider.modLoc("block/tree_compost/rich_soil"),
-                        provider.modLoc("block/tree_compost/rich_soil"),
-                        provider.modLoc("block/tree_compost/rich_soil"),
-                        provider.modLoc("block/tree_compost/rich_soil")
-                ).texture("particle", provider.modLoc("block/tree_compost/tree_compost"));
-                provider.horizontalBlock(ctx.get(), model);
-            })
-            .tag(BlockTags.MINEABLE_WITH_SHOVEL)
-            .register();
+        .block("tree_compost", TreeCompostBlock::new)
+        .initialProperties(() -> Blocks.DIRT)
+        .simpleItem()
+        .blockstate((ctx, provider) -> {
+            BlockModelBuilder model = provider.models().cube(
+                ctx.getName(),
+                provider.modLoc("block/tree_compost/rich_soil"),
+                provider.modLoc("block/tree_compost/tree_compost"),
+                provider.modLoc("block/tree_compost/rich_soil"),
+                provider.modLoc("block/tree_compost/rich_soil"),
+                provider.modLoc("block/tree_compost/rich_soil"),
+                provider.modLoc("block/tree_compost/rich_soil")
+            ).texture("particle", provider.modLoc("block/tree_compost/tree_compost"));
+            provider.horizontalBlock(ctx.get(), model);
+        })
+        .tag(BlockTags.MINEABLE_WITH_SHOVEL)
+        .register();
+
+    public static final BlockEntry<SaplingBlock> TEST_SAPLING = REGISTRATE
+        .block("test_sapling", p -> new SaplingBlock(new AcaciaTreeGrower(), p))
+        .blockstate((ctx, provider) -> {
+            BlockModelBuilder model = provider.models().cross(ctx.getName(), provider.modLoc("block/test_sapling"));
+            provider.simpleBlock(ctx.get(), model);
+        })
+        .item()
+        .model((ctx, provider) -> {
+            provider.generated(ctx::get, provider.modLoc("block/test_sapling"));
+        })
+        .build()
+        .register();
 
     public static void register() {
     }

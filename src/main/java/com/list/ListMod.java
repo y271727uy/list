@@ -4,6 +4,8 @@ import com.list.all.ModBlockEntities;
 import com.list.all.ModBlocks;
 import com.list.all.ModCreativeModeTabs;
 import com.list.all.ModItems;
+import com.list.all.ModMenus;
+import com.list.all.ModRecipes;
 import com.list.data.ModDataGen;
 import com.list.network.ModMessages;
 import com.tterrag.registrate.Registrate;
@@ -36,6 +38,8 @@ public class ListMod
         ModBlocks.register();
         ModBlockEntities.register();
         ModCreativeModeTabs.register();
+        ModMenus.register();
+        ModRecipes.register(modEventBus);
         
         // 注册通用设置事件
         modEventBus.addListener(this::commonSetup);
