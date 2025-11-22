@@ -1,7 +1,6 @@
 {
   "values": [
     "list:greenhouse_furnace",
-    "list:fishpond_core",
-    "list:tree_compost"
+    "list:fishpond_core"
   ]
 }

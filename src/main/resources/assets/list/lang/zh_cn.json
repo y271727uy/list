@@ -97,5 +97,13 @@
   "item.list.hairtail_egg": "带鱼卵",
   "item.list.chum_salmon_egg": "大马哈鱼卵",
 
+  "item.list.straw_mushroom": "草菇",
+  "item.list.sea_mushroom": "海蘑菇",
+  "item.list.cave_mushroom": "洞穴菇",
+
+  "item.list.straw_mushroom_colony": "草菇菌落",
+  "item.list.sea_mushroom_colony": "海蘑菇菌落",
+  "item.list.cave_mushroom_colony": "洞穴菇菌落",
+
   "item.list.crab_meat": "蟹肉"
 }
