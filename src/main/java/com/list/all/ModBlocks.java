@@ -75,7 +75,7 @@ public class ModBlocks {
             .block("straw_mushroom", StrawMushroomBlock::new)
             .initialProperties(() -> Blocks.GRASS)
             .blockstate((ctx, provider) -> {
-                BlockModelBuilder model = provider.models().cross(ctx.getName(), provider.modLoc("block/mushroom/straw_mushroom"));
+                BlockModelBuilder model = provider.models().cross(ctx.getName(), provider.modLoc("block/mushroom/straw_mushroom")).renderType("cutout");
                 provider.simpleBlock(ctx.get(), model);
             })
             .item()

@@ -16,6 +16,7 @@ public class StrawMushroomBlock extends BushBlock {
             .noCollission()
             .instabreak()
             .lightLevel(state -> 0)
+            .noOcclusion()
         );
     }
 
