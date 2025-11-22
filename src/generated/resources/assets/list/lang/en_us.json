@@ -1,6 +1,7 @@
 {
   "block.list.fishpond_core": "Fishpond Core",
   "block.list.greenhouse_furnace": "Greenhouse Furnace",
+  "block.list.straw_mushroom": "Straw Mushroom",
   "block.list.tree_compost": "Tree Compost",
   "item.list.anchovy_egg": "Anchovy Egg",
   "item.list.animal_husbandry_star": "Animal Husbandry Star",
@@ -89,7 +90,6 @@
   "item.list.snakehead_fish_egg": "Snakehead Fish Egg",
   "item.list.sole_fish_egg": "Sole Fish Egg",
   "item.list.spanish_mackerel_egg": "Spanish Mackerel Egg",
-  "item.list.straw_mushroom": "Straw Mushroom",
   "item.list.straw_mushroom_colony": "Straw Mushroom Colony",
   "item.list.striped_bass_egg": "Striped Bass Egg",
   "item.list.swimming_crab": "Swimming Crab",

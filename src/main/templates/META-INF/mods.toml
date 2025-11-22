@@ -5,7 +5,7 @@ license="GNU LGPLv3.0"
 [[mods]]
 
 modId="list"
-version="3.0.0"
+version="3.0.2"
 displayName="list"
 authors="y271727uy"
 description='''The item core mod for Farmer's Ranch: Pastoral Serenade'''

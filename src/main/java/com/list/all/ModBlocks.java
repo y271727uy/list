@@ -3,6 +3,7 @@ package com.list.all;
 import com.list.block.FishPondCoreBlock;
 import com.list.block.GreenhouseFurnaceBlock;
 import com.list.block.TreeCompostBlock;
+import com.list.block.StrawMushroomBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
@@ -68,6 +69,20 @@ public class ModBlocks {
                 provider.horizontalBlock(ctx.get(), model);
             })
             .tag(BlockTags.MINEABLE_WITH_SHOVEL)
+            .register();
+    //草菇
+    public static final BlockEntry<StrawMushroomBlock> STRAW_MUSHROOM = REGISTRATE
+            .block("straw_mushroom", StrawMushroomBlock::new)
+            .initialProperties(() -> Blocks.GRASS)
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cross(ctx.getName(), provider.modLoc("block/mushroom/straw_mushroom"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .item()
+            .model((ctx, provider) -> {
+                provider.generated(ctx::get, provider.modLoc("block/mushroom/straw_mushroom"));
+            })
+            .build()
             .register();
 
     public static void register() {
