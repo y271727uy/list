@@ -3,7 +3,9 @@ package com.list.all;
 import com.list.block.FishPondCoreBlock;
 import com.list.block.GreenhouseFurnaceBlock;
 import com.list.block.TreeCompostBlock;
-import com.list.block.StrawMushroomBlock;
+import com.list.block.mushroom.StrawMushroomBlock;
+import com.list.block.mushroom.SeaMushroomBlock;
+import com.list.block.mushroom.CaveMushroomBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
@@ -81,6 +83,81 @@ public class ModBlocks {
             .item()
             .model((ctx, provider) -> {
                 provider.generated(ctx::get, provider.modLoc("block/mushroom/straw_mushroom"));
+            })
+            .build()
+            .register();
+
+    //海蘑菇
+    public static final BlockEntry<SeaMushroomBlock> SEA_MUSHROOM = REGISTRATE
+            .block("sea_mushroom", SeaMushroomBlock::new)
+            .initialProperties(() -> Blocks.GRASS)
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cross(ctx.getName(), provider.modLoc("block/mushroom/sea_mushroom")).renderType("cutout");
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .item()
+            .model((ctx, provider) -> {
+                provider.generated(ctx::get, provider.modLoc("block/mushroom/sea_mushroom"));
+            })
+            .build()
+            .register();
+
+    //海蘑菇
+    public static final BlockEntry<CaveMushroomBlock> CAVE_MUSHROOM = REGISTRATE
+            .block("cave_mushroom", CaveMushroomBlock::new)
+            .initialProperties(() -> Blocks.GRASS)
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cross(ctx.getName(), provider.modLoc("block/mushroom/cave_mushroom")).renderType("cutout");
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .item()
+            .model((ctx, provider) -> {
+                provider.generated(ctx::get, provider.modLoc("block/mushroom/cave_mushroom"));
+            })
+            .build()
+            .register();
+
+    //草菇菌落
+    public static final BlockEntry<StrawMushroomBlock> STRAW_MUSHROOM_COLONY = REGISTRATE
+            .block("straw_mushroom_colony", StrawMushroomBlock::new)
+            .initialProperties(() -> Blocks.GRASS)
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cross(ctx.getName(), provider.modLoc("block/colony/straw_mushroom_colony")).renderType("cutout");
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .item()
+            .model((ctx, provider) -> {
+                provider.generated(ctx::get, provider.modLoc("block/colony/straw_mushroom_colony"));
+            })
+            .build()
+            .register();
+
+    //海蘑菇菌落
+    public static final BlockEntry<SeaMushroomBlock> SEA_MUSHROOM_COLONY = REGISTRATE
+            .block("sea_mushroom_colony", SeaMushroomBlock::new)
+            .initialProperties(() -> Blocks.GRASS)
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cross(ctx.getName(), provider.modLoc("block/colony/sea_mushroom_colony")).renderType("cutout");
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .item()
+            .model((ctx, provider) -> {
+                provider.generated(ctx::get, provider.modLoc("block/colony/sea_mushroom_colony"));
+            })
+            .build()
+            .register();
+
+    //洞穴菇菌落
+    public static final BlockEntry<CaveMushroomBlock> CAVE_MUSHROOM_COLONY = REGISTRATE
+            .block("cave_mushroom_colony", CaveMushroomBlock::new)
+            .initialProperties(() -> Blocks.GRASS)
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cross(ctx.getName(), provider.modLoc("block/colony/cave_mushroom_colony")).renderType("cutout");
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .item()
+            .model((ctx, provider) -> {
+                provider.generated(ctx::get, provider.modLoc("block/colony/cave_mushroom_colony"));
             })
             .build()
             .register();
