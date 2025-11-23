@@ -41,11 +41,6 @@ public class FishPondCoreBlock extends BaseEntityBlock {
         return new FishPondCoreBlockEntity(ModBlockEntities.FISH_POND_CORE.get(), pos, state);
     }
 
-    @Nullable
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(BlockState state, net.minecraft.world.level.Level level, BlockEntityType<T> type) {
-        return null; // 如果不需要tick逻辑，则返回null
-    }
-
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
@@ -90,8 +85,8 @@ public class FishPondCoreBlock extends BaseEntityBlock {
         return createTickerHelper(
             blockEntityType,
             ModBlockEntities.FISH_POND_CORE.get(),
-            (level1, pos, state1, blockEntity) -> {
-
+            (l, p, s, blockEntity) -> {
+                blockEntity.tick(l, p, s);
             }
         );
     }

@@ -6,8 +6,6 @@ import com.list.block.TreeCompostBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.grower.AcaciaTreeGrower;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 
 import static com.list.ListMod.REGISTRATE;
@@ -72,18 +70,18 @@ public class ModBlocks {
         .tag(BlockTags.MINEABLE_WITH_SHOVEL)
         .register();
 
-    public static final BlockEntry<SaplingBlock> TEST_SAPLING = REGISTRATE
-        .block("test_sapling", p -> new SaplingBlock(new AcaciaTreeGrower(), p))
-        .blockstate((ctx, provider) -> {
-            BlockModelBuilder model = provider.models().cross(ctx.getName(), provider.modLoc("block/test_sapling"));
-            provider.simpleBlock(ctx.get(), model);
-        })
-        .item()
-        .model((ctx, provider) -> {
-            provider.generated(ctx::get, provider.modLoc("block/test_sapling"));
-        })
-        .build()
-        .register();
+//    public static final BlockEntry<SaplingBlock> TEST_SAPLING = REGISTRATE
+//        .block("test_sapling", p -> new SaplingBlock(new AcaciaTreeGrower(), p))
+//        .blockstate((ctx, provider) -> {
+//            BlockModelBuilder model = provider.models().cross(ctx.getName(), provider.modLoc("block/test_sapling")).renderType("cutout");
+//            provider.simpleBlock(ctx.get(), model);
+//        })
+//        .item()
+//        .model((ctx, provider) -> {
+//            provider.generated(ctx::get, provider.modLoc("block/test_sapling"));
+//        })
+//        .build()
+//        .register();
 
     public static void register() {
     }

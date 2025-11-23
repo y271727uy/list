@@ -25,7 +25,6 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.crafting.CraftingHelper;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -55,7 +54,7 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
 
     @Override
     public boolean matches(RecipeInput container, Level level) {
-        List<Ingredient> remaining = new java.util.ArrayList<>(this.ingredients);
+        List<Ingredient> remaining = new ArrayList<>(this.ingredients);
         for (int i = 0; i < container.getContainerSize(); i++) {
             ItemStack stack = container.getItem(i);
             if (stack.isEmpty()) continue;
@@ -192,7 +191,7 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
             JsonArray resultsJson = serializedRecipe.getAsJsonArray("results");
             List<ItemStack> results = new ArrayList<>();
             for (int i = 0; i < resultsJson.size(); i++) {
-                results.add(CraftingHelper.getItemStack(resultsJson.get(i).getAsJsonObject(), true, true));
+                results.add(Util.getOrThrow(ItemStack.CODEC.decode(JsonOps.INSTANCE, resultsJson.get(i)), JsonParseException::new).getFirst());
             }
 
             int time = serializedRecipe.get("time").getAsInt();

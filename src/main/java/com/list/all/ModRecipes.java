@@ -2,7 +2,6 @@ package com.list.all;
 
 import com.list.ListMod;
 import com.list.recipe.FishPondRecipe;
-import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -14,7 +13,7 @@ public class ModRecipes {
     private static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister.create(ForgeRegistries.RECIPE_TYPES, ListMod.MODID);
     private static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, ListMod.MODID);
 
-    public static final RegistryObject<RecipeType<Recipe<?>>> FISH_POND_RECIPE_TYPE = RECIPE_TYPES.register(
+    public static final RegistryObject<RecipeType<FishPondRecipe>> FISH_POND_RECIPE_TYPE = RECIPE_TYPES.register(
         "fish_pond",
         () -> RecipeType.simple(ListMod.rl("fish_pond"))
     );

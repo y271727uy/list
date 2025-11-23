@@ -11,7 +11,7 @@ public class ModRecipes {
         FishPondRecipe.builder()
             .ingredient(Ingredient.of(ItemTags.PLANKS))
             .result(ModItems.BAD_ITEM.asStack())
-            .time(6000)
+            .time(100)
             .save(provider);
     }
 }
