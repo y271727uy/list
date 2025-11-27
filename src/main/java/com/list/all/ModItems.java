@@ -180,6 +180,17 @@ public class ModItems {
             .properties(p -> p.rarity(Rarity.EPIC))
             .register();
 
+    /*
+    //鸡鱼
+    public static final ItemEntry<Item> THREADFIN_BREAM = REGISTRATE
+            .item("threadfin_bream", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/threadfin_bream")))
+            .register();
+    */
 
     //皇帝蟹卵
     public static final ItemEntry<Item> EMPEROR_CRAB_EGG = REGISTRATE
