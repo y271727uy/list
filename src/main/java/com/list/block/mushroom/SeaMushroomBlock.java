@@ -1,55 +1,72 @@
 package com.list.block.mushroom;
 
-import net.minecraft.world.level.block.MushroomBlock;
-import net.minecraft.world.level.block.SimpleWaterloggedBlock;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.SoundType;
+import com.list.block.colony.SeaMushroomColonyBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.BonemealableBlock;
+import net.minecraft.world.level.block.BushBlock;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import java.util.Random;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.material.PushReaction;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraft.resources.ResourceLocation;
 
-public class SeaMushroomBlock extends MushroomBlock implements SimpleWaterloggedBlock {
+public class SeaMushroomBlock extends BushBlock implements BonemealableBlock, SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    private final Properties properties;
 
     public SeaMushroomBlock(Properties properties) {
-        super(properties, null);
+        super(properties);
+        this.properties = properties;
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
     }
 
     @Override
-    public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
-        return true;
-    }
-    
-    // 添加检查是否可以存活的方法，只允许在水中存活
-    @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        // 检查方块下方是否是水源方块
         BlockPos belowPos = pos.below();
         BlockState belowState = level.getBlockState(belowPos);
         FluidState fluidState = level.getFluidState(pos);
         
-        // 必须在水中且下方有固体方块支撑
-        return fluidState.getType() == Fluids.WATER && belowState.isSolidRender(level, belowPos);
+        // Must be in water and on appropriate blocks (dirt, grass, sand, gravel, organic compost, rich soil)
+        return fluidState.getType() == Fluids.WATER && 
+               (belowState.is(Blocks.DIRT) || 
+                belowState.is(Blocks.GRASS_BLOCK) || 
+                belowState.is(Blocks.SAND) || 
+                belowState.is(Blocks.GRAVEL) ||
+                isFarmersDelightBlock(belowState, "organic_compost") ||
+                isFarmersDelightBlock(belowState, "rich_soil"));
+    }
+
+    @Override
+    protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
+        return state.is(Blocks.DIRT) || 
+               state.is(Blocks.GRASS_BLOCK) || 
+               state.is(Blocks.SAND) || 
+               state.is(Blocks.GRAVEL) ||
+               isFarmersDelightBlock(state, "organic_compost") ||
+               isFarmersDelightBlock(state, "rich_soil");
     }
     
-    // 无视光线条件生长
-    @Override
-    public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state, boolean isClient) {
-        return true; // 总是可以使用骨粉
+    private boolean isFarmersDelightBlock(BlockState state, String blockName) {
+        Block block = state.getBlock();
+        ResourceLocation blockId = ForgeRegistries.BLOCKS.getKey(block);
+        return blockId != null && "farmersdelight".equals(blockId.getNamespace()) && blockName.equals(blockId.getPath());
     }
     
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<net.minecraft.world.level.block.Block, BlockState> builder) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(WATERLOGGED);
     }
     
@@ -64,9 +81,27 @@ public class SeaMushroomBlock extends MushroomBlock implements SimpleWaterlogged
         return this.defaultBlockState().setValue(WATERLOGGED, fluidState.getType() == Fluids.WATER);
     }
     
-    // 移除了 @Override 注解，因为这个方法可能不是从父类继承的可重写方法
-    public boolean growMushroom(ServerLevel level, BlockPos pos, BlockState state, Random random) {
-        // 禁用自然生长
-        return false;
+    @Override
+    public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
+        return true; // Always allow bone meal to work
+    }
+    
+    @Override
+    public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state, boolean isClient) {
+        return true;
+    }
+    
+    @Override
+    public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
+        // 生长为菌落
+        if (level.getBlockState(pos).is(this)) {
+            level.setBlock(pos, new SeaMushroomColonyBlock(this.properties).defaultBlockState()
+                    .setValue(WATERLOGGED, state.getValue(WATERLOGGED)), 3);
+        }
+    }
+    
+    @Override
+    public PushReaction getPistonPushReaction(BlockState state) {
+        return PushReaction.DESTROY;
     }
 }

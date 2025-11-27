@@ -168,6 +168,19 @@ public class ModItems {
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/reality/crustacean/conch")))
             .register();
 
+
+    //锦鲤
+    public static final ItemEntry<Item> KOI = REGISTRATE
+            .item("koi", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/koi")))
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .register();
+
+
     //皇帝蟹卵
     public static final ItemEntry<Item> EMPEROR_CRAB_EGG = REGISTRATE
             .item("emperor_crab_egg", Item::new)

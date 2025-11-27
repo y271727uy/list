@@ -6,6 +6,7 @@ import com.list.block.TreeCompostBlock;
 import com.list.block.mushroom.StrawMushroomBlock;
 import com.list.block.mushroom.SeaMushroomBlock;
 import com.list.block.mushroom.CaveMushroomBlock;
+import com.list.block.colony.SeaMushroomColonyBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
@@ -133,8 +134,8 @@ public class ModBlocks {
             .register();
 
     //海蘑菇菌落
-    public static final BlockEntry<SeaMushroomBlock> SEA_MUSHROOM_COLONY = REGISTRATE
-            .block("sea_mushroom_colony", SeaMushroomBlock::new)
+    public static final BlockEntry<SeaMushroomColonyBlock> SEA_MUSHROOM_COLONY = REGISTRATE
+            .block("sea_mushroom_colony", SeaMushroomColonyBlock::new)
             .initialProperties(() -> Blocks.GRASS)
             .blockstate((ctx, provider) -> {
                 BlockModelBuilder model = provider.models().cross(ctx.getName(), provider.modLoc("block/colony/sea_mushroom_colony")).renderType("cutout");

@@ -50,7 +50,7 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems.红石斑鱼.get());
                 //output.accept(ModItems.鹦嘴鱼.get());
                 //output.accept(ModItems.苏眉鱼.get());
-                //output.accept(ModItems.锦鲤.get());
+                output.accept(ModItems.KOI.get());
                 //output.accept(ModItems.鸡鱼.get());
                 //output.accept(ModItems.云斑海猪鱼.get());
                 //output.accept(ModItems.海鳗.get());
