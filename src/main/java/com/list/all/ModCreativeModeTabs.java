@@ -436,87 +436,86 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.PARSNIP.get());                 // 防风草     //蔬菜 星露谷
                     //output.accept(ModItems.SNOW_YAM.get());                // 雪山药
                     //output.accept(ModItems.AMARANTH.get());                // 苋菜
-                    output.accept(ModItems.RED_CABBAGE.get());  //红叶卷心菜
-                    //output.accept(ModItems.金皮西葫芦.get());
-                    //output.accept(ModItems.洋蓟.get());
-                    //output.accept(ModItems.小白菜.get());
-                    //output.accept(ModItems.山药.get());
-                    //output.accept(ModItems.霜瓜.get());
-                    //output.accept(ModItems.甘蓝菜.get());
-                    //output.accept(ModItems.冬根.get());
-                    //output.accept(ModItems.齐瓜.get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems.野山葵.get());
-                    //output.accept(ModItems.山葵根.get());       //蔬菜 星露谷聚宝盆mod
-                    //output.accept(ModItems.胡罗巴.get());
-                    //output.accept(ModItems.芥菜.get());
-                    //output.accept(ModItems.牛至.get());
-                    //output.accept(ModItems.细香葱.get());
-                    //output.accept(ModItems.秋葵.get());
-                    //output.accept(ModItems.百里香.get());
-                    //output.accept(ModItems.生菜.get());
-                    //output.accept(ModItems.猫薄荷.get());
-                    //output.accept(ModItems.月桂叶.get());
-                    //output.accept(ModItems.扁豆.get());
-                    //output.accept(ModItems.小茴香.get());
-                    //output.accept(ModItems.香菜.get());
-                    //output.accept(ModItems.迷迭香.get());
-                    //output.accept(ModItems.莳萝.get());
-                    //output.accept(ModItems.芹菜.get());
-                    //output.accept(ModItems.香茅.get());
-                    //output.accept(ModItems.龙蒿.get());
-                    //output.accept(ModItems.豆芽.get());
-                    //output.accept(ModItems.芦荟.get());
-                    //output.accept(ModItems.苦艾.get());
-                    //output.accept(ModItems.油菜花.get());
-                    //output.accept(ModItems.紫苏叶.get());
-                    //output.accept(ModItems.豌豆.get());
-                    //output.accept(ModItems.赤豆.get());
-                    //output.accept(ModItems.罗勒.get());
+                    output.accept(ModItems.RED_CABBAGE.get());               //红叶卷心菜
+                    //output.accept(ModItems.GOLDEN_ZUCCHINI.get());  //金皮西葫芦
+                    //output.accept(ModItems.ARTICHOKE.get());        //洋蓟
+                    //output.accept(ModItems.BOK_CHOY.get());         //小白菜
+                    //output.accept(ModItems.YAM.get());              //山药
+                    //output.accept(ModItems.FROSTED_MELON.get());    //霜瓜
+                    //output.accept(ModItems.CABBAGE.get());          //甘蓝菜
+                    //output.accept(ModItems.WINTER_ROOT.get());      //冬根
+                    //output.accept(ModItems.QI_GUAN.get());          //齐瓜
+                    //output.accept(ModItems.WILD_WASABI.get());  //野山葵
+                    //output.accept(ModItems.WASABI_ROOT.get());  //山葵根       //蔬菜 星露谷聚宝盆mod
+                    //output.accept(ModItems.HOROPPA.get());           //胡罗巴
+                    //output.accept(ModItems.MUSTARD.get());           //芥菜
+                    //output.accept(ModItems.OREGANO.get());           //牛至
+                    //output.accept(ModItems.CHIVES.get());            //细香葱
+                    //output.accept(ModItems.OKRA.get());              //秋葵
+                    //output.accept(ModItems.THYMUS.get());            //百里香
+                    //output.accept(ModItems.LETTUCE.get());           //生菜
+                    //output.accept(ModItems.CATNIP.get());            //猫薄荷
+                    //output.accept(ModItems.BAY_LEAF.get());          //月桂叶
+                    //output.accept(ModItems.LENTIL.get());            //扁豆
+                    //output.accept(ModItems.FENNEL.get());            //小茴香
+                    //output.accept(ModItems.CILANTRO.get());          //香菜
+                    //output.accept(ModItems.ROSEMARY.get());          //迷迭香
+                    //output.accept(ModItems.DILL.get());              //莳萝
+                    //output.accept(ModItems.CELERY.get());            //芹菜
+                    //output.accept(ModItems.LEMON_GRASS.get());       //香茅（加入游戏存疑）
+                    //output.accept(ModItems.TARRAGON.get());          //龙蒿
+                    //output.accept(ModItems.BEAN_SPROUT.get());       //豆芽
+                    //output.accept(ModItems.ALOE.get());              //芦荟
+                    //output.accept(ModItems.WORMWOOD.get());          //苦艾
+                    //output.accept(ModItems.RAPESEED_FLOWER.get());   //油菜花
+                    //output.accept(ModItems.PERILLA_LEAF.get());      //紫苏叶
+                    //output.accept(ModItems.PEA.get());               //豌豆
+                    //output.accept(ModItems.RED_BEAN.get());          //赤豆
+                    //output.accept(ModItems.BASIL.get());             //罗勒
                     output.accept(ModItems.RED_ONION.get());    //红洋葱
-                    //output.accept(ModItems.香花薄荷.get());
-                    //output.accept(ModItems.龙舌兰.get());
-                    //output.accept(ModItems.蓝龙舌兰.get());
-                    //output.accept(ModItems.红葱头（红毛葱）.get());
-                    //output.accept(ModItems.红腰豆（有毒）.get());
-                    //output.accept(ModItems.海军豆.get());
-                    //output.accept(ModItems.紫山药.get());
-                    //output.accept(ModItems.洋甘草根.get());
-                    //output.accept(ModItems.哈瓦那辣椒.get());
-                    //output.accept(ModItems.荞麦.get());
-                    //output.accept(ModItems.芦笋.get());
-                    //output.accept(ModItems.奶油南瓜.get());
-                    //output.accept(ModItems.藜麦.get());
-                    //output.accept(ModItems.肉豆蔻.get());
-                    //output.accept(ModItems.香草.get());
-                    //output.accept(ModItems.鼠尾草.get());
-                    //output.accept(ModItems.人参.get());
-                    //output.accept(ModItems.千层树叶.get());
-                    //output.accept(ModItems.樟树叶.get());
-                    //output.accept(ModItems.桉树叶.get());
-                    //output.accept(ModItems.上古水果.get());           //星露谷水果，反正分不清了就这样吧
-                    //output.accept(ModItems.宝石甜莓.get());
-                    //output.accept(ModItems.水晶果.get());
-                    //output.accept(ModItems.人心果.get());
-                    //output.accept(ModItems.罗汉橙.get());
-                    //output.accept(ModItems.芭蕉.get());
-                    //output.accept(ModItems.美洲大树莓.get());
-                    //output.accept(ModItems.菇娘果.get());
-                    //output.accept(ModItems.面包果.get());
-                    //output.accept(ModItems.香味浆果.get());
-                    //output.accept(ModItems.香瓜.get());
-                    //output.accept(ModItems.金丝甜瓜.get());
-                    //output.accept(ModItems.野莓.get());  存疑
-                    //output.accept(ModItems.油桃.get());
-                    //output.accept(ModItems.腰果.get());
-                    //output.accept(ModItems.碧根果.get());
-                    //output.accept(ModItems.开心果.get());
-                    //output.accept(ModItems.84西瓜.get());       //明日之后 水果 真的很少
-                    //output.accept(ModItems.黄桃.get());
-                    //output.accept(ModItems.沙棘果.get());
-                    //output.accept(ModItems.龙眼.get());
-                    //output.accept(ModItems.桑葚.get());
-                    //output.accept(ModItems.冬枣.get());
+                    //output.accept(ModItems.SPEARMINT.get());            //香花薄荷
+                    //output.accept(ModItems.AGAVE.get());                //龙舌兰
+                    //output.accept(ModItems.BLUE_AGAVE.get());           //蓝龙舌兰
+                    //output.accept(ModItems.SHALLOT.get());              //红葱头（红葱头一般叫红毛葱）
+                    //output.accept(ModItems.RED_KIDNEY_BEAN.get());      //红腰豆（有毒）
+                    //output.accept(ModItems.NAVY_BEAN.get());            //海军豆
+                    //output.accept(ModItems.PURPLE_YAM.get());           //紫山药
+                    //output.accept(ModItems.LICORICE_ROOT.get());        //洋甘草根
+                    //output.accept(ModItems.HAVANA_CHILI.get());         //哈瓦那辣椒
+                    //output.accept(ModItems.BUCKWHEAT.get());            //荞麦
+                    //output.accept(ModItems.ASPARAGUS.get());            //芦笋
+                    //output.accept(ModItems.CREAM_PUMPKIN.get());        //奶油南瓜
+                    //output.accept(ModItems.QUINOA.get());               //藜麦
+                    //output.accept(ModItems.NUTMEG.get());               //肉豆蔻
+                    //output.accept(ModItems.VANILLA.get());              //香草
+                    //output.accept(ModItems.SAGE.get());                 //鼠尾草
+                    //output.accept(ModItems.GINSENG.get());              //人参
+                    //output.accept(ModItems.LAYER_TREE_LEAF.get());      //千层树叶
+                    //output.accept(ModItems.CAMPHOR_LEAF.get());         //樟树叶
+                    //output.accept(ModItems.EUCALYPTUS_LEAF.get());      //桉树叶
+                    //output.accept(ModItems.ANCIENT_FRUIT.get());           //上古水果（星露谷水果，反正分不清了就这样吧）
+                    //output.accept(ModItems.GEMBERRY.get());                //宝石甜莓
+                    //output.accept(ModItems.CRYSTAL_FRUIT.get());          //水晶果
+                    //output.accept(ModItems.HEART_FRUIT.get());            //人心果
+                    //output.accept(ModItems.LUOHAN_ORANGE.get());          //罗汉橙
+                    //output.accept(ModItems.BANANA.get());                 //芭蕉
+                    //output.accept(ModItems.AMERICAN_RASPBERRY.get());     //美洲大树莓
+                    //output.accept(ModItems.MUSHROOM_BERRY.get());         //菇娘果
+                    //output.accept(ModItems.BREADFRUIT.get());             //面包果
+                    //output.accept(ModItems.FRAGRANT_BERRY.get());         //香味浆果
+                    //output.accept(ModItems.MUSK_MELON.get());             //香瓜
+                    //output.accept(ModItems.GOLDEN_MELON.get());           //金丝甜瓜
+                    //output.accept(ModItems.WILD_PLUM.get());              //野梅（存疑 是否加入）
+                    //output.accept(ModItems.NECTARINE.get());              //油桃
+                    //output.accept(ModItems.CASHEW.get());                 //腰果
+                    //output.accept(ModItems.PECAN.get());                  //碧根果
+                    //output.accept(ModItems.PISTACHIO.get());              //开心果
+                    //output.accept(ModItems.WATERMELON_84.get());          //84西瓜（明日之后 水果 真的很少）
+                    //output.accept(ModItems.YELLOW_PEACH.get());           //黄桃
+                    //output.accept(ModItems.SEA_BUCKTHORN.get());          //沙棘果
+                    //output.accept(ModItems.LONGAN.get());                 //龙眼
+                    //output.accept(ModItems.MULBERRY.get());               //桑葚
+                    //output.accept(ModItems.WINTER_JUJUBE.get());          //冬枣
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
