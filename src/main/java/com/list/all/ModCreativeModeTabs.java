@@ -108,6 +108,36 @@ public class ModCreativeModeTabs {
 
                     //output.accept(ModItems.草鱼王.get());
                     //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
 
                     //output.accept(ModItems.COCKLE.get());                 //鸟蛤（就是鸟贝） cockle      //蟹 虾 贝 软体 鱼
                     //output.accept(ModItems.CLAM.get());                   // 蚌（游戏中为 Clam）
@@ -402,6 +432,7 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.SESAME_SEED.get());             // 芝麻
                     //output.accept(ModItems.RAPESEED.get());                // 油菜
                     //output.accept(ModItems.WHITE_RADISH.get());            // 白萝卜
+                    //output.accept(ModItems.CHRYSANTHEMUM.get());           // 菊花
                     //output.accept(ModItems.PARSNIP.get());                 // 防风草     //蔬菜 星露谷
                     //output.accept(ModItems.SNOW_YAM.get());                // 雪山药
                     //output.accept(ModItems.AMARANTH.get());                // 苋菜
@@ -480,6 +511,16 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.腰果.get());
                     //output.accept(ModItems.碧根果.get());
                     //output.accept(ModItems.开心果.get());
+                    //output.accept(ModItems.84西瓜.get());       //明日之后 水果 真的很少
+                    //output.accept(ModItems.黄桃.get());
+                    //output.accept(ModItems.沙棘果.get());
+                    //output.accept(ModItems.龙眼.get());
+                    //output.accept(ModItems.桑葚.get());
+                    //output.accept(ModItems.冬枣.get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
