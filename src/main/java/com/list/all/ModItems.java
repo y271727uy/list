@@ -7,103 +7,106 @@ import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.crafting.Ingredient;
+import vectorwing.farmersdelight.common.tag.ForgeTags;
+import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 
 import static com.list.ListMod.REGISTRATE;
 
 public class ModItems {
 
     public static final ItemEntry<Item> INDUSTRIAL_COPPER_CREDIT = REGISTRATE
-        .item("industrial_copper_credit", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/industrial_copper_credit")))
-        .register();
+            .item("industrial_copper_credit", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/industrial_copper_credit")))
+            .register();
 
     // 工业银币
     public static final ItemEntry<Item> INDUSTRIAL_SILVER_CREDIT = REGISTRATE
-        .item("industrial_silver_credit", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/industrial_silver_credit")))
-        .register();
+            .item("industrial_silver_credit", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/industrial_silver_credit")))
+            .register();
 
     // 工业金币
     public static final ItemEntry<Item> INDUSTRIAL_GOLD_CREDIT = REGISTRATE
-        .item("industrial_gold_credit", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/industrial_gold_credit")))
-        .register();
+            .item("industrial_gold_credit", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/industrial_gold_credit")))
+            .register();
 
     // 工业铂币
     public static final ItemEntry<Item> INDUSTRIAL_PLATINUM_CREDIT = REGISTRATE
-        .item("industrial_platinum_credit", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/industrial_platinum_credit")))
-        .register();
+            .item("industrial_platinum_credit", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/industrial_platinum_credit")))
+            .register();
 
     // 工业锇币
     public static final ItemEntry<Item> INDUSTRIAL_OSMIUM_CREDIT = REGISTRATE
-        .item("industrial_osmium_credit", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/industrial_osmium_credit")))
-        .register();
+            .item("industrial_osmium_credit", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/industrial_osmium_credit")))
+            .register();
 
 
     // 平平无奇的面包
-    public static final ItemEntry<GlowingItem> JUST_BREAD =REGISTRATE
-        .item("just_bread", GlowingItem::new)
-        .properties(p -> p.rarity(Rarity.EPIC))
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.mcLoc("item/bread")))
-        .register();
+    public static final ItemEntry<GlowingItem> JUST_BREAD = REGISTRATE
+            .item("just_bread", GlowingItem::new)
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.mcLoc("item/bread")))
+            .register();
 
     // 食物之星
-    public static final ItemEntry<GlowingItem> FOOD_STAR =REGISTRATE
-        .item("food_star", GlowingItem::new)
-        .properties(p -> p.rarity(Rarity.EPIC))
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/food_star")))
-        .register();
+    public static final ItemEntry<GlowingItem> FOOD_STAR = REGISTRATE
+            .item("food_star", GlowingItem::new)
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/food_star")))
+            .register();
 
     // 渔业之星
-    public static final ItemEntry<GlowingItem> FISHERY_STAR =REGISTRATE
-        .item("fishery_star", GlowingItem::new)
-        .properties(p -> p.rarity(Rarity.EPIC))
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/fishery_star")))
-        .register();
+    public static final ItemEntry<GlowingItem> FISHERY_STAR = REGISTRATE
+            .item("fishery_star", GlowingItem::new)
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/fishery_star")))
+            .register();
 
     // 农夫之星
-    public static final ItemEntry<GlowingItem> FARMING_STAR =REGISTRATE
-        .item("farming_star", GlowingItem::new)
-        .properties(p -> p.rarity(Rarity.EPIC))
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/farming_star")))
-        .register();
+    public static final ItemEntry<GlowingItem> FARMING_STAR = REGISTRATE
+            .item("farming_star", GlowingItem::new)
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/farming_star")))
+            .register();
 
     // 林业之星
-    public static final ItemEntry<GlowingItem> FORESTRY_STAR =REGISTRATE
-        .item("forestry_star", GlowingItem::new)
-        .properties(p -> p.rarity(Rarity.EPIC))
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/forestry_star")))
-        .register();
+    public static final ItemEntry<GlowingItem> FORESTRY_STAR = REGISTRATE
+            .item("forestry_star", GlowingItem::new)
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/forestry_star")))
+            .register();
 
     // 财富之星
-    public static final ItemEntry<GlowingItem> WEALTH_STAR =REGISTRATE
-        .item("wealth_star", GlowingItem::new)
-        .properties(p -> p.rarity(Rarity.EPIC))
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/wealth_star")))
-        .register();
+    public static final ItemEntry<GlowingItem> WEALTH_STAR = REGISTRATE
+            .item("wealth_star", GlowingItem::new)
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/wealth_star")))
+            .register();
 
     // 养殖之星
-    public static final ItemEntry<GlowingItem> ANIMAL_HUSBANDRY_STAR =REGISTRATE
-        .item("animal_husbandry_star", GlowingItem::new)
-        .properties(p -> p.rarity(Rarity.EPIC))
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/animal_husbandry_star")))
-        .register();
+    public static final ItemEntry<GlowingItem> ANIMAL_HUSBANDRY_STAR = REGISTRATE
+            .item("animal_husbandry_star", GlowingItem::new)
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/animal_husbandry_star")))
+            .register();
 
     // Farmer's Ranch: Pastoral Serenade之星
-    public static final ItemEntry<GlowingItem> FARMERS_RANCH_STAR =REGISTRATE
-        .item("farmers_ranch_star", GlowingItem::new)
-        .properties(p -> p.rarity(Rarity.EPIC))
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/farmers_ranch_star")))
-        .register();
+    public static final ItemEntry<GlowingItem> FARMERS_RANCH_STAR = REGISTRATE
+            .item("farmers_ranch_star", GlowingItem::new)
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/farmers_ranch_star")))
+            .register();
 
-     // 技术性屏蔽物品
+    // 技术性屏蔽物品
     public static final ItemEntry<GlowingItem> BAD_ITEM = REGISTRATE
-        .item("bad_item", GlowingItem::new)
-        .properties(p -> p.rarity(Rarity.EPIC))
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.mcLoc("item/book")))
-        .register();
+            .item("bad_item", GlowingItem::new)
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.mcLoc("item/book")))
+            .register();
 
     //照抄
     public static final ItemEntry<EggItem> TEST_EGG = REGISTRATE
@@ -711,7 +714,7 @@ public class ModItems {
     //皇帝蟹卵
     public static final ItemEntry<Item> EMPEROR_CRAB_EGG = REGISTRATE
             .item("emperor_crab_egg", Item::new)
-             .properties(p -> p.food(new FoodProperties.Builder()
+            .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -721,7 +724,7 @@ public class ModItems {
     //面包蟹卵
     public static final ItemEntry<Item> JONAH_CRAB_EGG = REGISTRATE
             .item("jonah_crab_egg", Item::new)
-             .properties(p -> p.food(new FoodProperties.Builder()
+            .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -731,7 +734,7 @@ public class ModItems {
     //花蟹卵
     public static final ItemEntry<Item> PELAGIC_SWIMMING_CRAB_EGG = REGISTRATE
             .item("pelagic_swimming_crab_egg", Item::new)
-             .properties(p -> p.food(new FoodProperties.Builder()
+            .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -741,7 +744,7 @@ public class ModItems {
     //珍宝蟹卵
     public static final ItemEntry<Item> DUNGENESS_CRAB_EGG = REGISTRATE
             .item("dungeness_crab_egg", Item::new)
-             .properties(p -> p.food(new FoodProperties.Builder()
+            .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -751,7 +754,7 @@ public class ModItems {
     //梭子蟹卵
     public static final ItemEntry<Item> SWIMMING_CRAB_EGG = REGISTRATE
             .item("swimming_crab_egg", Item::new)
-             .properties(p -> p.food(new FoodProperties.Builder()
+            .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -761,7 +764,7 @@ public class ModItems {
     //寄居蟹卵
     public static final ItemEntry<Item> HERMIT_CRAB_EGG = REGISTRATE
             .item("hermit_crab_egg", Item::new)
-             .properties(p -> p.food(new FoodProperties.Builder()
+            .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -771,7 +774,7 @@ public class ModItems {
     //河蟹卵
     public static final ItemEntry<Item> RIVER_CRAB_EGG = REGISTRATE
             .item("river_crab_egg", Item::new)
-             .properties(p -> p.food(new FoodProperties.Builder()
+            .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
@@ -1339,7 +1342,7 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
-            // 乌翅真鲨卵
+    // 乌翅真鲨卵
     public static final ItemEntry<EggItem> BLACKFIN_SHARK_EGG = REGISTRATE
             .item("blackfin_shark_egg", p -> new EggItem(p, 0x4A4A4A))
             .properties(p -> p.food(new FoodProperties.Builder()
@@ -1347,9 +1350,10 @@ public class ModItems {
                     .saturationMod(0.3f)
                     .build()))
             .model(ItemModelUtil::eggItemModel)
+            .properties(p -> p.rarity(Rarity.EPIC))
             .register();
 
-            // 血红龙卵
+    // 血红龙卵
     public static final ItemEntry<EggItem> BLOOD_RED_DRAGONFISH_EGG = REGISTRATE
             .item("blood_red_dragonfish_egg", p -> new EggItem(p, 0x8B0000))
             .properties(p -> p.food(new FoodProperties.Builder()
@@ -1357,9 +1361,10 @@ public class ModItems {
                     .saturationMod(0.3f)
                     .build()))
             .model(ItemModelUtil::eggItemModel)
+            .properties(p -> p.rarity(Rarity.EPIC))
             .register();
 
-            //  红海黄金蝶卵
+    //  红海黄金蝶卵
     public static final ItemEntry<EggItem> RED_SEA_GOLDEN_BUTTERFLY_EGG = REGISTRATE
             .item("red_sea_golden_butterfly_egg", p -> new EggItem(p, 0xFFD700))
             .properties(p -> p.food(new FoodProperties.Builder()
@@ -1369,7 +1374,7 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
-            // 紫海刺水母卵
+    // 紫海刺水母卵
     public static final ItemEntry<EggItem> PURPLE_SEA_JELLYFISH_EGG = REGISTRATE
             .item("purple_sea_jellyfish_egg", p -> new EggItem(p, 0x9370DB))
             .properties(p -> p.food(new FoodProperties.Builder()
@@ -1379,7 +1384,7 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
-            // 皇冠狗头卵
+    // 皇冠狗头卵
     public static final ItemEntry<EggItem> CROWN_DOGHEAD_EGG = REGISTRATE
             .item("crown_doghead_egg", p -> new EggItem(p, 0xFFD700))
             .properties(p -> p.food(new FoodProperties.Builder()
@@ -1389,7 +1394,7 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
-            // 花高头龙睛卵
+    // 花高头龙睛卵
     public static final ItemEntry<EggItem> FLOWER_HIGHHEAD_DRAGONEYE_EGG = REGISTRATE
             .item("flower_highhead_dragoneye_egg", p -> new EggItem(p, 0xFF69B4))
             .properties(p -> p.food(new FoodProperties.Builder()
@@ -1399,7 +1404,7 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
-            // 线纹海马卵
+    // 线纹海马卵
     public static final ItemEntry<EggItem> STRIPED_SEAHORSE_EGG = REGISTRATE
             .item("striped_seahorse_egg", p -> new EggItem(p, 0x40E0D0))
             .properties(p -> p.food(new FoodProperties.Builder()
@@ -1409,7 +1414,7 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
-            // 黄尾蓝魔卵
+    // 黄尾蓝魔卵
     public static final ItemEntry<EggItem> YELLOWTAIL_BLUE_DEMON_EGG = REGISTRATE
             .item("yellowtail_blue_demon_egg", p -> new EggItem(p, 0x1E90FF))
             .properties(p -> p.food(new FoodProperties.Builder()
@@ -1419,7 +1424,7 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
-            // 秘鲁神仙卵
+    // 秘鲁神仙卵
     public static final ItemEntry<EggItem> PERUVIAN_FAIRYFISH_EGG = REGISTRATE
             .item("peruvian_fairyfish_egg", p -> new EggItem(p, 0xFF69B4))
             .properties(p -> p.food(new FoodProperties.Builder()
@@ -1429,7 +1434,7 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
-            // 三间火箭卵
+    // 三间火箭卵
     public static final ItemEntry<EggItem> THREE_SPOTTED_ROCKETFISH_EGG = REGISTRATE
             .item("three_spotted_rocketfish_egg", p -> new EggItem(p, 0xFF4500))
             .properties(p -> p.food(new FoodProperties.Builder()
@@ -1439,7 +1444,7 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
-            // 红剑卵
+    // 红剑卵
     public static final ItemEntry<EggItem> RED_SWORDFISH_EGG = REGISTRATE
             .item("red_swordfish_egg", p -> new EggItem(p, 0xDC143C))
             .properties(p -> p.food(new FoodProperties.Builder()
@@ -1449,7 +1454,7 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
-            // 吕宋棘海星卵
+    // 吕宋棘海星卵
     public static final ItemEntry<EggItem> LUZON_SPINY_STARFISH_EGG = REGISTRATE
             .item("luzon_spiny_starfish_egg", p -> new EggItem(p, 0xFF6347))
             .properties(p -> p.food(new FoodProperties.Builder()
@@ -1459,7 +1464,7 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
-            // 红腹食人鲳卵
+    // 红腹食人鲳卵
     public static final ItemEntry<EggItem> RED_BELLIED_PIRANHA_EGG = REGISTRATE
             .item("red_bellied_piranha_egg", p -> new EggItem(p, 0xB22222))
             .properties(p -> p.food(new FoodProperties.Builder()
@@ -1468,7 +1473,7 @@ public class ModItems {
                     .build()))
             .model(ItemModelUtil::eggItemModel)
             .register();
-    
+
     //红叶卷心菜
     public static final ItemEntry<Item> RED_CABBAGE = REGISTRATE
             .item("red_cabbage", Item::new)
@@ -1490,48 +1495,41 @@ public class ModItems {
             .register();
 
 
-
     // 草菇
-    public static final ItemEntry<Item> STRAW_MUSHROOM =REGISTRATE
+    public static final ItemEntry<Item> STRAW_MUSHROOM = REGISTRATE
             .item("straw_mushroom", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/mushroom/straw_mushroom")))
             .register();
 
     // 海蘑菇
-    public static final ItemEntry<Item> SEA_MUSHROOM =REGISTRATE
+    public static final ItemEntry<Item> SEA_MUSHROOM = REGISTRATE
             .item("sea_mushroom", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/mushroom/sea_mushroom")))
             .register();
 
     // 洞穴菇
-    public static final ItemEntry<Item> CAVE_MUSHROOM =REGISTRATE
+    public static final ItemEntry<Item> CAVE_MUSHROOM = REGISTRATE
             .item("cave_mushroom", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/mushroom/cave_mushroom")))
             .register();
 
     // 草菇菌落
-    public static final ItemEntry<Item> STRAW_MUSHROOM_COLONY =REGISTRATE
+    public static final ItemEntry<Item> STRAW_MUSHROOM_COLONY = REGISTRATE
             .item("straw_mushroom_colony", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/colony/straw_mushroom_colony")))
             .register();
 
     // 海蘑菇菌落
-    public static final ItemEntry<Item> SEA_MUSHROOM_COLONY =REGISTRATE
+    public static final ItemEntry<Item> SEA_MUSHROOM_COLONY = REGISTRATE
             .item("sea_mushroom_colony", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/colony/sea_mushroom_colony")))
             .register();
 
     // 洞穴菇菌落
-    public static final ItemEntry<Item> CAVE_MUSHROOM_COLONY =REGISTRATE
+    public static final ItemEntry<Item> CAVE_MUSHROOM_COLONY = REGISTRATE
             .item("cave_mushroom_colony", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/colony/cave_mushroom_colony")))
             .register();
-
-
-
-
-
-
 
 
     // 蟹肉
@@ -1540,6 +1538,24 @@ public class ModItems {
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/meat/crab_meat")))
             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(3)
+                    .saturationMod(1.2f)
+                    .build()))
+            .recipe((ctx, provider) -> {
+                CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(JONAH_CRAB), Ingredient.of(ForgeTags.TOOLS_KNIVES), ctx.get(), 2)
+                        .addResultWithChance(ctx.get(), 0.5f,1)
+                        .addResultWithChance(JONAH_CRAB_EGG.get(), 0.5f,1)
+                        .build(provider, ctx.getId().withPrefix("cutting/"));
+            })
+            .register();
+
+
+
+    //红叶卷心菜叶
+    public static final ItemEntry<Item> RED_CABBAGE_LEAF = REGISTRATE
+            .item("red_cabbage_leaf", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/cutting/red_cabbage_leaf")))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
                     .saturationMod(1.2f)
                     .build()))
             .register();

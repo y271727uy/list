@@ -105,40 +105,45 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.RED_SWORDFISH.get());           // 红剑
                     //output.accept(ModItems.LUZON_SPINY_STARFISH.get());    // 吕宋棘海星
                     //output.accept(ModItems.RED_BELLIED_PIRANHA.get());     // 红腹食人鲳
-
-                    //output.accept(ModItems.草鱼王.get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-
+                    //output.accept(ModItems.GRASS_CARP_KING.get());            //草鱼王
+                    //output.accept(ModItems.RIVER_SHRIMP_KING.get());          //对虾王
+                    //output.accept(ModItems.RIVER_CRAB_KING.get());            //河蟹王
+                    //output.accept(ModItems.CARP_KING.get());                  //鲤鱼王
+                    //output.accept(ModItems.PUFFERFISH_KING.get());            //河豚王
+                    //output.accept(ModItems.CATFISH_KING.get());               //鲶鱼王
+                    //output.accept(ModItems.MANDARIN_FISH_KING.get());         //鳜鱼王（桂花鱼）
+                    //output.accept(ModItems.RED_TILAPIA_KING.get());           //红罗非鱼王
+                    //output.accept(ModItems.LARGE_YELLOW_CROAKER_KING.get());  //大黄鱼王
+                    //output.accept(ModItems.SILVER_POMFRET_KING.get());        //银鲳鱼王
+                    //output.accept(ModItems.HAIRTAIL_KING.get());              //带鱼王
+                    //output.accept(ModItems.TURBOT_KING.get());                //多宝鱼王
+                    //output.accept(ModItems.RED_GROUPER_KING.get());           //红石斑鱼王
+                    //output.accept(ModItems.SALMON_KING.get());                //鲑鱼王
+                    //output.accept(ModItems.PARROT_FISH_KING.get());           //鹦嘴鱼王
+                    //output.accept(ModItems.LOBSTER_KING.get());               //龙虾王
+                    //output.accept(ModItems.NAPOLEON_FISH_KING.get());         //苏眉鱼王（拿破仑鱼）
+                    //output.accept(ModItems.THREADFIN_BREAM_KING.get());       //鸡鱼王（多指鸡鱼/鲷类，最常见为鲷科 Threadfin Bream）
+                    //output.accept(ModItems.SQUID_KING.get());                 //鱿鱼王
+                    //output.accept(ModItems.CHECKERBOARD_WRASSE_KING.get());   //云斑海猪鱼王
+                    //output.accept(ModItems.MORAY_EEL_KING.get());             //海鳗王
+                    //output.accept(ModItems.SOFTSHELL_TURTLE_KING.get());      //甲鱼王
+                    //output.accept(ModItems.SWIMMING_CRAB_KING.get());         //梭子蟹王
+                    //output.accept(ModItems.SPANISH_MACKEREL_KING.get());      //鲅鱼王
+                    //output.accept(ModItems.STRIPED_BASS_KING.get());          //条纹鲈鱼王
+                    //output.accept(ModItems.RAINBOW_TROUT_KING.get());         //虹鳟鱼王
+                    //output.accept(ModItems.BLUEGILL_KING.get());              //蓝鳃太阳鱼王
+                    //output.accept(ModItems.BIGHEAD_CARP_KING.get());          //鳙鱼王
+                    //output.accept(ModItems.PACIFIC_SAURY_KING.get());         //秋刀鱼王
+                    //output.accept(ModItems.RAINFISHI_KING.get());             //雨鱼王
+                    //output.accept(ModItems.FIRE_MOUSEFISH_KING.get());        //火鼠鱼王（幻想生物，保留直译）
+                    //output.accept(ModItems.ICE_THORN_FISH_KING.get());        //冰棘鱼王（幻想生物直译）
+                    //output.accept(ModItems.SNAKEHEAD_KING.get());             //蛇鱼王（黑鱼 Snakehead）
+                    //output.accept(ModItems.SOLE_FISH_KING.get());             //龙利鱼王（多指鲽目 Sole 或 Flounder，这里取 Sole）
+                    //output.accept(ModItems.RED_SNAPPER_KING.get());           //红鲷鱼王
+                    //output.accept(ModItems.TOPMOUTH_GUDGEON_KING.get());      //白条鱼王（常见“白条鱼”= Topmouth gudgeon）
+                    //output.accept(ModItems.TUNA_KING.get());                  //金枪鱼王
+                    //output.accept(ModItems.CLOWNFISH_KING.get());             //小丑鱼王
+                    //output.accept(ModItems.MANTA_RAY_KING.get());             //魔鬼鱼王（Manta Ray）
                     //output.accept(ModItems.COCKLE.get());                 //鸟蛤（就是鸟贝） cockle      //蟹 虾 贝 软体 鱼
                     //output.accept(ModItems.CLAM.get());                   // 蚌（游戏中为 Clam）
                     //output.accept(ModItems.OYSTER.get());                 // 牡蛎
@@ -148,7 +153,7 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.GLACIERFISH.get());            // 冰川鱼（Glacierfish）
                     //output.accept(ModItems.MUTANT_CARP.get());            // 变种鲤鱼（Mutant Carp）
                     //output.accept(ModItems.SON_OF_CRIMSONFISH.get());     // 绯红鱼之子（Son of Crimsonfish）
-                    //output.accept(ModItems.Ms_ANGELFISH.get());           // 雌𩽾𩾌鱼（解释见下方）
+                    //output.accept(ModItems.Ms_ANGELFISH.get());           // 雌𩽾𩾌鱼
                     //output.accept(ModItems.LEGEND_II.get());              // 传说之鱼二代（Legend II）
                     //output.accept(ModItems.GLACIERFISH_JR.get());         // 小冰川鱼（Glacierfish Jr.）
                     //output.accept(ModItems.RADIOACTIVE_CARP.get());       // 放射性鲤鱼（Radioactive Carp）
@@ -197,7 +202,7 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.MurrayCrayfish.get());  //墨累河刺鳌虾
                     //output.accept(ModItems.AustralianRedClawCrayfish.get());  //澳洲红刺鳌虾
                     //output.accept(ModItems.MarronCrayfish.get());  //马龙鳌虾
-                    //output.accept(ModItems.ChangbaishanCrayfish.get());  //中华长白山鳌虾
+                    //output.accept(ModItems.ChangbaishanCrayfish.get());  //中华长白山鳌虾 其实是蝲蛄
                     //output.accept(ModItems.SlipperLobster.get());  //琵琶虾
                     //output.accept(ModItems.MantisShrimp.get());  //螳螂虾
                     //output.accept(ModItems.RhinocerosShrimp.get());  //非洲犀牛虾
@@ -340,14 +345,6 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems.皇帝蟹.get());
-                    //output.accept(ModItems.面包蟹.get());
-                    //output.accept(ModItems.花蟹.get());
-                    //output.accept(ModItems.珍宝蟹.get());
-                    //output.accept(ModItems.梭子蟹.get());
-                    //output.accept(ModItems.寄居蟹.get());
-                    //output.accept(ModItems.河蟹.get());
                     //output.accept(ModItems.蓝龙虾.get());
                     //output.accept(ModItems.锦绣龙虾.get());
                     //output.accept(ModItems.深海鳌虾.get());
@@ -355,7 +352,6 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.濑尿虾.get());
                     //output.accept(ModItems.河虾.get());
                     //output.accept(ModItems.海螺.get());
-                    //output.accept(ModItems.甲鱼.get());
                     //output.accept(ModItems.生草鱼片.get());
                     //output.accept(ModItems.生蕨鱼片.get());
                     //output.accept(ModItems.生大黄鱼片.get());
@@ -543,6 +539,8 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.CAVE_MUSHROOM_COLONY.get());
 
                     output.accept(ModItems.CRAB_MEAT.get());   //蟹肉
+
+                    output.accept(ModItems.RED_CABBAGE_LEAF.get());//红卷心菜叶
 
                     output.accept(ModBlocks.TREE_COMPOST.get());  //树坑
                     output.accept(ModBlocks.FISHPOND_CORE.get());
