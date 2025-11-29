@@ -594,78 +594,90 @@ public class ModItems {
     public static final ItemEntry<Item>  = REGISTRATE
             .item("", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .properties(p -> p.rarity(Rarity.EPIC))
             .register();
 
             //血红龙
     public static final ItemEntry<Item>  = REGISTRATE
             .item("", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .properties(p -> p.rarity(Rarity.EPIC))
             .register();
 
             //红海黄金鲽
     public static final ItemEntry<Item>  = REGISTRATE
             .item("", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .properties(p -> p.rarity(Rarity.RARE))
             .register();
 
             //紫海刺水母
     public static final ItemEntry<Item>  = REGISTRATE
             .item("", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .properties(p -> p.rarity(Rarity.RARE))
             .register();
 
             //皇冠狗头
     public static final ItemEntry<Item>  = REGISTRATE
             .item("", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .properties(p -> p.rarity(Rarity.RARE))
             .register();
 
             //花高头龙睛
     public static final ItemEntry<Item>  = REGISTRATE
             .item("", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .properties(p -> p.rarity(Rarity.RARE))
             .register();
 
             //线纹海马
     public static final ItemEntry<Item>  = REGISTRATE
             .item("", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .properties(p -> p.rarity(Rarity.RARE))
             .register();
 
             //黄尾蓝魔
     public static final ItemEntry<Item>  = REGISTRATE
             .item("", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .properties(p -> p.rarity(Rarity.RARE))
             .register();
 
-            //秘鲁神仙
+    //秘鲁神仙
+    public static final ItemEntry<Item>  = REGISTRATE
+            .item("", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .properties(p -> p.rarity(Rarity.RARE))
+            .register();
+
+    //三间火箭
+    public static final ItemEntry<Item>  = REGISTRATE
+            .item("", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .properties(p -> p.rarity(Rarity.RARE))
+            .register();
+
+    //红剑
     public static final ItemEntry<Item>  = REGISTRATE
             .item("", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
             .register();
 
-            //三间火箭
+    //吕宋棘海星
     public static final ItemEntry<Item>  = REGISTRATE
             .item("", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .properties(p -> p.rarity(Rarity.RARE))
             .register();
 
-            //红剑
+    //红腹食人鲳
     public static final ItemEntry<Item>  = REGISTRATE
             .item("", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
-            .register();
-
-            //吕宋棘海星
-    public static final ItemEntry<Item>  = REGISTRATE
-            .item("", Item::new)
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
-            .register();
-
-            //红腹食人鲳
-    public static final ItemEntry<Item>  = REGISTRATE
-            .item("", Item::new)
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .properties(p -> p.rarity(Rarity.RARE))
             .register();
 */
 /*
@@ -673,6 +685,14 @@ public class ModItems {
     public static final ItemEntry<Item>  = REGISTRATE
             .item("", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .register();
+
+    //
+    public static final ItemEntry<Item>  = REGISTRATE
+            .item("", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .properties(p -> p.rarity(Rarity.EPIC))
             .register();
 */
 /*
@@ -683,98 +703,9 @@ public class ModItems {
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter//")))
             .register();
 
-            //
-    public static final ItemEntry<Item>  = REGISTRATE
-            .item("", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(0.3f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
-            .register();
-
-            //
-    public static final ItemEntry<Item>  = REGISTRATE
-            .item("", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(0.3f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
-            .register();
-
-            //
-    public static final ItemEntry<Item>  = REGISTRATE
-            .item("", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(0.3f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
-            .register();
-
-            //
-    public static final ItemEntry<Item>  = REGISTRATE
-            .item("", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(0.3f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
-            .register();
-
-            //
-    public static final ItemEntry<Item>  = REGISTRATE
-            .item("", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(0.3f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
-            .register();
-
-            //
-    public static final ItemEntry<Item>  = REGISTRATE
-            .item("", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(0.3f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
-            .register();
-
-            //
-    public static final ItemEntry<Item>  = REGISTRATE
-            .item("", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(0.3f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
-            .register();
-
-            //
-    public static final ItemEntry<Item>  = REGISTRATE
-            .item("", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(0.3f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
-            .register();
-
-            //
-    public static final ItemEntry<Item>  = REGISTRATE
-            .item("", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(0.3f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/")))
-            .register();
     */
 
     //皇帝蟹卵
