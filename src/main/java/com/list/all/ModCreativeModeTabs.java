@@ -33,12 +33,12 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.DUNGENESS_CRAB.get());
                 output.accept(ModItems.SWIMMING_CRAB.get());
                 output.accept(ModItems.HERMIT_CRAB.get());
-                output.accept(ModItems.RIVER_CRAB.get());
-                //output.accept(ModItems.蓝龙虾.get());
-                //output.accept(ModItems.锦绣龙虾.get());
-                //output.accept(ModItems.深海鳌虾.get());
-                //output.accept(ModItems.基围虾.get());
-                //output.accept(ModItems.濑尿虾.get());
+                output.accept(ModItems.RIVER_CRAB.get());  //河蟹
+                //output.accept(ModItems.蓝龙虾.get());    //蓝龙虾
+                //output.accept(ModItems.锦绣龙虾.get());  //锦绣龙虾
+                //output.accept(ModItems.深海鳌虾.get());  //深海鳌虾
+                //output.accept(ModItems.基围虾.get());    //基围虾
+                //output.accept(ModItems.濑尿虾.get());    //濑尿虾
                 output.accept(ModItems.RIVER_SHRIMP.get());
                 //output.accept(ModItems.海螺.get());
                 //output.accept(ModItems.甲鱼.get());
@@ -51,47 +51,47 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems.鹦嘴鱼.get());
                 //output.accept(ModItems.苏眉鱼.get());
                 output.accept(ModItems.KOI.get());
-                //output.accept(ModItems.鸡鱼.get());
-                //output.accept(ModItems.云斑海猪鱼.get());
-                //output.accept(ModItems.海鳗.get());
-                //output.accept(ModItems.鲅鱼.get());
-                //output.accept(ModItems.条纹鲈鱼.get());
-                //output.accept(ModItems.鳙鱼.get());
-                //output.accept(ModItems.鲥鱼.get());
-                //output.accept(ModItems.秋刀鱼.get());
-                //output.accept(ModItems.火鼠鱼.get());
-                //output.accept(ModItems.冰棘鱼.get());
-                //output.accept(ModItems.蛇鱼.get());
-                //output.accept(ModItems.红鲷鱼.get());
-                //output.accept(ModItems.魔鬼鱼.get());
-                //output.accept(ModItems.长颌鲚.get());
-                //output.accept(ModItems.小银鱼.get());
-                //output.accept(ModItems.胭脂鱼.get());
-                //output.accept(ModItems.凤尾鱼.get());
-                //output.accept(ModItems.马面鱼.get());
-                //output.accept(ModItems.黄鳝.get());
-                //output.accept(ModItems.鲽鱼.get());
-                //output.accept(ModItems.乌青鱼.get());
-                //output.accept(ModItems.鳊鱼.get());
-                //output.accept(ModItems.沙丁鱼.get());
-                //output.accept(ModItems.海鲈鱼.get());
-                //output.accept(ModItems.红歌鲤.get());
-                //output.accept(ModItems.巴浪鱼.get());
-                //output.accept(ModItems.三刀鱼.get());
-                //output.accept(ModItems.马头鱼.get());
-                //output.accept(ModItems.花英斑.get());
-                //output.accept(ModItems.深海鲑鱼.get());
-                //output.accept(ModItems.蓝飞鱼.get());
-                //output.accept(ModItems.飞鱼.get());
-                //output.accept(ModItems.雨鱼.get());
-                //output.accept(ModItems.白条鱼.get());
-                //output.accept(ModItems.赤魟.get());
-                //output.accept(ModItems.针鱼.get());
-                //output.accept(ModItems.龙利鱼.get());
-                //output.accept(ModItems.青花鱼.get());
-                //output.accept(ModItems.桂鱼.get());
-                //output.accept(ModItems.带鱼.get());
-                //output.accept(ModItems.大马哈鱼.get());
+                //output.accept(ModItems.THREADFIN_BREAM.get());         // 鸡鱼
+                //output.accept(ModItems.CHECKERBOARD_WRASSE.get());     // 云斑海猪鱼
+                //output.accept(ModItems.MORAY_EEL.get());               // 海鳗
+                //output.accept(ModItems.SPANISH_MACKEREL.get());        // 鲅鱼
+                //output.accept(ModItems.STRIPED_BASS.get());            // 条纹鲈鱼
+                //output.accept(ModItems.BIGHEAD_CARP.get());            // 鳙鱼
+                //output.accept(ModItems.CHINESE_SHAD.get());            // 鲥鱼
+                //output.accept(ModItems.PACIFIC_SAURY.get());           // 秋刀鱼
+                //output.accept(ModItems.FIRE_RAT_FISH.get());           // 火鼠鱼
+                //output.accept(ModItems.ICETHORN_FISH.get());           // 冰棘鱼
+                //output.accept(ModItems.SNAKEHEAD_FISH.get());          // 蛇鱼
+                //output.accept(ModItems.RED_SNAPPER.get());             // 红鲷鱼
+                //output.accept(ModItems.DEVIL_RAY.get());               // 魔鬼鱼
+                //output.accept(ModItems.LONGJAW_COILIA.get());          // 长颌鲚
+                //output.accept(ModItems.SMALL_WHITEBAIT.get());         // 小银鱼
+                //output.accept(ModItems.ROSY_BARB.get());               // 胭脂鱼
+                //output.accept(ModItems.ANCHOVY.get());                 // 凤尾鱼
+                //output.accept(ModItems.HORSEFACE_FISH.get());          // 马面鱼
+                //output.accept(ModItems.RICE_PADDY_EEL.get());          // 黄鳝
+                //output.accept(ModItems.SOLE_FISH.get());               // 鲽鱼
+                //output.accept(ModItems.BLACK_AMUR_BREAM.get());        // 乌青鱼
+                //output.accept(ModItems.BREAM.get());                   // 鳊鱼
+                //output.accept(ModItems.SARDINE.get());                 // 沙丁鱼
+                //output.accept(ModItems.SEA_BASS.get());                // 海鲈鱼
+                //output.accept(ModItems.RED_SONG_CARP.get());           // 红歌鲤
+                //output.accept(ModItems.BARRACUDA.get());               // 巴浪鱼
+                //output.accept(ModItems.THREE_KNIFE_FISH.get());        // 三刀鱼
+                //output.accept(ModItems.HORSEHEAD_FISH.get());          // 马头鱼
+                //output.accept(ModItems.FLOWER_SPOTTED_GROUPER.get());  // 花英斑
+                //output.accept(ModItems.DEEP_SEA_SALMON.get());         // 深海鲑鱼
+                //output.accept(ModItems.BLUE_FLYING_FISH.get());        // 蓝飞鱼
+                //output.accept(ModItems.FLYING_FISH.get());             // 飞鱼
+                //output.accept(ModItems.RAINFISH.get());                // 雨鱼
+                //output.accept(ModItems.WHITE_STRIPE_FISH.get());       // 白条鱼
+                //output.accept(ModItems.RED_STINGRAY.get());            // 赤魟
+                //output.accept(ModItems.NEEDLEFISH.get());              // 针鱼
+                //output.accept(ModItems.SOLE_FISH.get());               // 龙利鱼
+                //output.accept(ModItems.CHUB_MACKEREL.get());           // 青花鱼
+                //output.accept(ModItems.CHINESE_PERCH.get());           // 桂鱼
+                //output.accept(ModItems.HAIRTAIL.get());                // 带鱼
+                //output.accept(ModItems.CHUM_SALMON.get());             // 大马哈鱼
                 //output.accept(ModItems.乌翅真鲨.get());
                 //output.accept(ModItems.血红龙.get());
                 //output.accept(ModItems.红海黄金蝶.get());
@@ -130,7 +130,6 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems.史莱姆鱼.get());
                 //output.accept(ModItems.虚空鲑鱼.get());
                 //output.accept(ModItems.木跃鱼.get());
-                //output.accept(ModItems.大比目鱼.get());
                 //output.accept(ModItems.蛇齿单线鱼.get());
                 //output.accept(ModItems.西鲱.get());
                 //output.accept(ModItems.麻哈脂鲤.get());
@@ -145,7 +144,6 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems.鬼鱼.get());
                 //output.accept(ModItems.大海参.get());
                 //output.accept(ModItems.海参.get());
-                //output.accept(ModItems.红鲷鱼（存疑）.get());
                 //output.accept(ModItems.章鱼.get()); 
                 //output.accept(ModItems.红鲻鱼.get());
                 //output.accept(ModItems.太阳鱼.get()); 
@@ -215,6 +213,10 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems.绿海胆.get());
                 //output.accept(ModItems.红海胆.get());
                 //output.accept(ModItems.月亮鱼.get());
+                //output.accept(ModItems.龙趸石斑鱼.get());
+                //output.accept(ModItems.马林鱼（剑鱼）.get());
+                //output.accept(ModItems.鲣鱼.get());
+                //output.accept(ModItems.泥鳅.get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
@@ -243,7 +245,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.RED_GROUPER_EGG.get());
                 output.accept(ModItems.PARROT_FISH_EGG.get());
                 output.accept(ModItems.CAMOUFLAGE_GROUPER_EGG.get());
-                output.accept(ModItems.KOI_EGG.get());
+                output.accept(ModItems.KOI_EGG.get());   //锦鲤卵
                 output.accept(ModItems.THREADFIN_BREAM_EGG.get());
                 output.accept(ModItems.CHECKERBOARD_WRASSE_EGG.get());
                 output.accept(ModItems.MORAY_EEL_EGG.get());
@@ -392,21 +394,88 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
+
+                //output.accept(ModItems.春笋.get());  //蔬菜 明日之后
+                //output.accept(ModItems.毛笋.get());
+                //output.accept(ModItems.莲藕.get());
+                //output.accept(ModItems.糯米.get());
+                //output.accept(ModItems.绿豆.get());
+                //output.accept(ModItems.芝麻.get());
+                //output.accept(ModItems.油菜.get());
+                //output.accept(ModItems.白萝卜.get());
+                //output.accept(ModItems.防风草.get());   //蔬菜 星露谷
+                //output.accept(ModItems.雪山药.get());
+                //output.accept(ModItems.苋菜.get());
+                output.accept(ModItems.RED_CABBAGE.get());  //红叶卷心菜
+                //output.accept(ModItems.金皮西葫芦.get());
+                //output.accept(ModItems.洋蓟.get());
+                //output.accept(ModItems.小白菜.get());
+                //output.accept(ModItems.山药.get());
+                //output.accept(ModItems.霜瓜.get());
+                //output.accept(ModItems.甘蓝菜.get());
+                //output.accept(ModItems.冬根.get());
+                //output.accept(ModItems.齐瓜.get());
                 //output.accept(ModItems..get());
-                //output.accept(ModItems..get());
-                //output.accept(ModItems..get());
-                //output.accept(ModItems..get());
-                //output.accept(ModItems..get());
-                //output.accept(ModItems..get());
-                //output.accept(ModItems..get());
-                //output.accept(ModItems..get());
+                //output.accept(ModItems.野山葵.get());
+                //output.accept(ModItems.山葵根.get());       //蔬菜 星露谷聚宝盆mod
+                //output.accept(ModItems.胡罗巴.get());
+                //output.accept(ModItems.芥菜.get());
+                //output.accept(ModItems.牛至.get());
+                //output.accept(ModItems.细香葱.get());
+                //output.accept(ModItems.秋葵.get());
+                //output.accept(ModItems.百里香.get());
+                //output.accept(ModItems.生菜.get());
+                //output.accept(ModItems.猫薄荷.get());
+                //output.accept(ModItems.月桂叶.get());
+                //output.accept(ModItems.扁豆.get());
+                //output.accept(ModItems.小茴香.get());
+                //output.accept(ModItems.香菜.get());
+                //output.accept(ModItems.迷迭香.get());
+                //output.accept(ModItems.莳萝.get());
+                //output.accept(ModItems.芹菜.get());
+                //output.accept(ModItems.香茅.get());
+                //output.accept(ModItems.龙蒿.get());
+                //output.accept(ModItems.豆芽.get());
+                //output.accept(ModItems.芦荟.get());
+                //output.accept(ModItems.苦艾.get());
+                //output.accept(ModItems.油菜花.get());
+                //output.accept(ModItems.紫苏叶.get());
+                //output.accept(ModItems.豌豆.get());
+                //output.accept(ModItems.赤豆.get());
+                //output.accept(ModItems.罗勒.get());
+                output.accept(ModItems.RED_ONION.get());    //红洋葱
+                //output.accept(ModItems.香花薄荷.get());
+                //output.accept(ModItems.龙舌兰.get());
+                //output.accept(ModItems.蓝龙舌兰.get());
+                //output.accept(ModItems.红葱头（红毛葱）.get());
+                //output.accept(ModItems.红腰豆（有毒）.get());
+                //output.accept(ModItems.海军豆.get());
+                //output.accept(ModItems.紫山药.get());
+                //output.accept(ModItems.洋甘草根.get());
+                //output.accept(ModItems.哈瓦那辣椒.get());
+                //output.accept(ModItems.荞麦.get());
+                //output.accept(ModItems.芦笋.get());
+                //output.accept(ModItems.奶油南瓜.get());
+                //output.accept(ModItems.藜麦.get());
+                //output.accept(ModItems.肉豆蔻.get());
+                //output.accept(ModItems.香草.get());
+                //output.accept(ModItems.鼠尾草.get());
+                //output.accept(ModItems.人参.get());
+                //output.accept(ModItems.千层树叶.get());
+                //output.accept(ModItems.樟树叶.get());
+                //output.accept(ModItems.桉树叶.get());
+                //output.accept(ModItems.上古水果.get());           //星露谷水果，反正分不清了就这样吧
+                //output.accept(ModItems.宝石甜莓.get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
 
-                output.accept(ModItems.STRAW_MUSHROOM.get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
+
+                output.accept(ModItems.STRAW_MUSHROOM.get());   //蘑菇
                 output.accept(ModItems.SEA_MUSHROOM.get());
                 output.accept(ModItems.CAVE_MUSHROOM.get());
 
