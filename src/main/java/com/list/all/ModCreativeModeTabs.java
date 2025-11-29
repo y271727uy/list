@@ -318,19 +318,19 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.CHINESE_PERCH_EGG.get());           // 桂鱼卵
                     output.accept(ModItems.HAIRTAIL_EGG.get());                // 带鱼卵
                     output.accept(ModItems.CHUM_SALMON_EGG.get());             // 大马哈鱼卵
-                    //output.accept(ModItems.BLACKFIN_SHARK.get());          // 乌翅真鲨
-                    //output.accept(ModItems.BLOOD_RED_DRAGONFISH.get());    // 血红龙
-                    //output.accept(ModItems.RED_SEA_GOLDEN_BUTTERFLY.get()); // 红海黄金蝶
-                    //output.accept(ModItems.PURPLE_SEA_JELLYFISH.get());    // 紫海刺水母
-                    //output.accept(ModItems.CROWN_DOGHEAD.get());           // 皇冠狗头
-                    //output.accept(ModItems.FLOWER_HIGHHEAD_DRAGONEYE.get());// 花高头龙睛
-                    //output.accept(ModItems.STRIPED_SEAHORSE.get());        // 线纹海马
-                    //output.accept(ModItems.YELLOWTAIL_BLUE_DEMON.get());   // 黄尾蓝魔
-                    //output.accept(ModItems.PERUVIAN_FAIRYFISH.get());      // 秘鲁神仙
-                    //output.accept(ModItems.THREE_SPOTTED_ROCKETFISH.get());// 三间火箭
-                    //output.accept(ModItems.RED_SWORDFISH.get());           // 红剑
-                    //output.accept(ModItems.LUZON_SPINY_STARFISH.get());    // 吕宋棘海星
-                    //output.accept(ModItems.RED_BELLIED_PIRANHA.get());     // 红腹食人鲳
+                    output.accept(ModItems.BLACKFIN_SHARK_EGG.get());          // 乌翅真鲨卵
+                    output.accept(ModItems.BLOOD_RED_DRAGONFISH_EGG.get());    // 血红龙卵
+                    output.accept(ModItems.RED_SEA_GOLDEN_BUTTERFLY_EGG.get()); // 红海黄金蝶卵
+                    output.accept(ModItems.PURPLE_SEA_JELLYFISH_EGG.get());    // 紫海刺水母卵
+                    output.accept(ModItems.CROWN_DOGHEAD_EGG.get());           // 皇冠狗头卵
+                    output.accept(ModItems.FLOWER_HIGHHEAD_DRAGONEYE_EGG.get());// 花高头龙睛卵
+                    output.accept(ModItems.STRIPED_SEAHORSE_EGG.get());        // 线纹海马卵
+                    output.accept(ModItems.YELLOWTAIL_BLUE_DEMON_EGG.get());   // 黄尾蓝魔卵
+                    output.accept(ModItems.PERUVIAN_FAIRYFISH_EGG.get());      // 秘鲁神仙卵
+                    output.accept(ModItems.THREE_SPOTTED_ROCKETFISH_EGG.get());// 三间火箭卵
+                    output.accept(ModItems.RED_SWORDFISH_EGG.get());           // 红剑卵
+                    output.accept(ModItems.LUZON_SPINY_STARFISH_EGG.get());    // 吕宋棘海星卵
+                    output.accept(ModItems.RED_BELLIED_PIRANHA_EGG.get());     // 红腹食人鲳卵
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
@@ -445,8 +445,8 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.CABBAGE.get());          //甘蓝菜
                     //output.accept(ModItems.WINTER_ROOT.get());      //冬根
                     //output.accept(ModItems.QI_GUAN.get());          //齐瓜
-                    //output.accept(ModItems.WILD_WASABI.get());  //野山葵
-                    //output.accept(ModItems.WASABI_ROOT.get());  //山葵根       //蔬菜 星露谷聚宝盆mod
+                    //output.accept(ModItems.WILD_WASABI.get());       //野山葵
+                    //output.accept(ModItems.WASABI_ROOT.get());       //山葵根       //蔬菜 星露谷聚宝盆mod
                     //output.accept(ModItems.HOROPPA.get());           //胡罗巴
                     //output.accept(ModItems.MUSTARD.get());           //芥菜
                     //output.accept(ModItems.OREGANO.get());           //牛至
@@ -472,7 +472,7 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.PEA.get());               //豌豆
                     //output.accept(ModItems.RED_BEAN.get());          //赤豆
                     //output.accept(ModItems.BASIL.get());             //罗勒
-                    output.accept(ModItems.RED_ONION.get());    //红洋葱
+                    output.accept(ModItems.RED_ONION.get());           //红洋葱
                     //output.accept(ModItems.SPEARMINT.get());            //香花薄荷
                     //output.accept(ModItems.AGAVE.get());                //龙舌兰
                     //output.accept(ModItems.BLUE_AGAVE.get());           //蓝龙舌兰
@@ -493,8 +493,8 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.LAYER_TREE_LEAF.get());      //千层树叶
                     //output.accept(ModItems.CAMPHOR_LEAF.get());         //樟树叶
                     //output.accept(ModItems.EUCALYPTUS_LEAF.get());      //桉树叶
-                    //output.accept(ModItems.ANCIENT_FRUIT.get());           //上古水果（星露谷水果，反正分不清了就这样吧）
-                    //output.accept(ModItems.GEMBERRY.get());                //宝石甜莓
+                    //output.accept(ModItems.ANCIENT_FRUIT.get());          //上古水果（星露谷水果，反正分不清了就这样吧）
+                    //output.accept(ModItems.GEMBERRY.get());               //宝石甜莓
                     //output.accept(ModItems.CRYSTAL_FRUIT.get());          //水晶果
                     //output.accept(ModItems.HEART_FRUIT.get());            //人心果
                     //output.accept(ModItems.LUOHAN_ORANGE.get());          //罗汉橙
