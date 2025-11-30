@@ -182,7 +182,7 @@ public class ModItems {
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/koi")))
             .properties(p -> p.rarity(Rarity.EPIC))
             .register();
-/*
+
     //鸡鱼
     public static final ItemEntry<Item> THREADFIN_BREAM = REGISTRATE
             .item("threadfin_bream", Item::new)
@@ -202,7 +202,7 @@ public class ModItems {
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/checkerboard_wrasse")))
             .register();
-
+/*
     //海鳗
     public static final ItemEntry<Item> MORAY_EEL = REGISTRATE
             .item("moray_eel", Item::new)
@@ -212,6 +212,7 @@ public class ModItems {
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/moray_eel")))
             .register();
+*/
 
     //鲅鱼
     public static final ItemEntry<Item> SPANISH_MACKEREL = REGISTRATE
@@ -362,7 +363,7 @@ public class ModItems {
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/horseface_fish")))
             .register();
-
+/*
     //黄鳝
     public static final ItemEntry<Item> RICE_PADDY_EEL = REGISTRATE
             .item("rice_paddy_eel", Item::new)
@@ -372,15 +373,16 @@ public class ModItems {
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/rice_paddy_eel")))
             .register();
+*/
 
     //鲽鱼
-    public static final ItemEntry<Item> SOLE_FISH = REGISTRATE
-            .item("sole_fish", Item::new)
+    public static final ItemEntry<Item> FLUKE = REGISTRATE
+            .item("fluke", Item::new)
             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/sole_fish")))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/fluke")))
             .register();
 
     //乌青鱼
@@ -492,7 +494,7 @@ public class ModItems {
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/blue_flying_fish")))
             .register();
-
+/*
     //飞鱼
     public static final ItemEntry<Item> FLYING_FISH = REGISTRATE
             .item("flying_fish", Item::new)
@@ -502,6 +504,7 @@ public class ModItems {
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/flying_fish")))
             .register();
+*/
 
     //雨鱼
     public static final ItemEntry<Item> RAINFISH = REGISTRATE
@@ -522,7 +525,7 @@ public class ModItems {
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/white_stripe_fish")))
             .register();
-
+/*
     //赤魟
     public static final ItemEntry<Item> RED_STINGRAY = REGISTRATE
             .item("red_stingray", Item::new)
@@ -532,6 +535,7 @@ public class ModItems {
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/red_stingray")))
             .register();
+*/
 
     //针鱼
     public static final ItemEntry<Item> NEEDLEFISH = REGISTRATE
@@ -572,7 +576,7 @@ public class ModItems {
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/chinese_perch")))
             .register();
-
+/*
     //带鱼
     public static final ItemEntry<Item> HAIRTAIL = REGISTRATE
             .item("hairtail", Item::new)
@@ -1123,8 +1127,8 @@ public class ModItems {
             .register();
 
     // 鲽鱼卵
-    public static final ItemEntry<EggItem> SOLE_FISH_EGG = REGISTRATE
-            .item("sole_fish_egg", p -> new EggItem(p, 0xDEB887))
+    public static final ItemEntry<EggItem> FLUKE_EGG = REGISTRATE
+            .item("fluke_egg", p -> new EggItem(p, 0xDEB887))
             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
@@ -1293,7 +1297,7 @@ public class ModItems {
             .register();
 
     // 龙利鱼卵
-    public static final ItemEntry<EggItem> SOLE_FISH_EGG_DUPLICATE = REGISTRATE
+    public static final ItemEntry<EggItem> SOLE_FISH_EGG = REGISTRATE
             .item("sole_fish_egg", p -> new EggItem(p, 0xDEB887))
             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
@@ -1540,12 +1544,14 @@ public class ModItems {
                     .nutrition(3)
                     .saturationMod(1.2f)
                     .build()))
+            /*
             .recipe((ctx, provider) -> {
                 CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(JONAH_CRAB), Ingredient.of(ForgeTags.TOOLS_KNIVES), ctx.get(), 2)
                         .addResultWithChance(ctx.get(), 0.5f,1)
                         .addResultWithChance(JONAH_CRAB_EGG.get(), 0.5f,1)
                         .build(provider, ctx.getId().withPrefix("cutting/"));
             })
+            */
             .register();
 
 

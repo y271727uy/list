@@ -51,45 +51,45 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.鹦嘴鱼.get());
                     //output.accept(ModItems.苏眉鱼.get());
                     output.accept(ModItems.KOI.get());
-                    //output.accept(ModItems.THREADFIN_BREAM.get());         // 鸡鱼
-                    //output.accept(ModItems.CHECKERBOARD_WRASSE.get());     // 云斑海猪鱼
+                    output.accept(ModItems.THREADFIN_BREAM.get());         // 鸡鱼
+                    output.accept(ModItems.CHECKERBOARD_WRASSE.get());     // 云斑海猪鱼
                     //output.accept(ModItems.MORAY_EEL.get());               // 海鳗
                     //output.accept(ModItems.SPANISH_MACKEREL.get());        // 鲅鱼
-                    //output.accept(ModItems.STRIPED_BASS.get());            // 条纹鲈鱼
-                    //output.accept(ModItems.BIGHEAD_CARP.get());            // 鳙鱼
-                    //output.accept(ModItems.CHINESE_SHAD.get());            // 鲥鱼
-                    //output.accept(ModItems.PACIFIC_SAURY.get());           // 秋刀鱼
-                    //output.accept(ModItems.FIRE_RAT_FISH.get());           // 火鼠鱼
-                    //output.accept(ModItems.ICETHORN_FISH.get());           // 冰棘鱼
-                    //output.accept(ModItems.SNAKEHEAD_FISH.get());          // 蛇鱼
-                    //output.accept(ModItems.RED_SNAPPER.get());             // 红鲷鱼
-                    //output.accept(ModItems.DEVIL_RAY.get());               // 魔鬼鱼
-                    //output.accept(ModItems.LONGJAW_COILIA.get());          // 长颌鲚
-                    //output.accept(ModItems.SMALL_WHITEBAIT.get());         // 小银鱼
-                    //output.accept(ModItems.ROSY_BARB.get());               // 胭脂鱼
-                    //output.accept(ModItems.ANCHOVY.get());                 // 凤尾鱼
-                    //output.accept(ModItems.HORSEFACE_FISH.get());          // 马面鱼
+                    output.accept(ModItems.STRIPED_BASS.get());            // 条纹鲈鱼
+                    output.accept(ModItems.BIGHEAD_CARP.get());            // 鳙鱼
+                    output.accept(ModItems.CHINESE_SHAD.get());            // 鲥鱼
+                    output.accept(ModItems.PACIFIC_SAURY.get());           // 秋刀鱼
+                    output.accept(ModItems.FIRE_RAT_FISH.get());           // 火鼠鱼
+                    output.accept(ModItems.ICETHORN_FISH.get());           // 冰棘鱼
+                    output.accept(ModItems.SNAKEHEAD_FISH.get());          // 蛇鱼
+                    output.accept(ModItems.RED_SNAPPER.get());             // 红鲷鱼
+                    output.accept(ModItems.DEVIL_RAY.get());               // 魔鬼鱼
+                    output.accept(ModItems.LONGJAW_COILIA.get());          // 长颌鲚
+                    output.accept(ModItems.SMALL_WHITEBAIT.get());         // 小银鱼
+                    output.accept(ModItems.ROSY_BARB.get());               // 胭脂鱼
+                    output.accept(ModItems.ANCHOVY.get());                 // 凤尾鱼
+                    output.accept(ModItems.HORSEFACE_FISH.get());          // 马面鱼
                     //output.accept(ModItems.RICE_PADDY_EEL.get());          // 黄鳝
-                    //output.accept(ModItems.SOLE_FISH.get());               // 鲽鱼
-                    //output.accept(ModItems.BLACK_AMUR_BREAM.get());        // 乌青鱼
-                    //output.accept(ModItems.BREAM.get());                   // 鳊鱼
-                    //output.accept(ModItems.SARDINE.get());                 // 沙丁鱼
-                    //output.accept(ModItems.SEA_BASS.get());                // 海鲈鱼
-                    //output.accept(ModItems.RED_SONG_CARP.get());           // 红歌鲤
-                    //output.accept(ModItems.BARRACUDA.get());               // 巴浪鱼
-                    //output.accept(ModItems.THREE_KNIFE_FISH.get());        // 三刀鱼
-                    //output.accept(ModItems.HORSEHEAD_FISH.get());          // 马头鱼
-                    //output.accept(ModItems.FLOWER_SPOTTED_GROUPER.get());  // 花英斑
-                    //output.accept(ModItems.DEEP_SEA_SALMON.get());         // 深海鲑鱼
-                    //output.accept(ModItems.BLUE_FLYING_FISH.get());        // 蓝飞鱼
+                    output.accept(ModItems.FLUKE.get());               // 鲽鱼
+                    output.accept(ModItems.BLACK_AMUR_BREAM.get());        // 乌青鱼
+                    output.accept(ModItems.BREAM.get());                   // 鳊鱼
+                    output.accept(ModItems.SARDINE.get());                 // 沙丁鱼
+                    output.accept(ModItems.SEA_BASS.get());                // 海鲈鱼
+                    output.accept(ModItems.RED_SONG_CARP.get());           // 红歌鲤
+                    output.accept(ModItems.BARRACUDA.get());               // 巴浪鱼
+                    output.accept(ModItems.THREE_KNIFE_FISH.get());        // 三刀鱼
+                    output.accept(ModItems.HORSEHEAD_FISH.get());          // 马头鱼
+                    output.accept(ModItems.FLOWER_SPOTTED_GROUPER.get());  // 花英斑
+                    output.accept(ModItems.DEEP_SEA_SALMON.get());         // 深海鲑鱼
+                    output.accept(ModItems.BLUE_FLYING_FISH.get());        // 蓝飞鱼
                     //output.accept(ModItems.FLYING_FISH.get());             // 飞鱼
-                    //output.accept(ModItems.RAINFISH.get());                // 雨鱼
-                    //output.accept(ModItems.WHITE_STRIPE_FISH.get());       // 白条鱼
+                    output.accept(ModItems.RAINFISH.get());                // 雨鱼
+                    output.accept(ModItems.WHITE_STRIPE_FISH.get());       // 白条鱼
                     //output.accept(ModItems.RED_STINGRAY.get());            // 赤魟
-                    //output.accept(ModItems.NEEDLEFISH.get());              // 针鱼
-                    //output.accept(ModItems.SOLE_FISH.get());               // 龙利鱼
-                    //output.accept(ModItems.CHUB_MACKEREL.get());           // 青花鱼
-                    //output.accept(ModItems.CHINESE_PERCH.get());           // 桂鱼
+                    output.accept(ModItems.NEEDLEFISH.get());              // 针鱼
+                    output.accept(ModItems.SOLE_FISH.get());               // 龙利鱼
+                    output.accept(ModItems.CHUB_MACKEREL.get());           // 青花鱼
+                    output.accept(ModItems.CHINESE_PERCH.get());           // 桂鱼
                     //output.accept(ModItems.HAIRTAIL.get());                // 带鱼
                     //output.accept(ModItems.CHUM_SALMON.get());             // 大马哈鱼
                     //output.accept(ModItems.BLACKFIN_SHARK.get());          // 乌翅真鲨
@@ -301,7 +301,7 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.ANCHOVY_EGG.get());                 // 凤尾鱼卵
                     output.accept(ModItems.HORSEFACE_FISH_EGG.get());          // 马面鱼卵
                     output.accept(ModItems.RICE_PADDY_EEL_EGG.get());          // 黄鳝卵
-                    output.accept(ModItems.SOLE_FISH_EGG.get());               // 鲽鱼卵
+                    output.accept(ModItems.FLUKE_EGG.get());               // 鲽鱼卵
                     output.accept(ModItems.BLACK_AMUR_BREAM_EGG.get());        // 乌青鱼卵
                     output.accept(ModItems.BREAM_EGG.get());                   // 鳊鱼卵
                     output.accept(ModItems.SARDINE_EGG.get());                 // 沙丁鱼卵
