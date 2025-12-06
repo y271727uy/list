@@ -1478,6 +1478,132 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
+/*
+// 春笋   //明日之后蔬菜
+public static final ItemEntry<Item> SPRING_BAMBOO_SHOOT = REGISTRATE
+        .item("spring_bamboo_shoot", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/lifafter/spring_bamboo_shoot")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 毛笋
+public static final ItemEntry<Item> HAIRY_BAMBOO_SHOOT = REGISTRATE
+        .item("hairy_bamboo_shoot", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/lifafter/hairy_bamboo_shoot")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 莲藕
+public static final ItemEntry<Item> LOTUS_ROOT = REGISTRATE
+        .item("lotus_root", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/lifafter/lotus_root")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 糯米
+public static final ItemEntry<Item> GLUTINOUS_RICE = REGISTRATE
+        .item("glutinous_rice", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/lifafter/glutinous_rice")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 绿豆
+public static final ItemEntry<Item> MUNG_BEAN = REGISTRATE
+        .item("mung_bean", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/lifafter/mung_bean")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 芝麻
+public static final ItemEntry<Item> SESAME_SEED = REGISTRATE
+        .item("sesame_seed", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/lifafter/sesame_seed")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 油菜
+public static final ItemEntry<Item> RAPESEED = REGISTRATE
+        .item("rapeseed", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/lifafter/rapeseed")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 菊花
+public static final ItemEntry<Item> CHRYSANTHEMUM = REGISTRATE
+        .item("chrysanthemum", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/lifafter/chrysanthemum")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+*/
+/*
+    // 防风草
+public static final ItemEntry<Item> PARSNIP = REGISTRATE
+        .item("parsnip", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/parsnip")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(2)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 雪山药
+public static final ItemEntry<Item> SNOW_YAM = REGISTRATE
+        .item("snow_yam", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/snow_yam")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 白萝卜
+public static final ItemEntry<Item> WHITE_RADISH = REGISTRATE
+        .item("white_radish", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/white_radish")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 苋菜
+public static final ItemEntry<Item> AMARANTH = REGISTRATE
+        .item("amaranth", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/amaranth")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+
+*/
+
     //红叶卷心菜
     public static final ItemEntry<Item> RED_CABBAGE = REGISTRATE
             .item("red_cabbage", Item::new)
@@ -1487,6 +1613,349 @@ public class ModItems {
                     .saturationMod(1.2f)
                     .build()))
             .register();
+/*
+
+// 金皮西葫芦
+public static final ItemEntry<Item> GOLDEN_ZUCCHINI = REGISTRATE
+        .item("golden_zucchini", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/golden_zucchini")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 洋蓟
+public static final ItemEntry<Item> ARTICHOKE = REGISTRATE
+        .item("artichoke", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/artichoke")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 小白菜
+public static final ItemEntry<Item> BOK_CHOY = REGISTRATE
+        .item("bok_choy", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/bok_choy")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 山药
+public static final ItemEntry<Item> YAM = REGISTRATE
+        .item("yam", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/yam")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 霜瓜
+public static final ItemEntry<Item> FROSTED_MELON = REGISTRATE
+        .item("frosted_melon", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/frosted_melon")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 甘蓝菜
+public static final ItemEntry<Item> CABBAGE = REGISTRATE
+        .item("cabbage", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/cabbage")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 冬根
+public static final ItemEntry<Item> WINTER_ROOT = REGISTRATE
+        .item("winter_root", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/winter_root")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 齐瓜
+public static final ItemEntry<Item> QI_GUAN = REGISTRATE
+        .item("qi_guan", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/qi_guan")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 野山葵
+public static final ItemEntry<Item> WILD_WASABI = REGISTRATE
+        .item("wild_wasabi", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/wild_wasabi")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 山葵根
+public static final ItemEntry<Item> WASABI_ROOT = REGISTRATE
+        .item("wasabi_root", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/wasabi_root")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 胡罗巴
+public static final ItemEntry<Item> HOROPPA = REGISTRATE
+        .item("horoppa", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/horoppa")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 芥菜
+public static final ItemEntry<Item> MUSTARD = REGISTRATE
+        .item("mustard", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/mustard")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 牛至
+public static final ItemEntry<Item> OREGANO = REGISTRATE
+        .item("oregano", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/oregano")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 细香葱
+public static final ItemEntry<Item> CHIVES = REGISTRATE
+        .item("chives", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/chives")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 秋葵
+public static final ItemEntry<Item> OKRA = REGISTRATE
+        .item("okra", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/okra")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 百里香
+public static final ItemEntry<Item> THYMUS = REGISTRATE
+        .item("thymus", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/thymus")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 生菜
+public static final ItemEntry<Item> LETTUCE = REGISTRATE
+        .item("lettuce", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/lettuce")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 猫薄荷
+public static final ItemEntry<Item> CATNIP = REGISTRATE
+        .item("catnip", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/catnip")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 月桂叶
+public static final ItemEntry<Item> BAY_LEAF = REGISTRATE
+        .item("bay_leaf", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/bay_leaf")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 扁豆
+public static final ItemEntry<Item> LENTIL = REGISTRATE
+        .item("lentil", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/lentil")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 小茴香
+public static final ItemEntry<Item> FENNEL = REGISTRATE
+        .item("fennel", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/fennel")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 香菜
+public static final ItemEntry<Item> CILANTRO = REGISTRATE
+        .item("cilantro", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/cilantro")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 迷迭香
+public static final ItemEntry<Item> ROSEMARY = REGISTRATE
+        .item("rosemary", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/rosemary")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 莳萝
+public static final ItemEntry<Item> DILL = REGISTRATE
+        .item("dill", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/dill")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 芹菜
+public static final ItemEntry<Item> CELERY = REGISTRATE
+        .item("celery", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/celery")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 龙蒿
+public static final ItemEntry<Item> TARRAGON = REGISTRATE
+        .item("tarragon", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/tarragon")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 豆芽
+public static final ItemEntry<Item> BEAN_SPROUT = REGISTRATE
+        .item("bean_sprout", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/bean_sprout")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 芦荟
+public static final ItemEntry<Item> ALOE = REGISTRATE
+        .item("aloe", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/aloe")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 苦艾
+public static final ItemEntry<Item> WORMWOOD = REGISTRATE
+        .item("wormwood", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/wormwood")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 油菜花
+public static final ItemEntry<Item> RAPESEED_FLOWER = REGISTRATE
+        .item("rapeseed_flower", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/rapeseed_flower")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 紫苏叶
+public static final ItemEntry<Item> PERILLA_LEAF = REGISTRATE
+        .item("perilla_leaf", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/perilla_leaf")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 豌豆
+public static final ItemEntry<Item> PEA = REGISTRATE
+        .item("pea", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/pea")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 赤豆
+public static final ItemEntry<Item> RED_BEAN = REGISTRATE
+        .item("red_bean", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/red_bean")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 罗勒
+public static final ItemEntry<Item> BASIL = REGISTRATE
+        .item("basil", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/basil")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+*/
 
     //红洋葱
     public static final ItemEntry<Item> RED_ONION = REGISTRATE
@@ -1497,6 +1966,432 @@ public class ModItems {
                     .saturationMod(1.2f)
                     .build()))
             .register();
+/*
+// 香花薄荷
+public static final ItemEntry<Item> SPEARMINT = REGISTRATE
+        .item("spearmint", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/spearmint")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 龙舌兰
+public static final ItemEntry<Item> AGAVE = REGISTRATE
+        .item("agave", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/agave")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 蓝龙舌兰
+public static final ItemEntry<Item> BLUE_AGAVE = REGISTRATE
+        .item("blue_agave", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/blue_agave")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 红葱头（红葱头一般叫红毛葱）
+public static final ItemEntry<Item> SHALLOT = REGISTRATE
+        .item("shallot", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/shallot")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 红腰豆（有毒）
+public static final ItemEntry<Item> RED_KIDNEY_BEAN = REGISTRATE
+        .item("red_kidney_bean", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/red_kidney_bean")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 海军豆
+public static final ItemEntry<Item> NAVY_BEAN = REGISTRATE
+        .item("navy_bean", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/navy_bean")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 紫山药
+public static final ItemEntry<Item> PURPLE_YAM = REGISTRATE
+        .item("purple_yam", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/purple_yam")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 洋甘草根
+public static final ItemEntry<Item> LICORICE_ROOT = REGISTRATE
+        .item("licorice_root", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/licorice_root")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 哈瓦那辣椒
+public static final ItemEntry<Item> HAVANA_CHILI = REGISTRATE
+        .item("havana_chili", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/havana_chili")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 荞麦
+public static final ItemEntry<Item> BUCKWHEAT = REGISTRATE
+        .item("buckwheat", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/buckwheat")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 芦笋
+public static final ItemEntry<Item> ASPARAGUS = REGISTRATE
+        .item("asparagus", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/asparagus")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 奶油南瓜
+public static final ItemEntry<Item> CREAM_PUMPKIN = REGISTRATE
+        .item("cream_pumpkin", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/cream_pumpkin")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 藜麦
+public static final ItemEntry<Item> QUINOA = REGISTRATE
+        .item("quinoa", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/quinoa")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 肉豆蔻
+public static final ItemEntry<Item> NUTMEG = REGISTRATE
+        .item("nutmeg", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/nutmeg")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 香草
+public static final ItemEntry<Item> VANILLA = REGISTRATE
+        .item("vanilla", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/vanilla")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 鼠尾草
+public static final ItemEntry<Item> SAGE = REGISTRATE
+        .item("sage", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/sage")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+*/
+// 人参
+public static final ItemEntry<Item> GINSENG = REGISTRATE
+        .item("ginseng", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/ginseng")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+        
+// 千层树叶
+public static final ItemEntry<Item> LAYER_TREE_LEAF = REGISTRATE
+        .item("layer_tree_leaf", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/layer_tree_leaf")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.1f)
+                .build()))
+        .register();
+
+// 樟树叶
+public static final ItemEntry<Item> CAMPHOR_LEAF = REGISTRATE
+        .item("camphor_leaf", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/camphor_leaf")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.1f)
+                .build()))
+        .register();
+
+// 桉树叶
+public static final ItemEntry<Item> EUCALYPTUS_LEAF = REGISTRATE
+        .item("eucalyptus_leaf", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/eucalyptus_leaf")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.1f)
+                .build()))
+        .register();
+
+// 上古水果（星露谷水果，反正分不清了就这样吧）
+public static final ItemEntry<Item> ANCIENT_FRUIT = REGISTRATE
+        .item("ancient_fruit", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/ancient_fruit")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 宝石甜莓
+public static final ItemEntry<Item> GEMBERRY = REGISTRATE
+        .item("gemberry", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/gemberry")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 水晶果
+public static final ItemEntry<Item> CRYSTAL_FRUIT = REGISTRATE
+        .item("crystal_fruit", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/crystal_fruit")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 人心果
+public static final ItemEntry<Item> HEART_FRUIT = REGISTRATE
+        .item("heart_fruit", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/heart_fruit")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+/*
+// 罗汉橙
+public static final ItemEntry<Item> LUOHAN_ORANGE = REGISTRATE
+        .item("luohan_orange", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/luohan_orange")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 芭蕉
+public static final ItemEntry<Item> BANANA = REGISTRATE
+        .item("banana", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/banana")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 美洲大树莓
+public static final ItemEntry<Item> AMERICAN_RASPBERRY = REGISTRATE
+        .item("american_raspberry", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/american_raspberry")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+*/
+// 菇娘果
+public static final ItemEntry<Item> MUSHROOM_BERRY = REGISTRATE
+        .item("mushroom_berry", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/mushroom_berry")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+/*
+// 面包果
+public static final ItemEntry<Item> BREADFRUIT = REGISTRATE
+        .item("breadfruit", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/breadfruit")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 香味浆果
+public static final ItemEntry<Item> FRAGRANT_BERRY = REGISTRATE
+        .item("fragrant_berry", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/fragrant_berry")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 香瓜
+public static final ItemEntry<Item> MUSK_MELON = REGISTRATE
+        .item("musk_melon", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/musk_melon")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 金丝甜瓜
+public static final ItemEntry<Item> GOLDEN_MELON = REGISTRATE
+        .item("golden_melon", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/golden_melon")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+*/
+
+
+// 油桃
+public static final ItemEntry<Item> NECTARINE = REGISTRATE
+        .item("nectarine", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/nectarine")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 腰果
+public static final ItemEntry<Item> CASHEW = REGISTRATE
+        .item("cashew", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/cashew")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 碧根果
+public static final ItemEntry<Item> PECAN = REGISTRATE
+        .item("pecan", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/pecan")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 开心果
+public static final ItemEntry<Item> PISTACHIO = REGISTRATE
+        .item("pistachio", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/pistachio")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+
+/*
+// 84西瓜（明日之后 水果 真的很少）
+public static final ItemEntry<Item> WATERMELON_84 = REGISTRATE
+        .item("watermelon_84", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/lifafter/watermelon_84")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 黄桃
+public static final ItemEntry<Item> YELLOW_PEACH = REGISTRATE
+        .item("yellow_peach", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/lifafter/yellow_peach")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 沙棘果
+public static final ItemEntry<Item> SEA_BUCKTHORN = REGISTRATE
+        .item("sea_buckthorn", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/lifafter/sea_buckthorn")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 龙眼
+public static final ItemEntry<Item> LONGAN = REGISTRATE
+        .item("longan", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/lifafter/longan")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 桑葚
+public static final ItemEntry<Item> MULBERRY = REGISTRATE
+        .item("mulberry", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/lifafter/mulberry")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+// 冬枣
+public static final ItemEntry<Item> WINTER_JUJUBE = REGISTRATE
+        .item("winter_jujube", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/lifafter/winter_jujube")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+*/
 
 
     // 草菇
@@ -1535,7 +2430,29 @@ public class ModItems {
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/colony/cave_mushroom_colony")))
             .register();
 
+    //红叶卷心菜叶
+    public static final ItemEntry<Item> RED_CABBAGE_LEAF = REGISTRATE
+            .item("red_cabbage_leaf", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/cutting/red_cabbage_leaf")))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(1.2f)
+                    .build()))
+            .register();
 
+/*
+    //
+    public static final ItemEntry<Item>  = REGISTRATE
+            .item("", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/")))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(1.2f)
+                    .build()))
+            .register();
+
+*/
+ 
     // 蟹肉
     public static final ItemEntry<Item> CRAB_MEAT = REGISTRATE
             .item("crab_meat", Item::new)
@@ -1554,17 +2471,6 @@ public class ModItems {
             */
             .register();
 
-
-
-    //红叶卷心菜叶
-    public static final ItemEntry<Item> RED_CABBAGE_LEAF = REGISTRATE
-            .item("red_cabbage_leaf", Item::new)
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/cutting/red_cabbage_leaf")))
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(2)
-                    .saturationMod(1.2f)
-                    .build()))
-            .register();
 
 
 

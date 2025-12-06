@@ -171,7 +171,7 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.HERRING.get());                // 西鲱（Herring）
                     //output.accept(ModItems.CHUB.get());                   // 大头鱼（Chub）
                     //output.accept(ModItems.TIGER_TROUT.get());            // 虎纹鳟鱼（Tiger Trout）
-                    //output.accept(ModItems.STURGEON.get());               // 鲟鱼（Sturgeon）（你标“存疑”，实际存在） 游戏内添加存疑，别管gpt
+                    //output.accept(ModItems.STURGEON.get());               // 鲟鱼（Sturgeon）
                     //output.accept(ModItems.MIDNIGHT_CARP.get());          // 午夜鲤鱼（Midnight Carp）
                     //output.accept(ModItems.SAND_FISH.get());              // 沙鱼（Sandfish）
                     //output.accept(ModItems.LAVA_EEL.get());               // 岩浆鳗鱼（Lava Eel）
@@ -180,7 +180,6 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.SPIRIT_EEL.get());             // 鬼鱼（Spirit Eel）
                     //output.accept(ModItems.SEA_CUCUMBER.get());           // 大海参（Sea Cucumber，注意区分尺寸时用 Super Cucumber）
                     //output.accept(ModItems.SUPER_CUCUMBER.get());         // 海参（Super Cucumber）
-                    //output.accept(ModItems.OCTOPUS.get());                // 章鱼（Octopus）
                     //output.accept(ModItems.RED_MULLET.get());             // 红鲻鱼（Red Mullet）
                     //output.accept(ModItems.SUNFISH.get());                // 太阳鱼（Sunfish）
                     //output.accept(ModItems.CoconutCrab.get());  //椰子蟹  现实
@@ -301,7 +300,7 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.ANCHOVY_EGG.get());                 // 凤尾鱼卵
                     output.accept(ModItems.HORSEFACE_FISH_EGG.get());          // 马面鱼卵
                     output.accept(ModItems.RICE_PADDY_EEL_EGG.get());          // 黄鳝卵
-                    output.accept(ModItems.FLUKE_EGG.get());               // 鲽鱼卵
+                    output.accept(ModItems.FLUKE_EGG.get());                   // 鲽鱼卵
                     output.accept(ModItems.BLACK_AMUR_BREAM_EGG.get());        // 乌青鱼卵
                     output.accept(ModItems.BREAM_EGG.get());                   // 鳊鱼卵
                     output.accept(ModItems.SARDINE_EGG.get());                 // 沙丁鱼卵
@@ -420,6 +419,43 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());       //
+
+                    
+
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+
+                    output.accept(ModItems.STRAW_MUSHROOM.get());   //蘑菇
+                    //output.accept(ModItems.香菇.get());
+                    output.accept(ModItems.SEA_MUSHROOM.get());
+                    output.accept(ModItems.CAVE_MUSHROOM.get());
+
+                    //output.accept(ModItems.紫蘑菇.get());
+                    //output.accept(ModItems.熔岩蘑菇.get());
+                    //output.accept(ModItems.鸡油菌.get());
+                    //output.accept(ModItems.鸡冠菌.get())；
+
+                    output.accept(ModItems.STRAW_MUSHROOM_COLONY.get());
+                    output.accept(ModItems.SEA_MUSHROOM_COLONY.get());
+                    output.accept(ModItems.CAVE_MUSHROOM_COLONY.get());
+
+                    output.accept(ModItems.CRAB_MEAT.get());   //蟹肉
+
+                    output.accept(ModItems.RED_CABBAGE_LEAF.get());//红卷心菜叶
+
+                    output.accept(ModBlocks.TREE_COMPOST.get());  //树坑
+                    output.accept(ModBlocks.FISHPOND_CORE.get());
+                    output.accept(ModBlocks.GREENHOUSE_FURNACE.get());
+                });
+            })
+            .register();
+            
+    // 农作物标签页
+    public static final RegistryEntry<CreativeModeTab> CROPS_TAB = REGISTRATE
+            .defaultCreativeTab("the_crops", builder -> {
+                builder.icon(ModItems.RED_ONION::asStack);
+                builder.displayItems((parameters, output) -> {
                     //output.accept(ModItems.SPRING_BAMBOO_SHOOT.get());     // 春笋   //明日之后蔬菜
                     //output.accept(ModItems.HAIRY_BAMBOO_SHOOT.get());      // 毛笋
                     //output.accept(ModItems.LOTUS_ROOT.get());              // 莲藕
@@ -427,10 +463,10 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.MUNG_BEAN.get());               // 绿豆
                     //output.accept(ModItems.SESAME_SEED.get());             // 芝麻
                     //output.accept(ModItems.RAPESEED.get());                // 油菜
-                    //output.accept(ModItems.WHITE_RADISH.get());            // 白萝卜
                     //output.accept(ModItems.CHRYSANTHEMUM.get());           // 菊花
                     //output.accept(ModItems.PARSNIP.get());                 // 防风草     //蔬菜 星露谷
                     //output.accept(ModItems.SNOW_YAM.get());                // 雪山药
+                    //output.accept(ModItems.WHITE_RADISH.get());            // 白萝卜
                     //output.accept(ModItems.AMARANTH.get());                // 苋菜
                     output.accept(ModItems.RED_CABBAGE.get());               //红叶卷心菜
                     //output.accept(ModItems.GOLDEN_ZUCCHINI.get());  //金皮西葫芦
@@ -458,7 +494,6 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.ROSEMARY.get());          //迷迭香
                     //output.accept(ModItems.DILL.get());              //莳萝
                     //output.accept(ModItems.CELERY.get());            //芹菜
-                    //output.accept(ModItems.LEMON_GRASS.get());       //香茅（加入游戏存疑）
                     //output.accept(ModItems.TARRAGON.get());          //龙蒿
                     //output.accept(ModItems.BEAN_SPROUT.get());       //豆芽
                     //output.accept(ModItems.ALOE.get());              //芦荟
@@ -483,68 +518,117 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.CREAM_PUMPKIN.get());        //奶油南瓜
                     //output.accept(ModItems.QUINOA.get());               //藜麦
                     //output.accept(ModItems.NUTMEG.get());               //肉豆蔻
-                    //output.accept(ModItems.VANILLA.get());              //香草
                     //output.accept(ModItems.SAGE.get());                 //鼠尾草
-                    //output.accept(ModItems.GINSENG.get());              //人参
-                    //output.accept(ModItems.LAYER_TREE_LEAF.get());      //千层树叶
-                    //output.accept(ModItems.CAMPHOR_LEAF.get());         //樟树叶
-                    //output.accept(ModItems.EUCALYPTUS_LEAF.get());      //桉树叶
-                    //output.accept(ModItems.ANCIENT_FRUIT.get());          //上古水果（星露谷水果，反正分不清了就这样吧）
-                    //output.accept(ModItems.GEMBERRY.get());               //宝石甜莓
-                    //output.accept(ModItems.CRYSTAL_FRUIT.get());          //水晶果
-                    //output.accept(ModItems.HEART_FRUIT.get());            //人心果
+                    output.accept(ModItems.GINSENG.get());              //人参
+                    output.accept(ModItems.LAYER_TREE_LEAF.get());      //千层树叶
+                    output.accept(ModItems.CAMPHOR_LEAF.get());         //樟树叶
+                    output.accept(ModItems.EUCALYPTUS_LEAF.get());      //桉树叶
+                    output.accept(ModItems.ANCIENT_FRUIT.get());          //上古水果（星露谷水果，反正分不清了就这样吧）
+                    output.accept(ModItems.GEMBERRY.get());               //宝石甜莓
+                    output.accept(ModItems.CRYSTAL_FRUIT.get());          //水晶果
+                    output.accept(ModItems.HEART_FRUIT.get());            //人心果
                     //output.accept(ModItems.LUOHAN_ORANGE.get());          //罗汉橙
                     //output.accept(ModItems.BANANA.get());                 //芭蕉
                     //output.accept(ModItems.AMERICAN_RASPBERRY.get());     //美洲大树莓
-                    //output.accept(ModItems.MUSHROOM_BERRY.get());         //菇娘果
+                    output.accept(ModItems.MUSHROOM_BERRY.get());         //菇娘果
                     //output.accept(ModItems.BREADFRUIT.get());             //面包果
                     //output.accept(ModItems.FRAGRANT_BERRY.get());         //香味浆果
                     //output.accept(ModItems.MUSK_MELON.get());             //香瓜
                     //output.accept(ModItems.GOLDEN_MELON.get());           //金丝甜瓜
-                    //output.accept(ModItems.WILD_PLUM.get());              //野梅（存疑 是否加入）
-                    //output.accept(ModItems.NECTARINE.get());              //油桃
-                    //output.accept(ModItems.CASHEW.get());                 //腰果
-                    //output.accept(ModItems.PECAN.get());                  //碧根果
-                    //output.accept(ModItems.PISTACHIO.get());              //开心果
-                    //output.accept(ModItems.WATERMELON_84.get());          //84西瓜（明日之后 水果 真的很少）
-                    //output.accept(ModItems.YELLOW_PEACH.get());           //黄桃
+                    output.accept(ModItems.NECTARINE.get());              //油桃
+                    output.accept(ModItems.CASHEW.get());                 //腰果
+                    output.accept(ModItems.PECAN.get());                  //碧根果
+                    output.accept(ModItems.PISTACHIO.get());              //开心果
+                    //output.accept(ModItems.YELLOW_PEACH.get());           //黄桃（明日之后 水果 真的很少）
                     //output.accept(ModItems.SEA_BUCKTHORN.get());          //沙棘果
                     //output.accept(ModItems.LONGAN.get());                 //龙眼
                     //output.accept(ModItems.MULBERRY.get());               //桑葚
                     //output.accept(ModItems.WINTER_JUJUBE.get());          //冬枣
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-
-                    output.accept(ModItems.STRAW_MUSHROOM.get());   //蘑菇
-                    //output.accept(ModItems.香菇.get());
-                    output.accept(ModItems.SEA_MUSHROOM.get());
-                    output.accept(ModItems.CAVE_MUSHROOM.get());
-
-                    //output.accept(ModItems.紫蘑菇.get());
-                    //output.accept(ModItems.熔岩蘑菇.get());
-                    //output.accept(ModItems.羊肚菌.get());
-                    //output.accept(ModItems.鸡油菌.get());
-                    //output.accept(ModItems.鸡冠菌.get())；
-
-                    output.accept(ModItems.STRAW_MUSHROOM_COLONY.get());
-                    output.accept(ModItems.SEA_MUSHROOM_COLONY.get());
-                    output.accept(ModItems.CAVE_MUSHROOM_COLONY.get());
-
-                    output.accept(ModItems.CRAB_MEAT.get());   //蟹肉
-
-                    output.accept(ModItems.RED_CABBAGE_LEAF.get());//红卷心菜叶
-
-                    output.accept(ModBlocks.TREE_COMPOST.get());  //树坑
-                    output.accept(ModBlocks.FISHPOND_CORE.get());
-                    output.accept(ModBlocks.GREENHOUSE_FURNACE.get());
+                    //output.accept(ModItems.WATERMELON_84.get());          //84西瓜
+                    //output.accept(ModItems..get());       //黑美人西瓜
+                    //output.accept(ModItems..get());       //宁夏晒砂瓜
+                    //output.accept(ModItems..get());       //黄金麒麟瓜 （外部金黄，黄色肉）
+                    //output.accept(ModItems..get());       //金色罗黄西瓜 （黄色肉，外部绿黑）
+                    //output.accept(ModItems..get());       //圣彩西瓜（外部绿黑，内部橙红色）
+                    //output.accept(ModItems..get());       //赤肉甜西瓜（Crimson Sweet）
+                    //output.accept(ModItems..get());       //三白瓜 （就是全白的西瓜）
+                    //output.accept(ModItems..get());       //新红宝西瓜
+                    //output.accept(ModItems..get());       //墨童西瓜
+                    //output.accept(ModItems..get());       //日本Densuke黑皮西瓜（伝助スイカ）  英文：Japanese Densuke Black Watermelon
+                    //output.accept(ModItems..get());       //打瓜 （籽瓜）
+                    //output.accept(ModItems..get());       //石山西瓜
+                    //output.accept(ModItems..get());       //Moon & Stars Watermelon
+                    //output.accept(ModItems..get());       //非洲野西瓜 Citrullus lanatus var. citroides
+                    //output.accept(ModItems..get());       //药西瓜（有毒）
+                    //output.accept(ModItems.DURIO_GRAVEOLENS.get());       //红肉榴莲 拉丁学名Durio graveolens
+                    //output.accept(ModItems..get());       //龟榴莲   拉丁学名Durio testudinarum
+                    //output.accept(ModItems..get());       //古泰榴莲 拉丁学名Durio kutejensis
+                    //output.accept(ModItems..get());       //奥氏榴莲 拉丁学名Durio oxleyanus
+                    //output.accept(ModItems..get());       //大花榴莲 拉丁学名Durio grandiflorus
+                    //output.accept(ModItems..get());       //黑刺榴莲 这玩意不是野生品种了
+                    //output.accept(ModItems..get());       //犀牛蕉
+                    //output.accept(ModItems..get());       //千指蕉
+                    //output.accept(ModItems..get());       //小王子蕉
+                    //output.accept(ModItems..get());       //象腿蕉
+                    //output.accept(ModItems..get());       //朝天蕉  不是tmd重庆那个朝天椒
+                    //output.accept(ModItems..get());       //南洋红香蕉
+                    //output.accept(ModItems..get());       //蓝爪哇香蕉 Blue Java   题外话：FUCK JAVA!!!
+                    //output.accept(ModItems..get());       //大麦克香蕉
+                    //output.accept(ModItems..get());       //红宝石香蕉
+                    //output.accept(ModItems..get());       //巨人香蕉
+                    //output.accept(ModItems..get());       //Isla Banana
+                    //output.accept(ModItems..get());       //菜蕉
+                    //output.accept(ModItems..get());       //皇帝蕉
+                    //output.accept(ModItems..get());       //费香蕉  应该是学名fe’i banana
+                    //output.accept(ModItems..get());       //野蕉（香蕉老祖）
+                    //output.accept(ModItems..get());       //小果野蕉（香蕉老祖）
+                    //output.accept(ModItems..get());       //粉红菠萝 pinkglow 内部粉红
+                    //output.accept(ModItems..get());       //红菠萝 外皮红色
+                    //output.accept(ModItems..get());       //台湾土菠萝
+                    //output.accept(ModItems..get());       //海南鸡冠凤梨
+                    //output.accept(ModItems..get());       //香水凤梨
+                    //output.accept(ModItems..get());       //
+                    //output.accept(ModItems..get());       //
+                    //output.accept(ModItems..get());       //
+                    //output.accept(ModItems..get());       //
+                    //output.accept(ModItems..get());       //
+                    //output.accept(ModItems..get());       //
+                    //output.accept(ModItems..get());       //
+                    //output.accept(ModItems..get());       //
+                    //output.accept(ModItems..get());       //中国南瓜 Cucurbita moschata
+                    //output.accept(ModItems..get());       //蓝哈伯德南瓜Blue Hubbard
+                    //output.accept(ModItems..get());       //意大利青皮南瓜 Marina di Chioggia
+                    //output.accept(ModItems..get());       //大西洋巨人南瓜 Cucurbita maxima, Atlantic Giant
+                    //output.accept(ModItems..get());       //西非牡蛎瓜 Cucumeropsis mannii
+                    //output.accept(ModItems..get());       //白沙蜜甜瓜（都白）
+                    //output.accept(ModItems..get());       //羊角密瓜
+                    //output.accept(ModItems..get());       //玲珑密瓜（绿肉）
+                    //output.accept(ModItems..get());       //香妃密瓜（黄皮黄肉）
+                    //output.accept(ModItems..get());       //白兰瓜（白皮绿肉）
+                    //output.accept(ModItems..get());       //伊丽莎白（黄皮白肉）
+                    //output.accept(ModItems..get());       //脆宝甜瓜（全绿的甜瓜）
+                    //output.accept(ModItems..get());       //江西梨瓜（白皮绿肉的甜瓜）
+                    //output.accept(ModItems..get());       //流星甜瓜（白皮白肉甜瓜）
+                    //output.accept(ModItems..get());       //博洋9号密瓜
+                    //output.accept(ModItems..get());       //面瓜
+                    //output.accept(ModItems..get());       //花皮冬瓜
+                    //output.accept(ModItems..get());       //菜瓜（烧瓜）
+                    //output.accept(ModItems..get());       //冬瓜
+                    //output.accept(ModItems..get());       //蛇瓜
+                    //output.accept(ModItems..get());       //瓠瓜
+                    //output.accept(ModItems..get());       //佛手瓜
+                    //output.accept(ModItems..get());       //苦瓜
+                    //output.accept(ModItems..get());       //苹果苦瓜
+                    //output.accept(ModItems..get());       //丝瓜
+                    //output.accept(ModItems..get());       //马泡瓜 学名Cucumis melo var. agrestis
+                    //output.accept(ModItems..get());       //拇指西瓜（糙毛马㼎儿）学名Melothria scabra
+                    //output.accept(ModItems..get());       //蒙特可可 Theobroma bicolor
+                    //output.accept(ModItems..get());       //
+                    //output.accept(ModItems..get());       //
+                    //output.accept(ModItems..get());       //
+                    //output.accept(ModItems..get());       //
+                    //output.accept(ModItems..get());       //
+                    //output.accept(ModItems..get());       //
                 });
             })
             .register();
@@ -552,3 +636,4 @@ public class ModCreativeModeTabs {
     public static void register() {
     }
 }
+
