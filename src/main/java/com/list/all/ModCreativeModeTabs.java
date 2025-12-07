@@ -50,94 +50,8 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
-                    //output.accept(ModItems.蓝龙虾.get());
-                    //output.accept(ModItems.锦绣龙虾.get());
-                    //output.accept(ModItems.深海鳌虾.get());
-                    //output.accept(ModItems.基围虾.get());
-                    //output.accept(ModItems.濑尿虾.get());
-                    //output.accept(ModItems.河虾.get());
-                    //output.accept(ModItems.海螺.get());
-                    //output.accept(ModItems.生草鱼片.get());
-                    //output.accept(ModItems.生蕨鱼片.get());
-                    //output.accept(ModItems.生大黄鱼片.get());
-                    //output.accept(ModItems.生银鲳鱼片.get());
-                    //output.accept(ModItems.生多宝鱼片.get());
-                    //output.accept(ModItems.生红石斑鱼片.get());
-                    //output.accept(ModItems.生鹦嘴鱼片.get());
-                    //output.accept(ModItems.生苏眉鱼片.get());
-                    //output.accept(ModItems.生锦鲤片.get());
-                    //output.accept(ModItems.生鸡鱼片.get());
-                    //output.accept(ModItems.生云斑海猪鱼片.get());
-                    //output.accept(ModItems.生海鳗片.get());
-                    //output.accept(ModItems.生鲅鱼片.get());
-                    //output.accept(ModItems.生条纹鲈鱼片.get());
-                    //output.accept(ModItems.生鳙鱼片.get());
-                    //output.accept(ModItems.生鲥鱼片.get());
-                    //output.accept(ModItems.生秋刀鱼片.get());
-                    //output.accept(ModItems.生火鼠鱼片.get());
-                    //output.accept(ModItems.生冰棘鱼片.get());
-                    //output.accept(ModItems.生蛇鱼片.get());
-                    //output.accept(ModItems.生红鲷鱼片.get());
-                    //output.accept(ModItems.生魔鬼鱼片.get());
-                    //output.accept(ModItems.生长颌鲚片.get());
-                    //output.accept(ModItems.生小银鱼片.get());
-                    //output.accept(ModItems.生胭脂鱼片.get());
-                    //output.accept(ModItems.生凤尾鱼片.get());
-                    //output.accept(ModItems.生马面鱼片.get());
-                    //output.accept(ModItems.生黄鳝片.get());
-                    //output.accept(ModItems.生鲽鱼片.get());
-                    //output.accept(ModItems.生乌青鱼片.get());
-                    //output.accept(ModItems.生鳊鱼片.get());
-                    //output.accept(ModItems.生沙丁鱼片.get());
-                    //output.accept(ModItems.生海鲈鱼片.get());
-                    //output.accept(ModItems.生红歌鲤片.get());
-                    //output.accept(ModItems.生巴浪鱼片.get());
-                    //output.accept(ModItems.生三刀鱼片.get());
-                    //output.accept(ModItems.生马头鱼片.get());
-                    //output.accept(ModItems.生花英斑片.get());
-                    //output.accept(ModItems.生深海鲑鱼片.get());
-                    //output.accept(ModItems.生蓝飞鱼片.get());
-                    //output.accept(ModItems.生飞鱼片.get());
-                    //output.accept(ModItems.生雨鱼片.get());
-                    //output.accept(ModItems.生白条鱼片.get());
-                    //output.accept(ModItems.生赤魟片.get());
-                    //output.accept(ModItems.生针鱼片.get());
-                    //output.accept(ModItems.生龙利鱼片.get());
-                    //output.accept(ModItems.生青花鱼片.get());
-                    //output.accept(ModItems.生桂鱼片.get());
-                    //output.accept(ModItems.生带鱼片.get());
-                    //output.accept(ModItems.生大马哈鱼片.get())
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());       //
-
-                    
-
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-
-
-
-                    output.accept(ModItems.CRAB_MEAT.get());   //蟹肉
-
-                    output.accept(ModItems.RED_CABBAGE_LEAF.get());//红卷心菜叶
-
                     output.accept(ModBlocks.TREE_COMPOST.get());  //树坑
                     output.accept(ModBlocks.FISHPOND_CORE.get());
                     output.accept(ModBlocks.GREENHOUSE_FURNACE.get());
@@ -148,10 +62,10 @@ public class ModCreativeModeTabs {
     // 菌类标签页
     public static final RegistryObject<CreativeModeTab> MUSHROOM_TAB = CREATIVE_TABS.register("crops_mushroom", () ->
             CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.list.mushroom"))  // 语言键: itemGroup.listmod.crops
+                    .title(Component.translatable("itemGroup.list.mushroom"))
                     .icon(() -> new ItemStack(ModItems.SEA_MUSHROOM_COLONY.get()))
                     .displayItems((parameters, output) -> {
-                        output.accept(ModItems.STRAW_MUSHROOM.get());   //蘑菇
+                        output.accept(ModItems.STRAW_MUSHROOM.get());
                         //output.accept(ModItems.香菇.get());
                         output.accept(ModItems.SEA_MUSHROOM.get());
                         output.accept(ModItems.CAVE_MUSHROOM.get());
@@ -408,6 +322,97 @@ public class ModCreativeModeTabs {
                     .build()
     );
 
+    /*
+    // 鱼片
+    public static final RegistryObject<CreativeModeTab> FISH_SLICE_TAB = CREATIVE_TABS.register("fish_slice", () ->
+            CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup.list.fish_slice"))
+                    .icon(() -> new ItemStack(ModItems..get()))
+                    .displayItems((parameters, output) -> {
+
+                    //output.accept(ModItems.蓝龙虾.get());
+                    //output.accept(ModItems.锦绣龙虾.get());
+                    //output.accept(ModItems.深海鳌虾.get());
+                    //output.accept(ModItems.基围虾.get());
+                    //output.accept(ModItems.濑尿虾.get());
+                    //output.accept(ModItems.河虾.get());
+                    //output.accept(ModItems.海螺片.get());
+                    //output.accept(ModItems.生草鱼片.get());
+                    //output.accept(ModItems.生蕨鱼片.get());
+                    //output.accept(ModItems.生大黄鱼片.get());
+                    //output.accept(ModItems.生银鲳鱼片.get());
+                    //output.accept(ModItems.生多宝鱼片.get());
+                    //output.accept(ModItems.生红石斑鱼片.get());
+                    //output.accept(ModItems.生鹦嘴鱼片.get());
+                    //output.accept(ModItems.生苏眉鱼片.get());
+                    //output.accept(ModItems.生锦鲤片.get());
+                    //output.accept(ModItems.生鸡鱼片.get());
+                    //output.accept(ModItems.生云斑海猪鱼片.get());
+                    //output.accept(ModItems.生海鳗片.get());
+                    //output.accept(ModItems.生鲅鱼片.get());
+                    //output.accept(ModItems.生条纹鲈鱼片.get());
+                    //output.accept(ModItems.生鳙鱼片.get());
+                    //output.accept(ModItems.生鲥鱼片.get());
+                    //output.accept(ModItems.生秋刀鱼片.get());
+                    //output.accept(ModItems.生火鼠鱼片.get());
+                    //output.accept(ModItems.生冰棘鱼片.get());
+                    //output.accept(ModItems.生蛇鱼片.get());
+                    //output.accept(ModItems.生红鲷鱼片.get());
+                    //output.accept(ModItems.生魔鬼鱼片.get());
+                    //output.accept(ModItems.生长颌鲚片.get());
+                    //output.accept(ModItems.生小银鱼片.get());
+                    //output.accept(ModItems.生胭脂鱼片.get());
+                    //output.accept(ModItems.生凤尾鱼片.get());
+                    //output.accept(ModItems.生马面鱼片.get());
+                    //output.accept(ModItems.生黄鳝片.get());
+                    //output.accept(ModItems.生鲽鱼片.get());
+                    //output.accept(ModItems.生乌青鱼片.get());
+                    //output.accept(ModItems.生鳊鱼片.get());
+                    //output.accept(ModItems.生沙丁鱼片.get());
+                    //output.accept(ModItems.生海鲈鱼片.get());
+                    //output.accept(ModItems.生红歌鲤片.get());
+                    //output.accept(ModItems.生巴浪鱼片.get());
+                    //output.accept(ModItems.生三刀鱼片.get());
+                    //output.accept(ModItems.生马头鱼片.get());
+                    //output.accept(ModItems.生花英斑片.get());
+                    //output.accept(ModItems.生深海鲑鱼片.get());
+                    //output.accept(ModItems.生蓝飞鱼片.get());
+                    //output.accept(ModItems.生飞鱼片.get());
+                    //output.accept(ModItems.生雨鱼片.get());
+                    //output.accept(ModItems.生白条鱼片.get());
+                    //output.accept(ModItems.生赤魟片.get());
+                    //output.accept(ModItems.生针鱼片.get());
+                    //output.accept(ModItems.生龙利鱼片.get());
+                    //output.accept(ModItems.生青花鱼片.get());
+                    //output.accept(ModItems.生桂鱼片.get());
+                    //output.accept(ModItems.生带鱼片.get());
+                    //output.accept(ModItems.生大马哈鱼片.get())
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());
+
+                    })
+                    .build()
+    );
+    */
+
+
      //卵
     public static final RegistryObject<CreativeModeTab> EGG_TAB = CREATIVE_TABS.register("list_egg", () ->
             CreativeModeTab.builder()
@@ -494,6 +499,18 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.RED_BELLIED_PIRANHA_EGG.get());     // 红腹食人鲳卵
                     })
                     .build()
+    );
+
+    // 鱼片
+    public static final RegistryObject<CreativeModeTab> FOOD_AND_PRODUCT_TAB = CREATIVE_TABS.register("food_and_product", () ->
+                    CreativeModeTab.builder()
+                            .title(Component.translatable("itemGroup.list.food_and_product"))
+                            .icon(() -> new ItemStack(ModItems.RED_CABBAGE_LEAF.get()))
+            .displayItems((parameters, output) -> {
+                output.accept(ModItems.CRAB_MEAT.get());   //蟹肉
+                output.accept(ModItems.RED_CABBAGE_LEAF.get());//红卷心菜叶
+            })
+            .build()
     );
 
 
