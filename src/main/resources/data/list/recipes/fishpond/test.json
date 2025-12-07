@@ -1,0 +1,19 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:koi_egg"
+    },
+    {
+      "item": "minecraft:kelp"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "Count": 1,
+      "id": "list:koi"
+    }
+  ],
+  "time": 100
+}

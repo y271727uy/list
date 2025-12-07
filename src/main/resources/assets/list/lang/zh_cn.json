@@ -1,5 +1,8 @@
 {
   "itemGroup.list.list": "List",
+  "itemGroup.list.mushroom": "菌类",
+  "itemGroup.list.fish": "鱼类",
+  "itemGroup.list.egg": "卵",
   "itemGroup.list.crops": "农作物",
   "item.list.industrial_copper_credit": "工业铜币",
   "item.list.industrial_silver_credit": "工业银币",

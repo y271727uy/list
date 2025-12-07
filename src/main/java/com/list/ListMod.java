@@ -37,7 +37,7 @@ public class ListMod
         ModItems.register();
         ModBlocks.register();
         ModBlockEntities.register();
-        ModCreativeModeTabs.register();
+        ModCreativeModeTabs.register(modEventBus);
         ModMenus.register();
         ModRecipes.register(modEventBus);
         

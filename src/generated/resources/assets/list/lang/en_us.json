@@ -1,5 +1,6 @@
 {
   "block.list.cave_mushroom": "Cave Mushroom",
+  "itemGroup.list.mushroom": "mushroom",
   "block.list.cave_mushroom_colony": "Cave Mushroom Colony",
   "block.list.fishpond_core": "Fishpond Core",
   "block.list.greenhouse_furnace": "Greenhouse Furnace",
@@ -166,6 +167,5 @@
   "item.list.wealth_star": "Wealth Star",
   "item.list.white_stripe_fish": "White Stripe Fish",
   "item.list.white_stripe_fish_egg": "White Stripe Fish Egg",
-  "item.list.yellowtail_blue_demon_egg": "Yellowtail Blue Demon Egg",
-  "itemGroup.list.list": "List"
+  "item.list.yellowtail_blue_demon_egg": "Yellowtail Blue Demon Egg"
 }
