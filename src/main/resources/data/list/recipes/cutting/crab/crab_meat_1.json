@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "list:jonah_crab"
+    }
+  ],
+  "result": [
+    {
+      "chance": 1.0,
+      "count": 2,
+      "item": "list:crab_meat"
+    },
+    {
+      "chance": 0.5,
+      "item": "list:crab_meat"
+    },
+    {
+      "chance": 0.5,
+      "count": 1,
+      "item": "list:jonah_crab_egg"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

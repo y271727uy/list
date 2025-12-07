@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "list:item/colony/sea_mushroom_colony"
+    "layer0": "list:block/colony/sea_mushroom_colony"
   }
 }

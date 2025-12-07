@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "list:item/mushroom/straw_mushroom"
+    "layer0": "list:block/mushroom/straw_mushroom"
   }
 }

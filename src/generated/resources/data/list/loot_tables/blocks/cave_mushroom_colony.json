@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "list:cave_mushroom_colony"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "list:blocks/cave_mushroom_colony"
+}
