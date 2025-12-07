@@ -646,11 +646,11 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());       //费香蕉  应该是学名fe’i banana
                     //output.accept(ModItems..get());       //野蕉（香蕉老祖）
                     //output.accept(ModItems..get());       //小果野蕉（香蕉老祖）
-                    //output.accept(ModItems..get());       //粉红菠萝 pinkglow 内部粉红
-                    //output.accept(ModItems..get());       //红菠萝 外皮红色
+                    output.accept(ModItems.RED_PINEAPPLE.get());       //红菠萝 外皮红色
                     //output.accept(ModItems..get());       //台湾土菠萝
+                    //output.accept(ModItems..get());       //粉红菠萝 pinkglow 内部粉红
                     //output.accept(ModItems..get());       //海南鸡冠凤梨
-                    //output.accept(ModItems..get());       //香水凤梨
+                    output.accept(ModItems.PERFUME_PINEAPPLE.get());       //香水凤梨
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
