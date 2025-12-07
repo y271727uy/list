@@ -2,12 +2,13 @@ package com.list.all;
 
 import com.list.ListMod;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
+
+import static com.list.ListMod.REGISTRATE;
 
 public class ModCreativeModeTabs {
 
@@ -16,10 +17,9 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ListMod.MODID);
 
     // 主标签页
-    @SuppressWarnings("NoTranslation")
     public static final RegistryObject<CreativeModeTab> LIST_TAB = CREATIVE_TABS.register("list", () ->
             CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.list.list"))  // 语言键: itemGroup.listmod.list
+                    .title(REGISTRATE.addLang("itemGroup", ListMod.rl("list"), "List"))  // 语言键: itemGroup.listmod.list
                     .icon(() -> new ItemStack(ModItems.INDUSTRIAL_OSMIUM_CREDIT.get()))
                     .displayItems((parameters, output) -> {
 
@@ -62,7 +62,7 @@ public class ModCreativeModeTabs {
     // 菌类标签页
     public static final RegistryObject<CreativeModeTab> MUSHROOM_TAB = CREATIVE_TABS.register("crops_mushroom", () ->
             CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.list.mushroom"))
+                    .title(REGISTRATE.addLang("itemGroup", ListMod.rl("crops_mushroom"), "Mushroom"))
                     .icon(() -> new ItemStack(ModItems.SEA_MUSHROOM_COLONY.get()))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.STRAW_MUSHROOM.get());
@@ -84,7 +84,7 @@ public class ModCreativeModeTabs {
     // 鱼类标签页
     public static final RegistryObject<CreativeModeTab> FISH_TAB = CREATIVE_TABS.register("crops_fish", () ->
             CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.list.fish"))  // 语言键: itemGroup.listmod.crops
+                    .title(REGISTRATE.addLang("itemGroup", ListMod.rl("crops_fish"), "Fish"))  // 语言键: itemGroup.listmod.crops
                     .icon(() -> new ItemStack(ModItems.DUNGENESS_CRAB.get()))
                     .displayItems((parameters, output) -> {
 
@@ -416,7 +416,7 @@ public class ModCreativeModeTabs {
      //卵
     public static final RegistryObject<CreativeModeTab> EGG_TAB = CREATIVE_TABS.register("list_egg", () ->
             CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.list.egg"))  // 语言键: itemGroup.listmod.list
+                    .title(REGISTRATE.addLang("itemGroup", ListMod.rl("list_egg"), "Egg"))  // 语言键: itemGroup.listmod.list
                     .icon(() -> new ItemStack(ModItems.EMPEROR_CRAB_EGG.get()))
                     .displayItems((parameters, output) -> {
                          output.accept(ModItems.EMPEROR_CRAB_EGG.get());
@@ -504,7 +504,7 @@ public class ModCreativeModeTabs {
     // 鱼片
     public static final RegistryObject<CreativeModeTab> FOOD_AND_PRODUCT_TAB = CREATIVE_TABS.register("food_and_product", () ->
                     CreativeModeTab.builder()
-                            .title(Component.translatable("itemGroup.list.food_and_product"))
+                            .title(REGISTRATE.addLang("itemGroup", ListMod.rl("food_and_product"), "Food and Product"))
                             .icon(() -> new ItemStack(ModItems.RED_CABBAGE_LEAF.get()))
             .displayItems((parameters, output) -> {
                 output.accept(ModItems.CRAB_MEAT.get());   //蟹肉
@@ -517,7 +517,7 @@ public class ModCreativeModeTabs {
     // 农作物标签页
     public static final RegistryObject<CreativeModeTab> CROPS_TAB = CREATIVE_TABS.register("crops_crops", () ->
             CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.list.crops"))  // 语言键: itemGroup.listmod.crops
+                    .title(REGISTRATE.addLang("itemGroup", ListMod.rl("crops_crops"), "Crops"))  // 语言键: itemGroup.listmod.crops
                     .icon(() -> new ItemStack(ModItems.RED_ONION.get()))
                     .displayItems((parameters, output) -> {
                         //output.accept(ModItems.SPRING_BAMBOO_SHOOT.get());     // 春笋   //明日之后蔬菜

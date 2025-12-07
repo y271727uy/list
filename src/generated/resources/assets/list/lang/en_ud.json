@@ -166,5 +166,11 @@
   "item.list.wealth_star": "ɹɐʇS ɥʇןɐǝM",
   "item.list.white_stripe_fish": "ɥsıℲ ǝdıɹʇS ǝʇıɥM",
   "item.list.white_stripe_fish_egg": "bbƎ ɥsıℲ ǝdıɹʇS ǝʇıɥM",
-  "item.list.yellowtail_blue_demon_egg": "bbƎ uoɯǝᗡ ǝnןᗺ ןıɐʇʍoןןǝʎ"
+  "item.list.yellowtail_blue_demon_egg": "bbƎ uoɯǝᗡ ǝnןᗺ ןıɐʇʍoןןǝʎ",
+  "itemGroup.list.crops_crops": "sdoɹƆ",
+  "itemGroup.list.crops_fish": "ɥsıℲ",
+  "itemGroup.list.crops_mushroom": "ɯooɹɥsnW",
+  "itemGroup.list.food_and_product": "ʇɔnpoɹԀ puɐ pooℲ",
+  "itemGroup.list.list": "ʇsıꞀ",
+  "itemGroup.list.list_egg": "bbƎ"
 }
