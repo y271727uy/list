@@ -40,12 +40,14 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
     public final List<Ingredient> ingredients;
     public final List<ItemStack> results;
     public final int time;
+    public final boolean isLava;
 
-    public FishPondRecipe(ResourceLocation id, List<Ingredient> ingredients, List<ItemStack> results, int time) {
+    public FishPondRecipe(ResourceLocation id, List<Ingredient> ingredients, List<ItemStack> results, int time, boolean isLava) {
         this.id = id;
         this.ingredients = ingredients;
         this.results = results;
         this.time = time;
+        this.isLava = isLava;
     }
 
     public static Builder builder() {
@@ -54,6 +56,7 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
 
     @Override
     public boolean matches(RecipeInput container, Level level) {
+        if (container.isLava != this.isLava) return false;
         List<Ingredient> remaining = new ArrayList<>(this.ingredients);
         for (int i = 0; i < container.getContainerSize(); i++) {
             ItemStack stack = container.getItem(i);
@@ -104,11 +107,13 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
     public static class RecipeInput implements Container {
 
         private final NonNullList<ItemStack> input = NonNullList.withSize(9, ItemStack.EMPTY);
+        private final boolean isLava;
 
-        public RecipeInput(List<ItemStack> list) {
+        public RecipeInput(List<ItemStack> list, boolean isLava) {
             for (int i = 0; i < Math.min(list.size(), 9); i++) {
                 input.set(i, list.get(i));
             }
+            this.isLava = isLava;
         }
 
         @Override
@@ -195,8 +200,9 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
             }
 
             int time = serializedRecipe.get("time").getAsInt();
+            boolean isLava = serializedRecipe.get("isLava").getAsBoolean();
 
-            return new FishPondRecipe(recipeId, ingredients, results, time);
+            return new FishPondRecipe(recipeId, ingredients, results, time, isLava);
         }
 
         @Override
@@ -214,7 +220,8 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
             }
 
             int time = buffer.readInt();
-            return new FishPondRecipe(recipeId, ingredients, results, time);
+            boolean isLava = buffer.readBoolean();
+            return new FishPondRecipe(recipeId, ingredients, results, time, isLava);
         }
 
         @Override
@@ -238,6 +245,7 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
         private final List<Ingredient> ingredients = new ArrayList<>();
         private final List<ItemStack> results = new ArrayList<>();
         private int time = 600;
+        private boolean isLava;
 
         @Override
         public RecipeBuilder unlockedBy(String criterionName, CriterionTriggerInstance criterionTrigger) {
@@ -270,9 +278,19 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
             return this;
         }
 
+        public Builder isLava(boolean isLava) {
+            this.isLava = isLava;
+            return this;
+        }
+
+        public Builder isLava() {
+            this.isLava = true;
+            return this;
+        }
+
         @Override
         public void save(Consumer<FinishedRecipe> finishedRecipeConsumer, ResourceLocation recipeId) {
-            finishedRecipeConsumer.accept(new Result(recipeId, this.ingredients, this.results, this.time, this.advancement));
+            finishedRecipeConsumer.accept(new Result(recipeId, this.ingredients, this.results, this.time, this.isLava, this.advancement));
         }
 
         public record Result(
@@ -280,6 +298,7 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
             List<Ingredient> ingredients,
             List<ItemStack> results,
             int time,
+            boolean isLava,
             Advancement.Builder advancementBuilder
         ) implements FinishedRecipe {
 
@@ -298,6 +317,7 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
                 json.add("results", resultsArray);
 
                 json.addProperty("time", this.time);
+                json.addProperty("isLava", this.isLava);
             }
 
             @Override

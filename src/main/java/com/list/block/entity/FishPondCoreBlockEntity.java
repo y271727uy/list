@@ -17,7 +17,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
@@ -26,12 +26,17 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
+import java.util.List;
 
-public class FishPondCoreBlockEntity extends BlockEntity implements MenuProvider {
+public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements MenuProvider {
     private ResourceLocation runningRecipe = null;
     private FishPondRecipe runningRecipeCache = null;
     private int progress = 0;
+    private int multiblockCheckCooldown = 0;
+    private boolean isFormed = false;
+    private boolean isLava = false;
 
     // 0-8 input, 9-11 output
     public final ItemStackHandler itemHandler = new ItemStackHandler(12) {
@@ -46,6 +51,7 @@ public class FishPondCoreBlockEntity extends BlockEntity implements MenuProvider
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
+            if (!isFormed) return;
             if (runningRecipe == null || runningRecipeCache == null) {
                 findRecipe();
             }
@@ -84,6 +90,8 @@ public class FishPondCoreBlockEntity extends BlockEntity implements MenuProvider
             tag.putString("RunningRecipe", runningRecipe.toString());
         }
         tag.putInt("Progress", progress);
+        tag.putBoolean("IsFormed", isFormed);
+        tag.putBoolean("IsLava", isLava);
     }
 
     @Override
@@ -101,6 +109,8 @@ public class FishPondCoreBlockEntity extends BlockEntity implements MenuProvider
             tag.remove("RunningRecipe");
         }
         progress = tag.getInt("Progress");
+        isFormed = tag.getBoolean("IsFormed");
+        isLava = tag.getBoolean("IsLava");
     }
 
     @Override
@@ -111,6 +121,23 @@ public class FishPondCoreBlockEntity extends BlockEntity implements MenuProvider
     }
 
     public void tick(Level level, BlockPos blockPos, BlockState blockState) {
+        if (multiblockCheckCooldown-- <= 0) {
+            if (multiblockFormed("water")) {
+                isFormed = true;
+                isLava = false;
+                findRecipe();
+            } else if (multiblockFormed("lava")) {
+                isFormed = true;
+                isLava = true;
+                findRecipe();
+            } else {
+                isFormed = false;
+            }
+            multiblockCheckCooldown = 20 * 20;
+        }
+        if (!isFormed) {
+            return;
+        }
         if (runningRecipe != null && runningRecipeCache != null) {
             if (progress >= runningRecipeCache.time) {
                 // Insert outputs
@@ -153,7 +180,7 @@ public class FishPondCoreBlockEntity extends BlockEntity implements MenuProvider
         }
         level.getRecipeManager().getRecipeFor(
             ModRecipes.FISH_POND_RECIPE_TYPE.get(),
-            new FishPondRecipe.RecipeInput(inputs),
+            new FishPondRecipe.RecipeInput(inputs, isLava),
             level
         ).ifPresent(recipe -> {
             runningRecipe = recipe.getId();
@@ -187,6 +214,115 @@ public class FishPondCoreBlockEntity extends BlockEntity implements MenuProvider
             ItemStack itemstack = itemHandler.getStackInSlot(i);
             if (!itemstack.isEmpty()) {
                 Block.popResource(level, worldPosition, itemstack);
+            }
+        }
+    }
+
+    @Nullable
+    @Override
+    public List<Definition> createPattern(String patternName) {
+        List<Definition> commonPattern = new ArrayList<>();
+        commonPattern.add(Definition.of(new BlockPos(-2, -2, 0), Blocks.CHISELED_STONE_BRICKS));
+        commonPattern.add(Definition.of(new BlockPos(-1, -2, 0), Blocks.STONE_BRICKS));
+        commonPattern.add(Definition.of(new BlockPos(0, -2, 0), Blocks.STONE_BRICKS));
+        commonPattern.add(Definition.of(new BlockPos(1, -2, 0), Blocks.STONE_BRICKS));
+        commonPattern.add(Definition.of(new BlockPos(2, -2, 0), Blocks.CHISELED_STONE_BRICKS));
+
+        commonPattern.add(Definition.of(new BlockPos(-2, -1, 0), Blocks.STONE_BRICKS));
+        commonPattern.add(Definition.of(new BlockPos(-1, -1, 0), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(0, -1, 0), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(1, -1, 0), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(2, -1, 0), Blocks.STONE_BRICKS));
+
+        commonPattern.add(Definition.of(new BlockPos(-2, 0, 0), Blocks.STONE_BRICK_SLAB));
+        commonPattern.add(Definition.of(new BlockPos(-1, 0, 0), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(1, 0, 0), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(2, 0, 0), Blocks.STONE_BRICK_SLAB));
+
+        commonPattern.add(Definition.of(new BlockPos(-2, -2, -1), Blocks.STONE_BRICKS));
+        commonPattern.add(Definition.of(new BlockPos(-1, -2, -1), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(0, -2, -1), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(1, -2, -1), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(2, -2, -1), Blocks.STONE_BRICKS));
+
+        commonPattern.add(Definition.of(new BlockPos(-2, -1, -1), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(2, -1, -1), Blocks.SMOOTH_STONE));
+
+        commonPattern.add(Definition.of(new BlockPos(-2, 0, -1), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(2, 0, -1), Blocks.SMOOTH_STONE));
+
+        commonPattern.add(Definition.of(new BlockPos(-2, -2, -2), Blocks.STONE_BRICKS));
+        commonPattern.add(Definition.of(new BlockPos(-1, -2, -2), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(0, -2, -2), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(1, -2, -2), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(2, -2, -2), Blocks.STONE_BRICKS));
+
+        commonPattern.add(Definition.of(new BlockPos(-2, -1, -2), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(2, -1, -2), Blocks.SMOOTH_STONE));
+
+        commonPattern.add(Definition.of(new BlockPos(-2, 0, -2), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(2, 0, -2), Blocks.SMOOTH_STONE));
+
+        commonPattern.add(Definition.of(new BlockPos(-2, -2, -3), Blocks.STONE_BRICKS));
+        commonPattern.add(Definition.of(new BlockPos(-1, -2, -3), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(0, -2, -3), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(1, -2, -3), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(2, -2, -3), Blocks.STONE_BRICKS));
+
+        commonPattern.add(Definition.of(new BlockPos(-2, -1, -3), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(2, -1, -3), Blocks.SMOOTH_STONE));
+
+        commonPattern.add(Definition.of(new BlockPos(-2, 0, -3), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(2, 0, -3), Blocks.SMOOTH_STONE));
+
+        commonPattern.add(Definition.of(new BlockPos(-2, -2, -4), Blocks.CHISELED_STONE_BRICKS));
+        commonPattern.add(Definition.of(new BlockPos(-1, -2, -4), Blocks.STONE_BRICKS));
+        commonPattern.add(Definition.of(new BlockPos(0, -2, -4), Blocks.STONE_BRICKS));
+        commonPattern.add(Definition.of(new BlockPos(1, -2, -4), Blocks.STONE_BRICKS));
+        commonPattern.add(Definition.of(new BlockPos(2, -2, -4), Blocks.CHISELED_STONE_BRICKS));
+
+        commonPattern.add(Definition.of(new BlockPos(-2, -1, -4), Blocks.STONE_BRICKS));
+        commonPattern.add(Definition.of(new BlockPos(-1, -1, -4), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(0, -1, -4), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(1, -1, -4), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(2, -1, -4), Blocks.STONE_BRICKS));
+
+        commonPattern.add(Definition.of(new BlockPos(-2, 0, -4), Blocks.STONE_BRICK_SLAB));
+        commonPattern.add(Definition.of(new BlockPos(-1, 0, -4), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(0, 0, -4), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(1, 0, -4), Blocks.SMOOTH_STONE));
+        commonPattern.add(Definition.of(new BlockPos(2, 0, -4), Blocks.STONE_BRICK_SLAB));
+        switch (patternName) {
+            case "water" -> {
+                List<Definition> waterPattern = new ArrayList<>(commonPattern);
+                for (int x = -1; x <= 1; x++) {
+                    for (int z = -1; z >= -3; z--) {
+                        waterPattern.add(Definition.of(new BlockPos(x, 0, z), Blocks.WATER));
+                    }
+                }
+                for (int x = -1; x <= 1; x++) {
+                    for (int z = -1; z >= -3; z--) {
+                        waterPattern.add(Definition.of(new BlockPos(x, -1, z), Blocks.SAND));
+                    }
+                }
+                return waterPattern;
+            }
+            case "lava" -> {
+                List<Definition> lavaPattern = new ArrayList<>(commonPattern);
+                for (int x = -1; x <= 1; x++) {
+                    for (int z = -1; z >= -3; z--) {
+                        lavaPattern.add(Definition.of(new BlockPos(x, 0, z), Blocks.LAVA));
+                    }
+                }
+                for (int x = -1; x <= 1; x++) {
+                    for (int z = -1; z >= -3; z--) {
+                        lavaPattern.add(Definition.of(new BlockPos(x, -1, z), Blocks.SOUL_SAND));
+                    }
+                }
+                return lavaPattern;
+            }
+            default -> {
+                return null;
             }
         }
     }
