@@ -8,8 +8,8 @@
   "isLava": false,
   "results": [
     {
-      "Count": 1,
-      "id": "list:bad_item"
+      "count": 1,
+      "item": "list:bad_item"
     }
   ],
   "time": 100

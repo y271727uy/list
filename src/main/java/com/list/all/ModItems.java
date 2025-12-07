@@ -2331,16 +2331,6 @@ public static final ItemEntry<Item> PISTACHIO = REGISTRATE
 
 
 /*
-// 84西瓜（明日之后 水果 真的很少）
-public static final ItemEntry<Item> WATERMELON_84 = REGISTRATE
-        .item("watermelon_84", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/lifafter/watermelon_84")))
-        .properties(p -> p.food(new FoodProperties.Builder()
-                .nutrition(3)
-                .saturationMod(1.2f)
-                .build()))
-        .register();
-
 // 黄桃
 public static final ItemEntry<Item> YELLOW_PEACH = REGISTRATE
         .item("yellow_peach", Item::new)
@@ -2391,8 +2381,52 @@ public static final ItemEntry<Item> WINTER_JUJUBE = REGISTRATE
                 .build()))
         .register();
 
+// 84西瓜（明日之后 水果 真的很少）
+public static final ItemEntry<Item> WATERMELON_84 = REGISTRATE
+        .item("watermelon_84", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/lifafter/watermelon_84")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
 */
+/*
+//空模板
+public static final ItemEntry<Item>  = REGISTRATE
+        .item("", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+*/
+//红菠萝
+public static final ItemEntry<Item> RED_PINEAPPLE = REGISTRATE
+        .item("red_pineapple", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/pineapple/red_pineapple")))
+        .register();
+/*
+public static final ItemEntry<Item>  = REGISTRATE
+        .item("", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/pineapple/")))
+        .register();
 
+public static final ItemEntry<Item>  = REGISTRATE
+        .item("", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/pineapple/")))
+        .register();
+
+public static final ItemEntry<Item>  = REGISTRATE
+        .item("", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/pineapple/")))
+        .register();
+*/
+public static final ItemEntry<Item> PERFUME_PINEAPPLE = REGISTRATE
+        .item("perfume_pineapple", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/pineapple/perfume_pineapple")))
+        .register();
 
     // 草菇
     public static final ItemEntry<Item> STRAW_MUSHROOM = REGISTRATE

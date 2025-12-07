@@ -102,9 +102,7 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
         }
         if (tag.contains("RunningRecipe")) {
             runningRecipe = new ResourceLocation(tag.getString("RunningRecipe"));
-            level.getRecipeManager().byKey(runningRecipe).ifPresent(recipe -> {
-                runningRecipeCache = (FishPondRecipe) recipe;
-            });
+            updateCacheRecipe();
         } else {
             tag.remove("RunningRecipe");
         }
@@ -138,7 +136,10 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
         if (!isFormed) {
             return;
         }
-        if (runningRecipe != null && runningRecipeCache != null) {
+        if (runningRecipe != null ) {
+            if(runningRecipeCache == null) {
+                updateCacheRecipe();
+            }
             if (progress >= runningRecipeCache.time) {
                 // Insert outputs
                 for (ItemStack output : runningRecipeCache.results) {
@@ -203,6 +204,14 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
                     break;
                 }
             }
+        }
+    }
+
+    private void updateCacheRecipe() {
+        if (level != null && runningRecipe != null) {
+            level.getRecipeManager().byKey(runningRecipe).ifPresent(recipe -> {
+                runningRecipeCache = (FishPondRecipe) recipe;
+            });
         }
     }
 
