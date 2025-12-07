@@ -2,11 +2,8 @@ package com.list.recipe;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
 import com.list.all.ModRecipes;
-import com.mojang.serialization.JsonOps;
 import net.minecraft.MethodsReturnNonnullByDefault;
-import net.minecraft.Util;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.core.NonNullList;
@@ -25,6 +22,8 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.common.crafting.CraftingHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -196,7 +195,7 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
             JsonArray resultsJson = serializedRecipe.getAsJsonArray("results");
             List<ItemStack> results = new ArrayList<>();
             for (int i = 0; i < resultsJson.size(); i++) {
-                results.add(Util.getOrThrow(ItemStack.CODEC.decode(JsonOps.INSTANCE, resultsJson.get(i)), JsonParseException::new).getFirst());
+                results.add(CraftingHelper.getItemStack(resultsJson.get(i).getAsJsonObject(), true));
             }
 
             int time = serializedRecipe.get("time").getAsInt();
@@ -312,7 +311,13 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
 
                 JsonArray resultsArray = new JsonArray();
                 for (ItemStack stack : this.results) {
-                    resultsArray.add(Util.getOrThrow(ItemStack.CODEC.encodeStart(JsonOps.INSTANCE, stack), JsonParseException::new));
+                    JsonObject object = new JsonObject();
+                    object.addProperty("item", ForgeRegistries.ITEMS.getKey(stack.getItem()).toString());
+                    object.addProperty("count", stack.getCount());
+                    if (stack.hasTag()) {
+                        object.addProperty("nbt", stack.getTag().toString());
+                    }
+                    resultsArray.add(object);
                 }
                 json.add("results", resultsArray);
 
