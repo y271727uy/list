@@ -11,8 +11,13 @@
   "isLava": false,
   "results": [
     {
-      "Count": 1,
-      "id": "list:koi"
+      "count": 1,
+      "item": "list:koi"
+    },
+    {
+      "count": 1,
+      "chance": 0.0,
+      "item": "list:koi_egg"
     }
   ],
   "time": 100
