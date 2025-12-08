@@ -168,5 +168,11 @@
   "item.list.wealth_star": "Wealth Star",
   "item.list.white_stripe_fish": "White Stripe Fish",
   "item.list.white_stripe_fish_egg": "White Stripe Fish Egg",
-  "item.list.yellowtail_blue_demon_egg": "Yellowtail Blue Demon Egg"
+  "item.list.yellowtail_blue_demon_egg": "Yellowtail Blue Demon Egg",
+  "itemGroup.list.crops_crops": "Crops",
+  "itemGroup.list.crops_fish": "Fish",
+  "itemGroup.list.crops_mushroom": "Mushroom",
+  "itemGroup.list.food_and_product": "Food and Product",
+  "itemGroup.list.list": "List",
+  "itemGroup.list.list_egg": "Egg"
 }
