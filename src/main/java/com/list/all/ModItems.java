@@ -155,6 +155,36 @@ public class ModItems {
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/crustacean/river_crab")))
             .register();
 
+    //深海鳌虾
+    public static final ItemEntry<Item> DEEP_SEA_STAG_SHRIMP = REGISTRATE
+            .item("deep-sea_stag_shrimp", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/crustacean/deep-sea_stag_shrimp")))
+            .register();
+
+    //基围虾
+    public static final ItemEntry<Item> GREASYBACK_SHRIMP = REGISTRATE
+            .item("greasyback_shrimp", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/crustacean/greasyback_shrimp")))
+            .register();
+
+    //濑尿虾
+    public static final ItemEntry<Item> MANTIS_SHRIMP = REGISTRATE
+            .item("mantis_shrimp", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/crustacean/mantis_shrimp")))
+            .register();
+
     //河虾
     public static final ItemEntry<Item> RIVER_SHRIMP = REGISTRATE
             .item("river_shrimp", Item::new)
@@ -169,6 +199,86 @@ public class ModItems {
     public static final ItemEntry<Item> CONCH = REGISTRATE
             .item("conch", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/reality/crustacean/conch")))
+            .register();
+
+    //草鱼
+    public static final ItemEntry<Item> GRASS_CARP = REGISTRATE
+            .item("grass_carp", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/grass_carp")))
+            .register();
+
+    //蕨鱼
+    public static final ItemEntry<Item> SINIPERCA_CHUATSI = REGISTRATE
+            .item("siniperca_chuatsi", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/siniperca_chuatsi")))
+            .register();
+   
+    //大黄鱼
+    public static final ItemEntry<Item> LARGE_YELLOW_CROAKER = REGISTRATE
+            .item("large_yellow_croaker", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/large_yellow_croaker")))
+            .register();
+
+    //银鲳鱼
+    public static final ItemEntry<Item> SILVER_POMFRET = REGISTRATE
+            .item("silver_pomfret", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/silver_pomfret")))
+            .register();
+
+    //多宝鱼
+    public static final ItemEntry<Item> TURBOT = REGISTRATE
+            .item("turbot", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/turbot")))
+            .register();
+
+    //红石斑鱼
+    public static final ItemEntry<Item> RED_GROUPER = REGISTRATE
+            .item("red_grouper", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/red_grouper")))
+            .register();
+
+    //鹦嘴鱼
+    public static final ItemEntry<Item> PARROTFISH = REGISTRATE
+            .item("parrotfish", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/parrotfish")))
+            .register();
+
+     //苏眉鱼
+    public static final ItemEntry<Item> CAMOUFLAGE_GROUPER = REGISTRATE
+            .item("camouflage_grouper", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter/fish/camouflage_grouper")))
             .register();
 
 
@@ -2423,10 +2533,17 @@ public static final ItemEntry<Item>  = REGISTRATE
         .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/pineapple/")))
         .register();
 */
-public static final ItemEntry<Item> PERFUME_PINEAPPLE = REGISTRATE
+    //香水凤梨
+    public static final ItemEntry<Item> PERFUME_PINEAPPLE = REGISTRATE
         .item("perfume_pineapple", Item::new)
         .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/pineapple/perfume_pineapple")))
         .register();
+
+    //水椰
+    public static final ItemEntry<Item> NYPA = REGISTRATE
+            .item("nypa", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/nypa")))
+            .register();
 
     // 草菇
     public static final ItemEntry<Item> STRAW_MUSHROOM = REGISTRATE
