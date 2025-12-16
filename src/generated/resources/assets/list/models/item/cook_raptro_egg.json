@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "list:item/food/cook_egg/cook_raptro_egg"
+  }
+}

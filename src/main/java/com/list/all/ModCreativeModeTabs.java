@@ -40,8 +40,8 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.WEALTH_STAR.get());
                     output.accept(ModItems.ANIMAL_HUSBANDRY_STAR.get());
                     output.accept(ModItems.FARMERS_RANCH_STAR.get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
+                    output.accept(ModItems.COOK_ZHURUOLING_EGG.get());
+                    output.accept(ModItems.ZHURUOLING_EGG.get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
@@ -110,7 +110,7 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.RED_GROUPER.get());   //红石斑鱼
                     output.accept(ModItems.PARROTFISH.get());   //鹦嘴鱼
                     output.accept(ModItems.CAMOUFLAGE_GROUPER.get());   //苏眉鱼
-                    output.accept(ModItems.KOI.get());
+                    output.accept(ModItems.KOI.get());    //锦鲤
                     output.accept(ModItems.THREADFIN_BREAM.get());         // 鸡鱼
                     output.accept(ModItems.CHECKERBOARD_WRASSE.get());     // 云斑海猪鱼
                     //output.accept(ModItems.MORAY_EEL.get());               // 海鳗
@@ -254,16 +254,16 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.MyanmarMudCrab.get());  //缅甸青蟹
                     //output.accept(ModItems.ChineseHorseshoeCrab.get());  //中华鲎
                     //output.accept(ModItems.GiantMarineLobster.get());  //巨象真龙虾
-                    //output.accept(ModItems.EuropeanLobster.get());  //欧洲龙虾
+                    //output.accept(ModItems.EuropeanLobster.get());  //欧洲龙虾  这玩意我吃过，我记得是蓝色的
                     //output.accept(ModItems.SouthAustraliaRockLobster.get());  //南澳岩龙虾
-                    //output.accept(ModItems.Crayfish.get());  //小龙虾
-                    //output.accept(ModItems.TasmanianGiantFreshwaterCrayfish.get());  //塔斯马尼亚巨型淡水龙虾
+                    output.accept(ModItems.CRAYFISH.get());  //小龙虾
+                    output.accept(ModItems.TASMANIAN_GIANT_FRESHWATER_CRAYFISH.get());  //塔斯马尼亚巨型淡水龙虾
                     //output.accept(ModItems.FitzroyRiverYabby.get());  //费氏巨鳌虾
                     //output.accept(ModItems.TriangleYabby.get());  //三角巨鳌虾
-                    //output.accept(ModItems.MurrayCrayfish.get());  //墨累河刺鳌虾
-                    //output.accept(ModItems.AustralianRedClawCrayfish.get());  //澳洲红刺鳌虾
-                    //output.accept(ModItems.MarronCrayfish.get());  //马龙鳌虾
-                    //output.accept(ModItems.ChangbaishanCrayfish.get());  //中华长白山鳌虾 其实是蝲蛄
+                    output.accept(ModItems.EUASTACUS_ARMATUS.get());  //墨累河白刺鳌虾
+                    output.accept(ModItems.AUSTRALIA_CHERAX_QUADRICARINATUS.get());  //澳洲红鳌虾
+                    output.accept(ModItems.MARRON_CRAYFISH.get());  //马龙鳌虾
+                    output.accept(ModItems.CAMBAROIDES_DAURICUS.get());  //中华长白山鳌虾 其实是蝲蛄
                     //output.accept(ModItems.SlipperLobster.get());  //琵琶虾
                     //output.accept(ModItems.MantisShrimp.get());  //螳螂虾
                     //output.accept(ModItems.RhinocerosShrimp.get());  //非洲犀牛虾
@@ -508,20 +508,31 @@ public class ModCreativeModeTabs {
                             .title(REGISTRATE.addLang("itemGroup", ListMod.rl("food_and_product"), "Food and Product"))
                             .icon(() -> new ItemStack(ModItems.RED_CABBAGE_LEAF.get()))
             .displayItems((parameters, output) -> {
-                //output.accept(ModItems..get());       //煎鹅蛋
-                //output.accept(ModItems..get());       //煎鸭蛋
-                //output.accept(ModItems..get());       //煎火鸡蛋
-                //output.accept(ModItems..get());       //煎黑金蛋
-                //output.accept(ModItems..get());       //煎白玉蛋
-                //output.accept(ModItems..get());       //
-                //output.accept(ModItems..get());       //
-                //output.accept(ModItems..get());       //
-                //output.accept(ModItems..get());       //  
-                //output.accept(ModItems..get());       //
-                //output.accept(ModItems..get());       //
-                //output.accept(ModItems..get());       //  
+                output.accept(ModItems.COOK_GOOSE_EGG.get());       //煎鹅蛋
+                output.accept(ModItems.COOK_DUCK_EGG.get());       //煎鸭蛋
+                output.accept(ModItems.COOK_TURKEY_EGG.get());       //煎火鸡蛋
+                output.accept(ModItems.COOK_BLACK_GOOSE_EGG.get());       //煎黑金蛋
+                output.accept(ModItems.COOK_WHITE_GOOSE_EGG.get());       //煎白玉蛋
+                output.accept(ModItems.COOK_TORTOISE_EGG.get());       //煎tortoise乌龟蛋
+                output.accept(ModItems.COOK_ALLIGATOR_EGG.get());       //煎alligator短吻鳄
+                output.accept(ModItems.COOK_ASTRO_EGG.get());       //煎austro南方盗龙蛋
+                output.accept(ModItems.COOK_BARINA_EGG.get());       //煎barina巴里纳斯鳄蛋
+                output.accept(ModItems.COOK_BRACHI_EGG.get());       //煎brachi蜿龙蛋
+                output.accept(ModItems.COOK_HWACHA_EGG.get());       //煎cook_hwacha_egg 箭炮猎龙蛋
+                output.accept(ModItems.COOK_COTY_EGG.get());       //煎coty杯鼻龙蛋
+                output.accept(ModItems.COOK_KENTRO_EGG.get());       //煎kentro肯式龙蛋
+                output.accept(ModItems.COOK_MAJUNGA_EGG.get());       //煎majunga玛君龙蛋
+                output.accept(ModItems.COOK_PACHY_EGG.get());       //煎pachy肿头龙蛋 
+                output.accept(ModItems.COOK_RAPTRO_EGG.get());       //煎raptro伶盗龙蛋
+                output.accept(ModItems.COOK_REX_EGG.get());       //煎rex霸王龙蛋
+                output.accept(ModItems.COOK_MEGALA_EGG.get());       //煎megala古巨蜥蛋
+                output.accept(ModItems.COOK_ANTARCTO_EGG.get());       //煎antarcto南极甲龙蛋
+                output.accept(ModItems.COOK_TRIKE_EGG.get());       //煎trike三角龙蛋
+                output.accept(ModItems.COOK_ANURO_EGG.get());       //煎anuro蛙嘴龙蛋 
+                output.accept(ModItems.COOK_ULUGH_EGG.get());       //煎ulugh乌鲁伯戈龙蛋
+                output.accept(ModItems.COOK_TALPANAS_EGG.get());       //煎talpanas鼹鸭蛋
                 output.accept(ModItems.CRAB_MEAT.get());   //蟹肉
-                output.accept(ModItems.RED_CABBAGE_LEAF.get());//红卷心菜叶
+                output.accept(ModItems.RED_CABBAGE_LEAF.get());//红卷心菜叶  
             })
             .build()
     );
@@ -661,9 +672,8 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());       //野蕉（香蕉老祖）
                     //output.accept(ModItems..get());       //小果野蕉（香蕉老祖）
                     output.accept(ModItems.RED_PINEAPPLE.get());       //红菠萝 外皮红色
-                    //output.accept(ModItems..get());       //台湾土菠萝
+                    output.accept(ModItems.TAIWAN_GREEN_PINEAPPLE.get());       //台湾菠萝
                     //output.accept(ModItems..get());       //粉红菠萝 pinkglow 内部粉红
-                    //output.accept(ModItems..get());       //海南鸡冠凤梨
                     output.accept(ModItems.PERFUME_PINEAPPLE.get());       //香水凤梨
                     //output.accept(ModItems..get());       //假菠萝 露兜果
                     //output.accept(ModItems..get());       //黄金椰子
@@ -682,6 +692,12 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());       //苦橙 Citrus aurantium
                     //output.accept(ModItems..get());       //木橘 Aegle marmelos
                     //output.accept(ModItems..get());       //象橘 Limonia acidissima
+                    output.accept(ModItems.CHOCOLAT_PERSIMMON.get());       //巧克力柿/黑肉柿
+                    //output.accept(ModItems..get());       //黑柿
+                    //output.accept(ModItems..get());       //德州小黑柿
+                    //output.accept(ModItems..get());       //火晶柿子
+                    //output.accept(ModItems..get());       //老鸦柿
+                    //output.accept(ModItems..get());       //君迁子
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //

@@ -70,7 +70,21 @@ public class ListMod
             event.getToolTip().add(Component.translatable("item.list.farmers_ranch_star.desc.2").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
         } else if (event.getItemStack().getItem() == ModItems.BAD_ITEM.get()) {
             event.getToolTip().add(Component.translatable("item.list.bad_item.desc").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
-        }
+        } else if (event.getItemStack().getItem() == ModItems.EUASTACUS_ARMATUS.get()) {
+            event.getToolTip().add(Component.translatable("item.list.euastacus_armatus.desc").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+        } else if (event.getItemStack().getItem() == ModItems.TASMANIAN_GIANT_FRESHWATER_CRAYFISH.get()) {
+            event.getToolTip().add(Component.translatable("item.list.tasmanian_giant_freshwater_crayfish.desc.1").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+            event.getToolTip().add(Component.translatable("item.list.tasmanian_giant_freshwater_crayfish.desc.2").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+            event.getToolTip().add(Component.translatable("item.list.tasmanian_giant_freshwater_crayfish.desc.3").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+            event.getToolTip().add(Component.translatable("item.list.tasmanian_giant_freshwater_crayfish.desc.4").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+
+
+
+
+            
+        } else if (event.getItemStack().getItem() == ModItems.BAD_ITEM.get()) {
+            event.getToolTip().add(Component.translatable("item.list.bad_item.desc").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+        }      
     }
     
     @SubscribeEvent

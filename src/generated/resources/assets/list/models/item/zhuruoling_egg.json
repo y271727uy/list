@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "list:item/special_item/zhuruoling_egg"
+  }
+}

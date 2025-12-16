@@ -10,5 +10,13 @@ public class ModLangs {
         provider.add("item.list.farmers_ranch_star.desc.1","§7§oA star synthesized through countless hardships, it is light with unknown mass.");
         provider.add("item.list.farmers_ranch_star.desc.2", "§7§oThank you for playing the Farmer's Ranch: Pastoral Serenade modpack. The entire development team and contributors send their regards.");
         provider.add("item.list.bad_item.desc", "§7§oTechnical item, please do not attempt to obtain");
+        provider.add("item.list.tasmanian_giant_freshwater_crayfish.desc.1", "§7§oThe Tasmanian giant freshwater lobster is the largest freshwater lobster in the world.");
+        provider.add("item.list.tasmanian_giant_freshwater_crayfish.desc.2", "§7§oValued for its enormous size and delicious meat, it is considered a luxury delicacy.");
+        provider.add("item.list.tasmanian_giant_freshwater_crayfish.desc.3", "§7§oHowever, it is an endangered species, strictly protected, and its harvesting is restricted.");
+        provider.add("item.list.tasmanian_giant_freshwater_crayfish.desc.4", "§7§oIt is also known as the 'living fossil of freshwater.'");
+        provider.add("item.list.euastacus_armatus.desc", "§7§oIts meat is delicious, making it an important freshwater crayfish for local consumption in Australia.");
     }
 }
+
+
+//provider.add("item.list..desc.1", "§7§o");

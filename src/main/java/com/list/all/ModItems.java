@@ -114,6 +114,20 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
+    //煎粉猫蛋蛋
+    public static final ItemEntry<Item> COOK_ZHURUOLING_EGG = REGISTRATE
+            .item("cook_zhuruoling_egg", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/cook_zhuruoling_egg")))
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .register();
+
+    //粉猫蛋
+    public static final ItemEntry<Item> ZHURUOLING_EGG = REGISTRATE
+            .item("zhuruoling_egg", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/zhuruoling_egg")))
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .register();
+
     //皇帝蟹
     public static final ItemEntry<Item> EMPEROR_CRAB = REGISTRATE
             .item("emperor_crab", Item::new)
@@ -813,17 +827,79 @@ public class ModItems {
             .register();
 */
 /*
-            //
+    //
     public static final ItemEntry<Item>  = REGISTRATE
             .item("", Item::new)
             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationMod(0.3f)
                     .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/lifeafter//")))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/reality/crustacean/")))
             .register();
 
     */
+
+    //塔斯马尼亚巨型淡水龙虾
+    public static final ItemEntry<Item> TASMANIAN_GIANT_FRESHWATER_CRAYFISH = REGISTRATE
+            .item("tasmanian_giant_freshwater_crayfish", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/reality/crustacean/tasmanian_giant_freshwater_crayfish")))
+            .register(); 
+
+    //小龙虾
+    public static final ItemEntry<Item> CRAYFISH = REGISTRATE
+            .item("crayfish", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/reality/crustacean/crayfish")))
+            .register();
+
+//墨累河白刺鳌虾
+    public static final ItemEntry<Item> EUASTACUS_ARMATUS = REGISTRATE
+            .item("euastacus_armatus", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/reality/crustacean/euastacus_armatus")))
+            .register();
+
+//墨累河白刺鳌虾
+    public static final ItemEntry<Item> AUSTRALIA_CHERAX_QUADRICARINATUS = REGISTRATE
+            .item("australia_cherax_quadricarinatus", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/reality/crustacean/australia_cherax_quadricarinatus")))
+            .register();
+
+//马龙鳌虾
+    public static final ItemEntry<Item> MARRON_CRAYFISH = REGISTRATE
+            .item("marron_crayfish", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/reality/crustacean/marron_crayfish")))
+            .register();    
+
+//东北鳌虾 蝲蛄
+    public static final ItemEntry<Item> CAMBAROIDES_DAURICUS = REGISTRATE
+            .item("cambaroides_dauricus", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fish/reality/crustacean/cambaroides_dauricus")))
+            .register();    
+    
+
 
     //皇帝蟹卵
     public static final ItemEntry<Item> EMPEROR_CRAB_EGG = REGISTRATE
@@ -2523,16 +2599,13 @@ public static final ItemEntry<Item>  = REGISTRATE
         .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/pineapple/")))
         .register();
 
-public static final ItemEntry<Item>  = REGISTRATE
-        .item("", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/pineapple/")))
+*/
+   //台湾菠萝
+   public static final ItemEntry<Item> TAIWAN_GREEN_PINEAPPLE = REGISTRATE
+        .item("taiwan_green_pineapple", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/pineapple/taiwan_green_pineapple")))
         .register();
 
-public static final ItemEntry<Item>  = REGISTRATE
-        .item("", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/pineapple/")))
-        .register();
-*/
     //香水凤梨
     public static final ItemEntry<Item> PERFUME_PINEAPPLE = REGISTRATE
         .item("perfume_pineapple", Item::new)
@@ -2544,6 +2617,26 @@ public static final ItemEntry<Item>  = REGISTRATE
             .item("nypa", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/nypa")))
             .register();
+            
+   //巧克力柿
+   public static final ItemEntry<Item> CHOCOLAT_PERSIMMON = REGISTRATE
+        .item("chocolat_persimmon", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/persimmon/chocolat_persimmon")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(2)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+
+
+
+
+
+
+
+
+
 
     // 草菇
     public static final ItemEntry<Item> STRAW_MUSHROOM = REGISTRATE
@@ -2603,7 +2696,216 @@ public static final ItemEntry<Item>  = REGISTRATE
             .register();
 
 */
- 
+// 煎鹅蛋
+    public static final ItemEntry<Item> COOK_GOOSE_EGG =REGISTRATE.item("cook_goose_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_goose_egg")))
+            .register();
+
+    // 煎鸭蛋
+    public static final ItemEntry<Item> COOK_DUCK_EGG = REGISTRATE.item("cook_duck_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_duck_egg")))
+            .register();
+
+    // 煎火鸡蛋
+    public static final ItemEntry<Item> COOK_TURKEY_EGG = REGISTRATE.item("cook_turkey_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_turkey_egg")))
+            .register();
+
+// 煎黑金蛋
+ public static final ItemEntry<Item> COOK_BLACK_GOOSE_EGG = REGISTRATE.item("cook_black_goose_egg", Item::new)
+         .properties(p -> p.food(new FoodProperties.Builder()
+                 .nutrition(2)
+                 .saturationMod(0.8f)
+                 .build()))
+         .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_black_goose_egg")))
+         .properties(p -> p.rarity(Rarity.EPIC))
+         .register();
+
+// 煎白玉蛋
+ public static final ItemEntry<Item> COOK_WHITE_GOOSE_EGG = REGISTRATE.item("cook_white_goose_egg", Item::new)
+         .properties(p -> p.food(new FoodProperties.Builder()
+                 .nutrition(2)
+                 .saturationMod(0.8f)
+                 .build()))
+         .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_white_goose_egg")))
+         .properties(p -> p.rarity(Rarity.EPIC))
+         .register();
+
+    // 煎tortoise乌龟蛋
+    public static final ItemEntry<Item> COOK_TORTOISE_EGG = REGISTRATE.item("cook_tortoise_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_tortoise_egg")))
+            .register();
+
+    // 煎alligator短吻鳄
+    public static final ItemEntry<Item> COOK_ALLIGATOR_EGG = REGISTRATE.item("cook_alligator_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_alligator_egg")))
+            .register();
+
+    // 煎austro南方盗龙蛋
+    public static final ItemEntry<Item> COOK_ASTRO_EGG = REGISTRATE.item("cook_astro_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_astro_egg")))
+            .register();
+
+    // 煎barina巴里纳斯鳄蛋
+    public static final ItemEntry<Item> COOK_BARINA_EGG = REGISTRATE.item("cook_barina_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_barina_egg")))
+            .register();
+
+    // 煎brachi蜿龙蛋
+    public static final ItemEntry<Item> COOK_BRACHI_EGG = REGISTRATE.item("cook_brachi_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_brachi_egg")))
+            .register();
+
+    // 煎箭炮猎龙蛋
+    public static final ItemEntry<Item> COOK_HWACHA_EGG = REGISTRATE.item("cook_hwacha_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_hwacha_egg")))
+            .register();
+
+    // 煎coty杯鼻龙蛋
+    public static final ItemEntry<Item> COOK_COTY_EGG = REGISTRATE.item("cook_coty_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_coty_egg")))
+            .register();
+
+    // 煎kentro肯式龙蛋
+    public static final ItemEntry<Item> COOK_KENTRO_EGG = REGISTRATE.item("cook_kentro_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_kentro_egg")))
+            .register();
+
+    // 煎majunga玛君龙蛋
+    public static final ItemEntry<Item> COOK_MAJUNGA_EGG = REGISTRATE.item("cook_majunga_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_majunga_egg")))
+            .register();
+
+    // 煎pachy肿头龙蛋
+    public static final ItemEntry<Item> COOK_PACHY_EGG = REGISTRATE.item("cook_pachy_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_pachy_egg")))
+            .register();
+
+    // 煎raptro伶盗龙蛋
+    public static final ItemEntry<Item> COOK_RAPTRO_EGG = REGISTRATE.item("cook_raptro_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_raptro_egg")))
+            .register();
+
+    // 煎rex霸王龙蛋
+    public static final ItemEntry<Item> COOK_REX_EGG = REGISTRATE.item("cook_rex_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_rex_egg")))
+            .register();
+
+    // 煎megala古巨蜥蛋
+    public static final ItemEntry<Item> COOK_MEGALA_EGG = REGISTRATE.item("cook_megala_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_megala_egg")))
+            .register();
+
+    // 煎antarcto南极甲龙蛋
+    public static final ItemEntry<Item> COOK_ANTARCTO_EGG = REGISTRATE.item("cook_antarcto_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_antarcto_egg")))
+            .register();
+
+    // 煎trike三角龙蛋
+    public static final ItemEntry<Item> COOK_TRIKE_EGG = REGISTRATE.item("cook_trike_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_trike_egg")))
+            .register();
+
+    // 煎anuro蛙嘴龙蛋
+    public static final ItemEntry<Item> COOK_ANURO_EGG = REGISTRATE.item("cook_anuro_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_anuro_egg")))
+            .register();
+
+    // 煎ulugh乌鲁伯戈龙蛋
+    public static final ItemEntry<Item> COOK_ULUGH_EGG = REGISTRATE.item("cook_ulugh_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_ulugh_egg")))
+            .register();
+
+    // 煎talpanas鼹鸭蛋
+    public static final ItemEntry<Item> COOK_TALPANAS_EGG = REGISTRATE.item("cook_talpanas_egg", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_talpanas_egg")))
+            .register();
+
+
     // 蟹肉
     public static final ItemEntry<Item> CRAB_MEAT = REGISTRATE
             .item("crab_meat", Item::new)

@@ -28,6 +28,13 @@
   "item.list.just_bread.desc.1": "它只是一块面包，一块平平无奇的面包；",
   "item.list.just_bread.desc.2": "吃下它，你将不再面临饥饿；",
   "item.list.just_bread.desc.3": "但那熟悉的麦香，早已消散。",
+  "item.list.cook_zhuruoling_egg": "粉猫蛋蛋",
+  "item.list.zhuruoling_egg": "粉猫蛋蛋",
+  "item.list.tasmanian_giant_freshwater_crayfish.desc.1": "§7§o塔斯马尼亚巨型淡水龙虾是世界上最大的淡水龙虾。",
+  "item.list.tasmanian_giant_freshwater_crayfish.desc.2": "§7§o因体型巨大、肉质鲜美，它被视为高端食材。",
+  "item.list.tasmanian_giant_freshwater_crayfish.desc.3": "§7§o然而，它是濒危物种，受到严格保护，捕捞受限。",
+  "item.list.tasmanian_giant_freshwater_crayfish.desc.4": "§7§o它也被称为“淡水界的活化石”。",
+  "item.list.euastacus_armatus.desc":"§7§o肉质鲜美，是澳大利亚当地重要的淡水龙虾食材。",
   "item.list.emperor_crab": "皇帝蟹",
   "item.list.jonah_crab": "面包蟹",
   "item.list.pelagic_swimming_crab": "花蟹",
@@ -132,6 +139,13 @@
   "item.list.tuna_king": "金枪鱼王",
   "item.list.clownfish_king": "小丑鱼王",
   "item.list.manta_ray_king": "魔鬼鱼王",
+
+  "item.list.tasmanian_giant_freshwater_crayfish": "塔斯马尼亚州巨型淡水龙虾",
+  "item.list.crayfish": "小龙虾",
+  "item.list.euastacus_armatus": "墨累河白刺鳌虾",
+  "item.list.cherax_quadricarinatus": "澳大利亚红鳌鳌虾",
+  "item.list.marron_crayfish": "马龙鳌虾",
+  "item.list.cambaroides_dauricus": "中华长白山鳌虾",
 
   "item.list.emperor_crab_egg": "皇帝蟹卵",
   "item.list.jonah_crab_egg": "面包蟹卵",
@@ -303,7 +317,9 @@
 
   "item.list.perfume_pineapple": "香水凤梨",
   "item.list.red_pineapple": "红菠萝",
+  "item.list.taiwan_green_pineapple": "台湾菠萝",
   "item.list.nypa": "水椰",
+  "item.list.chocolat_persimmon": "巧克力柿",
 
   "block.list.straw_mushroom": "草菇",
   "block.list.sea_mushroom": "海蘑菇",
@@ -315,5 +331,30 @@
 
   "item.list.crab_meat": "蟹肉",
 
-  "item.list.red_cabbage_leaf": "红叶卷心菜叶"
+  "item.list.red_cabbage_leaf": "红叶卷心菜叶",
+
+  "item.list.cook_goose_egg": "煎鹅蛋",
+  "item.list.cook_black_goose_egg": "煎乌金蛋",
+  "item.list.cook_white_goose_egg": "煎白玉蛋",
+  "item.list.cook_duck_egg": "煎鸭蛋",
+  "item.list.cook_turkey_egg": "煎火鸡蛋",
+  "item.list.cook_tortoise_egg": "煎乌龟蛋",
+  "item.list.cook_alligator_egg": "煎短吻鳄蛋",
+  "item.list.cook_astro_egg": "煎南方盗龙蛋",
+  "item.list.cook_barina_egg": "煎巴里纳斯鳄蛋",
+  "item.list.cook_brachi_egg": "煎蜿龙蛋",
+  "item.list.cook_hwacha_egg": "煎箭炮猎龙蛋",
+  "item.list.cook_coty_egg": "煎杯鼻龙蛋",
+  "item.list.cook_kentro_egg": "煎肯式龙蛋",
+  "item.list.cook_majunga_egg": "煎玛君龙蛋",
+  "item.list.cook_pachy_egg": "煎肿头龙蛋",
+  "item.list.cook_raptro_egg": "煎伶盗龙蛋",
+  "item.list.cook_rex_egg": "煎霸王龙蛋",
+  "item.list.cook_megala_egg": "煎古巨蜥蛋",
+  "item.list.cook_antarcto_egg": "煎南极甲龙蛋",
+  "item.list.cook_trike_egg": "煎三角龙蛋",
+  "item.list.cook_anuro_egg": "煎蛙嘴龙蛋",
+  "item.list.cook_ulugh_egg": "煎乌鲁伯戈龙蛋",
+  "item.list.cook_talpanas_egg": "煎鼹鸭蛋"
+
 }
