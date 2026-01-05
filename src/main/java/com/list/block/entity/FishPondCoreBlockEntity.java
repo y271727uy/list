@@ -4,6 +4,7 @@ import com.list.all.ModMenus;
 import com.list.all.ModRecipes;
 import com.list.menu.FishPondMenu;
 import com.list.recipe.FishPondRecipe;
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -16,7 +17,6 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
@@ -27,9 +27,12 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ArrayList;
 import java.util.List;
 
+@MethodsReturnNonnullByDefault
+@ParametersAreNonnullByDefault
 public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements MenuProvider {
     private ResourceLocation runningRecipe = null;
     private FishPondRecipe runningRecipeCache = null;
@@ -65,7 +68,7 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
     }
 
     @Override
-    public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction side) {
+    public <T> LazyOptional<T> getCapability(Capability<T> cap, @Nullable Direction side) {
         if (cap == ForgeCapabilities.ITEM_HANDLER) {
             return handlerOptional.cast();
         }
@@ -209,21 +212,9 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
 
     private void updateCacheRecipe() {
         if (level != null && runningRecipe != null) {
-            level.getRecipeManager().byKey(runningRecipe).ifPresent(recipe -> {
-                runningRecipeCache = (FishPondRecipe) recipe;
-            });
-        }
-    }
-
-    @Override
-    public void setRemoved() {
-        super.setRemoved();
-        handlerOptional.invalidate();
-        for (int i = 0; i < itemHandler.getSlots(); i++) {
-            ItemStack itemstack = itemHandler.getStackInSlot(i);
-            if (!itemstack.isEmpty()) {
-                Block.popResource(level, worldPosition, itemstack);
-            }
+            level.getRecipeManager()
+                .byKey(runningRecipe)
+                .ifPresent(recipe -> runningRecipeCache = (FishPondRecipe) recipe);
         }
     }
 
