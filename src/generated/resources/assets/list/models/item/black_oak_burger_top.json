@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "list:item/food/cutting/red_cabbage_leaf"
+    "layer0": "list:item/food/bread/black_oak_burger_top"
   }
 }

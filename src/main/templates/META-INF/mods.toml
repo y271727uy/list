@@ -1,11 +1,11 @@
 modLoader="javafml"
 loaderVersion="${loader_version_range}"
-license="GNU LGPLv3.0"
+license="GNU LGPLv3.0-Only"
 
 [[mods]]
 
 modId="list"
-version="3.0.2"
+version="3.0.5"
 displayName="list"
 authors="y271727uy"
 description='''The item core mod for Farmer's Ranch: Pastoral Serenade'''
@@ -37,4 +37,6 @@ description='''The item core mod for Farmer's Ranch: Pastoral Serenade'''
     versionRange="[1.20.1-1.2.7]"
     ordering="NONE"
     side="BOTH"
+
+
 

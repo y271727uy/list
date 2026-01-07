@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/generated",
+  "halo": {
+    "type": 1,
+    "alpha": 0.6
+  },
+  "loader": "avaritia:halo",
+  "textures": {
+    "layer0": "list:item/special_item/collapse_queen"
+  }
+}

@@ -42,9 +42,9 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.FARMERS_RANCH_STAR.get());
                     output.accept(ModItems.COOK_ZHURUOLING_EGG.get());
                     output.accept(ModItems.ZHURUOLING_EGG.get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
+                    output.accept(ModItems.COLLAPSE_DRONE.get());
+                    output.accept(ModItems.COLLAPSE_QUEEN.get());
+                    output.accept(ModItems.COLLAPSE_PRINCESS.get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
@@ -532,11 +532,63 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.COOK_ULUGH_EGG.get());       //煎ulugh乌鲁伯戈龙蛋
                 output.accept(ModItems.COOK_TALPANAS_EGG.get());       //煎talpanas鼹鸭蛋
                 output.accept(ModItems.CRAB_MEAT.get());   //蟹肉
-                output.accept(ModItems.RED_CABBAGE_LEAF.get());//红卷心菜叶  
+                output.accept(ModItems.RED_CABBAGE_LEAF.get());//红卷心菜叶
+                output.accept(ModItems.RED_PINEAPPLE_SLICE.get());//红凤梨切块
+                output.accept(ModItems.LABA_GARLIC.get());//腊八蒜
+                output.accept(ModItems.RUSSIA_BLACK_BREAD.get());       //俄罗斯黑面包
+                output.accept(ModItems.BLACK_BURGER.get());       //黑麦汉堡
+                output.accept(ModItems.BLACK_BURGER_BOTTOM.get());       //黑麦汉堡底
+                output.accept(ModItems.BLACK_BURGER_TOP.get());       //黑麦汉堡顶
+                output.accept(ModItems.BARLEY_BURGER.get());       //大麦汉堡
+                output.accept(ModItems.BARLEY_BURGER_BOTTOM.get());       //大麦汉堡底
+                output.accept(ModItems.BARLEY_BURGER_TOP.get());       //大麦汉堡顶
+                output.accept(ModItems.CASSAVA_BURGER.get());       //木薯汉堡
+                output.accept(ModItems.CASSAVA_BURGER_BOTTOM.get());       //木薯汉堡底
+                output.accept(ModItems.CASSAVA_BURGER_TOP.get());       //木薯汉堡顶
+                output.accept(ModItems.CORN_BURGER.get());       //玉米汉堡
+                output.accept(ModItems.CORN_BURGER_BOTTOM.get());       //玉米汉堡底
+                output.accept(ModItems.CORN_BURGER_TOP.get());       //玉米汉堡顶
+                output.accept(ModItems.EVOLUTCORN_BURGER.get());       //白垩玉藜堡 
+                output.accept(ModItems. EVOLUTCORN_BURGER_BOTTOM.get());       //白垩玉藜堡底
+                output.accept(ModItems.EVOLUTCORN_BURGER_TOP.get());       //白垩玉藜堡顶
+                output.accept(ModItems.KWAT_WHEAT_BURGER.get());       //瓦斯麦堡 
+                output.accept(ModItems.KWAT_WHEAT_BURGER_BOTTOM.get());       //瓦斯麦堡底
+                output.accept(ModItems.KWAT_WHEAT_BURGER_TOP.get());       //瓦斯麦堡顶
+                output.accept(ModItems.BLACK_OAK_BURGER.get());         //黑橡子
+                output.accept(ModItems.BLACK_OAK_BURGER_BOTTOM.get());             //黑橡子
+                output.accept(ModItems.BLACK_OAK_BURGER_TOP.get());                //黑橡子
+                output.accept(ModItems.OAK_BURGER.get());       //橡子
+                output.accept(ModItems.OAK_BURGER_BOTTOM.get());       //橡子
+                output.accept(ModItems.OAK_BURGER_TOP.get());       //橡子
+                output.accept(ModItems.SWEET_POTATO_BURGER.get());       //红薯
+                output.accept(ModItems.SWEET_POTATO_BURGER_BOTTOM.get());       //红薯
+                output.accept(ModItems.SWEET_POTATO_BURGER_TOP.get());       //红薯
+                output.accept(ModItems.PUMPKIN_BURGER.get());       //南瓜
+                output.accept(ModItems.PUMPKIN_BURGER_BOTTOM.get());       //南瓜
+                output.accept(ModItems.PUMPKIN_BURGER_TOP.get());       //南瓜
+                output.accept(ModItems.NUT_BURGER.get());       //坚果
+                output.accept(ModItems.NUT_BURGER_BOTTOM.get());       //坚果
+                output.accept(ModItems.NUT_BURGER_TOP.get());       //坚果
+                output.accept(ModItems.GHAST_BURGER.get());       //恶魂
+                output.accept(ModItems.GHAST_BURGER_BOTTOM.get());       //恶魂
+                output.accept(ModItems.GHAST_BURGER_TOP.get());       //恶魂
+                output.accept(ModItems.BANANA_BURGER.get());       //香蕉
+                output.accept(ModItems.BANANA_BURGER_BOTTOM.get());       //香蕉
+                output.accept(ModItems.BANANA_BURGER_TOP.get());       //香蕉
+                output.accept(ModItems.POTATO_BURGER.get());       //马铃薯
+                output.accept(ModItems.POTATO_BURGER_BOTTOM.get());       //马铃薯
+                output.accept(ModItems.POTATO_BURGER_TOP.get());       //马铃薯
+                output.accept(ModItems.DIAMOND_LATTICE_POTATO_BURGER.get());       //晶格马铃薯
+                output.accept(ModItems.DIAMOND_LATTICE_POTATO_BURGER_BOTTOM.get());       //晶格马铃薯
+                output.accept(ModItems.DIAMOND_LATTICE_POTATO_BURGER_TOP.get());       //晶格马铃薯
+                output.accept(ModItems.NEUTRONIUM_BURGER.get());       //简并态汉堡
+                output.accept(ModItems.NEUTRONIUM_BURGER_BOTTOM.get());       //
+                output.accept(ModItems.NEUTRONIUM_BURGER_TOP.get());       //
+                output.accept(ModItems.NEUTRONIUM_BUTTER.get());       //中子素黄油
             })
             .build()
     );
-
+ 
 
     // 农作物标签页
     public static final RegistryObject<CreativeModeTab> CROPS_TAB = CREATIVE_TABS.register("crops_crops", () ->
@@ -738,6 +790,33 @@ public class ModCreativeModeTabs {
                     })
                     .build()
     );
+
+
+    // 农作物标签页
+    public static final RegistryObject<CreativeModeTab> MANMADETAB = CREATIVE_TABS.register("manmade", () ->
+            CreativeModeTab.builder()
+                    .title(REGISTRATE.addLang("itemGroup", ListMod.rl("manmade"), "manmade"))  // 语言键: itemGroup.listmod.crops
+                    .icon(() -> new ItemStack(ModItems.RED_ONION.get()))
+                    .displayItems((parameters, output) -> {
+                        //output.accept(ModItems..get());       //粗制花瓣饲料
+                        //output.accept(ModItems..get());       //粗制瓜藤饲料
+                        //output.accept(ModItems..get());       //粗制茄叶饲料
+                        output.accept(ModItems.PURE_PUMKIN_FEED.get());       //纯净南瓜饲料
+                        //output.accept(ModItems..get());       //纯净萝卜饲料
+                        output.accept(ModItems.PURE_TOMATO_FEED.get());       //纯净番茄饲料
+                        output.accept(ModItems.ADVANCED_PURE_MELON_MELON_FEED.get());       //高级瓜瓜纯净饲料
+                        //output.accept(ModItems..get());       //高级84西瓜纯净饲料
+                        output.accept(ModItems.ADVANCED_PURE_PEACH_FEED.get());       //高级桃桃纯净饲料
+                        output.accept(ModItems.ADVANCED_PURE_FRUIT_FEED.get());       //高级水果纯净饲料
+                        //output.accept(ModItems..get());       //高级蔬菜纯净饲料
+                        //output.accept(ModItems..get());       //
+                        //output.accept(ModItems..get());       //
+                        //output.accept(ModItems..get());       //
+                        //output.accept(ModItems..get());       //
+                    })
+                    .build()
+    );
+
 
     public static void register(IEventBus eventBus) {
         CREATIVE_TABS.register(eventBus);

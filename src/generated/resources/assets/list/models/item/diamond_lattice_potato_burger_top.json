@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "list:item/food/bread/diamond_lattice_potato_burger_top"
+  }
+}
