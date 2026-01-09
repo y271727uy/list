@@ -1,6 +1,7 @@
 package com.list.recipe;
 
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.list.all.ModRecipes;
 import net.minecraft.MethodsReturnNonnullByDefault;
@@ -37,11 +38,11 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
 
     public final ResourceLocation id;
     public final List<Ingredient> ingredients;
-    public final List<ItemStack> results;
+    public final List<ChancedItemStack> results;
     public final int time;
     public final boolean isLava;
 
-    public FishPondRecipe(ResourceLocation id, List<Ingredient> ingredients, List<ItemStack> results, int time, boolean isLava) {
+    public FishPondRecipe(ResourceLocation id, List<Ingredient> ingredients, List<ChancedItemStack> results, int time, boolean isLava) {
         this.id = id;
         this.ingredients = ingredients;
         this.results = results;
@@ -75,7 +76,7 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
 
     @Override
     public ItemStack assemble(RecipeInput container, RegistryAccess registryAccess) {
-        return results.get(0).copy();
+        return results.get(0).itemStack().copy();
     }
 
     @Override
@@ -85,7 +86,7 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
 
     @Override
     public ItemStack getResultItem(RegistryAccess registryAccess) {
-        return results.get(0);
+        return results.get(0).itemStack();
     }
 
     @Override
@@ -193,9 +194,13 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
             }
 
             JsonArray resultsJson = serializedRecipe.getAsJsonArray("results");
-            List<ItemStack> results = new ArrayList<>();
+            List<ChancedItemStack> results = new ArrayList<>();
             for (int i = 0; i < resultsJson.size(); i++) {
-                results.add(CraftingHelper.getItemStack(resultsJson.get(i).getAsJsonObject(), true));
+                JsonObject result = resultsJson.get(i).getAsJsonObject();
+                ItemStack itemStack = CraftingHelper.getItemStack(result, true);
+                JsonElement chanceElement = result.get("chance");
+                float chance = chanceElement == null ? 1.0f : chanceElement.getAsFloat();
+                results.add(new ChancedItemStack(itemStack, chance));
             }
 
             int time = serializedRecipe.get("time").getAsInt();
@@ -213,9 +218,11 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
             }
 
             int resultCount = buffer.readInt();
-            List<ItemStack> results = new ArrayList<>();
+            List<ChancedItemStack> results = new ArrayList<>();
             for (int i = 0; i < resultCount; i++) {
-                results.add(buffer.readItem());
+                ItemStack itemStack = buffer.readItem();
+                float chance = buffer.readFloat();
+                results.add(new ChancedItemStack(itemStack, chance));
             }
 
             int time = buffer.readInt();
@@ -231,8 +238,9 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
             }
 
             buffer.writeInt(recipe.results.size());
-            for (ItemStack result : recipe.results) {
-                buffer.writeItem(result);
+            for (ChancedItemStack result : recipe.results) {
+                buffer.writeItem(result.itemStack());
+                buffer.writeFloat(result.chance());
             }
 
             buffer.writeInt(recipe.time);
@@ -242,7 +250,7 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
     public static class Builder implements RecipeBuilder {
         private final Advancement.Builder advancement = Advancement.Builder.recipeAdvancement();
         private final List<Ingredient> ingredients = new ArrayList<>();
-        private final List<ItemStack> results = new ArrayList<>();
+        private final List<ChancedItemStack> results = new ArrayList<>();
         private int time = 600;
         private boolean isLava;
 
@@ -259,7 +267,7 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
 
         @Override
         public Item getResult() {
-            return results.get(0).getItem();
+            return results.get(0).itemStack().getItem();
         }
 
         public Builder ingredient(Ingredient ingredient) {
@@ -268,7 +276,12 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
         }
 
         public Builder result(ItemStack result) {
-            this.results.add(result);
+            this.results.add(new ChancedItemStack(result));
+            return this;
+        }
+
+        public Builder result(ItemStack result, float chance) {
+            this.results.add(new ChancedItemStack(result, chance));
             return this;
         }
 
@@ -295,7 +308,7 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
         public record Result(
             ResourceLocation id,
             List<Ingredient> ingredients,
-            List<ItemStack> results,
+            List<ChancedItemStack> results,
             int time,
             boolean isLava,
             Advancement.Builder advancementBuilder
@@ -310,13 +323,15 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
                 json.add("ingredients", ingredientsArray);
 
                 JsonArray resultsArray = new JsonArray();
-                for (ItemStack stack : this.results) {
+                for (ChancedItemStack result : this.results) {
                     JsonObject object = new JsonObject();
+                    ItemStack stack = result.itemStack();
                     object.addProperty("item", ForgeRegistries.ITEMS.getKey(stack.getItem()).toString());
                     object.addProperty("count", stack.getCount());
                     if (stack.hasTag()) {
                         object.addProperty("nbt", stack.getTag().toString());
                     }
+                    object.addProperty("chance", result.chance());
                     resultsArray.add(object);
                 }
                 json.add("results", resultsArray);

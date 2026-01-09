@@ -8,6 +8,7 @@
   "isLava": false,
   "results": [
     {
+      "chance": 0.2,
       "count": 1,
       "item": "list:bad_item"
     }

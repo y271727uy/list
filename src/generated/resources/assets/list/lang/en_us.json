@@ -9,6 +9,7 @@
   "block.list.straw_mushroom_colony": "Straw Mushroom Colony",
   "block.list.tree_compost": "Tree Compost",
   "gui.list.category.fish_pond": "Fish Pond",
+  "gui.list.category.fish_pond.chance": "Chance: %s%%",
   "gui.list.category.fish_pond.require_lava": "Requires Lava",
   "gui.list.category.fish_pond.require_water": "Requires Water",
   "item.list.advanced_pure_fruit_feed": "Advanced Pure Fruit Feed",
