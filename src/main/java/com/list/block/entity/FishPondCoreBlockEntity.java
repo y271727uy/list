@@ -3,6 +3,7 @@ package com.list.block.entity;
 import com.list.all.ModMenus;
 import com.list.all.ModRecipes;
 import com.list.menu.FishPondMenu;
+import com.list.recipe.ChancedItemStack;
 import com.list.recipe.FishPondRecipe;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
@@ -145,9 +146,9 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
             }
             if (progress >= runningRecipeCache.time) {
                 // Insert outputs
-                for (ItemStack output : runningRecipeCache.results) {
+                for (ChancedItemStack output : runningRecipeCache.results) {
                     for (int i = 9; ; i++) {
-                        ItemStack remaining = itemHandler.insertItem(i, output.copy(), true);
+                        ItemStack remaining = itemHandler.insertItem(i, output.itemStack().copy(), true);
                         if (remaining.isEmpty()) {
                             break;
                         }
@@ -158,10 +159,23 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
                 }
 
                 // Actually insert outputs
-                for (ItemStack output : runningRecipeCache.results) {
+                for (ChancedItemStack output : runningRecipeCache.results) {
+                    ItemStack toInsert = output.itemStack().copy();
+                    float chance = output.chance();
                     for (int i = 9; i < 12; i++) {
-                        ItemStack remaining = itemHandler.insertItem(i, output.copy(), false);
-                        if (remaining.isEmpty()) {
+                        while (!toInsert.isEmpty()) {
+                            if (chance < 1.0f && level.random.nextFloat() > chance) {
+                                toInsert.shrink(1);
+                                continue;
+                            }
+                            ItemStack remaining = itemHandler.insertItem(i, toInsert.copyWithCount(1), false);
+                            if (remaining.isEmpty()) {
+                                toInsert.shrink(1);
+                            } else {
+                                break;
+                            }
+                        }
+                        if (toInsert.isEmpty()) {
                             break;
                         }
                     }

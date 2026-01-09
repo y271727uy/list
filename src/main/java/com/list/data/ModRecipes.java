@@ -10,7 +10,7 @@ public class ModRecipes {
     public static void init(RegistrateRecipeProvider provider) {
         FishPondRecipe.builder()
             .ingredient(Ingredient.of(ItemTags.PLANKS))
-            .result(ModItems.BAD_ITEM.asStack())
+            .result(ModItems.BAD_ITEM.asStack(), 0.2f)
             .time(100)
             .save(provider);
     }

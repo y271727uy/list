@@ -19,6 +19,7 @@ public class ModLangs {
         provider.add("gui.list.category.fish_pond", "Fish Pond");
         provider.add("gui.list.category.fish_pond.require_lava", "Requires Lava");
         provider.add("gui.list.category.fish_pond.require_water", "Requires Water");
+        provider.add("gui.list.category.fish_pond.chance", "Chance: %s%%");
     }
 }
 

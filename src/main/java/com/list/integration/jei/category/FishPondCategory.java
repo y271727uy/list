@@ -2,8 +2,10 @@ package com.list.integration.jei.category;
 
 import com.list.all.ModBlocks;
 import com.list.integration.jei.ListJeiPlugin;
+import com.list.recipe.ChancedItemStack;
 import com.list.recipe.FishPondRecipe;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
+import mezz.jei.api.gui.builder.IRecipeSlotBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.gui.widgets.IRecipeExtrasBuilder;
@@ -51,8 +53,14 @@ public class FishPondCategory extends AbstractRecipeCategory<FishPondRecipe> {
         for (int i = 0; i < recipe.results.size(); i++) {
             int x = OUTPUT_START_X;
             int y = OUTPUT_START_Y + i * 18;
-            builder.addSlot(RecipeIngredientRole.OUTPUT, x, y)
-                .addItemStack(recipe.results.get(i));
+            ChancedItemStack chancedItemStack = recipe.results.get(i);
+            IRecipeSlotBuilder slotBuilder = builder.addSlot(RecipeIngredientRole.OUTPUT, x, y)
+                .addItemStack(chancedItemStack.itemStack());
+            if (chancedItemStack.chance() < 1.0f) {
+                slotBuilder.addRichTooltipCallback(((recipeSlotView, tooltip) -> {
+                    tooltip.add(Component.translatable("gui.list.category.fish_pond.chance", (int) (chancedItemStack.chance() * 100)));
+                }));
+            }
         }
     }
 
