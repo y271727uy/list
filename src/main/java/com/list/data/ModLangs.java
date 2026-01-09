@@ -15,6 +15,10 @@ public class ModLangs {
         provider.add("item.list.tasmanian_giant_freshwater_crayfish.desc.3", "§7§oHowever, it is an endangered species, strictly protected, and its harvesting is restricted.");
         provider.add("item.list.tasmanian_giant_freshwater_crayfish.desc.4", "§7§oIt is also known as the 'living fossil of freshwater.'");
         provider.add("item.list.euastacus_armatus.desc", "§7§oIts meat is delicious, making it an important freshwater crayfish for local consumption in Australia.");
+
+        provider.add("gui.list.category.fish_pond", "Fish Pond");
+        provider.add("gui.list.category.fish_pond.require_lava", "Requires Lava");
+        provider.add("gui.list.category.fish_pond.require_water", "Requires Water");
     }
 }
 
