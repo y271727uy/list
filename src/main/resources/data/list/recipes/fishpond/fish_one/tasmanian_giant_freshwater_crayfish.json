@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:tasmanian_giant_freshwater_crayfish_egg" 
+    },
+    {
+      "tag": "list:raw_meet"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:tasmanian_giant_freshwater_crayfish" 
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "list:tasmanian_giant_freshwater_crayfish_egg" 
+    }
+  ],
+  "time": 7200
+}

@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:deep-sea_stag_shrimp_egg" 
+    },
+    {
+      "tag": "list:raw_meet"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:deep-sea_stag_shrimp" 
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "list:deep-sea_stag_shrimp_egg" 
+    }
+  ],
+  "time": 2400
+}

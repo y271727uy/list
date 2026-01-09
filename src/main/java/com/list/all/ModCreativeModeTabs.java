@@ -45,7 +45,7 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.COLLAPSE_DRONE.get());
                     output.accept(ModItems.COLLAPSE_QUEEN.get());
                     output.accept(ModItems.COLLAPSE_PRINCESS.get());
-                    //output.accept(ModItems..get());
+                    output.accept(ModItems.HARSH_WINTER_CREDIT.get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
@@ -498,6 +498,29 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.RED_SWORDFISH_EGG.get());           // 红剑卵
                     output.accept(ModItems.LUZON_SPINY_STARFISH_EGG.get());    // 吕宋棘海星卵
                     output.accept(ModItems.RED_BELLIED_PIRANHA_EGG.get());     // 红腹食人鲳卵
+                    output.accept(ModItems.CRAYFISH_EGG.get());     // 小龙虾卵
+                    output.accept(ModItems.TASMANIAN_GIANT_FRESHWATER_EGG.get());     // 塔斯马尼亚巨型淡水龙虾卵
+                    output.accept(ModItems.EUASTACUS_ARMATUS_EGG.get());     //  墨累河白刺鳌虾卵
+                    output.accept(ModItems.MARRON_CRAYFISH_EGG.get());     // 马龙鳌虾卵
+                    output.accept(ModItems.CAMBAROIDES_DAURICUS_EGG.get());     // 东北鳌虾/蝲蛄卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+                    //output.accept(ModItems..get());     // 卵
+
                     })
                     .build()
     );

@@ -167,6 +167,15 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
                     }
                 }
 
+                // 播放水桶倒水的声音
+                if (!isLava) { // 只在水模式下播放水声
+                    level.playSound(null, blockPos, net.minecraft.sounds.SoundEvents.BUCKET_EMPTY, 
+                        net.minecraft.sounds.SoundSource.BLOCKS, 0.5F, 1.0F);
+                } else { // 在岩浆模式下播放岩浆声
+                    level.playSound(null, blockPos, net.minecraft.sounds.SoundEvents.BUCKET_EMPTY_LAVA,
+                        net.minecraft.sounds.SoundSource.BLOCKS, 0.5F, 1.0F);
+                }
+
                 runningRecipe = null;
                 runningRecipeCache = null;
                 progress = 0;

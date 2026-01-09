@@ -2,23 +2,23 @@
   "type": "list:fish_pond",
   "ingredients": [
     {
-      "item": "list:koi_egg"
+      "item": "list:river_shrimp_egg" 
     },
     {
-      "item": "minecraft:kelp"
+      "tag": "list:raw_meet"
     }
   ],
   "isLava": false,
   "results": [
     {
       "count": 1,
-      "item": "list:koi"
+      "item": "list:river_shrimp" 
     },
     {
       "count": 1,
-      "chance": 0.0,
-      "item": "list:koi_egg"
+      "chance": 0.1,
+      "item": "list:river_shrimp_egg" 
     }
   ],
-  "time": 100
+  "time": 600
 }
