@@ -56,6 +56,6 @@ public class ListJeiPlugin implements IModPlugin {
 
     @Override
     public void registerRecipeTransferHandlers(IRecipeTransferRegistration registration) {
-        registration.addRecipeTransferHandler(FishPondMenu.class, ModMenus.FISH_POND.get(), FISH_POND,0, 9,12,36);
+        registration.addRecipeTransferHandler(FishPondMenu.class, ModMenus.FISH_POND.get(), FISH_POND,36, 9,0,36);
     }
 }

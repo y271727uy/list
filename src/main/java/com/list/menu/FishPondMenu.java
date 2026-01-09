@@ -36,7 +36,12 @@ public class FishPondMenu extends AbstractContainerMenu {
         for (int i = 0; i < 9; i++) {
             int x = i % 3;
             int y = i / 3;
-            addSlot(new SlotItemHandler(blockEntity.itemHandler, i, 8 + x * 18, 17 + y * 18));
+            addSlot(new SlotItemHandler(blockEntity.itemHandler, i, 8 + x * 18, 17 + y * 18) {
+                @Override
+                public boolean mayPickup(Player playerIn) {
+                    return true;
+                }
+            });
         }
 
         // output
