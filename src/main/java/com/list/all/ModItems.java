@@ -109,6 +109,13 @@ public class ModItems {
             .model((ctx, provider) -> provider.generated(ctx::get, provider.mcLoc("item/book")))
             .register();
 
+    // 凛冬币
+    public static final ItemEntry<Item> HARSH_WINTER_CREDIT = REGISTRATE
+            .item("harsh_winter_credit", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/harsh_winter_credit")))
+            .properties(p -> p.rarity(Rarity.UNCOMMON))
+            .register();
+
     //照抄
     public static final ItemEntry<EggItem> TEST_EGG = REGISTRATE
             .item("test_egg", p -> new EggItem(p, 0x55ffff))
@@ -1403,6 +1410,7 @@ public class ModItems {
             .model(ItemModelUtil::eggItemModel)
             .register();
 
+
     // 花英斑卵
     public static final ItemEntry<EggItem> FLOWER_SPOTTED_GROUPER_EGG = REGISTRATE
             .item("flower_spotted_grouper_egg", p -> new EggItem(p, 0xFF1493))
@@ -1664,7 +1672,120 @@ public class ModItems {
                     .build()))
             .model(ItemModelUtil::eggItemModel)
             .register();
+//龙虾卵5件套
+    /*
+//小龙虾卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("crayfish_egg", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
 
+//塔斯马尼亚巨型淡水龙虾卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("tasmanian_giant_freshwater_egg", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+//墨累河白刺鳌虾卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("euastacus_armatus_egg", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+//马龙鳌虾卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("marron_crayfish_egg", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+//东北鳌虾/蝲蛄卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("cambaroides_dauricus_egg", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+*/
+// 小龙虾卵（Procambarus clarkii）
+public static final ItemEntry<EggItem> CRAYFISH_EGG = REGISTRATE
+        .item("crayfish_egg", p -> new EggItem(p, 0x8B4513)) // saddle brown（深褐）
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+    // 塔斯马尼亚巨型淡水龙虾卵（Astacopsis gouldi）
+    public static final ItemEntry<EggItem> TASMANIAN_GIANT_FRESHWATER_EGG = REGISTRATE
+            .item("tasmanian_giant_freshwater_egg", p -> new EggItem(p, 0xC2A878)) // khaki brown（黄褐）
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 墨累河白刺鳌虾卵（Euastacus armatus）
+    public static final ItemEntry<EggItem> EUASTACUS_ARMATUS_EGG = REGISTRATE
+            .item("euastacus_armatus_egg", p -> new EggItem(p, 0x6B4C3B)) // dark brown（暗褐）
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 马龙鳌虾卵（Marron，Cherax spp.）
+    public static final ItemEntry<EggItem> MARRON_CRAYFISH_EGG = REGISTRATE
+            .item("marron_crayfish_egg", p -> new EggItem(p, 0xA0522D)) // sienna（棕褐）
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 东北鳌虾/蝲蛄卵（Cambaroides dauricus）
+    public static final ItemEntry<EggItem> CAMBAROIDES_DAURICUS_EGG = REGISTRATE
+            .item("cambaroides_dauricus_egg", p -> new EggItem(p, 0x7F5A36)) // brownish（棕色）
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+/*
+//卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+*/
 /*
 // 春笋   //明日之后蔬菜
 public static final ItemEntry<Item> SPRING_BAMBOO_SHOOT = REGISTRATE

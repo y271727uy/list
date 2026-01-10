@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:pelagic_swimming_crab_egg" 
+    },
+    {
+      "tag": "list:raw_meet"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:pelagic_swimming_crab" 
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "list:pelagic_swimming_crab_egg" 
+    }
+  ],
+  "time": 1200
+}
