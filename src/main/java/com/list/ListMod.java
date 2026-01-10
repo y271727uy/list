@@ -27,7 +27,7 @@ import net.minecraft.ChatFormatting;
 public class ListMod
 {
     public static final String MODID = "list";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public static final Registrate REGISTRATE = Registrate.create(MODID);
     

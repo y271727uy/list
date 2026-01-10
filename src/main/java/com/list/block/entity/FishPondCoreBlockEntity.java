@@ -1,5 +1,6 @@
 package com.list.block.entity;
 
+import com.list.ListMod;
 import com.list.all.ModMenus;
 import com.list.all.ModRecipes;
 import com.list.menu.FishPondMenu;
@@ -41,24 +42,16 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
     private int multiblockCheckCooldown = 0;
     private boolean isFormed = false;
     private boolean isLava = false;
+    // cached actual outputs (randomized once when recipe starts)
+    private List<ItemStack> pendingOutputs = null;
 
     // 0-8 input, 9-11 output
     public final ItemStackHandler itemHandler = new ItemStackHandler(12) {
         @Override
-        public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
-            if (slot >= 14) {
-                return stack;
-            }
-            return super.insertItem(slot, stack, simulate);
-        }
-
-        @Override
         protected void onContentsChanged(int slot) {
             setChanged();
             if (!isFormed) return;
-            if (runningRecipe == null || runningRecipeCache == null) {
-                findRecipe();
-            }
+            findRecipe();
         }
     };
 
@@ -145,10 +138,16 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
                 updateCacheRecipe();
             }
             if (progress >= runningRecipeCache.time) {
-                // Insert outputs
-                for (ChancedItemStack output : runningRecipeCache.results) {
+                // Ensure pendingOutputs exists (randomized once when recipe started)
+                if (pendingOutputs == null) {
+                    computePendingOutputs(level);
+                }
+
+                // Preview: check each pending output can fit into output slots
+                for (ItemStack output : pendingOutputs) {
+                    ItemStack remaining = output.copy();
                     for (int i = 9; ; i++) {
-                        ItemStack remaining = itemHandler.insertItem(i, output.itemStack().copy(), true);
+                        remaining = itemHandler.insertItem(i, remaining.copy(), true);
                         if (remaining.isEmpty()) {
                             break;
                         }
@@ -158,31 +157,21 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
                     }
                 }
 
-                // Actually insert outputs
-                for (ChancedItemStack output : runningRecipeCache.results) {
-                    ItemStack toInsert = output.itemStack().copy();
-                    float chance = output.chance();
+                // Actually insert pending outputs (deterministic now)
+                for (ItemStack output : pendingOutputs) {
+                    ItemStack remaining = output.copy();
                     for (int i = 9; i < 12; i++) {
-                        while (!toInsert.isEmpty()) {
-                            if (chance < 1.0f && level.random.nextFloat() > chance) {
-                                toInsert.shrink(1);
-                                continue;
-                            }
-                            ItemStack remaining = itemHandler.insertItem(i, toInsert.copyWithCount(1), false);
-                            if (remaining.isEmpty()) {
-                                toInsert.shrink(1);
-                            } else {
-                                break;
-                            }
-                        }
-                        if (toInsert.isEmpty()) {
+                        remaining = itemHandler.insertItem(i, remaining.copy(), false);
+                        if (remaining.isEmpty()) {
                             break;
                         }
                     }
                 }
 
+                // clear recipe state
                 runningRecipe = null;
                 runningRecipeCache = null;
+                pendingOutputs = null;
                 progress = 0;
                 findRecipe();
             }
@@ -191,7 +180,43 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
         }
     }
 
+    private void computePendingOutputs(Level level) {
+        pendingOutputs = new ArrayList<>();
+        if (runningRecipeCache == null) return;
+
+        for (ChancedItemStack out : runningRecipeCache.results) {
+            ItemStack prototype = out.itemStack();
+            int count = prototype.getCount();
+            float chance = out.chance();
+
+            for (int i = 0; i < count; i++) {
+                if (chance < 1.0f) {
+                    if (level.random.nextFloat() > chance) {
+                        continue;
+                    }
+                }
+                // try to merge into existing pending stacks
+                boolean merged = false;
+                for (ItemStack s : pendingOutputs) {
+                    if (ItemStack.isSameItemSameTags(s, prototype) && s.getCount() < s.getMaxStackSize()) {
+                        s.grow(1);
+                        merged = true;
+                        break;
+                    }
+                }
+                if (!merged) {
+                    ItemStack single = prototype.copyWithCount(1);
+                    pendingOutputs.add(single);
+                }
+            }
+        }
+        ListMod.LOGGER.info("pendingOutputs: {}", pendingOutputs);
+    }
+
     private void findRecipe() {
+        if(runningRecipe != null) {
+            return;
+        }
         ArrayList<ItemStack> inputs = new ArrayList<>();
         for (int i = 0; i < 9; i++) {
             inputs.add(itemHandler.getStackInSlot(i));
