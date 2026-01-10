@@ -22,6 +22,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -273,6 +274,23 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
         public Builder ingredient(Ingredient ingredient) {
             this.ingredients.add(ingredient);
             return this;
+        }
+
+
+        public Builder result(ItemLike item) {
+            return result(item, 1);
+        }
+
+        public Builder result(ItemLike item, float chance) {
+            return result(item, 1, chance);
+        }
+
+        public Builder result(ItemLike item, int count) {
+            return result(item, count, 1);
+        }
+
+        public Builder result(ItemLike item, int count, float chance) {
+            return result(new ItemStack(item, count), chance);
         }
 
         public Builder result(ItemStack result) {

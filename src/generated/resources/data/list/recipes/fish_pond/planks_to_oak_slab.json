@@ -8,6 +8,11 @@
   "isLava": false,
   "results": [
     {
+      "chance": 1.0,
+      "count": 1,
+      "item": "minecraft:oak_slab"
+    },
+    {
       "chance": 0.2,
       "count": 1,
       "item": "list:bad_item"
