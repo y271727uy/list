@@ -6,8 +6,10 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.inventory.SimpleContainerData;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -19,15 +21,17 @@ import javax.annotation.Nullable;
 public class FishPondMenu extends AbstractContainerMenu {
     private final Level level;
     private final FishPondCoreBlockEntity blockEntity;
+    private final ContainerData data;
 
     public FishPondMenu(@Nullable MenuType<?> menuType, int containerId, Inventory inventory, FriendlyByteBuf buf) {
-        this(menuType, containerId, inventory, inventory.player.level().getBlockEntity(buf.readBlockPos()));
+        this(menuType, containerId, inventory, inventory.player.level().getBlockEntity(buf.readBlockPos()), new SimpleContainerData(2));
     }
 
-    public FishPondMenu(MenuType<?> menuType, int containerId, Inventory inventory, BlockEntity be) {
+    public FishPondMenu(MenuType<?> menuType, int containerId, Inventory inventory, BlockEntity be, ContainerData data) {
         super(menuType, containerId);
         this.blockEntity = (FishPondCoreBlockEntity) be;
         this.level = inventory.player.level();
+        this.data = data;
 
         addPlayerInventory(inventory);
         addPlayerHotbar(inventory);
@@ -53,6 +57,8 @@ public class FishPondMenu extends AbstractContainerMenu {
                 }
             });
         }
+
+        addDataSlots(data);
     }
 
     private void addPlayerInventory(Inventory playerInventory) {
@@ -67,6 +73,12 @@ public class FishPondMenu extends AbstractContainerMenu {
         for (int i = 0; i < 9; ++i) {
             this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
         }
+    }
+
+    public int getProgress(int width) {
+        int progress = this.data.get(0);
+        int maxProgress = this.data.get(1);
+        return maxProgress != 0 && progress != 0 ? (int) (progress * width / (float) maxProgress) : 0;
     }
 
     private static final int HOTBAR_SLOT_COUNT = 9;
