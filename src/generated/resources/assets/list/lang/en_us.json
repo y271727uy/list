@@ -8,6 +8,7 @@
   "block.list.straw_mushroom": "Straw Mushroom",
   "block.list.straw_mushroom_colony": "Straw Mushroom Colony",
   "block.list.tree_compost": "Tree Compost",
+  "config.jade.plugin_list.fish_pond": "Fish Pond",
   "gui.list.category.fish_pond": "Fish Pond",
   "gui.list.category.fish_pond.chance": "Chance: %s%%",
   "gui.list.category.fish_pond.require_lava": "Requires Lava",
@@ -295,5 +296,10 @@
   "itemGroup.list.food_and_product": "Food and Product",
   "itemGroup.list.list": "List",
   "itemGroup.list.list_egg": "Egg",
-  "itemGroup.list.manmade": "manmade"
+  "itemGroup.list.manmade": "manmade",
+  "tooltip.fishpond.formed": "Formed",
+  "tooltip.fishpond.lava_mode": "Lava Mode",
+  "tooltip.fishpond.not_formed": "Not Formed",
+  "tooltip.fishpond.recipe_outputs": "Recipe Outputs: ",
+  "tooltip.fishpond.water_mode": "Water Mode"
 }

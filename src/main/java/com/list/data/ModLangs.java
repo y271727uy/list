@@ -20,6 +20,13 @@ public class ModLangs {
         provider.add("gui.list.category.fish_pond.require_lava", "Requires Lava");
         provider.add("gui.list.category.fish_pond.require_water", "Requires Water");
         provider.add("gui.list.category.fish_pond.chance", "Chance: %s%%");
+
+        provider.add("config.jade.plugin_list.fish_pond", "Fish Pond");
+        provider.add("tooltip.fishpond.not_formed", "Not Formed");
+        provider.add("tooltip.fishpond.formed", "Formed");
+        provider.add("tooltip.fishpond.lava_mode", "Lava Mode");
+        provider.add("tooltip.fishpond.water_mode", "Water Mode");
+        provider.add("tooltip.fishpond.recipe_outputs", "Recipe Outputs: ");
     }
 }
 

@@ -6,10 +6,12 @@ import com.list.all.ModRecipes;
 import com.list.menu.FishPondMenu;
 import com.list.recipe.ChancedItemStack;
 import com.list.recipe.FishPondRecipe;
+import lombok.Getter;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.MenuProvider;
@@ -37,12 +39,19 @@ import java.util.List;
 @ParametersAreNonnullByDefault
 public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements MenuProvider {
     private ResourceLocation runningRecipe = null;
+    @Getter
+    @Nullable
     private FishPondRecipe runningRecipeCache = null;
+    @Getter
     private int progress = 0;
-    private int multiblockCheckCooldown = 0;
+    private int multiblockCheckCooldown = 20 * 20;
+    @Getter
     private boolean isFormed = false;
+    @Getter
     private boolean isLava = false;
     // cached actual outputs (randomized once when recipe starts)
+    @Getter
+    @Nullable
     private List<ItemStack> pendingOutputs = null;
 
     // 0-8 input, 9-11 output
@@ -86,6 +95,13 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
         if (runningRecipe != null) {
             tag.putString("RunningRecipe", runningRecipe.toString());
         }
+        if (pendingOutputs != null) {
+            ListTag output = new ListTag();
+            for (ItemStack stack : pendingOutputs) {
+                output.add(stack.save(new CompoundTag()));
+            }
+            tag.put("PendingOutputs", output);
+        }
         tag.putInt("Progress", progress);
         tag.putBoolean("IsFormed", isFormed);
         tag.putBoolean("IsLava", isLava);
@@ -102,6 +118,14 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
             updateCacheRecipe();
         } else {
             tag.remove("RunningRecipe");
+        }
+        if (tag.contains("PendingOutputs")) {
+            ListTag output = tag.getList("PendingOutputs", ListTag.TAG_COMPOUND);
+            pendingOutputs = new ArrayList<>();
+            for (int i = 0; i < output.size(); i++) {
+                ItemStack itemStack = ItemStack.of(output.getCompound(i));
+                pendingOutputs.add(itemStack);
+            }
         }
         progress = tag.getInt("Progress");
         isFormed = tag.getBoolean("IsFormed");
@@ -138,11 +162,6 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
                 updateCacheRecipe();
             }
             if (progress >= runningRecipeCache.time) {
-                // Ensure pendingOutputs exists (randomized once when recipe started)
-                if (pendingOutputs == null) {
-                    computePendingOutputs(level);
-                }
-
                 // Preview: check each pending output can fit into output slots
                 for (ItemStack output : pendingOutputs) {
                     ItemStack remaining = output.copy();
@@ -240,6 +259,7 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
             progress = 0;
             setChanged();
             consumeRecipeInputs();
+            computePendingOutputs(level);
         });
     }
 

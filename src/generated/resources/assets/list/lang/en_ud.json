@@ -8,6 +8,7 @@
   "block.list.straw_mushroom": "ɯooɹɥsnW ʍɐɹʇS",
   "block.list.straw_mushroom_colony": "ʎuoןoƆ ɯooɹɥsnW ʍɐɹʇS",
   "block.list.tree_compost": "ʇsodɯoƆ ǝǝɹ⟘",
+  "config.jade.plugin_list.fish_pond": "puoԀ ɥsıℲ",
   "gui.list.category.fish_pond": "puoԀ ɥsıℲ",
   "gui.list.category.fish_pond.chance": "%s%% :ǝɔuɐɥƆ",
   "gui.list.category.fish_pond.require_lava": "ɐʌɐꞀ sǝɹınbǝᴚ",
@@ -295,5 +296,10 @@
   "itemGroup.list.food_and_product": "ʇɔnpoɹԀ puɐ pooℲ",
   "itemGroup.list.list": "ʇsıꞀ",
   "itemGroup.list.list_egg": "bbƎ",
-  "itemGroup.list.manmade": "ǝpɐɯuɐɯ"
+  "itemGroup.list.manmade": "ǝpɐɯuɐɯ",
+  "tooltip.fishpond.formed": "pǝɯɹoℲ",
+  "tooltip.fishpond.lava_mode": "ǝpoW ɐʌɐꞀ",
+  "tooltip.fishpond.not_formed": "pǝɯɹoℲ ʇoN",
+  "tooltip.fishpond.recipe_outputs": " :sʇndʇnO ǝdıɔǝᴚ",
+  "tooltip.fishpond.water_mode": "ǝpoW ɹǝʇɐM"
 }
