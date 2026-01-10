@@ -1,6 +1,5 @@
 package com.list.block.entity;
 
-import com.list.ListMod;
 import com.list.all.ModMenus;
 import com.list.all.ModRecipes;
 import com.list.menu.FishPondMenu;
@@ -16,6 +15,7 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
@@ -44,6 +44,30 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
     private boolean isLava = false;
     // cached actual outputs (randomized once when recipe starts)
     private List<ItemStack> pendingOutputs = null;
+
+    protected final ContainerData dataAccess = new ContainerData() {
+        @Override
+        public int get(int index) {
+            return switch (index) {
+                case 0 -> progress;
+                case 1 -> runningRecipeCache != null ? runningRecipeCache.time : 0;
+                default -> 0;
+            };
+        }
+
+        @Override
+        public void set(int index, int value) {
+            switch (index) {
+                case 0 -> progress = value;
+                case 1 -> {}
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return 2;
+        }
+    };
 
     // 0-8 input, 9-11 output
     public final ItemStackHandler itemHandler = new ItemStackHandler(12) {
@@ -76,7 +100,7 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
 
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-        return new FishPondMenu(ModMenus.FISH_POND.get(), id, inventory, this);
+        return new FishPondMenu(ModMenus.FISH_POND.get(), id, inventory, this, dataAccess);
     }
 
     @Override
@@ -219,7 +243,6 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
                 }
             }
         }
-        ListMod.LOGGER.info("pendingOutputs: {}", pendingOutputs);
     }
 
     private void findRecipe() {
@@ -373,5 +396,9 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
                 return null;
             }
         }
+    }
+
+    public int getProgress() {
+        return progress;
     }
 }
