@@ -20,6 +20,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -34,6 +35,7 @@ import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
@@ -179,9 +181,17 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
         if (!isFormed) {
             return;
         }
-        if (runningRecipe != null ) {
+        if (runningRecipe != null) {
             if(runningRecipeCache == null) {
                 updateCacheRecipe();
+                if (runningRecipeCache == null) {
+                    // invalid recipe, clear state
+                    runningRecipe = null;
+                    pendingOutputs.clear();
+                    progress = 0;
+                    setChanged();
+                    return;
+                }
             }
             if (progress >= runningRecipeCache.time) {
                 // Preview: check each pending output can fit into output slots
