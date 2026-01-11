@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:grass_carp_egg"
+    },
+    {
+      "tag": "list:advanced_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:grass_carp"
+    },
+    {
+      "count": 1,
+      "chance": 0.50,
+      "item": "list:grass_carp_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.50,
+      "item": "list:grass_carp_egg"
+    }
+  ],
+  "time": 3200
+}

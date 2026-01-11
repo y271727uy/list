@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:checkerboard_wrasse_egg"
+    },
+    {
+      "tag": "list:raw_meat"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:checkerboard_wrasse"
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "list:checkerboard_wrasse_egg"
+    }
+  ],
+  "time": 3200
+}

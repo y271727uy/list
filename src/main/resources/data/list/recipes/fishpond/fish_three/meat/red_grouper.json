@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:red_grouper_egg"
+    },
+    {
+      "tag": "list:raw_meat"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:red_grouper"
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "list:red_grouper_egg"
+    }
+  ],
+  "time": 3200
+}

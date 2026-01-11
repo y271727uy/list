@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:siniperca_chuatsi_egg"
+    },
+    {
+      "tag": "list:advanced_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:siniperca_chuatsi"
+    },
+    {
+      "count": 1,
+      "chance": 0.50,
+      "item": "list:siniperca_chuatsi_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.50,
+      "item": "list:siniperca_chuatsi_egg"
+    }
+  ],
+  "time": 3200
+}

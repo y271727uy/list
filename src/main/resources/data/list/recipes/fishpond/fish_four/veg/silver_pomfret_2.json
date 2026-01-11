@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:silver_pomfret_egg"
+    },
+    {
+      "tag": "list:advanced_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:silver_pomfret"
+    },
+    {
+      "count": 1,
+      "chance": 0.50,
+      "item": "list:silver_pomfret_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.50,
+      "item": "list:silver_pomfret_egg"
+    }
+  ],
+  "time": 3200
+}

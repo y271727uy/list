@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:rosy_barb_egg"
+    },
+    {
+      "tag": "list:advanced_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:rosy_barb"
+    },
+    {
+      "count": 1,
+      "chance": 0.50,
+      "item": "list:rosy_barb_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.50,
+      "item": "list:rosy_barb_egg"
+    }
+  ],
+  "time": 3200
+}

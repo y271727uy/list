@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:white_stripe_fish_egg"
+    },
+    {
+      "tag": "list:pure_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:white_stripe_fish"
+    },
+    {
+      "count": 1,
+      "chance": 0.25,
+      "item": "list:white_stripe_fish_egg"
+    }
+  ],
+  "time": 3200
+}
