@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:sea_bass_egg"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:sea_bass"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:sea_bass_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:sea_bass_egg"
+    }
+  ],
+  "time": 3200
+}

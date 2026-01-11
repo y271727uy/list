@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:fluke_egg"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:fluke"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:fluke_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:fluke_egg"
+    }
+  ],
+  "time": 3200
+}

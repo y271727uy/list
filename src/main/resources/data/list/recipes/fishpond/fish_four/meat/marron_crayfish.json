@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:marron_crayfish_egg"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:marron_crayfish"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:marron_crayfish_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:marron_crayfish_egg"
+    }
+  ],
+  "time": 3200
+}

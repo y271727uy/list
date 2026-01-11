@@ -5,7 +5,7 @@
       "item": "list:fire_rat_fish_egg"
     },
     {
-      "tag": "list:raw_meat"
+      "tag": "list:pure_meat_feed"
     }
   ],
   "isLava": false,
@@ -16,7 +16,7 @@
     },
     {
       "count": 1,
-      "chance": 0.1,
+      "chance": 0.25,
       "item": "list:fire_rat_fish_egg"
     }
   ],

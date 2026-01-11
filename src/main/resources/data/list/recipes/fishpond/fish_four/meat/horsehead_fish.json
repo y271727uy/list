@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:horsehead_fish_egg"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:horsehead_fish"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:horsehead_fish_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:horsehead_fish_egg"
+    }
+  ],
+  "time": 3200
+}
