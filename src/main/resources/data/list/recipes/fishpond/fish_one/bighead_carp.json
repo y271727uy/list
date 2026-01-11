@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:bighead_carp_egg"
+    },
+    {
+      "tag": "list:sea_veg"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:bighead_carp"
+    },
+    {
+      "count": 1,
+      "chance": 0.05,
+      "item": "list:bighead_carp_egg"
+    }
+  ],
+  "time": 3200
+}

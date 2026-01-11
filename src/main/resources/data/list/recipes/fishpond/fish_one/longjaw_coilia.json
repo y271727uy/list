@@ -2,23 +2,23 @@
   "type": "list:fish_pond",
   "ingredients": [
     {
-      "item": "list:koi_egg"
+      "item": "list:longjaw_coilia_egg"
     },
     {
-      "item": "minecraft:kelp"
+      "tag": "list:raw_meat"
     }
   ],
   "isLava": false,
   "results": [
     {
       "count": 1,
-      "item": "list:koi"
+      "item": "list:longjaw_coilia"
     },
     {
       "count": 1,
       "chance": 0.1,
-      "item": "list:koi_egg"
+      "item": "list:longjaw_coilia_egg"
     }
   ],
-  "time": 3600
+  "time": 3200
 }

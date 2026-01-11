@@ -51,8 +51,8 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
     private boolean isLava = false;
     // cached actual outputs (randomized once when recipe starts)
     @Getter
-    @Nullable
-    private List<ItemStack> pendingOutputs = null;
+    private final List<ItemStack> pendingOutputs = new ArrayList<>();
+    //这里
 
     protected final ContainerData dataAccess = new ContainerData() {
         @Override
@@ -119,13 +119,11 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
         if (runningRecipe != null) {
             tag.putString("RunningRecipe", runningRecipe.toString());
         }
-        if (pendingOutputs != null) {
-            ListTag output = new ListTag();
-            for (ItemStack stack : pendingOutputs) {
-                output.add(stack.save(new CompoundTag()));
-            }
-            tag.put("PendingOutputs", output);
+        ListTag output = new ListTag();
+        for (ItemStack stack : pendingOutputs) {
+            output.add(stack.save(new CompoundTag()));
         }
+        tag.put("PendingOutputs", output);
         tag.putInt("Progress", progress);
         tag.putBoolean("IsFormed", isFormed);
         tag.putBoolean("IsLava", isLava);
@@ -145,7 +143,7 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
         }
         if (tag.contains("PendingOutputs")) {
             ListTag output = tag.getList("PendingOutputs", ListTag.TAG_COMPOUND);
-            pendingOutputs = new ArrayList<>();
+            pendingOutputs.clear();
             for (int i = 0; i < output.size(); i++) {
                 ItemStack itemStack = ItemStack.of(output.getCompound(i));
                 pendingOutputs.add(itemStack);
@@ -223,7 +221,7 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
                 // clear recipe state
                 runningRecipe = null;
                 runningRecipeCache = null;
-                pendingOutputs = null;
+                pendingOutputs.clear();
                 progress = 0;
                 findRecipe();
             }
@@ -233,7 +231,7 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
     }
 
     private void computePendingOutputs(Level level) {
-        pendingOutputs = new ArrayList<>();
+        pendingOutputs.clear();
         if (runningRecipeCache == null) return;
 
         for (ChancedItemStack out : runningRecipeCache.results) {
@@ -416,9 +414,5 @@ public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements Me
                 return null;
             }
         }
-    }
-
-    public int getProgress() {
-        return progress;
     }
 }

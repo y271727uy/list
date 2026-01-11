@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:longjaw_coilia_egg"
+    },
+    {
+      "tag": "list:sea_veg"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "list:longjaw_coilia"
+    },
+    {
+      "count": 1,
+      "chance": 0.05,
+      "item": "list:longjaw_coilia_egg"
+    }
+  ],
+  "time": 3200
+}

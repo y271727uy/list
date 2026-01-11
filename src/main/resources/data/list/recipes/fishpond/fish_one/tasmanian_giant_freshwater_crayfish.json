@@ -5,7 +5,7 @@
       "item": "list:tasmanian_giant_freshwater_crayfish_egg" 
     },
     {
-      "tag": "list:raw_meet"
+      "tag": "list:raw_meat"
     }
   ],
   "isLava": false,
@@ -20,5 +20,5 @@
       "item": "list:tasmanian_giant_freshwater_crayfish_egg" 
     }
   ],
-  "time": 7200
+  "time": 9200
 }

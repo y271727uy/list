@@ -82,7 +82,7 @@ public enum FishPondProvider implements IBlockComponentProvider, IServerDataProv
                 compoundTag.putInt("progress", blockEntity.getProgress());
                 ListTag output = new ListTag();
                 List<ItemStack> pendingOutputs = blockEntity.getPendingOutputs();
-                if (pendingOutputs != null && !pendingOutputs.isEmpty()) {
+                if (!pendingOutputs.isEmpty()) {
                     for (ItemStack stack : pendingOutputs) {
                         output.add(stack.save(new CompoundTag()));
                     }
