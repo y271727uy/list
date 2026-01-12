@@ -2873,30 +2873,10 @@ public static final ItemEntry<Item> HAIRY_BAMBOO_SHOOT = REGISTRATE
                 .build()))
         .register();
 
-// 莲藕
-public static final ItemEntry<Item> LOTUS_ROOT = REGISTRATE
-        .item("lotus_root", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/lifafter/lotus_root")))
-        .properties(p -> p.food(new FoodProperties.Builder()
-                .nutrition(3)
-                .saturationMod(1.2f)
-                .build()))
-        .register();
-
 // 糯米
 public static final ItemEntry<Item> GLUTINOUS_RICE = REGISTRATE
         .item("glutinous_rice", Item::new)
         .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/lifafter/glutinous_rice")))
-        .properties(p -> p.food(new FoodProperties.Builder()
-                .nutrition(3)
-                .saturationMod(1.2f)
-                .build()))
-        .register();
-
-// 绿豆
-public static final ItemEntry<Item> MUNG_BEAN = REGISTRATE
-        .item("mung_bean", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/lifafter/mung_bean")))
         .properties(p -> p.food(new FoodProperties.Builder()
                 .nutrition(3)
                 .saturationMod(1.2f)
