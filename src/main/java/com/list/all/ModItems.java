@@ -1672,8 +1672,1073 @@ public class ModItems {
                     .build()))
             .model(ItemModelUtil::eggItemModel)
             .register();
+
+
+//熔岩河豚卵
+public static final ItemEntry<EggItem> LAVA_PUFFERFISH_EGG = REGISTRATE
+        .item("lava_pufferfish_egg", p -> new EggItem(p, 0xFF0000))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//黑曜石鱼卵
+public static final ItemEntry<EggItem> OBSIDIANFISH_EGG = REGISTRATE
+        .item("obsidianfish_egg", p -> new EggItem(p, 0x000000))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//炽热鳕鱼卵
+public static final ItemEntry<EggItem> SEARING_COD_EGG = REGISTRATE
+        .item("searing_cod_egg", p -> new EggItem(p, 0xFFA500))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//骷髅鱼卵
+public static final ItemEntry<EggItem> BONEFISH_EGG = REGISTRATE
+        .item("bonefish_egg", p -> new EggItem(p, 0x808080))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//凋零骷髅鱼卵
+public static final ItemEntry<EggItem> WITHER_BONEFISH_EGG = REGISTRATE
+        .item("wither_bonefish_egg", p -> new EggItem(p, 0x000000))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//烈焰鱼卵
+public static final ItemEntry<EggItem> BLAZEFISH_EGG = REGISTRATE
+        .item("blazefish_egg", p -> new EggItem(p, 0xFFD700))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//岩浆怪鱼卵
+public static final ItemEntry<EggItem> MAGMACUBEFISH_EGG = REGISTRATE
+        .item("magmacubefish_egg", p -> new EggItem(p, 0x8B4513))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//发光沙丁鱼卵
+public static final ItemEntry<EggItem> GLOWDINE_EGG = REGISTRATE
+        .item("glowdine_egg", p -> new EggItem(p, 0xFFFF00))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//魂吸鱼卵
+public static final ItemEntry<EggItem> SOULSUCKER_EGG = REGISTRATE
+        .item("soulsucker_egg", p -> new EggItem(p, 0xA0522D))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//要塞石斑鱼卵
+public static final ItemEntry<EggItem> FORTRESS_GROUPER_EGG = REGISTRATE
+        .item("fortress_grouper_egg", p -> new EggItem(p, 0xD2691E))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//眼球鱼卵
+public static final ItemEntry<EggItem> EYEBALL_FISH_EGG = REGISTRATE
+        .item("eyeball_fish_egg", p -> new EggItem(p, 0x8B0000))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+    //烈焰铠甲虾卵
+public static final ItemEntry<EggItem> FLAME_SQUAT_LOBSTER_EGG = REGISTRATE
+        .item("flame_squat_lobster_egg", p -> new EggItem(p, 0x191970))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//黑曜石剑鱼卵
+public static final ItemEntry<EggItem> OBSIDIAN_SWORD_FISH_EGG = REGISTRATE
+        .item("obsidian_sword_fish_egg", p -> new EggItem(p, 0x000000))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//蒸汽飞鱼卵
+public static final ItemEntry<EggItem> STEAM_FLYING_FISH_EGG = REGISTRATE
+        .item("steam_flying_fish_egg", p -> new EggItem(p, 0xFFFDD0))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//火神鱼卵
+public static final ItemEntry<EggItem> AGNI_FISH_EGG = REGISTRATE
+        .item("agni_fish_egg", p -> new EggItem(p, 0x8B4513))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//龙鱼卵
+public static final ItemEntry<EggItem> AROWANA_FISH_EGG = REGISTRATE
+        .item("arowana_fish_egg", p -> new EggItem(p, 0xFF2400))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//石英鱼卵
+public static final ItemEntry<EggItem> QUARTZ_FISH_EGG = REGISTRATE
+        .item("quartz_fish_egg", p -> new EggItem(p, 0xFFFDD0))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//鳞足蜗牛卵
+public static final ItemEntry<EggItem> SCALY_FOOT_SNAIL_EGG = REGISTRATE
+        .item("scaly_foot_snail_egg", p -> new EggItem(p, 0x800000))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//雪人蟹卵
+public static final ItemEntry<EggItem> YETI_CRAB_EGG = REGISTRATE
+        .item("yeti_crab_egg", p -> new EggItem(p, 0xAFEEEE))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//熔岩七鳃鳗卵
+public static final ItemEntry<EggItem> LAVA_LAMPREY_EGG = REGISTRATE
+        .item("lava_lamprey_egg", p -> new EggItem(p, 0xFFC0CB))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//尼罗罗非鱼卵 (搜索结果中提到其成熟卵为金黄色[citation:1][citation:7])
+public static final ItemEntry<EggItem> BOULTI_EGG = REGISTRATE
+        .item("boulti_egg", p -> new EggItem(p, 0xFFD700))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//尼罗河尖吻鲈卵 (参考鱼类体色：背部青灰，腹部银灰[citation:2])
+public static final ItemEntry<EggItem> CAPITAINE_EGG = REGISTRATE
+        .item("capitaine_egg", p -> new EggItem(p, 0xC0C0C0))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//反游猫鱼卵 (根据底栖鱼类常见卵色推断)
+public static final ItemEntry<EggItem> SYNODONTIS_EGG = REGISTRATE
+        .item("synodontis_egg", p -> new EggItem(p, 0x8B7355))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//小口黑鲈卵 (根据常见鲈鱼体色推断)
+public static final ItemEntry<EggItem> SMALLMOUTH_BASS_EGG = REGISTRATE
+        .item("smallmouth_bass_egg", p -> new EggItem(p, 0x556B2F))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//褐鳟鱼卵 (参考鱼类名称及体色)
+public static final ItemEntry<EggItem> BROWN_TROUT_EGG = REGISTRATE
+        .item("brown_trout_egg", p -> new EggItem(p, 0x8B4513))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//蓝鳃太阳鱼卵 (参考其名称及标志性的蓝色鳃盖)
+public static final ItemEntry<EggItem> BLUEGILL_EGG = REGISTRATE
+        .item("bluegill_egg", p -> new EggItem(p, 0x4682B4))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//鲿鱼卵 (根据鲿科鱼类体色推断)
+public static final ItemEntry<EggItem> BAYAD_EGG = REGISTRATE
+        .item("bayad_egg", p -> new EggItem(p, 0x696969))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//虹鳟鱼卵 (参考鱼类名称及体色)
+public static final ItemEntry<EggItem> RAINBOW_TROUT_EGG = REGISTRATE
+        .item("rainbow_trout_egg", p -> new EggItem(p, 0xE75480))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//绿青鳕卵 (搜索结果显示其背部为绿色[citation:6]，鳕鱼卵常为橙色[citation:3]，此处采用折中方案)
+public static final ItemEntry<EggItem> POLLOCK_EGG = REGISTRATE
+        .item("pollock_egg", p -> new EggItem(p, 0xBDB76B))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//鲤鱼卵 (常见鱼卵为金黄色)
+public static final ItemEntry<EggItem> CARP_EGG = REGISTRATE
+        .item("carp_egg", p -> new EggItem(p, 0xFFD700))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//鲶鱼卵 (鲶鱼卵在现实中可能呈绿色[citation:7]；选用偏黄绿色增强区分)
+public static final ItemEntry<EggItem> CATFISH_EGG = REGISTRATE
+        .item("catfish_egg", p -> new EggItem(p, 0x9ACD32))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//雀鳝卵 (基于其暗色鳞甲及古老特征)
+public static final ItemEntry<EggItem> GAR_EGG = REGISTRATE
+        .item("gar_egg", p -> new EggItem(p, 0x556B2F))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//北美狗鱼卵 (肉食性淡水掠食者)
+public static final ItemEntry<EggItem> MUSKELLUNGE_EGG = REGISTRATE
+        .item("muskellunge_egg", p -> new EggItem(p, 0xB22222))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//鲦鱼卵 (小型群居鱼类，选用浅色)
+public static final ItemEntry<EggItem> MINNOW_EGG = REGISTRATE
+        .item("minnow_egg", p -> new EggItem(p, 0xF0E68C))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//河鲈鱼卵 (常见淡水鱼)
+public static final ItemEntry<EggItem> PERCH_EGG = REGISTRATE
+        .item("perch_egg", p -> new EggItem(p, 0xDAA520))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//巨骨舌鱼卵 (南美巨型淡水鱼，匹配其体色)
+public static final ItemEntry<EggItem> ARAPAIMA_EGG = REGISTRATE
+        .item("arapaima_egg", p -> new EggItem(p, 0x8B4513))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//水虎鱼卵 (凶猛掠食者)
+public static final ItemEntry<EggItem> PIRANHA_EGG = REGISTRATE
+        .item("piranha_egg", p -> new EggItem(p, 0xDC143C))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//大盖巨脂鲤卵 (草食性鱼类)
+public static final ItemEntry<EggItem> TAMBAQUI_EGG = REGISTRATE
+        .item("tambaqui_egg", p -> new EggItem(p, 0x2E8B57))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//褐菇鱼卵 (褐色)
+public static final ItemEntry<EggItem> BROWN_SHROOMA_EGG = REGISTRATE
+        .item("brown_shrooma_egg", p -> new EggItem(p, 0xA0522D))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//红菇鱼卵 (红色)
+public static final ItemEntry<EggItem> RED_SHROOMA_EGG = REGISTRATE
+        .item("red_shrooma_egg", p -> new EggItem(p, 0xFF6347))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//金枪鱼卵 (参考其强大迅猛的特征及蓝鳍金枪鱼背部色调)
+public static final ItemEntry<EggItem> TUNA_EGG = REGISTRATE
+        .item("tuna_egg", p -> new EggItem(p, 0x1E90FF))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//赤点石斑鱼卵 (参考其红褐色体色及红斑)
+public static final ItemEntry<EggItem> RED_DOT_EGG = REGISTRATE
+        .item("red_dot_egg", p -> new EggItem(p, 0xCD5C5C))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//金鱼卵 (参考观赏金鱼的经典橙色)
+public static final ItemEntry<EggItem> GOLDFISH_EGG = REGISTRATE
+        .item("goldfish_egg", p -> new EggItem(p, 0xFF8C00))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+ //黑鱼卵 (参考其深色体色)
+public static final ItemEntry<EggItem> BLACKFISH_EGG = REGISTRATE
+        .item("blackfish_egg", p -> new EggItem(p, 0x2F4F4F))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//大西洋鳕鱼卵 (参考现实中鳕鱼卵常见的半透明橙黄色)
+public static final ItemEntry<EggItem> ATLANTIC_COD_EGG = REGISTRATE
+        .item("atlantic_cod_egg", p -> new EggItem(p, 0xFF8C00))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//大西洋鲱鱼卵 (鲱鱼卵常呈浅色或淡黄色)
+public static final ItemEntry<EggItem> ATLANTIC_HERRING_EGG = REGISTRATE
+        .item("atlantic_herring_egg", p -> new EggItem(p, 0xFFFACD))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//太平洋比目鱼卵 (比目鱼多为沙质海底保护色)
+public static final ItemEntry<EggItem> PACIFIC_HALIBUT_EGG = REGISTRATE
+        .item("pacific_halibut_egg", p -> new EggItem(p, 0xBC8F8F))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//大西洋比目鱼卵 (为与大西洋鳕鱼卵区分，选用更深沉的褐色)
+public static final ItemEntry<EggItem> ATLANTIC_HALIBUT_EGG = REGISTRATE
+        .item("atlantic_halibut_egg", p -> new EggItem(p, 0x8B4513))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//粉鲑卵 (参考其洄游期身体会呈现淡粉红色)
+public static final ItemEntry<EggItem> PINK_SALMON_EGG = REGISTRATE
+        .item("pink_salmon_egg", p -> new EggItem(p, 0xFFB6C1))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+//睫鱼卵 (从“睫毛”联想到浅色)
+public static final ItemEntry<EggItem> EYELASH_EGG = REGISTRATE
+        .item("eyelash_egg", p -> new EggItem(p, 0xF5F5DC))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//纺锤鲉卵 (从“纺锤”联想到流线型、偏银色)
+public static final ItemEntry<EggItem> SPINDLEFISH_EGG = REGISTRATE
+        .item("spindlefish_egg", p -> new EggItem(p, 0xC0C0C0))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//雪尾鱼卵 (从“雪花”联想到白色)
+public static final ItemEntry<EggItem> SNOWFLAKE_EGG = REGISTRATE
+        .item("snowflake_egg", p -> new EggItem(p, 0xF0F8FF))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//气旋鲳鱼卵 (从“气旋”联想到天空/风的蓝色)
+public static final ItemEntry<EggItem> AERO_MONO_EGG = REGISTRATE
+        .item("aero_mono_egg", p -> new EggItem(p, 0x87CEEB))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//泡菜鱼卵 (从“泡菜”联想到腌渍物的黄绿色)
+public static final ItemEntry<EggItem> PICKLEFISH_EGG = REGISTRATE
+        .item("picklefish_egg", p -> new EggItem(p, 0x9ACD32))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//琥珀虾虎鱼卵 (从“琥珀”联想到树脂化石的橙黄色)
+public static final ItemEntry<EggItem> AMBER_GOBY_EGG = REGISTRATE
+        .item("amber_goby_egg", p -> new EggItem(p, 0xFFBF00))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//喙鲱鱼卵 (基于“鲱鱼”的常见卵色，但带点不同)
+public static final ItemEntry<EggItem> BEAKED_HERRING_EGG = REGISTRATE
+        .item("beaked_herring_egg", p -> new EggItem(p, 0xEEE8AA))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//盲帆鳍鱼卵 (从“盲”和“帆”联想到失明、深海、浅色)
+public static final ItemEntry<EggItem> BLIND_SAILFIN_EGG = REGISTRATE
+        .item("blind_sailfin_egg", p -> new EggItem(p, 0x778899))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//马戏鱼卵 (从“马戏团”联想到多彩、鲜艳)
+public static final ItemEntry<EggItem> CIRCUS_FISH_EGG = REGISTRATE
+        .item("circus_fish_egg", p -> new EggItem(p, 0xFF69B4))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//铜焰花鮨卵 (从“铜”和“焰”联想到金属铜色和火焰的橙红)
+public static final ItemEntry<EggItem> COPPERFLAME_ANTHIAS_EGG = REGISTRATE
+        .item("copperflame_anthias_egg", p -> new EggItem(p, 0xB87333))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//恶魔鲱鱼卵 (从“恶魔”联想到紫色或暗红色)
+public static final ItemEntry<EggItem> DEMON_HERRING_EGG = REGISTRATE
+        .item("demon_herring_egg", p -> new EggItem(p, 0x8B0000))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//垂丝攀鲈卵 (从“垂丝”联想到柔和、淡雅的肉粉色)
+public static final ItemEntry<EggItem> DROOPING_GOURAMI_EGG = REGISTRATE
+        .item("drooping_gourami_egg", p -> new EggItem(p, 0xFFDAB9))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//阴阳雀鲷卵 (从“阴阳”联想到对比色，采用较深的灰色和接近白色的浅色)
+public static final ItemEntry<EggItem> DUALITY_DAMSELFISH_EGG = REGISTRATE
+        .item("duality_damselfish_egg", p -> new EggItem(p, 0x696969))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//叉鱼卵 (从“叉子”联想到金属或尖锐感)
+public static final ItemEntry<EggItem> FORKFISH_EGG = REGISTRATE
+        .item("forkfish_egg", p -> new EggItem(p, 0xA9A9A9))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//斧鱼卵 (从“斧头”联想到金属灰)
+public static final ItemEntry<EggItem> HATCHETFISH_EGG = REGISTRATE
+        .item("hatchetfish_egg", p -> new EggItem(p, 0x708090))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//长鼻鱼卵 (从“Sneep Snorp”的趣味名称联想到较明亮的颜色)
+public static final ItemEntry<EggItem> SNEEP_SNORP_EGG = REGISTRATE
+        .item("sneep_snorp_egg", p -> new EggItem(p, 0x98FB98))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//三旋甲鲶卵 (从“三旋”联想到螺旋、可能有斑纹)
+public static final ItemEntry<EggItem> TRIPLE_TWIRL_PLECO_EGG = REGISTRATE
+        .item("triple_twirl_pleco_egg", p -> new EggItem(p, 0x8B7355))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//水手钩鱼卵 (从“水手”联想到海洋或水手服的深蓝色)
+public static final ItemEntry<EggItem> SAILOR_BARB_EGG = REGISTRATE
+        .item("sailor_barb_egg", p -> new EggItem(p, 0x000080))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//树皮神仙鱼卵 (从“树皮”联想到棕色)
+public static final ItemEntry<EggItem> BARK_ANGELFISH_EGG = REGISTRATE
+        .item("bark_angelfish_egg", p -> new EggItem(p, 0x8B4513))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//鲹鱼卵 (根据其作为大洋高速掠食者的印象)
+public static final ItemEntry<EggItem> TREVALLY_EGG = REGISTRATE
+        .item("trevally_egg", p -> new EggItem(p, 0x1E90FF))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//龙鱼卵 (参考龙鱼鳞片常见的金属光泽)
+public static final ItemEntry<EggItem> AROWANA_EGG = REGISTRATE
+        .item("arowana_egg", p -> new EggItem(p, 0xB8860B))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//翻车鱼卵 (参考其巨大、缓慢、温顺的特性)
+public static final ItemEntry<EggItem> SUNFISH_EGG = REGISTRATE
+        .item("sunfish_egg", p -> new EggItem(p, 0xFFE4B5))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//鳞鲀卵 (参考其鲜艳、警告色的体色)
+public static final ItemEntry<EggItem> TRIGGERFISH_EGG = REGISTRATE
+        .item("triggerfish_egg", p -> new EggItem(p, 0xFF4500))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//鮟鱇鱼卵 (参考其深海、发光、捕食者的特性)
+public static final ItemEntry<EggItem> FOOTBALL_FISH_EGG = REGISTRATE
+        .item("football_fish_egg", p -> new EggItem(p, 0x4B0082))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//白鲳鱼卵 (参考其扁圆、银白的体色)
+public static final ItemEntry<EggItem> SPADEFISH_EGG = REGISTRATE
+        .item("spadefish_egg", p -> new EggItem(p, 0xF5F5F5))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//帝王蟹卵 (参考帝王蟹常见的橙红色外壳)
+public static final ItemEntry<EggItem> KING_CRAB_EGG = REGISTRATE
+        .item("king_crab_egg", p -> new EggItem(p, 0xFF4500))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//灯笼鱼卵 (参考其深海生物及发光特性)
+public static final ItemEntry<EggItem> LANTERNFISH_EGG = REGISTRATE
+        .item("lanternfish_egg", p -> new EggItem(p, 0xADFF2F))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//三角鱼卵 (参考其用鳍在海底“站立”的奇特习性)
+public static final ItemEntry<EggItem> TRIPODFISH_EGG = REGISTRATE
+        .item("tripodfish_egg", p -> new EggItem(p, 0xD3D3D3))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//三叶虾卵 (参考三叶虫化石的颜色)
+public static final ItemEntry<EggItem> TRILOCARIS_EGG = REGISTRATE
+        .item("trilocaris_egg", p -> new EggItem(p, 0x8B7355))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//腮辐鱼卵 (根据你的要求，匹配“铀晶”的亮绿色)
+public static final ItemEntry<EggItem> RADGILL_EGG = REGISTRATE
+        .item("radgill_egg", p -> new EggItem(p, 0x7CFC00))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+ //海猪卵 (参考海参/海猪常见的粉红色或肉色)
+public static final ItemEntry<EggItem> SEA_PIG_EGG = REGISTRATE
+        .item("sea_pig_egg", p -> new EggItem(p, 0xFFC0CB))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//贻贝卵 (参考贻贝外壳常见的深蓝黑色)
+public static final ItemEntry<EggItem> MUSSEL_EGG = REGISTRATE
+        .item("mussel_egg", p -> new EggItem(p, 0x191970))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//粉色软糖鱼卵 (直接匹配“粉色”)
+public static final ItemEntry<EggItem> SWEETISH_FISH_PINK_EGG = REGISTRATE
+        .item("sweetish_fish_pink_egg", p -> new EggItem(p, 0xFFC0CB))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//红色软糖鱼卵 (直接匹配“红色”)
+public static final ItemEntry<EggItem> SWEETISH_FISH_RED_EGG = REGISTRATE
+        .item("sweetish_fish_red_egg", p -> new EggItem(p, 0xFF0000))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//蓝色软糖鱼卵 (直接匹配“蓝色”)
+public static final ItemEntry<EggItem> SWEETISH_FISH_BLUE_EGG = REGISTRATE
+        .item("sweetish_fish_blue_egg", p -> new EggItem(p, 0x0000FF))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//绿色软糖鱼卵 (直接匹配“绿色”)
+public static final ItemEntry<EggItem> SWEETISH_FISH_GREEN_EGG = REGISTRATE
+        .item("sweetish_fish_green_egg", p -> new EggItem(p, 0x00FF00))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//黄色软糖鱼卵 (直接匹配“黄色”)
+public static final ItemEntry<EggItem> SWEETISH_FISH_YELLOW_EGG = REGISTRATE
+        .item("sweetish_fish_yellow_egg", p -> new EggItem(p, 0xFFFF00))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//龙虾卵 (参考龙虾煮熟后的橙红色)
+public static final ItemEntry<EggItem> CLAWSTER_EGG = REGISTRATE
+        .item("clawster_egg", p -> new EggItem(p, 0xFF4500))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//蛤蜊卵 (参考蛤蜊外壳常见的浅色、白色或淡黄色)
+public static final ItemEntry<EggItem> CLAM_EGG = REGISTRATE
+        .item("clam_egg", p -> new EggItem(p, 0xFFFDD0))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//水母卵 (参考水母半透明、带淡蓝或淡粉的特性)
+public static final ItemEntry<EggItem> JELLYFISH_EGG = REGISTRATE
+        .item("jellyfish_egg", p -> new EggItem(p, 0xE6E6FA))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+ //白金鲈鱼卵 (参考“白金”的金属光泽)
+public static final ItemEntry<EggItem> PLATINUM_BASS_EGG = REGISTRATE
+        .item("platinum_bass_egg", p -> new EggItem(p, 0xE5E4E2))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//海胆卵 (参考海胆常见的深色或紫色)
+public static final ItemEntry<EggItem> URCHIN_EGG = REGISTRATE
+        .item("urchin_egg", p -> new EggItem(p, 0x800080))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//海潮蛤卵 (参考蛤蜊类，但与普通蛤蜊区分)
+public static final ItemEntry<EggItem> SEA_CLAM_EGG = REGISTRATE
+        .item("sea_clam_egg", p -> new EggItem(p, 0xADD8E6))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//黑虎虾卵 (参考黑虎虾外壳的深色条纹)
+public static final ItemEntry<EggItem> TIGER_PRAWN_EGG = REGISTRATE
+        .item("tiger_prawn_egg", p -> new EggItem(p, 0x2F4F4F))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//虾卵 (参考常见虾类及虾卵的淡色)
+public static final ItemEntry<EggItem> SHRIMP_EGG = REGISTRATE
+        .item("shrimp_egg", p -> new EggItem(p, 0xFFDAB9))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//八目鳗卵 (参考八目鳗的无鳞、鳗形身体)
+public static final ItemEntry<EggItem> LAMPREY_EGG = REGISTRATE
+        .item("lamprey_egg", p -> new EggItem(p, 0x808080))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//鲍鱼卵 (参考鲍鱼贝壳内壁的珍珠光泽)
+public static final ItemEntry<EggItem> ABALONE_EGG = REGISTRATE
+        .item("abalone_egg", p -> new EggItem(p, 0xF0E68C))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+
+//守卫者卵 (根据你的要求，使用“翠绿色”)
+public static final ItemEntry<EggItem> GUARDIAN_EGG = REGISTRATE
+        .item("guardian_egg", p -> new EggItem(p, 0x7FFF00))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.3f)
+                .build()))
+        .model(ItemModelUtil::eggItemModel)
+        .register();
+/*
+    //卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("_egg", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    //卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("_egg", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    //卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("_egg", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    //卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("_egg", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    //卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("_egg", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    //卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("_egg", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    //卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("_egg", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    //卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("_egg", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    //卵
+    public static final ItemEntry<EggItem>  = REGISTRATE
+            .item("_egg", p -> new EggItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+*/
+
+
+
+
 //龙虾卵5件套
-    /*
+/*
 //小龙虾卵
     public static final ItemEntry<EggItem>  = REGISTRATE
             .item("crayfish_egg", p -> new EggItem(p, ))
@@ -1774,6 +2839,7 @@ public static final ItemEntry<EggItem> CRAYFISH_EGG = REGISTRATE
                     .build()))
             .model(ItemModelUtil::eggItemModel)
             .register();
+
 
 /*
 //卵

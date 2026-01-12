@@ -2,7 +2,7 @@
   "type": "list:fish_pond",
   "ingredients": [
     {
-      "item": "list:siniperca_chuatsi_egg"
+      "item": "list:mandarin_fish_egg"
     },
     {
       "tag": "list:sea_veg"
@@ -17,7 +17,7 @@
     {
       "count": 1,
       "chance": 0.05,
-      "item": "list:siniperca_chuatsi_egg"
+      "item": "list:mandarin_fish_egg"
     }
   ],
   "time": 3200
