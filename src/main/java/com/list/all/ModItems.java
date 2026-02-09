@@ -4712,6 +4712,23 @@ public static final ItemEntry<Item>  = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/advanced_pure_melon_melon_feed")))
             .register();
 
+   //纯净牛肉饲料
+    public static final ItemEntry<Item> PURE_BEEF_FEED = REGISTRATE
+            .item("pure_beef_feed", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/pure_beef_feed")))
+            .register();
+
+  //纯净猪肉饲料
+    public static final ItemEntry<Item> PURE_PORKCHOP_FEED = REGISTRATE
+            .item("pure_porkchop_feed", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/pure_porkchop_feed")))
+            .register();
+
+    //高级肉类纯净饲料
+    public static final ItemEntry<Item> ADVANCED_PURE_MEAT_FEED = REGISTRATE
+            .item("advanced_pure_meat_feed", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/advanced_pure_meat_feed")))
+            .register();
 
 
 

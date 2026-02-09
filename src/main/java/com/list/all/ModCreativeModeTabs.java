@@ -568,33 +568,33 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.ATLANTIC_HALIBUT_EGG.get());   // 大西洋比目鱼卵
                     output.accept(ModItems.PINK_SALMON_EGG.get());        // 粉鲑
                     output.accept(ModItems.TREVALLY_EGG.get());          // 鲹鱼卵
-output.accept(ModItems.AROWANA_EGG.get());           // 龙鱼卵
-output.accept(ModItems.SUNFISH_EGG.get());           // 翻车鱼卵
-output.accept(ModItems.TRIGGERFISH_EGG.get());       // 鳞鲀卵
-output.accept(ModItems.FOOTBALL_FISH_EGG.get());     // 鮟鱇鱼卵
-output.accept(ModItems.SPADEFISH_EGG.get());         // 白鲳鱼卵
-output.accept(ModItems.KING_CRAB_EGG.get());         // 帝王蟹卵
-output.accept(ModItems.LANTERNFISH_EGG.get());       // 灯笼鱼卵
-output.accept(ModItems.TRIPODFISH_EGG.get());        // 三角鱼卵
-output.accept(ModItems.TRILOCARIS_EGG.get());        // 三叶虾卵
-output.accept(ModItems.RADGILL_EGG.get());           // 腮辐鱼卵
-output.accept(ModItems.SEA_PIG_EGG.get());               // 海猪卵
-output.accept(ModItems.MUSSEL_EGG.get());                // 贻贝卵
-output.accept(ModItems.SWEETISH_FISH_PINK_EGG.get());    // 粉色软糖鱼卵
-output.accept(ModItems.SWEETISH_FISH_RED_EGG.get());     // 红色软糖鱼卵
-output.accept(ModItems.SWEETISH_FISH_BLUE_EGG.get());    // 蓝色软糖鱼卵
-output.accept(ModItems.SWEETISH_FISH_GREEN_EGG.get());   // 绿色软糖鱼卵
-output.accept(ModItems.SWEETISH_FISH_YELLOW_EGG.get());  // 黄色软糖鱼卵
-output.accept(ModItems.CLAWSTER_EGG.get());              // 龙虾卵
-output.accept(ModItems.CLAM_EGG.get());                  // 蛤蜊卵
-output.accept(ModItems.PLATINUM_BASS_EGG.get());    // 白金鲈鱼卵
-output.accept(ModItems.URCHIN_EGG.get());           // 海胆卵
-output.accept(ModItems.SEA_CLAM_EGG.get());         // 海潮蛤卵
-output.accept(ModItems.TIGER_PRAWN_EGG.get());      // 黑虎虾卵
-output.accept(ModItems.SHRIMP_EGG.get());           // 虾卵
-output.accept(ModItems.LAMPREY_EGG.get());          // 八目鳗卵
-output.accept(ModItems.ABALONE_EGG.get());          // 鲍鱼卵
-output.accept(ModItems.GUARDIAN_EGG.get());         // 守卫者卵
+                    output.accept(ModItems.AROWANA_EGG.get());           // 龙鱼卵
+                    output.accept(ModItems.SUNFISH_EGG.get());           // 翻车鱼卵
+                    output.accept(ModItems.TRIGGERFISH_EGG.get());       // 鳞鲀卵
+                    output.accept(ModItems.FOOTBALL_FISH_EGG.get());     // 鮟鱇鱼卵
+                    output.accept(ModItems.SPADEFISH_EGG.get());         // 白鲳鱼卵
+                    output.accept(ModItems.KING_CRAB_EGG.get());         // 帝王蟹卵
+                    output.accept(ModItems.LANTERNFISH_EGG.get());       // 灯笼鱼卵
+                    output.accept(ModItems.TRIPODFISH_EGG.get());        // 三角鱼卵
+                    output.accept(ModItems.TRILOCARIS_EGG.get());        // 三叶虾卵
+                    output.accept(ModItems.RADGILL_EGG.get());           // 腮辐鱼卵
+                    output.accept(ModItems.SEA_PIG_EGG.get());               // 海猪卵
+                    output.accept(ModItems.MUSSEL_EGG.get());                // 贻贝卵
+                    output.accept(ModItems.SWEETISH_FISH_PINK_EGG.get());    // 粉色软糖鱼卵
+                    output.accept(ModItems.SWEETISH_FISH_RED_EGG.get());     // 红色软糖鱼卵
+                    output.accept(ModItems.SWEETISH_FISH_BLUE_EGG.get());    // 蓝色软糖鱼卵
+                    output.accept(ModItems.SWEETISH_FISH_GREEN_EGG.get());   // 绿色软糖鱼卵
+                    output.accept(ModItems.SWEETISH_FISH_YELLOW_EGG.get());  // 黄色软糖鱼卵
+                    output.accept(ModItems.CLAWSTER_EGG.get());              // 龙虾卵
+                    output.accept(ModItems.CLAM_EGG.get());                  // 蛤蜊卵
+                    output.accept(ModItems.PLATINUM_BASS_EGG.get());    // 白金鲈鱼卵
+                    output.accept(ModItems.URCHIN_EGG.get());           // 海胆卵
+                    output.accept(ModItems.SEA_CLAM_EGG.get());         // 海潮蛤卵
+                    output.accept(ModItems.TIGER_PRAWN_EGG.get());      // 黑虎虾卵
+                    output.accept(ModItems.SHRIMP_EGG.get());           // 虾卵
+                    output.accept(ModItems.LAMPREY_EGG.get());          // 八目鳗卵
+                    output.accept(ModItems.ABALONE_EGG.get());          // 鲍鱼卵
+                    output.accept(ModItems.GUARDIAN_EGG.get());         // 守卫者卵
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
@@ -788,7 +788,6 @@ output.accept(ModItems.GUARDIAN_EGG.get());         // 守卫者卵
                     //output.accept(ModItems.CHIVES.get());            //细香葱
                     //output.accept(ModItems.OKRA.get());              //秋葵
                     //output.accept(ModItems.THYMUS.get());            //百里香
-                    //output.accept(ModItems.LETTUCE.get());           //生菜
                     //output.accept(ModItems.CATNIP.get());            //猫薄荷
                     //output.accept(ModItems.BAY_LEAF.get());          //月桂叶
                     //output.accept(ModItems.LENTIL.get());            //扁豆
@@ -801,7 +800,7 @@ output.accept(ModItems.GUARDIAN_EGG.get());         // 守卫者卵
                     //output.accept(ModItems.BEAN_SPROUT.get());       //豆芽
                     //output.accept(ModItems.ALOE.get());              //芦荟
                     //output.accept(ModItems.WORMWOOD.get());          //苦艾
-                    //output.accept(ModItems.RAPESEED_FLOWER.get());   //油菜花
+                    //output.accept(ModItems.RAPESEED_FLOWER.get());   //油菜花A
                     //output.accept(ModItems.PERILLA_LEAF.get());      //紫苏叶
                     //output.accept(ModItems.PEA.get());               //豌豆
                     //output.accept(ModItems.RED_BEAN.get());          //赤豆
@@ -972,7 +971,10 @@ output.accept(ModItems.GUARDIAN_EGG.get());         // 守卫者卵
                         output.accept(ModItems.ADVANCED_PURE_PEACH_FEED.get());       //高级桃桃纯净饲料
                         output.accept(ModItems.ADVANCED_PURE_FRUIT_FEED.get());       //高级水果纯净饲料
                         //output.accept(ModItems..get());       //高级蔬菜纯净饲料
-                        //output.accept(ModItems..get());       //
+                        //output.accept(ModItems..get());       //粗制腐肉饲料
+                        output.accept(ModItems.PURE_BEEF_FEED.get());       //纯净牛肉饲料
+                        output.accept(ModItems.PURE_PORKCHOP_FEED.get());       //纯净猪肉饲料
+                        output.accept(ModItems.ADVANCED_PURE_MEAT_FEED.get());       //高级肉类饲料
                         //output.accept(ModItems..get());       //
                         //output.accept(ModItems..get());       //
                         //output.accept(ModItems..get());       //

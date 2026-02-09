@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "list:bad_item"
+    "list:pure_porkchop_feed",
+    "list:pure_beef_feed"
   ]
 }
