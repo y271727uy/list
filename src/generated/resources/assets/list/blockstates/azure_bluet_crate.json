@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "list:block/azure_bluet_crate"
+    }
+  }
+}

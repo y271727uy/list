@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/hoarding/rack/rack_top",
+    "east": "list:block/hoarding/rack/bottle_rack_side",
+    "north": "list:block/hoarding/rack/bottle_rack_side",
+    "particle": "list:block/hoarding/rack/bottle_rack_side",
+    "south": "list:block/hoarding/rack/bottle_rack_side",
+    "up": "list:block/hoarding/rack/rack_top",
+    "west": "list:block/hoarding/rack/bottle_rack_side"
+  }
+}

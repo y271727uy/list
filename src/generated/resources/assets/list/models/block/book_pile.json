@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/hoarding/book_pile_bottom",
+    "east": "list:block/hoarding/book_pile_side",
+    "north": "list:block/hoarding/book_pile_side_2",
+    "particle": "list:block/hoarding/book_pile_side",
+    "south": "list:block/hoarding/book_pile_side_2",
+    "up": "list:block/hoarding/book_pile_top",
+    "west": "list:block/hoarding/book_pile_side"
+  }
+}

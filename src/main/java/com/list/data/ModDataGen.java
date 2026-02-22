@@ -9,6 +9,6 @@ public class ModDataGen {
     public static void init() {
         REGISTRATE.addDataGenerator(ProviderType.LANG, ModLangs::init);
         REGISTRATE.addDataGenerator(ProviderType.ITEM_MODEL, ModModels::initItem);
-        REGISTRATE.addDataGenerator(ProviderType.RECIPE, ModRecipes::init);
+        //REGISTRATE.addDataGenerator(ProviderType.RECIPE, ModRecipes::init);
     }
 }

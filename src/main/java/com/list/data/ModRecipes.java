@@ -9,6 +9,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public class ModRecipes {
+    /*
     public static void init(RegistrateRecipeProvider provider) {
         FishPondRecipe.builder()
             .ingredient(Ingredient.of(ItemTags.PLANKS))
@@ -17,4 +18,5 @@ public class ModRecipes {
             .time(100)
             .save(provider, ListMod.rl("fish_pond/planks_to_oak_slab"));
     }
+    */
 }

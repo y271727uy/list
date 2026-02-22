@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "list:block/forestry_greenhouse",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "list:block/forestry_greenhouse"
+    },
+    "facing=south": {
+      "model": "list:block/forestry_greenhouse",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "list:block/forestry_greenhouse",
+      "y": 270
+    }
+  }
+}

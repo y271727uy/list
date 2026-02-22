@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/hoarding/crate/oak/bottom_oak",
+    "east": "list:block/hoarding/crate/oak/brown_mushroom_crate_side",
+    "north": "list:block/hoarding/crate/oak/brown_mushroom_crate_side",
+    "particle": "list:block/hoarding/crate/oak/brown_mushroom_crate_side",
+    "south": "list:block/hoarding/crate/oak/brown_mushroom_crate_side",
+    "up": "list:block/hoarding/crate/oak/brown_mushroom_crate_top",
+    "west": "list:block/hoarding/crate/oak/brown_mushroom_crate_side"
+  }
+}

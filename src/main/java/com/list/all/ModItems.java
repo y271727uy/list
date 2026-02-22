@@ -4102,6 +4102,16 @@ public static final ItemEntry<Item>  = REGISTRATE
             */
             .register();
 
+    // 和牛肉
+    public static final ItemEntry<Item> WAGYU_BEEF = REGISTRATE
+            .item("wagyu_beef", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/meat/wagyu_beef")))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(1.2f)
+                    .build()))
+            .register();
+
     //腊八蒜
     public static final ItemEntry<Item> LABA_GARLIC = REGISTRATE
             .item("laba_garlic", Item::new)
@@ -4656,6 +4666,18 @@ public static final ItemEntry<Item>  = REGISTRATE
                     .nutrition(10)
                     .saturationMod(3.2f)
                     .build()))
+            .register();
+
+    //黑麦面团
+    public static final ItemEntry<Item> RYE_DOUGH = REGISTRATE
+            .item("rye_dough", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/dough/rye_dough")))
+            .register();
+
+    //大麦面团
+    public static final ItemEntry<Item> BARLEY_DOUGH = REGISTRATE
+            .item("barley_dough", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/dough/barley_dough")))
             .register();
 
     //雄蜂

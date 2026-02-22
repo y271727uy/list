@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/hoarding/blaze_rod_bundle_end",
+    "east": "list:block/hoarding/blaze_rod_bundle_side",
+    "north": "list:block/hoarding/blaze_rod_bundle_side",
+    "particle": "list:block/hoarding/blaze_rod_bundle_side",
+    "south": "list:block/hoarding/blaze_rod_bundle_side",
+    "up": "list:block/hoarding/blaze_rod_bundle_end",
+    "west": "list:block/hoarding/blaze_rod_bundle_side"
+  }
+}

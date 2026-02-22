@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/hoarding/bucket/bucket_bottom",
+    "east": "list:block/hoarding/bucket/bucket_side",
+    "north": "list:block/hoarding/bucket/bucket_side",
+    "particle": "list:block/hoarding/bucket/bucket_side",
+    "south": "list:block/hoarding/bucket/bucket_side",
+    "up": "list:block/hoarding/bucket/black_dye_bucket_top",
+    "west": "list:block/hoarding/bucket/bucket_side"
+  }
+}

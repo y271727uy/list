@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/mud",
+    "east": "minecraft:block/mud",
+    "north": "minecraft:block/mud",
+    "particle": "minecraft:block/mud",
+    "south": "minecraft:block/mud",
+    "up": "list:block/sea_food_hole/burrowed_mud",
+    "west": "minecraft:block/mud"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/hoarding/bone_pile_end",
+    "east": "list:block/hoarding/bone_pile_side",
+    "north": "list:block/hoarding/bone_pile_side",
+    "particle": "list:block/hoarding/bone_pile_side",
+    "south": "list:block/hoarding/bone_pile_side",
+    "up": "list:block/hoarding/bone_pile_end",
+    "west": "list:block/hoarding/bone_pile_side"
+  }
+}

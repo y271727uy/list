@@ -1,5 +1,10 @@
 {
   "values": [
-    "list:tree_compost"
+    "list:tree_compost",
+    "list:burrowed_clay",
+    "list:burrowed_sand",
+    "list:burrowed_gravel",
+    "list:burrowed_dirt",
+    "list:burrowed_mud"
   ]
 }

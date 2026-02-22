@@ -48,7 +48,6 @@ public class ListMod
         MinecraftForge.EVENT_BUS.register(this);
 
         //我不到啊，我和ai还有mcreator一起拉了泡大的
-        
         LOGGER.info("List Mod initialized");
 
         ModDataGen.init();
@@ -86,11 +85,7 @@ public class ListMod
             event.getToolTip().add(Component.translatable("item.list.bad_item.desc").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
         }      
     }
-    
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-        LOGGER.info("List Mod server starting");
-    }
+
 
     public static ResourceLocation rl(String path) {
         return new ResourceLocation(MODID, path);

@@ -164,6 +164,7 @@ dependencies {
     modImplementation("dev.architectury:architectury-forge:9.2.14")
     modImplementation("maven.modrinth:jade:11.13.2+forge")
     modImplementation("maven.modrinth:avaritianeo:q9LjH7fG")
+    modImplementation("maven.modrinth:some-assembly-required:FfaVwI1D")
 
     modRuntimeOnly("maven.modrinth:probejs:7.0.0")
 }

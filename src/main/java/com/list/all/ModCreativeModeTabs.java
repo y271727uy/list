@@ -54,6 +54,9 @@ public class ModCreativeModeTabs {
                     output.accept(ModBlocks.TREE_COMPOST.get());  //树坑
                     output.accept(ModBlocks.FISHPOND_CORE.get());
                     output.accept(ModBlocks.GREENHOUSE_FURNACE.get());
+                    output.accept(ModBlocks.FORESTRY_GREENHOUSE.get());
+                    output.accept(ModBlocks.FORESTRY_HYBRIDIZER.get());
+                    output.accept(ModBlocks.GREENHOUSE_CASING.get());
                     })
                     .build()
     );
@@ -323,14 +326,14 @@ public class ModCreativeModeTabs {
                     .build()
     );
 
-    /*
-    // 鱼片
-    public static final RegistryObject<CreativeModeTab> FISH_SLICE_TAB = CREATIVE_TABS.register("fish_slice", () ->
-            CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.list.fish_slice"))
-                    .icon(() -> new ItemStack(ModItems..get()))
-                    .displayItems((parameters, output) -> {
 
+    // 肉类
+    public static final RegistryObject<CreativeModeTab> MEAT_TAB = CREATIVE_TABS.register("meat", () ->
+            CreativeModeTab.builder()
+                    .title(REGISTRATE.addLang("itemGroup", ListMod.rl("list_meat"), "Meat"))  // 语言键: itemGroup.listmod.crops
+                    .icon(() -> new ItemStack(ModItems.WAGYU_BEEF.get()))
+                    .displayItems((parameters, output) -> {
+                    output.accept(ModItems.WAGYU_BEEF.get());
                     //output.accept(ModItems.蓝龙虾.get());
                     //output.accept(ModItems.锦绣龙虾.get());
                     //output.accept(ModItems.深海鳌虾.get());
@@ -411,7 +414,7 @@ public class ModCreativeModeTabs {
                     })
                     .build()
     );
-    */
+
 
 
      //卵
@@ -748,6 +751,8 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.NEUTRONIUM_BURGER_BOTTOM.get());       //
                 output.accept(ModItems.NEUTRONIUM_BURGER_TOP.get());       //
                 output.accept(ModItems.NEUTRONIUM_BUTTER.get());       //中子素黄油
+                output.accept(ModItems.RYE_DOUGH.get());
+                output.accept(ModItems.BARLEY_DOUGH.get());
             })
             .build()
     );
@@ -954,10 +959,10 @@ public class ModCreativeModeTabs {
     );
 
 
-    // 农作物标签页
-    public static final RegistryObject<CreativeModeTab> MANMADETAB = CREATIVE_TABS.register("manmade", () ->
+    // 杂项
+    public static final RegistryObject<CreativeModeTab> MANMADETAB = CREATIVE_TABS.register("other", () ->
             CreativeModeTab.builder()
-                    .title(REGISTRATE.addLang("itemGroup", ListMod.rl("manmade"), "manmade"))  // 语言键: itemGroup.listmod.crops
+                    .title(REGISTRATE.addLang("itemGroup", ListMod.rl("other"), "other"))  // 语言键: itemGroup.listmod.crops
                     .icon(() -> new ItemStack(ModItems.RED_ONION.get()))
                     .displayItems((parameters, output) -> {
                         //output.accept(ModItems..get());       //粗制花瓣饲料
@@ -977,7 +982,56 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ADVANCED_PURE_MEAT_FEED.get());       //高级肉类饲料
                         //output.accept(ModItems..get());       //
                         //output.accept(ModItems..get());       //
-                        //output.accept(ModItems..get());       //
+                        output.accept(ModBlocks.BURROWED_SAND.get());
+                        output.accept(ModBlocks.BURROWED_GRAVEL.get());
+                        output.accept(ModBlocks.BURROWED_CLAY.get());
+                        output.accept(ModBlocks.BURROWED_DIRT.get());
+                        output.accept(ModBlocks.BURROWED_MUD.get());
+                        output.accept(ModBlocks.ALLIUM_CRATE.get());       //囤积
+                        output.accept(ModBlocks.AZURE_BLUET_CRATE.get());
+                        output.accept(ModBlocks.BAKED_POTATO_CRATE.get());
+                        output.accept(ModBlocks.BEEF_CRATE.get());
+                        output.accept(ModBlocks.BEETROOT_CRATE.get());
+                        output.accept(ModBlocks.BEETROOT_SEEDS_BAG.get());
+                        output.accept(ModBlocks.BLACK_DYE_BUCKET.get());
+                        output.accept(ModBlocks.BLAZE_POWDER_BAG.get());
+                        output.accept(ModBlocks.BLAZE_ROD_BUNDLE.get());
+                        output.accept(ModBlocks.BLUE_DYE_BUCKET.get());
+                        output.accept(ModBlocks.BULE_ORCHID_CRATE.get());
+                        output.accept(ModBlocks.BONE_PILE.get());
+                        output.accept(ModBlocks.BOOK_PILE.get());
+                        output.accept(ModBlocks.BOTTLE_RACK.get());
+                        output.accept(ModBlocks.BREAD_CRATE.get());
+                        output.accept(ModBlocks.BROWM_DYE_BUCKET.get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+
+
                     })
                     .build()
     );

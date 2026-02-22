@@ -1,6 +1,26 @@
 {
   "values": [
     "list:greenhouse_furnace",
-    "list:fishpond_core"
+    "list:fishpond_core",
+    "list:forestry_greenhouse",
+    "list:forestry_hybridizer",
+    "list:greenhouse_casing",
+    "list:allium_crate",
+    "list:azure_bluet_crate",
+    "list:baked_potato_crate",
+    "list:beef_crate",
+    "list:beetroot_crate",
+    "list:black_dye_bucket",
+    "list:beetroot_seeds_bag",
+    "list:blaze_powder_bag",
+    "list:blaze_rod_bundle",
+    "list:blue_dye_bucket",
+    "list:blue_orchid_crate",
+    "list:bone_pile",
+    "list:book_pile",
+    "list:bottle_rack",
+    "list:bread_crate",
+    "list:brown_dye_bucket",
+    "list:brown_mushroom_crate"
   ]
 }
