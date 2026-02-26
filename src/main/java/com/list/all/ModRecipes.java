@@ -1,6 +1,7 @@
 package com.list.all;
 
 import com.list.ListMod;
+import com.list.recipe.ForestryHybridizerRecipe;
 import com.list.recipe.FishPondRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -21,6 +22,16 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<FishPondRecipe>> FISH_POND_RECIPE_SERIALIZER = RECIPE_SERIALIZERS.register(
         "fish_pond",
         FishPondRecipe.Serializer::new
+    );
+
+    public static final RegistryObject<RecipeType<ForestryHybridizerRecipe>> FORESTRY_HYBRIDIZER_TYPE = RECIPE_TYPES.register(
+        "forestry_hybridizer",
+        () -> RecipeType.simple(ListMod.rl("forestry_hybridizer"))
+    );
+
+    public static final RegistryObject<RecipeSerializer<ForestryHybridizerRecipe>> FORESTRY_HYBRIDIZER_SERIALIZER = RECIPE_SERIALIZERS.register(
+        "forestry_hybridizer",
+        ForestryHybridizerRecipe.Serializer::new
     );
 
     public static void register(IEventBus bus) {

@@ -60,7 +60,7 @@ public class ModCreativeModeTabs {
                     })
                     .build()
     );
-
+ 
     // 菌类标签页
     public static final RegistryObject<CreativeModeTab> MUSHROOM_TAB = CREATIVE_TABS.register("crops_mushroom", () ->
             CreativeModeTab.builder()

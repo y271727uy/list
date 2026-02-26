@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "bottom": "hoarding:block/crate/spruce/bottom_spruce",
-    "side": "hoarding:block/crate/spruce/chicken_crate_side",
-    "top": "hoarding:block/crate/spruce/chicken_crate_top"
-  }
-}

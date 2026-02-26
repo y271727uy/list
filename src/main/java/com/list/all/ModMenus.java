@@ -1,6 +1,8 @@
 package com.list.all;
 
+import com.list.client.screen.ForestryHybridizerScreen;
 import com.list.client.screen.FishPondScreen;
+import com.list.menu.ForestryHybridizerMenu;
 import com.list.menu.FishPondMenu;
 import com.tterrag.registrate.util.entry.MenuEntry;
 import net.minecraft.core.BlockPos;
@@ -14,6 +16,11 @@ public class ModMenus {
     @SuppressWarnings("DataFlowIssue")
     public static final MenuEntry<FishPondMenu> FISH_POND = REGISTRATE
         .menu("fish_pond", FishPondMenu::new, () -> FishPondScreen::new)
+        .register();
+
+    @SuppressWarnings("DataFlowIssue")
+    public static final MenuEntry<ForestryHybridizerMenu> FORESTRY_HYBRIDIZER = REGISTRATE
+        .menu("forestry_hybridizer", ForestryHybridizerMenu::new, () -> ForestryHybridizerScreen::new)
         .register();
 
     public static void open(ServerPlayer player, MenuProvider provider) {

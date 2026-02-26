@@ -1,8 +1,0 @@
-Art Assets Credits
-
-Textures:
-- rawchickenNEG
-- Neo-TiX
-
-Models:
-- Neo-TiX

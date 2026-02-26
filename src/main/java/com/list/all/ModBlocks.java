@@ -7,6 +7,7 @@ import com.list.block.mushroom.StrawMushroomBlock;
 import com.list.block.mushroom.SeaMushroomBlock;
 import com.list.block.mushroom.CaveMushroomBlock;
 import com.list.block.colony.SeaMushroomColonyBlock;
+import com.list.block.ForestryHybridizerBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
@@ -96,44 +97,10 @@ public class ModBlocks {
             })
             .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
             .register();
-//测试
-    //林业杂交箱
-    /*
-    public static final BlockEntry<FishPondCoreBlock> FORESTRY_HYBRIDIZER = REGISTRATE
-            .block("forestry_hybridizer", FishPondCoreBlock::new)
-            .initialProperties(() -> Blocks.IRON_BLOCK)
-            .simpleItem()
-            .blockstate((ctx, provider) -> {
-                BlockModelBuilder model = provider.models().cube(
-                        ctx.getName(),
-                        provider.mcLoc("block/smooth_stone"),
-                        provider.mcLoc("block/smooth_stone"),
-                        provider.mcLoc("block/smooth_stone"),  //应该是正面
-                        provider.mcLoc("block/smooth_stone"),
-                        provider.mcLoc("block/smooth_stone"),
-                        provider.mcLoc("block/smooth_stone")
-                ).texture("particle", provider.mcLoc("block/smooth_stone"));
-                provider.horizontalBlock(ctx.get(), model);
-            })
-            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
-            .register();
 
-public static final BlockEntry<FishPondCoreBlock> FORESTRY_HYBRIDIZER = REGISTRATE
-        .block("forestry_hybridizer", FishPondCoreBlock::new)
-        .initialProperties(() -> Blocks.IRON_BLOCK)
-        .simpleItem()
-        .blockstate((ctx, provider) -> {
-            provider.horizontalBlock(
-                    ctx.get(),
-                    provider.models().getExistingFile(provider.modLoc("block/" + ctx.getName()))
-            );
-        })
-        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
-        .register();
-*/
 //林业杂交箱
-public static final BlockEntry<FishPondCoreBlock> FORESTRY_HYBRIDIZER = REGISTRATE
-        .block("forestry_hybridizer", FishPondCoreBlock::new)
+public static final BlockEntry<ForestryHybridizerBlock> FORESTRY_HYBRIDIZER = REGISTRATE
+        .block("forestry_hybridizer", ForestryHybridizerBlock::new)
         .initialProperties(() -> Blocks.IRON_BLOCK)
         .simpleItem()
         .blockstate((ctx, provider) -> {
