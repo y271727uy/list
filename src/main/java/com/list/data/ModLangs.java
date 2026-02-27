@@ -27,6 +27,9 @@ public class ModLangs {
         provider.add("tooltip.fishpond.lava_mode", "Lava Mode");
         provider.add("tooltip.fishpond.water_mode", "Water Mode");
         provider.add("tooltip.fishpond.recipe_outputs", "Recipe Outputs: ");
+
+        provider.add("gui.list.category.forestry_hybridizer", "Forestry Hybridizer");
+        provider.add("gui.list.category.forestry_hybridizer.chance", "Chance: %s%%");
     }
 }
 

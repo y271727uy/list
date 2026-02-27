@@ -1,5 +1,6 @@
 package com.list.block.entity;
 
+import com.list.recipe.ForestryHybridizerRecipe;
 import lombok.Getter;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
@@ -34,7 +35,7 @@ public class ForestryHybridizerBlockEntity extends MulitblockBlockEntity impleme
     private ResourceLocation runningRecipe = null;
     @Getter
     @Nullable
-    private com.list.recipe.ForestryHybridizerRecipe runningRecipeCache = null;
+    private ForestryHybridizerRecipe runningRecipeCache = null;
     @Getter
     private int progress = 0;
     @Getter
@@ -119,6 +120,7 @@ public class ForestryHybridizerBlockEntity extends MulitblockBlockEntity impleme
         tag.putBoolean("IsFormed", isFormed);
     }
 
+    @SuppressWarnings("removal")
     @Override
     public void load(CompoundTag tag) {
         super.load(tag);
@@ -249,7 +251,7 @@ public class ForestryHybridizerBlockEntity extends MulitblockBlockEntity impleme
         if (level == null) return;
         level.getRecipeManager().getRecipeFor(
             com.list.all.ModRecipes.FORESTRY_HYBRIDIZER_TYPE.get(),
-            new com.list.recipe.ForestryHybridizerRecipe.RecipeInput(inputs),
+            new ForestryHybridizerRecipe.RecipeInput(inputs),
             level
         ).ifPresent(recipe -> {
             runningRecipe = recipe.getId();
@@ -275,8 +277,8 @@ public class ForestryHybridizerBlockEntity extends MulitblockBlockEntity impleme
         if (level != null && runningRecipe != null) {
             level.getRecipeManager()
                 .byKey(runningRecipe)
-                .filter(r -> r instanceof com.list.recipe.ForestryHybridizerRecipe)
-                .ifPresent(r -> runningRecipeCache = (com.list.recipe.ForestryHybridizerRecipe) r);
+                .filter(r -> r instanceof ForestryHybridizerRecipe)
+                .ifPresent(r -> runningRecipeCache = (ForestryHybridizerRecipe) r);
             if (runningRecipeCache != null) {
                 maxProgress = Math.max(1, runningRecipeCache.time);
             }

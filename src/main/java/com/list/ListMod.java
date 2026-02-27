@@ -31,6 +31,7 @@ public class ListMod
 
     public static final Registrate REGISTRATE = Registrate.create(MODID);
     
+    @SuppressWarnings("removal")
     public ListMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -87,6 +88,7 @@ public class ListMod
     }
 
 
+    @SuppressWarnings("removal")
     public static ResourceLocation rl(String path) {
         return new ResourceLocation(MODID, path);
     }

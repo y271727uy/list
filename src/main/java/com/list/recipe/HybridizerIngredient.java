@@ -172,6 +172,7 @@ public sealed interface HybridizerIngredient permits HybridizerIngredient.Simple
             return out;
         }
 
+        @SuppressWarnings("removal")
         @Override
         public void toNetwork(FriendlyByteBuf buf) {
             buf.writeVarInt(0);

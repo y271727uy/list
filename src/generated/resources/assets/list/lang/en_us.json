@@ -38,6 +38,8 @@
   "gui.list.category.fish_pond.chance": "Chance: %s%%",
   "gui.list.category.fish_pond.require_lava": "Requires Lava",
   "gui.list.category.fish_pond.require_water": "Requires Water",
+  "gui.list.category.forestry_hybridizer": "Forestry Hybridizer",
+  "gui.list.category.forestry_hybridizer.chance": "Chance: %s%%",
   "item.list.abalone_egg": "Abalone Egg",
   "item.list.advanced_pure_fruit_feed": "Advanced Pure Fruit Feed",
   "item.list.advanced_pure_meat_feed": "Advanced Pure Meat Feed",

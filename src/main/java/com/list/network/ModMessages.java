@@ -14,6 +14,7 @@ public class ModMessages {
         return packetId++;
     }
 
+    @SuppressWarnings("removal")
     public static void register() {
         SimpleChannel net = NetworkRegistry.ChannelBuilder
                 .named(new ResourceLocation(ListMod.MODID, "messages"))
