@@ -128,46 +128,64 @@ public class SellingBinBlockEntity extends BlockEntity implements MenuProvider {
         }
 
         ticksUntilRun = INTERVAL_TICKS;
-        runOneRecipe(level);
+        runAllRecipes(level);
         setChanged();
     }
 
-    private void runOneRecipe(Level level) {
-        for (int slot = 0; slot < itemHandler.getSlots(); slot++) {
+    private void runAllRecipes(Level level) {
+        int slots = itemHandler.getSlots();
+
+        // Snapshot inputs first so outputs inserted during this tick won't affect which slots are processed.
+        record Planned(int slot, SellingBinRecipe recipe, int sellCount) {}
+        List<Planned> planned = new java.util.ArrayList<>();
+
+        for (int slot = 0; slot < slots; slot++) {
             var stack = itemHandler.getStackInSlot(slot);
             if (stack.isEmpty()) continue;
 
-            // Match per-slot item against selling_bin recipes (supports tag/item and strict-nbt).
             var wrapper = new SellingBinRecipe.RecipeInput(List.of(stack));
             var recipeOpt = level.getRecipeManager().getRecipeFor(ModRecipes.SELLING_BIN_RECIPE_TYPE.get(), wrapper, level);
-            if (recipeOpt.isEmpty()) {
-                continue;
-            }
+            if (recipeOpt.isEmpty()) continue;
 
             SellingBinRecipe recipe = recipeOpt.get();
+            int sellCount = stack.getCount();
+            if (sellCount <= 0) continue;
 
-            // consume 1 input
-            itemHandler.extractItem(slot, 1, false);
+            planned.add(new Planned(slot, recipe, sellCount));
+        }
 
-            // build output stack with rolled count
-            int outCount = recipe.rollOutputCount(level);
-            if (outCount <= 0) return;
-            var out = recipe.output.copy();
-            out.setCount(outCount);
+        // Execute all planned operations.
+        for (Planned p : planned) {
+            // Re-check slot still has an item and can consume 1.
+            var current = itemHandler.getStackInSlot(p.slot());
+            if (current.isEmpty()) continue;
 
-            // Try to insert back into bin (same 9 slots). Remaining is dropped.
+            int available = current.getCount();
+            int toSell = Math.min(p.sellCount(), available);
+            if (toSell <= 0) continue;
+
+            // consume all chosen inputs
+            itemHandler.extractItem(p.slot(), toSell, false);
+
+            // produce outputs: each input item triggers one roll (base/max) and totals are accumulated
+            int totalOut = 0;
+            for (int k = 0; k < toSell; k++) {
+                totalOut += p.recipe().rollOutputCount(level);
+            }
+            if (totalOut <= 0) continue;
+
+            var out = p.recipe().output.copy();
+            out.setCount(totalOut);
+
             var remaining = out;
-            for (int i = 0; i < itemHandler.getSlots(); i++) {
+            for (int i = 0; i < slots; i++) {
                 remaining = itemHandler.insertItem(i, remaining, false);
                 if (remaining.isEmpty()) break;
             }
 
             if (!remaining.isEmpty()) {
-                // Fallback: drop at block position
                 net.minecraft.world.level.block.Block.popResource(level, worldPosition, remaining);
             }
-            // only run at most one match per interval
-            return;
         }
     }
 

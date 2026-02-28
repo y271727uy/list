@@ -22,7 +22,6 @@ import net.minecraftforge.common.crafting.CraftingHelper;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.ArrayList;
 import java.util.List;
 
 @MethodsReturnNonnullByDefault
@@ -44,17 +43,22 @@ public class SellingBinRecipe implements Recipe<SellingBinRecipe.RecipeInput> {
     @Nullable public final Integer max;
 
     /**
-     * Required marker key in JSON for future calls. Stored as-is.
+     * Optional recipe grouping key. Not used yet, but reserved for future use.
      */
-    public final JsonObject listMarker;
+    public final String group;
 
-    public SellingBinRecipe(ResourceLocation id, Ingredient input, ItemStack output, @Nullable Integer base, @Nullable Integer max, JsonObject listMarker) {
+    public SellingBinRecipe(ResourceLocation id, Ingredient input, ItemStack output, @Nullable Integer base, @Nullable Integer max, String group) {
         this.id = id;
         this.input = input;
         this.output = output;
         this.base = base;
         this.max = max;
-        this.listMarker = listMarker;
+        this.group = group;
+    }
+
+    @Override
+    public String getGroup() {
+        return group;
     }
 
     @Override
@@ -187,18 +191,11 @@ public class SellingBinRecipe implements Recipe<SellingBinRecipe.RecipeInput> {
             Integer base = json.has("base") ? GsonHelper.getAsInt(json, "base") : null;
             Integer max = json.has("max") ? GsonHelper.getAsInt(json, "max") : null;
 
-            // key must exist; contents are not constrained for now.
-            if (!json.has("list")) {
-                throw new JsonParseException("SellingBin recipe missing required marker key 'list'");
-            }
-            JsonElement listEl = json.get("list");
-            JsonObject listObj;
-            if (listEl != null && listEl.isJsonObject()) {
-                listObj = listEl.getAsJsonObject();
-            } else {
-                // allow primitive/array but still keep a marker object
-                listObj = new JsonObject();
-                listObj.add("value", listEl);
+            String group = GsonHelper.getAsString(json, "group", "");
+            // Backward compat: older JSON used required key "list". If present and group not set, keep its string form.
+            if (group.isEmpty() && json.has("list")) {
+                JsonElement listEl = json.get("list");
+                group = listEl == null ? "" : listEl.toString();
             }
 
             // If only one of base/max is provided, ignore both (as requested: optional and should not crash)
@@ -207,7 +204,7 @@ public class SellingBinRecipe implements Recipe<SellingBinRecipe.RecipeInput> {
                 max = null;
             }
 
-            return new SellingBinRecipe(recipeId, input, output, base, max, listObj);
+            return new SellingBinRecipe(recipeId, input, output, base, max, group);
         }
 
         @Override
@@ -223,11 +220,8 @@ public class SellingBinRecipe implements Recipe<SellingBinRecipe.RecipeInput> {
                 max = buf.readVarInt();
             }
 
-            // list marker - synced as json string
-            String listJson = buf.readUtf();
-            JsonObject listObj = com.google.gson.JsonParser.parseString(listJson).getAsJsonObject();
-
-            return new SellingBinRecipe(recipeId, input, output, base, max, listObj);
+            String group = buf.readUtf();
+            return new SellingBinRecipe(recipeId, input, output, base, max, group);
         }
 
         @Override
@@ -242,7 +236,7 @@ public class SellingBinRecipe implements Recipe<SellingBinRecipe.RecipeInput> {
                 buf.writeVarInt(recipe.max);
             }
 
-            buf.writeUtf(recipe.listMarker.toString());
+            buf.writeUtf(recipe.group);
         }
     }
 }

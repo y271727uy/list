@@ -1,0 +1,14 @@
+{
+  "type": "list:selling_bin",
+  "input": {
+    "item": "minecraft:apple"
+  },
+  "output": {
+    "item": "list:copper_gt_credit",
+    "count": 1
+  },
+  "base": 1,
+  "max": 4,
+  "group": "fruit"
+}
+
