@@ -2,8 +2,10 @@ package com.list.all;
 
 import com.list.client.screen.ForestryHybridizerScreen;
 import com.list.client.screen.FishPondScreen;
+import com.list.client.screen.SellingBinScreen;
 import com.list.menu.ForestryHybridizerMenu;
 import com.list.menu.FishPondMenu;
+import com.list.menu.SellingBinMenu;
 import com.tterrag.registrate.util.entry.MenuEntry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -21,6 +23,11 @@ public class ModMenus {
     @SuppressWarnings("DataFlowIssue")
     public static final MenuEntry<ForestryHybridizerMenu> FORESTRY_HYBRIDIZER = REGISTRATE
         .menu("forestry_hybridizer", ForestryHybridizerMenu::new, () -> ForestryHybridizerScreen::new)
+        .register();
+
+    @SuppressWarnings("DataFlowIssue")
+    public static final MenuEntry<SellingBinMenu> SELLING_BIN = REGISTRATE
+        .menu("selling_bin", SellingBinMenu::new, () -> SellingBinScreen::new)
         .register();
 
     public static void open(ServerPlayer player, MenuProvider provider) {

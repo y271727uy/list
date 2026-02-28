@@ -37,6 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@SuppressWarnings("removal")
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
 public class FishPondCoreBlockEntity extends MulitblockBlockEntity implements MenuProvider {

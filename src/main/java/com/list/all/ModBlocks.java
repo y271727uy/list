@@ -2,6 +2,7 @@ package com.list.all;
 
 import com.list.block.FishPondCoreBlock;
 import com.list.block.GreenhouseFurnaceBlock;
+import com.list.block.SellingBinBlock;
 import com.list.block.TreeCompostBlock;
 import com.list.block.mushroom.StrawMushroomBlock;
 import com.list.block.mushroom.SeaMushroomBlock;
@@ -15,7 +16,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 
-import static com.ibm.icu.impl.CurrencyData.provider;
 import static com.list.ListMod.REGISTRATE;
 
 public class ModBlocks {
@@ -111,6 +111,20 @@ public static final BlockEntry<ForestryHybridizerBlock> FORESTRY_HYBRIDIZER = RE
         })
         .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
         .register();
+
+    //测试方块 出货箱
+    public static final BlockEntry<SellingBinBlock> SELLING_BIN = REGISTRATE
+            .block("selling_bin", SellingBinBlock::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                provider.horizontalBlock(
+                        ctx.get(),
+                        provider.models().getExistingFile(provider.modLoc("block/" + ctx.getName()))
+                );
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
 
 
     //草菇
