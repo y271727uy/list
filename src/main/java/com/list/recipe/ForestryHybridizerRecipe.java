@@ -35,12 +35,19 @@ public class ForestryHybridizerRecipe implements Recipe<ForestryHybridizerRecipe
     public final ResourceLocation id;
     public final List<HybridizerIngredient> inputs; // size=3
     public final List<ChancedItemStack> outputs; // size=2
+    /**
+     * If true for a given output index, the serializer/recipe will verify the produced stack NBT
+     * exactly equals the prototype stack NBT (same tags). This is mainly to guard against
+     * accidental loss/rewriting of NBT in downstream code.
+     */
+    public final List<Boolean> outputStrictNbt; // size=outputs.size()
     public final int time;
 
-    public ForestryHybridizerRecipe(ResourceLocation id, List<HybridizerIngredient> inputs, List<ChancedItemStack> outputs, int time) {
+    public ForestryHybridizerRecipe(ResourceLocation id, List<HybridizerIngredient> inputs, List<ChancedItemStack> outputs, List<Boolean> outputStrictNbt, int time) {
         this.id = id;
         this.inputs = inputs;
         this.outputs = outputs;
+        this.outputStrictNbt = outputStrictNbt;
         this.time = time;
     }
 
@@ -57,7 +64,16 @@ public class ForestryHybridizerRecipe implements Recipe<ForestryHybridizerRecipe
 
     @Override
     public ItemStack assemble(RecipeInput container, RegistryAccess registryAccess) {
-        return outputs.get(0).itemStack().copy();
+        ItemStack prototype = outputs.get(0).itemStack();
+        ItemStack out = prototype.copy();
+        // Optional strict validation that the recipe output keeps exact NBT.
+        if (!outputStrictNbt.isEmpty() && outputStrictNbt.get(0)) {
+            if (!ItemStack.isSameItemSameTags(out, prototype)) {
+                // If this ever triggers, something has modified/stripped NBT unexpectedly.
+                return ItemStack.EMPTY;
+            }
+        }
+        return out;
     }
 
     @Override
@@ -67,7 +83,15 @@ public class ForestryHybridizerRecipe implements Recipe<ForestryHybridizerRecipe
 
     @Override
     public ItemStack getResultItem(RegistryAccess registryAccess) {
-        return outputs.get(0).itemStack();
+        ItemStack prototype = outputs.get(0).itemStack();
+        // Return a copy so callers can't mutate the recipe prototype.
+        ItemStack out = prototype.copy();
+        if (!outputStrictNbt.isEmpty() && outputStrictNbt.get(0)) {
+            if (!ItemStack.isSameItemSameTags(out, prototype)) {
+                return ItemStack.EMPTY;
+            }
+        }
+        return out;
     }
 
     @Override
@@ -176,17 +200,19 @@ public class ForestryHybridizerRecipe implements Recipe<ForestryHybridizerRecipe
                 throw new JsonParseException("ForestryHybridizer recipe outputs must have 1 to " + MAX_OUTPUTS + " entries");
             }
             List<ChancedItemStack> outputs = new ArrayList<>(outputsJson.size());
+            List<Boolean> outputStrictNbt = new ArrayList<>(outputsJson.size());
             for (int i = 0; i < outputsJson.size(); i++) {
                 JsonObject outObj = GsonHelper.convertToJsonObject(outputsJson.get(i), "outputs[" + i + "]");
                 ItemStack stack = CraftingHelper.getItemStack(outObj, true);
                 float chance = GsonHelper.getAsFloat(outObj, "chance", 1.0f);
                 outputs.add(new ChancedItemStack(stack, chance));
+                outputStrictNbt.add(GsonHelper.getAsBoolean(outObj, "strict_nbt", false));
             }
 
             int time = GsonHelper.getAsInt(json, "time", DEFAULT_TIME);
             if (time <= 0) time = DEFAULT_TIME;
 
-            return new ForestryHybridizerRecipe(recipeId, inputs, outputs, time);
+            return new ForestryHybridizerRecipe(recipeId, inputs, outputs, outputStrictNbt, time);
         }
 
         @Override
@@ -199,14 +225,17 @@ public class ForestryHybridizerRecipe implements Recipe<ForestryHybridizerRecipe
 
             int outCount = buf.readVarInt();
             List<ChancedItemStack> outputs = new ArrayList<>(outCount);
+            List<Boolean> outputStrictNbt = new ArrayList<>(outCount);
             for (int i = 0; i < outCount; i++) {
                 ItemStack stack = buf.readItem();
                 float chance = buf.readFloat();
+                boolean strictNbt = buf.readBoolean();
                 outputs.add(new ChancedItemStack(stack, chance));
+                outputStrictNbt.add(strictNbt);
             }
 
             int time = buf.readVarInt();
-            return new ForestryHybridizerRecipe(recipeId, inputs, outputs, time);
+            return new ForestryHybridizerRecipe(recipeId, inputs, outputs, outputStrictNbt, time);
         }
 
         @Override
@@ -217,9 +246,12 @@ public class ForestryHybridizerRecipe implements Recipe<ForestryHybridizerRecipe
             }
 
             buf.writeVarInt(recipe.outputs.size());
-            for (ChancedItemStack out : recipe.outputs) {
+            for (int i = 0; i < recipe.outputs.size(); i++) {
+                ChancedItemStack out = recipe.outputs.get(i);
                 buf.writeItem(out.itemStack());
                 buf.writeFloat(out.chance());
+                boolean strictNbt = i < recipe.outputStrictNbt.size() && recipe.outputStrictNbt.get(i);
+                buf.writeBoolean(strictNbt);
             }
 
             buf.writeVarInt(recipe.time);

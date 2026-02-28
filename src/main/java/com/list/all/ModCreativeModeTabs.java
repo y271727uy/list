@@ -23,6 +23,15 @@ public class ModCreativeModeTabs {
                     .icon(() -> new ItemStack(ModItems.INDUSTRIAL_OSMIUM_CREDIT.get()))
                     .displayItems((parameters, output) -> {
 
+                    output.accept(ModItems.COPPER_GT_CREDIT.get());
+                    output.accept(ModItems.CUPRONICKEL_GT_CREDIT.get());
+                    output.accept(ModItems.SILVER_GT_CREDIT.get());
+                    output.accept(ModItems.GOLD_GT_CREDIT.get());
+                    output.accept(ModItems.PLATINUM_GT_CREDIT.get());
+                    output.accept(ModItems.OSMIUM_GT_CREDIT.get());
+                    output.accept(ModItems.NAQUADAH_GT_CREDIT.get());
+                    output.accept(ModItems.NEUTRONIUM_GT_CREDIT.get());
+                    output.accept(ModItems.DOGE_COIN.get());
                     output.accept(ModItems.INDUSTRIAL_COPPER_CREDIT.get());
                     output.accept(ModItems.INDUSTRIAL_SILVER_CREDIT.get());
                     output.accept(ModItems.INDUSTRIAL_GOLD_CREDIT.get());

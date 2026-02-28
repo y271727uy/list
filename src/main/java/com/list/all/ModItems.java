@@ -44,6 +44,64 @@ public class ModItems {
             .item("industrial_osmium_credit", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/industrial_osmium_credit")))
             .register();
+        
+
+    // GT币
+    public static final ItemEntry<Item> COPPER_GT_CREDIT = REGISTRATE
+            .item("copper_gt_credit", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/copper_gt_credit")))
+            .register();
+
+    // GT币
+    public static final ItemEntry<Item> CUPRONICKEL_GT_CREDIT = REGISTRATE
+            .item("cupronickel_gt_credit", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/cupronickel_gt_credit")))
+            .register();
+
+    // GT币
+    public static final ItemEntry<Item> SILVER_GT_CREDIT = REGISTRATE
+            .item("silver_gt_credit", Item::new)
+            .properties(p -> p.rarity(Rarity.UNCOMMON))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/silver_gt_credit")))
+            .register();
+
+//GT币
+    public static final ItemEntry<Item> GOLD_GT_CREDIT = REGISTRATE
+            .item("gold_gt_credit", Item::new)
+            .properties(p -> p.rarity(Rarity.UNCOMMON))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/gold_gt_credit")))
+            .register();
+
+    public static final ItemEntry<Item> PLATINUM_GT_CREDIT = REGISTRATE
+            .item("platinum_gt_credit", Item::new)
+            .properties(p -> p.rarity(Rarity.UNCOMMON))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/platinum_gt_credit")))
+            .register();
+
+    public static final ItemEntry<Item> OSMIUM_GT_CREDIT  = REGISTRATE
+            .item("osmium_gt_credit", Item::new)
+            .properties(p -> p.rarity(Rarity.RARE))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/osmium_gt_credit")))
+            .register();
+
+    public static final ItemEntry<Item> NAQUADAH_GT_CREDIT = REGISTRATE
+            .item("naquadah_gt_credit", Item::new)
+            .properties(p -> p.rarity(Rarity.RARE))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/naquadah_gt_credit")))
+            .register();
+
+    public static final ItemEntry<Item> NEUTRONIUM_GT_CREDIT = REGISTRATE
+            .item("neutronium_gt_credit", Item::new)
+            .properties(p -> p.rarity(Rarity.RARE))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/neutronium_gt_credit")))
+            .register();
+
+    public static final ItemEntry<Item> DOGE_COIN = REGISTRATE
+            .item("doge_coin", Item::new)
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/doge_coin")))
+            .register();
+//GT币结束
 
 
     // 平平无奇的面包
