@@ -13,6 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.SlotItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nullable;
 
@@ -31,26 +32,29 @@ public class ForestryGreenhouseMenu extends AbstractContainerMenu {
 
     public ForestryGreenhouseMenu(@Nullable MenuType<?> menuType, int containerId, Inventory inventory, BlockEntity be) {
         super(menuType, containerId);
-        this.blockEntity = (ForestryGreenhouseBlockEntity) be;
         this.level = inventory.player.level();
+        this.blockEntity = be instanceof ForestryGreenhouseBlockEntity fg ? fg : null;
+
+        // Use the BE's handler when possible; otherwise use a safe dummy handler so the menu doesn't crash.
+        ItemStackHandler handler = this.blockEntity != null ? this.blockEntity.itemHandler : new ItemStackHandler(12);
 
         // TE input slots (0-8) at the provided coordinates
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 0, 14, 29));
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 1, 14, 47));
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 2, 14, 65));
+        this.addSlot(new SlotItemHandler(handler, 0, 14, 29));
+        this.addSlot(new SlotItemHandler(handler, 1, 14, 47));
+        this.addSlot(new SlotItemHandler(handler, 2, 14, 65));
 
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 3, 32, 29));
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 4, 32, 47));
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 5, 32, 65));
+        this.addSlot(new SlotItemHandler(handler, 3, 32, 29));
+        this.addSlot(new SlotItemHandler(handler, 4, 32, 47));
+        this.addSlot(new SlotItemHandler(handler, 5, 32, 65));
 
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 6, 50, 29));
-            this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 7, 50, 47));
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 8, 50, 65));
+        this.addSlot(new SlotItemHandler(handler, 6, 50, 29));
+        this.addSlot(new SlotItemHandler(handler, 7, 50, 47));
+        this.addSlot(new SlotItemHandler(handler, 8, 50, 65));
 
-            // extra independent input slots (9-11)
-            this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 9, 50, 86));
-            this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 10, 70, 86));
-            this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 11, 90, 86));
+        // extra independent input slots (9-11)
+        this.addSlot(new SlotItemHandler(handler, 9, 50, 86));
+        this.addSlot(new SlotItemHandler(handler, 10, 70, 86));
+        this.addSlot(new SlotItemHandler(handler, 11, 90, 86));
 
         addPlayerInventory(inventory);
         addPlayerHotbar(inventory);
@@ -88,6 +92,9 @@ public class ForestryGreenhouseMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
+        if (blockEntity == null) {
+            return false;
+        }
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, ModBlocks.FORESTRY_GREENHOUSE.get());
     }
 }
