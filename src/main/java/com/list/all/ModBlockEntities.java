@@ -1,6 +1,7 @@
 package com.list.all;
 
 import com.list.block.entity.FishPondCoreBlockEntity;
+import com.list.block.entity.ForestryGreenhouseBlockEntity;
 import com.list.block.entity.ForestryHybridizerBlockEntity;
 import com.list.block.entity.SellingBinBlockEntity;
 import com.list.block.entity.TreeCompostBlockEntity;
@@ -21,6 +22,11 @@ public class ModBlockEntities {
     public static final BlockEntityEntry<TreeCompostBlockEntity> TREE_COMPOST = REGISTRATE
         .blockEntity("tree_compost", (BlockEntityType<TreeCompostBlockEntity> type, BlockPos pos, BlockState state) -> new TreeCompostBlockEntity(type, pos, state))
         .validBlocks(ModBlocks.TREE_COMPOST)
+        .register();
+
+    public static final BlockEntityEntry<ForestryGreenhouseBlockEntity> FORESTRY_GREENHOUSE = REGISTRATE
+        .blockEntity("forestry_greenhouse", (BlockEntityType<ForestryGreenhouseBlockEntity> type, BlockPos pos, BlockState state) -> new ForestryGreenhouseBlockEntity(type, pos, state))
+        .validBlocks(ModBlocks.FORESTRY_GREENHOUSE)
         .register();
 
     public static final BlockEntityEntry<ForestryHybridizerBlockEntity> FORESTRY_HYBRIDIZER = REGISTRATE

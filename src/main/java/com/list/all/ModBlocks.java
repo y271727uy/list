@@ -1,6 +1,7 @@
 package com.list.all;
 
 import com.list.block.FishPondCoreBlock;
+import com.list.block.ForestryGreenhouseBlock;
 import com.list.block.GreenhouseFurnaceBlock;
 import com.list.block.SellingBinBlock;
 import com.list.block.TreeCompostBlock;
@@ -78,9 +79,9 @@ public class ModBlocks {
             .tag(BlockTags.MINEABLE_WITH_SHOVEL)
             .register();
 
-    //林业温室 我先借用下TreeCompostBlock吧
-    public static final BlockEntry<TreeCompostBlock> FORESTRY_GREENHOUSE = REGISTRATE
-            .block("forestry_greenhouse", TreeCompostBlock::new)
+    //林业温室（独立方块）
+    public static final BlockEntry<ForestryGreenhouseBlock> FORESTRY_GREENHOUSE = REGISTRATE
+            .block("forestry_greenhouse", ForestryGreenhouseBlock::new)
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .simpleItem()
             .blockstate((ctx, provider) -> {
