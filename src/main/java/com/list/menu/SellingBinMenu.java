@@ -40,7 +40,7 @@ public class SellingBinMenu extends AbstractContainerMenu {
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 9; col++) {
                 int slot = col + row * 9;
-                this.addSlot(new SlotItemHandler(blockEntity.itemHandler, slot, 108 + col * 18, 17 + row * 18));
+                this.addSlot(new SlotItemHandler(blockEntity.itemHandler, slot, 8 + col * 18, 18 + row * 18));
             }
         }
 
@@ -50,14 +50,14 @@ public class SellingBinMenu extends AbstractContainerMenu {
     private void addPlayerInventory(Inventory playerInventory) {
         for (int i = 0; i < 3; ++i) {
             for (int l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 108 + l * 18, 84 + i * 18));
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 84 + i * 18));
             }
         }
     }
 
     private void addPlayerHotbar(Inventory playerInventory) {
         for (int i = 0; i < 9; ++i) {
-            this.addSlot(new Slot(playerInventory, i, 108 + i * 18, 142));
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
         }
     }
 

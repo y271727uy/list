@@ -1,0 +1,11 @@
+{
+  "type": "list:forestry_hybridizer",
+  "time": 20,
+  "inputs": [
+    { "item": "minecraft:enchanted_book", "count": 1, "blurry_nbt": "{StoredEnchantments:[{id:\"minecraft:fire_protection\"}]}" }
+  ],
+  "outputs": [
+    { "item": "minecraft:paper", "count": 1, "chance": 1.0 }
+  ]
+}
+

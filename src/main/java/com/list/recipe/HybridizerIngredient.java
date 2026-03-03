@@ -27,7 +27,9 @@ import java.util.List;
  * - tag
  * - alternatives: [ {item|tag, nbt?}, ... ]
  *
- * NBT matching is EXACT (same tags) by default.
+ * NBT matching:
+ * - "nbt"        : EXACT (same tags)
+ * - "blurry_nbt" : FUZZY (pattern must be contained in the stack tag; stack may have extra keys)
  */
 public sealed interface HybridizerIngredient permits HybridizerIngredient.Simple, HybridizerIngredient.Alternatives {
 
@@ -74,7 +76,29 @@ public sealed interface HybridizerIngredient permits HybridizerIngredient.Simple
         return Simple.fromJson(obj, GsonHelper.getAsInt(obj, "count", 1));
     }
 
-    record Simple(int count, @Nullable ResourceLocation itemId, @Nullable ResourceLocation tagId, @Nullable CompoundTag nbtExact) implements HybridizerIngredient {
+    enum NbtMode {
+        NONE,
+        EXACT,
+        BLURRY
+    }
+
+    /**
+     * JEI/display-only override stack.
+     * <p>
+     * This is intentionally separated from matching NBT logic (nbt/blurry_nbt)
+     * to avoid JEI rendering issues when ingredient stacks carry complex NBT.
+     */
+    @Nullable
+    default ItemStack renderStack() {
+        return null;
+    }
+
+    record Simple(int count,
+                  @Nullable ResourceLocation itemId,
+                  @Nullable ResourceLocation tagId,
+                  @Nullable CompoundTag nbt,
+                  NbtMode nbtMode,
+                  @Nullable ItemStack renderItem) implements HybridizerIngredient {
         public Simple {
             if (count <= 0) {
                 throw new IllegalArgumentException("count must be > 0");
@@ -82,6 +106,14 @@ public sealed interface HybridizerIngredient permits HybridizerIngredient.Simple
             if ((itemId == null) == (tagId == null)) {
                 throw new IllegalArgumentException("HybridizerIngredient.Simple must have exactly one of itemId or tagId");
             }
+            if (nbtMode == null) {
+                throw new IllegalArgumentException("nbtMode must not be null");
+            }
+        }
+
+        @Override
+        public @Nullable ItemStack renderStack() {
+            return renderItem;
         }
 
         static Simple fromJson(JsonObject obj, int defaultCount) {
@@ -94,21 +126,58 @@ public sealed interface HybridizerIngredient permits HybridizerIngredient.Simple
             }
 
             if (obj.has("item")) {
-                itemId = new ResourceLocation(GsonHelper.getAsString(obj, "item"));
+                itemId = ResourceLocation.parse(GsonHelper.getAsString(obj, "item"));
                 if (!ForgeRegistries.ITEMS.containsKey(itemId)) {
                     throw new JsonParseException("Unknown item: " + itemId);
                 }
             }
             if (obj.has("tag")) {
-                tagId = new ResourceLocation(GsonHelper.getAsString(obj, "tag"));
+                tagId = ResourceLocation.parse(GsonHelper.getAsString(obj, "tag"));
             }
 
             if ((itemId == null) == (tagId == null)) {
                 throw new JsonParseException("Hybridizer ingredient must have exactly one of 'item' or 'tag'");
             }
 
+            ItemStack renderItem = null;
+            if (obj.has("render_item")) {
+                JsonObject renderObj = GsonHelper.getAsJsonObject(obj, "render_item");
+                if (!renderObj.has("item")) {
+                    throw new JsonParseException("render_item must contain 'item'");
+                }
+                ResourceLocation renderItemId = ResourceLocation.parse(GsonHelper.getAsString(renderObj, "item"));
+                Item renderMcItem = ForgeRegistries.ITEMS.getValue(renderItemId);
+                if (renderMcItem == null) {
+                    throw new JsonParseException("Unknown render_item item: " + renderItemId);
+                }
+                renderItem = new ItemStack(renderMcItem);
+                int renderCount = GsonHelper.getAsInt(renderObj, "count", 1);
+                if (renderCount > 0) {
+                    renderItem.setCount(renderCount);
+                }
+                if (renderObj.has("nbt")) {
+                    JsonElement renderNbtEl = renderObj.get("nbt");
+                    try {
+                        CompoundTag renderNbt;
+                        if (renderNbtEl.isJsonObject()) {
+                            renderNbt = TagParser.parseTag(renderNbtEl.toString());
+                        } else if (renderNbtEl.isJsonPrimitive()) {
+                            renderNbt = TagParser.parseTag(GsonHelper.convertToString(renderNbtEl, "render_item.nbt"));
+                        } else {
+                            throw new JsonParseException("Invalid render_item.nbt element");
+                        }
+                        renderItem.setTag(renderNbt);
+                    } catch (Exception e) {
+                        throw new JsonParseException("Failed to parse render_item.nbt: " + e.getMessage());
+                    }
+                }
+            }
+
             CompoundTag nbt = null;
             if (obj.has("nbt")) {
+                if (obj.has("blurry_nbt")) {
+                    throw new JsonParseException("Hybridizer ingredient cannot have both 'nbt' and 'blurry_nbt'");
+                }
                 JsonElement nbtEl = obj.get("nbt");
                 try {
                     if (nbtEl.isJsonObject()) {
@@ -121,9 +190,28 @@ public sealed interface HybridizerIngredient permits HybridizerIngredient.Simple
                 } catch (Exception e) {
                     throw new JsonParseException("Failed to parse nbt: " + e.getMessage());
                 }
+
+                return new Simple(count, itemId, tagId, nbt, NbtMode.EXACT, renderItem);
             }
 
-            return new Simple(count, itemId, tagId, nbt);
+            if (obj.has("blurry_nbt")) {
+                JsonElement nbtEl = obj.get("blurry_nbt");
+                try {
+                    if (nbtEl.isJsonObject()) {
+                        nbt = TagParser.parseTag(nbtEl.toString());
+                    } else if (nbtEl.isJsonPrimitive()) {
+                        nbt = TagParser.parseTag(GsonHelper.convertToString(nbtEl, "blurry_nbt"));
+                    } else {
+                        throw new JsonParseException("Invalid blurry_nbt element");
+                    }
+                } catch (Exception e) {
+                    throw new JsonParseException("Failed to parse blurry_nbt: " + e.getMessage());
+                }
+
+                return new Simple(count, itemId, tagId, nbt, NbtMode.BLURRY, renderItem);
+            }
+
+            return new Simple(count, itemId, tagId, null, NbtMode.NONE, renderItem);
         }
 
         static Simple fromNetwork(FriendlyByteBuf buf) {
@@ -131,7 +219,23 @@ public sealed interface HybridizerIngredient permits HybridizerIngredient.Simple
             ResourceLocation id = buf.readResourceLocation();
             int count = buf.readVarInt();
             CompoundTag nbt = buf.readNullable(FriendlyByteBuf::readNbt);
-            return isItem ? new Simple(count, id, null, nbt) : new Simple(count, null, id, nbt);
+
+            // Back-compat: older payload had no mode; it implied EXACT if nbt != null.
+            NbtMode mode = nbt != null ? NbtMode.EXACT : NbtMode.NONE;
+            if (buf.readableBytes() > 0) {
+                int ordinal = buf.readVarInt();
+                if (ordinal < 0 || ordinal >= NbtMode.values().length) {
+                    throw new IllegalArgumentException("Invalid NbtMode ordinal: " + ordinal);
+                }
+                mode = NbtMode.values()[ordinal];
+            }
+
+            ItemStack renderItem = null;
+            if (buf.readableBytes() > 0) {
+                renderItem = buf.readNullable(FriendlyByteBuf::readItem);
+            }
+
+            return isItem ? new Simple(count, id, null, nbt, mode, renderItem) : new Simple(count, null, id, nbt, mode, renderItem);
         }
 
         @Override
@@ -151,10 +255,23 @@ public sealed interface HybridizerIngredient permits HybridizerIngredient.Simple
                 if (!stack.is(key)) return false;
             }
 
-            if (nbtExact != null) {
-                // Exact match: stack must have tag and equals()
-                return stack.hasTag() && nbtExact.equals(stack.getTag());
+            if (nbtMode == NbtMode.NONE || nbt == null) {
+                return true;
             }
+
+            if (!stack.hasTag()) return false;
+
+            if (nbtMode == NbtMode.EXACT) {
+                // Exact match: stack must have tag and equals()
+                return nbt.equals(stack.getTag());
+            }
+
+            if (nbtMode == NbtMode.BLURRY) {
+                // Fuzzy match: recipe NBT must be a subset of the stack tag.
+                // 'true' means compare list contents.
+                return net.minecraft.nbt.NbtUtils.compareNbt(nbt, stack.getTag(), true);
+            }
+
             return true;
         }
 
@@ -165,7 +282,7 @@ public sealed interface HybridizerIngredient permits HybridizerIngredient.Simple
                 Item item = ForgeRegistries.ITEMS.getValue(itemId);
                 if (item != null) {
                     ItemStack stack = new ItemStack(item);
-                    if (nbtExact != null) stack.setTag(nbtExact.copy());
+                    if (nbt != null && nbtMode != NbtMode.NONE) stack.setTag(nbt.copy());
                     out.add(stack);
                 }
             }
@@ -180,11 +297,13 @@ public sealed interface HybridizerIngredient permits HybridizerIngredient.Simple
             ResourceLocation id = itemId != null ? itemId : tagId;
             if (id == null) {
                 // should never happen due to constructor validation
-                id = new ResourceLocation("minecraft", "air");
+                id = ResourceLocation.fromNamespaceAndPath("minecraft", "air");
             }
             buf.writeResourceLocation(id);
             buf.writeVarInt(count);
-            buf.writeNullable(nbtExact, FriendlyByteBuf::writeNbt);
+            buf.writeNullable(nbt, FriendlyByteBuf::writeNbt);
+            buf.writeVarInt(nbtMode.ordinal());
+            buf.writeNullable(renderItem, FriendlyByteBuf::writeItem);
         }
     }
 
@@ -240,11 +359,13 @@ public sealed interface HybridizerIngredient permits HybridizerIngredient.Simple
                 buf.writeBoolean(s.itemId != null);
                 ResourceLocation id = s.itemId != null ? s.itemId : s.tagId;
                 if (id == null) {
-                    id = new ResourceLocation("minecraft", "air");
+                    id = ResourceLocation.fromNamespaceAndPath("minecraft", "air");
                 }
                 buf.writeResourceLocation(id);
                 buf.writeVarInt(s.count);
-                buf.writeNullable(s.nbtExact, FriendlyByteBuf::writeNbt);
+                buf.writeNullable(s.nbt, FriendlyByteBuf::writeNbt);
+                buf.writeVarInt(s.nbtMode.ordinal());
+                buf.writeNullable(s.renderItem, FriendlyByteBuf::writeItem);
             }
         }
     }

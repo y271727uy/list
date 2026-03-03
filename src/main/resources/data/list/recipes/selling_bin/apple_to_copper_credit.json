@@ -4,10 +4,9 @@
     "item": "minecraft:apple"
   },
   "output": {
-    "item": "list:copper_gt_credit",
-    "count": 1
+    "item": "list:copper_gt_credit"
   },
-  "base": 1,
+  "base": 2,
   "max": 4,
   "group": "fruit"
 }

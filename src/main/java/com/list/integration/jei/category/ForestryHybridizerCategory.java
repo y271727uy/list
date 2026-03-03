@@ -75,6 +75,17 @@ ForestryHybridizerCategory extends AbstractRecipeCategory<ForestryHybridizerReci
         if (index < 0 || index >= inputs.size()) return;
         HybridizerIngredient ing = inputs.get(index);
 
+        // Prefer explicit render override (strong NBT) to avoid JEI displaying wrong stacks
+        // when the real ingredient uses complex/fuzzy NBT.
+        ItemStack render = ing.renderStack();
+        if (render != null && !render.isEmpty() && render.getItem() != Items.AIR) {
+            int count = Math.max(1, ing.count());
+            ItemStack display = render.copy();
+            display.setCount(Math.max(display.getCount(), count));
+            builder.addSlot(RecipeIngredientRole.INPUT, x, y).addItemStack(display);
+            return;
+        }
+
         List<ItemStack> previews = expandIngredientPreview(ing);
         if (previews.isEmpty()) return;
         builder.addSlot(RecipeIngredientRole.INPUT, x, y).addItemStacks(previews);
@@ -95,11 +106,11 @@ ForestryHybridizerCategory extends AbstractRecipeCategory<ForestryHybridizerReci
         // 如果是 tag（或 alternatives 里含 tag），原实现 previewStacks() 会是空；这里补充 tag 展开
         if (ing instanceof HybridizerIngredient.Simple simple && simple.tagId() != null) {
             base = stacksFromTag(simple.tagId());
-            // 如果 Simple 还带 nbtExact，打到每个 stack 上
-            if (simple.nbtExact() != null) {
+            // 如果 Simple 还带 NBT（exact 或 blurry），打到每个 stack 上（展示用途）
+            if (simple.nbt() != null && simple.nbtMode() != HybridizerIngredient.NbtMode.NONE) {
                 base = base.stream().map(s -> {
                     ItemStack copy = s.copy();
-                    copy.setTag(simple.nbtExact().copy());
+                    copy.setTag(simple.nbt().copy());
                     return copy;
                 }).collect(Collectors.toList());
             }
@@ -108,10 +119,10 @@ ForestryHybridizerCategory extends AbstractRecipeCategory<ForestryHybridizerReci
                 .flatMap(s -> {
                     if (s.tagId() != null) {
                         List<ItemStack> stacks = stacksFromTag(s.tagId());
-                        if (s.nbtExact() != null) {
+                        if (s.nbt() != null && s.nbtMode() != HybridizerIngredient.NbtMode.NONE) {
                             return stacks.stream().map(st -> {
                                 ItemStack copy = st.copy();
-                                copy.setTag(s.nbtExact().copy());
+                                copy.setTag(s.nbt().copy());
                                 return copy;
                             });
                         }
@@ -137,8 +148,11 @@ ForestryHybridizerCategory extends AbstractRecipeCategory<ForestryHybridizerReci
 
     private static List<ItemStack> stacksFromTag(ResourceLocation tagId) {
         TagKey<net.minecraft.world.item.Item> key = TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), tagId);
-        return ForgeRegistries.ITEMS.tags()
-            .getTag(key)
+        var tags = ForgeRegistries.ITEMS.tags();
+        if (tags == null) {
+            return List.of();
+        }
+        return tags.getTag(key)
             .stream()
             .filter(Objects::nonNull)
             .map((ItemLike item) -> new ItemStack(item.asItem()))

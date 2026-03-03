@@ -15,9 +15,8 @@ public class SellingBinScreen extends AbstractContainerScreen<SellingBinMenu> {
 
     public SellingBinScreen(SellingBinMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
-        this.imageWidth = 274;
+        this.imageWidth = 174;
         this.imageHeight = 164;
-        this.inventoryLabelX = 108;
     }
 
     @Override
@@ -27,7 +26,7 @@ public class SellingBinScreen extends AbstractContainerScreen<SellingBinMenu> {
 
         // countdown (top-right) at (254, 9) relative to GUI
         MutableComponent timeText = formatTicks(menu.getTicksUntilRun());
-        guiGraphics.drawString(this.font, timeText, this.leftPos + 250, this.topPos + 7, 0xFFFFFF, false);
+        guiGraphics.drawString(this.font, timeText, this.leftPos + 150, this.topPos + 7, 0xFFFFFF, false);
 
         this.renderTooltip(guiGraphics, mouseX, mouseY);
     }
