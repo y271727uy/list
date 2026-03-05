@@ -150,7 +150,7 @@ public class ForestryGreenhouseBlockEntity extends BlockEntity implements MenuPr
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-        return new ForestryGreenhouseMenu(ModMenus.FORESTRY_GREENHOUSE.get(), id, inventory, this);
+        return new ForestryGreenhouseMenu(ModMenus.FORESTRY_GREENHOUSE.get(), id, inventory, this, data);
     }
 
     @Override
