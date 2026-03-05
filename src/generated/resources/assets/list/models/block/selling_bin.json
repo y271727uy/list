@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/greenhouse_casing",
+    "east": "list:block/greenhouse_furnace/controller_side",
+    "north": "list:block/greenhouse_furnace/controller_front",
+    "particle": "list:block/greenhouse_casing",
+    "south": "list:block/greenhouse_casing",
+    "up": "list:block/greenhouse_casing",
+    "west": "list:block/greenhouse_furnace/controller_side"
+  }
+}

@@ -70,28 +70,7 @@ public class ModCreativeModeTabs {
                     .build()
     );
  
-    // 菌类标签页
-    public static final RegistryObject<CreativeModeTab> MUSHROOM_TAB = CREATIVE_TABS.register("crops_mushroom", () ->
-            CreativeModeTab.builder()
-                    .title(REGISTRATE.addLang("itemGroup", ListMod.rl("crops_mushroom"), "Mushroom"))
-                    .icon(() -> new ItemStack(ModItems.SEA_MUSHROOM_COLONY.get()))
-                    .displayItems((parameters, output) -> {
-                        output.accept(ModItems.STRAW_MUSHROOM.get());
-                        //output.accept(ModItems.香菇.get());
-                        output.accept(ModItems.SEA_MUSHROOM.get());
-                        output.accept(ModItems.CAVE_MUSHROOM.get());
 
-                        //output.accept(ModItems.紫蘑菇.get());
-                        //output.accept(ModItems.熔岩蘑菇.get());
-                        //output.accept(ModItems.鸡油菌.get());
-                        //output.accept(ModItems.鸡冠菌.get())；
-
-                        output.accept(ModItems.STRAW_MUSHROOM_COLONY.get());
-                        output.accept(ModItems.SEA_MUSHROOM_COLONY.get());
-                        output.accept(ModItems.CAVE_MUSHROOM_COLONY.get());
-                    })
-                    .build()
-    );
     // 鱼类标签页
     public static final RegistryObject<CreativeModeTab> FISH_TAB = CREATIVE_TABS.register("crops_fish", () ->
             CreativeModeTab.builder()
@@ -336,13 +315,7 @@ public class ModCreativeModeTabs {
     );
 
 
-    // 肉类
-    public static final RegistryObject<CreativeModeTab> MEAT_TAB = CREATIVE_TABS.register("meat", () ->
-            CreativeModeTab.builder()
-                    .title(REGISTRATE.addLang("itemGroup", ListMod.rl("list_meat"), "Meat"))  // 语言键: itemGroup.listmod.crops
-                    .icon(() -> new ItemStack(ModItems.WAGYU_BEEF.get()))
-                    .displayItems((parameters, output) -> {
-                    output.accept(ModItems.WAGYU_BEEF.get());
+
                     //output.accept(ModItems.蓝龙虾.get());
                     //output.accept(ModItems.锦绣龙虾.get());
                     //output.accept(ModItems.深海鳌虾.get());
@@ -420,9 +393,6 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
 
-                    })
-                    .build()
-    );
 
 
 
@@ -671,7 +641,6 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());     // 卵
                     //output.accept(ModItems..get());     // 卵
                     //output.accept(ModItems..get());     // 卵
-                    //output.accept(ModItems..get());     // 卵
 
                     })
                     .build()
@@ -706,7 +675,6 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.COOK_ANURO_EGG.get());       //煎anuro蛙嘴龙蛋 
                 output.accept(ModItems.COOK_ULUGH_EGG.get());       //煎ulugh乌鲁伯戈龙蛋
                 output.accept(ModItems.COOK_TALPANAS_EGG.get());       //煎talpanas鼹鸭蛋
-                output.accept(ModItems.CRAB_MEAT.get());   //蟹肉
                 output.accept(ModItems.RED_CABBAGE_LEAF.get());//红卷心菜叶
                 output.accept(ModItems.RED_PINEAPPLE_SLICE.get());//红凤梨切块
                 output.accept(ModItems.LABA_GARLIC.get());//腊八蒜
@@ -762,10 +730,63 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.NEUTRONIUM_BUTTER.get());       //中子素黄油
                 output.accept(ModItems.RYE_DOUGH.get());
                 output.accept(ModItems.BARLEY_DOUGH.get());
+                output.accept(ModItems.GIANT_CLAM_MEAT.get());     //砗磲肉
+                output.accept(ModItems.CRAB_MEAT.get());   //蟹肉
+                output.accept(ModItems.WAGYU_BEEF.get());
+                
             })
             .build()
     );
  
+                /*
+                我是真的没想到啊
+                几年前的大饼居然在这里去做了
+                不过优先统计特殊I和II的食物
+                特殊I：不可制作
+                特殊II：可以制作但是限定
+
+                I不可制作：
+                大神爱心慕斯蛋糕、可乐小子饼干、树根蛋糕、彩虹天堂-零卡、彩虹天堂、超豪华鸡腿便当、干净的罐头
+                西瓜冰沙、牛奶雪糕、Q软彩虹糖
+                七巧五子拼盘、甜蜜七巧果、浓情巧克力慕斯、恋语棉花糖、爱心甜甜圈
+                生日蛋糕、爱心巧克力
+                手工饺子、思念彩虹糖
+                自制石头烤肉、飘香荷叶烤鸡、冰爽莓莓                   来源：周末巡逻-克里斯
+                活力热狗、铁板鱿鱼、午后巡逻套餐                       来源：周末巡逻-海德尔
+                销魂叉烧饭、焦糖布丁、青草地甜筒、虾尾拌面、芥末虾球    来源：周末巡逻-巴格克星
+                派对拐杖糖、赤郡奶酪、肥仔米、滋补椰子鸡               来源：周末巡逻-朵洛希·哈维
+                秘制油泼面、海鲜烩饭、绵绵泡芙、香甜柿饼               来源：周末巡逻-海伦娜·薇恩
+                珍珠丸子、红枣糕、甜水面、肉酱千层面                   来源：周末巡逻-海德尔
+                三鲜冰粉、糯米糖藕                                    来源：周末巡逻-哈提  
+                秘制烤肉              
+                糖年糕、莓果蛋糕、百物炖肉菜、金银满屋、雪人糯米滋
+                新禧春卷、年年有鱼、吉祥年糕、五福饺子             来源：历年春节活动
+                庆典蛋糕                                         来源：周年活动
+                杏仁布丁、圣诞姜饼、奶油玉米浓汤
+                汉堡王狂欢套餐、大士神仙水                        来源：联动
+                爱意巧克力、白巧克力
+                嫩烤香草羊排
+                九转大肠
+                好事者的玩笑
+                染毒烤肉串、整蛊果子、快过期的罐头
+                方便面、奇怪的方便面
+                海鲜全家福、海陆豪华大餐
+                四叶草抹茶慕斯、四叶草鲜奶油蛋糕、幸运香草舒芙蕾、幸福四叶草巴菲、四叶草彩虹蛋糕、幸运香草马克龙
+                糖霜李子、枫叶棒棒糖、紫藤花茶、樱花果冻
+
+                II可以制作但是限定
+                麻辣肉片、鸳鸯鱼丸、养生蔬菜
+                椒盐藕饼、藕粉羹
+                金鱼果汤、金!鱼果汤
+                惊奇南瓜切片
+                菊花茶
+                白条鱼生、烤赤魟、烤针鱼、油炸雨鱼
+
+                元宵节
+                中秋节
+                端午节
+                感恩节
+                */
 
     // 农作物标签页
     public static final RegistryObject<CreativeModeTab> CROPS_TAB = CREATIVE_TABS.register("crops_crops", () ->
@@ -893,7 +914,7 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());       //大麦克香蕉
                     //output.accept(ModItems..get());       //红宝石香蕉
                     //output.accept(ModItems..get());       //巨人香蕉
-                    //output.accept(ModItems..get());       //Isla Banana
+                    //output.accept(ModItems..get());       //Isla Banana  紫皮偏黑？  Thai Black Banana（泰黑蕉）？
                     //output.accept(ModItems..get());       //菜蕉
                     //output.accept(ModItems..get());       //皇帝蕉
                     //output.accept(ModItems..get());       //费香蕉  应该是学名fe’i banana
@@ -962,7 +983,82 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
-                    //output.accept(ModItems..get());       //   
+                    //output.accept(ModItems..get());       //
+
+                    output.accept(ModItems.STRAW_MUSHROOM.get());
+                    //output.accept(ModItems.香菇.get());
+                    output.accept(ModItems.SEA_MUSHROOM.get());
+                    output.accept(ModItems.CAVE_MUSHROOM.get());
+                    //白松露
+
+                    //output.accept(ModItems.紫蘑菇.get());
+                    //output.accept(ModItems.熔岩蘑菇.get());
+                    //output.accept(ModItems.鸡油菌.get());
+                    //output.accept(ModItems.鸡冠菌.get())；
+                    /*
+                    Armillaria mellea（蜜环菌）
+                    Leccinum scabrum，中文常称为“桦褐牛肝菌”
+                    Russula vesca（中文常译作“肉色红菇”或“裸齿红菇”）
+                    Suillus luteus（中文常称“黄油蘑”或“黏盖牛肝菌”）
+                    Lactarius torminosus 是一种乳菇属（Lactarius）的蘑菇，常被称为“绒毛乳菇”或“羊毛乳菇”
+                    Lactarius resimus 乳白乳菇
+                    Tricholoma terreum，中文常称为灰骑士菇或灰色骑士菇
+                    Lactarius deterrimus（中文常译为“云杉乳菇”）
+                    Sparassis crispa，中文常称“皱褶花菜菌”或“松茸花菜菌”
+                    Craterellus cornucopioides，中文常称为“黑喇叭菌”或“丰收之角”
+                    Amanita caesarea（中文常译作“凯撒鹅膏”或“凯撒菌”）
+                    Marasmius oreades（中文常译作“仙环伞”或“草地小皮伞”）
+                    Clitocybe nebularis（中文常译作“云灰漏斗伞”或“云状漏斗菌”
+                    Wood blewit  别名：紫菇、蓝脚菌、Blewit
+                    Pied de mouton（学名 Hydnum repandum），中文常译作“刺蘑”或“羊肚菌蘑”
+                    St. George's mushroom 圣乔治蘑菇（Calocybe gambosa）是一种可食用的春季真菌，属于白蘑科 几乎不存在亚洲市场
+                    Parasol mushroom 伞菌（学名 Macrolepiota procera）是一种大型可食用蘑菇或者应该被称为巨伞菌
+                    Craterellus tubaeformis（中文常称“黄褐刺蘑”或“喇叭菌”）
+                    Lactarius deliciosus 是一种属于乳菇属（Lactarius）的可食用真菌，常被称为“松乳菇”或“红乳牛肝菌”
+                    Suillus spp. 指的是牛肝菌科的一属真菌，常被称为“滑菇”或“油头菇”
+                    Leccinum scabrum 桦树林牛肝菌
+                    
+                    
+
+                    美洲：
+                    “Chicken of the woods”（中文常称“硫磺菌”或“硫磺多孔菌”）
+                    舞茸（Hen of the Woods / Maitake）
+                    Agaricus blazei是一种原产于巴西东南部山区的伞菌类真菌，隶属蘑菇科。因据称具有保健与药理作用，被称为“巴西蘑菇”或“姬松茸”
+                    Pleurotus djamor（中文名：粉牡蛎菇、火烈鸟菇）
+
+                    非洲：
+                    Afroboletus 是一个非洲产的牛肝菌属真菌，隶属于牛肝菌科 非洲牛肝菌
+
+
+                    云南：
+                    鸡枞菌
+                    松茸
+                    牛肝菌
+                    见手青
+                    干巴菌
+                    青头菌
+
+                    东北：
+                    榛蘑
+                    褐牛肝菌
+
+                    全球通用商业种
+                    平菇
+                    杏鲍菇
+                    金针菇
+                    白蘑菇
+                    黑木耳
+
+                    商业种增长中：
+                    猴头菇
+                    茶树菇
+                    蟹味菇
+                    竹荪
+                    */
+
+                    output.accept(ModItems.STRAW_MUSHROOM_COLONY.get());
+                    output.accept(ModItems.SEA_MUSHROOM_COLONY.get());
+                    output.accept(ModItems.CAVE_MUSHROOM_COLONY.get());
                     })
                     .build()
     );
@@ -1012,7 +1108,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BOTTLE_RACK.get());
                         output.accept(ModBlocks.BREAD_CRATE.get());
                         output.accept(ModBlocks.BROWM_DYE_BUCKET.get());
-                        //output.accept(ModBlocks..get());
+                        output.accept(ModBlocks.CACTUS_BUNDLE.get());
                         //output.accept(ModBlocks..get());
                         //output.accept(ModBlocks..get());
                         //output.accept(ModBlocks..get());

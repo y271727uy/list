@@ -1,0 +1,20 @@
+{
+  "type": "list:forestry_greenhouse",
+  "inputs": [
+    { "item": "minecraft:wheat_seeds", "count": 1 }
+  ],
+  "trench": {
+    "trench": "10",
+    "item": "minecraft:grass_block",
+    "count": 1
+  },
+  "outputs": [
+    { "item": "minecraft:wheat", "count": 1, "chance": 1.0 }
+  ],
+  "water": 1000,
+  "fuel": true,
+  "time": 200
+}
+
+
+

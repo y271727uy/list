@@ -36,7 +36,8 @@ public class ForestryGreenhouseMenu extends AbstractContainerMenu {
         this.blockEntity = be instanceof ForestryGreenhouseBlockEntity fg ? fg : null;
 
         // Use the BE's handler when possible; otherwise use a safe dummy handler so the menu doesn't crash.
-        ItemStackHandler handler = this.blockEntity != null ? this.blockEntity.itemHandler : new ItemStackHandler(12);
+        // Total slots: 12 inputs + 9 outputs = 21
+        ItemStackHandler handler = this.blockEntity != null ? this.blockEntity.itemHandler : new ItemStackHandler(21);
 
         // TE input slots (0-8) at the provided coordinates
         this.addSlot(new SlotItemHandler(handler, 0, 14, 29));
@@ -52,9 +53,75 @@ public class ForestryGreenhouseMenu extends AbstractContainerMenu {
         this.addSlot(new SlotItemHandler(handler, 8, 50, 65));
 
         // extra independent input slots (9-11)
+        // 9  = trench slot (free placement)
         this.addSlot(new SlotItemHandler(handler, 9, 50, 86));
+        // 10 = water slot (bucket handling)
         this.addSlot(new SlotItemHandler(handler, 10, 70, 86));
-        this.addSlot(new SlotItemHandler(handler, 11, 90, 86));
+        // 11 = fuel slot (only accepts furnace fuels)
+        this.addSlot(new SlotItemHandler(handler, 11, 90, 86) {
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity.isFuel(stack);
+            }
+        });
+
+        // output slots (12-20)
+        this.addSlot(new SlotItemHandler(handler, 12, 115, 29) {
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return false;
+            }
+        });
+        this.addSlot(new SlotItemHandler(handler, 13, 133, 29) {
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return false;
+            }
+        });
+        this.addSlot(new SlotItemHandler(handler, 14, 151, 29) {
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return false;
+            }
+        });
+
+        this.addSlot(new SlotItemHandler(handler, 15, 115, 47) {
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return false;
+            }
+        });
+        this.addSlot(new SlotItemHandler(handler, 16, 133, 47) {
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return false;
+            }
+        });
+        this.addSlot(new SlotItemHandler(handler, 17, 151, 47) {
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return false;
+            }
+        });
+
+        this.addSlot(new SlotItemHandler(handler, 18, 115, 65) {
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return false;
+            }
+        });
+        this.addSlot(new SlotItemHandler(handler, 19, 133, 65) {
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return false;
+            }
+        });
+        this.addSlot(new SlotItemHandler(handler, 20, 151, 65) {
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return false;
+            }
+        });
 
         addPlayerInventory(inventory);
         addPlayerHotbar(inventory);

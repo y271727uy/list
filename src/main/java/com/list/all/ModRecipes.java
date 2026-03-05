@@ -1,6 +1,7 @@
 package com.list.all;
 
 import com.list.ListMod;
+import com.list.recipe.ForestryGreenhouseRecipe;
 import com.list.recipe.ForestryHybridizerRecipe;
 import com.list.recipe.FishPondRecipe;
 import com.list.recipe.SellingBinRecipe;
@@ -33,6 +34,16 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<ForestryHybridizerRecipe>> FORESTRY_HYBRIDIZER_SERIALIZER = RECIPE_SERIALIZERS.register(
         "forestry_hybridizer",
         ForestryHybridizerRecipe.Serializer::new
+    );
+
+    public static final RegistryObject<RecipeType<ForestryGreenhouseRecipe>> FORESTRY_GREENHOUSE_TYPE = RECIPE_TYPES.register(
+        "forestry_greenhouse",
+        () -> RecipeType.simple(ListMod.rl("forestry_greenhouse"))
+    );
+
+    public static final RegistryObject<RecipeSerializer<ForestryGreenhouseRecipe>> FORESTRY_GREENHOUSE_SERIALIZER = RECIPE_SERIALIZERS.register(
+        "forestry_greenhouse",
+        ForestryGreenhouseRecipe.Serializer::new
     );
 
     public static final RegistryObject<RecipeType<SellingBinRecipe>> SELLING_BIN_RECIPE_TYPE = RECIPE_TYPES.register(

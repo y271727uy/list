@@ -245,6 +245,7 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
             }
 
             buffer.writeInt(recipe.time);
+            buffer.writeBoolean(recipe.isLava);
         }
     }
 

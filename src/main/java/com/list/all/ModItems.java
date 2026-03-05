@@ -12,6 +12,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 
+import static com.ibm.icu.impl.CurrencyData.provider;
 import static com.list.ListMod.REGISTRATE;
 
 public class ModItems {
@@ -4169,6 +4170,18 @@ public static final ItemEntry<Item>  = REGISTRATE
                     .saturationMod(1.2f)
                     .build()))
             .register();
+
+    // 砗磲肉
+    public static final ItemEntry<Item> GIANT_CLAM_MEAT = REGISTRATE
+            .item("giant_clam_meat", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/meat/giant_clam_meat")))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(1.2f)
+                    .build()))
+            .register();
+
+
 
     //腊八蒜
     public static final ItemEntry<Item> LABA_GARLIC = REGISTRATE

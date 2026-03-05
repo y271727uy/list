@@ -35,7 +35,7 @@ public class ModBlockEntities {
         .register();
 
     public static final BlockEntityEntry<SellingBinBlockEntity> SELLING_BIN = REGISTRATE
-        .blockEntity("selling_bin", (BlockEntityType<SellingBinBlockEntity> type, BlockPos pos, BlockState state) -> new SellingBinBlockEntity(type, pos, state))
+        .blockEntity("selling_bin", SellingBinBlockEntity::new)
         .validBlocks(ModBlocks.SELLING_BIN)
         .register();
 
