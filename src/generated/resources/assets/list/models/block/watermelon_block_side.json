@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/decorate/watermelon_flesh",
+    "east": "list:block/decorate/watermelon_flesh",
+    "north": "list:block/decorate/melon_side",
+    "particle": "list:block/decorate/melon_side",
+    "south": "list:block/decorate/watermelon_flesh",
+    "up": "list:block/decorate/watermelon_flesh",
+    "west": "list:block/decorate/watermelon_flesh"
+  }
+}

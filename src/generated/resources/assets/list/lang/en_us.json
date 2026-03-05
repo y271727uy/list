@@ -35,6 +35,8 @@
   "block.list.straw_mushroom": "Straw Mushroom",
   "block.list.straw_mushroom_colony": "Straw Mushroom Colony",
   "block.list.tree_compost": "Tree Compost",
+  "block.list.watermelon_block_corner": "Watermelon Block Corner",
+  "block.list.watermelon_block_side": "Watermelon Block Side",
   "config.jade.plugin_list.fish_pond": "Fish Pond",
   "gui.list.category.fish_pond": "Fish Pond",
   "gui.list.category.fish_pond.chance": "Chance: %s%%",

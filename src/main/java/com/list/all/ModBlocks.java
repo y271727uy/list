@@ -1,19 +1,15 @@
 package com.list.all;
 
-import com.list.block.FishPondCoreBlock;
-import com.list.block.ForestryGreenhouseBlock;
-import com.list.block.GreenhouseFurnaceBlock;
-import com.list.block.SellingBinBlock;
-import com.list.block.TreeCompostBlock;
+import com.list.block.*;
 import com.list.block.mushroom.StrawMushroomBlock;
 import com.list.block.mushroom.SeaMushroomBlock;
 import com.list.block.mushroom.CaveMushroomBlock;
 import com.list.block.colony.SeaMushroomColonyBlock;
-import com.list.block.ForestryHybridizerBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import com.list.block.ForestryHybridizerBlock;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 
@@ -351,6 +347,46 @@ public class ModBlocks {
             })
             .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
             .register();
+
+//大型西瓜块侧边
+public static final BlockEntry<ForestryGreenhouseBlock> WATERMELON_BLOCK_SIDE = REGISTRATE
+        .block("watermelon_block_side", ForestryGreenhouseBlock::new)
+        .initialProperties(() -> Blocks.OAK_PLANKS)
+        .simpleItem()
+        .blockstate((ctx, provider) -> {
+            BlockModelBuilder model = provider.models().cube(
+                ctx.getName(),
+                provider.modLoc("block/decorate/watermelon_flesh"),         //底部 up
+                provider.modLoc("block/decorate/watermelon_flesh"),     //顶部 dowm
+                provider.modLoc("block/decorate/melon_side"),    //北 north
+                provider.modLoc("block/decorate/watermelon_flesh"),    //南 sorth
+                provider.modLoc("block/decorate/watermelon_flesh"),    //西 west
+                provider.modLoc("block/decorate/watermelon_flesh")     //东 east
+            ).texture("particle", provider.modLoc("block/decorate/melon_side"));
+             provider.horizontalBlock(ctx.get(), model);
+        })
+        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+        .register();
+
+//大型西瓜块角边
+public static final BlockEntry<ForestryGreenhouseBlock> WATERMELON_BLOCK_CORNER = REGISTRATE
+        .block("watermelon_block_corner", ForestryGreenhouseBlock::new)
+        .initialProperties(() -> Blocks.OAK_PLANKS)
+        .simpleItem()
+        .blockstate((ctx, provider) -> {
+            BlockModelBuilder model = provider.models().cube(
+                ctx.getName(),
+                provider.modLoc("block/decorate/watermelon_flesh"),         //底部 up
+                provider.modLoc("block/decorate/watermelon_flesh"),     //顶部 dowm
+                provider.modLoc("block/decorate/melon_side"),    //北 north
+                provider.modLoc("block/decorate/watermelon_flesh"),    //南 sorth
+                provider.modLoc("block/decorate/melon_side"),    //西 west
+                provider.modLoc("block/decorate/watermelon_flesh")     //东 east
+            ).texture("particle", provider.modLoc("block/decorate/melon_side"));
+             provider.horizontalBlock(ctx.get(), model);
+        })
+        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+        .register();
 
 
     public static final BlockEntry<Block> ALLIUM_CRATE = REGISTRATE

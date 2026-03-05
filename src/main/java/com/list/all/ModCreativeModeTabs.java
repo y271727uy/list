@@ -1092,6 +1092,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BURROWED_CLAY.get());
                         output.accept(ModBlocks.BURROWED_DIRT.get());
                         output.accept(ModBlocks.BURROWED_MUD.get());
+                        output.accept(ModBlocks.WATERMELON_BLOCK_SIDE.get());
+                        output.accept(ModBlocks.WATERMELON_BLOCK_CORNER.get());
                         output.accept(ModBlocks.ALLIUM_CRATE.get());       //囤积
                         output.accept(ModBlocks.AZURE_BLUET_CRATE.get());
                         output.accept(ModBlocks.BAKED_POTATO_CRATE.get());
