@@ -781,6 +781,7 @@ public class ModCreativeModeTabs {
                 惊奇南瓜切片
                 菊花茶
                 白条鱼生、烤赤魟、烤针鱼、油炸雨鱼
+                魔鬼鱼与小丑鱼料理
 
                 元宵节
                 中秋节
@@ -1085,7 +1086,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PURE_BEEF_FEED.get());       //纯净牛肉饲料
                         output.accept(ModItems.PURE_PORKCHOP_FEED.get());       //纯净猪肉饲料
                         output.accept(ModItems.ADVANCED_PURE_MEAT_FEED.get());       //高级肉类饲料
-                        //output.accept(ModItems..get());       //
+                        output.accept(ModItems.WOODEN_SAND_FIXATION_GRID.get());       //木制固沙方格
+                        output.accept(ModBlocks.CURING_SAND.get());
+                        output.accept(ModBlocks.CURING_RED_SAND.get());
+                        output.accept(ModBlocks.CURING_GRAVEL.get());
                         //output.accept(ModItems..get());       //
                         output.accept(ModBlocks.BURROWED_SAND.get());
                         output.accept(ModBlocks.BURROWED_GRAVEL.get());
@@ -1094,6 +1098,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BURROWED_MUD.get());
                         output.accept(ModBlocks.WATERMELON_BLOCK_SIDE.get());
                         output.accept(ModBlocks.WATERMELON_BLOCK_CORNER.get());
+                        output.accept(ModBlocks.WATERMELON_FLESH_BLOCK.get());
+
                         output.accept(ModBlocks.ALLIUM_CRATE.get());       //囤积
                         output.accept(ModBlocks.AZURE_BLUET_CRATE.get());
                         output.accept(ModBlocks.BAKED_POTATO_CRATE.get());
@@ -1111,6 +1117,27 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BREAD_CRATE.get());
                         output.accept(ModBlocks.BROWM_DYE_BUCKET.get());
                         output.accept(ModBlocks.CACTUS_BUNDLE.get());
+                        output.accept(ModBlocks.CARROT_CRATE.get());
+                        output.accept(ModBlocks.CHICKEN_CRATE.get());
+                        output.accept(ModBlocks.CHORUS_FRUIT_CRATE.get());
+                        output.accept(ModBlocks.COCOA_BEANS_BAG.get());
+                        output.accept(ModBlocks.COD_BARREL.get());
+                        output.accept(ModBlocks.COOKED_BEEF_CRATE.get());
+                        output.accept(ModBlocks.COOKED_CHICKEN_CRATE.get());
+                        output.accept(ModBlocks.COOKED_COD_BARREL.get());
+                        output.accept(ModBlocks.COOKED_MUTTON_CRATE.get());
+                        output.accept(ModBlocks.COOKED_RABBIT_CRATE.get());
+                        output.accept(ModBlocks.COOKED_SALMON_BARREL.get());
+                        output.accept(ModBlocks.COOKIE_CRATE.get());
+                        output.accept(ModBlocks.CORNFLOWER_CRATE.get());
+                        output.accept(ModBlocks.CRIMSON_FUNGUS_CRATE.get());
+                        output.accept(ModBlocks.CYAN_DYE_BUCKET.get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
+                        //output.accept(ModBlocks..get());
                         //output.accept(ModBlocks..get());
                         //output.accept(ModBlocks..get());
                         //output.accept(ModBlocks..get());

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/hoarding/barrel/barrel_bottom",
+    "east": "list:block/hoarding/barrel/barrel_side",
+    "north": "list:block/hoarding/barrel/barrel_side",
+    "particle": "list:block/hoarding/barrel/barrel_side",
+    "south": "list:block/hoarding/barrel/barrel_side",
+    "up": "list:block/hoarding/barrel/cooked_salmon_barrel_top",
+    "west": "list:block/hoarding/barrel/barrel_side"
+  }
+}

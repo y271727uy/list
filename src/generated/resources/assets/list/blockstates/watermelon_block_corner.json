@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "list:block/watermelon_block_corner",
+      "y": 90
+    },
+    "facing=north": {
       "model": "list:block/watermelon_block_corner"
+    },
+    "facing=south": {
+      "model": "list:block/watermelon_block_corner",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "list:block/watermelon_block_corner",
+      "y": 270
     }
   }
 }

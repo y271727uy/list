@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/tree_compost/curing_red_sand",
+    "east": "list:block/tree_compost/curing_red_sand",
+    "north": "list:block/tree_compost/curing_red_sand",
+    "particle": "list:block/tree_compost/curing_red_sand",
+    "south": "list:block/tree_compost/curing_red_sand",
+    "up": "list:block/tree_compost/curing_red_sand",
+    "west": "list:block/tree_compost/curing_red_sand"
+  }
+}

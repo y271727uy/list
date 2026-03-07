@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/hoarding/bag/seed_bag/seed_bag_bottom",
+    "east": "list:block/hoarding/bag/sack/sack_side",
+    "north": "list:block/hoarding/bag/sack/sack_side",
+    "particle": "list:block/hoarding/bag/sack/sack_side",
+    "south": "list:block/hoarding/bag/sack/sack_side",
+    "up": "list:block/hoarding/bag/sack/cocoa_beans_bag_top",
+    "west": "list:block/hoarding/bag/sack/sack_side"
+  }
+}

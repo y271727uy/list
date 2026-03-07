@@ -349,9 +349,9 @@ public class ModBlocks {
             .register();
 
 //大型西瓜块侧边
-public static final BlockEntry<ForestryGreenhouseBlock> WATERMELON_BLOCK_SIDE = REGISTRATE
-        .block("watermelon_block_side", ForestryGreenhouseBlock::new)
-        .initialProperties(() -> Blocks.OAK_PLANKS)
+public static final BlockEntry<CommonBlock> WATERMELON_BLOCK_SIDE = REGISTRATE
+        .block("watermelon_block_side", CommonBlock::new)
+        .initialProperties(() -> Blocks.MELON)
         .simpleItem()
         .blockstate((ctx, provider) -> {
             BlockModelBuilder model = provider.models().cube(
@@ -368,25 +368,105 @@ public static final BlockEntry<ForestryGreenhouseBlock> WATERMELON_BLOCK_SIDE = 
         .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
         .register();
 
-//大型西瓜块角边
-public static final BlockEntry<ForestryGreenhouseBlock> WATERMELON_BLOCK_CORNER = REGISTRATE
-        .block("watermelon_block_corner", ForestryGreenhouseBlock::new)
-        .initialProperties(() -> Blocks.OAK_PLANKS)
-        .simpleItem()
-        .blockstate((ctx, provider) -> {
-            BlockModelBuilder model = provider.models().cube(
-                ctx.getName(),
-                provider.modLoc("block/decorate/watermelon_flesh"),         //底部 up
-                provider.modLoc("block/decorate/watermelon_flesh"),     //顶部 dowm
-                provider.modLoc("block/decorate/melon_side"),    //北 north
-                provider.modLoc("block/decorate/watermelon_flesh"),    //南 sorth
-                provider.modLoc("block/decorate/melon_side"),    //西 west
-                provider.modLoc("block/decorate/watermelon_flesh")     //东 east
-            ).texture("particle", provider.modLoc("block/decorate/melon_side"));
-             provider.horizontalBlock(ctx.get(), model);
-        })
-        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
-        .register();
+    //大型西瓜块角边
+    public static final BlockEntry<CommonBlock> WATERMELON_BLOCK_CORNER = REGISTRATE
+            .block("watermelon_block_corner", CommonBlock::new)
+            .initialProperties(() -> Blocks.MELON)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/decorate/watermelon_flesh"),         //底部 up
+                        provider.modLoc("block/decorate/watermelon_flesh"),     //顶部 dowm
+                        provider.modLoc("block/decorate/melon_side"),    //北 north
+                        provider.modLoc("block/decorate/watermelon_flesh"),    //南 sorth
+                        provider.modLoc("block/decorate/melon_side"),    //西 west
+                        provider.modLoc("block/decorate/watermelon_flesh")     //东 east
+                ).texture("particle", provider.modLoc("block/decorate/melon_side"));
+                provider.horizontalBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+    //西瓜瓤块
+    public static final BlockEntry<Block> WATERMELON_FLESH_BLOCK = REGISTRATE
+            .block("watermelon_flesh_block", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/decorate/watermelon_flesh"),         //底部 up
+                        provider.modLoc("block/decorate/watermelon_flesh"),     //顶部 dowm
+                        provider.modLoc("block/decorate/watermelon_flesh"),    //北 north
+                        provider.modLoc("block/decorate/watermelon_flesh"),    //南 sorth
+                        provider.modLoc("block/decorate/watermelon_flesh"),    //西 west
+                        provider.modLoc("block/decorate/watermelon_flesh")     //东 east
+                ).texture("particle", provider.modLoc("block/decorate/watermelon_flesh"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+//固化沙子
+    public static final BlockEntry<Block> CURING_SAND = REGISTRATE
+            .block("curing_sand", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/tree_compost/curing_sand"),         //底部 up
+                        provider.modLoc("block/tree_compost/curing_sand"),     //顶部 dowm
+                        provider.modLoc("block/tree_compost/curing_sand"),    //北 north
+                        provider.modLoc("block/tree_compost/curing_sand"),    //南 sorth
+                        provider.modLoc("block/tree_compost/curing_sand"),    //西 west
+                        provider.modLoc("block/tree_compost/curing_sand")     //东 east
+                ).texture("particle", provider.modLoc("block/tree_compost/curing_sand"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+//固化红沙
+    public static final BlockEntry<Block> CURING_RED_SAND = REGISTRATE
+            .block("curing_red_sand", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/tree_compost/curing_red_sand"),         //底部 up
+                        provider.modLoc("block/tree_compost/curing_red_sand"),     //顶部 dowm
+                        provider.modLoc("block/tree_compost/curing_red_sand"),    //北 north
+                        provider.modLoc("block/tree_compost/curing_red_sand"),    //南 sorth
+                        provider.modLoc("block/tree_compost/curing_red_sand"),    //西 west
+                        provider.modLoc("block/tree_compost/curing_red_sand")     //东 east
+                ).texture("particle", provider.modLoc("block/tree_compost/curing_red_sand"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+        
+//固化砾石
+    public static final BlockEntry<Block> CURING_GRAVEL = REGISTRATE
+            .block("curing_gravel", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/tree_compost/curing_gravel"),         //底部 up
+                        provider.modLoc("block/tree_compost/curing_gravel"),     //顶部 dowm
+                        provider.modLoc("block/tree_compost/curing_gravel"),    //北 north
+                        provider.modLoc("block/tree_compost/curing_gravel"),    //南 sorth
+                        provider.modLoc("block/tree_compost/curing_gravel"),    //西 west
+                        provider.modLoc("block/tree_compost/curing_gravel")     //东 east
+                ).texture("particle", provider.modLoc("block/tree_compost/curing_gravel"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
 
 
     public static final BlockEntry<Block> ALLIUM_CRATE = REGISTRATE
@@ -486,7 +566,7 @@ public static final BlockEntry<ForestryGreenhouseBlock> WATERMELON_BLOCK_CORNER 
 
     public static final BlockEntry<Block> BLACK_DYE_BUCKET = REGISTRATE
             .block("black_dye_bucket", Block::new)
-            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
             .simpleItem()
             .blockstate((ctx, provider) -> {
                 BlockModelBuilder model = provider.models().cube(
@@ -562,7 +642,7 @@ public static final BlockEntry<ForestryGreenhouseBlock> WATERMELON_BLOCK_CORNER 
 
     public static final BlockEntry<Block> BLUE_DYE_BUCKET = REGISTRATE
             .block("blue_dye_bucket", Block::new)
-            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
             .simpleItem()
             .blockstate((ctx, provider) -> {
                 BlockModelBuilder model = provider.models().cube(
@@ -676,7 +756,7 @@ public static final BlockEntry<ForestryGreenhouseBlock> WATERMELON_BLOCK_CORNER 
 
     public static final BlockEntry<Block> BROWM_DYE_BUCKET = REGISTRATE
             .block("brown_dye_bucket", Block::new)
-            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
             .simpleItem()
             .blockstate((ctx, provider) -> {
                 BlockModelBuilder model = provider.models().cube(
@@ -731,6 +811,310 @@ public static final BlockEntry<ForestryGreenhouseBlock> WATERMELON_BLOCK_CORNER 
         .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
         .register();
 
+    public static final BlockEntry<Block> CARROT_CRATE = REGISTRATE
+            .block("carrot_crate", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/hoarding/crate/oak/bottom_oak"),         //底部 up
+                        provider.modLoc("block/hoarding/crate/oak/carrot_crate_top"),     //顶部 dowm
+                        provider.modLoc("block/hoarding/crate/oak/carrot_crate_side"),    //北 north
+                        provider.modLoc("block/hoarding/crate/oak/carrot_crate_side"),    //南 sorth
+                        provider.modLoc("block/hoarding/crate/oak/carrot_crate_side"),    //西 west
+                        provider.modLoc("block/hoarding/crate/oak/carrot_crate_side")     //东 east
+                ).texture("particle", provider.modLoc("block/hoarding/crate/oak/carrot_crate_side"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+    public static final BlockEntry<Block> CHICKEN_CRATE = REGISTRATE
+            .block("chicken_crate", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/hoarding/crate/spruce/bottom_spruce"),         //底部 up
+                        provider.modLoc("block/hoarding/crate/spruce/chicken_crate_top"),     //顶部 dowm
+                        provider.modLoc("block/hoarding/crate/spruce/chicken_crate_side"),    //北 north
+                        provider.modLoc("block/hoarding/crate/spruce/chicken_crate_side"),    //南 sorth
+                        provider.modLoc("block/hoarding/crate/spruce/chicken_crate_side"),    //西 west
+                        provider.modLoc("block/hoarding/crate/spruce/chicken_crate_side")     //东 east
+                ).texture("particle", provider.modLoc("block/hoarding/crate/spruce/chicken_crate_side"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+    public static final BlockEntry<Block> CHORUS_FRUIT_CRATE = REGISTRATE
+            .block("chorus_fruit_crate", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/hoarding/crate/others/bottom_end_stone"),         //底部 up
+                        provider.modLoc("block/hoarding/crate/others/chorus_fruit_crate_top"),     //顶部 dowm
+                        provider.modLoc("block/hoarding/crate/others/chorus_fruit_crate_side"),    //北 north
+                        provider.modLoc("block/hoarding/crate/others/chorus_fruit_crate_side"),    //南 sorth
+                        provider.modLoc("block/hoarding/crate/others/chorus_fruit_crate_side"),    //西 west
+                        provider.modLoc("block/hoarding/crate/others/chorus_fruit_crate_side")     //东 east
+                ).texture("particle", provider.modLoc("block/hoarding/crate/others/chorus_fruit_crate_side"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+    public static final BlockEntry<Block> COCOA_BEANS_BAG = REGISTRATE
+            .block("cocoa_beans_bag", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/hoarding/bag/seed_bag/seed_bag_bottom"),         //底部 up
+                        provider.modLoc("block/hoarding/bag/sack/cocoa_beans_bag_top"),     //顶部 dowm
+                        provider.modLoc("block/hoarding/bag/sack/sack_side"),    //北 north
+                        provider.modLoc("block/hoarding/bag/sack/sack_side"),    //南 sorth
+                        provider.modLoc("block/hoarding/bag/sack/sack_side"),    //西 west
+                        provider.modLoc("block/hoarding/bag/sack/sack_side")     //东 east
+                ).texture("particle", provider.modLoc("block/hoarding/bag/sack/sack_side"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+    public static final BlockEntry<Block> COD_BARREL = REGISTRATE
+            .block("cod_barrel", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/hoarding/barrel/barrel_bottom"),         //底部 up
+                        provider.modLoc("block/hoarding/barrel/cod_barrel_top"),     //顶部 dowm
+                        provider.modLoc("block/hoarding/barrel/barrel_side"),    //北 north
+                        provider.modLoc("block/hoarding/barrel/barrel_side"),    //南 sorth
+                        provider.modLoc("block/hoarding/barrel/barrel_side"),    //西 west
+                        provider.modLoc("block/hoarding/barrel/barrel_side")     //东 east
+                ).texture("particle", provider.modLoc("block/hoarding/barrel/barrel_side"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+    public static final BlockEntry<Block> COOKED_BEEF_CRATE = REGISTRATE
+            .block("cooked_beef_crate", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/hoarding/crate/spruce/bottom_spruce"),         //底部 up
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_beef_crate_top"),     //顶部 dowm
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_beef_crate_side"),    //北 north
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_beef_crate_side"),    //南 sorth
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_beef_crate_side"),    //西 west
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_beef_crate_side")     //东 east
+                ).texture("particle", provider.modLoc("block/hoarding/crate/spruce/cooked_beef_crate_side"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+    public static final BlockEntry<Block> COOKED_CHICKEN_CRATE = REGISTRATE
+            .block("cooked_chicken_crate", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/hoarding/crate/spruce/bottom_spruce"),         //底部 up
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_chicken_crate_top"),     //顶部 dowm
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_chicken_crate_side"),    //北 north
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_chicken_crate_side"),    //南 sorth
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_chicken_crate_side"),    //西 west
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_chicken_crate_side")     //东 east
+                ).texture("particle", provider.modLoc("block/hoarding/crate/spruce/cooked_chicken_crate_side"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+    public static final BlockEntry<Block> COOKED_COD_BARREL = REGISTRATE
+            .block("cooked_cod_barrel", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/hoarding/barrel/barrel_bottom"),         //底部 up
+                        provider.modLoc("block/hoarding/barrel/cooked_cod_barrel_top"),     //顶部 dowm
+                        provider.modLoc("block/hoarding/barrel/barrel_side"),    //北 north
+                        provider.modLoc("block/hoarding/barrel/barrel_side"),    //南 sorth
+                        provider.modLoc("block/hoarding/barrel/barrel_side"),    //西 west
+                        provider.modLoc("block/hoarding/barrel/barrel_side")     //东 east
+                ).texture("particle", provider.modLoc("block/hoarding/barrel/barrel_side"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+    public static final BlockEntry<Block> COOKED_MUTTON_CRATE = REGISTRATE
+            .block("cooked_mutton_crate", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/hoarding/crate/spruce/bottom_spruce"),         //底部 up
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_mutton_crate_top"),     //顶部 dowm
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_mutton_crate_side"),    //北 north
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_mutton_crate_side"),    //南 sorth
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_mutton_crate_side"),    //西 west
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_mutton_crate_side")     //东 east
+                ).texture("particle", provider.modLoc("block/hoarding/crate/spruce/cooked_mutton_crate_side"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+    public static final BlockEntry<Block> COOKED_PORKCHOP_CRATE = REGISTRATE
+            .block("cooked_porkchop_crate", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/hoarding/crate/spruce/bottom_spruce"),         //底部 up
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_porkchop_crate_top"),     //顶部 dowm
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_porkchop_crate_side"),    //北 north
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_porkchop_crate_side"),    //南 sorth
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_porkchop_crate_side"),    //西 west
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_porkchop_crate_side")     //东 east
+                ).texture("particle", provider.modLoc("block/hoarding/crate/spruce/cooked_porkchop_crate_side"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+    public static final BlockEntry<Block> COOKED_RABBIT_CRATE = REGISTRATE
+            .block("cooked_rabbit_crate", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/hoarding/crate/spruce/bottom_spruce"),         //底部 up
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_rabbit_crate_top"),     //顶部 dowm
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_rabbit_crate_side"),    //北 north
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_rabbit_crate_side"),    //南 sorth
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_rabbit_crate_side"),    //西 west
+                        provider.modLoc("block/hoarding/crate/spruce/cooked_rabbit_crate_side")     //东 east
+                ).texture("particle", provider.modLoc("block/hoarding/crate/spruce/cooked_rabbit_crate_side"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+    public static final BlockEntry<Block> COOKED_SALMON_BARREL = REGISTRATE
+            .block("cooked_salmon_barrel", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/hoarding/barrel/barrel_bottom"),         //底部 up
+                        provider.modLoc("block/hoarding/barrel/cooked_salmon_barrel_top"),     //顶部 dowm
+                        provider.modLoc("block/hoarding/barrel/barrel_side"),    //北 north
+                        provider.modLoc("block/hoarding/barrel/barrel_side"),    //南 sorth
+                        provider.modLoc("block/hoarding/barrel/barrel_side"),    //西 west
+                        provider.modLoc("block/hoarding/barrel/barrel_side")     //东 east
+                ).texture("particle", provider.modLoc("block/hoarding/barrel/barrel_side"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+public static final BlockEntry<Block> COOKIE_CRATE = REGISTRATE
+        .block("cookie_crate", Block::new)
+        .initialProperties(() -> Blocks.OAK_PLANKS)
+        .simpleItem()
+        .blockstate((ctx, provider) -> {
+            BlockModelBuilder model = provider.models().cube(
+                ctx.getName(),
+                provider.modLoc("block/hoarding/crate/oak/bottom_oak"),         //底部 up
+                provider.modLoc("block/hoarding/crate/oak/cookie_crate_top"),     //顶部 dowm
+                provider.modLoc("block/hoarding/crate/oak/cookie_crate_side"),    //北 north
+                provider.modLoc("block/hoarding/crate/oak/cookie_crate_side"),    //南 sorth
+                provider.modLoc("block/hoarding/crate/oak/cookie_crate_side"),    //西 west
+                provider.modLoc("block/hoarding/crate/oak/cookie_crate_side")     //东 east
+            ).texture("particle", provider.modLoc("block/hoarding/crate/oak/cookie_crate_side"));
+             provider.simpleBlock(ctx.get(), model);
+        })
+        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+        .register();
+
+public static final BlockEntry<Block> CORNFLOWER_CRATE = REGISTRATE
+        .block("cornflower_crate", Block::new)
+        .initialProperties(() -> Blocks.OAK_PLANKS)
+        .simpleItem()
+        .blockstate((ctx, provider) -> {
+            BlockModelBuilder model = provider.models().cube(
+                ctx.getName(),
+                provider.modLoc("block/hoarding/crate/birch/bottom_birch"),         //底部 up
+                provider.modLoc("block/hoarding/crate/birch/cornflower_crate_top"),     //顶部 dowm
+                provider.modLoc("block/hoarding/crate/birch/cornflower_crate_side"),    //北 north
+                provider.modLoc("block/hoarding/crate/birch/cornflower_crate_side"),    //南 sorth
+                provider.modLoc("block/hoarding/crate/birch/cornflower_crate_side"),    //西 west
+                provider.modLoc("block/hoarding/crate/birch/cornflower_crate_side")     //东 east
+            ).texture("particle", provider.modLoc("block/hoarding/crate/birch/cornflower_crate_side"));
+             provider.simpleBlock(ctx.get(), model);
+        })
+        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+        .register();
+
+public static final BlockEntry<Block> CRIMSON_FUNGUS_CRATE = REGISTRATE
+        .block("crimson_fungus_crate", Block::new)
+        .initialProperties(() -> Blocks.OAK_PLANKS)
+        .simpleItem()
+        .blockstate((ctx, provider) -> {
+            BlockModelBuilder model = provider.models().cube(
+                ctx.getName(),
+                provider.modLoc("block/hoarding/crate/others/bottom_crimson"),         //底部 up
+                provider.modLoc("block/hoarding/crate/others/crimson_fungus_crate_top"),     //顶部 dowm
+                provider.modLoc("block/hoarding/crate/others/crimson_fungus_crate_side"),    //北 north
+                provider.modLoc("block/hoarding/crate/others/crimson_fungus_crate_side"),    //南 sorth
+                provider.modLoc("block/hoarding/crate/others/crimson_fungus_crate_side"),    //西 west
+                provider.modLoc("block/hoarding/crate/others/crimson_fungus_crate_side")     //东 east
+            ).texture("particle", provider.modLoc("block/hoarding/crate/others/crimson_fungus_crate_side"));
+             provider.simpleBlock(ctx.get(), model);
+        })
+        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+        .register();
+
+public static final BlockEntry<Block> CYAN_DYE_BUCKET = REGISTRATE
+        .block("cyan_dye_bucket", Block::new)
+        .initialProperties(() -> Blocks.OAK_PLANKS)
+        .simpleItem()
+        .blockstate((ctx, provider) -> {
+            BlockModelBuilder model = provider.models().cube(
+                ctx.getName(),
+                provider.modLoc("block/hoarding/bucket/bucket_bottom"),         //底部 up
+                provider.modLoc("block/hoarding/bucket/cyan_dye_bucket_top"),     //顶部 dowm
+                provider.modLoc("block/hoarding/bucket/bucket_side"),    //北 north
+                provider.modLoc("block/hoarding/bucket/bucket_side"),    //南 sorth
+                provider.modLoc("block/hoarding/bucket/bucket_side"),    //西 west
+                provider.modLoc("block/hoarding/bucket/bucket_side")     //东 east
+            ).texture("particle", provider.modLoc("block/hoarding/bucket/bucket_side"));
+             provider.simpleBlock(ctx.get(), model);
+        })
+        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+        .register();
+
     public static void register() {
     }
 }
@@ -738,8 +1122,26 @@ public static final BlockEntry<ForestryGreenhouseBlock> WATERMELON_BLOCK_CORNER 
 
 
 
-
 /*
+public static final BlockEntry<Block> _CRATE = REGISTRATE
+        .block("", Block::new)
+        .initialProperties(() -> Blocks.OAK_PLANKS)
+        .simpleItem()
+        .blockstate((ctx, provider) -> {
+            BlockModelBuilder model = provider.models().cube(
+                ctx.getName(),
+                provider.modLoc("block/hoarding/"),         //底部 up
+                provider.modLoc("block/hoarding/"),     //顶部 dowm
+                provider.modLoc("block/hoarding/"),    //北 north
+                provider.modLoc("block/hoarding/"),    //南 sorth
+                provider.modLoc("block/hoarding/"),    //西 west
+                provider.modLoc("block/hoarding/")     //东 east
+            ).texture("particle", provider.modLoc("block/hoarding/"));
+             provider.simpleBlock(ctx.get(), model);
+        })
+        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+        .register();
+
 public static final BlockEntry<Block> _CRATE = REGISTRATE
         .block("", Block::new)
         .initialProperties(() -> Blocks.OAK_PLANKS)
@@ -759,22 +1161,5 @@ public static final BlockEntry<Block> _CRATE = REGISTRATE
         .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
         .register();
 
-public static final BlockEntry<Block> _CRATE = REGISTRATE
-        .block("", Block::new)
-        .initialProperties(() -> Blocks.OAK_PLANKS)
-        .simpleItem()
-        .blockstate((ctx, provider) -> {
-            BlockModelBuilder model = provider.models().cube(
-                ctx.getName(),
-                provider.modLoc("block/hoarding/"),         //底部 up
-                provider.modLoc("block/hoarding/"),     //顶部 dowm
-                provider.modLoc("block/hoarding/"),    //北 north
-                provider.modLoc("block/hoarding/"),    //南 sorth
-                provider.modLoc("block/hoarding/"),    //西 west
-                provider.modLoc("block/hoarding/")     //东 east
-            ).texture("particle", provider.modLoc("block/hoarding/"));
-             provider.simpleBlock(ctx.get(), model);
-        })
-        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
-        .register();
+
 */

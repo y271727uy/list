@@ -4823,6 +4823,12 @@ public static final ItemEntry<Item>  = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/advanced_pure_meat_feed")))
             .register();
 
+    //木制固沙方格
+    public static final ItemEntry<Item> WOODEN_SAND_FIXATION_GRID = REGISTRATE
+            .item("wooden_sand_fixation_grid", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/wooden_sand_fixation_grid")))
+            .register();
+
 
 
 

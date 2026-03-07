@@ -551,5 +551,37 @@
   "block.list.bread_crate": "箱装面包",
   "block.list.brown_dye_bucket": "桶装棕色染料",
   "block.list.brown_mushroom_crate": "箱装棕色蘑菇",
-  "block.list.cactus_bundle": "仙人掌捆"
+  "block.list.cactus_bundle": "仙人掌捆",
+  "block.list.carrot_crate": "箱装胡萝卜",
+  "block.list.chicken_crate": "箱装生鸡肉",
+  "block.list.chorus_fruit_crate": "箱装紫颂果",
+  "block.list.cocoa_beans_bag": "袋装可可豆",
+  "block.list.cod_barrel": "桶装生鳕鱼",
+  "block.list.cooked_beef_crate": "箱装熟牛肉",
+  "block.list.cooked_chicken_crate": "箱装熟鸡肉",
+  "block.list.cooked_cod_barrel": "桶装熟鳕鱼",
+  "block.list.cooked_mutton_crate": "箱装熟羊肉",
+  "block.list.cooked_porkchop_crate": "箱装熟猪肉",
+  "block.list.cooked_rabbit_crate": "箱装熟兔肉",
+  "block.list.cooked_salmon_barrel": "桶装熟鲑鱼",
+  "block.list.cookie_crate": "箱装曲奇",
+  "block.list.cornflower_crate": "箱装矢车菊",
+  "block.list.crimson_fungus_crate": "箱装绯红菌",
+  "block.list.cyan_dye_bucket": "桶装青色染料",
+  
+  "block.list.dandelion_crate": "箱装蒲公英",
+  "block.list.egg_rack": "鸡蛋架",
+  "block.list.ender_eye_crate": "箱装末影之眼",
+  "block.list.ender_pearl_crate": "箱装末影珍珠",
+  "block.list.feather_bag": "袋装羽毛",
+  "block.list.fermented_spider_eye_crate": "箱装发酵蜘蛛眼",
+
+  "block.list.flint_block": "燧石块",
+  "block.list.glistering_melon": "闪烁的西瓜",
+
+  "block.list.glow_berries_crate": "箱装发光浆果",
+  "block.list.glow_ink_sac_barrel": "桶装荧光墨囊",
+  "block.list.golden_apple_crate": "箱装金苹果",
+  "block.list.golden_carrot_crate": "箱装金胡萝卜",
+  "block.list.gray_dye_bucket": "桶装灰色染料"
 }
