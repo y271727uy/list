@@ -74,6 +74,13 @@ public class ForestryGreenhouseScreen extends AbstractContainerScreen<ForestryGr
             58 * drawnHeight,
             -1
         );
+
+        // burnTime
+        int burnTime = menu.getBurnTime(14);
+        if (burnTime > 0) {
+            // 91, 69
+            guiGraphics.blit(BACKGROUND, i + 90, j + 69 + 14 - burnTime, 176, 46 + 14 - burnTime, 14, burnTime, 256, 256);
+        }
     }
 
     @Override
@@ -113,7 +120,7 @@ public class ForestryGreenhouseScreen extends AbstractContainerScreen<ForestryGr
 
         RenderSystem.setShaderTexture(0, LOCATION_BLOCKS_TEXTURE);
         RenderSystem.setShader(GameRenderer::getPositionTexColorShader);
-        RenderSystem.setShaderColor(1,1,1,1);
+        RenderSystem.setShaderColor(1, 1, 1, 1);
         RenderSystem.disableDepthTest();
 
         BufferBuilder builder = Tesselator.getInstance().getBuilder();

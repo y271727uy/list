@@ -185,5 +185,14 @@ public class ForestryGreenhouseMenu extends AbstractContainerMenu {
         int waterMb = this.data.get(2);
         return Math.max(waterMb, 0);
     }
+
+    public int getBurnTime(int height) {
+        int burnTime = this.data.get(3);
+        int maxBurnTime = this.data.get(4);
+        if (maxBurnTime <= 0) {
+            maxBurnTime = 300;
+        }
+        return burnTime > 0 ? (int) (burnTime * height / (float) maxBurnTime) : 0;
+    }
 }
 
