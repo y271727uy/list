@@ -6,8 +6,10 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.inventory.SimpleContainerData;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -25,15 +27,17 @@ import javax.annotation.Nullable;
 public class ForestryGreenhouseMenu extends AbstractContainerMenu {
     private final Level level;
     private final ForestryGreenhouseBlockEntity blockEntity;
+    private final ContainerData data;
 
     public ForestryGreenhouseMenu(@Nullable MenuType<?> menuType, int containerId, Inventory inventory, FriendlyByteBuf buf) {
-        this(menuType, containerId, inventory, inventory.player.level().getBlockEntity(buf.readBlockPos()));
+        this(menuType, containerId, inventory, inventory.player.level().getBlockEntity(buf.readBlockPos()), new SimpleContainerData(5));
     }
 
-    public ForestryGreenhouseMenu(@Nullable MenuType<?> menuType, int containerId, Inventory inventory, BlockEntity be) {
+    public ForestryGreenhouseMenu(@Nullable MenuType<?> menuType, int containerId, Inventory inventory, BlockEntity be, ContainerData data) {
         super(menuType, containerId);
         this.level = inventory.player.level();
         this.blockEntity = be instanceof ForestryGreenhouseBlockEntity fg ? fg : null;
+        this.data = data;
 
         // Use the BE's handler when possible; otherwise use a safe dummy handler so the menu doesn't crash.
         // Total slots: 12 inputs + 9 outputs = 21
@@ -125,6 +129,8 @@ public class ForestryGreenhouseMenu extends AbstractContainerMenu {
 
         addPlayerInventory(inventory);
         addPlayerHotbar(inventory);
+
+        addDataSlots(data);
     }
 
     private void addPlayerInventory(Inventory playerInventory) {
@@ -163,6 +169,30 @@ public class ForestryGreenhouseMenu extends AbstractContainerMenu {
             return false;
         }
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, ModBlocks.FORESTRY_GREENHOUSE.get());
+    }
+
+    public int getProgress(int width) {
+        int progress = this.data.get(0);
+        int maxProgress = this.data.get(1);
+        if (maxProgress <= 0) {
+            // BlockEntity currently doesn't provide maxProgress; make the bar usable for now.
+            maxProgress = 200;
+        }
+        return progress > 0 ? (int) (progress * width / (float) maxProgress) : 0;
+    }
+
+    public int getWaterMb() {
+        int waterMb = this.data.get(2);
+        return Math.max(waterMb, 0);
+    }
+
+    public int getBurnTime(int height) {
+        int burnTime = this.data.get(3);
+        int maxBurnTime = this.data.get(4);
+        if (maxBurnTime <= 0) {
+            maxBurnTime = 300;
+        }
+        return burnTime > 0 ? (int) (burnTime * height / (float) maxBurnTime) : 0;
     }
 }
 
