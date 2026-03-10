@@ -1,12 +1,15 @@
 package com.list.all;
 
 import com.list.data.model.HaloModelBuilder;
+import com.list.item.DrinkItem;
 import com.list.item.EggItem;
 import com.list.item.GlowingItem;
 import com.list.util.ItemModelUtil;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.crafting.Ingredient;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
@@ -4750,6 +4753,17 @@ public static final ItemEntry<Item>  = REGISTRATE
             .item("barley_dough", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/dough/barley_dough")))
             .register();
+
+    // 林业员茶饮
+    public static final ItemEntry<DrinkItem> FORESTERS_TEA = REGISTRATE 
+            .item("foresters_tea", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(2.3f) .build()))
+    .model((ctx, provider) -> provider
+    .generated(ctx::get, provider
+            .modLoc("item/food/drink/foresters_tea")))
+    .register();
 
     //雄蜂
     public static final ItemEntry<Item> COLLAPSE_DRONE = REGISTRATE

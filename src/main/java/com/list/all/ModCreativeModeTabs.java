@@ -679,6 +679,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.RED_PINEAPPLE_SLICE.get());//红凤梨切块
                 output.accept(ModItems.LABA_GARLIC.get());//腊八蒜
                 output.accept(ModItems.RUSSIA_BLACK_BREAD.get());       //俄罗斯黑面包
+                output.accept(ModItems.FORESTERS_TEA.get());      //林业员茶饮
                 output.accept(ModItems.BLACK_BURGER.get());       //黑麦汉堡
                 output.accept(ModItems.BLACK_BURGER_BOTTOM.get());       //黑麦汉堡底
                 output.accept(ModItems.BLACK_BURGER_TOP.get());       //黑麦汉堡顶
