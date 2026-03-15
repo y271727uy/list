@@ -2,6 +2,8 @@ package com.list.all;
 
 import com.list.data.model.HaloModelBuilder;
 import com.list.item.DrinkItem;
+import com.list.item.BowlReturnFoodItem;
+import com.list.item.DelightKnifeItem;
 import com.list.item.EggItem;
 import com.list.item.GlowingItem;
 import com.list.util.ItemModelUtil;
@@ -11,6 +13,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
@@ -50,26 +53,26 @@ public class ModItems {
             .register();
         
 
-    // GT币
+    // 铜GT币
     public static final ItemEntry<Item> COPPER_GT_CREDIT = REGISTRATE
             .item("copper_gt_credit", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/copper_gt_credit")))
             .register();
 
-    // GT币
+    // 白铜GT币
     public static final ItemEntry<Item> CUPRONICKEL_GT_CREDIT = REGISTRATE
             .item("cupronickel_gt_credit", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/cupronickel_gt_credit")))
             .register();
 
-    // GT币
+    // 银GT币
     public static final ItemEntry<Item> SILVER_GT_CREDIT = REGISTRATE
             .item("silver_gt_credit", Item::new)
             .properties(p -> p.rarity(Rarity.UNCOMMON))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/silver_gt_credit")))
             .register();
 
-//GT币
+    //GT币
     public static final ItemEntry<Item> GOLD_GT_CREDIT = REGISTRATE
             .item("gold_gt_credit", Item::new)
             .properties(p -> p.rarity(Rarity.UNCOMMON))
@@ -107,6 +110,56 @@ public class ModItems {
             .register();
 //GT币结束
 
+//执照
+    // 铜
+    public static final ItemEntry<Item> COPPER_CERTIFICATE = REGISTRATE
+            .item("copper_certificate", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/copper_certificate")))
+            .register();
+
+    // 白铜
+    public static final ItemEntry<Item> CUPRONICKEL_CERTIFICATE = REGISTRATE
+            .item("cupronickel_certificate", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/cupronickel_certificate")))
+            .register();
+
+    // 银
+    public static final ItemEntry<Item> SILVER_CERTIFICATE = REGISTRATE
+            .item("silver_certificate", Item::new)
+            .properties(p -> p.rarity(Rarity.UNCOMMON))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/silver_certificate")))
+            .register();
+
+    public static final ItemEntry<Item> GOLD_CERTIFICATE = REGISTRATE
+            .item("gold_certificate", Item::new)
+            .properties(p -> p.rarity(Rarity.UNCOMMON))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/gold_certificate")))
+            .register();
+
+    public static final ItemEntry<Item> PLATINUM_CERTIFICATE = REGISTRATE
+            .item("platinum_certificate", Item::new)
+            .properties(p -> p.rarity(Rarity.UNCOMMON))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/platinum_certificate")))
+            .register();
+
+    public static final ItemEntry<Item> OSMIUM_CERTIFICATE  = REGISTRATE
+            .item("osmium_certificate", Item::new)
+            .properties(p -> p.rarity(Rarity.RARE))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/osmium_certificate")))
+            .register();
+
+    public static final ItemEntry<Item> NAQUADAH_CERTIFICATE = REGISTRATE
+            .item("naquadah_certificate", Item::new)
+            .properties(p -> p.rarity(Rarity.RARE))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/naquadah_certificate")))
+            .register();
+
+    public static final ItemEntry<Item> NEUTRONIUM_CERTIFICATE = REGISTRATE
+            .item("neutronium_certificate", Item::new)
+            .properties(p -> p.rarity(Rarity.RARE))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/neutronium_certificate")))
+            .register();
+//执照结束
 
     // 平平无奇的面包
     public static final ItemEntry<GlowingItem> JUST_BREAD = REGISTRATE
@@ -4144,6 +4197,86 @@ public static final ItemEntry<Item>  = REGISTRATE
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_talpanas_egg")))
             .register();
+        
+    // 煎grottoceratops_amlette蛋
+    public static final ItemEntry<Item> GROTTOSCERATOPS_AMLETTE = REGISTRATE
+    .item("grottoceratops_amlette", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/grottoceratops_amlette")))
+            .register();
+
+     // 煎蛋
+    public static final ItemEntry<Item> RELICHEIRUS_AMLETTE = REGISTRATE
+    .item("relicheirus_amlette", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/relicheirus_amlette")))
+            .register();
+
+    // 煎蛋
+    public static final ItemEntry<Item> SUBTERRANODON_AMLETTEX = REGISTRATE
+    .item("subterranodon_amlettex", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/subterranodon_amlettex")))
+            .register();
+
+// 煎蛋
+    public static final ItemEntry<Item> TREMORSAURUS_AMLETTE = REGISTRATE
+    .item("tremorsaurus_amlette", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/tremorsaurus_amlette")))
+            .register();
+
+// 煎蛋
+    public static final ItemEntry<Item> TREMORZILLA_AMLETTE_ANIM = REGISTRATE
+    .item("tremorzilla_amlette_anim", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/tremorzilla_amlette_anim")))
+            .register();           
+
+// 煎蛋
+    public static final ItemEntry<Item> VALLUMRAPTOR_AMLETTE = REGISTRATE
+    .item("vallumraptor_amlette", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/vallumraptor_amlette")))
+            .register();    
+
+// 煎蛋
+    public static final ItemEntry<Item> ATLATITAN_AMLETTE = REGISTRATE
+    .item("atlatitan_amlette", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/atlatitan_amlette")))
+            .register();    
+
+// 煎永恒胚胎
+    public static final ItemEntry<Item> AMMLET_FROM_EMBRYO = REGISTRATE
+    .item("ammlet_from_embryo", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.8f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/ammlet_from_embryo")))
+            .register();   
 
 
     // 蟹肉
@@ -4755,15 +4888,72 @@ public static final ItemEntry<Item>  = REGISTRATE
             .register();
 
     // 林业员茶饮
-    public static final ItemEntry<DrinkItem> FORESTERS_TEA = REGISTRATE 
+    public static final ItemEntry<DrinkItem> FORESTERS_TEA = REGISTRATE
             .item("foresters_tea", DrinkItem::new)
             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(3)
                     .saturationMod(2.3f) .build()))
-    .model((ctx, provider) -> provider
-    .generated(ctx::get, provider
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
             .modLoc("item/food/drink/foresters_tea")))
     .register();
+
+    // 水母苏打饮
+    public static final ItemEntry<DrinkItem> JELLYFISH_SODA = REGISTRATE
+            .item("jellyfish_soda", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+                    .generated(ctx::get, provider
+                            .modLoc("item/food/drink/jellyfish_soda")))
+            .register();
+           
+    // 树星茶饮
+    public static final ItemEntry<DrinkItem> TREESTAR_TEA = REGISTRATE
+            .item("treestar_tea", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+                    .generated(ctx::get, provider
+                            .modLoc("item/food/drink/treestar_tea")))
+            .register();
+
+    // 三叶虾意面
+    public static final ItemEntry<BowlReturnFoodItem> PASTA_WITH_TRILOCARIS_TAIL = REGISTRATE
+            .item("pasta_with_trilocaris_tail", BowlReturnFoodItem::new)
+            .model((ctx, provider) -> provider
+                    .generated(ctx::get, provider.modLoc("item/food/dish/pasta_with_trilocaris_tail")))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(15)
+                    .saturationMod(3.2f)
+                    .build()))
+            .register();
+
+
+    // 三脚鱼汤
+    public static final ItemEntry<BowlReturnFoodItem> TRIPODFISH_SOUP = REGISTRATE
+            .item("tripodfish_soup", BowlReturnFoodItem::new)
+            .model((ctx, provider) -> provider
+                    .generated(ctx::get, provider.modLoc("item/food/dish/tripodfish_soup")))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(10)
+                    .saturationMod(3.2f)
+                    .build()))
+            .register();
+
+    // 铀汤
+    public static final ItemEntry<BowlReturnFoodItem> URANIUM_SOUP = REGISTRATE
+            .item("uranium_soup", BowlReturnFoodItem::new)
+            .model((ctx, provider) -> provider
+                    .generated(ctx::get, provider.modLoc("item/food/dish/uranium_soup")))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(1.2f)
+                    .build()))
+            .register();
+
 
     //雄蜂
     public static final ItemEntry<Item> COLLAPSE_DRONE = REGISTRATE
@@ -4843,7 +5033,29 @@ public static final ItemEntry<Item>  = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/wooden_sand_fixation_grid")))
             .register();
 
+    //珍珠粉
+    public static final ItemEntry<Item> PEARL_DUST = REGISTRATE
+            .item("pearl_dust", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/pearl_dust")))
+            .register();
 
+   //青钕刀
+    public static final ItemEntry<DelightKnifeItem> AZURE_NEODYMIUM_KNIFE = REGISTRATE
+            .item("azure_neodymium_knife", p -> new DelightKnifeItem(Tiers.IRON, 0, -2.0F, p))
+            .model((ctx, provider) -> provider.handheld(ctx::get, provider.modLoc("item/manmade/tool/azure_neodymium_knife")))
+            .register();
+
+  //赤钕刀
+    public static final ItemEntry<DelightKnifeItem> SCARLET_NEODYMIUM_KNIFE = REGISTRATE
+            .item("scarlet_neodymium_knife", p -> new DelightKnifeItem(Tiers.IRON, 0, -2.0F, p))
+            .model((ctx, provider) -> provider.handheld(ctx::get, provider.modLoc("item/manmade/tool/scarlet_neodymium_knife")))
+            .register();
+
+//沉重骨刀
+    public static final ItemEntry<DelightKnifeItem> CLEAVER_OF_HEAVY_BONE = REGISTRATE
+            .item("cleaver_of_heavy_bone", p -> new DelightKnifeItem(Tiers.IRON, 0, -2.0F, p))
+            .model((ctx, provider) -> provider.handheld(ctx::get, provider.modLoc("item/manmade/tool/cleaver_of_heavy_bone")))
+            .register();
 
 
     public static void register() {

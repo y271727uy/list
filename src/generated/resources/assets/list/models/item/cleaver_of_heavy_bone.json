@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "list:item/manmade/tool/cleaver_of_heavy_bone"
+  }
+}

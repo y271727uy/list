@@ -1,0 +1,22 @@
+
+
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "alexscaves:uranium"
+    },
+    {
+      "item": "alexscaves:radon_bottle"
+    }
+  ],
+  "recipe_book_tab":"Uranium soup",
+  "result": {
+    "item": "list:uranium_soup"
+  }
+}

@@ -1,0 +1,21 @@
+
+
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "cookingtime": 400,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "alexscaves:pearl"
+    }
+  ],
+  "recipe_book_tab":"Pearl dust",
+  "result": {
+    "item": "list:pearl_dust"
+  }
+}
+
+

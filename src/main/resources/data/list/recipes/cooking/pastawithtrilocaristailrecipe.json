@@ -1,0 +1,26 @@
+
+
+
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "farmersdelight:raw_pasta"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    },
+    {
+      "item": "alexscaves:trilocaris_tail"
+    }
+  ],
+  "recipe_book_tab":"Pasta with trilocaris tail",
+  "result": {
+    "item": "list:pasta_with_trilocaris_tail"
+  }
+}

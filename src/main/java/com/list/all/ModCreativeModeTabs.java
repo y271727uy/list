@@ -49,6 +49,14 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.WEALTH_STAR.get());
                     output.accept(ModItems.ANIMAL_HUSBANDRY_STAR.get());
                     output.accept(ModItems.FARMERS_RANCH_STAR.get());
+                    output.accept(ModItems.COPPER_CERTIFICATE.get());
+                    output.accept(ModItems.CUPRONICKEL_CERTIFICATE.get());
+                    output.accept(ModItems.SILVER_CERTIFICATE.get());
+                    output.accept(ModItems.GOLD_CERTIFICATE.get());
+                    output.accept(ModItems.PLATINUM_CERTIFICATE.get());
+                    output.accept(ModItems.OSMIUM_CERTIFICATE.get());
+                    output.accept(ModItems.NAQUADAH_CERTIFICATE.get());
+                    output.accept(ModItems.NEUTRONIUM_CERTIFICATE.get());
                     output.accept(ModItems.COOK_ZHURUOLING_EGG.get());
                     output.accept(ModItems.ZHURUOLING_EGG.get());
                     output.accept(ModItems.COLLAPSE_DRONE.get());
@@ -675,11 +683,24 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.COOK_ANURO_EGG.get());       //煎anuro蛙嘴龙蛋 
                 output.accept(ModItems.COOK_ULUGH_EGG.get());       //煎ulugh乌鲁伯戈龙蛋
                 output.accept(ModItems.COOK_TALPANAS_EGG.get());       //煎talpanas鼹鸭蛋
+                output.accept(ModItems.GROTTOSCERATOPS_AMLETTE.get());     
+                output.accept(ModItems.RELICHEIRUS_AMLETTE.get());     
+                output.accept(ModItems.SUBTERRANODON_AMLETTEX.get());    
+                output.accept(ModItems.TREMORSAURUS_AMLETTE.get());     
+                output.accept(ModItems.TREMORZILLA_AMLETTE_ANIM.get());     
+                output.accept(ModItems.VALLUMRAPTOR_AMLETTE.get());     
+                output.accept(ModItems.ATLATITAN_AMLETTE.get());   
+                output.accept(ModItems.AMMLET_FROM_EMBRYO.get());     
                 output.accept(ModItems.RED_CABBAGE_LEAF.get());//红卷心菜叶
                 output.accept(ModItems.RED_PINEAPPLE_SLICE.get());//红凤梨切块
                 output.accept(ModItems.LABA_GARLIC.get());//腊八蒜
                 output.accept(ModItems.RUSSIA_BLACK_BREAD.get());       //俄罗斯黑面包
                 output.accept(ModItems.FORESTERS_TEA.get());      //林业员茶饮
+                output.accept(ModItems.JELLYFISH_SODA.get());
+                output.accept(ModItems.TREESTAR_TEA.get());
+                output.accept(ModItems.PASTA_WITH_TRILOCARIS_TAIL.get());
+                output.accept(ModItems.TRIPODFISH_SOUP.get());
+                output.accept(ModItems.URANIUM_SOUP.get());
                 output.accept(ModItems.BLACK_BURGER.get());       //黑麦汉堡
                 output.accept(ModItems.BLACK_BURGER_BOTTOM.get());       //黑麦汉堡底
                 output.accept(ModItems.BLACK_BURGER_TOP.get());       //黑麦汉堡顶
@@ -726,7 +747,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.DIAMOND_LATTICE_POTATO_BURGER_BOTTOM.get());       //晶格马铃薯
                 output.accept(ModItems.DIAMOND_LATTICE_POTATO_BURGER_TOP.get());       //晶格马铃薯
                 output.accept(ModItems.NEUTRONIUM_BURGER.get());       //简并态汉堡
-                output.accept(ModItems.NEUTRONIUM_BURGER_BOTTOM.get());       //
+                output.accept(ModItems.NEUTRONIUM_BURGER_BOTTOM.get());       //简并态汉堡底
                 output.accept(ModItems.NEUTRONIUM_BURGER_TOP.get());       //
                 output.accept(ModItems.NEUTRONIUM_BUTTER.get());       //中子素黄油
                 output.accept(ModItems.RYE_DOUGH.get());
@@ -1087,7 +1108,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PURE_BEEF_FEED.get());       //纯净牛肉饲料
                         output.accept(ModItems.PURE_PORKCHOP_FEED.get());       //纯净猪肉饲料
                         output.accept(ModItems.ADVANCED_PURE_MEAT_FEED.get());       //高级肉类饲料
+                        output.accept(ModItems.PEARL_DUST.get());
                         output.accept(ModItems.WOODEN_SAND_FIXATION_GRID.get());       //木制固沙方格
+                        output.accept(ModItems.AZURE_NEODYMIUM_KNIFE.get());      
+                        output.accept(ModItems.SCARLET_NEODYMIUM_KNIFE.get());      
+                        output.accept(ModItems.CLEAVER_OF_HEAVY_BONE.get());      
                         output.accept(ModBlocks.CURING_SAND.get());
                         output.accept(ModBlocks.CURING_RED_SAND.get());
                         output.accept(ModBlocks.CURING_GRAVEL.get());

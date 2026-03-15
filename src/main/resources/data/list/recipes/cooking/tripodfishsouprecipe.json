@@ -1,0 +1,25 @@
+
+
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "alexscaves:tripodfish"
+    },
+    {
+      "item": "farmersdelight:cabbage_leaf"
+    },
+    {
+      "item": "alexscaves:pewen_sap"
+    }
+  ],
+  "recipe_book_tab":"Tripodfish soup",
+  "result": {
+    "item": "list:tripodfish_soup"
+  }
+}
