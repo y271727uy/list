@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "list:block/cake/coffee_ice_cream_block"
+  }
+}

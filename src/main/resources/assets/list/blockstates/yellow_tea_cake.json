@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "bites=0": { "model": "list:block/cake/yellow_tea_cake" },
+    "bites=1": { "model": "list:block/cake/yellow_tea_cake_slice1" },
+    "bites=2": { "model": "list:block/cake/yellow_tea_cake_slice2" },
+    "bites=3": { "model": "list:block/cake/yellow_tea_cake_slice3" },
+    "bites=4": { "model": "list:block/cake/yellow_tea_cake_slice4" },
+    "bites=5": { "model": "list:block/cake/yellow_tea_cake_slice5" },
+    "bites=6": { "model": "list:block/cake/yellow_tea_cake_slice6" }
+  }
+}
+

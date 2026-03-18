@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "servings=3": {
+      "model": "list:block/italian_delight/pizza_dante_raw"
+    },
+    "servings=2": {
+      "model": "list:block/italian_delight/pizza_dante_raw"
+    },
+    "servings=1": {
+      "model": "list:block/italian_delight/pizza_dante_raw"
+    },
+    "servings=0": {
+      "model": "list:block/italian_delight/pizza_dante_raw"
+    }
+  }
+}
+
+

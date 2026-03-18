@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "bites=0": { "model": "list:block/cake/coffee_ice_cream_block" },
+    "bites=1": { "model": "list:block/cake/coffee_ice_cream_block" },
+    "bites=2": { "model": "list:block/cake/coffee_ice_cream_block" },
+    "bites=3": { "model": "list:block/cake/coffee_ice_cream_block" },
+    "bites=4": { "model": "list:block/cake/coffee_ice_cream_block" },
+    "bites=5": { "model": "list:block/cake/coffee_ice_cream_block" },
+    "bites=6": { "model": "list:block/cake/coffee_ice_cream_block" }
+  }
+}
+

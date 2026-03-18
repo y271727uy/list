@@ -695,12 +695,101 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.RED_PINEAPPLE_SLICE.get());//红凤梨切块
                 output.accept(ModItems.LABA_GARLIC.get());//腊八蒜
                 output.accept(ModItems.RUSSIA_BLACK_BREAD.get());       //俄罗斯黑面包
-                output.accept(ModItems.FORESTERS_TEA.get());      //林业员茶饮
+                output.accept(ModItems.FORESTERS_TEA.get());      //林业员茶饮  饮品
                 output.accept(ModItems.JELLYFISH_SODA.get());
                 output.accept(ModItems.TREESTAR_TEA.get());
+                output.accept(ModItems.ADZUKI_MILK_TEA.get()); 
+                output.accept(ModItems.MINT_GREEN_TEA.get()); 
+                output.accept(ModItems.MOCHA_COFFEE.get());
+                output.accept(ModItems.SNOW_TOP_BLACK_TEA.get()); 
+                output.accept(ModItems.SNOW_TOP_COFFEE.get()); 
+                output.accept(ModItems.SNOW_TOP_GREEN_TEA.get());
+                output.accept(ModItems.SNOW_TOP_YELLOW_TEA.get()); 
+                output.accept(ModItems.VANILLA_MILK_TEA.get()); 
+                output.accept(ModItems.BLACK_TEA_ICE_CREAM.get());
+                output.accept(ModItems.GREEN_TEA_ICE_CREAM.get());
+                output.accept(ModItems.YELLOW_TEA_ICE_CREAM.get());
+                output.accept(ModItems.COFFEE_ICE_CREAM.get());
+                output.accept(ModItems.RESPITEFUL_ICE_CREAM.get());
+                //output.accept(ModItems..get());
                 output.accept(ModItems.PASTA_WITH_TRILOCARIS_TAIL.get());
                 output.accept(ModItems.TRIPODFISH_SOUP.get());
                 output.accept(ModItems.URANIUM_SOUP.get());
+                output.accept(ModItems.PIZZA_PROSCIUTTO_RAW.get());       //生披萨
+                output.accept(ModItems.PIZZA_FUNGHI_RAW.get());       
+                output.accept(ModItems.PIZZA_MARGHERITA_RAW.get());       
+                output.accept(ModItems.PIZZA_DANTE_RAW.get());       
+                output.accept(ModItems.PIZZA_DIAVOLA_RAW.get());       
+                output.accept(ModBlocks.PIZZA_PROSCIUTTO.asItem());
+                output.accept(ModBlocks.PIZZA_FUNGHI.asItem());
+                output.accept(ModBlocks.PIZZA_MARGHERITA.asItem());
+                output.accept(ModBlocks.PIZZA_DANTE.asItem());
+                output.accept(ModBlocks.PIZZA_DIAVOLA.asItem());
+                output.accept(ModItems.PIZZA_PROSCIUTTO_SLICE.get());       
+                output.accept(ModItems.PIZZA_FUNGHI_SLICE.get());
+                output.accept(ModItems.PIZZA_MARGHERITA_SLICE.get());       
+                output.accept(ModItems.PIZZA_DANTE_SLICE.get());       
+                output.accept(ModItems.PIZZA_DIAVOLA_SLICE.get());
+                output.accept(ModItems.BACON_BURGER.get());
+                output.accept(ModItems.BASIC_BURGER.get());
+                output.accept(ModItems.CHICKEN_BURGER.get());
+                output.accept(ModItems.DOUBLE_PATTY_BURGER.get());
+                output.accept(ModBlocks.BLACK_TEA_CAKE.asItem());
+                output.accept(ModBlocks.GREEN_TEA_CAKE.asItem());
+                output.accept(ModBlocks.YELLOW_TEA_CAKE.asItem());
+                output.accept(ModItems.BLACK_TEA_CAKE_SLICE.get());
+                output.accept(ModItems.GREEN_TEA_CAKE_SLICE.get());
+                output.accept(ModItems.YELLOW_TEA_CAKE_SLICE.get());
+                //output.accept(ModItems..get()); 
+                //output.accept(ModItems..get()); 
+                //output.accept(ModItems..get());       
+                //output.accept(ModItems..get()); 
+                //output.accept(ModItems..get()); 
+                output.accept(ModItems.BERRY_DELIGHT.get());       
+                output.accept(ModItems.CIAMBALLONE.get());       
+                output.accept(ModItems.CIAMBALLONE_SLICE.get());       
+                output.accept(ModItems.MOZZARELLA.get());       
+                output.accept(ModItems.MOZZARELLA_SLICES.get());       
+                output.accept(ModItems.PANDORO_DOUGH.get());       
+                output.accept(ModItems.PANDORO.get());     
+                output.accept(ModItems.PANDORO_SLICE.get());       
+                output.accept(ModItems.PANETTONE.get());       
+                output.accept(ModItems.PANETTONE_SLICE.get());
+                output.accept(ModItems.TIRAMISU.get());       
+                output.accept(ModItems.BRUSCHETTA.get()); 
+                output.accept(ModItems.MOZZARELLA_SALAD.get());       
+                output.accept(ModItems.PASTA_AL_PESTO.get());    
+                output.accept(ModItems.PASTA_AL_TOMATO.get());   
+                output.accept(ModItems.RISOTTO_AL_FUNGGHI.get()); 
+                output.accept(ModItems.RISOTTO_AL_SUGO.get());
+                output.accept(ModItems.SALAME_SEAWEED_MIX.get());       
+                output.accept(ModItems.SALAME_WHOLE.get()); 
+                output.accept(ModItems.SALAME.get());
+                output.accept(ModItems.SALAMI_SLICES.get());       
+                output.accept(ModItems.BERRY_WINE.get()); 
+                output.accept(ModItems.DRAGONBORN_WINE.get());       
+                output.accept(ModItems.GLOWBERRY_WINE.get());       
+                output.accept(ModItems.HASTING_WINE.get());       
+                output.accept(ModItems.HELLHOUND_WINE.get()); 
+                output.accept(ModItems.ROSE_WINE.get()); 
+                output.accept(ModItems.SPUMANTE.get());       
+                output.accept(ModItems.WINE_PRE_SUBSTANCE.get());       
+                //output.accept(ModItems..get());       
+                //output.accept(ModItems..get()); 
+                //output.accept(ModItems..get());       
+                //output.accept(ModItems..get()); 
+                //output.accept(ModItems..get()); 
+                //output.accept(ModItems..get());       
+                //output.accept(ModItems..get());       
+                //output.accept(ModItems..get());       
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());       
+                //output.accept(ModItems..get()); 
+                //output.accept(ModItems..get()); 
+                //output.accept(ModItems..get());       
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());      
+                //output.accept(ModItems..get());       
                 output.accept(ModItems.BLACK_BURGER.get());       //黑麦汉堡
                 output.accept(ModItems.BLACK_BURGER_BOTTOM.get());       //黑麦汉堡底
                 output.accept(ModItems.BLACK_BURGER_TOP.get());       //黑麦汉堡顶
@@ -1110,6 +1199,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ADVANCED_PURE_MEAT_FEED.get());       //高级肉类饲料
                         output.accept(ModItems.PEARL_DUST.get());
                         output.accept(ModItems.WOODEN_SAND_FIXATION_GRID.get());       //木制固沙方格
+                        output.accept(ModItems.WINE_VIAL.get());
+                        output.accept(ModItems.WINE_BOTTLE.get());
                         output.accept(ModItems.AZURE_NEODYMIUM_KNIFE.get());      
                         output.accept(ModItems.SCARLET_NEODYMIUM_KNIFE.get());      
                         output.accept(ModItems.CLEAVER_OF_HEAVY_BONE.get());      

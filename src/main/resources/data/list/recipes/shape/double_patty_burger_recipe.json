@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "ingredients": [
+    {
+      "item": "farmersdelight:beef_patty"
+    },
+    {
+      "item": "farmersdelight:hamburger"
+    }
+  ],
+  "result": {
+    "item": "list:double_patty_burger"
+  }
+}

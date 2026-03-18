@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "servings=3": {
+      "model": "list:block/italian_delight/pizza_prosciutto"
+    },
+    "servings=2": {
+      "model": "list:block/italian_delight/pizza_prosciutto_slice1"
+    },
+    "servings=1": {
+      "model": "list:block/italian_delight/pizza_prosciutto_slice2"
+    },
+    "servings=0": {
+      "model": "list:block/italian_delight/pizza_prosciutto_slice3"
+    }
+  }
+}
+

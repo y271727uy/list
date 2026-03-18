@@ -9,6 +9,7 @@ import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import com.list.block.ForestryHybridizerBlock;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
@@ -137,6 +138,80 @@ public class ModBlocks {
                 provider.horizontalBlock(ctx.get(), model);
             })
             .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+
+    // Italian Delight pizzas (servings-based cakes)
+    public static final BlockEntry<CommonPizzaBlock> PIZZA_PROSCIUTTO = REGISTRATE
+            .block("pizza_prosciutto", ctx -> new CommonPizzaBlock(() -> ModItems.PIZZA_PROSCIUTTO_SLICE.get(), BlockBehaviour.Properties.copy(Blocks.CAKE)))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.getExistingFile(prov.modLoc("item/italian_delight/pizza_prosciutto")))
+            .build()
+            .blockstate((ctx, prov) -> {})
+            .register();
+
+    public static final BlockEntry<CommonPizzaBlock> PIZZA_FUNGHI = REGISTRATE
+            .block("pizza_funghi", ctx -> new CommonPizzaBlock(() -> ModItems.PIZZA_FUNGHI_SLICE.get(), BlockBehaviour.Properties.copy(Blocks.CAKE)))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.getExistingFile(prov.modLoc("item/italian_delight/pizza_funghi")))
+            .build()
+            .blockstate((ctx, prov) -> {})
+            .register();
+
+    public static final BlockEntry<CommonPizzaBlock> PIZZA_MARGHERITA = REGISTRATE
+            .block("pizza_margherita", ctx -> new CommonPizzaBlock(() -> ModItems.PIZZA_MARGHERITA_SLICE.get(), BlockBehaviour.Properties.copy(Blocks.CAKE)))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.getExistingFile(prov.modLoc("item/italian_delight/pizza_margherita")))
+            .build()
+            .blockstate((ctx, prov) -> {})
+            .register();
+
+    public static final BlockEntry<CommonPizzaBlock> PIZZA_DANTE = REGISTRATE
+            .block("pizza_dante", ctx -> new CommonPizzaBlock(() -> ModItems.PIZZA_DANTE_SLICE.get(), BlockBehaviour.Properties.copy(Blocks.CAKE)))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.getExistingFile(prov.modLoc("item/italian_delight/pizza_dante")))
+            .build()
+            .blockstate((ctx, prov) -> {})
+            .register();
+
+    public static final BlockEntry<CommonPizzaBlock> PIZZA_DIAVOLA = REGISTRATE
+            .block("pizza_diavola", ctx -> new CommonPizzaBlock(() -> ModItems.PIZZA_DIAVOLA_SLICE.get(), BlockBehaviour.Properties.copy(Blocks.CAKE)))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.getExistingFile(prov.modLoc("item/italian_delight/pizza_diavola")))
+            .build()
+            .blockstate((ctx, prov) -> {})
+            .register();
+
+    public static final BlockEntry<CommonCakeBlock> BLACK_TEA_CAKE = REGISTRATE
+            .block("black_tea_cake", ctx -> new CommonCakeBlock(() -> ModItems.BLACK_TEA_CAKE_SLICE.get(), BlockBehaviour.Properties.copy(Blocks.CAKE)))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.generated(ctx, prov.modLoc("item/food/cake/black_tea_cake")))
+            .build()
+            .blockstate((ctx, prov) -> {})
+            .register();
+
+    public static final BlockEntry<CommonCakeBlock> GREEN_TEA_CAKE = REGISTRATE
+            .block("green_tea_cake", ctx -> new CommonCakeBlock(() -> ModItems.GREEN_TEA_CAKE_SLICE.get(), BlockBehaviour.Properties.copy(Blocks.CAKE)))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.generated(ctx, prov.modLoc("item/food/cake/green_tea_cake")))
+            .build()
+            .blockstate((ctx, prov) -> {})
+            .register();
+
+    public static final BlockEntry<CommonCakeBlock> YELLOW_TEA_CAKE = REGISTRATE
+            .block("yellow_tea_cake", ctx -> new CommonCakeBlock(() -> ModItems.YELLOW_TEA_CAKE_SLICE.get(), BlockBehaviour.Properties.copy(Blocks.CAKE)))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.generated(ctx, prov.modLoc("item/food/cake/yellow_tea_cake")))
+            .build()
+            .blockstate((ctx, prov) -> {})
             .register();
 
 

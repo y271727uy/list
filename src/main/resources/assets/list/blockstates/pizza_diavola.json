@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "servings=3": {
+      "model": "list:block/italian_delight/pizza_diavola"
+    },
+    "servings=2": {
+      "model": "list:block/italian_delight/pizza_diavola_slice1"
+    },
+    "servings=1": {
+      "model": "list:block/italian_delight/pizza_diavola_slice2"
+    },
+    "servings=0": {
+      "model": "list:block/italian_delight/pizza_diavola_slice3"
+    }
+  }
+}
+

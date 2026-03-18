@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/cake_slice6",
+  "textures": {
+    "bottom": "list:block/cake/yellow_tea_cake_bottom",
+    "inside": "list:block/cake/yellow_tea_cake_inner",
+    "particle": "list:block/cake/yellow_tea_cake_side",
+    "side": "list:block/cake/yellow_tea_cake_side",
+    "top": "list:block/cake/yellow_tea_cake_top"
+  }
+}

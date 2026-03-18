@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "list:item/food/italian_delight/mushroom_pizza_slice"
+  }
+}
+
