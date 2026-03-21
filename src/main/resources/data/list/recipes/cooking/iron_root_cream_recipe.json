@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "ingredients": [
+    {
+      "item": "vital_herbs:iron_root"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "item": "farmersdelight:milk_bottle"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "item": "vital_herbs:iron_root_cream"
+  },
+  "container": {
+    "item": "minecraft:glass_bottle"
+  }
+}

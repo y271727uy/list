@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/bountiful_harvest/rice_bag_bottom",
+    "east": "list:block/bountiful_harvest/rice_bag_side",
+    "north": "list:block/bountiful_harvest/rice_bag_side",
+    "particle": "list:block/bountiful_harvest/rice_bag_side",
+    "south": "list:block/bountiful_harvest/rice_bag_side",
+    "up": "list:block/bountiful_harvest/pecan_bag_top",
+    "west": "list:block/bountiful_harvest/rice_bag_side"
+  }
+}

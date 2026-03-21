@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "ingredients": [
+    {
+      "item": "vital_herbs:needle_heart"
+    },
+    {
+      "item": "vital_herbs:razor_leaf"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "item": "vital_herbs:thorn_heart_tea"
+  },
+  "container": {
+    "item": "minecraft:glass_bottle"
+  }
+}

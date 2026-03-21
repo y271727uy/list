@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "ingredients": [
+    {
+      "item": "vital_herbs:sooth_blossom"
+    },
+    {
+      "item": "minecraft:honeycomb+"
+    },
+    {
+      "item": "farmersdelight:milk_bottle"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "item": "vital_herbs:soothing_cream_blossom"
+  },
+  "container": {
+    "item": "minecraft:glass_bottle"
+  }
+}

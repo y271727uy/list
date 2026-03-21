@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "list:block/bountiful_harvest/cornucopia_block"
+    }
+  }
+}

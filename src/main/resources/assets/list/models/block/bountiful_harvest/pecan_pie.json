@@ -1,0 +1,9 @@
+{
+  "parent": "farmersdelight:block/pie",
+  "textures": {
+    "particle": "list:block/bountiful_harvest/pecan_pie_top",
+    "bottom": "farmersdelight:block/pie_bottom",
+    "side": "farmersdelight:block/pie_side",
+    "top": "list:block/bountiful_harvest/pecan_pie_top"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "ingredients": [
+    {
+      "item": "vital_herbs:grim_vine"
+    },
+    {
+      "item": "minecraft:phantom_membrane"
+    },
+    {
+      "item": "farmersdelight:milk_bottle"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "item": "vital_herbs:grim_poisonous_tea"
+  },
+  "container": {
+    "item": "minecraft:glass_bottle"
+  }
+}

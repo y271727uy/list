@@ -7,6 +7,7 @@ import com.list.block.mushroom.CaveMushroomBlock;
 import com.list.block.colony.SeaMushroomColonyBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -212,6 +213,93 @@ public class ModBlocks {
             .model((ctx, prov) -> prov.generated(ctx, prov.modLoc("item/food/cake/yellow_tea_cake")))
             .build()
             .blockstate((ctx, prov) -> {})
+            .register();
+
+    public static final BlockEntry<Block> CORNUCOPIA_BLOCK = REGISTRATE
+            .block("cornucopia_block", Block::new)
+            .initialProperties(() -> Blocks.HAY_BLOCK)
+            .properties(p -> p.sound(SoundType.WOOL).strength(0.5F).noOcclusion())
+            .item()
+            .model((ctx, prov) -> prov.generated(ctx, prov.modLoc("item/food/bountiful_harvest/cornucopia")))
+            .build()
+            .blockstate((ctx, provider) -> provider.simpleBlock(
+                    ctx.get(),
+                    provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/cornucopia_block"))
+            ))
+            .tag(BlockTags.MINEABLE_WITH_AXE)
+            .register();
+
+   
+
+    public static final BlockEntry<FourStageFoodBlock> PECAN_PIE = REGISTRATE
+            .block("pecan_pie", ctx -> new FourStageFoodBlock(
+                    BlockBehaviour.Properties.copy(Blocks.CAKE).noOcclusion(),
+                    () -> ModItems.PECAN.get(),
+                    BountifulHarvestBlockShapes.PIE_SHAPE,
+                    true
+            ))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.generated(ctx, prov.modLoc("item/food/bountiful_harvest/pecan_pie")))
+            .build()
+            .blockstate((ctx, provider) -> provider.getVariantBuilder(ctx.get())
+                    .partialState().with(ctx.get().getStageProperty(), 0)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/pecan_pie"))).addModel()
+                    .partialState().with(ctx.get().getStageProperty(), 1)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/pecan_pie_slice1"))).addModel()
+                    .partialState().with(ctx.get().getStageProperty(), 2)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/pecan_pie_slice2"))).addModel()
+                    .partialState().with(ctx.get().getStageProperty(), 3)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/pecan_pie_slice3"))).addModel())
+            .register();
+
+    public static final BlockEntry<RoastTurkeyBlock> ROAST_TURKEY_BLOCK = REGISTRATE
+            .block("roast_turkey_block", ctx -> new RoastTurkeyBlock(
+                    BlockBehaviour.Properties.copy(Blocks.CAKE).noOcclusion(),
+                    () -> ModItems.ROAST_TURKEY.get(),
+                    BountifulHarvestBlockShapes.LOW_TRAY_SHAPE,
+                    true
+            ))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.generated(ctx, prov.modLoc("item/food/bountiful_harvest/roast_turkey_block")))
+            .build()
+            .blockstate((ctx, provider) -> provider.getVariantBuilder(ctx.get())
+                    .partialState().with(ctx.get().getStageProperty(), 0)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/roast_turkey_block_stage0"))).addModel()
+                    .partialState().with(ctx.get().getStageProperty(), 1)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/roast_turkey_block_stage1"))).addModel()
+                    .partialState().with(ctx.get().getStageProperty(), 2)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/roast_turkey_block_stage2"))).addModel()
+                    .partialState().with(ctx.get().getStageProperty(), 3)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/roast_turkey_block_stage3"))).addModel()
+                    .partialState().with(ctx.get().getStageProperty(), 4)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/roast_turkey_block_stage4"))).addModel()
+                    .partialState().with(ctx.get().getStageProperty(), 5)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/roast_turkey_block_leftover"))).addModel())
+            .register();
+
+    public static final BlockEntry<SweetPotatoCasseroleTrayBlock> SWEET_POTATO_CASSEROLE_BLOCK = REGISTRATE
+            .block("sweet_potato_casserole_block", ctx -> new SweetPotatoCasseroleTrayBlock(
+                    BlockBehaviour.Properties.copy(Blocks.CAKE).noOcclusion(),
+                    () -> ModItems.SWEET_POTATO_CASSEROLE.get(),
+                    () -> ModItems.PAN.get(),
+                    BountifulHarvestBlockShapes.LOW_TRAY_SHAPE,
+                    true
+            ))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.generated(ctx, prov.modLoc("item/food/bountiful_harvest/sweet_potato_casserole_block")))
+            .build()
+            .blockstate((ctx, provider) -> provider.getVariantBuilder(ctx.get())
+                    .partialState().with(ctx.get().getStageProperty(), 0)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/sweet_potato_casserole_block_stage0"))).addModel()
+                    .partialState().with(ctx.get().getStageProperty(), 1)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/sweet_potato_casserole_block_stage1"))).addModel()
+                    .partialState().with(ctx.get().getStageProperty(), 2)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/sweet_potato_casserole_block_stage2"))).addModel()
+                    .partialState().with(ctx.get().getStageProperty(), 3)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/bountiful_harvest/sweet_potato_casserole_block_leftover"))).addModel())
             .register();
 
 
@@ -543,6 +631,24 @@ public static final BlockEntry<CommonBlock> WATERMELON_BLOCK_SIDE = REGISTRATE
             .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
             .register();
 
+public static final BlockEntry<Block> PECAN_BAG = REGISTRATE
+            .block("pecan_bag", Block::new)
+            .initialProperties(() -> Blocks.OAK_PLANKS)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/bountiful_harvest/rice_bag_bottom"),         //底部 up
+                        provider.modLoc("block/bountiful_harvest/pecan_bag_top"),     //顶部 dowm
+                        provider.modLoc("block/bountiful_harvest/rice_bag_side"),    //北 north
+                        provider.modLoc("block/bountiful_harvest/rice_bag_side"),    //南 sorth
+                        provider.modLoc("block/bountiful_harvest/rice_bag_side"),    //西 west
+                        provider.modLoc("block/bountiful_harvest/rice_bag_side")     //东 east
+                ).texture("particle", provider.modLoc("block/bountiful_harvest/rice_bag_side"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
 
     public static final BlockEntry<Block> ALLIUM_CRATE = REGISTRATE
             .block("allium_crate", Block::new)

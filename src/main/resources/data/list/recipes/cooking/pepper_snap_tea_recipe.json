@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "ingredients": [
+    {
+      "item": "vital_herbs:snap_pepper"
+    },
+    {
+      "item": "vital_herbs:polished_shell"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "item": "vital_herbs:pepper_snap_tea"
+  },
+  "container": {
+    "item": "minecraft:glass_bottle"
+  }
+}

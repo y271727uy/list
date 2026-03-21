@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "farmersdelight:block/rice_bag_bottom",
+    "side": "farmersdelight:block/rice_bag_side",
+    "top": "list:block/bountiful_harvest/pecan_bag_top"
+  }
+}

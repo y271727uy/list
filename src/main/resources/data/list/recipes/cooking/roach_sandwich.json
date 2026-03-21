@@ -1,0 +1,28 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "list:bottled_roach"
+    },
+    {
+      "item": "list:bottled_roach"
+    },
+    {
+      "item": "list:bottled_roach"
+    },
+    {
+      "tag": "forge:vegetables"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "list:roach_sandwich"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "list:sweet_potato_casserole_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "list:blocks/sweet_potato_casserole_block"
+}

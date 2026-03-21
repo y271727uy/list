@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "ingredients": [
+    {
+      "item": "vital_herbs:mourning_bloom"
+    },
+    {
+      "item": "vital_herbs:soul_dust"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "item": "vital_herbs:mourning_tea"
+  },
+  "container": {
+    "item": "minecraft:glass_bottle"
+  }
+}

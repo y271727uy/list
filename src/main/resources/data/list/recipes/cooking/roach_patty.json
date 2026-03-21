@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "list:bottled_roach"
+    },
+    {
+      "item": "list:bottled_roach"
+    },
+    {
+      "item": "list:bottled_roach"
+    },
+    {
+      "item": "farmersdelight:wheat_dough"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "list:roach_patty"
+  }
+}

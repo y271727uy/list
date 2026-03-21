@@ -711,6 +711,16 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.YELLOW_TEA_ICE_CREAM.get());
                 output.accept(ModItems.COFFEE_ICE_CREAM.get());
                 output.accept(ModItems.RESPITEFUL_ICE_CREAM.get());
+                output.accept(ModBlocks.PECAN_PIE.get());
+                output.accept(ModBlocks.ROAST_TURKEY_BLOCK.get());
+                output.accept(ModBlocks.SWEET_POTATO_CASSEROLE_BLOCK.get());
+                output.accept(ModItems.PECAN_PIE_SLICE.get());
+                output.accept(ModItems.SWEET_POTATO_CASSEROLE.get());
+                output.accept(ModItems.ROAST_TURKEY.get());
+                output.accept(ModItems.STUFFING.get());
+                output.accept(ModItems.MASHED_POTATOES_AND_GRAVY.get());
+                //output.accept(ModBlocks..get());
+                //output.accept(ModBlocks..get());
                 //output.accept(ModItems..get());
                 output.accept(ModItems.PASTA_WITH_TRILOCARIS_TAIL.get());
                 output.accept(ModItems.TRIPODFISH_SOUP.get());
@@ -773,7 +783,21 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.HELLHOUND_WINE.get()); 
                 output.accept(ModItems.ROSE_WINE.get()); 
                 output.accept(ModItems.SPUMANTE.get());       
-                output.accept(ModItems.WINE_PRE_SUBSTANCE.get());       
+                output.accept(ModItems.WINE_PRE_SUBSTANCE.get()); 
+                output.accept(ModItems.GOKIBURI_YAKI.get()); //蟑螂乐事？
+                output.accept(ModItems.JUICY_ROAST_ROACH.get());
+                output.accept(ModItems.PROTEIN_BLOCK.get());
+                output.accept(ModItems.ROACH_BURGER.get());
+                output.accept(ModItems.ROACH_PATTY.get());
+                output.accept(ModItems.ROACH_ROLL.get());
+                output.accept(ModItems.ROACH_SALAD_PLATTER.get());
+                output.accept(ModItems.ROACH_SANDWICH.get());
+                output.accept(ModItems.ROACH_SKEWER.get());
+                output.accept(ModItems.ROACH_WHISKER_CANDY.get());
+                output.accept(ModItems.ROACH_MEATBALL.get());  
+                output.accept(ModItems.KANGFU_XIN_YE.get());
+                output.accept(ModItems.BOTTLED_ROACH.get());
+                //output.accept(ModItems..get());    
                 //output.accept(ModItems..get());       
                 //output.accept(ModItems..get()); 
                 //output.accept(ModItems..get());       
@@ -844,6 +868,19 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.GIANT_CLAM_MEAT.get());     //砗磲肉
                 output.accept(ModItems.CRAB_MEAT.get());   //蟹肉
                 output.accept(ModItems.WAGYU_BEEF.get());
+                output.accept(ModItems.GOKIBURI_YAKI.get()); //蟑螂乐事？
+                output.accept(ModItems.JUICY_ROAST_ROACH.get());
+                output.accept(ModItems.PROTEIN_BLOCK.get());
+                output.accept(ModItems.ROACH_BURGER.get());
+                output.accept(ModItems.ROACH_PATTY.get());
+                output.accept(ModItems.ROACH_ROLL.get());
+                output.accept(ModItems.ROACH_SALAD_PLATTER.get());
+                output.accept(ModItems.ROACH_SANDWICH.get());
+                output.accept(ModItems.ROACH_SKEWER.get());
+                output.accept(ModItems.ROACH_WHISKER_CANDY.get());
+                output.accept(ModItems.ROACH_MEATBALL.get());
+                //output.accept(ModItems..get());
+                //output.accept(ModItems..get());
                 
             })
             .build()
@@ -1201,6 +1238,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.WOODEN_SAND_FIXATION_GRID.get());       //木制固沙方格
                         output.accept(ModItems.WINE_VIAL.get());
                         output.accept(ModItems.WINE_BOTTLE.get());
+                        output.accept(ModItems.EMPTY_CORNucOPIA.get());
+                        output.accept(ModItems.PAN.get());
                         output.accept(ModItems.AZURE_NEODYMIUM_KNIFE.get());      
                         output.accept(ModItems.SCARLET_NEODYMIUM_KNIFE.get());      
                         output.accept(ModItems.CLEAVER_OF_HEAVY_BONE.get());      
@@ -1217,6 +1256,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.WATERMELON_BLOCK_CORNER.get());
                         output.accept(ModBlocks.WATERMELON_FLESH_BLOCK.get());
 
+                        //output.accept(ModBlocks.PECAN_BAG.get());
                         output.accept(ModBlocks.ALLIUM_CRATE.get());       //囤积
                         output.accept(ModBlocks.AZURE_BLUET_CRATE.get());
                         output.accept(ModBlocks.BAKED_POTATO_CRATE.get());

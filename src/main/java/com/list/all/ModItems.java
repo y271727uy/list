@@ -3778,15 +3778,6 @@ public static final ItemEntry<Item> CASHEW = REGISTRATE
                 .build()))
         .register();
 
-// 碧根果
-public static final ItemEntry<Item> PECAN = REGISTRATE
-        .item("pecan", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/pecan")))
-        .properties(p -> p.food(new FoodProperties.Builder()
-                .nutrition(3)
-                .saturationMod(1.2f)
-                .build()))
-        .register();
 
 // 开心果
 public static final ItemEntry<Item> PISTACHIO = REGISTRATE
@@ -5492,6 +5483,193 @@ public static final ItemEntry<Item> DOUBLE_PATTY_BURGER = REGISTRATE
                     .saturationMod(2.3f)
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/buger/double_patty_burger")))
+            .register();
+
+//蟑螂乐事/农夫悲事
+public static final ItemEntry<Item> GOKIBURI_YAKI = REGISTRATE
+            .item("gokiburi_yaki", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/roach/gokiburi_yaki")))
+            .register();
+
+public static final ItemEntry<Item> JUICY_ROAST_ROACH = REGISTRATE
+            .item("juicy_roast_roach", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/roach/juicy_roast_roach")))
+            .register();
+
+public static final ItemEntry<Item> PROTEIN_BLOCK = REGISTRATE
+            .item("protein_block", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/roach/protein_block")))
+            .register();
+
+public static final ItemEntry<Item> ROACH_BURGER = REGISTRATE
+            .item("roach_burger", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/roach/roach_burger")))
+            .register();
+
+public static final ItemEntry<Item> ROACH_PATTY = REGISTRATE
+            .item("roach_patty", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/roach/roach_patty")))
+            .register();
+
+public static final ItemEntry<Item> ROACH_ROLL = REGISTRATE
+            .item("roach_roll", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/roach/roach_roll")))
+            .register();
+
+public static final ItemEntry<Item> ROACH_SALAD_PLATTER = REGISTRATE
+            .item("roach_salad_platter", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/roach/roach_salad_platter")))
+            .register();
+
+public static final ItemEntry<Item> ROACH_SANDWICH = REGISTRATE
+            .item("roach_sandwich", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/roach/roach_sandwich")))
+            .register();
+
+public static final ItemEntry<Item> ROACH_SKEWER = REGISTRATE
+            .item("roach_skewer", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/roach/roach_skewer")))
+            .register();
+
+public static final ItemEntry<Item> ROACH_WHISKER_CANDY = REGISTRATE
+            .item("roach_whisker_candy", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/roach/roach_whisker_candy")))
+            .register();
+
+public static final ItemEntry<Item> ROACH_MEATBALL = REGISTRATE
+            .item("roach_meatball", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/roach/roach_meatball")))
+            .register();
+
+//蟑螂三件套
+//康复新液
+    public static final ItemEntry<DrinkItem> KANGFU_XIN_YE = REGISTRATE
+            .item("kangfu_xin_ye", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/roach/kangfu_xin_ye")))
+    .register();
+
+    public static final ItemEntry<DrinkItem> BOTTLED_ROACH = REGISTRATE
+            .item("bottled_roach", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/roach/bottled_roach")))
+    .register();
+//蟑螂结束
+//感恩节乐事
+public static final ItemEntry<Item> PECAN_PIE_SLICE = REGISTRATE
+            .item("pecan_pie_slice", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(1.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/bountiful_harvest/pecan_pie_slice")))
+            .register();
+
+public static final ItemEntry<BowlReturnFoodItem> SWEET_POTATO_CASSEROLE = REGISTRATE
+            .item("sweet_potato_casserole", BowlReturnFoodItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(2.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/bountiful_harvest/sweet_potato_casserole")))
+            .register();
+
+public static final ItemEntry<BowlReturnFoodItem> ROAST_TURKEY = REGISTRATE
+            .item("roast_turkey", BowlReturnFoodItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(2.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/bountiful_harvest/roast_turkey")))
+            .register();
+
+public static final ItemEntry<BowlReturnFoodItem> STUFFING = REGISTRATE
+            .item("stuffing", BowlReturnFoodItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(2.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/bountiful_harvest/stuffing")))
+            .register();
+
+public static final ItemEntry<BowlReturnFoodItem> MASHED_POTATOES_AND_GRAVY = REGISTRATE
+            .item("mashed_potatoes_and_gravy", BowlReturnFoodItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(2.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/bountiful_harvest/mashed_potatoes_and_gravy")))
+            .register();
+
+public static final ItemEntry<Item> PECAN = REGISTRATE
+            .item("pecan", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.2f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/bountiful_harvest/pecan")))
+            .register();
+
+    public static final ItemEntry<Item> EMPTY_CORNucOPIA = REGISTRATE
+            .item("empty_cornucopia", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/bountiful_harvest/empty_cornucopia")))
+            .register();
+
+    public static final ItemEntry<Item> PAN = REGISTRATE
+            .item("pan", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/bountiful_harvest/pan")))
             .register();
 
     //雄蜂

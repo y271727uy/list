@@ -1,0 +1,75 @@
+List Mod License Summaries 
+List模组许可协议汇总
+
+The code of this project follows the LGPL-3.0-only License. 
+All original texture resources of this project are All Rights Reserved.
+This project does not claim any rights over non-project resources.
+This project does not assert any rights over non-project resources.
+本项目代码遵循LGPL-3.0-Only License
+本项目所有原创纹理资源保留所有权利
+本项目对非本项目资源不主张任何权利
+第三方许可仅适用于原始资源，使用该资源的项目不因此整体受约束
+
+Third-party license summaries 
+第三方许可协议汇总
+
+MIT License
+
+Copyright (c) [year] [fullname]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Involving the project
+涉及项目
+
+Project Name:Skyblock Burgeria
+Copyright (c) xXStrayXx
+License: MIT
+
+Project Name:Italian's Delight
+Copyright (c) WhaltaWhite
+License: MIT
+
+Project Name:Respiteful
+Copyright (c) 2023 LimonBlaze
+License: MIT
+
+Project Name:Delightful Burgers
+Copyright (c) luhcarti
+License: MIT
+
+Project Name:Roach's Delight/FarmerMisery
+Copyright (c) 2024 someoneice(AmarokIce) & DeFeck
+License: MIT
+
+Project Name:Alex's Caves Delight
+Copyright (c) Linnett Mods
+License: MIT
+
+Project Name:Bountiful Harvest
+Copyright (c) zjjohn121110
+License: MIT
+
+Project Name:
+Copyright (c) 
+License: MIT
+
+Project Name:
+Copyright (c) 
+License: MIT

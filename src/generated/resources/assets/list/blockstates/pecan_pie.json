@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "list:block/bountiful_harvest/pecan_pie"
+    },
+    "stage=1": {
+      "model": "list:block/bountiful_harvest/pecan_pie_slice1"
+    },
+    "stage=2": {
+      "model": "list:block/bountiful_harvest/pecan_pie_slice2"
+    },
+    "stage=3": {
+      "model": "list:block/bountiful_harvest/pecan_pie_slice3"
+    }
+  }
+}

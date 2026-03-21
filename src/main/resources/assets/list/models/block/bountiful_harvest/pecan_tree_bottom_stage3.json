@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "list:block/bountiful_harvest/pecan_tree_bottom_stage3"
+  }
+}

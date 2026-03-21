@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "list:block/bountiful_harvest/sweet_potato_casserole_block_stage0"
+    },
+    "stage=1": {
+      "model": "list:block/bountiful_harvest/sweet_potato_casserole_block_stage1"
+    },
+    "stage=2": {
+      "model": "list:block/bountiful_harvest/sweet_potato_casserole_block_stage2"
+    },
+    "stage=3": {
+      "model": "list:block/bountiful_harvest/sweet_potato_casserole_block_leftover"
+    }
+  }
+}
+

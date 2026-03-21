@@ -1,0 +1,13 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "list:bottled_roach"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "list:juicy_roast_roach"
+  }
+}
