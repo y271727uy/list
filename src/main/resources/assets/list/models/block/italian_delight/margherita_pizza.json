@@ -1,0 +1,8 @@
+{
+    "parent": "italian_delight:block/pizza",
+    "textures": {
+        "particle": "italian_delight:block/pizza_top_1",
+        "top": "italian_delight:block/pizza_top_1",
+        "layer": "italian_delight:block/margherita_pizza"
+    }
+}
