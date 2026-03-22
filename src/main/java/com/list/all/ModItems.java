@@ -2,23 +2,22 @@ package com.list.all;
 
 import com.list.data.model.HaloModelBuilder;
 import com.list.item.DrinkItem;
+import com.list.item.CanDrinkItem;
 import com.list.item.BowlReturnFoodItem;
 import com.list.item.DelightKnifeItem;
 import com.list.item.EggItem;
 import com.list.item.GlowingItem;
+import com.list.item.gag_item.fishy_lemon;
 import com.list.util.ItemModelUtil;
 import com.tterrag.registrate.util.entry.ItemEntry;
-import net.minecraft.sounds.SoundEvents;
+import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Tiers;
-import net.minecraft.world.item.crafting.Ingredient;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
-import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 
-import static com.ibm.icu.impl.CurrencyData.provider;
+import java.util.function.BiConsumer;
+
 import static com.list.ListMod.REGISTRATE;
 
 public class ModItems {
@@ -243,6 +242,8 @@ public class ModItems {
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/special_item/cook_zhuruoling_egg")))
             .properties(p -> p.rarity(Rarity.EPIC))
             .register();
+
+
 
     //粉猫蛋
     public static final ItemEntry<Item> ZHURUOLING_EGG = REGISTRATE
@@ -5672,6 +5673,319 @@ public static final ItemEntry<Item> PECAN = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/bountiful_harvest/pan")))
             .register();
 
+// GregTech Food Option 格雷科技食物优选
+// 这里是阉割版，完整版还是要等CTNH发力的
+public static final ItemEntry<Item> ALL_SMOGUS = REGISTRATE
+            .item("all_smogus", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(16)
+                    .saturationMod(7.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/all_smogus")))
+            .register();
+
+public static final ItemEntry<Item> MULTI_SMOGUS = REGISTRATE
+            .item("multi_smogus", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(14)
+                    .saturationMod(7.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/multi_smogus")))
+            .register();
+
+public static final ItemEntry<Item> SMOGUS = REGISTRATE
+            .item("smogus", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(10)
+                    .saturationMod(7.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/smogus")))
+            .register();
+
+public static final ItemEntry<Item> SMORE = REGISTRATE
+            .item("smore", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/smore")))
+            .register();
+
+public static final ItemEntry<Item> CHUM_BURGER = REGISTRATE
+            .item("chum_burger", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/chum_burger")))
+            .register();
+
+public static final ItemEntry<Item> MEAT_BURGER = REGISTRATE
+            .item("meat_burger", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/meat_burger")))
+            .register();
+
+public static final ItemEntry<Item> CHEESE_BURGER = REGISTRATE
+            .item("cheese_burger", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/cheese_burger")))
+            .register();
+
+public static final ItemEntry<Item> VEGGIE_BURGER = REGISTRATE
+            .item("veggie_burger", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/veggie_burger")))
+            .register();
+
+public static final ItemEntry<Item> VEGGIE_SANDWICH = REGISTRATE
+            .item("veggie_sandwich", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/veggie_sandwich")))
+            .register();
+
+public static final ItemEntry<Item> CHEESE_SANDWICH = REGISTRATE
+            .item("cheese_sandwich", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/cheese_sandwich")))
+            .register();
+
+public static final ItemEntry<Item> LARGE_BACON_SANDWICH = REGISTRATE
+            .item("large_bacon_sandwich", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/large_bacon_sandwich")))
+            .register();
+
+public static final ItemEntry<Item> LARGE_STEAK_SANDWICH = REGISTRATE
+            .item("large_steak_sandwich", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/large_steak_sandwich")))
+            .register();
+//蓝纹奶酪
+public static final ItemEntry<Item> GORGONZOLA_CHEESE_WHEEL = REGISTRATE
+            .item("gorgonzola_cheese_wheel", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/gorgonzola_cheese_wheel")))
+            .register();
+//蓝纹奶酪切片
+public static final ItemEntry<Item> GORGONZOLA_CHEESE_SLICE = REGISTRATE
+            .item("gorgonzola_cheese_slice", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/gorgonzola_cheese_slice")))
+            .register();
+
+public static final ItemEntry<Item> GRAHAM_CRACKER = REGISTRATE
+            .item("graham_cracker", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/graham_cracker")))
+            .register();
+
+public static final ItemEntry<Item> CHUM = REGISTRATE
+            .item("chum", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(1.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/chum")))
+            .register();
+
+public static final ItemEntry<Item> HOTATE = REGISTRATE
+            .item("hotate", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/hotate")))
+            .register();
+//炸薯片
+public static final ItemEntry<Item> FRIED_POTATO_SLICE = REGISTRATE
+            .item("fried_potato_slice", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/fried_potato_slice")))
+            .register();
+//钨钢苹果
+public static final ItemEntry<Item> TUNGSTEN_STEEL_APPLE = REGISTRATE
+            .item("tungsten_steel_apple", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/tungsten_steel_apple")))
+            .register();
+
+public static final ItemEntry<Item> APPLE_HARD_CANDY = REGISTRATE
+            .item("apple_hard_candy", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/apple_hard_candy")))
+            .register();
+
+public static final ItemEntry<Item> CORED_APPLE = REGISTRATE
+            .item("cored_apple", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/cored_apple")))
+            .register();
+
+public static final ItemEntry<Item> BAGUETTE = REGISTRATE
+            .item("baguette", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/baguette")))
+            .register();
+
+public static final ItemEntry<Item> UNBAKED_BAGUETTE = REGISTRATE
+            .item("unbaked_baguette", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.1f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/unbaked_baguette")))
+            .register();
+//薯片！！！
+public static final ItemEntry<Item> SYALS = REGISTRATE
+            .item("syals", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/syals")))
+            .register();
+
+public static final ItemEntry<Item> KETTLE_CHIPS = REGISTRATE
+            .item("kettle_chips", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/kettle_chips")))
+            .register();
+
+public static final ItemEntry<Item> REDUCED_FAT_CHIPS = REGISTRATE
+            .item("reduced_fat_chips", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/reduced_fat_chips")))
+            .register();
+
+public static final ItemEntry<Item> BAG_O_CHIPS = REGISTRATE
+            .item("bag_o_chips", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/bag_o_chips")))
+            .register();
+
+public static final ItemEntry<Item> VINEGAR_CHIPS = REGISTRATE
+            .item("vinegar_chips", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/vinegar_chips")))
+            .register();
+//列宁柠檬汁
+public static final ItemEntry<DrinkItem> LENINADE = REGISTRATE
+            .item("leninade", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/gtfo/leninade")))
+    .register();
+
+//伏特加
+public static final ItemEntry<DrinkItem> VODKA = REGISTRATE
+            .item("vodka", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(6)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/gtfo/vodka")))
+    .register();
+
+//紫色饮料
+public static final ItemEntry<DrinkItem> PURPLE_DRINK = REGISTRATE
+            .item("purple_drink", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/gregtech/purple_drink")))
+    .register();
+
+public static final ItemEntry<CanDrinkItem> ETRIPS = REGISTRATE
+            .item("etrips", CanDrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/etrips")))
+            .register();
+
+public static final ItemEntry<CanDrinkItem> SPARKLING_WATER = REGISTRATE
+            .item("sparkling_water", CanDrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/sparkling_water")))
+            .register();
+/*
+public static final ItemEntry<Item>  = REGISTRATE
+            .item("", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/")))
+            .register();
+*/
     //雄蜂
     public static final ItemEntry<Item> COLLAPSE_DRONE = REGISTRATE
             .item("collapse_drone", Item::new)
@@ -5784,7 +6098,40 @@ public static final ItemEntry<Item> PECAN = REGISTRATE
             .item("cleaver_of_heavy_bone", p -> new DelightKnifeItem(Tiers.IRON, 0, -2.0F, p))
             .model((ctx, provider) -> provider.handheld(ctx::get, provider.modLoc("item/manmade/tool/cleaver_of_heavy_bone")))
             .register();
+//神秘的柠檬
+    public static final ItemEntry<fishy_lemon> FISHY_LEMON = REGISTRATE
+            .item("fishy_lemon", fishy_lemon::new)
+            .model(NonNullBiConsumer.noop())
+            .register();
 
+   //易拉罐
+    public static final ItemEntry<Item> CAN = REGISTRATE
+            .item("can", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/gregtech/can")))
+            .register();
+   //包装袋
+    public static final ItemEntry<Item> SYALS_BAG = REGISTRATE
+            .item("syals_bag", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/gregtech/syals_bag")))
+            .register();
+
+   //钨钢锭
+    public static final ItemEntry<Item> TUNGSTEN_STEEL = REGISTRATE
+            .item("tungsten_steel", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/gregtech/tungsten_steel")))
+            .register();
+
+   //铝锭
+    public static final ItemEntry<Item> ALUMINUM_INGOT = REGISTRATE
+            .item("aluminum_ingot", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/gregtech/aluminum_ingot")))
+            .register();
+
+   //铝箔
+    public static final ItemEntry<Item> ALUMINUM_FOIL = REGISTRATE
+            .item("aluminum_foil", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/gregtech/aluminum_foil")))
+            .register();
 
     public static void register() {
     }
