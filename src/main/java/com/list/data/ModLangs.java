@@ -22,6 +22,15 @@ public class ModLangs {
         provider.add("gui.list.category.fish_pond.chance", "Chance: %s%%");
 
         provider.add("config.jade.plugin_list.fish_pond", "Fish Pond");
+        provider.add("config.jade.plugin_list.tapper", "Tapper");
+        provider.add("tooltip.list.tapper.no_recipe", "Not connected to a valid tree");
+        provider.add("tooltip.list.tapper.title", "Tapper");
+        provider.add("tooltip.list.tapper.state.mature", "State: Mature, ready to collect");
+        provider.add("tooltip.list.tapper.state.working", "State: Collecting");
+        provider.add("tooltip.list.tapper.output", "Output: %s");
+        provider.add("tooltip.list.tapper.remaining", "Remaining: %s");
+        provider.add("tooltip.list.tapper.tool", "Collect Tool: %s");
+        provider.add("tooltip.list.tapper.tool.none", "Collect Tool: Not required");
         provider.add("tooltip.fishpond.not_formed", "Not Formed");
         provider.add("tooltip.fishpond.formed", "Formed");
         provider.add("tooltip.fishpond.lava_mode", "Lava Mode");
