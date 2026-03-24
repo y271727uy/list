@@ -823,7 +823,8 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.GORGONZOLA_CHEESE_SLICE.get());       
                 output.accept(ModItems.GRAHAM_CRACKER.get());  
                 output.accept(ModItems.CHUM.get());
-                output.accept(ModItems.FRIED_POTATO_SLICE.get());       
+                output.accept(ModItems.FRIED_POTATO_SLICE.get());    
+                output.accept(ModItems.FRIED_NAQUADAH_POTATO_SLICE.get());    
                 output.accept(ModItems.TUNGSTEN_STEEL_APPLE.get()); 
                 output.accept(ModItems.APPLE_HARD_CANDY.get());       
                 output.accept(ModItems.CORED_APPLE.get()); 
@@ -838,18 +839,45 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.CHEESE_PIZZA_SLICE.get()); 
                 output.accept(ModItems.MINCE_MEAT_PIZZA_SLICE.get());
                 output.accept(ModItems.OLIVE_MUSHROOM_PIZZA_SLICE.get());
+                output.accept(ModItems.COOKED_SAUSAGE.get()); 
+                output.accept(ModItems.SAUSAGE.get()); 
+                output.accept(ModItems.FERMENTED_CHORUS.get()); 
+                output.accept(ModItems.FERMENTED_CHORUS_PIE.get());
+                output.accept(ModItems.FERMENTED_CHORUS_PIE_SLICE.get());
+                output.accept(ModItems.PORCHETTA.get());
+                output.accept(ModItems.PORCHETTA_SLICE.get());
+                output.accept(ModItems.BAKED_BEANS_TOAST.get());
+                output.accept(ModItems.BAKED_BEANS.get());
+                output.accept(ModItems.GELATIN.get()); 
+                output.accept(ModItems.PEA_PASTE.get()); 
                 output.accept(ModItems.SYALS.get());       
                 output.accept(ModItems.KETTLE_CHIPS.get()); 
                 output.accept(ModItems.REDUCED_FAT_CHIPS.get());       
                 output.accept(ModItems.BAG_O_CHIPS.get()); 
-                output.accept(ModItems.VINEGAR_CHIPS.get());   
+                output.accept(ModItems.VINEGAR_CHIPS.get());  
+                output.accept(ModItems.NAQUADAH_CHIPS.get()); 
+
+                output.accept(ModItems.PEA_POD.get());
+                output.accept(ModItems.PEA.get());
+
+                output.accept(ModItems.COAC.get());
+                output.accept(ModItems.SEPIP.get());
+                output.accept(ModItems.GTFO_PURPLE_DRINK.get());
+                output.accept(ModItems.ANTAF.get());
+                output.accept(ModItems.CRANBERRY_ETRIPS.get());
+                output.accept(ModItems.NAQUADAH_MILK.get());
                 //output.accept(ModItems..get());       
                 //output.accept(ModItems..get());
                 output.accept(ModItems.LENINADE.get()); 
                 output.accept(ModItems.VODKA.get());       
                 output.accept(ModItems.PURPLE_DRINK.get()); 
                 output.accept(ModItems.ETRIPS.get());       
-                output.accept(ModItems.SPARKLING_WATER.get()); 
+                output.accept(ModItems.SPARKLING_WATER.get());  
+                output.accept(ModItems.FERMENTED_CHORUS_CAPSULE.get()); 
+                output.accept(ModItems.GELATIN_CAPSULE.get()); 
+                output.accept(ModItems.PARACETAMOL_CAPSULE.get());
+                output.accept(ModItems.VIBRANT_CAPSULE.get()); 
+                output.accept(ModItems.PLUTONIUM_241_CAPSULE.get()); 
                 //output.accept(ModItems..get());       
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());       
@@ -1290,6 +1318,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CAN.get()); 
                         //output.accept(ModItems..get());
                         output.accept(ModItems.SYALS_BAG.get()); 
+                        output.accept(ModItems.CHIPS_BAG.get());
+                        output.accept(ModItems.NAQUADAH_INGOT.get());
                         output.accept(ModItems.TUNGSTEN_STEEL.get()); 
                         output.accept(ModItems.ALUMINUM_INGOT.get()); 
                         output.accept(ModItems.ALUMINUM_FOIL.get()); 
@@ -1308,8 +1338,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.WATERMELON_BLOCK_SIDE.get());
                         output.accept(ModBlocks.WATERMELON_BLOCK_CORNER.get());
                         output.accept(ModBlocks.WATERMELON_FLESH_BLOCK.get());
+                        output.accept(ModItems.TREE_SAP.get());
+                        //output.accept(ModItems..get()); 
+                        //output.accept(ModItems..get()); 
 
-                        //output.accept(ModBlocks.PECAN_BAG.get());
+                        output.accept(ModBlocks.PECAN_BAG.get());
                         output.accept(ModBlocks.ALLIUM_CRATE.get());       //囤积
                         output.accept(ModBlocks.AZURE_BLUET_CRATE.get());
                         output.accept(ModBlocks.BAKED_POTATO_CRATE.get());

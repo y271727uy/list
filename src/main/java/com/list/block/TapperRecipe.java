@@ -16,19 +16,21 @@ public class TapperRecipe {
     public final String input;
     public final String output;
     public final int time;
+    public final String tool;
 
-    public TapperRecipe(String input, String output, int time) {
+    public TapperRecipe(String input, String output, int time, String tool) {
         this.input = input;
         this.output = output;
         this.time = time;
+        this.tool = tool;
     }
 
     public static final TapperRecipe[] RECIPES = new TapperRecipe[]{
-            new TapperRecipe("meadow:pine_log", "minecraft:oak_log", 3000),
-            new TapperRecipe("minecraft:oak_log", "minecraft:oak_log", 3000),
-            new TapperRecipe("autumnity:maple_log", "minecraft:oak_log", 3000),
-            new TapperRecipe("minecraft:birch_log", "cosmopolitan:birch_sap_block", 1500),
-            new TapperRecipe("biomeswevegone:mahogany_log", "minecraft:oak_log", 3000)
+            new TapperRecipe("meadow:pine_log", "minecraft:oak_log", 3000, "minecraft:glass_bottle"),
+            new TapperRecipe("minecraft:oak_log", "minecraft:oak_log", 3000, "minecraft:glass_bottle"),
+            new TapperRecipe("autumnity:maple_log", "minecraft:oak_log", 3000, "minecraft:glass_bottle"),
+            new TapperRecipe("minecraft:birch_log", "cosmopolitan:birch_sap_block", 1500, "minecraft:glass_bottle"),
+            new TapperRecipe("biomeswevegone:mahogany_log", "minecraft:oak_log", 3000, "minecraft:glass_bottle")
     };
 
     public static TapperRecipe findAttachedRecipe(Level level, BlockPos pos, Direction facing) {

@@ -21,9 +21,9 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.function.Supplier;
 
-/**
- * 通用多阶段可食用食物方块。
- * stage 递增表示被取食得越来越少；到最后一个阶段后移除方块。
+/*
+  通用多阶段可食用食物方块。
+  stage 递增表示被取食得越来越少；到最后一个阶段后移除方块。
  */
 public abstract class StageFoodBlock extends Block {
 

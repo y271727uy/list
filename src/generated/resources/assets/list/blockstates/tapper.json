@@ -1,17 +1,62 @@
 {
   "variants": {
-    "facing=east": {
+    "facing=east,mature=false,working=false": {
       "model": "list:block/tapper",
       "y": 90
     },
-    "facing=north": {
+    "facing=east,mature=false,working=true": {
+      "model": "list:block/tapper",
+      "y": 90
+    },
+    "facing=east,mature=true,working=false": {
+      "model": "list:block/tapper",
+      "y": 90
+    },
+    "facing=east,mature=true,working=true": {
+      "model": "list:block/tapper",
+      "y": 90
+    },
+    "facing=north,mature=false,working=false": {
       "model": "list:block/tapper"
     },
-    "facing=south": {
+    "facing=north,mature=false,working=true": {
+      "model": "list:block/tapper"
+    },
+    "facing=north,mature=true,working=false": {
+      "model": "list:block/tapper"
+    },
+    "facing=north,mature=true,working=true": {
+      "model": "list:block/tapper"
+    },
+    "facing=south,mature=false,working=false": {
       "model": "list:block/tapper",
       "y": 180
     },
-    "facing=west": {
+    "facing=south,mature=false,working=true": {
+      "model": "list:block/tapper",
+      "y": 180
+    },
+    "facing=south,mature=true,working=false": {
+      "model": "list:block/tapper",
+      "y": 180
+    },
+    "facing=south,mature=true,working=true": {
+      "model": "list:block/tapper",
+      "y": 180
+    },
+    "facing=west,mature=false,working=false": {
+      "model": "list:block/tapper",
+      "y": 270
+    },
+    "facing=west,mature=false,working=true": {
+      "model": "list:block/tapper",
+      "y": 270
+    },
+    "facing=west,mature=true,working=false": {
+      "model": "list:block/tapper",
+      "y": 270
+    },
+    "facing=west,mature=true,working=true": {
       "model": "list:block/tapper",
       "y": 270
     }

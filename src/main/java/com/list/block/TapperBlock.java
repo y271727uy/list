@@ -127,6 +127,15 @@ public class TapperBlock extends BaseEntityBlock {
         TapperRecipe recipe = getAttachedRecipe(level, pos, facing);
 
         if (mature && recipe != null) {
+            ItemStack held = player.getItemInHand(hand);
+            ItemStack requiredTool = TapperRecipe.parseOutput(recipe.tool);
+            if (requiredTool.isEmpty() || held.isEmpty() || !ItemStack.isSameItemSameTags(held, requiredTool)) {
+                return InteractionResult.CONSUME;
+            }
+
+            // consume exactly one tool item
+            held.shrink(1);
+
             // execute recipe: spawn output and reset
             ItemStack out = TapperRecipe.parseOutput(recipe.output);
             if (!out.isEmpty()) {
