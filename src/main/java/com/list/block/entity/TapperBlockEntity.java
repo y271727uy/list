@@ -152,10 +152,6 @@ public class TapperBlockEntity extends BlockEntity {
                 } catch (Throwable t) {
                     level.playSound(null, pos, SoundEvents.BUCKET_FILL, SoundSource.BLOCKS, 1.0f, 1.0f);
                 }
-
-                this.startTime = 0L;
-                this.recipeTime = 0;
-                this.initialized = false;
                 setChanged();
             }
             return;

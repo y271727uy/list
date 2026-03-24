@@ -32,13 +32,8 @@ public final class TapperRecipeRunner {
             level.addFreshEntity(ei);
         }
 
-        // reset block state and tile fields
-        level.setBlock(pos, state.setValue(TapperBlock.WORKING, false).setValue(TapperBlock.MATURE, false).setValue(TapperBlock.FACING, state.getValue(TapperBlock.FACING)), 3);
         var be = level.getBlockEntity(pos);
         if (be instanceof com.list.block.entity.TapperBlockEntity teb) {
-            teb.startTime = 0L;
-            teb.recipeTime = 0;
-            teb.initialized = false;
             teb.setChanged();
             level.sendBlockUpdated(pos, state, state, 3);
         }

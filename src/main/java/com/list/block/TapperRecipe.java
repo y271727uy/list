@@ -8,6 +8,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.state.BlockState;
 
 /**
  * Standalone recipe holder and helper utilities for Tapper.
@@ -26,8 +28,8 @@ public class TapperRecipe {
     }
 
     public static final TapperRecipe[] RECIPES = new TapperRecipe[]{
-            new TapperRecipe("meadow:pine_log", "minecraft:oak_log", 3000, "minecraft:glass_bottle"),
-            new TapperRecipe("minecraft:oak_log", "minecraft:oak_log", 3000, "minecraft:glass_bottle"),
+            new TapperRecipe("meadow:pine_log", "list:tree_sap", 30, "minecraft:glass_bottle"),
+            new TapperRecipe("minecraft:oak_log", "list:tree_sap", 3000, "minecraft:glass_bottle"),
             new TapperRecipe("autumnity:maple_log", "minecraft:oak_log", 3000, "minecraft:glass_bottle"),
             new TapperRecipe("minecraft:birch_log", "cosmopolitan:birch_sap_block", 1500, "minecraft:glass_bottle"),
             new TapperRecipe("biomeswevegone:mahogany_log", "minecraft:oak_log", 3000, "minecraft:glass_bottle")
@@ -43,11 +45,24 @@ public class TapperRecipe {
         };
 
         if (attachedPos == null) return null;
-        Block attached = level.getBlockState(attachedPos).getBlock();
+        BlockState attachedState = level.getBlockState(attachedPos);
+        Block attached = attachedState.getBlock();
         ResourceLocation key = ForgeRegistries.BLOCKS.getKey(attached);
-        if (key == null) return null;
-        String id = key.toString();
-        for (TapperRecipe r : RECIPES) if (r.input.equals(id)) return r;
+        String id = key == null ? null : key.toString();
+
+        for (TapperRecipe r : RECIPES) {
+            if (r.input == null) continue;
+            // tag syntax: start with '#', e.g. "#minecraft:logs"
+            if (r.input.startsWith("#")) {
+                String tagStr = r.input.substring(1);
+                ResourceLocation tagRl = ResourceLocation.tryParse(tagStr);
+                if (tagRl == null) continue;
+                TagKey<Block> tag = TagKey.create(ForgeRegistries.BLOCKS.getRegistryKey(), tagRl);
+                if (attachedState.is(tag)) return r;
+            } else {
+                if (id != null && id.equals(r.input)) return r;
+            }
+        }
         return null;
     }
 
@@ -69,4 +84,3 @@ public class TapperRecipe {
         return new ItemStack(item, count);
     }
 }
-

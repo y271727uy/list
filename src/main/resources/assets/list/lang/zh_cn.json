@@ -714,6 +714,7 @@
   "item.list.neutronium_certificate": "中子素执照",
   "item.list.wine_vial": "酒瓶（小）",
   "item.list.wine_bottle": "酒瓶（标准）",
+  "item.list.wine_bottle_large": "酒瓶（大）",
   "block.list.allium_crate": "箱装绒球葱",
   "block.list.azure_bluet_crate": "箱装蓝花美耳草",
   "block.list.baked_potato_crate": "箱装烤马铃薯",
@@ -748,7 +749,7 @@
   "block.list.cornflower_crate": "箱装矢车菊",
   "block.list.crimson_fungus_crate": "箱装绯红菌",
   "block.list.cyan_dye_bucket": "桶装青色染料",
-  
+  "item.list.tree_sap": "树液",
   "block.list.dandelion_crate": "箱装蒲公英",
   "block.list.egg_rack": "鸡蛋架",
   "block.list.ender_eye_crate": "箱装末影之眼",
