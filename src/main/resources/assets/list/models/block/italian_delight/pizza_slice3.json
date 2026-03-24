@@ -4,8 +4,8 @@
 	"parent": "minecraft:block/block",
 	"render_type": "cutout",
 	"textures": {
-		"side": "italian_delight:block/pizza_side",
-		"bottom": "italian_delight:block/pizza_bottom"
+		"side": "list:block/italian_delight/pizza_side",
+		"bottom": "list:block/italian_delight/pizza_bottom"
 	},
 	"elements": [
 		{

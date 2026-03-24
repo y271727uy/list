@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "servings=3": { "model": "list:block/italian_delight/mince_meat_pizza" },
+    "servings=2": { "model": "list:block/italian_delight/mince_meat_pizza_slice1" },
+    "servings=1": { "model": "list:block/italian_delight/mince_meat_pizza_slice2" },
+    "servings=0": { "model": "list:block/italian_delight/mince_meat_pizza_slice3" }
+  }
+}
+

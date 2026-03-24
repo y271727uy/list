@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "list:item/food/gtfo/hotate"
+    "layer0": "list:item/food/gtfo/raw_mince_meat_pizza"
   }
 }

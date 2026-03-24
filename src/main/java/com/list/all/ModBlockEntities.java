@@ -5,6 +5,7 @@ import com.list.block.entity.ForestryGreenhouseBlockEntity;
 import com.list.block.entity.ForestryHybridizerBlockEntity;
 import com.list.block.entity.SellingBinBlockEntity;
 import com.list.block.entity.TreeCompostBlockEntity;
+import com.list.block.entity.TapperBlockEntity;
 import com.tterrag.registrate.util.entry.BlockEntityEntry;
 
 import net.minecraft.core.BlockPos;
@@ -37,6 +38,11 @@ public class ModBlockEntities {
     public static final BlockEntityEntry<SellingBinBlockEntity> SELLING_BIN = REGISTRATE
         .blockEntity("selling_bin", SellingBinBlockEntity::new)
         .validBlocks(ModBlocks.SELLING_BIN)
+        .register();
+
+    public static final BlockEntityEntry<TapperBlockEntity> TAPPER = REGISTRATE
+        .blockEntity("tapper", TapperBlockEntity::new)
+        .validBlocks(ModBlocks.TAPPER)
         .register();
 
     public static void register() {

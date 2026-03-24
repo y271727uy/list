@@ -1,0 +1,9 @@
+{
+    {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "list:item/food/gtfo/cheese_pizza_slice"
+      }
+    }
+
+

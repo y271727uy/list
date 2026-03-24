@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "list:item/food/drink/foresters_tea"
+    "layer0": "list:item/food/drink/theme_tea/foresters_tea"
   }
 }

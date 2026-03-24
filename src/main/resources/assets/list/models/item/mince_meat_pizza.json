@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "list:item/food/gtfo/mince_meat_pizza"
+  }
+}

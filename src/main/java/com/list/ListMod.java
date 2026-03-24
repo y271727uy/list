@@ -77,9 +77,21 @@ public class ListMod
             event.getToolTip().add(Component.translatable("item.list.tasmanian_giant_freshwater_crayfish.desc.2").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
             event.getToolTip().add(Component.translatable("item.list.tasmanian_giant_freshwater_crayfish.desc.3").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
             event.getToolTip().add(Component.translatable("item.list.tasmanian_giant_freshwater_crayfish.desc.4").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
-        } else if (event.getItemStack().getItem() == ModItems.BAD_ITEM.get()) {
-            event.getToolTip().add(Component.translatable("item.list.bad_item.desc").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
-        }      
+        } else if (event.getItemStack().getItem() == ModItems.PURPLE_DRINK.get()) {
+            event.getToolTip().add(Component.translatable("item.list.purple_drink.desc.1").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+            //event.getToolTip().add(Component.translatable("item.list.purple_drink.desc.2").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+        } else if (event.getItemStack().getItem() == ModItems.LENINADE.get()) {
+            event.getToolTip().add(Component.translatable("item.list.leninade.desc.1").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+            //event.getToolTip().add(Component.translatable("item.list.leninade.desc.2").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+        } else if (event.getItemStack().getItem() == ModItems.VODKA.get()) {
+            event.getToolTip().add(Component.translatable("item.list.vodka.desc.1").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+        } else if (event.getItemStack().getItem() == ModBlocks.CHEESE_PIZZA.asItem()) {
+            event.getToolTip().add(Component.translatable("item.list.cheese_pizza.desc.1").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+        } else if (event.getItemStack().getItem() == ModBlocks.MINCE_MEAT_PIZZA.asItem()) {
+            event.getToolTip().add(Component.translatable("item.list.mince_meat_pizza.desc.1").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+        } else if (event.getItemStack().getItem() == ModBlocks.OLIVE_MUSHROOM_PIZZA.asItem()) {
+            event.getToolTip().add(Component.translatable("item.list.olive_mushroom_pizza.desc.1").withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
+        }
     }
 
 

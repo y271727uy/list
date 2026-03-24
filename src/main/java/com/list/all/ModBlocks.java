@@ -1,6 +1,7 @@
 package com.list.all;
 
 import com.list.block.*;
+import com.list.block.TapperBlock;
 import com.list.block.mushroom.StrawMushroomBlock;
 import com.list.block.mushroom.SeaMushroomBlock;
 import com.list.block.mushroom.CaveMushroomBlock;
@@ -141,6 +142,21 @@ public class ModBlocks {
             .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
             .register();
 
+    //树液采集
+    public static final BlockEntry<TapperBlock> TAPPER = REGISTRATE
+            .block("tapper", TapperBlock::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .properties(p -> p.noOcclusion())
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                provider.horizontalBlock(
+                        ctx.get(),
+                        provider.models().getExistingFile(provider.modLoc("block/" + ctx.getName()))
+                );
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
 
     // Italian Delight pizzas (servings-based cakes)
     public static final BlockEntry<CommonPizzaBlock> PIZZA_PROSCIUTTO = REGISTRATE
@@ -187,7 +203,34 @@ public class ModBlocks {
             .build()
             .blockstate((ctx, prov) -> {})
             .register();
+//GTFO披萨
+    public static final BlockEntry<CommonPizzaBlock> CHEESE_PIZZA = REGISTRATE
+            .block("cheese_pizza", ctx -> new CommonPizzaBlock(() -> ModItems.CHEESE_PIZZA_SLICE.get(), BlockBehaviour.Properties.copy(Blocks.CAKE)))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.getExistingFile(prov.modLoc("item/food/gtfo/cheese_pizza")))
+            .build()
+            .blockstate((ctx, prov) -> {})
+            .register();
 
+   public static final BlockEntry<CommonPizzaBlock> MINCE_MEAT_PIZZA = REGISTRATE
+            .block("mince_meat_pizza", ctx -> new CommonPizzaBlock(() -> ModItems.MINCE_MEAT_PIZZA_SLICE.get(), BlockBehaviour.Properties.copy(Blocks.CAKE)))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.getExistingFile(prov.modLoc("item/food/gtfo/mince_meat_pizza")))
+            .build()
+            .blockstate((ctx, prov) -> {})
+            .register();
+
+   public static final BlockEntry<CommonPizzaBlock> OLIVE_MUSHROOM_PIZZA = REGISTRATE
+            .block("olive_mushroom_pizza", ctx -> new CommonPizzaBlock(() -> ModItems.OLIVE_MUSHROOM_PIZZA_SLICE.get(), BlockBehaviour.Properties.copy(Blocks.CAKE)))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.getExistingFile(prov.modLoc("item/food/gtfo/olive_mushroom_pizza")))
+            .build()
+            .blockstate((ctx, prov) -> {})
+            .register();
+//GTFO披萨结束
     public static final BlockEntry<CommonCakeBlock> BLACK_TEA_CAKE = REGISTRATE
             .block("black_tea_cake", ctx -> new CommonCakeBlock(() -> ModItems.BLACK_TEA_CAKE_SLICE.get(), BlockBehaviour.Properties.copy(Blocks.CAKE)))
             .initialProperties(() -> Blocks.CAKE)

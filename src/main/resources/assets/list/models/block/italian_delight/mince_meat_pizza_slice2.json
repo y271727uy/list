@@ -1,0 +1,8 @@
+{
+    "parent": "list:block/italian_delight/pizza_slice2",
+    "textures": {
+        "particle": "list:block/italian_delight/pizza_top_1",
+        "top": "list:block/italian_delight/pizza_top_1",
+        "layer": "list:block/italian_delight/mince_meat_pizza"
+    }
+}

@@ -30,8 +30,23 @@ public class ModLangs {
 
         provider.add("gui.list.category.forestry_hybridizer", "Forestry Hybridizer");
         provider.add("gui.list.category.forestry_hybridizer.chance", "Chance: %s%%");
+
+        provider.add("item.list.purple_drink.desc.1", "§7§oHow about some lemonade? Or maybe some ice tea? I got a Purple Drink!");
+        provider.add("item.list.purple_drink.desc.2", "§9From:GregTech");
+
+        provider.add("item.list.leninade.desc.1", "§7§oLet communism flow in your blood!");
+        provider.add("item.list.leninade.desc.2", "§9From:GregTech Food Option");
+        provider.add("item.list.vodka.desc.1", "§7§oDistilled and concentrated Russia.");
+
+        provider.add("item.list.cheese_pizza.desc.1", "§7§oDaring today, aren't we?");
+        provider.add("item.list.mince_meat_pizza.desc.1", "§7§oWait, *what* does the GT5U veggie pizza have on it???");
+        provider.add("item.list.olive_mushroom_pizza.desc.1", "§7§oNo, GregoriusT! Don't fall down the inescapable Tooltip-Making Asshole Singularity!");
+        
+
     }
 }
 
-
-//provider.add("item.list..desc.1", "§7§o");
+/*
+        provider.add("item.list..desc.1", "§7§o");
+        provider.add("item.list..desc.2", "§9GregTech Food Option");
+*/

@@ -4887,7 +4887,95 @@ public static final ItemEntry<Item>  = REGISTRATE
                     .saturationMod(2.3f) .build()))
             .model((ctx, provider) -> provider
             .generated(ctx::get, provider
-            .modLoc("item/food/drink/foresters_tea")))
+            .modLoc("item/food/drink/theme_tea/foresters_tea")))
+    .register();
+
+    // 格雷科技员工茶饮
+    public static final ItemEntry<DrinkItem> GREGTECH_EMPLOYEE_TEA = REGISTRATE
+            .item("gregtech_employee_tea", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/drink/theme_tea/gregtech_employee_tea")))
+    .register();
+
+    // 实业家茶饮
+    public static final ItemEntry<DrinkItem> INDUSTRIALIST_TEA = REGISTRATE
+            .item("industrialist_tea", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/drink/theme_tea/industrialist_tea")))
+    .register();
+
+    // 高能物理学家茶饮
+    public static final ItemEntry<DrinkItem> HIGH_ENERGY_PHYSICIST_TEA = REGISTRATE
+            .item("high_energy_physicist_tea", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/drink/theme_tea/high_energy_physicist_tea")))
+    .register();
+
+    // 核工程师茶饮
+    public static final ItemEntry<DrinkItem> NUCLEAR_ENGINEER_TEA = REGISTRATE
+            .item("nuclear_engineer_tea", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/drink/theme_tea/nuclear_engineer_tea")))
+    .register();
+
+    // 热力工程师茶饮
+    public static final ItemEntry<DrinkItem> THERMAL_ENGINEER_TEA = REGISTRATE
+            .item("thermal_engineer_tea", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/drink/theme_tea/thermal_engineer_tea")))
+    .register();
+
+    // ECO实验室研究员茶饮
+    public static final ItemEntry<DrinkItem> ECO_LAB_RESEARCHER_TEA = REGISTRATE
+            .item("eco_lab_researcher_tea", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/drink/theme_tea/eco_lab_researcher_tea")))
+    .register();
+
+    // 工匠茶饮
+    public static final ItemEntry<DrinkItem> TINKERS_TEA = REGISTRATE
+            .item("tinkers_tea", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/drink/theme_tea/tinkers_tea")))
+    .register();
+
+    // 工程师茶饮
+    public static final ItemEntry<DrinkItem> ENGINEERS_TEA = REGISTRATE
+            .item("engineers_tea", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/drink/theme_tea/engineers_tea")))
     .register();
 
     // 水母苏打饮
@@ -5819,14 +5907,6 @@ public static final ItemEntry<Item> CHUM = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/chum")))
             .register();
 
-public static final ItemEntry<Item> HOTATE = REGISTRATE
-            .item("hotate", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(4)
-                    .saturationMod(3.4f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/hotate")))
-            .register();
 //炸薯片
 public static final ItemEntry<Item> FRIED_POTATO_SLICE = REGISTRATE
             .item("fried_potato_slice", Item::new)
@@ -5976,6 +6056,61 @@ public static final ItemEntry<CanDrinkItem> SPARKLING_WATER = REGISTRATE
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/sparkling_water")))
             .register();
+
+public static final ItemEntry<Item> GUMMY_BEAR = REGISTRATE
+            .item("gummy_bear", Item::new)
+            .properties(p -> p.rarity(Rarity.EPIC))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(25)
+                    .saturationMod(9.0f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/gummy_bear")))
+            .register();
+//GTFO批萨
+public static final ItemEntry<Item> CHEESE_PIZZA_SLICE = REGISTRATE
+            .item("cheese_pizza_slice", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/cheese_pizza_slice")))
+            .register();
+
+public static final ItemEntry<Item> MINCE_MEAT_PIZZA_SLICE = REGISTRATE
+            .item("mince_meat_pizza_slice", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/mince_meat_pizza_slice")))
+            .register();
+
+public static final ItemEntry<Item> OLIVE_MUSHROOM_PIZZA_SLICE = REGISTRATE
+            .item("olive_mushroom_pizza_slice", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/olive_mushroom_pizza_slice")))
+            .register();
+
+//生披萨
+public static final ItemEntry<Item> RAW_CHEESE_PIZZA = REGISTRATE
+            .item("raw_cheese_pizza", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/raw_cheese_pizza")))
+            .register();
+
+public static final ItemEntry<Item> RAW_MINCE_MEAT_PIZZA = REGISTRATE
+            .item("raw_mince_meat_pizza", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/raw_mince_meat_pizza")))
+            .register();
+
+public static final ItemEntry<Item> RAW_OLIVE_MUSHROOM_PIZZA = REGISTRATE
+            .item("raw_olive_mushroom_pizza", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/raw_olive_mushroom_pizza")))
+            .register();
+
+//GTFO食物结束 私货结束
 /*
 public static final ItemEntry<Item>  = REGISTRATE
             .item("", Item::new)

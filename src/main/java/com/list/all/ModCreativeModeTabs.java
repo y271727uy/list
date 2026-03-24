@@ -57,6 +57,7 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.OSMIUM_CERTIFICATE.get());
                     output.accept(ModItems.NAQUADAH_CERTIFICATE.get());
                     output.accept(ModItems.NEUTRONIUM_CERTIFICATE.get());
+                    output.accept(ModItems.GUMMY_BEAR.get());       //柑橘味小熊软糖
                     output.accept(ModItems.COOK_ZHURUOLING_EGG.get());
                     output.accept(ModItems.ZHURUOLING_EGG.get());
                     output.accept(ModItems.COLLAPSE_DRONE.get());
@@ -695,7 +696,16 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.RED_PINEAPPLE_SLICE.get());//红凤梨切块
                 output.accept(ModItems.LABA_GARLIC.get());//腊八蒜
                 output.accept(ModItems.RUSSIA_BLACK_BREAD.get());       //俄罗斯黑面包
+                output.accept(ModItems.GUMMY_BEAR.get());       //柑橘味小熊软糖
                 output.accept(ModItems.FORESTERS_TEA.get());      //林业员茶饮  饮品
+                output.accept(ModItems.GREGTECH_EMPLOYEE_TEA.get()); 
+                output.accept(ModItems.INDUSTRIALIST_TEA.get()); 
+                output.accept(ModItems.HIGH_ENERGY_PHYSICIST_TEA.get()); 
+                output.accept(ModItems.NUCLEAR_ENGINEER_TEA.get()); 
+                output.accept(ModItems.THERMAL_ENGINEER_TEA.get()); 
+                output.accept(ModItems.ECO_LAB_RESEARCHER_TEA.get()); 
+                output.accept(ModItems.TINKERS_TEA.get()); 
+                output.accept(ModItems.ENGINEERS_TEA.get()); 
                 output.accept(ModItems.JELLYFISH_SODA.get());
                 output.accept(ModItems.TREESTAR_TEA.get());
                 output.accept(ModItems.ADZUKI_MILK_TEA.get()); 
@@ -812,14 +822,22 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.GORGONZOLA_CHEESE_WHEEL.get()); 
                 output.accept(ModItems.GORGONZOLA_CHEESE_SLICE.get());       
                 output.accept(ModItems.GRAHAM_CRACKER.get());  
-                output.accept(ModItems.CHUM.get());       
-                output.accept(ModItems.HOTATE.get()); 
+                output.accept(ModItems.CHUM.get());
                 output.accept(ModItems.FRIED_POTATO_SLICE.get());       
                 output.accept(ModItems.TUNGSTEN_STEEL_APPLE.get()); 
                 output.accept(ModItems.APPLE_HARD_CANDY.get());       
                 output.accept(ModItems.CORED_APPLE.get()); 
                 output.accept(ModItems.BAGUETTE.get());       
                 output.accept(ModItems.UNBAKED_BAGUETTE.get()); 
+                output.accept(ModItems.RAW_CHEESE_PIZZA.get()); 
+                output.accept(ModItems.RAW_MINCE_MEAT_PIZZA.get()); 
+                output.accept(ModItems.RAW_OLIVE_MUSHROOM_PIZZA.get());     
+                output.accept(ModBlocks.CHEESE_PIZZA.get());       
+                output.accept(ModBlocks.MINCE_MEAT_PIZZA.get());
+                output.accept(ModBlocks.OLIVE_MUSHROOM_PIZZA.get());
+                output.accept(ModItems.CHEESE_PIZZA_SLICE.get()); 
+                output.accept(ModItems.MINCE_MEAT_PIZZA_SLICE.get());
+                output.accept(ModItems.OLIVE_MUSHROOM_PIZZA_SLICE.get());
                 output.accept(ModItems.SYALS.get());       
                 output.accept(ModItems.KETTLE_CHIPS.get()); 
                 output.accept(ModItems.REDUCED_FAT_CHIPS.get());       
