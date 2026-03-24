@@ -6,7 +6,12 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import javax.annotation.ParametersAreNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
+// TapperRecipeRunner exists as a helper but we inline execution here to avoid signature mismatches
 import net.minecraft.world.InteractionHand;
+// ...existing code...
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -36,9 +41,13 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class TapperBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
+    public static final BooleanProperty WORKING = BooleanProperty.create("working");
+    public static final BooleanProperty MATURE = BooleanProperty.create("mature");
+
     public TapperBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH)
+                .setValue(WORKING, false).setValue(MATURE, false));
     }
 
     // Boxes derived from Blockbench model (from/to coordinates). We'll build the full shape by OR'ing these boxes.
@@ -103,7 +112,7 @@ public class TapperBlock extends BaseEntityBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<net.minecraft.world.level.block.Block, BlockState> builder) {
-        builder.add(FACING);
+        builder.add(FACING, WORKING, MATURE);
     }
 
     @SuppressWarnings("deprecation")
@@ -112,14 +121,120 @@ public class TapperBlock extends BaseEntityBlock {
         if (level.isClientSide) {
             return InteractionResult.SUCCESS;
         }
+        boolean working = state.getValue(WORKING);
+        boolean mature = state.getValue(MATURE);
+        Direction facing = state.getValue(FACING);
+        TapperRecipe recipe = getAttachedRecipe(level, pos, facing);
 
-        BlockEntity be = level.getBlockEntity(pos);
-        if (be instanceof com.list.block.entity.TapperBlockEntity) {
-            // no GUI for now
+        if (mature && recipe != null) {
+            // execute recipe: spawn output and reset
+            ItemStack out = TapperRecipe.parseOutput(recipe.output);
+            if (!out.isEmpty()) {
+                double dx = pos.getX() + 0.5 + facing.getStepX() * 0.6;
+                double dy = pos.getY() + 0.5;
+                double dz = pos.getZ() + 0.5 + facing.getStepZ() * 0.6;
+                net.minecraft.world.entity.item.ItemEntity ei = new net.minecraft.world.entity.item.ItemEntity(level, dx, dy, dz, out.copy());
+                level.addFreshEntity(ei);
+            }
+
+            // play pouring sound when player collects (safe registry lookup)
+            // play pouring/collect sound when player collects
+                try {
+                    // try send sound specifically to the interacting player
+                    if (player instanceof net.minecraft.server.level.ServerPlayer sp) {
+                        try {
+                            Class<?> pktCls = Class.forName("net.minecraft.network.protocol.game.ClientboundSoundPacket");
+                            java.lang.reflect.Constructor<?> ctor = null;
+                            for (var c : pktCls.getConstructors()) {
+                                var params = c.getParameterTypes();
+                                if (params.length >= 6 && params[0].getName().equals("net.minecraft.sounds.SoundEvent") && params[1].getName().equals("net.minecraft.sounds.SoundSource")) {
+                                    ctor = c;
+                                    break;
+                                }
+                            }
+                            if (ctor != null) {
+                                Object packet = ctor.newInstance(net.minecraft.sounds.SoundEvents.BUCKET_EMPTY, net.minecraft.sounds.SoundSource.BLOCKS, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 1.0f, 1.0f);
+                                sp.connection.send((net.minecraft.network.protocol.Packet<?>) packet);
+                            } else {
+                                level.playSound(sp, pos, net.minecraft.sounds.SoundEvents.BUCKET_EMPTY, net.minecraft.sounds.SoundSource.BLOCKS, 1.0f, 1.0f);
+                            }
+                        } catch (Throwable ex) {
+                            level.playSound(sp, pos, net.minecraft.sounds.SoundEvents.BUCKET_EMPTY, net.minecraft.sounds.SoundSource.BLOCKS, 1.0f, 1.0f);
+                        }
+                    } else {
+                        level.playSound(player, pos, net.minecraft.sounds.SoundEvents.BUCKET_EMPTY, net.minecraft.sounds.SoundSource.BLOCKS, 1.0f, 1.0f);
+                    }
+                } catch (Throwable t) {
+                    level.playSound(player, pos, net.minecraft.sounds.SoundEvents.BUCKET_EMPTY, net.minecraft.sounds.SoundSource.BLOCKS, 1.0f, 1.0f);
+                }
+
+            level.setBlock(pos, state.setValue(WORKING, false).setValue(MATURE, false).setValue(FACING, facing), 3);
+            BlockEntity be = level.getBlockEntity(pos);
+            if (be instanceof com.list.block.entity.TapperBlockEntity teb) {
+                teb.startTime = 0L;
+                teb.recipeTime = 0;
+                teb.initialized = false;
+                teb.setChanged();
+                level.sendBlockUpdated(pos, state, state, 3);
+            }
+
+            return InteractionResult.CONSUME;
+        } else if (working && recipe != null) {
+            BlockEntity be = level.getBlockEntity(pos);
+            if (be instanceof com.list.block.entity.TapperBlockEntity teb) {
+                if (teb.startTime > 0L) {
+                    long remaining = getRemainingTime(level, teb, recipe);
+                    if (remaining <= 0L) {
+                        level.setBlock(pos, state.setValue(WORKING, true).setValue(MATURE, true).setValue(FACING, facing), 3);
+                        player.sendSystemMessage(Component.literal("§6收集已完成，点击即可收获！"));
+                        return InteractionResult.CONSUME;
+                    }
+
+                    long minutes = (remaining / 20) / 60;
+                    long seconds = (remaining / 20) % 60;
+                    String timeStr = (minutes > 0 ? minutes + "分" : "") + seconds + "秒";
+                    player.sendSystemMessage(Component.literal("§7剩余时间: " + timeStr));
+                    ItemStack out = TapperRecipe.parseOutput(recipe.output);
+                    if (!out.isEmpty()) {
+                        player.sendSystemMessage(Component.literal("§7当前产出: " + out.getHoverName().getString()));
+                    }
+                    return InteractionResult.CONSUME;
+                } else {
+                    player.sendSystemMessage(Component.literal("§c收集器计时异常，已自动重启"));
+                    resetAndRestartTapper(level, pos, state);
+                    return InteractionResult.CONSUME;
+                }
+            }
+        } else {
+            player.sendSystemMessage(Component.literal("§c请将收集器附着在合适的树木上"));
             return InteractionResult.CONSUME;
         }
 
-        return InteractionResult.PASS;
+        return InteractionResult.CONSUME;
+    }
+
+    // Recipes and parsing are provided by TapperRecipe helper class.
+    @Nullable
+    public static TapperRecipe getAttachedRecipe(Level level, BlockPos pos, Direction facing) {
+        return TapperRecipe.findAttachedRecipe(level, pos, facing);
+    }
+
+    private static long getRemainingTime(Level level, com.list.block.entity.TapperBlockEntity teb, TapperRecipe recipe) {
+        if (teb.startTime == 0L) return recipe.time;
+        long elapsed = level.getGameTime() - teb.startTime;
+        return Math.max(0L, (long)recipe.time - elapsed);
+    }
+
+    private static void resetAndRestartTapper(Level level, BlockPos pos, BlockState state) {
+        level.setBlock(pos, state.setValue(WORKING, false).setValue(MATURE, false).setValue(FACING, state.getValue(FACING)), 3);
+        BlockEntity be = level.getBlockEntity(pos);
+        if (be instanceof com.list.block.entity.TapperBlockEntity teb) {
+            teb.startTime = 0L;
+            teb.recipeTime = 0;
+            teb.initialized = false;
+            teb.setChanged();
+            level.sendBlockUpdated(pos, state, state, 3);
+        }
     }
 
     @SuppressWarnings("deprecation")
