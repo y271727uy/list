@@ -1,19 +1,19 @@
 {
   "variants": {
-    "facing=north,working=false,mature=false": { "model": "list:block/tapper_3", "y": 0 },
-    "facing=east,working=false,mature=false":  { "model": "list:block/tapper_3", "y": 90 },
-    "facing=south,working=false,mature=false": { "model": "list:block/tapper_3", "y": 180 },
-    "facing=west,working=false,mature=false":  { "model": "list:block/tapper_3", "y": 270 },
+    "facing=north,working=false,mature=false": { "model": "list:block/tapper_closed", "y": 0 },
+    "facing=east,working=false,mature=false":  { "model": "list:block/tapper_closed", "y": 90 },
+    "facing=south,working=false,mature=false": { "model": "list:block/tapper_closed", "y": 180 },
+    "facing=west,working=false,mature=false":  { "model": "list:block/tapper_closed", "y": 270 },
 
-    "facing=north,working=true,mature=false": { "model": "list:block/tapper", "y": 0 },
-    "facing=east,working=true,mature=false":  { "model": "list:block/tapper", "y": 90 },
-    "facing=south,working=true,mature=false": { "model": "list:block/tapper", "y": 180 },
-    "facing=west,working=true,mature=false":  { "model": "list:block/tapper", "y": 270 },
+    "facing=north,working=true,mature=false": { "model": "list:block/tapper_empty", "y": 0 },
+    "facing=east,working=true,mature=false":  { "model": "list:block/tapper_empty", "y": 90 },
+    "facing=south,working=true,mature=false": { "model": "list:block/tapper_empty", "y": 180 },
+    "facing=west,working=true,mature=false":  { "model": "list:block/tapper_empty", "y": 270 },
 
-    "facing=north,working=true,mature=true": { "model": "list:block/tapper_2", "y": 0 },
-    "facing=east,working=true,mature=true":  { "model": "list:block/tapper_2", "y": 90 },
-    "facing=south,working=true,mature=true": { "model": "list:block/tapper_2", "y": 180 },
-    "facing=west,working=true,mature=true":  { "model": "list:block/tapper_2", "y": 270 }
+    "facing=north,working=true,mature=true": { "model": "list:block/tapper_full", "y": 0 },
+    "facing=east,working=true,mature=true":  { "model": "list:block/tapper_full", "y": 90 },
+    "facing=south,working=true,mature=true": { "model": "list:block/tapper_full", "y": 180 },
+    "facing=west,working=true,mature=true":  { "model": "list:block/tapper_full", "y": 270 }
   }
 }
 

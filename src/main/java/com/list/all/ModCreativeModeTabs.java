@@ -75,6 +75,7 @@ public class ModCreativeModeTabs {
                     output.accept(ModBlocks.FORESTRY_GREENHOUSE.get());
                     output.accept(ModBlocks.FORESTRY_HYBRIDIZER.get());
                     output.accept(ModBlocks.GREENHOUSE_CASING.get());
+                    output.accept(ModBlocks.TAPPER.get());
                     })
                     .build()
     );
@@ -839,6 +840,10 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.CHEESE_PIZZA_SLICE.get()); 
                 output.accept(ModItems.MINCE_MEAT_PIZZA_SLICE.get());
                 output.accept(ModItems.OLIVE_MUSHROOM_PIZZA_SLICE.get());
+                output.accept(ModItems.MINCE_MEAT.get()); 
+                output.accept(ModItems.COOKED_MINCE_MEAT.get()); 
+                output.accept(ModItems.MEAT_INGOT.get()); 
+                output.accept(ModItems.COOKED_MEAT_INGOT.get()); 
                 output.accept(ModItems.COOKED_SAUSAGE.get()); 
                 output.accept(ModItems.SAUSAGE.get()); 
                 output.accept(ModItems.FERMENTED_CHORUS.get()); 
@@ -855,11 +860,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.REDUCED_FAT_CHIPS.get());       
                 output.accept(ModItems.BAG_O_CHIPS.get()); 
                 output.accept(ModItems.VINEGAR_CHIPS.get());  
-                output.accept(ModItems.NAQUADAH_CHIPS.get()); 
-
-                output.accept(ModItems.PEA_POD.get());
-                output.accept(ModItems.PEA.get());
-
+                output.accept(ModItems.NAQUADAH_CHIPS.get());
                 output.accept(ModItems.COAC.get());
                 output.accept(ModItems.SEPIP.get());
                 output.accept(ModItems.GTFO_PURPLE_DRINK.get());
@@ -1059,9 +1060,10 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.BEAN_SPROUT.get());       //豆芽
                     //output.accept(ModItems.ALOE.get());              //芦荟
                     //output.accept(ModItems.WORMWOOD.get());          //苦艾
-                    //output.accept(ModItems.RAPESEED_FLOWER.get());   //油菜花A
+                    //output.accept(ModItems.RAPESEED_FLOWER.get());   //油菜花
                     //output.accept(ModItems.PERILLA_LEAF.get());      //紫苏叶
-                    //output.accept(ModItems.PEA.get());               //豌豆
+                    output.accept(ModItems.PEA_POD.get());
+                    output.accept(ModItems.PEA.get());
                     //output.accept(ModItems.RED_BEAN.get());          //赤豆
                     //output.accept(ModItems.BASIL.get());             //罗勒
                     output.accept(ModItems.RED_ONION.get());           //红洋葱
@@ -1323,6 +1325,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TUNGSTEN_STEEL.get()); 
                         output.accept(ModItems.ALUMINUM_INGOT.get()); 
                         output.accept(ModItems.ALUMINUM_FOIL.get()); 
+                        output.accept(ModItems.TREE_SAP.get());
+                        output.accept(ModItems.RAW_LACQUER_BUCKET.get());
+                        output.accept(ModItems.URUSHI_BUCKET.get());
                         output.accept(ModItems.AZURE_NEODYMIUM_KNIFE.get());      
                         output.accept(ModItems.SCARLET_NEODYMIUM_KNIFE.get());      
                         output.accept(ModItems.CLEAVER_OF_HEAVY_BONE.get());      
@@ -1338,7 +1343,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.WATERMELON_BLOCK_SIDE.get());
                         output.accept(ModBlocks.WATERMELON_BLOCK_CORNER.get());
                         output.accept(ModBlocks.WATERMELON_FLESH_BLOCK.get());
-                        output.accept(ModItems.TREE_SAP.get());
                         //output.accept(ModItems..get()); 
                         //output.accept(ModItems..get()); 
 

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "list:item/manmade/tree_products/raw_lacquer_bucket"
+  }
+}

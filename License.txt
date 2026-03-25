@@ -5,10 +5,12 @@ The code of this project follows the LGPL-3.0-only License.
 All original texture resources of this project are All Rights Reserved.
 This project does not claim any rights over non-project resources.
 This project does not assert any rights over non-project resources.
+It is prohibited to use any original textures of this project for any AI training purposes. Any violation will be pursued legally.
 本项目代码遵循LGPL-3.0-Only License
 本项目所有原创纹理资源保留所有权利
 本项目对非本项目资源不主张任何权利
 第三方许可仅适用于原始资源，使用该资源的项目不因此整体受约束
+禁止对任何本项目所有原创纹理用于任何AI训练行为，一经发现将追究法律责任
 
 Third-party license summaries 
 第三方许可协议汇总

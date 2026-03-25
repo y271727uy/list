@@ -27,12 +27,27 @@ public class TapperRecipe {
         this.tool = tool == null ? "" : tool.trim();
     }
 
-    public static final TapperRecipe[] RECIPES = new TapperRecipe[]{
-            new TapperRecipe("meadow:pine_log", "list:tree_sap", 30000, null),
-            new TapperRecipe("minecraft:oak_log", "list:tree_sap", 30000, "minecraft:glass_bottle"),
-            new TapperRecipe("autumnity:maple_log", "minecraft:oak_log", 3000, "minecraft:glass_bottle"),
-            new TapperRecipe("minecraft:birch_log", "cosmopolitan:birch_sap_block", 1500, "minecraft:glass_bottle"),
-            new TapperRecipe("biomeswevegone:mahogany_log", "minecraft:oak_log", 3000, "minecraft:glass_bottle")
+    public static final TapperRecipe[] RECIPES = {
+            new TapperRecipe("yeastnfeast:maple_log", "yeastnfeast:maple_syrup", 24000, "minecraft:glass_bottle"),
+            new TapperRecipe("forestry:maple_log", "yeastnfeast:maple_syrup", 24000, "minecraft:glass_bottle"),
+            new TapperRecipe("minecraft:birch_log", "'cosmopolitan:birch_sap_bottle'", 24000, "minecraft:glass_bottle"),
+            new TapperRecipe("foragersinsight:sappy_birch_log", "foragersinsight:birch_syrup_bottle", 30000, "minecraft:glass_bottle"),
+
+            new TapperRecipe("alexscaves:pewen_log","alexscaves:pewen_sap",30000,null),
+            new TapperRecipe("minecraft:oak_log", "list:tree_sap", 30000, null),
+            new TapperRecipe("minecraft:dark_oak_log", "list:tree_sap", 30000, null),
+            new TapperRecipe("#tapper_log", "list:tree_sap", 30000, null),
+            //new TapperRecipe("#tapper_pine_log", "list:pine_sap", 30000, "null"), 松脂
+            new TapperRecipe("minecraft:jungle_log", "list:urushi_bucket", 30000, "minecraft:bucket"), //乳胶
+            new TapperRecipe("forestry:zebrawood_log", "list:raw_lacquer_bucket", 30000, "minecraft:bucket"), //漆树
+            //new TapperRecipe("forestry:acacia_desert_log", "", 30000, null), 阿拉伯胶
+            //new TapperRecipe("minecraft:acacia_log", "", 30000, null),
+            //new TapperRecipe("minecraft:cherry_log", "", 30000, null), 樱树胶
+            //new TapperRecipe("vinery:dark_cherry_log", "", 30000, null),
+            //new TapperRecipe("forestry:hill_cherry_log", "", 30000, null),
+            //new TapperRecipe("minecraft:spruce_log", "", 30000, null),  杉树香脂
+            //new TapperRecipe("forestry:sequoia_log", "", 30000, null),
+            //new TapperRecipe("forestry:giganteum_log", "", 30000, null),
     };
 
     public boolean hasToolRequirement() {

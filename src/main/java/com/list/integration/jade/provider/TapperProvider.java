@@ -35,7 +35,6 @@ public enum TapperProvider implements IBlockComponentProvider, IServerDataProvid
             return;
         }
 
-        tooltip.add(Component.translatable("tooltip.list.tapper.title"));
 
         if (data.getBoolean("mature")) {
             tooltip.add(Component.translatable("tooltip.list.tapper.state.mature"));

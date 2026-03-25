@@ -1,5 +1,5 @@
 {
-  "parent": "list:block/tapper",
+  "parent": "list:block/tapper_empty",
   "render_type": "cutout"
 }
 

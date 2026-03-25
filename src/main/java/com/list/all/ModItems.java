@@ -1,12 +1,7 @@
 package com.list.all;
 
 import com.list.data.model.HaloModelBuilder;
-import com.list.item.DrinkItem;
-import com.list.item.CanDrinkItem;
-import com.list.item.BowlReturnFoodItem;
-import com.list.item.DelightKnifeItem;
-import com.list.item.EggItem;
-import com.list.item.GlowingItem;
+import com.list.item.*;
 import com.list.item.gag_item.fishy_lemon;
 import com.list.util.ItemModelUtil;
 import com.tterrag.registrate.util.entry.ItemEntry;
@@ -6360,6 +6355,42 @@ public static final ItemEntry<CanDrinkItem> CRANBERRY_ETRIPS = REGISTRATE
             .modLoc("item/food/gtfo/cranberry_etrips")))
     .register();
 
+public static final ItemEntry<Item> MINCE_MEAT = REGISTRATE
+            .item("mince_meat", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(1.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/mince_meat")))
+            .register();
+
+public static final ItemEntry<Item> COOKED_MINCE_MEAT = REGISTRATE
+            .item("cooked_mince_meat", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/cooked_mince_meat")))
+            .register();
+
+public static final ItemEntry<Item> MEAT_INGOT = REGISTRATE
+            .item("meat_ingot", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(1.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/meat_ingot")))
+            .register();
+
+public static final ItemEntry<Item> COOKED_MEAT_INGOT = REGISTRATE
+            .item("cooked_meat_ingot", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/cooked_meat_ingot")))
+            .register();
+
 //GTFO食物结束 私货结束
 /*
 public static final ItemEntry<Item>  = REGISTRATE
@@ -6522,6 +6553,18 @@ public static final ItemEntry<Item>  = REGISTRATE
     public static final ItemEntry<Item> TREE_SAP = REGISTRATE
             .item("tree_sap", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/tree_products/tree_sap")))
+            .register();
+
+   //生漆桶
+   public static final ItemEntry<RecipeBucketItem> RAW_LACQUER_BUCKET = REGISTRATE
+            .item("raw_lacquer_bucket", RecipeBucketItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/tree_products/raw_lacquer_bucket")))
+            .register();
+
+  //生乳胶桶
+   public static final ItemEntry<RecipeBucketItem> URUSHI_BUCKET = REGISTRATE
+            .item("urushi_bucket", RecipeBucketItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/tree_products/urushi_bucket")))
             .register();
 
     public static void register() {
