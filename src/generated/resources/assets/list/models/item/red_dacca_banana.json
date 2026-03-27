@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "list:item/vegetable/red_cabbage"
+    "layer0": "list:item/fruit/banana/red_dacca_banana"
   }
 }

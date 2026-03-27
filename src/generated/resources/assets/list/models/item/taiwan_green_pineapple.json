@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "list:item/fruit/re/pineapple/taiwan_green_pineapple"
+    "layer0": "list:item/fruit/pineapple/taiwan_green_pineapple"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "list:item/fruit/re/pineapple/red_pineapple"
+    "layer0": "list:item/fruit/pineapple/red_pineapple"
   }
 }

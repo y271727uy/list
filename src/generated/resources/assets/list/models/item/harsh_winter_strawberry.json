@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "list:item/high_crop/starry/harsh_winter_strawberry"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "list:item/fruit/re/nypa"
+    "layer0": "list:item/fruit/nypa"
   }
 }

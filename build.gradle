@@ -176,6 +176,7 @@ dependencies {
     modImplementation("maven.modrinth:cuisine-delight:W8HtUUqB")
     //modImplementation("maven.modrinth:forestry-community-edition:ZInSOok9")
     //modImplementation("maven.modrinth:patchouli:8Qyw08ld")
+    //modImplementation("maven.modrinth:workstation-recipe-exporter:V7KL8sl5")
 
     modRuntimeOnly("maven.modrinth:probejs:7.0.0")
 }

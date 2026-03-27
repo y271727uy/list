@@ -1019,7 +1019,7 @@ public class ModCreativeModeTabs {
                     .title(REGISTRATE.addLang("itemGroup", ListMod.rl("crops_crops"), "Crops"))  // 语言键: itemGroup.listmod.crops
                     .icon(() -> new ItemStack(ModItems.RED_ONION.get()))
                     .displayItems((parameters, output) -> {
-                        //output.accept(ModItems.SPRING_BAMBOO_SHOOT.get());     // 春笋   //明日之后蔬菜
+                    //output.accept(ModItems.SPRING_BAMBOO_SHOOT.get());     // 春笋   //明日之后蔬菜
                     //output.accept(ModItems.HAIRY_BAMBOO_SHOOT.get());      // 毛笋
                     //output.accept(ModItems.LOTUS_ROOT.get());              // 莲藕
                     //output.accept(ModItems.GLUTINOUS_RICE.get());          // 糯米
@@ -1027,6 +1027,7 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.SESAME_SEED.get());             // 芝麻
                     //output.accept(ModItems.RAPESEED.get());                // 油菜
                     //output.accept(ModItems.CHRYSANTHEMUM.get());           // 菊花
+                    output.accept(ModItems.HARSH_WINTER_STRAWBERRY.get());       //凛冬草莓
                     //output.accept(ModItems.PARSNIP.get());                 // 防风草     //蔬菜 星露谷
                     //output.accept(ModItems.SNOW_YAM.get());                // 雪山药
                     //output.accept(ModItems.WHITE_RADISH.get());            // 白萝卜
@@ -1103,7 +1104,7 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.CASHEW.get());                 //腰果
                     output.accept(ModItems.PECAN.get());                  //碧根果
                     output.accept(ModItems.PISTACHIO.get());              //开心果
-                    //output.accept(ModItems.YELLOW_PEACH.get());           //黄桃（明日之后 水果 真的很少）
+                    output.accept(ModItems.YELLOW_PEACH.get());           //黄桃（明日之后 水果 真的很少）
                     //output.accept(ModItems.SEA_BUCKTHORN.get());          //沙棘果
                     //output.accept(ModItems.LONGAN.get());                 //龙眼
                     //output.accept(ModItems.MULBERRY.get());               //桑葚
@@ -1135,8 +1136,10 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());       //小王子蕉
                     //output.accept(ModItems..get());       //象腿蕉
                     //output.accept(ModItems..get());       //朝天蕉  不是tmd重庆那个朝天椒
-                    //output.accept(ModItems..get());       //南洋红香蕉
-                    //output.accept(ModItems..get());       //蓝爪哇香蕉 Blue Java   题外话：FUCK JAVA!!!
+                    output.accept(ModItems.RED_DACCA_BANANA_BUNCH.get());       //南洋红香蕉
+                    output.accept(ModItems.RED_DACCA_BANANA.get());
+                    output.accept(ModItems.BLUE_JAVA_BANANA_BUNCH.get());       //蓝爪哇香蕉 Blue Java   题外话：FUCK JAVA!!!
+                    output.accept(ModItems.BLUE_JAVA_BANANA.get());
                     //output.accept(ModItems..get());       //大麦克香蕉
                     //output.accept(ModItems..get());       //红宝石香蕉
                     //output.accept(ModItems..get());       //巨人香蕉
@@ -1204,7 +1207,6 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());       //马泡瓜 学名Cucumis melo var. agrestis
                     //output.accept(ModItems..get());       //拇指西瓜（糙毛马㼎儿）学名Melothria scabra
                     //output.accept(ModItems..get());       //蒙特可可 Theobroma bicolor
-                    //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //

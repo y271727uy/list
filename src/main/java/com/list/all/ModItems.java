@@ -3072,7 +3072,7 @@ public static final ItemEntry<Item> AMARANTH = REGISTRATE
     //红叶卷心菜
     public static final ItemEntry<Item> RED_CABBAGE = REGISTRATE
             .item("red_cabbage", Item::new)
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/red_cabbage")))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/red_cabbage")))
             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(2)
                     .saturationMod(1.2f)
@@ -3425,7 +3425,7 @@ public static final ItemEntry<Item> BASIL = REGISTRATE
     //红洋葱
     public static final ItemEntry<Item> RED_ONION = REGISTRATE
             .item("red_onion", Item::new)
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/cp/red_onion")))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/red_onion")))
             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(2)
                     .saturationMod(1.2f)
@@ -3787,15 +3787,6 @@ public static final ItemEntry<Item> PISTACHIO = REGISTRATE
 
 
 /*
-// 黄桃
-public static final ItemEntry<Item> YELLOW_PEACH = REGISTRATE
-        .item("yellow_peach", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/lifafter/yellow_peach")))
-        .properties(p -> p.food(new FoodProperties.Builder()
-                .nutrition(3)
-                .saturationMod(1.2f)
-                .build()))
-        .register();
 
 // 沙棘果
 public static final ItemEntry<Item> SEA_BUCKTHORN = REGISTRATE
@@ -3861,7 +3852,7 @@ public static final ItemEntry<Item>  = REGISTRATE
 //红菠萝
 public static final ItemEntry<Item> RED_PINEAPPLE = REGISTRATE
         .item("red_pineapple", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/pineapple/red_pineapple")))
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/pineapple/red_pineapple")))
         .register();
 /*
 public static final ItemEntry<Item>  = REGISTRATE
@@ -3873,38 +3864,91 @@ public static final ItemEntry<Item>  = REGISTRATE
    //台湾菠萝
    public static final ItemEntry<Item> TAIWAN_GREEN_PINEAPPLE = REGISTRATE
         .item("taiwan_green_pineapple", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/pineapple/taiwan_green_pineapple")))
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/pineapple/taiwan_green_pineapple")))
         .register();
 
     //香水凤梨
     public static final ItemEntry<Item> PERFUME_PINEAPPLE = REGISTRATE
         .item("perfume_pineapple", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/pineapple/perfume_pineapple")))
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/pineapple/perfume_pineapple")))
         .register();
 
     //水椰
     public static final ItemEntry<Item> NYPA = REGISTRATE
             .item("nypa", Item::new)
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/nypa")))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/nypa")))
             .register();
             
    //巧克力柿
    public static final ItemEntry<Item> CHOCOLAT_PERSIMMON = REGISTRATE
         .item("chocolat_persimmon", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/re/persimmon/chocolat_persimmon")))
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/persimmon/chocolat_persimmon")))
         .properties(p -> p.food(new FoodProperties.Builder()
                 .nutrition(2)
                 .saturationMod(1.2f)
                 .build()))
         .register();
 
+//凛冬草莓
+public static final ItemEntry<Item> HARSH_WINTER_STRAWBERRY = REGISTRATE
+        .item("harsh_winter_strawberry", Item::new)
+        .properties(p -> p.rarity(Rarity.EPIC))
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/high_crop/starry/harsh_winter_strawberry")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(2)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
 
+//黄桃
+public static final ItemEntry<Item> YELLOW_PEACH = REGISTRATE
+        .item("yellow_peach", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/yellow_peach")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(2)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
 
+//南洋红香蕉串
+public static final ItemEntry<Item> RED_DACCA_BANANA_BUNCH = REGISTRATE
+        .item("red_dacca_banana_bunch", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/banana/red_dacca_banana_bunch")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(2)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
 
+//南洋红香蕉
+public static final ItemEntry<Item> RED_DACCA_BANANA = REGISTRATE
+        .item("red_dacca_banana", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/banana/red_dacca_banana")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(2)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
 
+//爪哇蓝香蕉串
+public static final ItemEntry<Item> BLUE_JAVA_BANANA_BUNCH = REGISTRATE
+        .item("blue_java_banana_bunch", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/banana/blue_java_banana_bunch")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(2)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
 
-
-
+//爪哇蓝香蕉
+public static final ItemEntry<Item> BLUE_JAVA_BANANA = REGISTRATE
+        .item("blue_java_banana", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/banana/blue_java_banana")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(2)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
 
 
 
