@@ -67,8 +67,8 @@ ForestryHybridizerCategory extends AbstractRecipeCategory<ForestryHybridizerReci
         addHybridizerInputSlot(builder, recipe.inputs, 2, IN2_X, IN2_Y);
 
         // Outputs
-        addChancedOutputSlot(builder, recipe.outputs, 0, OUT0_X, OUT0_Y);
-        addChancedOutputSlot(builder, recipe.outputs, 1, OUT1_X, OUT1_Y);
+        addChancedOutputSlot(builder, recipe, 0, OUT0_X, OUT0_Y);
+        addChancedOutputSlot(builder, recipe, 1, OUT1_X, OUT1_Y);
     }
 
     private static void addHybridizerInputSlot(IRecipeLayoutBuilder builder, List<HybridizerIngredient> inputs, int index, int x, int y) {
@@ -159,11 +159,17 @@ ForestryHybridizerCategory extends AbstractRecipeCategory<ForestryHybridizerReci
             .collect(Collectors.toList());
     }
 
-    private static void addChancedOutputSlot(IRecipeLayoutBuilder builder, List<ChancedItemStack> outputs, int index, int x, int y) {
-        if (index < 0 || index >= outputs.size()) return;
-        ChancedItemStack out = outputs.get(index);
+    private static void addChancedOutputSlot(IRecipeLayoutBuilder builder, ForestryHybridizerRecipe recipe, int index, int x, int y) {
+        if (index < 0 || index >= recipe.outputs.size()) return;
+        ChancedItemStack out = recipe.outputs.get(index);
+        ItemStack display = index < recipe.outputDisplayStacks.size()
+            ? recipe.outputDisplayStacks.get(index).copy()
+            : ItemStack.EMPTY;
+        if (display.isEmpty() || display.getItem() == Items.AIR) {
+            return;
+        }
         IRecipeSlotBuilder slotBuilder = builder.addSlot(RecipeIngredientRole.OUTPUT, x, y)
-            .addItemStack(out.itemStack());
+            .addItemStack(display);
         if (out.chance() < 1.0f) {
             slotBuilder.addRichTooltipCallback((recipeSlotView, tooltip) ->
                 tooltip.add(Component.translatable("gui.list.category.forestry_hybridizer.chance", (int) (out.chance() * 100)))
@@ -178,10 +184,14 @@ ForestryHybridizerCategory extends AbstractRecipeCategory<ForestryHybridizerReci
         slot.draw(guiGraphics, IN1_X - 1, IN1_Y - 1);
         slot.draw(guiGraphics, IN2_X - 1, IN2_Y - 1);
 
-        // 2 output slots
-        slot.draw(guiGraphics, OUT0_X - 1, OUT0_Y - 1);
-        slot.draw(guiGraphics, OUT1_X - 1, OUT1_Y - 1);
+        if (recipe.outputs.size() > 0) {
+            slot.draw(guiGraphics, OUT0_X - 1, OUT0_Y - 1);
+        }
+        if (recipe.outputs.size() > 1) {
+            slot.draw(guiGraphics, OUT1_X - 1, OUT1_Y - 1);
+        }
     }
+
 
     @Override
     public void createRecipeExtras(IRecipeExtrasBuilder builder, ForestryHybridizerRecipe recipe, IFocusGroup focuses) {

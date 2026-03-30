@@ -1,0 +1,36 @@
+{
+  "type": "forestry:carpenter",
+  "box": [],
+  "liquid": {
+    "Amount": 5000,
+    "FluidName": "minecraft:water"
+  },
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+      "X": {
+        "item": "forestry:gear_tin"
+      },
+      "Y": {
+        "item": "forestry:alveary_plain"
+      },
+      "Z": {
+        "item": "list:greenhouse_casing"
+      },
+      "A": {
+        "item": "forestry:alveary_stabiliser"
+      }
+    },
+    "pattern": [
+      "XZX",
+      "AYA",
+      "XZX"
+    ],
+    "result": {
+      "item": "list:forestry_hybridizer"
+    },
+    "show_notification": true
+  },
+  "time": 75
+}

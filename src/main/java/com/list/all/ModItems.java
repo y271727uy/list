@@ -3950,7 +3950,25 @@ public static final ItemEntry<Item> BLUE_JAVA_BANANA = REGISTRATE
                 .build()))
         .register();
 
+//芭蕉串
+public static final ItemEntry<Item> PLANTAIN_BUNCH = REGISTRATE
+        .item("plantain_bunch", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/banana/plantain_bunch")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(2)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
 
+//芭蕉
+public static final ItemEntry<Item> PLANTAIN = REGISTRATE
+        .item("plantain", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/banana/plantain")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(2)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
 
     // 草菇
     public static final ItemEntry<Item> STRAW_MUSHROOM = REGISTRATE

@@ -1,0 +1,33 @@
+{
+  "type": "forestry:carpenter",
+  "box": [],
+  "liquid": {
+    "Amount": 5000,
+    "FluidName": "minecraft:water"
+  },
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+      "X": {
+        "tag": "forge:ingots/tin"
+      },
+      "Y": {
+        "item": "forestry:hardened_machine"
+      },
+      "Z": {
+        "tag": "forge:ingots/iron"
+      }
+    },
+    "pattern": [
+      "XZX",
+      "ZYZ",
+      "XZX"
+    ],
+    "result": {
+      "item": "list:greenhouse_casing"
+    },
+    "show_notification": true
+  },
+  "time": 75
+}

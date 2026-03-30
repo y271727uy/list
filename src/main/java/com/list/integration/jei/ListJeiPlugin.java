@@ -59,6 +59,9 @@ public class ListJeiPlugin implements IModPlugin {
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         Minecraft mc = Minecraft.getInstance();
+        if (mc.level == null) {
+            return;
+        }
         RecipeManager recipeManager = mc.level.getRecipeManager();
         registration.addRecipes(
             FISH_POND,

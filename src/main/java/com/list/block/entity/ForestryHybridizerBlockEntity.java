@@ -286,13 +286,29 @@ public class ForestryHybridizerBlockEntity extends MulitblockBlockEntity impleme
     }
 
     private boolean canInsertAllPendingOutputs() {
+        if (pendingOutputs.isEmpty()) {
+            return true;
+        }
+
+        List<ItemStack> simulatedOutputs = new ArrayList<>(2);
+        for (int slot = 3; slot < 5; slot++) {
+            simulatedOutputs.add(itemHandler.getStackInSlot(slot).copy());
+        }
+
         for (ItemStack output : pendingOutputs) {
-            ItemStack remaining = output.copy();
-            for (int i = 3; i < 5; i++) {
-                remaining = itemHandler.insertItem(i, remaining.copy(), true);
-                if (remaining.isEmpty()) break;
+            if (output.isEmpty()) {
+                continue;
             }
-            if (!remaining.isEmpty()) return false;
+            ItemStack remaining = output.copy();
+            for (int slot = 0; slot < simulatedOutputs.size(); slot++) {
+                remaining = insertIntoSimulatedSlot(simulatedOutputs, slot, remaining);
+                if (remaining.isEmpty()) {
+                    break;
+                }
+            }
+            if (!remaining.isEmpty()) {
+                return false;
+            }
         }
         return true;
     }
@@ -305,6 +321,47 @@ public class ForestryHybridizerBlockEntity extends MulitblockBlockEntity impleme
                 if (remaining.isEmpty()) break;
             }
         }
+    }
+
+    private ItemStack insertIntoSimulatedSlot(List<ItemStack> simulatedOutputs, int slot, ItemStack stack) {
+        if (stack.isEmpty()) {
+            return ItemStack.EMPTY;
+        }
+
+        ItemStack slotStack = simulatedOutputs.get(slot);
+        int slotLimit = itemHandler.getSlotLimit(slot + 3);
+        int stackLimit = Math.min(stack.getMaxStackSize(), slotLimit);
+        if (stackLimit <= 0) {
+            return stack;
+        }
+
+        if (slotStack.isEmpty()) {
+            int toMove = Math.min(stack.getCount(), stackLimit);
+            simulatedOutputs.set(slot, stack.copyWithCount(toMove));
+            ItemStack remaining = stack.copy();
+            remaining.shrink(toMove);
+            return remaining;
+        }
+
+        if (!canStacksMerge(slotStack, stack)) {
+            return stack;
+        }
+
+        int maxCount = Math.min(slotStack.getMaxStackSize(), slotLimit);
+        int space = maxCount - slotStack.getCount();
+        if (space <= 0) {
+            return stack;
+        }
+
+        int toMove = Math.min(stack.getCount(), space);
+        slotStack.grow(toMove);
+        ItemStack remaining = stack.copy();
+        remaining.shrink(toMove);
+        return remaining;
+    }
+
+    private static boolean canStacksMerge(ItemStack first, ItemStack second) {
+        return ItemStack.isSameItemSameTags(first, second);
     }
 
     @Nullable

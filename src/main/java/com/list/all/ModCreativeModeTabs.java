@@ -1093,7 +1093,6 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.CRYSTAL_FRUIT.get());          //水晶果
                     output.accept(ModItems.HEART_FRUIT.get());            //人心果
                     //output.accept(ModItems.LUOHAN_ORANGE.get());          //罗汉橙
-                    //output.accept(ModItems.BANANA.get());                 //芭蕉
                     //output.accept(ModItems.AMERICAN_RASPBERRY.get());     //美洲大树莓
                     output.accept(ModItems.MUSHROOM_BERRY.get());         //菇娘果
                     //output.accept(ModItems.BREADFRUIT.get());             //面包果
@@ -1140,6 +1139,8 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.RED_DACCA_BANANA.get());
                     output.accept(ModItems.BLUE_JAVA_BANANA_BUNCH.get());       //蓝爪哇香蕉 Blue Java   题外话：FUCK JAVA!!!
                     output.accept(ModItems.BLUE_JAVA_BANANA.get());
+                    output.accept(ModItems.PLANTAIN_BUNCH.get());
+                    output.accept(ModItems.PLANTAIN.get());
                     //output.accept(ModItems..get());       //大麦克香蕉
                     //output.accept(ModItems..get());       //红宝石香蕉
                     //output.accept(ModItems..get());       //巨人香蕉

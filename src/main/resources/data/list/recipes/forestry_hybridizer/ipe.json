@@ -1,0 +1,37 @@
+{
+    "type": "list:forestry_hybridizer",
+    "time": 8000,
+    "inputs": [
+        {
+            "item": "forestry:sapling",
+            "count": 1,
+            "nbt": "{ForgeCaps:{Parent:{analyzed:0b,genome:{\"forestry:fireproof\":{\"active\":\"forestry:falsed\",\"inactive\":\"forestry:falsed\"},\"forestry:fruits\":{\"active\":\"forestry:fruit_none\",\"inactive\":\"forestry:fruit_none\"},\"forestry:girth\":{\"active\":\"forestry:1i\",\"inactive\":\"forestry:1i\"},\"forestry:height\":{\"active\":\"forestry:0.75f\",\"inactive\":\"forestry:0.75f\"},\"forestry:maturation\":{\"active\":\"forestry:3i\",\"inactive\":\"forestry:3i\"},\"forestry:saplings\":{\"active\":\"forestry:0.025fd\",\"inactive\":\"forestry:0.025fd\"},\"forestry:sappiness\":{\"active\":\"forestry:0.3fd\",\"inactive\":\"forestry:0.3fd\"},\"forestry:tree_effect\":{\"active\":\"forestry:tree_effect_none\",\"inactive\":\"forestry:tree_effect_none\"},\"forestry:tree_species\":{\"active\":\"forestry:tree_dogwood\",\"inactive\":\"forestry:tree_dogwood\"},\"forestry:yield\":{\"active\":\"forestry:0.025fd\",\"inactive\":\"forestry:0.025fd\"}}}}}"
+        },
+        {
+            "item": "forestry:sapling",
+            "count": 1,
+            "nbt": "{ForgeCaps:{Parent:{analyzed:0b,genome:{\"forestry:fireproof\":{\"active\":\"forestry:falsed\",\"inactive\":\"forestry:falsed\"},\"forestry:fruits\":{\"active\":\"forestry:fruit_none\",\"inactive\":\"forestry:fruit_none\"},\"forestry:girth\":{\"active\":\"forestry:1i\",\"inactive\":\"forestry:1i\"},\"forestry:height\":{\"active\":\"forestry:1.25f\",\"inactive\":\"forestry:1.25f\"},\"forestry:maturation\":{\"active\":\"forestry:4i\",\"inactive\":\"forestry:4i\"},\"forestry:saplings\":{\"active\":\"forestry:0.025fd\",\"inactive\":\"forestry:0.025fd\"},\"forestry:sappiness\":{\"active\":\"forestry:0.2fd\",\"inactive\":\"forestry:0.2fd\"},\"forestry:tree_effect\":{\"active\":\"forestry:tree_effect_none\",\"inactive\":\"forestry:tree_effect_none\"},\"forestry:tree_species\":{\"active\":\"forestry:tree_teak\",\"inactive\":\"forestry:tree_teak\"},\"forestry:yield\":{\"active\":\"forestry:0.025fd\",\"inactive\":\"forestry:0.025fd\"}}}}}"
+        },
+        {
+            "item": "forestry:bee_drone_ge",
+            "blurry_nbt": "{ForgeCaps:{Parent:{genome:{\"forestry:bee_species\":{\"active\":\"forestry:bee_tropical\"}}}}}",
+            "count": 10,
+            "render_item": {
+                "item": "forestry:bee_drone_ge",
+                "nbt": "{\"ForgeCaps\":{\"Parent\":{\"analyzed\":0b,\"genome\":{\"forestry:activity\":{\"active\":\"forestry:activity_diurnal\",\"inactive\":\"forestry:activity_diurnal\"},\"forestry:bee_effect\":{\"active\":\"forestry:bee_effect_miasmic\",\"inactive\":\"forestry:bee_effect_miasmic\"},\"forestry:bee_species\":{\"active\":\"forestry:bee_tropical\",\"inactive\":\"forestry:bee_tropical\"},\"forestry:cave_dwelling\":{\"active\":\"forestry:falsed\",\"inactive\":\"forestry:falsed\"},\"forestry:fertility\":{\"active\":\"forestry:2id\",\"inactive\":\"forestry:2id\"},\"forestry:flower_type\":{\"active\":\"forestry:flower_type_jungle\",\"inactive\":\"forestry:flower_type_jungle\"},\"forestry:humidity_tolerance\":{\"active\":\"forestry:tolerance_up_1d\",\"inactive\":\"forestry:tolerance_up_1d\"},\"forestry:lifespan\":{\"active\":\"forestry:30id\",\"inactive\":\"forestry:30id\"},\"forestry:pollination\":{\"active\":\"forestry:5id\",\"inactive\":\"forestry:5id\"},\"forestry:speed\":{\"active\":\"forestry:0.6fd\",\"inactive\":\"forestry:0.6fd\"},\"forestry:temperature_tolerance\":{\"active\":\"forestry:tolerance_up_1d\",\"inactive\":\"forestry:tolerance_up_1d\"},\"forestry:territory\":{\"active\":\"forestry:9_6_9\",\"inactive\":\"forestry:9_6_9\"},\"forestry:tolerates_rain\":{\"active\":\"forestry:trued\",\"inactive\":\"forestry:trued\"}},\"health\":30,\"max_heath\":30,\"pristine\":1b}}}"
+            }
+        }
+    ],
+    "outputs": [
+        {
+            "item": "forestry:sapling",
+            "nbt": "{ForgeCaps:{Parent:{analyzed:0b,genome:{\"forestry:fireproof\":{\"active\":\"forestry:falsed\",\"inactive\":\"forestry:falsed\"},\"forestry:fruits\":{\"active\":\"forestry:fruit_none\",\"inactive\":\"forestry:fruit_none\"},\"forestry:girth\":{\"active\":\"forestry:2i\",\"inactive\":\"forestry:2i\"},\"forestry:height\":{\"active\":\"forestry:1.25f\",\"inactive\":\"forestry:1.25f\"},\"forestry:maturation\":{\"active\":\"forestry:4i\",\"inactive\":\"forestry:4i\"},\"forestry:saplings\":{\"active\":\"forestry:0.025fd\",\"inactive\":\"forestry:0.025fd\"},\"forestry:sappiness\":{\"active\":\"forestry:0.2fd\",\"inactive\":\"forestry:0.2fd\"},\"forestry:tree_effect\":{\"active\":\"forestry:tree_effect_none\",\"inactive\":\"forestry:tree_effect_none\"},\"forestry:tree_species\":{\"active\":\"forestry:tree_ipe\",\"inactive\":\"forestry:tree_ipe\"},\"forestry:yield\":{\"active\":\"forestry:0.025fd\",\"inactive\":\"forestry:0.025fd\"}}}}}",
+            "count": 1,
+            "chance": 0.05,
+            "display_item": {
+                "item": "forestry:sapling",
+                "nbt": "{ForgeCaps:{Parent:{analyzed:0b,genome:{\"forestry:fireproof\":{\"active\":\"forestry:falsed\",\"inactive\":\"forestry:falsed\"},\"forestry:fruits\":{\"active\":\"forestry:fruit_none\",\"inactive\":\"forestry:fruit_none\"},\"forestry:girth\":{\"active\":\"forestry:2i\",\"inactive\":\"forestry:2i\"},\"forestry:height\":{\"active\":\"forestry:1.25f\",\"inactive\":\"forestry:1.25f\"},\"forestry:maturation\":{\"active\":\"forestry:4i\",\"inactive\":\"forestry:4i\"},\"forestry:saplings\":{\"active\":\"forestry:0.025fd\",\"inactive\":\"forestry:0.025fd\"},\"forestry:sappiness\":{\"active\":\"forestry:0.2fd\",\"inactive\":\"forestry:0.2fd\"},\"forestry:tree_effect\":{\"active\":\"forestry:tree_effect_none\",\"inactive\":\"forestry:tree_effect_none\"},\"forestry:tree_species\":{\"active\":\"forestry:tree_ipe\",\"inactive\":\"forestry:tree_ipe\"},\"forestry:yield\":{\"active\":\"forestry:0.025fd\",\"inactive\":\"forestry:0.025fd\"}}}}}"
+            }
+        }
+    ]
+}
