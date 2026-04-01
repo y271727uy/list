@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:river",
+    "minecraft:ocean",
+    "minecraft:swamp",
+    "minecraft:mangrove_swamp"
+  ],
+  "features": "list:disk_burrowed_dirt",
+  "step": "underground_ores"
+}

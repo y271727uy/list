@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:river",
+    "minecraft:swamp"
+  ],
+  "features": "list:disk_burrowed_clay",
+  "step": "underground_ores"
+}

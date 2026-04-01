@@ -7,6 +7,7 @@ import com.list.block.mushroom.SeaMushroomBlock;
 import com.list.block.mushroom.CaveMushroomBlock;
 import com.list.block.colony.SeaMushroomColonyBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
@@ -14,6 +15,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import com.list.block.ForestryHybridizerBlock;
 import net.minecraft.world.level.block.FallingBlock;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 
 import static com.list.ListMod.REGISTRATE;
@@ -455,6 +457,9 @@ public class ModBlocks {
                 provider.simpleBlock(ctx.get(), model);
             })
             .tag(BlockTags.MINEABLE_WITH_SHOVEL)
+            //.loot(NonNullBiConsumer.noop())
+            //.loot((lt, block) -> {})
+            .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
             .register();
     //有洞的沙子
     public static final BlockEntry<FallingBlock> BURROWED_SAND = REGISTRATE
@@ -474,6 +479,9 @@ public class ModBlocks {
                 provider.simpleBlock(ctx.get(), model);
             })
             .tag(BlockTags.MINEABLE_WITH_SHOVEL)
+            //.loot(NonNullBiConsumer.noop())
+            //.loot((lt, block) -> {})
+            .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
             .register();
     //有洞的沙砾
     public static final BlockEntry<FallingBlock> BURROWED_GRAVEL = REGISTRATE
@@ -493,6 +501,9 @@ public class ModBlocks {
                 provider.simpleBlock(ctx.get(), model);
             })
             .tag(BlockTags.MINEABLE_WITH_SHOVEL)
+            //.loot(NonNullBiConsumer.noop())
+            //.loot((lt, block) -> {})
+            .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
             .register();
     //有洞的泥土
     public static final BlockEntry<Block> BURROWED_DIRT = REGISTRATE
@@ -512,6 +523,9 @@ public class ModBlocks {
                 provider.simpleBlock(ctx.get(), model);
             })
             .tag(BlockTags.MINEABLE_WITH_SHOVEL)
+            //.loot(NonNullBiConsumer.noop())
+            //.loot((lt, block) -> {})
+            .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
             .register();
 
     //有洞的泥巴
@@ -532,6 +546,9 @@ public class ModBlocks {
                 provider.simpleBlock(ctx.get(), model);
             })
             .tag(BlockTags.MINEABLE_WITH_SHOVEL)
+            //.loot(NonNullBiConsumer.noop())
+            //.loot((lt, block) -> {})
+            .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
             .register();
 
     //温室外壳

@@ -1,0 +1,21 @@
+{
+  "feature": "list:disk_burrowed_mud",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:true"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
