@@ -29,19 +29,19 @@ repositories {
         url = "https://modmaven.dev"
     }
     maven {
-            url "https://maven.latvian.dev/releases"
-            content {
-                includeGroup "dev.latvian.mods"
-                includeGroup "dev.latvian.apps"
-            }
+        url "https://maven.latvian.dev/releases"
+        content {
+            includeGroup "dev.latvian.mods"
+            includeGroup "dev.latvian.apps"
         }
+    }
 
     maven {
-            url "https://jitpack.io"
-            content {
-                includeGroup "com.github.rtyley"
-            }
+        url "https://jitpack.io"
+        content {
+            includeGroup "com.github.rtyley"
         }
+    }
     exclusiveContent { // tterrag - registrate
         forRepository { maven { url = "https://maven.tterrag.com/" } }
         filter { includeGroup("com.tterrag.registrate") }

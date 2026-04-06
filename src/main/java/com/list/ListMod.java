@@ -7,6 +7,7 @@ import com.list.all.ModItems;
 import com.list.all.ModMenus;
 import com.list.all.ModRecipes;
 import com.list.data.ModDataGen;
+import com.list.fish_group.FishGroupRegistry;
 import com.list.network.ModMessages;
 import com.list.registration.ListRegistrate;
 import net.minecraft.resources.ResourceLocation;
@@ -40,8 +41,8 @@ public class ListMod
         ModCreativeModeTabs.register(modEventBus);
         ModMenus.register();
         ModRecipes.register(modEventBus);
+        FishGroupRegistry.register(modEventBus);
         
-        // 注册通用设置事件
         modEventBus.addListener(this::commonSetup);
         
         // 注册服务器启动事件
