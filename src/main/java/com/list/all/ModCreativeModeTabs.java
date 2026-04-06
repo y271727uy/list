@@ -695,6 +695,10 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.AMMLET_FROM_EMBRYO.get());     
                 output.accept(ModItems.RED_CABBAGE_LEAF.get());//红卷心菜叶
                 output.accept(ModItems.RED_PINEAPPLE_SLICE.get());//红凤梨切块
+                output.accept(ModItems.AGLIO_ROSSO_DI_SULMONA_CLOVES.get()); //
+                output.accept(ModItems.AGLIO_BIANCO_POLESANO_CLOVES.get());  //
+                output.accept(ModItems.BEEFSTEAK_TOMATO_SLICE.get());  //
+                output.accept(ModItems.BUTTERHEAD_LETTUCE_LEAF.get());
                 output.accept(ModItems.LABA_GARLIC.get());//腊八蒜
                 output.accept(ModItems.RUSSIA_BLACK_BREAD.get());       //俄罗斯黑面包
                 output.accept(ModItems.GUMMY_BEAR.get());       //柑橘味小熊软糖
@@ -960,12 +964,16 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.GTFO_PURPLE_DRINK.get());
                 output.accept(ModItems.ANTAF.get());
                 output.accept(ModItems.CRANBERRY_ETRIPS.get());
+                output.accept(ModItems.ORANGE_JUICE.get());   
+                output.accept(ModItems.APPLE_JUICE.get());   
                 output.accept(ModItems.NAQUADAH_MILK.get());
                 output.accept(ModItems.LENINADE.get()); 
                 output.accept(ModItems.VODKA.get());       
                 output.accept(ModItems.PURPLE_DRINK.get()); 
                 output.accept(ModItems.ETRIPS.get());       
-                output.accept(ModItems.SPARKLING_WATER.get());  
+                output.accept(ModItems.SPARKLING_WATER.get());
+                output.accept(ModItems.BEER.get());   
+                output.accept(ModItems.QINGDAO_BEER.get());  
                 //胶囊 GTFO守门员
                 output.accept(ModItems.FERMENTED_CHORUS_CAPSULE.get()); 
                 output.accept(ModItems.GELATIN_CAPSULE.get()); 
@@ -1193,9 +1201,7 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.MUSK_MELON.get());             //香瓜
                     //output.accept(ModItems.GOLDEN_MELON.get());           //金丝甜瓜
                     output.accept(ModItems.NECTARINE.get());              //油桃
-                    output.accept(ModItems.CASHEW.get());                 //腰果
                     output.accept(ModItems.PECAN.get());                  //碧根果
-                    output.accept(ModItems.PISTACHIO.get());              //开心果
                     output.accept(ModItems.YELLOW_PEACH.get());           //黄桃（明日之后 水果 真的很少）
                     //output.accept(ModItems.SEA_BUCKTHORN.get());          //沙棘果
                     //output.accept(ModItems.LONGAN.get());                 //龙眼
@@ -1255,7 +1261,6 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());       //西谷椰子
                     //output.accept(ModItems..get());       //砂糖椰子 /桄榔
                     //output.accept(ModItems..get());       //椰柿 Quararibea cordata
-                    //output.accept(ModItems..get());       //金橘
                     //output.accept(ModItems..get());       //丑橘
                     //output.accept(ModItems..get());       //蜜柑 嗯...群友（（   日语みかん不过我觉得还是拉丁更权威
                     //output.accept(ModItems..get());       //红心柚
@@ -1302,7 +1307,31 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());       //拇指西瓜（糙毛马㼎儿）学名Melothria scabra
                     //output.accept(ModItems..get());       //蒙特可可 Theobroma bicolor
                     output.accept(ModItems.GLYCINE_SOJA.get());
-                    //output.accept(ModItems..get());       //
+                    output.accept(ModItems.AGLIO_ROSSO_DI_SULMONA.get());
+                    output.accept(ModItems.AGLIO_BIANCO_POLESANO.get());
+                    output.accept(ModItems.ARTICHOKES.get());
+                    output.accept(ModItems.BEEFSTEAK_TOMATO.get());
+                    output.accept(ModItems.BUTTERHEAD_LETTUCE.get());
+                    output.accept(ModItems.CAFONA_APRICOT.get());
+                    output.accept(ModItems.CETRIOLO_IUNGO.get());
+                    output.accept(ModItems.CEYLON_CINNAMON.get());
+                    output.accept(ModItems.CINNAMON_FRUIT.get());
+                    output.accept(ModItems.CIPOLLA_DI_CERTALDO.get());
+                    output.accept(ModItems.CORATION_OLIVE.get());
+                    output.accept(ModItems.DEKOPON_ORANGE.get());
+                    output.accept(ModItems.FIANO_WHITE_GRAPE.get());
+                    output.accept(ModItems.GENOVESE_BASIL_LEAF.get());
+                    output.accept(ModItems.GROS_MICHEL_BANANA.get());
+                    output.accept(ModItems.HORSERADISH.get());
+                    output.accept(ModItems.ITALIAN_LONG_EGGPLANT.get());
+                    output.accept(ModItems.KENT_MANGO.get());
+                    output.accept(ModItems.MAGNUM_HOP.get());
+                    output.accept(ModItems.NEBBIOLO_GRAPE.get());
+                    output.accept(ModItems.OREGANO_LEAF.get());
+                    output.accept(ModItems.SWEET_CORN.get());
+                    output.accept(ModItems.LONG_GRAIN_RICE.get());
+                    output.accept(ModItems.DWARF_COCONUT_FRUIT.get());       //矮种椰子果实
+                    output.accept(ModItems.GIZA_COTTON.get());
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //

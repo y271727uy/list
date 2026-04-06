@@ -3764,27 +3764,255 @@ public static final ItemEntry<Item> NECTARINE = REGISTRATE
                 .build()))
         .register();
 
-// 腰果
-public static final ItemEntry<Item> CASHEW = REGISTRATE
-        .item("cashew", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/cashew")))
+// 批量注册
+public static final ItemEntry<Item> AGLIO_ROSSO_DI_SULMONA = REGISTRATE
+        .item("aglio_rosso_di_sulmona", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/aglio_rosso_di_sulmona")))
         .properties(p -> p.food(new FoodProperties.Builder()
                 .nutrition(3)
                 .saturationMod(1.2f)
                 .build()))
         .register();
 
-
-// 开心果
-public static final ItemEntry<Item> PISTACHIO = REGISTRATE
-        .item("pistachio", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/stardewvalley/pistachio")))
+public static final ItemEntry<Item> AGLIO_ROSSO_DI_SULMONA_CLOVES = REGISTRATE
+        .item("aglio_rosso_di_sulmona_cloves", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/aglio_rosso_di_sulmona_cloves")))
         .properties(p -> p.food(new FoodProperties.Builder()
                 .nutrition(3)
                 .saturationMod(1.2f)
                 .build()))
         .register();
 
+public static final ItemEntry<Item> AGLIO_BIANCO_POLESANO = REGISTRATE
+        .item("aglio_bianco_polesano", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/aglio_bianco_polesano")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> AGLIO_BIANCO_POLESANO_CLOVES = REGISTRATE
+        .item("aglio_bianco_polesano_cloves", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/aglio_bianco_polesano_cloves")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> ARTICHOKES = REGISTRATE
+        .item("artichokes", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/artichokes")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> BEEFSTEAK_TOMATO = REGISTRATE
+        .item("beefsteak_tomato", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/beefsteak_tomato")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> BEEFSTEAK_TOMATO_SLICE = REGISTRATE
+        .item("beefsteak_tomato_slice", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/beefsteak_tomato_slice")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> BUTTERHEAD_LETTUCE = REGISTRATE
+        .item("butterhead_lettuce", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/butterhead_lettuce")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> BUTTERHEAD_LETTUCE_LEAF = REGISTRATE
+        .item("butterhead_lettuce_leaf", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/butterhead_lettuce_leaf")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> CAFONA_APRICOT = REGISTRATE
+        .item("cafona_apricot", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/cafona_apricot")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> CETRIOLO_IUNGO = REGISTRATE
+        .item("cetriolo_iungo", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/cetriolo_iungo")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> CEYLON_CINNAMON = REGISTRATE
+        .item("ceylon_cinnamon", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/ceylon_cinnamon")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> CINNAMON_FRUIT = REGISTRATE
+        .item("cinnamon_fruit", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/cinnamon_fruit")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> CIPOLLA_DI_CERTALDO = REGISTRATE
+        .item("cipolla_di_certaldo", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/cipolla_di_certaldo")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> CORATION_OLIVE = REGISTRATE
+        .item("coration_olive", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/coration_olive")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> DEKOPON_ORANGE = REGISTRATE
+        .item("dekopon_orange", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/dekopon_orange")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> FIANO_WHITE_GRAPE = REGISTRATE
+        .item("fiano_white_grape", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/fiano_white_grape")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> GENOVESE_BASIL_LEAF = REGISTRATE
+        .item("genovese_basil_leaf", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/genovese_basil_leaf")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> GROS_MICHEL_BANANA = REGISTRATE
+        .item("gros_michel_banana", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/gros_michel_banana")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> HORSERADISH = REGISTRATE
+        .item("horseradish", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/horseradish")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> ITALIAN_LONG_EGGPLANT = REGISTRATE
+        .item("italian_long_eggplant", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/italian_long_eggplant")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> KENT_MANGO = REGISTRATE
+        .item("kent_mango", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/kent_mango")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> MAGNUM_HOP = REGISTRATE
+        .item("magnum_hop", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/magnum_hop")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> NEBBIOLO_GRAPE = REGISTRATE
+        .item("nebbiolo_grape", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/nebbiolo_grape")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> OREGANO_LEAF = REGISTRATE
+        .item("oregano_leaf", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/oregano_leaf")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> SWEET_CORN = REGISTRATE
+        .item("sweet_corn", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/sweet_corn")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationMod(1.2f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> LONG_GRAIN_RICE = REGISTRATE
+            .item("long_grain_rice", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/long_grain_rice")))
+            .register();
+
+public static final ItemEntry<Item> DWARF_COCONUT_FRUIT = REGISTRATE
+            .item("dwarf_coconut_fruit", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/dwarf_coconut_fruit")))
+            .register();
+
+public static final ItemEntry<Item> GIZA_COTTON = REGISTRATE
+            .item("giza_cotton", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/giza_cotton")))
+            .register();
 
 /*
 
@@ -6444,6 +6672,46 @@ public static final ItemEntry<Item> COOKED_MEAT_INGOT = REGISTRATE
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/cooked_meat_ingot")))
             .register();
+
+public static final ItemEntry<DrinkItem> BEER = REGISTRATE
+            .item("beer", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/gtfo/beer")))
+    .register();
+
+public static final ItemEntry<DrinkItem> QINGDAO_BEER = REGISTRATE
+            .item("qingdao_beer", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/gtfo/qingdao_beer")))
+    .register();
+
+public static final ItemEntry<DrinkItem> ORANGE_JUICE = REGISTRATE
+            .item("orange_juice", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/gtfo/orange_juice")))
+    .register();
+
+public static final ItemEntry<DrinkItem> APPLE_JUICE = REGISTRATE
+            .item("apple_juice", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+            .generated(ctx::get, provider
+            .modLoc("item/food/gtfo/apple_juice")))
+    .register();
 
 //你在这里之后创建 别乱创建！
 

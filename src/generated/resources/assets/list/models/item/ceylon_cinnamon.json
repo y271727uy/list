@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "list:item/fruit/stardewvalley/cashew"
+    "layer0": "list:item/food/gtfo/crop/ceylon_cinnamon"
   }
 }
