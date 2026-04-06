@@ -23,9 +23,11 @@ import static com.list.ListMod.REGISTRATE;
 public class ModBlocks {
 
     public static final BlockEntry<GreenhouseFurnaceBlock> GREENHOUSE_FURNACE = REGISTRATE
-            .block("greenhouse_furnace", GreenhouseFurnaceBlock::new)
+            .listBLock("greenhouse_furnace", GreenhouseFurnaceBlock::new)
             .initialProperties(() -> Blocks.IRON_BLOCK)
-            .simpleItem()
+            .item()
+            .tooltips("12456", "7890123")
+            .build()
             .blockstate((ctx, provider) -> {
                 BlockModelBuilder model = provider.models().cube(
                         ctx.getName(),

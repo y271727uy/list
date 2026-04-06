@@ -8,7 +8,7 @@ import com.list.all.ModMenus;
 import com.list.all.ModRecipes;
 import com.list.data.ModDataGen;
 import com.list.network.ModMessages;
-import com.tterrag.registrate.Registrate;
+import com.list.registration.ListRegistrate;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -16,7 +16,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
@@ -29,7 +28,7 @@ public class ListMod
     public static final String MODID = "list";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public static final Registrate REGISTRATE = Registrate.create(MODID);
+    public static final ListRegistrate REGISTRATE = ListRegistrate.create(MODID);
     
     @SuppressWarnings("removal")
     public ListMod()

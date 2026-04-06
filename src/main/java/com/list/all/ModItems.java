@@ -18,7 +18,11 @@ import static com.list.ListMod.REGISTRATE;
 public class ModItems {
 
     public static final ItemEntry<Item> INDUSTRIAL_COPPER_CREDIT = REGISTRATE
-            .item("industrial_copper_credit", Item::new)
+            .listItem("industrial_copper_credit", Item::new)
+            .tooltips(
+                "Test132456",
+                "Test567893"
+            )
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/credit/industrial_copper_credit")))
             .register();
 
