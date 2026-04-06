@@ -3,11 +3,10 @@ package com.list.client;
 import com.list.ListMod;
 import com.list.all.ModRecipes;
 import com.list.fish_group.item.FishGroupRegistry;
-import com.list.fish_group.client.model.entity.FloatingBooksModel;
 import com.list.fish_group.client.model.entity.FloatingDebrisModel;
 import com.list.fish_group.client.model.entity.OceanFishPoolModel;
 import com.list.fish_group.client.model.entity.RiverFishPoolModel;
-import com.list.fish_group.client.renderer.entity.FloatingBooksRenderer;
+// FloatingBooksRenderer import removed (feature disabled)
 import com.list.fish_group.client.renderer.entity.FloatingDebrisRenderer;
 import com.list.fish_group.client.renderer.entity.OceanFishPoolRenderer;
 import com.list.fish_group.client.renderer.entity.RiverFishPoolRenderer;
@@ -60,7 +59,6 @@ public class ClientEvents {
         @SubscribeEvent
         public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
             event.registerEntityRenderer(FishGroupRegistry.FLOATING_DEBRIS.get(), FloatingDebrisRenderer::new);
-            event.registerEntityRenderer(FishGroupRegistry.FLOATING_BOOKS.get(), FloatingBooksRenderer::new);
             event.registerEntityRenderer(FishGroupRegistry.RIVER_FISH_POOL.get(), RiverFishPoolRenderer::new);
             event.registerEntityRenderer(FishGroupRegistry.OCEAN_FISH_POOL.get(), OceanFishPoolRenderer::new);
         }
@@ -68,7 +66,6 @@ public class ClientEvents {
         @SubscribeEvent
         public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
             event.registerLayerDefinition(FloatingDebrisModel.LAYER_LOCATION, FloatingDebrisModel::getTexturedModelData);
-            event.registerLayerDefinition(FloatingBooksModel.LAYER_LOCATION, FloatingBooksModel::getTexturedModelData);
             event.registerLayerDefinition(RiverFishPoolModel.LAYER_LOCATION, RiverFishPoolModel::getTexturedModelData);
             event.registerLayerDefinition(OceanFishPoolModel.LAYER_LOCATION, OceanFishPoolModel::getTexturedModelData);
         }

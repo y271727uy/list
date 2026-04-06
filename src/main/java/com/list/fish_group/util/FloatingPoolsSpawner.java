@@ -1,7 +1,6 @@
 package com.list.fish_group.util;
 
 import com.list.fish_group.item.FishGroupRegistry;
-import com.list.fish_group.entity.FloatingBooksEntity;
 import com.list.fish_group.entity.FloatingDebrisEntity;
 import com.list.fish_group.entity.OceanFishPoolEntity;
 import com.list.fish_group.entity.RiverFishPoolEntity;
@@ -37,7 +36,6 @@ public class FloatingPoolsSpawner {
 
         AABB area = new AABB(spawnX - 128, spawnY - 128, spawnZ - 128, spawnX + 128, spawnY + 128, spawnZ + 128);
         int totalCount = level.getEntitiesOfClass(FloatingDebrisEntity.class, area).size();
-        totalCount += level.getEntitiesOfClass(FloatingBooksEntity.class, area).size();
 
         var biome = level.getBiome(lastValidSpawn);
         if (biome.is(BiomeTags.IS_OCEAN)) {
@@ -76,12 +74,7 @@ public class FloatingPoolsSpawner {
             });
         }
 
-        actions.add(() -> {
-            FloatingBooksEntity books = new FloatingBooksEntity(FishGroupRegistry.FLOATING_BOOKS.get(), level);
-            Vector3d spawnPos = new Vector3d(spawnX + 0.5, spawnY, spawnZ + 0.5);
-            books.setPos(spawnPos.x, spawnPos.y, spawnPos.z);
-            level.addFreshEntity(books);
-        });
+        // floating books spawn removed (feature disabled)
 
         actions.get(random.nextInt(actions.size())).run();
     }

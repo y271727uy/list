@@ -1,7 +1,6 @@
 package com.list.fish_group.item;
 
 import com.list.ListMod;
-import com.list.fish_group.entity.FloatingBooksEntity;
 import com.list.fish_group.entity.FloatingDebrisEntity;
 import com.list.fish_group.entity.OceanFishPoolEntity;
 import com.list.fish_group.entity.RiverFishPoolEntity;
@@ -27,10 +26,7 @@ public final class FishGroupRegistry {
             "floating_debris",
             () -> new FloatingPoolsItem(new Item.Properties())
     );
-    public static final RegistryObject<Item> FLOATING_BOOKS_ITEM = ITEMS.register(
-            "floating_books",
-            () -> new FloatingPoolsItem(new Item.Properties())
-    );
+    // FLOATING_BOOKS item removed - feature disabled
     public static final RegistryObject<Item> RIVER_FISH_POOL_ITEM = ITEMS.register(
             "river_fish_pool",
             () -> new FloatingPoolsItem(new Item.Properties())
@@ -46,12 +42,7 @@ public final class FishGroupRegistry {
                     .sized(2.0F, 2.5F)
                     .build(ListMod.rl("floating_debris").toString())
     );
-    public static final RegistryObject<EntityType<FloatingBooksEntity>> FLOATING_BOOKS = ENTITY_TYPES.register(
-            "floating_books",
-            () -> EntityType.Builder.<FloatingBooksEntity>of(FloatingBooksEntity::new, MobCategory.MISC)
-                    .sized(2.0F, 2.5F)
-                    .build(ListMod.rl("floating_books").toString())
-    );
+    // FLOATING_BOOKS entity registration removed - feature disabled
     public static final RegistryObject<EntityType<RiverFishPoolEntity>> RIVER_FISH_POOL = ENTITY_TYPES.register(
             "river_fish_pool",
             () -> EntityType.Builder.<RiverFishPoolEntity>of(RiverFishPoolEntity::new, MobCategory.MISC)
