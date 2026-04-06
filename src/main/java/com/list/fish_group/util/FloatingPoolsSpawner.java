@@ -1,6 +1,6 @@
 package com.list.fish_group.util;
 
-import com.list.fish_group.FishGroupRegistry;
+import com.list.fish_group.item.FishGroupRegistry;
 import com.list.fish_group.entity.FloatingBooksEntity;
 import com.list.fish_group.entity.FloatingDebrisEntity;
 import com.list.fish_group.entity.OceanFishPoolEntity;

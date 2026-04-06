@@ -1,11 +1,10 @@
-package com.list.fish_group;
+package com.list.fish_group.item;
 
 import com.list.ListMod;
 import com.list.fish_group.entity.FloatingBooksEntity;
 import com.list.fish_group.entity.FloatingDebrisEntity;
 import com.list.fish_group.entity.OceanFishPoolEntity;
 import com.list.fish_group.entity.RiverFishPoolEntity;
-import com.list.fish_group.item.FloatingPoolsItem;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.FishingRodItem;

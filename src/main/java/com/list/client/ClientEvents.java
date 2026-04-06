@@ -2,7 +2,7 @@ package com.list.client;
 
 import com.list.ListMod;
 import com.list.all.ModRecipes;
-import com.list.fish_group.FishGroupRegistry;
+import com.list.fish_group.item.FishGroupRegistry;
 import com.list.fish_group.client.model.entity.FloatingBooksModel;
 import com.list.fish_group.client.model.entity.FloatingDebrisModel;
 import com.list.fish_group.client.model.entity.OceanFishPoolModel;

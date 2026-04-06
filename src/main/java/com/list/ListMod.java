@@ -7,7 +7,7 @@ import com.list.all.ModItems;
 import com.list.all.ModMenus;
 import com.list.all.ModRecipes;
 import com.list.data.ModDataGen;
-import com.list.fish_group.FishGroupRegistry;
+import com.list.fish_group.item.FishGroupRegistry;
 import com.list.network.ModMessages;
 import com.list.registration.ListRegistrate;
 import net.minecraft.resources.ResourceLocation;

@@ -1,6 +1,5 @@
  package com.list.fish_group.item;
 
-import com.list.fish_group.FishGroupRegistry;
 import com.list.fish_group.entity.FloatingDebrisEntity;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;

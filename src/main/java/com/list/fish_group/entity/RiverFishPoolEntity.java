@@ -1,6 +1,6 @@
 package com.list.fish_group.entity;
 
-import com.list.fish_group.util.LilisLuckyLuresIdentifier;
+import com.list.fish_group.util.LuaFishPool;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
@@ -17,7 +17,7 @@ public class RiverFishPoolEntity extends FloatingDebrisEntity {
 
     @Override
     public LootTable getLootTable(ServerLevel serverLevel) {
-        return serverLevel.getServer().getLootData().getLootTable(LilisLuckyLuresIdentifier.of("gameplay/fishing_pools/river_fish_pool"));
+        return serverLevel.getServer().getLootData().getLootTable(LuaFishPool.of("gameplay/fishing_pools/river_fish_pool"));
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.list.fish_group.entity;
 
-import com.list.fish_group.util.LilisLuckyLuresIdentifier;
+import com.list.fish_group.util.LuaFishPool;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -126,7 +126,7 @@ public class FloatingDebrisEntity extends Entity {
     }
 
     public LootTable getLootTable(ServerLevel serverLevel) {
-        return serverLevel.getServer().getLootData().getLootTable(LilisLuckyLuresIdentifier.of("gameplay/fishing_pools/floating_debris"));
+        return serverLevel.getServer().getLootData().getLootTable(LuaFishPool.of("gameplay/fishing_pools/floating_debris"));
     }
 
     public void onFishHookInteract(Player player) {

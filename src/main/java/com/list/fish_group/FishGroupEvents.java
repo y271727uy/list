@@ -1,12 +1,10 @@
 package com.list.fish_group;
 
 import com.list.ListMod;
-import com.list.all.ModCreativeModeTabs;
 import com.list.fish_group.entity.FloatingDebrisEntity;
 import com.list.fish_group.util.FloatingPoolsSpawner;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.phys.AABB;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.ItemFishedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -51,22 +49,7 @@ public final class FishGroupEvents {
                 .ifPresent(entity -> entity.onFishHookInteract(owner));
     }
 
-    @Mod.EventBusSubscriber(modid = ListMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static final class ModBusEvents {
-        private ModBusEvents() {
-        }
 
-        @SubscribeEvent
-        public static void addCreativeTabContents(BuildCreativeModeTabContentsEvent event) {
-            if (event.getTab() == ModCreativeModeTabs.FISH_TAB.get()) {
-                event.accept(FishGroupRegistry.BAMBOO_FISHING_ROD.get());
-                event.accept(FishGroupRegistry.FLOATING_DEBRIS_ITEM.get());
-                event.accept(FishGroupRegistry.FLOATING_BOOKS_ITEM.get());
-                event.accept(FishGroupRegistry.RIVER_FISH_POOL_ITEM.get());
-                event.accept(FishGroupRegistry.OCEAN_FISH_POOL_ITEM.get());
-            }
-        }
-    }
 }
 
 
