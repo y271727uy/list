@@ -50,8 +50,11 @@ public abstract class AbstractFishPoolEntity extends FloatingDebrisEntity {
 
     public void setFishPoolDefinition(ResourceLocation fishPoolId) {
         FishPoolDefinition definition = FishPoolDefinitions.getOrDefault(fishPoolId, getEnvironment());
+        boolean shouldRollFishCount = !definition.id().equals(this.fishPoolId) || this.maxFishCount <= 0;
         this.fishPoolId = definition.id();
-        this.maxFishCount = definition.maxFishCount();
+        this.maxFishCount = shouldRollFishCount
+                ? definition.rollFishCount(this.random)
+                : Mth.clamp(this.maxFishCount, definition.minFishCount(), definition.maxFishCount());
         this.fishCount = Mth.clamp(this.fishCount, 0, this.maxFishCount);
     }
 
@@ -70,6 +73,21 @@ public abstract class AbstractFishPoolEntity extends FloatingDebrisEntity {
     }
 
     @Override
+    public void tick() {
+        super.tick();
+        if (this.level().isClientSide || this.isRemoved() || this.isDestroying()) {
+            return;
+        }
+
+        if (this.level() instanceof ServerLevel serverLevel) {
+            FishPoolDefinition definition = getFishPoolDefinition();
+            if (!definition.matchesCurrentConditions(serverLevel)) {
+                this.removeWithEffects(serverLevel);
+            }
+        }
+    }
+
+    @Override
     protected void readAdditionalSaveData(CompoundTag compound) {
         super.readAdditionalSaveData(compound);
         if (compound.contains(FISH_POOL_ID_TAG, Tag.TAG_STRING)) {
@@ -81,9 +99,9 @@ public abstract class AbstractFishPoolEntity extends FloatingDebrisEntity {
         this.fishCount = Math.max(0, compound.getInt(FISH_COUNT_TAG));
         this.fishKingAwarded = compound.getBoolean(FISH_KING_AWARDED_TAG);
         if (compound.contains(MAX_FISH_COUNT_TAG, Tag.TAG_INT)) {
-            this.maxFishCount = Mth.clamp(compound.getInt(MAX_FISH_COUNT_TAG), 5, 8);
+            this.maxFishCount = Math.max(1, compound.getInt(MAX_FISH_COUNT_TAG));
         } else {
-            this.maxFishCount = getFishPoolDefinition().maxFishCount();
+            this.maxFishCount = getFishPoolDefinition().rollFishCount(this.random);
         }
         this.fishCount = Mth.clamp(this.fishCount, 0, this.maxFishCount);
     }
@@ -106,7 +124,7 @@ public abstract class AbstractFishPoolEntity extends FloatingDebrisEntity {
             return;
         }
         FishPoolDefinition definition = getFishPoolDefinition();
-        if (!definition.matches(serverLevel)) {
+        if (!definition.matchesFishing(serverLevel)) {
             return;
         }
         if (this.fishCount >= getMaxFishCount()) {

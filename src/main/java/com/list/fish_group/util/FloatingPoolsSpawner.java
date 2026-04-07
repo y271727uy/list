@@ -62,12 +62,12 @@ public class FloatingPoolsSpawner {
         }
 
         if (biome.is(BiomeTags.IS_OCEAN)) {
-            java.util.List<FishPoolDefinition> availablePools = FishPoolDefinitions.getAvailable(level, FishPoolDefinition.Environment.OCEAN);
+            java.util.List<FishPoolDefinition> availablePools = FishPoolDefinitions.getAvailable(level, lastValidSpawn, FishPoolDefinition.Environment.OCEAN);
             if (!availablePools.isEmpty()) {
                 actions.add(() -> spawnFishPool(level, random, availablePools, spawnX, spawnY, spawnZ));
             }
         } else if (biome.is(BiomeTags.IS_RIVER)) {
-            java.util.List<FishPoolDefinition> availablePools = FishPoolDefinitions.getAvailable(level, FishPoolDefinition.Environment.RIVER);
+            java.util.List<FishPoolDefinition> availablePools = FishPoolDefinitions.getAvailable(level, lastValidSpawn, FishPoolDefinition.Environment.RIVER);
             if (!availablePools.isEmpty()) {
                 actions.add(() -> spawnFishPool(level, random, availablePools, spawnX, spawnY, spawnZ));
             }

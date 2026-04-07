@@ -78,8 +78,12 @@ public final class FishPoolLootManager extends SimpleJsonResourceReloadListener 
 
     private FishPoolLootTable fromDefinition(FishPoolDefinition definition) {
         return new FishPoolLootTable(
+                definition.minFishCount(),
+                definition.maxFishCount(),
                 definition.fishKing(),
+                definition.biomes(),
                 definition.weatherRequirement(),
+                definition.timeRequirement(),
                 definition.outputs()
                         .stream()
                         .map(output -> new FishPoolLootEntry(output.itemId(), output.tagId(), output.usesTag(), output.weight(), new CountRange(output.minCount(), output.maxCount()), output.nbt()))
@@ -89,8 +93,12 @@ public final class FishPoolLootManager extends SimpleJsonResourceReloadListener 
 
     private FishPoolLootTable parseTable(ResourceLocation id, JsonObject root) {
         List<FishPoolLootEntry> entries = new ArrayList<>();
+        Integer minFishCount = parseRootPositiveInt(root, "MinFishCount", "minFishCount");
+        Integer maxFishCount = parseRootPositiveInt(root, "MaxFishCount", "maxFishCount");
         ResourceLocation fishKing = parseRootResourceLocation(id, root, "FishKing", "fishKing");
+        List<ResourceLocation> biomes = parseRootBiomeList(id, root, "Biome", "biome");
         FishPoolDefinition.WeatherRequirement weatherRequirement = parseWeatherRequirement(id, root);
+        FishPoolDefinition.TimeRequirement timeRequirement = parseTimeRequirement(id, root);
 
         if (root.has("entries")) {
             addEntries(id, GsonHelper.getAsJsonArray(root, "entries"), entries);
@@ -110,7 +118,7 @@ public final class FishPoolLootManager extends SimpleJsonResourceReloadListener 
             throw new JsonParseException("Fish pool loot table " + id + " does not contain any entries");
         }
 
-        return new FishPoolLootTable(fishKing, weatherRequirement, List.copyOf(entries));
+        return new FishPoolLootTable(minFishCount, maxFishCount, fishKing, biomes, weatherRequirement, timeRequirement, List.copyOf(entries));
     }
 
     private void addEntries(ResourceLocation tableId, JsonArray jsonEntries, List<FishPoolLootEntry> parsedEntries) {
@@ -267,13 +275,49 @@ public final class FishPoolLootManager extends SimpleJsonResourceReloadListener 
         return null;
     }
 
+    private List<ResourceLocation> parseRootBiomeList(ResourceLocation tableId, JsonObject object, String... keys) {
+        for (String key : keys) {
+            if (!object.has(key) || object.get(key).isJsonNull()) {
+                continue;
+            }
+
+            JsonElement value = object.get(key);
+            if (value.isJsonArray()) {
+                List<ResourceLocation> parsedBiomes = new ArrayList<>();
+                JsonArray array = GsonHelper.convertToJsonArray(value, key);
+                for (JsonElement entry : array) {
+                    if (entry == null || entry.isJsonNull()) {
+                        continue;
+                    }
+                    String rawId = entry.getAsString().trim();
+                    if (rawId.isBlank()) {
+                        continue;
+                    }
+                    ResourceLocation parsed = parseResourceLocation(tableId, rawId, key);
+                    if (parsed != null && !parsedBiomes.contains(parsed)) {
+                        parsedBiomes.add(parsed);
+                    }
+                }
+                return List.copyOf(parsedBiomes);
+            }
+
+            String rawValue = GsonHelper.convertToString(value, key).trim();
+            if (rawValue.isBlank()) {
+                return List.of();
+            }
+            ResourceLocation parsed = parseResourceLocation(tableId, rawValue, key);
+            return parsed == null ? List.of() : List.of(parsed);
+        }
+        return List.of();
+    }
+
     @Nullable
     private FishPoolDefinition.WeatherRequirement parseWeatherRequirement(ResourceLocation tableId, JsonObject root) {
         String configuredWeather = getNullableString(root, "WeatherRequirement");
         if (configuredWeather == null || configuredWeather.isBlank()) {
             configuredWeather = getNullableString(root, "weatherRequirement");
         }
-        if (configuredWeather == null || configuredWeather.isBlank()) {
+        if (configuredWeather == null || configuredWeather.isBlank() || "null".equalsIgnoreCase(configuredWeather)) {
             return null;
         }
 
@@ -283,6 +327,26 @@ public final class FishPoolLootManager extends SimpleJsonResourceReloadListener 
             ListMod.LOGGER.warn("Fish pool loot table {} has invalid WeatherRequirement {}", tableId, configuredWeather);
             return null;
         }
+    }
+
+    @Nullable
+    private FishPoolDefinition.TimeRequirement parseTimeRequirement(ResourceLocation tableId, JsonObject root) {
+        String configuredTime = getNullableString(root, "TimeRequirement");
+        if (configuredTime == null || configuredTime.isBlank()) {
+            configuredTime = getNullableString(root, "timeRequirement");
+        }
+        if (configuredTime == null || configuredTime.isBlank() || "null".equalsIgnoreCase(configuredTime)) {
+            return null;
+        }
+
+        return switch (configuredTime.trim().toLowerCase(java.util.Locale.ROOT)) {
+            case "day" -> FishPoolDefinition.TimeRequirement.DAY;
+            case "night" -> FishPoolDefinition.TimeRequirement.NIGHT;
+            default -> {
+                ListMod.LOGGER.warn("Fish pool loot table {} has invalid TimeRequirement {}", tableId, configuredTime);
+                yield null;
+            }
+        };
     }
 
     @Nullable
@@ -305,34 +369,66 @@ public final class FishPoolLootManager extends SimpleJsonResourceReloadListener 
         return null;
     }
 
+    @Nullable
+    private Integer parseRootPositiveInt(JsonObject object, String... keys) {
+        Integer parsed = getFirstPresentInt(object, keys);
+        return parsed == null ? null : Math.max(1, parsed);
+    }
+
     public FishPoolDefinition resolveDefinition(FishPoolDefinition definition) {
         FishPoolLootTable lootTable = this.lootTables.get(definition.id());
         if (lootTable == null) {
             return definition;
         }
 
+        Integer tableMinFishCount = lootTable.minFishCount();
+        Integer tableMaxFishCount = lootTable.maxFishCount();
+        int maxFishCount = tableMaxFishCount != null ? tableMaxFishCount : definition.maxFishCount();
+        int minFishCount = tableMinFishCount != null
+                ? tableMinFishCount
+                : tableMaxFishCount != null
+                ? tableMaxFishCount
+                : definition.minFishCount();
+        minFishCount = Math.max(1, minFishCount);
+        maxFishCount = Math.max(minFishCount, maxFishCount);
         ResourceLocation fishKing = lootTable.fishKing() != null ? lootTable.fishKing() : definition.fishKing();
+        List<ResourceLocation> biomes = lootTable.biomes().isEmpty() ? definition.biomes() : lootTable.biomes();
         FishPoolDefinition.WeatherRequirement weatherRequirement = lootTable.weatherRequirement() != null
                 ? lootTable.weatherRequirement()
                 : definition.weatherRequirement();
+        FishPoolDefinition.TimeRequirement timeRequirement = lootTable.timeRequirement() != null
+                ? lootTable.timeRequirement()
+                : definition.timeRequirement();
 
-        if (java.util.Objects.equals(fishKing, definition.fishKing()) && weatherRequirement == definition.weatherRequirement()) {
+        if (minFishCount == definition.minFishCount()
+                && maxFishCount == definition.maxFishCount()
+                && java.util.Objects.equals(fishKing, definition.fishKing())
+                && java.util.Objects.equals(biomes, definition.biomes())
+                && weatherRequirement == definition.weatherRequirement()
+                && timeRequirement == definition.timeRequirement()) {
             return definition;
         }
 
         return new FishPoolDefinition(
                 definition.id(),
                 definition.environment(),
-                definition.maxFishCount(),
+                minFishCount,
+                maxFishCount,
                 fishKing,
+                biomes,
                 weatherRequirement,
+                timeRequirement,
                 definition.outputs()
         );
     }
 
     private record FishPoolLootTable(
+            @Nullable Integer minFishCount,
+            @Nullable Integer maxFishCount,
             @Nullable ResourceLocation fishKing,
+            List<ResourceLocation> biomes,
             @Nullable FishPoolDefinition.WeatherRequirement weatherRequirement,
+            @Nullable FishPoolDefinition.TimeRequirement timeRequirement,
             List<FishPoolLootEntry> entries
     ) {
         ItemStack roll(ServerLevel level, RandomSource random) {

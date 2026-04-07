@@ -34,11 +34,27 @@ public class FishPoolLootTableProvider implements DataProvider {
 
     private JsonObject serialize(FishPoolDefinition definition) {
         JsonObject root = new JsonObject();
+        root.addProperty("MaxFishCount", definition.maxFishCount());
+        if (definition.minFishCount() != definition.maxFishCount()) {
+            root.addProperty("MinFishCount", definition.minFishCount());
+        }
         if (definition.fishKing() != null) {
             root.addProperty("FishKing", definition.fishKing().toString());
         }
+        if (!definition.biomes().isEmpty()) {
+            if (definition.biomes().size() == 1) {
+                root.addProperty("Biome", definition.biomes().get(0).toString());
+            } else {
+                JsonArray biomeArray = new JsonArray();
+                definition.biomes().forEach(biome -> biomeArray.add(biome.toString()));
+                root.add("Biome", biomeArray);
+            }
+        }
         if (definition.weatherRequirement() != FishPoolDefinition.WeatherRequirement.ANY) {
             root.addProperty("WeatherRequirement", definition.weatherRequirement().name());
+        }
+        if (definition.timeRequirement() != FishPoolDefinition.TimeRequirement.ANY) {
+            root.addProperty("TimeRequirement", definition.timeRequirement().serializedName());
         }
         JsonArray entries = new JsonArray();
         definition.outputs().forEach(output -> entries.add(output.toJson()));

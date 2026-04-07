@@ -1,6 +1,6 @@
 package com.list.fish_group.pool;
 
-import com.list.ListMod;
+import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 
@@ -15,34 +15,43 @@ public final class FishPoolDefinitions {
     private static final Map<ResourceLocation, FishPoolDefinition> DEFINITIONS = new LinkedHashMap<>();
 
     //混合鱼群 海洋
-    public static final FishPoolDefinition OCEAN_FISH_POOL = ocean(
-            "ocean_fish_pool",
-            8,
-            null,
-            null,
-            FishPoolLootEntryDefinition.item("minecraft:pufferfish", 40, 2, 3),
-            FishPoolLootEntryDefinition.item("minecraft:tropical_fish", 60, 3, 5),
-            FishPoolLootEntryDefinition.item("minecraft:enchanted_book", 1).withNbt("{StoredEnchantments:[{id:\"minecraft:mending\",lvl:1}]}")
-    );
+    public static final FishPoolDefinition OCEAN_FISH_POOL = ocean("ocean_fish_pool")
+            .maxFishCount(8)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("minecraft:pufferfish", 40, 2, 3))
+            .output(FishPoolLootEntryDefinition.item("minecraft:tropical_fish", 60, 3, 5))
+            .register();
     //混合鱼群 河流
-    public static final FishPoolDefinition RIVER_FISH_POOL = river(
-            "river_fish_pool",
-            6,
-            null,
-            null,
-            FishPoolLootEntryDefinition.tag("list:fish_pool/river_catch", 120, 3, 5),
-            FishPoolLootEntryDefinition.item("minecraft:enchanted_book", 1).withNbt("{StoredEnchantments:[{id:\"minecraft:mending\",lvl:1}]}")
-    );
+    public static final FishPoolDefinition RIVER_FISH_POOL = river("river_fish_pool")
+            .maxFishCount(6)
+            .biomes("minecraft:river")
+            .output(FishPoolLootEntryDefinition.tag("list:fish_pool/river_catch", 120, 3, 5))
+            .output(FishPoolLootEntryDefinition.item("minecraft:enchanted_book", 1).withNbt("{StoredEnchantments:[{id:\"minecraft:mending\",lvl:1}]}"))
+            .register();
     //鲑鱼群
-    public static final FishPoolDefinition SALMON_FISH_POOL = river(
-            "salmon_fish_pool",
-            6,
-            null,
-            null,
-            FishPoolLootEntryDefinition.item("minecraft:salmon", 100, 1, 1)
-    );
+    public static final FishPoolDefinition SALMON_FISH_POOL = river("salmon_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(2)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:river")
+            .output(FishPoolLootEntryDefinition.item("minecraft:salmon", 100, 1, 1))
+            .register();
 
     private FishPoolDefinitions() {
+    }
+
+    public static FishPoolBuilder river(String path) {
+        return FishPoolBuilder.river(path);
+    }
+
+    public static FishPoolBuilder ocean(String path) {
+        return FishPoolBuilder.ocean(path);
+    }
+
+    public static FishPoolBuilder builder(String path, FishPoolDefinition.Environment environment) {
+        return FishPoolBuilder.of(path, environment);
     }
 
     public static FishPoolDefinition river(
@@ -52,7 +61,65 @@ public final class FishPoolDefinitions {
             @Nullable FishPoolDefinition.WeatherRequirement weatherRequirement,
             FishPoolLootEntryDefinition... outputs
     ) {
-        return register(path, FishPoolDefinition.Environment.RIVER, maxFishCount, fishKing, weatherRequirement, outputs);
+        return river(path)
+                .maxFishCount(maxFishCount)
+                .fishKing(fishKing)
+                .weather(weatherRequirement)
+                .outputs(outputs)
+                .register();
+    }
+
+    public static FishPoolDefinition river(
+            String path,
+            int maxFishCount,
+            @Nullable String fishKing,
+            @Nullable FishPoolDefinition.WeatherRequirement weatherRequirement,
+            @Nullable FishPoolDefinition.TimeRequirement timeRequirement,
+            FishPoolLootEntryDefinition... outputs
+    ) {
+        return river(path)
+                .maxFishCount(maxFishCount)
+                .fishKing(fishKing)
+                .weather(weatherRequirement)
+                .time(timeRequirement)
+                .outputs(outputs)
+                .register();
+    }
+
+    public static FishPoolDefinition river(
+            String path,
+            int maxFishCount,
+            @Nullable String fishKing,
+            @Nullable String biome,
+            @Nullable FishPoolDefinition.WeatherRequirement weatherRequirement,
+            FishPoolLootEntryDefinition... outputs
+    ) {
+        return river(path)
+                .maxFishCount(maxFishCount)
+                .fishKing(fishKing)
+                .biome(biome)
+                .weather(weatherRequirement)
+                .outputs(outputs)
+                .register();
+    }
+
+    public static FishPoolDefinition river(
+            String path,
+            int maxFishCount,
+            @Nullable String fishKing,
+            @Nullable String biome,
+            @Nullable FishPoolDefinition.WeatherRequirement weatherRequirement,
+            @Nullable FishPoolDefinition.TimeRequirement timeRequirement,
+            FishPoolLootEntryDefinition... outputs
+    ) {
+        return river(path)
+                .maxFishCount(maxFishCount)
+                .fishKing(fishKing)
+                .biome(biome)
+                .weather(weatherRequirement)
+                .time(timeRequirement)
+                .outputs(outputs)
+                .register();
     }
 
     public static FishPoolDefinition ocean(
@@ -62,7 +129,65 @@ public final class FishPoolDefinitions {
             @Nullable FishPoolDefinition.WeatherRequirement weatherRequirement,
             FishPoolLootEntryDefinition... outputs
     ) {
-        return register(path, FishPoolDefinition.Environment.OCEAN, maxFishCount, fishKing, weatherRequirement, outputs);
+        return ocean(path)
+                .maxFishCount(maxFishCount)
+                .fishKing(fishKing)
+                .weather(weatherRequirement)
+                .outputs(outputs)
+                .register();
+    }
+
+    public static FishPoolDefinition ocean(
+            String path,
+            int maxFishCount,
+            @Nullable String fishKing,
+            @Nullable FishPoolDefinition.WeatherRequirement weatherRequirement,
+            @Nullable FishPoolDefinition.TimeRequirement timeRequirement,
+            FishPoolLootEntryDefinition... outputs
+    ) {
+        return ocean(path)
+                .maxFishCount(maxFishCount)
+                .fishKing(fishKing)
+                .weather(weatherRequirement)
+                .time(timeRequirement)
+                .outputs(outputs)
+                .register();
+    }
+
+    public static FishPoolDefinition ocean(
+            String path,
+            int maxFishCount,
+            @Nullable String fishKing,
+            @Nullable String biome,
+            @Nullable FishPoolDefinition.WeatherRequirement weatherRequirement,
+            FishPoolLootEntryDefinition... outputs
+    ) {
+        return ocean(path)
+                .maxFishCount(maxFishCount)
+                .fishKing(fishKing)
+                .biome(biome)
+                .weather(weatherRequirement)
+                .outputs(outputs)
+                .register();
+    }
+
+    public static FishPoolDefinition ocean(
+            String path,
+            int maxFishCount,
+            @Nullable String fishKing,
+            @Nullable String biome,
+            @Nullable FishPoolDefinition.WeatherRequirement weatherRequirement,
+            @Nullable FishPoolDefinition.TimeRequirement timeRequirement,
+            FishPoolLootEntryDefinition... outputs
+    ) {
+        return ocean(path)
+                .maxFishCount(maxFishCount)
+                .fishKing(fishKing)
+                .biome(biome)
+                .weather(weatherRequirement)
+                .time(timeRequirement)
+                .outputs(outputs)
+                .register();
     }
 
     public static FishPoolDefinition register(
@@ -73,25 +198,82 @@ public final class FishPoolDefinitions {
             @Nullable FishPoolDefinition.WeatherRequirement weatherRequirement,
             FishPoolLootEntryDefinition... outputs
     ) {
-        return register(
-                ListMod.rl(path),
-                environment,
-                maxFishCount,
-                fishKing == null || fishKing.isBlank() ? null : ResourceLocation.tryParse(fishKing),
-                weatherRequirement,
-                outputs
-        );
+        return builder(path, environment)
+                .maxFishCount(maxFishCount)
+                .fishKing(fishKing)
+                .weather(weatherRequirement)
+                .outputs(outputs)
+                .register();
+    }
+
+    public static FishPoolDefinition register(
+            String path,
+            FishPoolDefinition.Environment environment,
+            int maxFishCount,
+            @Nullable String fishKing,
+            @Nullable FishPoolDefinition.WeatherRequirement weatherRequirement,
+            @Nullable FishPoolDefinition.TimeRequirement timeRequirement,
+            FishPoolLootEntryDefinition... outputs
+    ) {
+        return builder(path, environment)
+                .maxFishCount(maxFishCount)
+                .fishKing(fishKing)
+                .weather(weatherRequirement)
+                .time(timeRequirement)
+                .outputs(outputs)
+                .register();
+    }
+
+    public static FishPoolDefinition register(
+            String path,
+            FishPoolDefinition.Environment environment,
+            int maxFishCount,
+            @Nullable String fishKing,
+            @Nullable String biome,
+            @Nullable FishPoolDefinition.WeatherRequirement weatherRequirement,
+            FishPoolLootEntryDefinition... outputs
+    ) {
+        return builder(path, environment)
+                .maxFishCount(maxFishCount)
+                .fishKing(fishKing)
+                .biome(biome)
+                .weather(weatherRequirement)
+                .outputs(outputs)
+                .register();
+    }
+
+    public static FishPoolDefinition register(
+            String path,
+            FishPoolDefinition.Environment environment,
+            int maxFishCount,
+            @Nullable String fishKing,
+            @Nullable String biome,
+            @Nullable FishPoolDefinition.WeatherRequirement weatherRequirement,
+            @Nullable FishPoolDefinition.TimeRequirement timeRequirement,
+            FishPoolLootEntryDefinition... outputs
+    ) {
+        return builder(path, environment)
+                .maxFishCount(maxFishCount)
+                .fishKing(fishKing)
+                .biome(biome)
+                .weather(weatherRequirement)
+                .time(timeRequirement)
+                .outputs(outputs)
+                .register();
     }
 
     public static FishPoolDefinition register(
             ResourceLocation id,
             FishPoolDefinition.Environment environment,
+            int minFishCount,
             int maxFishCount,
             @Nullable ResourceLocation fishKing,
+            List<ResourceLocation> biomes,
             @Nullable FishPoolDefinition.WeatherRequirement weatherRequirement,
+            @Nullable FishPoolDefinition.TimeRequirement timeRequirement,
             FishPoolLootEntryDefinition... outputs
     ) {
-        FishPoolDefinition definition = new FishPoolDefinition(id, environment, maxFishCount, fishKing, weatherRequirement, List.of(outputs));
+        FishPoolDefinition definition = new FishPoolDefinition(id, environment, minFishCount, maxFishCount, fishKing, biomes, weatherRequirement, timeRequirement, List.of(outputs));
         FishPoolDefinition existing = DEFINITIONS.putIfAbsent(id, definition);
         if (existing != null) {
             throw new IllegalStateException("Duplicate fish pool definition: " + id);
@@ -120,12 +302,12 @@ public final class FishPoolDefinitions {
                 .orElseThrow(() -> new IllegalStateException("No fish pool definition registered for environment: " + environment));
     }
 
-    public static List<FishPoolDefinition> getAvailable(ServerLevel level, FishPoolDefinition.Environment environment) {
+    public static List<FishPoolDefinition> getAvailable(ServerLevel level, BlockPos pos, FishPoolDefinition.Environment environment) {
         return DEFINITIONS.values()
                 .stream()
                 .filter(definition -> definition.environment() == environment)
                 .map(FishPoolLootManager.INSTANCE::resolveDefinition)
-                .filter(definition -> definition.matches(level))
+                .filter(definition -> definition.matchesSpawn(level, pos))
                 .toList();
     }
 }
