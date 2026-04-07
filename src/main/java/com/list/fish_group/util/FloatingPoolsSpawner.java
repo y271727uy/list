@@ -6,29 +6,37 @@ import com.list.fish_group.entity.AbstractFishPoolEntity;
 import com.list.fish_group.item.FishGroupRegistry;
 import com.list.fish_group.entity.FloatingDebrisEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.phys.AABB;
 import org.joml.Vector3d;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class FloatingPoolsSpawner {
     private static final int MAX_COUNT = 3;
     private static final int SPAWN_INTERVAL = 6000;
-    private static BlockPos lastValidSpawn = null;
-    private static long lastSpawnTime = 0;
+    private static final Map<ResourceKey<Level>, SpawnState> SPAWN_STATE_BY_DIMENSION = new HashMap<>();
 
     private static void attemptSpawn(ServerLevel level) {
         if (level.players().isEmpty()) return;
         RandomSource random = level.random;
         var player = level.players().get(random.nextInt(level.players().size()));
+        ResourceKey<Level> dimension = level.dimension();
+        SpawnState spawnState = SPAWN_STATE_BY_DIMENSION.get(dimension);
 
-        if (lastValidSpawn == null || (level.getGameTime() - lastSpawnTime) > 12000) {
-            lastValidSpawn = findValidSpawnPos(level, player.blockPosition());
-            lastSpawnTime = level.getGameTime();
+        if (spawnState == null || spawnState.lastValidSpawn() == null || (level.getGameTime() - spawnState.lastSpawnTime()) > 12000) {
+            BlockPos lastValidSpawn = findValidSpawnPos(level, player.blockPosition());
+            SPAWN_STATE_BY_DIMENSION.put(dimension, new SpawnState(lastValidSpawn, level.getGameTime()));
+            spawnState = SPAWN_STATE_BY_DIMENSION.get(dimension);
         }
 
+        BlockPos lastValidSpawn = spawnState.lastValidSpawn();
         if (lastValidSpawn == null) return;
 
         int spawnX = lastValidSpawn.getX();
@@ -101,6 +109,9 @@ public class FloatingPoolsSpawner {
 
     public static void tick(ServerLevel level) {
         if (level.getGameTime() % SPAWN_INTERVAL == 0) attemptSpawn(level);
+    }
+
+    private record SpawnState(BlockPos lastValidSpawn, long lastSpawnTime) {
     }
 }
 

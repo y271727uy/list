@@ -105,6 +105,10 @@ public abstract class AbstractFishPoolEntity extends FloatingDebrisEntity {
         if (this.isRemoved() || this.isDestroying()) {
             return;
         }
+        FishPoolDefinition definition = getFishPoolDefinition();
+        if (!definition.matches(serverLevel)) {
+            return;
+        }
         if (this.fishCount >= getMaxFishCount()) {
             this.removeWithEffects(serverLevel);
             return;
@@ -117,7 +121,7 @@ public abstract class AbstractFishPoolEntity extends FloatingDebrisEntity {
         }
 
         giveReward(player, reward);
-        tryAwardFishKing(serverLevel, player);
+        tryAwardFishKing(serverLevel, player, definition);
         triggerHurt();
         this.fishCount++;
 
@@ -139,8 +143,7 @@ public abstract class AbstractFishPoolEntity extends FloatingDebrisEntity {
         return definition;
     }
 
-    private void tryAwardFishKing(ServerLevel serverLevel, Player player) {
-        FishPoolDefinition definition = getFishPoolDefinition();
+    private void tryAwardFishKing(ServerLevel serverLevel, Player player, FishPoolDefinition definition) {
         if (this.fishKingAwarded || definition.fishKing() == null) {
             return;
         }

@@ -1,6 +1,7 @@
  package com.list.fish_group.item;
 
 import com.list.fish_group.entity.FloatingDebrisEntity;
+  import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
@@ -16,15 +17,17 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.HitResult;
+import javax.annotation.Nonnull;
 import java.util.List;
 
+@MethodsReturnNonnullByDefault
 public class FloatingPoolsItem extends Item {
     public FloatingPoolsItem(Properties properties) {
         super(properties);
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+    public @Nonnull InteractionResultHolder<ItemStack> use(@Nonnull Level level, @Nonnull Player player, @Nonnull InteractionHand hand) {
         ItemStack itemStack = player.getItemInHand(hand);
         HitResult hitResult = getPlayerPOVHitResult(level, player, ClipContext.Fluid.ANY);
         if (hitResult.getType() != HitResult.Type.BLOCK) {
@@ -45,11 +48,13 @@ public class FloatingPoolsItem extends Item {
         }
 
         if (!level.isClientSide) {
-            FloatingDebrisEntity debris;
-            debris = FishGroupRegistry.FLOATING_DEBRIS.get().create(level);
+            FloatingDebrisEntity debris = FishGroupRegistry.FLOATING_DEBRIS.get().create(level);
             for (FishGroupRegistry.FishPoolRegistration registration : FishGroupRegistry.getFishPoolRegistrations()) {
                 if (itemStack.is(registration.item().get())) {
-                    debris = registration.create(level);
+                    FloatingDebrisEntity registrationDebris = registration.create(level);
+                    if (registrationDebris != null) {
+                        debris = registrationDebris;
+                    }
                     break;
                 }
             }
@@ -84,7 +89,7 @@ public class FloatingPoolsItem extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(@Nonnull ItemStack stack, Level level, @Nonnull List<Component> tooltip, @Nonnull TooltipFlag flag) {
         tooltip.add(Component.translatable("tooltip.list.fish_group.not_obtainable")
                 .setStyle(Style.EMPTY.withColor(TextColor.fromRgb(0xD27D46)).withItalic(true)));
     }

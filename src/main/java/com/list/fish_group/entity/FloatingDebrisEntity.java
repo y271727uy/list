@@ -3,13 +3,13 @@ package com.list.fish_group.entity;
 import com.list.fish_group.util.LuaFishPool;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
@@ -28,15 +28,14 @@ public class FloatingDebrisEntity extends Entity {
     private static final EntityDataAccessor<Boolean> IS_DESTROYING = SynchedEntityData.defineId(FloatingDebrisEntity.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Float> DESTRUCTION_PROGRESS = SynchedEntityData.defineId(FloatingDebrisEntity.class, EntityDataSerializers.FLOAT);
     private static final EntityDataAccessor<Integer> HURT_TIME = SynchedEntityData.defineId(FloatingDebrisEntity.class, EntityDataSerializers.INT);
-    private final float randomRotation;
-    private final RandomSource random = RandomSource.create();
+    private float randomRotation;
     private int interactions = 0;
     private int lifeTicks;
     private int maxLifeTicks;
 
     public FloatingDebrisEntity(EntityType<? extends FloatingDebrisEntity> type, Level level) {
         super(type, level);
-        this.randomRotation = random.nextFloat() * 360.0F;
+        this.randomRotation = this.random.nextFloat() * 360.0F;
         this.lifeTicks = 0;
         this.maxLifeTicks = 9600;
     }
@@ -105,7 +104,10 @@ public class FloatingDebrisEntity extends Entity {
         this.entityData.set(DESTRUCTION_PROGRESS, progress);
         this.entityData.set(HURT_TIME, compound.getInt("HurtTime"));
         lifeTicks = compound.getInt("LifeTicks");
-        maxLifeTicks = compound.getInt("MaxLifeTicks");
+        maxLifeTicks = compound.contains("MaxLifeTicks", Tag.TAG_INT) ? compound.getInt("MaxLifeTicks") : 9600;
+        if (compound.contains("RandomRotation", Tag.TAG_FLOAT)) {
+            this.randomRotation = compound.getFloat("RandomRotation");
+        }
     }
 
     @Override
@@ -116,6 +118,7 @@ public class FloatingDebrisEntity extends Entity {
         compound.putInt("HurtTime", this.entityData.get(HURT_TIME));
         compound.putInt("LifeTicks", lifeTicks);
         compound.putInt("MaxLifeTicks", maxLifeTicks);
+        compound.putFloat("RandomRotation", this.randomRotation);
     }
 
     public void triggerHurt() {
@@ -181,10 +184,13 @@ public class FloatingDebrisEntity extends Entity {
     }
 
     public void triggerInteraction() {
+        if (this.isRemoved() || this.isDestroying()) {
+            return;
+        }
         interactions++;
         triggerHurt();
-        if (interactions >= MAX_INTERACTIONS && !level().isClientSide) {
-            removeWithEffects((ServerLevel) level());
+        if (interactions >= MAX_INTERACTIONS && !level().isClientSide && this.level() instanceof ServerLevel serverLevel) {
+            removeWithEffects(serverLevel);
         }
     }
 

@@ -1,7 +1,7 @@
 package com.list.fish_group.client.model.entity;
 
 import com.list.ListMod;
-import com.list.fish_group.client.model.entity.animation.RiverFishPoolAnimation;
+import com.list.fish_group.client.model.entity.animation.OceanFishPoolAnimation;
 import com.list.fish_group.entity.OceanFishPoolEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -151,7 +151,7 @@ public class OceanFishPoolModel<T extends OceanFishPoolEntity> extends Hierarchi
     @Override
     public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.root().getAllParts().forEach(ModelPart::resetPose);
-        this.animate(entity.idleAnimationState, RiverFishPoolAnimation.idle, ageInTicks, 1.0F);
+        this.animate(entity.idleAnimationState, OceanFishPoolAnimation.idle, ageInTicks, 1.0F);
     }
 
     @Override
