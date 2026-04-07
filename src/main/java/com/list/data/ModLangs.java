@@ -50,6 +50,9 @@ public class ModLangs {
         provider.add("item.list.cheese_pizza.desc.1", "§7§oDaring today, aren't we?");
         provider.add("item.list.mince_meat_pizza.desc.1", "§7§oWait, *what* does the GT5U veggie pizza have on it???");
         provider.add("item.list.olive_mushroom_pizza.desc.1", "§7§oNo, GregoriusT! Don't fall down the inescapable Tooltip-Making Asshole Singularity!");
+
+        provider.add("entity.list.ocean_fish_pool", "Ocean Fish Pool");
+        provider.add("entity.list.river_fish_pool", "River Fish Pool");
         
 
     }
