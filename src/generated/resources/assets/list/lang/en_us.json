@@ -76,6 +76,8 @@
   "block.list.yellow_tea_cake": "Yellow Tea Cake",
   "config.jade.plugin_list.fish_pond": "Fish Pond",
   "config.jade.plugin_list.tapper": "Tapper",
+  "entity.list.ocean_fish_pool": "Mixed-Species Fish Pool(Ocean)",
+  "entity.list.river_fish_pool": "Mixed-Species Fish Pool(River)",
   "gui.list.category.fish_pond": "Fish Pond",
   "gui.list.category.fish_pond.chance": "Chance: %s%%",
   "gui.list.category.fish_pond.require_lava": "Requires Lava",
