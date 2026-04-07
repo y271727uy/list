@@ -108,7 +108,8 @@ public final class FishPoolDefinitions {
     }
 
     public static FishPoolDefinition getOrDefault(ResourceLocation id, FishPoolDefinition.Environment environment) {
-        return get(id).orElseGet(() -> getDefault(environment));
+        FishPoolDefinition definition = get(id).orElseGet(() -> getDefault(environment));
+        return FishPoolLootManager.INSTANCE.resolveDefinition(definition);
     }
 
     public static FishPoolDefinition getDefault(FishPoolDefinition.Environment environment) {
@@ -123,6 +124,7 @@ public final class FishPoolDefinitions {
         return DEFINITIONS.values()
                 .stream()
                 .filter(definition -> definition.environment() == environment)
+                .map(FishPoolLootManager.INSTANCE::resolveDefinition)
                 .filter(definition -> definition.matches(level))
                 .toList();
     }

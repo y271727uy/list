@@ -1,23 +1,16 @@
 {
   "entries": [
     {
-      "count": {
+      "MinRange": {
         "max": 5,
         "min": 3
       },
-      "item": "",
       "tag": "list:fish_pool/river_catch",
       "weight": 120
     },
     {
-      "count": {
-        "max": 1,
-        "min": 1
-      },
       "item": "minecraft:enchanted_book",
-      "nbt": "{StoredEnchantments:[{id:\"minecraft:mending\",lvl:1}]}",
-      "tag": "",
-      "weight": 1
+      "nbt": "{StoredEnchantments:[{id:\"minecraft:mending\",lvl:1}]}"
     }
   ]
 }

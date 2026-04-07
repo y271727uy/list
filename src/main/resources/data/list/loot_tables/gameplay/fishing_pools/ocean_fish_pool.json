@@ -2,26 +2,22 @@
   "entries": [
     {
       "item": "minecraft:pufferfish",
-      "tag": "",
       "weight": 40,
-      "count": {
+      "MinRange": {
         "min": 2,
         "max": 3
       }
     },
     {
       "item": "minecraft:tropical_fish",
-      "tag": "",
       "weight": 60,
-      "count": {
+      "MinRange": {
         "min": 3,
         "max": 5
       }
     },
     {
       "item": "minecraft:enchanted_book",
-      "tag": "",
-      "weight": 1,
       "nbt": "{StoredEnchantments:[{id:\"minecraft:mending\",lvl:1}]}"
     }
   ]

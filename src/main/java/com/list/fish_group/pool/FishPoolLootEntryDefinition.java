@@ -55,14 +55,28 @@ public record FishPoolLootEntryDefinition(
 
     public JsonObject toJson() {
         JsonObject json = new JsonObject();
-        json.addProperty("item", this.itemId == null ? "" : this.itemId.toString());
-        json.addProperty("tag", this.tagId == null ? "" : this.tagId.toString());
-        json.addProperty("weight", this.weight);
+        if (this.tagId != null) {
+            json.addProperty("tag", this.tagId.toString());
+        } else if (this.itemId != null) {
+            json.addProperty("item", this.itemId.toString());
+        }
 
-        JsonObject count = new JsonObject();
-        count.addProperty("min", Mth.clamp(this.minCount, 1, Integer.MAX_VALUE));
-        count.addProperty("max", Mth.clamp(this.maxCount, this.minCount, Integer.MAX_VALUE));
-        json.add("count", count);
+        if (this.weight != 1) {
+            json.addProperty("weight", this.weight);
+        }
+
+        int min = Mth.clamp(this.minCount, 1, Integer.MAX_VALUE);
+        int max = Mth.clamp(this.maxCount, min, Integer.MAX_VALUE);
+        if (min != 1 || max != 1) {
+            if (min == max) {
+                json.addProperty("MaxFishAwarded", max);
+            } else {
+                JsonObject minRange = new JsonObject();
+                minRange.addProperty("min", min);
+                minRange.addProperty("max", max);
+                json.add("MinRange", minRange);
+            }
+        }
 
         if (this.nbt != null) {
             json.addProperty("nbt", this.nbt);
