@@ -52,6 +52,7 @@ public final class FishGroupRegistry {
     }
 
     public static final FishPoolRegistration OCEAN_FISH_POOL = getFishPoolRegistration(FishPoolDefinitions.OCEAN_FISH_POOL.id());
+    public static final FishPoolRegistration COD_FISH_POOL = getFishPoolRegistration(FishPoolDefinitions.COD_FISH_POOL.id());
     public static final FishPoolRegistration RIVER_FISH_POOL = getFishPoolRegistration(FishPoolDefinitions.RIVER_FISH_POOL.id());
     public static final FishPoolRegistration SALMON_FISH_POOL = getFishPoolRegistration(FishPoolDefinitions.SALMON_FISH_POOL.id());
 

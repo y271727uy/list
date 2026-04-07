@@ -174,6 +174,7 @@ dependencies {
     modImplementation("maven.modrinth:some-assembly-required:FfaVwI1D")
     modImplementation("maven.modrinth:fruits-delight:qPyefm6m")
     modImplementation("maven.modrinth:cuisine-delight:W8HtUUqB")
+    modImplementation("maven.modrinth:aquaculture:wNiFoROs")
     //modImplementation("maven.modrinth:forestry-community-edition:ZInSOok9")
     //modImplementation("maven.modrinth:patchouli:8Qyw08ld")
     //modImplementation("maven.modrinth:workstation-recipe-exporter:V7KL8sl5")

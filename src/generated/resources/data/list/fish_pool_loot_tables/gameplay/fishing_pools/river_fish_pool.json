@@ -1,16 +1,15 @@
 {
+  "Biome": "minecraft:river",
+  "MaxFishCount": 6,
+  "MinFishCount": 1,
   "entries": [
     {
       "MinRange": {
-        "max": 5,
-        "min": 3
+        "max": 3,
+        "min": 1
       },
-      "tag": "list:fish_pool/river_catch",
-      "weight": 120
-    },
-    {
-      "item": "minecraft:enchanted_book",
-      "nbt": "{StoredEnchantments:[{id:\"minecraft:mending\",lvl:1}]}"
+      "tag": "list:fish_pool/fish_river",
+      "weight": 100
     }
   ]
 }

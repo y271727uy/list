@@ -24,10 +24,12 @@ import java.util.List;
 
 public class FloatingDebrisEntity extends Entity {
     private static final int MAX_INTERACTIONS = 3;
+    private static final int HOOK_INTERACTING_DURATION = 10;
     private static final float DESTRUCTION_SPEED = 0.05F;
     private static final EntityDataAccessor<Boolean> IS_DESTROYING = SynchedEntityData.defineId(FloatingDebrisEntity.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Float> DESTRUCTION_PROGRESS = SynchedEntityData.defineId(FloatingDebrisEntity.class, EntityDataSerializers.FLOAT);
     private static final EntityDataAccessor<Integer> HURT_TIME = SynchedEntityData.defineId(FloatingDebrisEntity.class, EntityDataSerializers.INT);
+    private static final EntityDataAccessor<Integer> HOOK_INTERACTING_TICKS = SynchedEntityData.defineId(FloatingDebrisEntity.class, EntityDataSerializers.INT);
     private float randomRotation;
     private int interactions = 0;
     private int lifeTicks;
@@ -45,6 +47,7 @@ public class FloatingDebrisEntity extends Entity {
         this.entityData.define(IS_DESTROYING, false);
         this.entityData.define(DESTRUCTION_PROGRESS, 0.0F);
         this.entityData.define(HURT_TIME, 0);
+        this.entityData.define(HOOK_INTERACTING_TICKS, 0);
     }
 
     @Override
@@ -70,6 +73,11 @@ public class FloatingDebrisEntity extends Entity {
         int currentHurtTime = this.entityData.get(HURT_TIME);
         if (currentHurtTime > 0) {
             this.entityData.set(HURT_TIME, currentHurtTime - 1);
+        }
+
+        int currentHookInteractingTicks = this.entityData.get(HOOK_INTERACTING_TICKS);
+        if (currentHookInteractingTicks > 0) {
+            this.entityData.set(HOOK_INTERACTING_TICKS, currentHookInteractingTicks - 1);
         }
 
         if (!this.level().isClientSide && !isAboveWater()) {
@@ -103,6 +111,7 @@ public class FloatingDebrisEntity extends Entity {
         this.entityData.set(IS_DESTROYING, destroying);
         this.entityData.set(DESTRUCTION_PROGRESS, progress);
         this.entityData.set(HURT_TIME, compound.getInt("HurtTime"));
+        this.entityData.set(HOOK_INTERACTING_TICKS, compound.getInt("HookInteractingTicks"));
         lifeTicks = compound.getInt("LifeTicks");
         maxLifeTicks = compound.contains("MaxLifeTicks", Tag.TAG_INT) ? compound.getInt("MaxLifeTicks") : 9600;
         if (compound.contains("RandomRotation", Tag.TAG_FLOAT)) {
@@ -116,6 +125,7 @@ public class FloatingDebrisEntity extends Entity {
         compound.putBoolean("IsDestroying", this.entityData.get(IS_DESTROYING));
         compound.putFloat("DestructionProgress", this.entityData.get(DESTRUCTION_PROGRESS));
         compound.putInt("HurtTime", this.entityData.get(HURT_TIME));
+        compound.putInt("HookInteractingTicks", this.entityData.get(HOOK_INTERACTING_TICKS));
         compound.putInt("LifeTicks", lifeTicks);
         compound.putInt("MaxLifeTicks", maxLifeTicks);
         compound.putFloat("RandomRotation", this.randomRotation);
@@ -132,8 +142,21 @@ public class FloatingDebrisEntity extends Entity {
         return serverLevel.getServer().getLootData().getLootTable(LuaFishPool.of("gameplay/fishing_pools/floating_debris"));
     }
 
+    public AABB getHookInteractionBounds() {
+        return this.getBoundingBox().inflate(0.5D);
+    }
+
+    public void markHookInteracting() {
+        this.entityData.set(HOOK_INTERACTING_TICKS, Math.max(this.entityData.get(HOOK_INTERACTING_TICKS), HOOK_INTERACTING_DURATION));
+    }
+
+    public boolean isHookInteracting() {
+        return this.entityData.get(HOOK_INTERACTING_TICKS) > 0;
+    }
+
     public void onFishHookInteract(Player player) {
         if (!level().isClientSide && level() instanceof ServerLevel serverLevel) {
+            markHookInteracting();
             LootTable lootTable = getLootTable(serverLevel);
             LootParams lootParams = new LootParams.Builder(serverLevel)
                     .withParameter(LootContextParams.THIS_ENTITY, this)

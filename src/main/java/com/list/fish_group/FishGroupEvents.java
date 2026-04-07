@@ -6,6 +6,7 @@ import com.list.fish_group.pool.FishPoolLootManager;
 import com.list.fish_group.util.FloatingPoolsSpawner;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.ItemFishedEvent;
@@ -13,9 +14,13 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.Comparator;
+import java.util.Optional;
 
 @Mod.EventBusSubscriber(modid = ListMod.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public final class FishGroupEvents {
+    private static final double HOOK_INTERACTION_HORIZONTAL_RANGE = 2.5D;
+    private static final double HOOK_INTERACTION_VERTICAL_RANGE = 4.5D;
+
     private FishGroupEvents() {
     }
 
@@ -23,6 +28,12 @@ public final class FishGroupEvents {
     public static void onLevelTick(TickEvent.LevelTickEvent event) {
         if (event.phase == TickEvent.Phase.END && event.level instanceof ServerLevel serverLevel) {
             FloatingPoolsSpawner.tick(serverLevel);
+            serverLevel.players().forEach(player -> {
+                if (player.fishing == null || player.fishing.isRemoved()) {
+                    return;
+                }
+                findHookTarget(player.fishing).ifPresent(FloatingDebrisEntity::markHookInteracting);
+            });
         }
     }
 
@@ -37,26 +48,28 @@ public final class FishGroupEvents {
             return;
         }
 
-        var hookPosition = event.getHookEntity().position();
-        AABB hookBox = new AABB(
-                hookPosition.x - 1.0D,
-                hookPosition.y - 1.0D,
-                hookPosition.z - 1.0D,
-                hookPosition.x + 1.0D,
-                hookPosition.y + 1.0D,
-                hookPosition.z + 1.0D
-        );
-
-        event.getHookEntity().level().getEntitiesOfClass(FloatingDebrisEntity.class, hookBox)
-                .stream()
-                .min(Comparator.comparingDouble(entity -> entity.distanceToSqr(hookPosition)))
-                .ifPresent(entity -> entity.onFishHookInteract(owner));
+        findHookTarget(event.getHookEntity()).ifPresent(entity -> {
+            entity.markHookInteracting();
+            entity.onFishHookInteract(owner);
+        });
     }
 
     @SubscribeEvent
     public static void onAddReloadListener(AddReloadListenerEvent event) {
         event.addListener(FishPoolLootManager.INSTANCE);
         ListMod.LOGGER.info("Registered fish pool loot reload listener");
+    }
+
+    private static Optional<FloatingDebrisEntity> findHookTarget(net.minecraft.world.entity.Entity hookEntity) {
+        Vec3 hookPosition = hookEntity.position();
+        AABB hookBox = hookEntity.getBoundingBox()
+                .inflate(HOOK_INTERACTION_HORIZONTAL_RANGE, HOOK_INTERACTION_VERTICAL_RANGE, HOOK_INTERACTION_HORIZONTAL_RANGE);
+
+        return hookEntity.level().getEntitiesOfClass(FloatingDebrisEntity.class, hookBox)
+                .stream()
+                .filter(entity -> !entity.isRemoved())
+                .filter(entity -> entity.getHookInteractionBounds().intersects(hookBox))
+                .min(Comparator.comparingDouble(entity -> entity.getHookInteractionBounds().distanceToSqr(hookPosition)));
     }
 
 

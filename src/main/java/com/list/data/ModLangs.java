@@ -22,7 +22,27 @@ public class ModLangs {
         provider.add("gui.list.category.fish_pond.chance", "Chance: %s%%");
 
         provider.add("config.jade.plugin_list.fish_pond", "Fish Pond");
+        provider.add("config.jade.plugin_list.fish_pool", "Fish Pool");
         provider.add("config.jade.plugin_list.tapper", "Tapper");
+        provider.add("item.list.cod_fish_pool", "Cod Fish Pool");
+        provider.add("entity.list.cod_fish_pool", "Cod Fish Pool");
+        provider.add("tooltip.list.fish_pool.fish_king", "Fish King: %s");
+        provider.add("tooltip.list.fish_pool.fish_king.none", "None");
+        provider.add("tooltip.list.fish_pool.fish_king.available", "Not obtained");
+        provider.add("tooltip.list.fish_pool.fish_king.awarded", "Obtained");
+        provider.add("tooltip.list.fish_pool.weather", "Weather: %s");
+        provider.add("tooltip.list.fish_pool.weather.any", "Any");
+        provider.add("tooltip.list.fish_pool.weather.clear", "Clear");
+        provider.add("tooltip.list.fish_pool.weather.rain", "Rain");
+        provider.add("tooltip.list.fish_pool.weather.thunder", "Thunderstorm");
+        provider.add("tooltip.list.fish_pool.time", "Time: %s");
+        provider.add("tooltip.list.fish_pool.time.any", "Any");
+        provider.add("tooltip.list.fish_pool.time.day", "Day");
+        provider.add("tooltip.list.fish_pool.time.night", "Night");
+        provider.add("tooltip.list.fish_pool.state", "State: %s");
+        provider.add("tooltip.list.fish_pool.state.fishing", "Fishing in Progress (Fish Pool)");
+        provider.add("tooltip.list.fish_pool.state.available", "Fishable");
+        provider.add("tooltip.list.fish_pool.state.unavailable", "Conditions not met");
         provider.add("tooltip.list.tapper.no_recipe", "Not connected to a valid tree");
         provider.add("tooltip.list.tapper.title", "Tapper");
         provider.add("tooltip.list.tapper.state.mature", "State: Mature, ready to collect");

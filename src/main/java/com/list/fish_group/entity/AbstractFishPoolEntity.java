@@ -5,6 +5,7 @@ import com.list.fish_group.pool.FishKingCooldownSavedData;
 import com.list.fish_group.pool.FishPoolDefinition;
 import com.list.fish_group.pool.FishPoolDefinitions;
 import com.list.fish_group.pool.FishPoolLootManager;
+import lombok.Getter;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
@@ -16,6 +17,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.AABB;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
@@ -30,6 +32,7 @@ public abstract class AbstractFishPoolEntity extends FloatingDebrisEntity {
     private ResourceLocation fishPoolId;
     private int fishCount;
     private int maxFishCount;
+    @Getter
     private boolean fishKingAwarded;
 
     protected AbstractFishPoolEntity(EntityType<? extends FloatingDebrisEntity> type, Level level) {
@@ -70,6 +73,23 @@ public abstract class AbstractFishPoolEntity extends FloatingDebrisEntity {
     public int getMaxFishCount() {
         ensureFishPoolDefinition();
         return this.maxFishCount;
+    }
+
+    public FishPoolDefinition getResolvedFishPoolDefinition() {
+        return getFishPoolDefinition();
+    }
+
+    public void appendJadeServerData(CompoundTag tag, ServerLevel serverLevel) {
+        FishPoolDefinition definition = getFishPoolDefinition();
+        tag.putString("fishKingKey", resolveFishKingTranslationKey(definition));
+        tag.putString("weatherKey", resolveWeatherTranslationKey(definition));
+        tag.putString("timeKey", resolveTimeTranslationKey(definition));
+        tag.putString("stateKey", resolveJadeStateTranslationKey(serverLevel, definition));
+    }
+
+    @Override
+    public AABB getHookInteractionBounds() {
+        return this.getBoundingBox().inflate(0.75D, 2.0D, 0.75D);
     }
 
     @Override
@@ -159,6 +179,41 @@ public abstract class AbstractFishPoolEntity extends FloatingDebrisEntity {
         FishPoolDefinition definition = FishPoolDefinitions.getOrDefault(this.fishPoolId, getEnvironment());
         this.fishPoolId = definition.id();
         return definition;
+    }
+
+    private String resolveFishKingTranslationKey(FishPoolDefinition definition) {
+        if (definition.fishKing() == null) {
+            return "tooltip.list.fish_pool.fish_king.none";
+        }
+        return this.fishKingAwarded
+                ? "tooltip.list.fish_pool.fish_king.awarded"
+                : "tooltip.list.fish_pool.fish_king.available";
+    }
+
+    private String resolveWeatherTranslationKey(FishPoolDefinition definition) {
+        return switch (definition.weatherRequirement()) {
+            case CLEAR -> "tooltip.list.fish_pool.weather.clear";
+            case RAIN -> "tooltip.list.fish_pool.weather.rain";
+            case THUNDER -> "tooltip.list.fish_pool.weather.thunder";
+            case ANY -> "tooltip.list.fish_pool.weather.any";
+        };
+    }
+
+    private String resolveTimeTranslationKey(FishPoolDefinition definition) {
+        return switch (definition.timeRequirement()) {
+            case DAY -> "tooltip.list.fish_pool.time.day";
+            case NIGHT -> "tooltip.list.fish_pool.time.night";
+            case ANY -> "tooltip.list.fish_pool.time.any";
+        };
+    }
+
+    private String resolveJadeStateTranslationKey(ServerLevel serverLevel, FishPoolDefinition definition) {
+        if (this.isHookInteracting()) {
+            return "tooltip.list.fish_pool.state.fishing";
+        }
+        return definition.matchesFishing(serverLevel)
+                ? "tooltip.list.fish_pool.state.available"
+                : "tooltip.list.fish_pool.state.unavailable";
     }
 
     private void tryAwardFishKing(ServerLevel serverLevel, Player player, FishPoolDefinition definition) {

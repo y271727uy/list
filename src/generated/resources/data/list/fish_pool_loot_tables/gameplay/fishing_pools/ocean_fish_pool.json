@@ -1,24 +1,15 @@
 {
+  "Biome": "minecraft:ocean",
+  "MaxFishCount": 8,
+  "MinFishCount": 1,
   "entries": [
     {
       "MinRange": {
-        "max": 3,
-        "min": 2
-      },
-      "item": "minecraft:pufferfish",
-      "weight": 40
-    },
-    {
-      "MinRange": {
         "max": 5,
-        "min": 3
+        "min": 1
       },
-      "item": "minecraft:tropical_fish",
-      "weight": 60
-    },
-    {
-      "item": "minecraft:enchanted_book",
-      "nbt": "{StoredEnchantments:[{id:\"minecraft:mending\",lvl:1}]}"
+      "tag": "list:fish_pool/fish_ocean",
+      "weight": 100
     }
   ]
 }

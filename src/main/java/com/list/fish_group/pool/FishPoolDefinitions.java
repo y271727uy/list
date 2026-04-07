@@ -16,27 +16,39 @@ public final class FishPoolDefinitions {
 
     //混合鱼群 海洋
     public static final FishPoolDefinition OCEAN_FISH_POOL = ocean("ocean_fish_pool")
+            .minFishCount(1)
             .maxFishCount(8)
             .biomes("minecraft:ocean")
-            .output(FishPoolLootEntryDefinition.item("minecraft:pufferfish", 40, 2, 3))
-            .output(FishPoolLootEntryDefinition.item("minecraft:tropical_fish", 60, 3, 5))
+            .output(FishPoolLootEntryDefinition.tag("list:fish_pool/fish_ocean", 100, 1, 5))
             .register();
+
     //混合鱼群 河流
     public static final FishPoolDefinition RIVER_FISH_POOL = river("river_fish_pool")
+            .minFishCount(1)
             .maxFishCount(6)
             .biomes("minecraft:river")
-            .output(FishPoolLootEntryDefinition.tag("list:fish_pool/river_catch", 120, 3, 5))
-            .output(FishPoolLootEntryDefinition.item("minecraft:enchanted_book", 1).withNbt("{StoredEnchantments:[{id:\"minecraft:mending\",lvl:1}]}"))
+            .output(FishPoolLootEntryDefinition.tag("list:fish_pool/fish_river", 100, 1, 3))
             .register();
     //鲑鱼群
     public static final FishPoolDefinition SALMON_FISH_POOL = river("salmon_fish_pool")
             .minFishCount(1)
-            .maxFishCount(2)
+            .maxFishCount(6)
             .fishKing((String) null)
             .weather(null)
             .time(null)
             .biomes("minecraft:river")
             .output(FishPoolLootEntryDefinition.item("minecraft:salmon", 100, 1, 1))
+            .register();
+
+    //鳕鱼群
+    public static final FishPoolDefinition COD_FISH_POOL = ocean("cod_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(6)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("minecraft:cod", 100, 1, 1))
             .register();
 
     private FishPoolDefinitions() {
