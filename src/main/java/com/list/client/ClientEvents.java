@@ -57,10 +57,21 @@ public class ClientEvents {
         }
 
         @SubscribeEvent
+        @SuppressWarnings("unchecked")
         public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
             event.registerEntityRenderer(FishGroupRegistry.FLOATING_DEBRIS.get(), FloatingDebrisRenderer::new);
-            event.registerEntityRenderer(FishGroupRegistry.RIVER_FISH_POOL.get(), RiverFishPoolRenderer::new);
-            event.registerEntityRenderer(FishGroupRegistry.OCEAN_FISH_POOL.get(), OceanFishPoolRenderer::new);
+            for (FishGroupRegistry.FishPoolRegistration registration : FishGroupRegistry.getFishPoolRegistrations()) {
+                switch (registration.environment()) {
+                    case RIVER -> event.registerEntityRenderer(
+                            (net.minecraft.world.entity.EntityType<com.list.fish_group.entity.RiverFishPoolEntity>) registration.entityType().get(),
+                            RiverFishPoolRenderer::new
+                    );
+                    case OCEAN -> event.registerEntityRenderer(
+                            (net.minecraft.world.entity.EntityType<com.list.fish_group.entity.OceanFishPoolEntity>) registration.entityType().get(),
+                            OceanFishPoolRenderer::new
+                    );
+                }
+            }
         }
 
         @SubscribeEvent

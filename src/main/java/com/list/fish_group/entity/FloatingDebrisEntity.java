@@ -176,6 +176,10 @@ public class FloatingDebrisEntity extends Entity {
         return this.entityData.get(HURT_TIME);
     }
 
+    protected boolean isDestroying() {
+        return this.entityData.get(IS_DESTROYING);
+    }
+
     public void triggerInteraction() {
         interactions++;
         triggerHurt();

@@ -1,9 +1,10 @@
 package com.list.fish_group.util;
 
+import com.list.fish_group.pool.FishPoolDefinition;
+import com.list.fish_group.pool.FishPoolDefinitions;
+import com.list.fish_group.entity.AbstractFishPoolEntity;
 import com.list.fish_group.item.FishGroupRegistry;
 import com.list.fish_group.entity.FloatingDebrisEntity;
-import com.list.fish_group.entity.OceanFishPoolEntity;
-import com.list.fish_group.entity.RiverFishPoolEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BiomeTags;
@@ -38,12 +39,6 @@ public class FloatingPoolsSpawner {
         int totalCount = level.getEntitiesOfClass(FloatingDebrisEntity.class, area).size();
 
         var biome = level.getBiome(lastValidSpawn);
-        if (biome.is(BiomeTags.IS_OCEAN)) {
-            totalCount += level.getEntitiesOfClass(OceanFishPoolEntity.class, area).size();
-        } else if (biome.is(BiomeTags.IS_RIVER)) {
-            totalCount += level.getEntitiesOfClass(RiverFishPoolEntity.class, area).size();
-        }
-
         if (totalCount >= MAX_COUNT) return;
 
         java.util.List<java.lang.Runnable> actions = new java.util.ArrayList<>();
@@ -59,22 +54,20 @@ public class FloatingPoolsSpawner {
         }
 
         if (biome.is(BiomeTags.IS_OCEAN)) {
-            actions.add(() -> {
-                OceanFishPoolEntity ocean = new OceanFishPoolEntity(FishGroupRegistry.OCEAN_FISH_POOL.get(), level);
-                Vector3d spawnPos = new Vector3d(spawnX + 0.5, spawnY, spawnZ + 0.5);
-                ocean.setPos(spawnPos.x, spawnPos.y, spawnPos.z);
-                level.addFreshEntity(ocean);
-            });
+            java.util.List<FishPoolDefinition> availablePools = FishPoolDefinitions.getAvailable(level, FishPoolDefinition.Environment.OCEAN);
+            if (!availablePools.isEmpty()) {
+                actions.add(() -> spawnFishPool(level, random, availablePools, spawnX, spawnY, spawnZ));
+            }
         } else if (biome.is(BiomeTags.IS_RIVER)) {
-            actions.add(() -> {
-                RiverFishPoolEntity river = new RiverFishPoolEntity(FishGroupRegistry.RIVER_FISH_POOL.get(), level);
-                Vector3d spawnPos = new Vector3d(spawnX + 0.5, spawnY, spawnZ + 0.5);
-                river.setPos(spawnPos.x, spawnPos.y, spawnPos.z);
-                level.addFreshEntity(river);
-            });
+            java.util.List<FishPoolDefinition> availablePools = FishPoolDefinitions.getAvailable(level, FishPoolDefinition.Environment.RIVER);
+            if (!availablePools.isEmpty()) {
+                actions.add(() -> spawnFishPool(level, random, availablePools, spawnX, spawnY, spawnZ));
+            }
         }
 
         // floating books spawn removed (feature disabled)
+
+        if (actions.isEmpty()) return;
 
         actions.get(random.nextInt(actions.size())).run();
     }
@@ -92,6 +85,18 @@ public class FloatingPoolsSpawner {
             }
         }
         return null;
+    }
+
+    private static void spawnFishPool(ServerLevel level, RandomSource random, java.util.List<FishPoolDefinition> availablePools, int spawnX, int spawnY, int spawnZ) {
+        FishPoolDefinition definition = availablePools.get(random.nextInt(availablePools.size()));
+        AbstractFishPoolEntity fishPool = FishGroupRegistry.getFishPoolRegistration(definition.id()).create(level);
+        if (fishPool == null) {
+            return;
+        }
+        fishPool.setFishPoolDefinition(definition.id());
+        Vector3d spawnPos = new Vector3d(spawnX + 0.5, spawnY, spawnZ + 0.5);
+        fishPool.setPos(spawnPos.x, spawnPos.y, spawnPos.z);
+        level.addFreshEntity(fishPool);
     }
 
     public static void tick(ServerLevel level) {

@@ -2,13 +2,17 @@ package com.list.fish_group;
 
 import com.list.ListMod;
 import com.list.fish_group.entity.FloatingDebrisEntity;
+import com.list.fish_group.pool.FishPoolLootManager;
 import com.list.fish_group.util.FloatingPoolsSpawner;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.phys.AABB;
+import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.ItemFishedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+
+import java.util.Comparator;
 
 @Mod.EventBusSubscriber(modid = ListMod.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public final class FishGroupEvents {
@@ -45,8 +49,14 @@ public final class FishGroupEvents {
 
         event.getHookEntity().level().getEntitiesOfClass(FloatingDebrisEntity.class, hookBox)
                 .stream()
-                .findFirst()
+                .min(Comparator.comparingDouble(entity -> entity.distanceToSqr(hookPosition)))
                 .ifPresent(entity -> entity.onFishHookInteract(owner));
+    }
+
+    @SubscribeEvent
+    public static void onAddReloadListener(AddReloadListenerEvent event) {
+        event.addListener(FishPoolLootManager.INSTANCE);
+        ListMod.LOGGER.info("Registered fish pool loot reload listener");
     }
 
 

@@ -1,23 +1,29 @@
 package com.list.fish_group.entity;
 
-import com.list.fish_group.util.LuaFishPool;
-import net.minecraft.server.level.ServerLevel;
+import com.list.fish_group.pool.FishPoolDefinition;
+import com.list.fish_group.pool.FishPoolDefinitions;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.storage.loot.LootTable;
 
-public class RiverFishPoolEntity extends FloatingDebrisEntity {
+public class RiverFishPoolEntity extends AbstractFishPoolEntity {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
     public RiverFishPoolEntity(EntityType<? extends RiverFishPoolEntity> type, Level level) {
         super(type, level);
+        this.setFishPoolDefinition(resolveDefinitionIdFromType(type));
     }
 
     @Override
-    public LootTable getLootTable(ServerLevel serverLevel) {
-        return serverLevel.getServer().getLootData().getLootTable(LuaFishPool.of("gameplay/fishing_pools/river_fish_pool"));
+    protected FishPoolDefinition.Environment getEnvironment() {
+        return FishPoolDefinition.Environment.RIVER;
+    }
+
+    @Override
+    protected ResourceLocation getDefaultFishPoolId() {
+        return FishPoolDefinitions.RIVER_FISH_POOL.id();
     }
 
     @Override

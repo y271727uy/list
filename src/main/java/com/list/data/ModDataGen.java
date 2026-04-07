@@ -23,6 +23,7 @@ public class ModDataGen {
         CompletableFuture<HolderLookup.Provider> registries = event.getLookupProvider();
 
         generator.addProvider(event.includeServer(), new ModRegistryProvider(generator.getPackOutput(), registries));
+        generator.addProvider(event.includeServer(), new FishPoolLootTableProvider(generator.getPackOutput()));
     }
 
     public static void init() {

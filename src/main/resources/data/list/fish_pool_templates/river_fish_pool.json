@@ -1,18 +1,9 @@
 {
   "entries": [
     {
-      "item": "minecraft:pufferfish",
-      "tag": "",
-      "weight": 40,
-      "count": {
-        "min": 2,
-        "max": 3
-      }
-    },
-    {
-      "item": "minecraft:tropical_fish",
-      "tag": "",
-      "weight": 60,
+      "item": "",
+      "tag": "list:fish_pool/river_catch",
+      "weight": 120,
       "count": {
         "min": 3,
         "max": 5
@@ -26,4 +17,5 @@
     }
   ]
 }
+
 

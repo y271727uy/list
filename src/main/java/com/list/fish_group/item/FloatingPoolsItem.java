@@ -46,13 +46,12 @@ public class FloatingPoolsItem extends Item {
 
         if (!level.isClientSide) {
             FloatingDebrisEntity debris;
-            // floating_books removed: select among remaining pool items
-            if (itemStack.is(FishGroupRegistry.RIVER_FISH_POOL_ITEM.get())) {
-                debris = FishGroupRegistry.RIVER_FISH_POOL.get().create(level);
-            } else if (itemStack.is(FishGroupRegistry.OCEAN_FISH_POOL_ITEM.get())) {
-                debris = FishGroupRegistry.OCEAN_FISH_POOL.get().create(level);
-            } else {
-                debris = FishGroupRegistry.FLOATING_DEBRIS.get().create(level);
+            debris = FishGroupRegistry.FLOATING_DEBRIS.get().create(level);
+            for (FishGroupRegistry.FishPoolRegistration registration : FishGroupRegistry.getFishPoolRegistrations()) {
+                if (itemStack.is(registration.item().get())) {
+                    debris = registration.create(level);
+                    break;
+                }
             }
 
             if (debris != null) {
