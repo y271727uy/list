@@ -40,6 +40,17 @@ public final class FishPoolDefinitions {
             .output(FishPoolLootEntryDefinition.item("minecraft:salmon", 100, 1, 1))
             .register();
 
+    //河豚群
+    public static final FishPoolDefinition PUFFERFISH_FISH_POOL = ocean("pufferfish_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(6)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("minecraft:pufferfish", 100, 1, 1))
+            .register();
+
     //鳕鱼群
     public static final FishPoolDefinition COD_FISH_POOL = ocean("cod_fish_pool")
             .minFishCount(1)

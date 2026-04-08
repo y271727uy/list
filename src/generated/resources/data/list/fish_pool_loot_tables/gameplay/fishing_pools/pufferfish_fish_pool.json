@@ -1,0 +1,11 @@
+{
+  "Biome": "minecraft:ocean",
+  "MaxFishCount": 6,
+  "MinFishCount": 1,
+  "entries": [
+    {
+      "item": "minecraft:pufferfish",
+      "weight": 100
+    }
+  ]
+}

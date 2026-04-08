@@ -1,7 +1,7 @@
  package com.list.fish_group.item;
 
-import com.list.fish_group.entity.FloatingDebrisEntity;
-  import net.minecraft.MethodsReturnNonnullByDefault;
+import com.list.fish_group.entity.AbstractFishPoolEntity;
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
@@ -43,27 +43,24 @@ public class FloatingPoolsItem extends Item {
                 hitResult.getLocation().z + 4.0D
         );
 
-        if (!level.getEntitiesOfClass(FloatingDebrisEntity.class, checkArea).isEmpty()) {
+        if (!level.getEntitiesOfClass(AbstractFishPoolEntity.class, checkArea).isEmpty()) {
             return InteractionResultHolder.fail(itemStack);
         }
 
         if (!level.isClientSide) {
-            FloatingDebrisEntity debris = FishGroupRegistry.FLOATING_DEBRIS.get().create(level);
+            AbstractFishPoolEntity fishPool = null;
             for (FishGroupRegistry.FishPoolRegistration registration : FishGroupRegistry.getFishPoolRegistrations()) {
                 if (itemStack.is(registration.item().get())) {
-                    FloatingDebrisEntity registrationDebris = registration.create(level);
-                    if (registrationDebris != null) {
-                        debris = registrationDebris;
-                    }
+                    fishPool = registration.create(level);
                     break;
                 }
             }
 
-            if (debris != null) {
-                debris.setPos(hitResult.getLocation().x, hitResult.getLocation().y - 1.85D, hitResult.getLocation().z);
-                debris.setYRot(player.getYRot());
-                if (level.noCollision(debris, debris.getBoundingBox())) {
-                    level.addFreshEntity(debris);
+            if (fishPool != null) {
+                fishPool.setPos(hitResult.getLocation().x, hitResult.getLocation().y - 1.85D, hitResult.getLocation().z);
+                fishPool.setYRot(player.getYRot());
+                if (level.noCollision(fishPool, fishPool.getBoundingBox())) {
+                    level.addFreshEntity(fishPool);
                     level.gameEvent(player, GameEvent.ENTITY_PLACE, hitResult.getLocation());
                     if (!player.getAbilities().instabuild) {
                         itemStack.shrink(1);

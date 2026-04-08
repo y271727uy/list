@@ -1,10 +1,8 @@
 package com.list.fish_group.client;
 
 import com.list.ListMod;
-import com.list.fish_group.client.model.entity.FloatingDebrisModel;
 import com.list.fish_group.client.model.entity.OceanFishPoolModel;
 import com.list.fish_group.client.model.entity.RiverFishPoolModel;
-import com.list.fish_group.client.renderer.entity.FloatingDebrisRenderer;
 import com.list.fish_group.client.renderer.entity.OceanFishPoolRenderer;
 import com.list.fish_group.client.renderer.entity.RiverFishPoolRenderer;
 import com.list.fish_group.item.FishGroupRegistry;
@@ -22,8 +20,6 @@ public final class FishGroupClientEvents {
 
     @SubscribeEvent
     public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerEntityRenderer(FishGroupRegistry.FLOATING_DEBRIS.get(), FloatingDebrisRenderer::new);
-
         for (FishGroupRegistry.FishPoolRegistration registration : FishGroupRegistry.getFishPoolRegistrations()) {
             registerFishPoolRenderer(event, registration);
         }
@@ -41,7 +37,6 @@ public final class FishGroupClientEvents {
 
     @SubscribeEvent
     public static void onRegisterLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(FloatingDebrisModel.LAYER_LOCATION, FloatingDebrisModel::getTexturedModelData);
         event.registerLayerDefinition(RiverFishPoolModel.LAYER_LOCATION, RiverFishPoolModel::getTexturedModelData);
         event.registerLayerDefinition(OceanFishPoolModel.LAYER_LOCATION, OceanFishPoolModel::getTexturedModelData);
     }

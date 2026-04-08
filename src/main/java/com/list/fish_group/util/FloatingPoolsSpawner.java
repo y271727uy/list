@@ -4,7 +4,6 @@ import com.list.fish_group.pool.FishPoolDefinition;
 import com.list.fish_group.pool.FishPoolDefinitions;
 import com.list.fish_group.entity.AbstractFishPoolEntity;
 import com.list.fish_group.item.FishGroupRegistry;
-import com.list.fish_group.entity.FloatingDebrisEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
@@ -44,40 +43,19 @@ public class FloatingPoolsSpawner {
         int spawnZ = lastValidSpawn.getZ();
 
         AABB area = new AABB(spawnX - 128, spawnY - 128, spawnZ - 128, spawnX + 128, spawnY + 128, spawnZ + 128);
-        int totalCount = level.getEntitiesOfClass(FloatingDebrisEntity.class, area).size();
-
-        var biome = level.getBiome(lastValidSpawn);
+        int totalCount = level.getEntitiesOfClass(AbstractFishPoolEntity.class, area).size();
         if (totalCount >= MAX_COUNT) return;
 
-        java.util.List<java.lang.Runnable> actions = new java.util.ArrayList<>();
-        AABB smallArea = new AABB(spawnX - 50, spawnY - 50, spawnZ - 50, spawnX + 50, spawnY + 50, spawnZ + 50);
+        var biome = level.getBiome(lastValidSpawn);
+        java.util.List<FishPoolDefinition> availablePools = biome.is(BiomeTags.IS_OCEAN)
+                ? FishPoolDefinitions.getAvailable(level, lastValidSpawn, FishPoolDefinition.Environment.OCEAN)
+                : biome.is(BiomeTags.IS_RIVER)
+                ? FishPoolDefinitions.getAvailable(level, lastValidSpawn, FishPoolDefinition.Environment.RIVER)
+                : java.util.List.of();
 
-        if (level.getEntitiesOfClass(FloatingDebrisEntity.class, smallArea).size() < MAX_COUNT) {
-            actions.add(() -> {
-                FloatingDebrisEntity debris = new FloatingDebrisEntity(FishGroupRegistry.FLOATING_DEBRIS.get(), level);
-                Vector3d spawnPos = new Vector3d(spawnX + 0.5, spawnY, spawnZ + 0.5);
-                debris.setPos(spawnPos.x, spawnPos.y, spawnPos.z);
-                level.addFreshEntity(debris);
-            });
-        }
+        if (availablePools.isEmpty()) return;
 
-        if (biome.is(BiomeTags.IS_OCEAN)) {
-            java.util.List<FishPoolDefinition> availablePools = FishPoolDefinitions.getAvailable(level, lastValidSpawn, FishPoolDefinition.Environment.OCEAN);
-            if (!availablePools.isEmpty()) {
-                actions.add(() -> spawnFishPool(level, random, availablePools, spawnX, spawnY, spawnZ));
-            }
-        } else if (biome.is(BiomeTags.IS_RIVER)) {
-            java.util.List<FishPoolDefinition> availablePools = FishPoolDefinitions.getAvailable(level, lastValidSpawn, FishPoolDefinition.Environment.RIVER);
-            if (!availablePools.isEmpty()) {
-                actions.add(() -> spawnFishPool(level, random, availablePools, spawnX, spawnY, spawnZ));
-            }
-        }
-
-        // floating books spawn removed (feature disabled)
-
-        if (actions.isEmpty()) return;
-
-        actions.get(random.nextInt(actions.size())).run();
+        spawnFishPool(level, random, availablePools, spawnX, spawnY, spawnZ);
     }
 
     private static BlockPos findValidSpawnPos(ServerLevel level, BlockPos center) {

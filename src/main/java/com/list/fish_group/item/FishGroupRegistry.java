@@ -2,7 +2,6 @@ package com.list.fish_group.item;
 
 import com.list.ListMod;
 import com.list.fish_group.entity.AbstractFishPoolEntity;
-import com.list.fish_group.entity.FloatingDebrisEntity;
 import com.list.fish_group.entity.OceanFishPoolEntity;
 import com.list.fish_group.entity.RiverFishPoolEntity;
 import com.list.fish_group.pool.FishPoolDefinition;
@@ -35,31 +34,14 @@ public final class FishGroupRegistry {
             () -> new FishingRodItem(new Item.Properties().stacksTo(1).durability(32))
     );
 
-    public static final RegistryObject<Item> FLOATING_DEBRIS_ITEM = ITEMS.register(
-            "floating_debris",
-            () -> new FloatingPoolsItem(new Item.Properties())
-    );
-
-    public static final RegistryObject<EntityType<FloatingDebrisEntity>> FLOATING_DEBRIS = ENTITY_TYPES.register(
-            "floating_debris",
-            () -> EntityType.Builder.of(FloatingDebrisEntity::new, MobCategory.MISC)
-                    .sized(2.0F, 2.5F)
-                    .build(ListMod.rl("floating_debris").toString())
-    );
-
     static {
         FishPoolDefinitions.getAll().forEach(FishGroupRegistry::registerFishPool);
     }
 
-    public static final FishPoolRegistration OCEAN_FISH_POOL = getFishPoolRegistration(FishPoolDefinitions.OCEAN_FISH_POOL.id());
-    public static final FishPoolRegistration COD_FISH_POOL = getFishPoolRegistration(FishPoolDefinitions.COD_FISH_POOL.id());
-    public static final FishPoolRegistration RIVER_FISH_POOL = getFishPoolRegistration(FishPoolDefinitions.RIVER_FISH_POOL.id());
-    public static final FishPoolRegistration SALMON_FISH_POOL = getFishPoolRegistration(FishPoolDefinitions.SALMON_FISH_POOL.id());
-
     private FishGroupRegistry() {
     }
 
-    private static FishPoolRegistration registerFishPool(FishPoolDefinition definition) {
+    private static void registerFishPool(FishPoolDefinition definition) {
         String path = definition.id().getPath();
         RegistryObject<Item> item = ITEMS.register(path, () -> new FloatingPoolsItem(new Item.Properties()));
         RegistryObject<EntityType<?>> entityType = switch (definition.environment()) {
@@ -82,7 +64,6 @@ public final class FishGroupRegistry {
         if (existing != null) {
             throw new IllegalStateException("Duplicate fish pool registry entry: " + definition.id());
         }
-        return registration;
     }
 
     public static FishPoolRegistration getFishPoolRegistration(ResourceLocation id) {

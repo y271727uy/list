@@ -3,11 +3,8 @@ package com.list.client;
 import com.list.ListMod;
 import com.list.all.ModRecipes;
 import com.list.fish_group.item.FishGroupRegistry;
-import com.list.fish_group.client.model.entity.FloatingDebrisModel;
 import com.list.fish_group.client.model.entity.OceanFishPoolModel;
 import com.list.fish_group.client.model.entity.RiverFishPoolModel;
-// FloatingBooksRenderer import removed (feature disabled)
-import com.list.fish_group.client.renderer.entity.FloatingDebrisRenderer;
 import com.list.fish_group.client.renderer.entity.OceanFishPoolRenderer;
 import com.list.fish_group.client.renderer.entity.RiverFishPoolRenderer;
 import com.list.integration.jei.tooltip.SellingBinClientTooltipComponent;
@@ -59,7 +56,6 @@ public class ClientEvents {
         @SubscribeEvent
         @SuppressWarnings("unchecked")
         public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-            event.registerEntityRenderer(FishGroupRegistry.FLOATING_DEBRIS.get(), FloatingDebrisRenderer::new);
             for (FishGroupRegistry.FishPoolRegistration registration : FishGroupRegistry.getFishPoolRegistrations()) {
                 switch (registration.environment()) {
                     case RIVER -> event.registerEntityRenderer(
@@ -76,7 +72,6 @@ public class ClientEvents {
 
         @SubscribeEvent
         public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
-            event.registerLayerDefinition(FloatingDebrisModel.LAYER_LOCATION, FloatingDebrisModel::getTexturedModelData);
             event.registerLayerDefinition(RiverFishPoolModel.LAYER_LOCATION, RiverFishPoolModel::getTexturedModelData);
             event.registerLayerDefinition(OceanFishPoolModel.LAYER_LOCATION, OceanFishPoolModel::getTexturedModelData);
         }

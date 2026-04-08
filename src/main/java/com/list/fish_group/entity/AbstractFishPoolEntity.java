@@ -22,7 +22,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
 
-public abstract class AbstractFishPoolEntity extends FloatingDebrisEntity {
+public abstract class AbstractFishPoolEntity extends FishPoolBaseEntity {
     private static final String FISH_POOL_ID_TAG = "FishPoolId";
     private static final String FISH_COUNT_TAG = "FishCount";
     private static final String MAX_FISH_COUNT_TAG = "MaxFishCount";
@@ -35,7 +35,7 @@ public abstract class AbstractFishPoolEntity extends FloatingDebrisEntity {
     @Getter
     private boolean fishKingAwarded;
 
-    protected AbstractFishPoolEntity(EntityType<? extends FloatingDebrisEntity> type, Level level) {
+    protected AbstractFishPoolEntity(EntityType<? extends FishPoolBaseEntity> type, Level level) {
         super(type, level);
     }
 
