@@ -1,7 +1,7 @@
 package com.list.fish_group.entity;
 
 import com.list.fish_group.pool.FishPoolDefinition;
-import com.list.fish_group.pool.FishPoolDefinitions;
+import com.list.fish_group.pool.FishPoolFactory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
@@ -23,7 +23,7 @@ public class OceanFishPoolEntity extends AbstractFishPoolEntity {
 
     @Override
     protected ResourceLocation getDefaultFishPoolId() {
-        return FishPoolDefinitions.OCEAN_FISH_POOL.id();
+        return FishPoolFactory.OCEAN_FISH_POOL.id();
     }
 
     @Override

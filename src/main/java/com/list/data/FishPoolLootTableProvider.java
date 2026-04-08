@@ -3,7 +3,7 @@ package com.list.data;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.list.fish_group.pool.FishPoolDefinition;
-import com.list.fish_group.pool.FishPoolDefinitions;
+import com.list.fish_group.pool.FishPoolFactory;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
@@ -25,7 +25,7 @@ public class FishPoolLootTableProvider implements DataProvider {
     @Override
     public @Nonnull CompletableFuture<?> run(@Nonnull CachedOutput output) {
         return CompletableFuture.allOf(
-                FishPoolDefinitions.getAll()
+                FishPoolFactory.getAll()
                         .stream()
                         .map(definition -> DataProvider.saveStable(output, serialize(definition), this.pathProvider.json(definition.id())))
                         .toArray(CompletableFuture[]::new)

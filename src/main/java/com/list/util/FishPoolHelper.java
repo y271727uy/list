@@ -1,10 +1,10 @@
-package com.list.fish_group.util;
+package com.list.util;
 
 import com.list.ListMod;
 import net.minecraft.resources.ResourceLocation;
 
-public final class LuaFishPool {
-    private LuaFishPool() {
+public final class FishPoolHelper {
+    private FishPoolHelper() {
     }
 
     public static ResourceLocation of(String path) {

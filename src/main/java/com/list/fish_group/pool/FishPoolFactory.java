@@ -11,7 +11,7 @@ import java.util.Optional;
 
 import javax.annotation.Nullable;
 
-public final class FishPoolDefinitions {
+public final class FishPoolFactory {
     private static final Map<ResourceLocation, FishPoolDefinition> DEFINITIONS = new LinkedHashMap<>();
 
     //混合鱼群 海洋
@@ -61,8 +61,53 @@ public final class FishPoolDefinitions {
             .biomes("minecraft:ocean")
             .output(FishPoolLootEntryDefinition.item("minecraft:cod", 100, 1, 1))
             .register();
+    //蓝鳃太阳鱼
+    public static final FishPoolDefinition BLUEGILL_FISH_POOL = river("bluegill_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(6)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:river")
+            .output(FishPoolLootEntryDefinition.item("aquaculture:bluegill", 100, 1, 1))
+            .register();
 
-    private FishPoolDefinitions() {
+    //虹鳟鱼
+    public static final FishPoolDefinition RAINBOW_TROUT_FISH_POOL = river("rainbow_trout_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(6)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:river")
+            .output(FishPoolLootEntryDefinition.item("aquaculture:rainbow_trout", 50, 1, 1))
+            .output(FishPoolLootEntryDefinition.item("aquaculture:brown_trout", 50, 1, 1))
+            .register();
+
+    //鲤鱼
+    public static final FishPoolDefinition CARP_FISH_POOL = river("carp_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(6)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:river")
+            .output(FishPoolLootEntryDefinition.item("aquaculture:carp", 50, 1, 1))
+            //.output(FishPoolLootEntryDefinition.item("aquaculture:tambaqui", 50, 1, 1))
+            .register();
+
+    //龙虾群
+    public static final FishPoolDefinition LOBSTER_FISH_POOL = ocean("lobster_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("crabbersdelight:clawster", 100, 1, 1))
+            .register();
+
+    private FishPoolFactory() {
     }
 
     public static FishPoolBuilder river(String path) {

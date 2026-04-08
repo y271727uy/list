@@ -1,6 +1,6 @@
 package com.list.fish_group.entity;
 
-import com.list.fish_group.util.LuaFishPool;
+import com.list.util.FishPoolHelper;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
@@ -139,7 +139,7 @@ public class FishPoolBaseEntity extends Entity {
     }
 
     public LootTable getLootTable(ServerLevel serverLevel) {
-        return serverLevel.getServer().getLootData().getLootTable(LuaFishPool.of("gameplay/fishing_pools/fish_pool_base"));
+        return serverLevel.getServer().getLootData().getLootTable(FishPoolHelper.of("gameplay/fishing_pools/fish_pool_base"));
     }
 
     public AABB getHookInteractionBounds() {

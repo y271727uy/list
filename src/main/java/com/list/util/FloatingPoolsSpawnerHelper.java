@@ -1,7 +1,7 @@
-package com.list.fish_group.util;
+package com.list.util;
 
 import com.list.fish_group.pool.FishPoolDefinition;
-import com.list.fish_group.pool.FishPoolDefinitions;
+import com.list.fish_group.pool.FishPoolFactory;
 import com.list.fish_group.entity.AbstractFishPoolEntity;
 import com.list.fish_group.item.FishGroupRegistry;
 import net.minecraft.core.BlockPos;
@@ -17,7 +17,7 @@ import org.joml.Vector3d;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FloatingPoolsSpawner {
+public class FloatingPoolsSpawnerHelper {
     private static final int MAX_COUNT = 3;
     private static final int SPAWN_INTERVAL = 6000;
     private static final Map<ResourceKey<Level>, SpawnState> SPAWN_STATE_BY_DIMENSION = new HashMap<>();
@@ -48,9 +48,9 @@ public class FloatingPoolsSpawner {
 
         var biome = level.getBiome(lastValidSpawn);
         java.util.List<FishPoolDefinition> availablePools = biome.is(BiomeTags.IS_OCEAN)
-                ? FishPoolDefinitions.getAvailable(level, lastValidSpawn, FishPoolDefinition.Environment.OCEAN)
+                ? FishPoolFactory.getAvailable(level, lastValidSpawn, FishPoolDefinition.Environment.OCEAN)
                 : biome.is(BiomeTags.IS_RIVER)
-                ? FishPoolDefinitions.getAvailable(level, lastValidSpawn, FishPoolDefinition.Environment.RIVER)
+                ? FishPoolFactory.getAvailable(level, lastValidSpawn, FishPoolDefinition.Environment.RIVER)
                 : java.util.List.of();
 
         if (availablePools.isEmpty()) return;

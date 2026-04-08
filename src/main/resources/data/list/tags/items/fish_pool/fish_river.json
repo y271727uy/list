@@ -3,7 +3,15 @@
   "values": [
     "minecraft:salmon",
     "aquaculture:bluegill",
-    "aquaculture:perch"
+    "aquaculture:perch",
+    "aquaculture:gar",
+    "aquaculture:smallmouth_bass",
+    "aquaculture:muskellunge",
+    "aquaculture:brown_trout",
+    "aquaculture:catfish",
+    "aquaculture:carp",
+    "aquaculture:minnow",
+    "aquaculture:blackfish"
   ]
 }
 

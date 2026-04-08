@@ -1,0 +1,15 @@
+{
+  "Biome": "minecraft:river",
+  "MaxFishCount": 6,
+  "MinFishCount": 1,
+  "entries": [
+    {
+      "item": "aquaculture:carp",
+      "weight": 50
+    },
+    {
+      "item": "aquaculture:tambaqui",
+      "weight": 50
+    }
+  ]
+}

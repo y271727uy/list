@@ -65,7 +65,7 @@ public final class FishPoolLootManager extends SimpleJsonResourceReloadListener 
     public ItemStack rollReward(ResourceLocation poolId, ServerLevel level, RandomSource random) {
         FishPoolLootTable lootTable = this.lootTables.get(poolId);
         if (lootTable == null) {
-            return FishPoolDefinitions.get(poolId)
+            return FishPoolFactory.get(poolId)
                     .map(this::fromDefinition)
                     .map(table -> table.roll(level, random))
                     .orElseGet(() -> {

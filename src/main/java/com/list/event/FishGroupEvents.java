@@ -1,9 +1,9 @@
-package com.list.fish_group;
+package com.list.event;
 
 import com.list.ListMod;
 import com.list.fish_group.entity.AbstractFishPoolEntity;
 import com.list.fish_group.pool.FishPoolLootManager;
-import com.list.fish_group.util.FloatingPoolsSpawner;
+import com.list.util.FloatingPoolsSpawnerHelper;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
@@ -27,7 +27,7 @@ public final class FishGroupEvents {
     @SubscribeEvent
     public static void onLevelTick(TickEvent.LevelTickEvent event) {
         if (event.phase == TickEvent.Phase.END && event.level instanceof ServerLevel serverLevel) {
-            FloatingPoolsSpawner.tick(serverLevel);
+            FloatingPoolsSpawnerHelper.tick(serverLevel);
             serverLevel.players().forEach(player -> {
                 if (player.fishing == null || player.fishing.isRemoved()) {
                     return;

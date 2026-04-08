@@ -5,7 +5,7 @@ import com.list.fish_group.entity.AbstractFishPoolEntity;
 import com.list.fish_group.entity.OceanFishPoolEntity;
 import com.list.fish_group.entity.RiverFishPoolEntity;
 import com.list.fish_group.pool.FishPoolDefinition;
-import com.list.fish_group.pool.FishPoolDefinitions;
+import com.list.fish_group.pool.FishPoolFactory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -35,7 +35,7 @@ public final class FishGroupRegistry {
     );
 
     static {
-        FishPoolDefinitions.getAll().forEach(FishGroupRegistry::registerFishPool);
+        FishPoolFactory.getAll().forEach(FishGroupRegistry::registerFishPool);
     }
 
     private FishGroupRegistry() {

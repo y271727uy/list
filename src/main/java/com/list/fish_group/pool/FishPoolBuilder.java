@@ -114,7 +114,7 @@ public final class FishPoolBuilder {
 
     public FishPoolDefinition register() {
         int resolvedMinFishCount = this.minFishCount == null ? this.maxFishCount : this.minFishCount;
-        return FishPoolDefinitions.register(this.id, this.environment, resolvedMinFishCount, this.maxFishCount, this.fishKing, List.copyOf(this.biomes), this.weatherRequirement, this.timeRequirement, this.outputs.toArray(FishPoolLootEntryDefinition[]::new));
+        return FishPoolFactory.register(this.id, this.environment, resolvedMinFishCount, this.maxFishCount, this.fishKing, List.copyOf(this.biomes), this.weatherRequirement, this.timeRequirement, this.outputs.toArray(FishPoolLootEntryDefinition[]::new));
     }
 
     @Nullable

@@ -318,7 +318,7 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
-                    //output.accept(ModItems..get());
+                    //output.accept(ModItems..get());                  //长江鲥鱼 蓝旗金枪鱼 黄旗金枪鱼 皇带鱼 欧洲鳗鱼 帝王鲑
 
                      })
                     .build()

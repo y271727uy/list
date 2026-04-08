@@ -3,7 +3,16 @@
   "values": [
     "minecraft:pufferfish",
     "minecraft:tropical_fish",
-    "minecraft:cod"
+    "minecraft:cod",
+    "aquaculture:pacific_halibut",
+    "aquaculture:atlantic_halibut",
+    "aquaculture:jellyfish",
+    "aquaculture:tuna",
+    "aquaculture:red_grouper",
+    "aquaculture:atlantic_cod",
+    "aquaculture:pollock",
+    "aquaculture:atlantic_herring",
+    "aquaculture:pink_salmon"
   ]
 }
 

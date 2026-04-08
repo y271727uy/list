@@ -3,7 +3,7 @@ package com.list.fish_group.entity;
 import com.list.ListMod;
 import com.list.fish_group.pool.FishKingCooldownSavedData;
 import com.list.fish_group.pool.FishPoolDefinition;
-import com.list.fish_group.pool.FishPoolDefinitions;
+import com.list.fish_group.pool.FishPoolFactory;
 import com.list.fish_group.pool.FishPoolLootManager;
 import lombok.Getter;
 import net.minecraft.nbt.CompoundTag;
@@ -45,14 +45,14 @@ public abstract class AbstractFishPoolEntity extends FishPoolBaseEntity {
 
     protected ResourceLocation resolveDefinitionIdFromType(EntityType<?> type) {
         ResourceLocation typeId = ForgeRegistries.ENTITY_TYPES.getKey(type);
-        if (typeId != null && FishPoolDefinitions.get(typeId).isPresent()) {
+        if (typeId != null && FishPoolFactory.get(typeId).isPresent()) {
             return typeId;
         }
         return getDefaultFishPoolId();
     }
 
     public void setFishPoolDefinition(ResourceLocation fishPoolId) {
-        FishPoolDefinition definition = FishPoolDefinitions.getOrDefault(fishPoolId, getEnvironment());
+        FishPoolDefinition definition = FishPoolFactory.getOrDefault(fishPoolId, getEnvironment());
         boolean shouldRollFishCount = !definition.id().equals(this.fishPoolId) || this.maxFishCount <= 0;
         this.fishPoolId = definition.id();
         this.maxFishCount = shouldRollFishCount
@@ -176,7 +176,7 @@ public abstract class AbstractFishPoolEntity extends FishPoolBaseEntity {
 
     private FishPoolDefinition getFishPoolDefinition() {
         ensureFishPoolDefinition();
-        FishPoolDefinition definition = FishPoolDefinitions.getOrDefault(this.fishPoolId, getEnvironment());
+        FishPoolDefinition definition = FishPoolFactory.getOrDefault(this.fishPoolId, getEnvironment());
         this.fishPoolId = definition.id();
         return definition;
     }

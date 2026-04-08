@@ -1,0 +1,15 @@
+{
+  "Biome": "minecraft:river",
+  "MaxFishCount": 6,
+  "MinFishCount": 1,
+  "entries": [
+    {
+      "item": "aquaculture:rainbow_trout",
+      "weight": 50
+    },
+    {
+      "item": "aquaculture:brown_trout",
+      "weight": 50
+    }
+  ]
+}
