@@ -76,7 +76,30 @@ public class ModLangs {
         provider.add("entity.list.river_fish_pool", "Mixed-Species Fish Pool(River)");
         provider.add("entity.list.salmon_fish_pool", "Salmon Fish Pool");
         provider.add("item.list.salmon_fish_pool", "Salmon Fish Pool");
-        
+        provider.add("entity.list.pufferfish_fish_pool", "Pufferfish Fish Pool");
+        provider.add("entity.list.bluegill_fish_pool", "Bluegill Fish Pool");
+        provider.add("entity.list.rainbow_trout_fish_pool", "Rainbow Trout Fish Pool");
+        provider.add("entity.list.carp_fish_pool", "Carp Fish Pool");
+        provider.add("entity.list.lobster_fish_pool", "Lobster Fish Pool");
+        provider.add("entity.list.squid_fish_pool", "Squid Fish Pool");
+        provider.add("entity.list.catfish_fish_pool", "Catfish Fish Pool");
+        provider.add("entity.list.striped_bass_fish_pool", "Striped Bass Fish Pool");
+        provider.add("entity.list.redstone_bass_fish_pool", "Redstone Bass Fish Pool");
+        provider.add("entity.list.river_shrimp_fish_pool", "River Shrimp Fish Pool");
+        provider.add("entity.list.river_crab_fish_pool", "River Crab Fish Pool");
+        provider.add("entity.list.swimming_crab_fish_pool", "Swimming Crab Fish Pool");
+        provider.add("entity.list.large_yellow_croaker_fish_pool", "Large Yellow Croaker Fish Pool");
+        provider.add("entity.list.parrotfish_fish_pool", "Parrotfish Fish Pool");
+        provider.add("entity.list.silver_pomfret_fish_pool", "Silver Pomfret Fish Pool");
+        provider.add("entity.list.camouflage_grouper_fish_pool", "Camouflage Grouper Fish Pool");
+        provider.add("entity.list.turbot_fish_pool", "Turbot Fish Pool");
+        provider.add("entity.list.fluke_fish_pool", "Fluke Fish Pool");
+        provider.add("entity.list.siniperca_chuatsi_fish_pool", "Siniperca Chuatsi Fish Pool");
+        provider.add("entity.list.spanish_mackerel_fish_pool", "Spanish Mackerel Fish Pool");
+        provider.add("entity.list.grass_carp_fish_pool", "Grass Carp Fish Pool");
+        provider.add("entity.list.checkerboard_wrasse_fish_pool", "Checkerboard Wrasse Fish Pool");
+        provider.add("entity.list.threadfin_bream_fish_pool", "Threadfin Bream Fish Pool");
+        //provider.add("entity.list.", "");
 
     }
 }
@@ -84,4 +107,5 @@ public class ModLangs {
 /*
         provider.add("item.list..desc.1", "§7§o");
         provider.add("item.list..desc.2", "§9GregTech Food Option");
+        provider.add("entity.list.", "");
 */

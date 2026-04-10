@@ -1,0 +1,16 @@
+{
+  "Biome": "minecraft:ocean",
+  "MaxFishCount": 8,
+  "MinFishCount": 1,
+  "entries": [
+	{
+	  "MinRange": {
+		"max": 5,
+		"min": 1
+	  },
+	  "tag": "list:fish_pool/fish_ocean",
+	  "weight": 100
+	}
+  ]
+}
+

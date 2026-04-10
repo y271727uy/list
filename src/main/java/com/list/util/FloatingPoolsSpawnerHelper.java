@@ -18,8 +18,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FloatingPoolsSpawnerHelper {
-    private static final int MAX_COUNT = 3;
-    private static final int SPAWN_INTERVAL = 6000;
+    private static final int MAX_COUNT = 6;
+    private static final int SPAWN_INTERVAL = 3000;
     private static final Map<ResourceKey<Level>, SpawnState> SPAWN_STATE_BY_DIMENSION = new HashMap<>();
 
     private static void attemptSpawn(ServerLevel level) {

@@ -1,0 +1,15 @@
+{
+  "Biome": "minecraft:ocean",
+  "MaxFishCount": 6,
+  "MinFishCount": 1,
+  "entries": [
+    {
+      "item": "list:red_grouper",
+      "weight": 100
+    },
+    {
+      "item": "aquaculture:red_grouper",
+      "weight": 100
+    }
+  ]
+}

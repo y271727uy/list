@@ -1,0 +1,15 @@
+{
+  "Biome": "minecraft:river",
+  "MaxFishCount": 5,
+  "MinFishCount": 1,
+  "entries": [
+    {
+      "item": "list:striped_bass",
+      "weight": 100
+    },
+    {
+      "item": "aquaculture:perch",
+      "weight": 100
+    }
+  ]
+}

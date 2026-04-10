@@ -99,7 +99,7 @@ public final class FishPoolFactory {
     //龙虾群
     public static final FishPoolDefinition LOBSTER_FISH_POOL = ocean("lobster_fish_pool")
             .minFishCount(1)
-            .maxFishCount(4)
+            .maxFishCount(5)
             .fishKing((String) null)
             .weather(null)
             .time(null)
@@ -107,6 +107,230 @@ public final class FishPoolFactory {
             .output(FishPoolLootEntryDefinition.item("crabbersdelight:clawster", 100, 1, 1))
             .register();
 
+    //鱿鱼群
+    public static final FishPoolDefinition SQUID_FISH_POOL = ocean("squid_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(8)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("culturaldelights:squid", 100, 1, 1))
+            .output(FishPoolLootEntryDefinition.item("culturaldelights:glow_squid", 100, 1, 1))
+            .register();
+
+    //鲶鱼群
+    public static final FishPoolDefinition CATFISH_FISH_POOL = river("catfish_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(8)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:river")
+            .output(FishPoolLootEntryDefinition.item("aquaculture:catfish", 100, 1, 1))
+            .register();
+
+    //条纹鲈鱼群
+    public static final FishPoolDefinition STRIPED_BASS_FISH_POOL = river("striped_bass_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(5)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:river")
+            .output(FishPoolLootEntryDefinition.item("list:striped_bass", 100, 1, 1))
+            .output(FishPoolLootEntryDefinition.item("aquaculture:perch", 100, 1, 1))
+            .register();
+
+    //红石斑鱼群
+    public static final FishPoolDefinition REDSTONE_BASS_FISH_POOL = ocean("redstone_bass_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(6)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("list:red_grouper", 100, 1, 1))
+            .output(FishPoolLootEntryDefinition.item("aquaculture:red_grouper", 100, 1, 1))
+            .register();
+
+    //河虾群
+    public static final FishPoolDefinition RIVER_SHRIMP_FISH_POOL = river("river_shrimp_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:river")
+            .output(FishPoolLootEntryDefinition.item("list:river_shrimp", 100, 1, 1))
+            .register();
+
+    //河蟹群
+    public static final FishPoolDefinition RIVER_CRAB_FISH_POOL = river("river_crab_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:river")
+            .output(FishPoolLootEntryDefinition.item("list:river_crab", 100, 1, 1))
+            .register();
+            
+    //梭子蟹群
+    public static final FishPoolDefinition SWIMMING_CRAB_FISH_POOL = ocean("swimming_crab_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("list:swimming_crab", 100, 1, 1))
+            .register();
+
+    //大黄鱼群
+    public static final FishPoolDefinition LARGE_YELLOW_CROAKER_FISH_POOL = ocean("large_yellow_croaker_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("list:large_yellow_croaker", 100, 1, 1))
+            .register();
+
+    //鹦嘴鱼群
+    public static final FishPoolDefinition PARROTFISH_FISH_POOL = ocean("parrotfish_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("list:parrotfish", 100, 1, 1))
+            .register();
+
+    //银鲳鱼群
+    public static final FishPoolDefinition SILVER_POMFRET_FISH_POOL = ocean("silver_pomfret_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("list:silver_pomfret", 100, 1, 1))
+            .register();
+
+    //苏眉鱼群
+    public static final FishPoolDefinition CAMOUFLAGE_GROUPER_FISH_POOL = ocean("camouflage_grouper_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(6)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("list:camouflage_grouper", 100, 1, 1))
+            .register();
+
+    //多宝鱼群
+    public static final FishPoolDefinition TURBOT_FISH_POOL = ocean("turbot_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("list:turbot", 100, 1, 1))
+            .register();
+
+    //比目鱼群
+    public static final FishPoolDefinition FLUKE_FISH_POOL = ocean("fluke_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("list:fluke", 100, 1, 1))
+            .register();
+
+   //鳜鱼群
+    public static final FishPoolDefinition SINIPERCA_CHUATSI_FISH_POOL = river("siniperca_chuatsi_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:river")
+            .output(FishPoolLootEntryDefinition.item("list:siniperca_chuatsi", 100, 1, 1))
+            .register();
+
+    //鲅鱼群
+    public static final FishPoolDefinition SPANISH_MACKEREL_FISH_POOL = ocean("spanish_mackerel_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("list:spanish_mackerel", 100, 1, 1))
+            .register();
+
+    //草鱼群
+    public static final FishPoolDefinition GRASS_CARP_FISH_POOL = river("grass_carp_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:river")
+            .output(FishPoolLootEntryDefinition.item("list:grass_carp", 100, 1, 1))
+            .register();
+
+    //云斑海猪鱼群
+    public static final FishPoolDefinition CHECKERBOARD_WRASSE_FISH_POOL = ocean("checkerboard_wrasse_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("list:checkerboard_wrasse", 100, 1, 1))
+            .register();
+
+    //鸡鱼群
+    public static final FishPoolDefinition THREADFIN_BREAM_FISH_POOL = ocean("threadfin_bream_fish_pool")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("list:threadfin_bream", 100, 1, 1))
+            .register();
+
+/*
+        //群
+    public static final FishPoolDefinition  = river("")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:river")
+            .output(FishPoolLootEntryDefinition.item("", 100, 1, 1))
+            .register();
+
+        //群
+    public static final FishPoolDefinition  = ocean("")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("", 100, 1, 1))
+            .register();
+*/
     private FishPoolFactory() {
     }
 

@@ -1,0 +1,12 @@
+{
+  "Biome": "minecraft:river",
+  "MaxFishCount": 6,
+  "MinFishCount": 1,
+  "entries": [
+	{
+	  "item": "minecraft:salmon",
+	  "weight": 100
+	}
+  ]
+}
+

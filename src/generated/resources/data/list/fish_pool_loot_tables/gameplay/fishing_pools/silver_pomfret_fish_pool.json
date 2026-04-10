@@ -1,0 +1,11 @@
+{
+  "Biome": "minecraft:ocean",
+  "MaxFishCount": 4,
+  "MinFishCount": 1,
+  "entries": [
+    {
+      "item": "list:silver_pomfret",
+      "weight": 100
+    }
+  ]
+}

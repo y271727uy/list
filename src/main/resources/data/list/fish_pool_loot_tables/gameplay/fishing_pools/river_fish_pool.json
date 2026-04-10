@@ -1,0 +1,16 @@
+{
+  "Biome": "minecraft:river",
+  "MaxFishCount": 6,
+  "MinFishCount": 1,
+  "entries": [
+	{
+	  "MinRange": {
+		"max": 3,
+		"min": 1
+	  },
+	  "tag": "list:fish_pool/fish_river",
+	  "weight": 100
+	}
+  ]
+}
+

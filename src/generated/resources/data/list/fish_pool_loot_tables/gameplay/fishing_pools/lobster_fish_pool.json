@@ -1,0 +1,11 @@
+{
+  "Biome": "minecraft:ocean",
+  "MaxFishCount": 5,
+  "MinFishCount": 1,
+  "entries": [
+    {
+      "item": "crabbersdelight:clawster",
+      "weight": 100
+    }
+  ]
+}

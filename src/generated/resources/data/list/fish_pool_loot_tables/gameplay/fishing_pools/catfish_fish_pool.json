@@ -1,11 +1,11 @@
 {
   "Biome": "minecraft:river",
-  "MaxFishCount": 6,
+  "MaxFishCount": 8,
   "MinFishCount": 1,
   "entries": [
     {
-      "item": "aquaculture:carp",
-      "weight": 50
+      "item": "aquaculture:catfish",
+      "weight": 100
     }
   ]
 }

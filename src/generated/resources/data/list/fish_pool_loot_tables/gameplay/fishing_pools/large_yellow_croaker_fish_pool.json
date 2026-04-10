@@ -1,0 +1,11 @@
+{
+  "Biome": "minecraft:ocean",
+  "MaxFishCount": 4,
+  "MinFishCount": 1,
+  "entries": [
+    {
+      "item": "list:large_yellow_croaker",
+      "weight": 100
+    }
+  ]
+}
