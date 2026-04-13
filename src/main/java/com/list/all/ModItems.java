@@ -3813,7 +3813,7 @@ public static final ItemEntry<Item> ARTICHOKES = REGISTRATE
 public static final ItemEntry<Item> BEEFSTEAK_TOMATO = REGISTRATE
         .listItem("beefsteak_tomato", Item::new)
         .tooltips(
-            "what?"
+            "§7§oEnormous tomato!"
         )
         .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/beefsteak_tomato")))
         .properties(p -> p.food(new FoodProperties.Builder()
@@ -6461,9 +6461,9 @@ public static final ItemEntry<Item> BAKED_BEANS = REGISTRATE
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/baked_beans")))
             .register();
-
-public static final ItemEntry<DrinkItem> NAQUADAH_MILK = REGISTRATE
-            .item("naquadah_milk", DrinkItem::new)
+//硅岩风味牛乳饮品
+public static final ItemEntry<NoneDrink> NAQUADAH_MILK = REGISTRATE
+            .item("naquadah_milk", NoneDrink::new)
             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(4)
                     .saturationMod(3.4f)
@@ -6695,9 +6695,9 @@ public static final ItemEntry<DrinkItem> QINGDAO_BEER = REGISTRATE
             .generated(ctx::get, provider
             .modLoc("item/food/gtfo/qingdao_beer")))
     .register();
-
-public static final ItemEntry<DrinkItem> ORANGE_JUICE = REGISTRATE
-            .item("orange_juice", DrinkItem::new)
+//饮料
+public static final ItemEntry<NoneDrink> ORANGE_JUICE = REGISTRATE
+            .item("orange_juice", NoneDrink::new)
             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(4)
                     .saturationMod(2.3f) .build()))
@@ -6705,9 +6705,9 @@ public static final ItemEntry<DrinkItem> ORANGE_JUICE = REGISTRATE
             .generated(ctx::get, provider
             .modLoc("item/food/gtfo/orange_juice")))
     .register();
-
-public static final ItemEntry<DrinkItem> APPLE_JUICE = REGISTRATE
-            .item("apple_juice", DrinkItem::new)
+//饮料
+public static final ItemEntry<NoneDrink> APPLE_JUICE = REGISTRATE
+            .item("apple_juice", NoneDrink::new)
             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(4)
                     .saturationMod(2.3f) .build()))
@@ -7786,6 +7786,41 @@ public static final ItemEntry<Item>  = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/")))
             .register();
 */
+
+//致死量的月饼
+public static final ItemEntry<Item> BLACK_SESAME_RED_BEAN_PASTE_MOONCAKE = REGISTRATE
+            .item("black_sesame_red_bean_paste_mooncake", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/mooncake/life_after/black_sesame_red_bean_paste_mooncake")))
+            .register();
+
+public static final ItemEntry<Item> FIVE_KERNALS_HAM_MOONCAKE = REGISTRATE
+            .item("five_kernals_ham_mooncake", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/mooncake/life_after/five_kernals_ham_mooncake")))
+            .register();
+
+public static final ItemEntry<Item> SNOW_SKIN_COCONUT = REGISTRATE
+            .item("snow_skin_coconut", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/mooncake/life_after/snow_skin_coconut")))
+            .register();
+
+//特制面粉
+    public static final ItemEntry<Item> SPECIAL_WHEAT_FLOUR = REGISTRATE
+            .item("special_wheat_flour", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/mooncake/life_after/special_wheat_flour")))
+            .register();
+
     //雄蜂
     public static final ItemEntry<Item> COLLAPSE_DRONE = REGISTRATE
             .item("collapse_drone", Item::new)

@@ -980,11 +980,22 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.PARACETAMOL_CAPSULE.get());
                 output.accept(ModItems.VIBRANT_CAPSULE.get()); 
                 output.accept(ModItems.PLUTONIUM_241_CAPSULE.get()); 
-                //output.accept(ModItems..get());       
-                //output.accept(ModItems..get());
-                //output.accept(ModItems..get());       
-                //output.accept(ModItems..get());
-                //output.accept(ModItems..get());       
+                //黑刺李浆果 马斯卡葡萄 榅桲 氧葡萄 棱珠 诡异挂果 杨桃 榴莲 柚子 哈密瓜 黑莓 覆盆子 黑加仑 醋栗 车厘子 橄榄 李子 杏子 青梅 青提 百香果 火龙果 红心火龙果 冬青果 
+                //山楂 石榴 无花果 牛油果 西柚 荔枝 木瓜 灯笼果 姬海棠 蛋黄果 朽老苹果 柿子 山竹 杨梅 椰枣
+                //佛手柑 嘉宝果 火参果 红毛丹 海葡萄 杜鹃莓 野莓 金桔 香蕉 暗紫浆果 接骨木莓
+                //巴坦木 开心果 松子 板栗 腰果 榛子 杏仁 核桃      
+                //腐芋 香芋 
+                //三叶虾 恐龙 帝王蟹 鲍鱼 龙虾 鹿肉 山羊肉 野猪肉 野牛肉
+                //
+                output.accept(ModItems.SPECIAL_WHEAT_FLOUR.get());  //特制面粉
+                //output.accept(ModItems..get());  //莲蓉和咸蛋黄
+                //output.accept(ModItems..get());  //果仁和火腿
+                //output.accept(ModItems..get());  //黑芝麻和豆沙
+                //output.accept(ModItems..get());  //糯米和椰蓉
+                //output.accept(ModItems..get());  //莲蓉双黄月饼
+                output.accept(ModItems.FIVE_KERNALS_HAM_MOONCAKE.get());  //五仁火腿月饼
+                output.accept(ModItems.BLACK_SESAME_RED_BEAN_PASTE_MOONCAKE.get());  //芝麻豆沙月饼
+                output.accept(ModItems.SNOW_SKIN_COCONUT.get());  //冰皮椰蓉月饼    
                 //output.accept(ModItems..get()); 
                 //output.accept(ModItems..get()); 
                 //output.accept(ModItems..get());       

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "list:item/food/mooncake/life_after/black_sesame_red_bean_paste_mooncake"
+  }
+}
