@@ -3,7 +3,6 @@ package com.list.all;
 import com.list.block.entity.FishPondCoreBlockEntity;
 import com.list.block.entity.ForestryGreenhouseBlockEntity;
 import com.list.block.entity.ForestryHybridizerBlockEntity;
-import com.list.block.entity.SellingBinBlockEntity;
 import com.list.block.entity.TreeCompostBlockEntity;
 import com.list.block.entity.TapperBlockEntity;
 import com.tterrag.registrate.util.entry.BlockEntityEntry;
@@ -35,10 +34,6 @@ public class ModBlockEntities {
         .validBlocks(ModBlocks.FORESTRY_HYBRIDIZER)
         .register();
 
-    public static final BlockEntityEntry<SellingBinBlockEntity> SELLING_BIN = REGISTRATE
-        .blockEntity("selling_bin", SellingBinBlockEntity::new)
-        .validBlocks(ModBlocks.SELLING_BIN)
-        .register();
 
     public static final BlockEntityEntry<TapperBlockEntity> TAPPER = REGISTRATE
         .blockEntity("tapper", TapperBlockEntity::new)

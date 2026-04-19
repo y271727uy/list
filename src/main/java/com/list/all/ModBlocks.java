@@ -116,35 +116,7 @@ public class ModBlocks {
             .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
             .register();
 
-    //测试方块 出货箱
-    public static final BlockEntry<SellingBinBlock> SELLING_BIN = REGISTRATE
-            .block("selling_bin", SellingBinBlock::new)
-            // IMPORTANT: do not copy log (RotatedPillarBlock) properties here; those imply AXIS-based states.
-            // SellingBinBlock only defines FACING, and using log properties can trigger axis lookups during setup/datagen.
-            .initialProperties(() -> Blocks.IRON_BLOCK)
-            .simpleItem()
-            /*
-            .blockstate((ctx, provider) -> {
-                provider.horizontalBlock(
-                        ctx.get(),
-                        provider.models().getExistingFile(provider.modLoc("block/" + ctx.getName()))
-                );
-            })
-            */
-            .blockstate((ctx, provider) -> {
-                BlockModelBuilder model = provider.models().cube(
-                        ctx.getName(),
-                        provider.modLoc("block/greenhouse_casing"),
-                        provider.modLoc("block/greenhouse_casing"),
-                        provider.modLoc("block/greenhouse_furnace/controller_front"),  //应该是正面
-                        provider.modLoc("block/greenhouse_casing"),
-                        provider.modLoc("block/greenhouse_furnace/controller_side"),
-                        provider.modLoc("block/greenhouse_furnace/controller_side")
-                ).texture("particle", provider.modLoc("block/greenhouse_casing"));
-                provider.horizontalBlock(ctx.get(), model);
-            })
-            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
-            .register();
+
 
     //树液采集
     public static final BlockEntry<TapperBlock> TAPPER = REGISTRATE

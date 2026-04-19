@@ -3,8 +3,8 @@ package com.list.network;
 import com.list.ListMod;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.NetworkDirection;
 import net.minecraftforge.network.simple.SimpleChannel;
-import net.minecraftforge.fml.common.Mod;
 
 public class ModMessages {
     private static SimpleChannel INSTANCE;
@@ -22,11 +22,5 @@ public class ModMessages {
                 .clientAcceptedVersions(s -> true)
                 .serverAcceptedVersions(s -> true)
                 .simpleChannel();
-
-        INSTANCE = net;
-    }
-
-    public static SimpleChannel get() {
-        return INSTANCE;
     }
 }

@@ -1,8 +1,8 @@
 package com.list.event;
 
 import com.list.ListMod;
-import com.list.fish_group.entity.AbstractFishPoolEntity;
-import com.list.fish_group.pool.FishPoolLootManager;
+import com.list.gameplay.fish_group.entity.AbstractFishPoolEntity;
+import com.list.gameplay.fish_group.pool.FishPoolLootManager;
 import com.list.util.FloatingPoolsSpawnerHelper;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.phys.AABB;

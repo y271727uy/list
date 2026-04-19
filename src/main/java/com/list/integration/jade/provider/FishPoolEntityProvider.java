@@ -1,7 +1,7 @@
 package com.list.integration.jade.provider;
 
 import com.list.ListMod;
-import com.list.fish_group.entity.AbstractFishPoolEntity;
+import com.list.gameplay.fish_group.entity.AbstractFishPoolEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;

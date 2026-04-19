@@ -218,6 +218,13 @@ public class ModItems {
             .model((ctx, provider) -> provider.generated(ctx::get, provider.mcLoc("item/book")))
             .register();
 
+    // 进度条
+    public static final ItemEntry<GlowingItem> EQUALS = REGISTRATE
+            .item("equals", GlowingItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider
+            .modLoc("item/special_item/equals")))
+            .register();
+
     // 凛冬币
     public static final ItemEntry<Item> HARSH_WINTER_CREDIT = REGISTRATE
             .item("harsh_winter_credit", Item::new)
@@ -4008,7 +4015,10 @@ public static final ItemEntry<Item> LONG_GRAIN_RICE = REGISTRATE
             .register();
 
 public static final ItemEntry<Item> DWARF_COCONUT_FRUIT = REGISTRATE
-            .item("dwarf_coconut_fruit", Item::new)
+            .listItem("dwarf_coconut_fruit", Item::new)
+            .tooltips(
+            "§7§oDwarf coconut is a dwarf variety relative to the tall coconut."
+        )
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/dwarf_coconut_fruit")))
             .register();
 
@@ -7775,6 +7785,127 @@ public static final ItemEntry<Item> UNFILTERED_GRAHAM_CRACKER = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/unfiltered_graham_cracker")))
             .register();
 
+//欧洲黑莓
+public static final ItemEntry<Item> EUROPEAN_BLACKBERRY = REGISTRATE
+            .listItem("european_blackberry", Item::new)
+            .tooltips(
+            "§7§oA member of the Rubus fruticosus agg.",
+            "§7§oIt is widespread across Britain and Ireland."
+        )
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.5f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/european_blackberry")))
+            .register();
+
+//美洲黑醋栗
+public static final ItemEntry<Item> AMERICAN_BLACK_CURRANT = REGISTRATE
+            .listItem("american_black_currant", Item::new)
+            .tooltips(
+            "§7§oAmerican black currant is a common wild currant in North America."
+        )
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.5f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/american_black_currant")))
+            .register();
+
+//罗瓦达红醋栗
+public static final ItemEntry<Item> ROVADA_RED_CURRANT = REGISTRATE
+            .listItem("rovada_red_currant", Item::new)
+            .tooltips(
+            "§7§oKing of Red Currants!"
+        )
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.5f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/rovada_red_currant")))
+            .register();
+
+//凡尔赛白醋栗
+public static final ItemEntry<Item> VERSAILLES_WHITE_CURRANT = REGISTRATE
+            .listItem("versailles_white_currant", Item::new)
+            .tooltips(
+            "§7§oThe aristocrat of currants"
+        )
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.5f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/versailles_white_currant")))
+            .register();
+
+//东方草莓
+public static final ItemEntry<Item> ORIENTAL_STRAWBERRY = REGISTRATE
+            .item("oriental_strawberry", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(1.5f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/oriental_strawberry")))
+            .register();
+
+//越橘
+public static final ItemEntry<Item> LINGONBERRY = REGISTRATE
+            .item("lingonberry", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(1.5f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/lingonberry")))
+            .register();
+
+//哈施贝格接骨木莓
+public static final ItemEntry<Item> HASCHBERG_ELDERBERRY = REGISTRATE
+            .item("haschberg_elderberry", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(1.5f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/haschberg_elderberry")))
+            .register();
+
+//大果蔓越莓
+public static final ItemEntry<Item> LARGE_CRANBERRY = REGISTRATE
+            .item("large_cranberry", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(1.5f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/large_cranberry")))
+            .register();
+
+//欧洲红树莓
+public static final ItemEntry<Item> EUROPEAN_RED_RASPBERRY = REGISTRATE
+            .item("european_red_raspberry", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(1.5f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/european_red_raspberry")))
+            .register();
+
+//北高丛蓝莓
+public static final ItemEntry<Item> NORTHERN_HIGHBUSH_BLUEBERRY = REGISTRATE
+            .item("northern_highbush_blueberry", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(1.5f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/northern_highbush_blueberry")))
+            .register();
+//什锦浆果
+public static final ItemEntry<BowlReturnFoodItem> BERRY_MEDLEY = REGISTRATE
+            .item("berry_medley", BowlReturnFoodItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(3.4f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/berry_medley")))
+            .register();
 //GTFO食物结束 私货结束
 /*
 public static final ItemEntry<Item>  = REGISTRATE
@@ -7815,12 +7946,422 @@ public static final ItemEntry<Item> SNOW_SKIN_COCONUT = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/mooncake/life_after/snow_skin_coconut")))
             .register();
 
-//特制面粉
+    //特制面粉
     public static final ItemEntry<Item> SPECIAL_WHEAT_FLOUR = REGISTRATE
             .item("special_wheat_flour", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/mooncake/life_after/special_wheat_flour")))
             .register();
+//月饼结束
+//集成捆绑
+//注册模板
+    /*
+    public static final ItemEntry<继承类> 常量名 = REGISTRATE
+            .item("注册名", 继承类::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition()
+                    .saturationMod(f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/与注册名相同的资源路径")))
+            .register();
+     */
+    // --- 自动插入: integrated/bundled 注册开始 ---
+    // 我已根据 resources/assets/.../names.txt 中的映射注册以下项，继承类按注释中说明选择。
 
+    // CopperCupDrinkItem (杯类容器)
+    public static final ItemEntry<CopperCupDrinkItem> ADZUKI_CURRY_CUP = REGISTRATE
+            .item("adzuki_curry_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/adzuki_curry_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> ADZUKI_MILK_TEA_CUP = REGISTRATE
+            .item("adzuki_milk_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/adzuki_milk_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> BEER_GLASS = REGISTRATE
+            .item("beer_glass", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/beer_glass")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> BLACK_TEA_CUP = REGISTRATE
+            .item("black_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/black_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> BLOODY_MARY_GLASS = REGISTRATE
+            .item("bloody_mary_glass", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/bloody_mary_glass")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> BORSCHT_CUP = REGISTRATE
+            .item("borscht_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/borscht_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> COFFEE_CUP = REGISTRATE
+            .item("coffee_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/coffee_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> DANDELION_TEA_CUP = REGISTRATE
+            .item("dandelion_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/dandelion_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> GREEN_TEA_CUP = REGISTRATE
+            .item("green_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/green_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> LONG_BLACK_TEA_CUP = REGISTRATE
+            .item("long_black_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/long_black_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> LONG_COFFEE_CUP = REGISTRATE
+            .item("long_coffee_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/long_coffee_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> LONG_DANDELION_TEA_CUP = REGISTRATE
+            .item("long_dandelion_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/long_dandelion_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> LONG_GREEN_TEA_CUP = REGISTRATE
+            .item("long_green_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/long_green_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> LONG_YELLOW_TEA_CUP = REGISTRATE
+            .item("long_yellow_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/long_yellow_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> MINT_GREEN_TEA_CUP = REGISTRATE
+            .item("mint_green_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/mint_green_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> MOCHA_COFFEE_CUP = REGISTRATE
+            .item("mocha_coffee_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/mocha_coffee_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> NETTLE_SOUP_CUP = REGISTRATE
+            .item("nettle_soup_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/nettle_soup_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> PURULENT_TEA_CUP = REGISTRATE
+            .item("purulent_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/purulent_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> ROSE_HIP_TEA_CUP = REGISTRATE
+            .item("rose_hip_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/rose_hip_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> STRONG_BLACK_TEA_CUP = REGISTRATE
+            .item("strong_black_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/strong_black_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> STRONG_COFFEE_CUP = REGISTRATE
+            .item("strong_coffee_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/strong_coffee_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> STRONG_GREEN_TEA_CUP = REGISTRATE
+            .item("strong_green_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/strong_green_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> STRONG_PURULENT_TEA_CUP = REGISTRATE
+            .item("strong_purulent_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/strong_purulent_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> STRONG_ROSE_HIP_TEA_CUP = REGISTRATE
+            .item("strong_rose_hip_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/strong_rose_hip_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> STRONG_YELLOW_TEA_CUP = REGISTRATE
+            .item("strong_yellow_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/strong_yellow_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> VANILLA_MILK_TEA_CUP = REGISTRATE
+            .item("vanilla_milk_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/vanilla_milk_tea_cup")))
+            .register();
+
+    public static final ItemEntry<CopperCupDrinkItem> YELLOW_TEA_CUP = REGISTRATE
+            .item("yellow_tea_cup", CopperCupDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/yellow_tea_cup")))
+            .register();
+
+    // GlassTankardItem (玻璃罐/杯类特殊容器)
+    public static final ItemEntry<GlassTankardItem> DREAD_NOG_GLASS = REGISTRATE
+            .item("dread_nog_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/dread_nog_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> EGG_GROG_GLASS = REGISTRATE
+            .item("egg_grog_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/egg_grog_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> GLITTERING_GRENADINE_GLASS = REGISTRATE
+            .item("glittering_grenadine_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/glittering_grenadine_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> KOMBUCHA_GLASS = REGISTRATE
+            .item("kombucha_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/kombucha_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> MEAD_GLASS = REGISTRATE
+            .item("mead_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/mead_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> PALE_JANE_GLASS = REGISTRATE
+            .item("pale_jane_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/pale_jane_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> RADIANT_BREW_GLASS = REGISTRATE
+            .item("radiant_brew_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/radiant_brew_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> RED_RUM_GLASS = REGISTRATE
+            .item("red_rum_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/red_rum_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> RICE_WINE_GLASS = REGISTRATE
+            .item("rice_wine_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/rice_wine_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> ROOT_BEER_GLASS = REGISTRATE
+            .item("root_beer_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/root_beer_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> SACCHARINE_RUM_GLASS = REGISTRATE
+            .item("saccharine_rum_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/saccharine_rum_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> SALTY_FOLLY_GLASS = REGISTRATE
+            .item("salty_folly_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/salty_folly_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> STEEL_TOE_STOUT_GLASS = REGISTRATE
+            .item("steel_toe_stout_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/steel_toe_stout_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> STRONGROOT_ALE_GLASS = REGISTRATE
+            .item("strongroot_ale_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/strongroot_ale_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> VODKA_GLASS = REGISTRATE
+            .item("vodka_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/vodka_glass")))
+            .register();
+
+    public static final ItemEntry<GlassTankardItem> WITHERING_DROSS_GLASS = REGISTRATE
+            .item("withering_dross_glass", GlassTankardItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/withering_dross_glass")))
+            .register();
+
+    // CopperTankardDrinkItem (饮用类型 - swig)
+    public static final ItemEntry<CopperTankardDrinkItem> BEER_SWIG = REGISTRATE
+            .item("beer_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/beer_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> BLOODY_MARY_SWIG = REGISTRATE
+            .item("bloody_mary_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/bloody_mary_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> DREAD_NOG_SWIG = REGISTRATE
+            .item("dread_nog_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/dread_nog_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> EGG_GROG_SWIG = REGISTRATE
+            .item("egg_grog_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/egg_grog_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> GLITTERING_GRENADINE_SWIG = REGISTRATE
+            .item("glittering_grenadine_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/glittering_grenadine_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> KOMBUCHA_SWIG = REGISTRATE
+            .item("kombucha_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/kombucha_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> MEAD_SWIG = REGISTRATE
+            .item("mead_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/mead_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> PALE_JANE_SWIG = REGISTRATE
+            .item("pale_jane_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/pale_jane_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> RADIANT_BREW_SWIG = REGISTRATE
+            .item("radiant_brew_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/radiant_brew_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> RED_RUM_SWIG = REGISTRATE
+            .item("red_rum_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/red_rum_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> RICE_WINE_SWIG = REGISTRATE
+            .item("rice_wine_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/rice_wine_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> ROOT_BEER_SWIG = REGISTRATE
+            .item("root_beer_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/root_beer_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> SACCHARINE_RUM_SWIG = REGISTRATE
+            .item("saccharine_rum_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/saccharine_rum_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> SALTY_FOLLY_SWIG = REGISTRATE
+            .item("salty_folly_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/salty_folly_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> STEEL_TOE_STOUT_SWIG = REGISTRATE
+            .item("steel_toe_stout_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/steel_toe_stout_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> STRONGROOT_ALE_SWIG = REGISTRATE
+            .item("strongroot_ale_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/strongroot_ale_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> VODKA_SWIG = REGISTRATE
+            .item("vodka_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/vodka_swig")))
+            .register();
+
+    public static final ItemEntry<CopperTankardDrinkItem> WITHERING_DROSS_SWIG = REGISTRATE
+            .item("withering_dross_swig", CopperTankardDrinkItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/withering_dross_swig")))
+            .register();
+
+    // 普通食物或 DrinkItem（无容器的饮料/食物）
+    public static final ItemEntry<Item> BORSCHT = REGISTRATE
+            .item("borscht", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder().nutrition(1).saturationMod(0.3f).build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/borscht")))
+            .register();
+
+    public static final ItemEntry<Item> NETTLE_SOUP = REGISTRATE
+            .item("nettle_soup", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder().nutrition(1).saturationMod(0.3f).build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/nettle_soup")))
+            .register();
+
+    public static final ItemEntry<Item> RADIANT_BREW = REGISTRATE
+            .item("radiant_brew", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder().nutrition(1).saturationMod(0.3f).build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/radiant_brew")))
+            .register();
+
+    public static final ItemEntry<Item> ROOT_BEER = REGISTRATE
+            .item("root_beer", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder().nutrition(1).saturationMod(0.3f).build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/root_beer")))
+            .register();
+
+    public static final ItemEntry<Item> SCARLET_CHEESEBURGER = REGISTRATE
+            .item("scarlet_cheeseburger", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder().nutrition(1).saturationMod(0.3f).build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/scarlet_cheeseburger")))
+            .register();
+
+    public static final ItemEntry<Item> WHITE_STRAWBERRY_CAKE_SLICE = REGISTRATE
+            .item("white_strawberry_cake_slice", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder().nutrition(1).saturationMod(0.3f).build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/white_strawberry_cake_slice")))
+            .register();
+
+    public static final ItemEntry<DrinkItem> WHITE_STRAWBERRY_MILKSHAKE = REGISTRATE
+            .item("white_strawberry_milkshake", DrinkItem::new)
+            .properties(p -> p.food(new FoodProperties.Builder().nutrition(1).saturationMod(0.3f).build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/white_strawberry_milkshake")))
+            .register();
+
+    public static final ItemEntry<Item> WHITE_STRAWBERRY_ICE_CREAM = REGISTRATE
+            .item("white_strawberry_ice_cream", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder().nutrition(1).saturationMod(0.3f).build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/white_strawberry_ice_cream")))
+            .register();
+
+    // 非食物：粉末类（不添加 food 属性）
+    public static final ItemEntry<Item> POWDERED_ADZUKI_BEANS = REGISTRATE
+            .item("powdered_adzuki_beans", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/powdered_adzuki_beans")))
+            .register();
+
+    public static final ItemEntry<Item> POWDERED_BLACK_TEA_LEAVES = REGISTRATE
+            .item("powdered_black_tea_leaves", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/powdered_black_tea_leaves")))
+            .register();
+
+    public static final ItemEntry<Item> POWDERED_GREEN_TEA_LEAVES = REGISTRATE
+            .item("powdered_green_tea_leaves", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/powdered_green_tea_leaves")))
+            .register();
+
+    public static final ItemEntry<Item> POWDERED_MINT_LEAVES = REGISTRATE
+            .item("powdered_mint_leaves", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/powdered_mint_leaves")))
+            .register();
+
+    public static final ItemEntry<Item> POWDERED_VANILLA_PODS = REGISTRATE
+            .item("powdered_vanilla_pods", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/powdered_vanilla_pods")))
+            .register();
+
+    public static final ItemEntry<Item> POWDERED_YELLOW_TEA_LEAVES = REGISTRATE
+            .item("powdered_yellow_tea_leaves", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/powdered_yellow_tea_leaves")))
+            .register();
+
+    // 其它单独列出的项
+    public static final ItemEntry<Item> RADIANT_BREW_PLAIN = REGISTRATE
+            .item("radiant_brew", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/radiant_brew")))
+            .register();
+
+    // --- 自动插入结束 ---
     //雄蜂
     public static final ItemEntry<Item> COLLAPSE_DRONE = REGISTRATE
             .item("collapse_drone", Item::new)
@@ -7944,6 +8485,25 @@ public static final ItemEntry<Item> SNOW_SKIN_COCONUT = REGISTRATE
             .item("can", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/gregtech/can")))
             .register();
+
+   //铜酒杯
+    public static final ItemEntry<Item> COPPER_TANKARD = REGISTRATE
+            .item("copper_tankard", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/tool/copper_tankard")))
+            .register();
+
+   //铜杯子
+    public static final ItemEntry<Item> COPPER_CUP = REGISTRATE
+            .item("copper_cup", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/tool/copper_cup")))
+            .register();
+
+   //玻璃酒杯
+    public static final ItemEntry<Item> GLASS_TANKARD = REGISTRATE
+            .item("glass_tankard", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/tool/glass_tankard")))
+            .register();
+
    //包装袋
     public static final ItemEntry<Item> SYALS_BAG = REGISTRATE
             .item("syals_bag", Item::new)
@@ -8004,6 +8564,16 @@ public static final ItemEntry<Item> SNOW_SKIN_COCONUT = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/tree_products/urushi_bucket")))
             .register();
 
+    //紫色饮料测试 — 改为使用 MasonJarFood
+    public static final ItemEntry<MasonJarFood> PURPLE_DRINK_TEXT = REGISTRATE
+            .item("purple_drink_text", MasonJarFood::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .saturationMod(2.3f) .build()))
+            .model((ctx, provider) -> provider
+                    .generated(ctx::get, provider
+                            .modLoc("item/food/gregtech/purple_drink")))
+            .register();
     public static void register() {
     }
 }

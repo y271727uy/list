@@ -1,9 +1,9 @@
 package com.list.util;
 
-import com.list.fish_group.pool.FishPoolDefinition;
-import com.list.fish_group.pool.FishPoolFactory;
-import com.list.fish_group.entity.AbstractFishPoolEntity;
-import com.list.fish_group.item.FishGroupRegistry;
+import com.list.gameplay.fish_group.pool.FishPoolDefinition;
+import com.list.gameplay.fish_group.pool.FishPoolFactory;
+import com.list.gameplay.fish_group.entity.AbstractFishPoolEntity;
+import com.list.gameplay.fish_group.item.FishGroupRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;

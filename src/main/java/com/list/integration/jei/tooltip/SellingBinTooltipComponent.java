@@ -8,6 +8,6 @@ import net.minecraft.world.item.crafting.Ingredient;
  * TooltipComponent marker for Selling Bin recipes.
  * Client-side rendering is implemented in {@link SellingBinClientTooltipComponent}.
  */
-public record SellingBinTooltipComponent(Ingredient input, ItemStack output) implements TooltipComponent {
+public record SellingBinTooltipComponent(Ingredient input, ItemStack output, String outputPriceText) implements TooltipComponent {
 }
 

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "list:item/food/integrated/bundled/strong_rose_hip_tea_cup"
+  }
+}

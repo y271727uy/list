@@ -4,7 +4,6 @@ import com.list.ListMod;
 import com.list.recipe.ForestryGreenhouseRecipe;
 import com.list.recipe.ForestryHybridizerRecipe;
 import com.list.recipe.FishPondRecipe;
-import com.list.recipe.SellingBinRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -46,15 +45,7 @@ public class ModRecipes {
         ForestryGreenhouseRecipe.Serializer::new
     );
 
-    public static final RegistryObject<RecipeType<SellingBinRecipe>> SELLING_BIN_RECIPE_TYPE = RECIPE_TYPES.register(
-        "selling_bin",
-        () -> RecipeType.simple(ListMod.rl("selling_bin"))
-    );
 
-    public static final RegistryObject<RecipeSerializer<SellingBinRecipe>> SELLING_BIN_RECIPE_SERIALIZER = RECIPE_SERIALIZERS.register(
-        "selling_bin",
-        SellingBinRecipe.Serializer::new
-    );
 
     public static void register(IEventBus bus) {
         RECIPE_TYPES.register(bus);

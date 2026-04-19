@@ -2,8 +2,8 @@ package com.list.data;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.list.fish_group.pool.FishPoolDefinition;
-import com.list.fish_group.pool.FishPoolFactory;
+import com.list.gameplay.fish_group.pool.FishPoolDefinition;
+import com.list.gameplay.fish_group.pool.FishPoolFactory;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
