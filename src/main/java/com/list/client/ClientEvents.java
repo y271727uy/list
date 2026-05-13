@@ -8,17 +8,19 @@ import com.list.gameplay.fish_group.client.renderer.entity.OceanFishPoolRenderer
 import com.list.gameplay.fish_group.client.renderer.entity.RiverFishPoolRenderer;
 import com.list.integration.jei.tooltip.SellingBinClientTooltipComponent;
 import com.list.integration.jei.tooltip.SellingBinTooltipComponent;
+import com.list.client.model.LayeredItemModel;
 import com.list.item.EggItem;
-import com.mojang.datafixers.util.Either;
+import com.list.item.JellyItem;
+import com.list.item.LayeredItem;
+import com.list.item.MooncakeItem;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.FishingRodItem;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.ModelEvent;
 import net.minecraftforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
-import net.minecraftforge.client.event.RenderTooltipEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -71,9 +73,27 @@ public class ClientEvents {
         }
 
         @SubscribeEvent
+        public static void registerModelLoaders(ModelEvent.RegisterGeometryLoaders event) {
+            event.register("layered_item", LayeredItemModel.Loader.INSTANCE);
+        }
+
+        @SubscribeEvent
         public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
             for (EggItem eggItem : EggItem.EGG_ITEMS) {
                 event.register((stack, tintIndex) -> eggItem.getColor(tintIndex), eggItem);
+            }
+            // 注册双层图层物品的颜色处理器
+            for (LayeredItem layeredItem : LayeredItem.LAYERED_ITEMS) {
+                event.register((stack, tintIndex) -> layeredItem.getColor(tintIndex), layeredItem);
+            }
+            // 注册月饼的颜色处理器 (tintIndex=0不变色, tintIndex=1馅料调色)
+            for (MooncakeItem mooncake : MooncakeItem.MOONCAKE_ITEMS) {
+                event.register((stack, tintIndex) -> mooncake.getColor(tintIndex), mooncake);
+            }
+            // 注册果冻的颜色处理器 (tintIndex=0不变色, tintIndex=1上层调色)
+            // 这里仍然是按层 tint：灰度层次来自纹理本身，主色可按“应用XYZ色彩空间原理”来选取。
+            for (JellyItem jelly : JellyItem.JELLY_ITEMS) {
+                event.register((stack, tintIndex) -> jelly.getColor(tintIndex), jelly);
             }
         }
 

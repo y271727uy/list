@@ -68,6 +68,10 @@ Project Name:Bountiful Harvest
 Copyright (c) zjjohn121110
 License: MIT
 
+Project Name:Mooncake Delight
+Copyright (c) 2026 Wither_Redstone
+License: MIT
+
 Project Name:
 Copyright (c) 
 License: MIT

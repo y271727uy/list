@@ -1,3 +1,4 @@
+/*
 package com.list.block.entity;
 
 import net.minecraft.core.BlockPos;
@@ -36,3 +37,4 @@ public class TreeCompostBlockEntity extends BlockEntity {
         return ClientboundBlockEntityDataPacket.create(this);
     }
 }
+*/

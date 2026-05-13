@@ -1,4 +1,4 @@
-package com.list.block;
+/*package com.list.block;
 
 import com.list.all.ModBlockEntities;
 import com.list.block.entity.TreeCompostBlockEntity;
@@ -120,3 +120,4 @@ public class TreeCompostBlock extends HorizontalDirectionalBlock implements Enti
         return false;
     }
 }
+*/

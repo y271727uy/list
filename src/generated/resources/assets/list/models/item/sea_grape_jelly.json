@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "list:item/food/component/jelly_base",
+    "layer1": "list:item/food/component/jelly"
+  }
+}

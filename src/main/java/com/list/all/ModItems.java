@@ -11,8 +11,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Tiers;
 
-import java.util.function.BiConsumer;
-
 import static com.list.ListMod.REGISTRATE;
 
 public class ModItems {
@@ -3397,16 +3395,6 @@ public static final ItemEntry<Item> PERILLA_LEAF = REGISTRATE
                 .build()))
         .register();
 
-// 豌豆
-public static final ItemEntry<Item> PEA = REGISTRATE
-        .item("pea", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/pea")))
-        .properties(p -> p.food(new FoodProperties.Builder()
-                .nutrition(3)
-                .saturationMod(1.2f)
-                .build()))
-        .register();
-
 // 赤豆
 public static final ItemEntry<Item> RED_BEAN = REGISTRATE
         .item("red_bean", Item::new)
@@ -3438,6 +3426,16 @@ public static final ItemEntry<Item> BASIL = REGISTRATE
                     .saturationMod(1.2f)
                     .build()))
             .register();
+
+    //白萝卜
+    public static final ItemEntry<Item> WHITE_RADISH = REGISTRATE
+            .item("white_raddish", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/white_raddish")))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(2.2f)
+                    .build()))
+            .register();
 /*
 // 香花薄荷
 public static final ItemEntry<Item> SPEARMINT = REGISTRATE
@@ -3463,16 +3461,6 @@ public static final ItemEntry<Item> AGAVE = REGISTRATE
 public static final ItemEntry<Item> BLUE_AGAVE = REGISTRATE
         .item("blue_agave", Item::new)
         .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/blue_agave")))
-        .properties(p -> p.food(new FoodProperties.Builder()
-                .nutrition(3)
-                .saturationMod(1.2f)
-                .build()))
-        .register();
-
-// 红葱头（红葱头一般叫红毛葱）
-public static final ItemEntry<Item> SHALLOT = REGISTRATE
-        .item("shallot", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/shallot")))
         .properties(p -> p.food(new FoodProperties.Builder()
                 .nutrition(3)
                 .saturationMod(1.2f)
@@ -7937,13 +7925,13 @@ public static final ItemEntry<Item> FIVE_KERNALS_HAM_MOONCAKE = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/mooncake/life_after/five_kernals_ham_mooncake")))
             .register();
 
-public static final ItemEntry<Item> SNOW_SKIN_COCONUT = REGISTRATE
-            .item("snow_skin_coconut", Item::new)
+public static final ItemEntry<Item> SNOW_SKIN_COCONUT_MOONCAKE = REGISTRATE
+            .item("snow_skin_coconut_mooncake", Item::new)
             .properties(p -> p.food(new FoodProperties.Builder()
                     .nutrition(3)
                     .saturationMod(0.4f)
                     .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/mooncake/life_after/snow_skin_coconut")))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/mooncake/life_after/snow_skin_coconut_mooncake")))
             .register();
 
     //特制面粉
@@ -7951,6 +7939,36 @@ public static final ItemEntry<Item> SNOW_SKIN_COCONUT = REGISTRATE
             .item("special_wheat_flour", Item::new)
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/mooncake/life_after/special_wheat_flour")))
             .register();
+ /*
+    // 果冻（双层调色：jelly_base 为底图，jelly 为上层调色图）
+    // 用法：颜色常量写成 0xAARRGGBB；想触发“明度档位 + 主色”公式时，直接在这里先算出 tint：
+    //       .item("jelly", p -> new JellyItem(p, ColorSpaceUtil.tintFromGray(0xFFF2D65C, 0.75F)))
+    //       0xFFF2D65C 是主色，0.75F 是明度档位；上层 jelly 纹理保持灰度明暗，tintIndex=1 负责把灰度映射成对应主色，底图 jelly_base 不参与调色。
+    // .item("jelly", p -> new JellyItem(p, ColorSpaceUtil.tintFromGray(0xFFF2D65C, 0.75F)))
+    public static final ItemEntry<JellyItem> JELLY = REGISTRATE
+            .item("jelly", p -> new JellyItem(p, 0xFFF2D65C))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+   //调色月饼模板
+
+   public static final ItemEntry<MooncakeItem> _MOONCAKE = REGISTRATE
+            .item("_mooncake", p -> new MooncakeItem(p, ))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(1.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                    "list:item/food/mooncake/mooncake_base",
+                    "list:item/food/mooncake/mooncake_filling"))
+            .register();
+  */
 //月饼结束
 //集成捆绑
 //注册模板
@@ -7964,8 +7982,6 @@ public static final ItemEntry<Item> SNOW_SKIN_COCONUT = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/integrated/bundled/与注册名相同的资源路径")))
             .register();
      */
-    // --- 自动插入: integrated/bundled 注册开始 ---
-    // 我已根据 resources/assets/.../names.txt 中的映射注册以下项，继承类按注释中说明选择。
 
     // CopperCupDrinkItem (杯类容器)
     public static final ItemEntry<CopperCupDrinkItem> ADZUKI_CURRY_CUP = REGISTRATE
@@ -8574,6 +8590,1231 @@ public static final ItemEntry<Item> SNOW_SKIN_COCONUT = REGISTRATE
                     .generated(ctx::get, provider
                             .modLoc("item/food/gregtech/purple_drink")))
             .register();
+
+     // 自动注册的月饼（基于外部映射）。有效改动字段：注册名、常量名、馅料颜色（ARGB）
+     // 下面为来自附加清单的月饼注册（仅包含带有 <item:...> 映射的条目）
+     public static final ItemEntry<MooncakeItem> SLOE_BERRIES_MOONCAKE = REGISTRATE
+             .item("sloe_berries_mooncake", p -> new MooncakeItem(p, 0xFF4B0082))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> MUSCADINE_GRAPES_MOONCAKE = REGISTRATE
+             .item("muscadine_grapes_mooncake", p -> new MooncakeItem(p, 0xFF800080))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> MEMBRILLO_MOONCAKE = REGISTRATE
+             .item("membrillo_mooncake", p -> new MooncakeItem(p, 0xFFFFA500))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> OXYGRAPE_MOONCAKE = REGISTRATE
+             .item("oxygrape_mooncake", p -> new MooncakeItem(p, 0xFFADD8E6))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> PEARLIPEARL_MOONCAKE = REGISTRATE
+             .item("pearlipearl_mooncake", p -> new MooncakeItem(p, 0xFFD2B48C))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> WARPED_LAUREL_MOONCAKE = REGISTRATE
+             .item("warped_laurel_mooncake", p -> new MooncakeItem(p, 0xFF00CED1))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> ROSE_HIPS_MOONCAKE = REGISTRATE
+             .item("rose_hips_mooncake", p -> new MooncakeItem(p, 0xFFB22222))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> BLACK_OLIVE_FRUIT_MOONCAKE = REGISTRATE
+             .item("black_olive_fruit_mooncake", p -> new MooncakeItem(p, 0xFF1B1B1B))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> LANTERN_FRUIT_MOONCAKE = REGISTRATE
+             .item("lantern_fruit_mooncake", p -> new MooncakeItem(p, 0xFFFFD700))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> HIMEKAIDO_MOONCAKE = REGISTRATE
+             .item("himekaido_mooncake", p -> new MooncakeItem(p, 0xFFFFAFAF))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> LUCUMA_MOONCAKE = REGISTRATE
+             .item("lucuma_mooncake", p -> new MooncakeItem(p, 0xFF9ACD32))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> HOARY_APPLE_MOONCAKE = REGISTRATE
+             .item("hoary_apple_mooncake", p -> new MooncakeItem(p, 0xFF8B4513))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> SEA_GRAPE_MOONCAKE = REGISTRATE
+             .item("sea_grape_mooncake", p -> new MooncakeItem(p, 0xFF003366))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> ARBUTUS_BERRIES_MOONCAKE = REGISTRATE
+             .item("arbutus_berries_mooncake", p -> new MooncakeItem(p, 0xFFB22222))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> WILDBERRY_MOONCAKE = REGISTRATE
+             .item("wildberry_mooncake", p -> new MooncakeItem(p, 0xFFB22222))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> GEARO_BERRY_MOONCAKE = REGISTRATE
+             .item("gearo_berry_mooncake", p -> new MooncakeItem(p, 0xFF4B0082))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> BLACK_GRAPE_MOONCAKE = REGISTRATE
+             .item("black_grape_mooncake", p -> new MooncakeItem(p, 0xFF2E0854))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> WARPED_GRAPE_MOONCAKE = REGISTRATE
+             .item("warped_grape_mooncake", p -> new MooncakeItem(p, 0xFF1C8E75))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> CRIMSON_GRAPE_MOONCAKE = REGISTRATE
+             .item("crimson_grape_mooncake", p -> new MooncakeItem(p, 0xFFDC143C))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> LAPISBERRIES_MOONCAKE = REGISTRATE
+             .item("lapisberries_mooncake", p -> new MooncakeItem(p, 0xFF0F52BA))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> SPONGEKIN_MOONCAKE = REGISTRATE
+             .item("spongekin_mooncake", p -> new MooncakeItem(p, 0xFFBDB76B))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> ROTBULB_MOONCAKE = REGISTRATE
+             .item("rotbulb_mooncake", p -> new MooncakeItem(p, 0xFF8B004B))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+     public static final ItemEntry<MooncakeItem> UBE_MOONCAKE = REGISTRATE
+             .item("ube_mooncake", p -> new MooncakeItem(p, 0xFFB19CD9))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    // --- Real World Fruits & Nuts Mooncakes ---
+    public static final ItemEntry<MooncakeItem> STARFRUIT_MOONCAKE = REGISTRATE
+             .item("starfruit_mooncake", p -> new MooncakeItem(p, 0xFFFFD700))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> DURIAN_MOONCAKE = REGISTRATE
+             .item("durian_mooncake", p -> new MooncakeItem(p, 0xFFF5DEB3))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> GREEN_POMELO_MOONCAKE = REGISTRATE
+             .item("green_pomelo_mooncake", p -> new MooncakeItem(p, 0xFF90EE90))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> CANTALOUPE_MOONCAKE = REGISTRATE
+             .item("cantaloupe_mooncake", p -> new MooncakeItem(p, 0xFFE6C87A))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> BLACKBERRY_MOONCAKE = REGISTRATE
+             .item("blackberry_mooncake", p -> new MooncakeItem(p, 0xFF4B0082))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> RASPBERRY_MOONCAKE = REGISTRATE
+             .item("raspberry_mooncake", p -> new MooncakeItem(p, 0xFFE30B5D))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> BLACKCURRANT_MOONCAKE = REGISTRATE
+             .item("blackcurrant_mooncake", p -> new MooncakeItem(p, 0xFF2E0854))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> GOOSEBERRY_MOONCAKE = REGISTRATE
+             .item("gooseberry_mooncake", p -> new MooncakeItem(p, 0xFFADFF2F))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> CHERRY_MOONCAKE = REGISTRATE
+             .item("cherry_mooncake", p -> new MooncakeItem(p, 0xFF990000))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> OLIVE_MOONCAKE = REGISTRATE
+             .item("olive_mooncake", p -> new MooncakeItem(p, 0xFF808000))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> PLUM_MOONCAKE = REGISTRATE
+             .item("plum_mooncake", p -> new MooncakeItem(p, 0xFF8E4585))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> APRICOT_MOONCAKE = REGISTRATE
+             .item("apricot_mooncake", p -> new MooncakeItem(p, 0xFFFFB347))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> GREEN_PLUM_MOONCAKE = REGISTRATE
+             .item("green_plum_mooncake", p -> new MooncakeItem(p, 0xFF9ACD32))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> GREEN_GRAPE_MOONCAKE = REGISTRATE
+             .item("green_grape_mooncake", p -> new MooncakeItem(p, 0xFF90EE90))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> PASSION_FRUIT_MOONCAKE = REGISTRATE
+             .item("passion_fruit_mooncake", p -> new MooncakeItem(p, 0xFF9370DB))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> DRAGON_FRUIT_MOONCAKE = REGISTRATE
+             .item("dragon_fruit_mooncake", p -> new MooncakeItem(p, 0xFFFF69B4))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> RED_DRAGON_FRUIT_MOONCAKE = REGISTRATE
+             .item("red_dragon_fruit_mooncake", p -> new MooncakeItem(p, 0xFFC71585))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> HOLLY_BERRY_MOONCAKE = REGISTRATE
+             .item("holly_berry_mooncake", p -> new MooncakeItem(p, 0xFFFF0000))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> HAWTHORN_MOONCAKE = REGISTRATE
+             .item("hawthorn_mooncake", p -> new MooncakeItem(p, 0xFFDC143C))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> POMEGRANATE_MOONCAKE = REGISTRATE
+             .item("pomegranate_mooncake", p -> new MooncakeItem(p, 0xFFC21E56))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> FIG_MOONCAKE = REGISTRATE
+             .item("fig_mooncake", p -> new MooncakeItem(p, 0xFF8B4513))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> AVOCADO_MOONCAKE = REGISTRATE
+             .item("avocado_mooncake", p -> new MooncakeItem(p, 0xFF556B2F))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> GRAPEFRUIT_MOONCAKE = REGISTRATE
+             .item("grapefruit_mooncake", p -> new MooncakeItem(p, 0xFFFF6347))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> LYCHEE_MOONCAKE = REGISTRATE
+             .item("lychee_mooncake", p -> new MooncakeItem(p, 0xFFFF6347))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> PAPAYA_MOONCAKE = REGISTRATE
+             .item("papaya_mooncake", p -> new MooncakeItem(p, 0xFFFFA500))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> MANGOSTEEN_MOONCAKE = REGISTRATE
+             .item("mangosteen_mooncake", p -> new MooncakeItem(p, 0xFF580F41))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> WAXBERRY_MOONCAKE = REGISTRATE
+             .item("waxberry_mooncake", p -> new MooncakeItem(p, 0xFF800020))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> DATE_MOONCAKE = REGISTRATE
+             .item("date_mooncake", p -> new MooncakeItem(p, 0xFF8B4513))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> BERGAMOT_MOONCAKE = REGISTRATE
+             .item("bergamot_mooncake", p -> new MooncakeItem(p, 0xFFFFE4B5))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> JABUTICABA_MOONCAKE = REGISTRATE
+             .item("jabuticaba_mooncake", p -> new MooncakeItem(p, 0xFF4B0082))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> KIWANO_MOONCAKE = REGISTRATE
+             .item("kiwano_mooncake", p -> new MooncakeItem(p, 0xFFFF8C00))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> RAMBUTAN_MOONCAKE = REGISTRATE
+             .item("rambutan_mooncake", p -> new MooncakeItem(p, 0xFFFF0000))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> KUMQUAT_MOONCAKE = REGISTRATE
+             .item("kumquat_mooncake", p -> new MooncakeItem(p, 0xFFFFA500))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> BANANA_MOONCAKE = REGISTRATE
+             .item("banana_mooncake", p -> new MooncakeItem(p, 0xFFFFFF00))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> ELDERBERRY_MOONCAKE = REGISTRATE
+             .item("elderberry_mooncake", p -> new MooncakeItem(p, 0xFF191970))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> ALMOND_MOONCAKE = REGISTRATE
+             .item("almond_mooncake", p -> new MooncakeItem(p, 0xFFD2B48C))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> PISTACHIO_MOONCAKE = REGISTRATE
+             .item("pistachio_mooncake", p -> new MooncakeItem(p, 0xFF93C572))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> PINE_NUT_MOONCAKE = REGISTRATE
+             .item("pine_nut_mooncake", p -> new MooncakeItem(p, 0xFFF5DEB3))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> CHESTNUT_MOONCAKE = REGISTRATE
+             .item("chestnut_mooncake", p -> new MooncakeItem(p, 0xFF8B4513))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> CASHEW_MOONCAKE = REGISTRATE
+             .item("cashew_mooncake", p -> new MooncakeItem(p, 0xFFF5DEB3))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> HAZELNUT_MOONCAKE = REGISTRATE
+             .item("hazelnut_mooncake", p -> new MooncakeItem(p, 0xFF8B4513))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> WALNUT_MOONCAKE = REGISTRATE
+             .item("walnut_mooncake", p -> new MooncakeItem(p, 0xFF8B4513))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> WHITE_GRAPE_MOONCAKE = REGISTRATE
+             .item("white_grape_mooncake", p -> new MooncakeItem(p, 0xFFFAFAD2))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> RED_GRAPE_MOONCAKE = REGISTRATE
+             .item("red_grape_mooncake", p -> new MooncakeItem(p, 0xFF800020))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> CITRON_MOONCAKE = REGISTRATE
+             .item("citron_mooncake", p -> new MooncakeItem(p, 0xFFFFFF00))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> GREEN_APPLE_MOONCAKE = REGISTRATE
+             .item("green_apple_mooncake", p -> new MooncakeItem(p, 0xFF7FFF00))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> KIWI_MOONCAKE = REGISTRATE
+             .item("kiwi_mooncake", p -> new MooncakeItem(p, 0xFF9ACD32))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> PERSIMMON_MOONCAKE = REGISTRATE
+             .item("persimmon_mooncake", p -> new MooncakeItem(p, 0xFFFF6347))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> WHITE_STRAWBERRIES_MOONCAKE = REGISTRATE
+             .item("white_strawberries_mooncake", p -> new MooncakeItem(p, 0xFFFFF5EE))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> STYGIAN_POMEGRANATE_MOONCAKE = REGISTRATE
+             .item("stygian_pomegranate_mooncake", p -> new MooncakeItem(p, 0xFF00BFFF))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> VILLAGE_LIME_MOONCAKE = REGISTRATE
+             .item("village_lime_mooncake", p -> new MooncakeItem(p, 0xFF006400))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> THUNDER_FRUIT_MOONCAKE = REGISTRATE
+             .item("thunder_fruit_mooncake", p -> new MooncakeItem(p, 0xFF8A2BE2))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> CLOUD_BERRIES_MOONCAKE = REGISTRATE
+             .item("cloud_berries_mooncake", p -> new MooncakeItem(p, 0xFFFFA500))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> BLACK_CHERRY_MOONCAKE = REGISTRATE
+             .item("black_cherry_mooncake", p -> new MooncakeItem(p, 0xFFFF0000))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> LEMON_MOONCAKE = REGISTRATE
+             .item("lemon_mooncake", p -> new MooncakeItem(p, 0xFFFFFF00))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+    public static final ItemEntry<MooncakeItem> PEACH_MOONCAKE = REGISTRATE
+             .item("peach_mooncake", p -> new MooncakeItem(p, 0xFFFFB6C1))
+             .properties(p -> p.food(new FoodProperties.Builder()
+                     .nutrition(3)
+                     .saturationMod(0.4f)
+                     .build()))
+             .model((ctx, provider) -> ItemModelUtil.mooncakeModel(ctx, provider,
+                     "list:item/food/mooncake/mooncake_base",
+                     "list:item/food/mooncake/mooncake_filling"))
+             .register();
+
+/*
+//调色果冻模板 不要覆盖
+    public static final ItemEntry<JellyItem> 常量名 = REGISTRATE
+            .item("注册名", p -> new JellyItem(p, 颜色))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+*/
+
+    //黑刺李浆果果冻
+    public static final ItemEntry<JellyItem> SLOE_BERRIES_JELLY = REGISTRATE
+            .item("sloe_berries_jelly", p -> new JellyItem(p, 0xFF4B0082))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //马斯卡葡萄果冻
+    public static final ItemEntry<JellyItem> MUSCADINE_GRAPES_JELLY = REGISTRATE
+            .item("muscadine_grapes_jelly", p -> new JellyItem(p, 0xFF800080))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //榅桲果冻
+    public static final ItemEntry<JellyItem> MEMBRILLO_JELLY = REGISTRATE
+            .item("membrillo_jelly", p -> new JellyItem(p, 0xFFFFA500))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //氧葡萄果冻
+    public static final ItemEntry<JellyItem> OXYGRAPE_JELLY = REGISTRATE
+            .item("oxygrape_jelly", p -> new JellyItem(p, 0xFFADD8E6))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //棱珠果冻
+    public static final ItemEntry<JellyItem> PEARLIPEARL_JELLY = REGISTRATE
+            .item("pearlipearl_jelly", p -> new JellyItem(p, 0xFFD2B48C))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //诡怨挂果果冻
+    public static final ItemEntry<JellyItem> WARPED_LAUREL_JELLY = REGISTRATE
+            .item("warped_laurel_jelly", p -> new JellyItem(p, 0xFF00CED1))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //玫瑰果果冻
+    public static final ItemEntry<JellyItem> ROSE_HIPS_JELLY = REGISTRATE
+            .item("rose_hips_jelly", p -> new JellyItem(p, 0xFFB22222))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //黑橄榄果冻
+    public static final ItemEntry<JellyItem> BLACK_OLIVE_FRUIT_JELLY = REGISTRATE
+            .item("black_olive_fruit_jelly", p -> new JellyItem(p, 0xFF1B1B1B))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //灯笼果果冻
+    public static final ItemEntry<JellyItem> LANTERN_FRUIT_JELLY = REGISTRATE
+            .item("lantern_fruit_jelly", p -> new JellyItem(p, 0xFFFFD700))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //姬海棠果果冻
+    public static final ItemEntry<JellyItem> HIMEKAIDO_JELLY = REGISTRATE
+            .item("himekaido_jelly", p -> new JellyItem(p, 0xFFFFAFAF))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //蛋黄果果冻
+    public static final ItemEntry<JellyItem> LUCUMA_JELLY = REGISTRATE
+            .item("lucuma_jelly", p -> new JellyItem(p, 0xFF9ACD32))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //朽老苹果果冻
+    public static final ItemEntry<JellyItem> HOARY_APPLE_JELLY = REGISTRATE
+            .item("hoary_apple_jelly", p -> new JellyItem(p, 0xFF8B4513))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //海葡萄果冻
+    public static final ItemEntry<JellyItem> SEA_GRAPE_JELLY = REGISTRATE
+            .item("sea_grape_jelly", p -> new JellyItem(p, 0xFF003366))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //杜鹃莓果冻
+    public static final ItemEntry<JellyItem> ARBUTUS_BERRIES_JELLY = REGISTRATE
+            .item("arbutus_berries_jelly", p -> new JellyItem(p, 0xFFB22222))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //野莓果冻
+    public static final ItemEntry<JellyItem> WILDBERRY_JELLY = REGISTRATE
+            .item("wildberry_jelly", p -> new JellyItem(p, 0xFFB22222))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //暗紫浆果果冻
+    public static final ItemEntry<JellyItem> GEARO_BERRY_JELLY = REGISTRATE
+            .item("gearo_berry_jelly", p -> new JellyItem(p, 0xFF4B0082))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //黑葡萄果冻
+    public static final ItemEntry<JellyItem> BLACK_GRAPE_JELLY = REGISTRATE
+            .item("black_grape_jelly", p -> new JellyItem(p, 0xFF2E0854))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //诡异葡萄果冻
+    public static final ItemEntry<JellyItem> WARPED_GRAPE_JELLY = REGISTRATE
+            .item("warped_grape_jelly", p -> new JellyItem(p, 0xFF1C8E75))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //绯红葡萄果冻
+    public static final ItemEntry<JellyItem> CRIMSON_GRAPE_JELLY = REGISTRATE
+            .item("crimson_grape_jelly", p -> new JellyItem(p, 0xFFDC143C))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //青金石莓果冻
+    public static final ItemEntry<JellyItem> LAPISBERRIES_JELLY = REGISTRATE
+            .item("lapisberries_jelly", p -> new JellyItem(p, 0xFF0F52BA))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //海绵瓜果冻
+    public static final ItemEntry<JellyItem> SPONGEKIN_JELLY = REGISTRATE
+            .item("spongekin_jelly", p -> new JellyItem(p, 0xFFBDB76B))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //草莓果冻
+    public static final ItemEntry<JellyItem> STRAWBERRIES_JELLY = REGISTRATE
+            .item("strawberries_jelly", p -> new JellyItem(p, 0xFFFF0000))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //白草莓果冻
+    public static final ItemEntry<JellyItem> WHITE_STRAWBERRIES_JELLY = REGISTRATE
+            .item("white_strawberries_jelly", p -> new JellyItem(p, 0xFFFFF8DC))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //幽冥石榴果冻
+    public static final ItemEntry<JellyItem> STYGIAN_POMEGRANATE_JELLY = REGISTRATE
+            .item("stygian_pomegranate_jelly", p -> new JellyItem(p, 0xFF87CEEB))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //灾厄青柠果冻
+    public static final ItemEntry<JellyItem> VILLAGE_LIME_JELLY = REGISTRATE
+            .item("village_lime_jelly", p -> new JellyItem(p, 0xFF006400))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //雷电果果冻
+    public static final ItemEntry<JellyItem> THUNDER_FRUIT_JELLY = REGISTRATE
+            .item("thunder_fruit_jelly", p -> new JellyItem(p, 0xFF8A2BE2))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //云莓果冻
+    public static final ItemEntry<JellyItem> CLOUD_BERRIES_JELLY = REGISTRATE
+            .item("cloud_berries_jelly", p -> new JellyItem(p, 0xFFFFA500))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+    //樱桃果冻
+    public static final ItemEntry<JellyItem> CHERRY_JELLY = REGISTRATE
+            .item("cherry_jelly", p -> new JellyItem(p, 0xFFFF0000))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .build()))
+            .model((ctx, provider) -> ItemModelUtil.jellyModel(ctx, provider,
+                    "list:item/food/component/jelly_base",
+                    "list:item/food/component/jelly"))
+            .register();
+
+
+
     public static void register() {
     }
 }

@@ -61,7 +61,7 @@ public class ModBlocks {
             })
             .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
             .register();
-
+/*
     //树坑
     public static final BlockEntry<TreeCompostBlock> TREE_COMPOST = REGISTRATE
             .block("tree_compost", TreeCompostBlock::new)
@@ -81,7 +81,7 @@ public class ModBlocks {
             })
             .tag(BlockTags.MINEABLE_WITH_SHOVEL)
             .register();
-
+*/
     //林业温室（独立方块）
     public static final BlockEntry<ForestryGreenhouseBlock> FORESTRY_GREENHOUSE = REGISTRATE
             .block("forestry_greenhouse", ForestryGreenhouseBlock::new)
