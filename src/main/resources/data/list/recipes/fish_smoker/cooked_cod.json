@@ -1,0 +1,12 @@
+{
+  "type": "list:fish_smoker",
+  "ingredient": {
+    "item": "minecraft:cod"
+  },
+  "result": {
+    "item": "minecraft:cooked_cod"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}
+

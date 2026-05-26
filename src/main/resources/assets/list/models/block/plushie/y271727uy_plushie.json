@@ -1,0 +1,7 @@
+{
+    "parent": "list:block/plushie/plushie_thin",
+    "textures": {
+        "0": "list:block/plushie/y271727uy",
+        "particle": "list:block/plushie/y271727uy"
+    }
+}

@@ -7,7 +7,6 @@ import com.list.block.mushroom.SeaMushroomBlock;
 import com.list.block.mushroom.CaveMushroomBlock;
 import com.list.block.colony.SeaMushroomColonyBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
-import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
@@ -39,6 +38,16 @@ public class ModBlocks {
                         provider.mcLoc("block/blast_furnace_side")
                 ).texture("particle", provider.mcLoc("block/blast_furnace_top"));
                 provider.horizontalBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+
+    public static final BlockEntry<com.list.block.FishSmokerBlock> FISHSMOKER = REGISTRATE
+            .block("fish_smoker", com.list.block.FishSmokerBlock::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                // 手工维护到 src/main/resources，datagen 不再生成 fish_smoker 的 blockstate/model。
             })
             .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
             .register();
@@ -545,7 +554,106 @@ public class ModBlocks {
             .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
             .register();
 
-//大型西瓜块侧边
+//y271727uy玩偶
+public static final BlockEntry<CommonPlushieBlock> Y271727UY_PLUSHIE = REGISTRATE
+    .block("y271727uy_plushie", CommonPlushieBlock::new)
+    .initialProperties(() -> Blocks.WHITE_WOOL)
+    .properties(p -> p.noOcclusion())
+    .blockstate((ctx, prov) -> {
+        prov.horizontalBlock(ctx.get(), prov.models().getExistingFile(prov.modLoc("block/plushie/y271727uy_plushie")));
+    })
+    .item()
+    .model((ctx, prov) -> prov.withExistingParent(ctx.getName(), prov.modLoc("block/plushie/y271727uy_plushie")))
+    .build()
+    .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
+    .register();
+
+//DancingSnow玩偶
+public static final BlockEntry<CommonPlushieBlock> DANCINGSNOW_PLUSHIE = REGISTRATE
+    .block("dancingsnow_plushie", CommonPlushieBlock::new)
+    .initialProperties(() -> Blocks.WHITE_WOOL)
+    .properties(p -> p.noOcclusion())
+    .blockstate((ctx, prov) -> {
+        prov.horizontalBlock(ctx.get(), prov.models().getExistingFile(prov.modLoc("block/plushie/dancingsnow_plushie")));
+    })
+    .item()
+    .model((ctx, prov) -> prov.withExistingParent(ctx.getName(), prov.modLoc("block/plushie/dancingsnow_plushie")))
+    .build()
+    .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
+    .register();
+
+//zhuruoling玩偶
+public static final BlockEntry<CommonPlushieBlock> ZHURUOLING_PLUSHIE = REGISTRATE
+    .block("zhuruoling_plushie", CommonPlushieBlock::new)
+    .initialProperties(() -> Blocks.WHITE_WOOL)
+    .properties(p -> p.noOcclusion())
+    .blockstate((ctx, prov) -> {
+        prov.horizontalBlock(ctx.get(), prov.models().getExistingFile(prov.modLoc("block/plushie/zhuruoling_plushie")));
+    })
+    .item()
+    .model((ctx, prov) -> prov.withExistingParent(ctx.getName(), prov.modLoc("block/plushie/zhuruoling_plushie")))
+    .build()
+    .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
+    .register();
+
+
+//tedxenon玩偶
+public static final BlockEntry<CommonPlushieBlock> TEDXENON_PLUSHIE = REGISTRATE
+    .block("tedxenon_plushie", CommonPlushieBlock::new)
+    .initialProperties(() -> Blocks.WHITE_WOOL)
+    .properties(p -> p.noOcclusion())
+    .blockstate((ctx, prov) -> {
+        prov.horizontalBlock(ctx.get(), prov.models().getExistingFile(prov.modLoc("block/plushie/tedxenon_plushie")));
+    })
+    .item()
+    .model((ctx, prov) -> prov.withExistingParent(ctx.getName(), prov.modLoc("block/plushie/tedxenon_plushie")))
+    .build()
+    .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
+    .register();
+
+//HaoZ_DAHA玩偶
+public static final BlockEntry<CommonPlushieBlock> HAOZ_DAHA_PLUSHIE = REGISTRATE
+    .block("haoz_daha_plushie", CommonPlushieBlock::new)
+    .initialProperties(() -> Blocks.WHITE_WOOL)
+    .properties(p -> p.noOcclusion())
+    .blockstate((ctx, prov) -> {
+        prov.horizontalBlock(ctx.get(), prov.models().getExistingFile(prov.modLoc("block/plushie/haoz_daha_plushie")));
+    })
+    .item()
+    .model((ctx, prov) -> prov.withExistingParent(ctx.getName(), prov.modLoc("block/plushie/haoz_daha_plushie")))
+    .build()
+    .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
+    .register();
+
+    //思杰玩偶  群友分组非贡献者
+    public static final BlockEntry<CommonPlushieBlock> SISISISIJIE_PLUSHIE = REGISTRATE
+            .block("sisisisijie_plushie", CommonPlushieBlock::new)
+            .initialProperties(() -> Blocks.WHITE_WOOL)
+            .properties(p -> p.noOcclusion())
+            .blockstate((ctx, prov) -> {
+                prov.horizontalBlock(ctx.get(), prov.models().getExistingFile(prov.modLoc("block/plushie/sisisisijie_plushie")));
+            })
+            .item()
+            .model((ctx, prov) -> prov.withExistingParent(ctx.getName(), prov.modLoc("block/plushie/sisisisijie_plushie")))
+            .build()
+            .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
+            .register();
+
+//皮革嘎的与坠亩的十万美刀
+public static final BlockEntry<PigPlushieBlock> PIG_PLUSHIE = REGISTRATE
+    .block("pig_plushie", PigPlushieBlock::new)
+    .initialProperties(() -> Blocks.WHITE_WOOL)
+    .properties(p -> p.noOcclusion())
+    .blockstate((ctx, prov) -> {
+        prov.horizontalBlock(ctx.get(), prov.models().getExistingFile(prov.modLoc("block/plushie/pig_plushie")));
+    })
+    .item()
+    .model((ctx, prov) -> prov.withExistingParent(ctx.getName(), prov.modLoc("block/plushie/pig_plushie")))
+    .build()
+    .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
+    .register();
+
+//大型西瓜块侧边wan
 public static final BlockEntry<CommonBlock> WATERMELON_BLOCK_SIDE = REGISTRATE
         .block("watermelon_block_side", CommonBlock::new)
         .initialProperties(() -> Blocks.MELON)

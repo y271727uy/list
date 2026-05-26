@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/fish_smoker/fish_smoker_bottom",
+    "east": "list:block/fish_smoker/fish_smoker_side",
+    "north": "list:block/fish_smoker/fish_smoker_front_on",
+    "particle": "list:block/fish_smoker/fish_smoker_front_on",
+    "south": "list:block/fish_smoker/fish_smoker_side",
+    "up": "list:block/fish_smoker/fish_smoker_top",
+    "west": "list:block/fish_smoker/fish_smoker_side"
+  }
+}

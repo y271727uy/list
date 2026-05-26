@@ -7,12 +7,14 @@ import com.list.all.ModRecipes;
 import com.list.integration.jei.category.ForestryGreenhouseCategory;
 import com.list.integration.jei.category.ForestryHybridizerCategory;
 import com.list.integration.jei.category.FishPondCategory;
+import com.list.integration.jei.category.FishSmokerCategory;
 import com.list.menu.ForestryGreenhouseMenu;
 import com.list.menu.ForestryHybridizerMenu;
 import com.list.menu.FishPondMenu;
 import com.list.recipe.ForestryGreenhouseRecipe;
 import com.list.recipe.ForestryHybridizerRecipe;
 import com.list.recipe.FishPondRecipe;
+import com.list.recipe.FishSmokerRecipe;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.helpers.IJeiHelpers;
@@ -33,6 +35,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 public class ListJeiPlugin implements IModPlugin {
     public static final RecipeType<FishPondRecipe> FISH_POND = RecipeType.create(ListMod.MODID, "fish_pond", FishPondRecipe.class);
+    public static final RecipeType<FishSmokerRecipe> FISH_SMOKER = RecipeType.create(ListMod.MODID, "fish_smoker", FishSmokerRecipe.class);
     public static final RecipeType<ForestryHybridizerRecipe> FORESTRY_HYBRIDIZER = RecipeType.create(ListMod.MODID, "forestry_hybridizer", ForestryHybridizerRecipe.class);
     public static final RecipeType<ForestryGreenhouseRecipe> FORESTRY_GREENHOUSE = RecipeType.create(ListMod.MODID, "forestry_greenhouse", ForestryGreenhouseRecipe.class);
 
@@ -46,6 +49,7 @@ public class ListJeiPlugin implements IModPlugin {
         IJeiHelpers jeiHelpers = registration.getJeiHelpers();
         registration.addRecipeCategories(
             new FishPondCategory(jeiHelpers),
+            new FishSmokerCategory(jeiHelpers),
             new ForestryHybridizerCategory(jeiHelpers),
             new ForestryGreenhouseCategory(jeiHelpers)
         );
@@ -64,6 +68,11 @@ public class ListJeiPlugin implements IModPlugin {
         );
 
         registration.addRecipes(
+            FISH_SMOKER,
+            recipeManager.getAllRecipesFor(ModRecipes.FISH_SMOKER_RECIPE_TYPE.get())
+        );
+
+        registration.addRecipes(
             FORESTRY_HYBRIDIZER,
             recipeManager.getAllRecipesFor(ModRecipes.FORESTRY_HYBRIDIZER_TYPE.get())
         );
@@ -78,6 +87,7 @@ public class ListJeiPlugin implements IModPlugin {
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
         registration.addRecipeCatalyst(ModBlocks.FISHPOND_CORE, FISH_POND);
+        registration.addRecipeCatalyst(ModBlocks.FISHSMOKER, FISH_SMOKER);
         registration.addRecipeCatalyst(ModBlocks.FORESTRY_HYBRIDIZER, FORESTRY_HYBRIDIZER);
         registration.addRecipeCatalyst(ModBlocks.FORESTRY_GREENHOUSE, FORESTRY_GREENHOUSE);
     }

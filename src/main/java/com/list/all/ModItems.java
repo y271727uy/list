@@ -4199,6 +4199,16 @@ public static final ItemEntry<Item> PLANTAIN = REGISTRATE
                 .build()))
         .register();
 
+//槟榔
+public static final ItemEntry<Item> BETEL_NUT = REGISTRATE
+        .item("betel_nut", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/betel_nut")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(0.1f)
+                .build()))
+        .register();
+
     // 草菇
     public static final ItemEntry<Item> STRAW_MUSHROOM = REGISTRATE
             .item("straw_mushroom", Item::new)
@@ -7905,6 +7915,15 @@ public static final ItemEntry<Item>  = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/")))
             .register();
 */
+//神他妈干制槟榔
+public static final ItemEntry<Item> BETEL_NUT_DRIED = REGISTRATE
+            .item("betel_nut_dried", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.1f)
+                    .build()))
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/dried/betel_nut_dried")))
+            .register();
 
 //致死量的月饼
 public static final ItemEntry<Item> BLACK_SESAME_RED_BEAN_PASTE_MOONCAKE = REGISTRATE

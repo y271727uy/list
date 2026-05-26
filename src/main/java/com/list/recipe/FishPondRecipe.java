@@ -345,10 +345,14 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
                 for (ChancedItemStack result : this.results) {
                     JsonObject object = new JsonObject();
                     ItemStack stack = result.itemStack();
-                    object.addProperty("item", ForgeRegistries.ITEMS.getKey(stack.getItem()).toString());
+                    ResourceLocation itemId = ForgeRegistries.ITEMS.getKey(stack.getItem());
+                    object.addProperty("item", itemId != null ? itemId.toString() : "minecraft:air");
                     object.addProperty("count", stack.getCount());
                     if (stack.hasTag()) {
-                        object.addProperty("nbt", stack.getTag().toString());
+                        var tag = stack.getTag();
+                        if (tag != null) {
+                            object.addProperty("nbt", tag.toString());
+                        }
                     }
                     object.addProperty("chance", result.chance());
                     resultsArray.add(object);
@@ -376,7 +380,7 @@ public class FishPondRecipe implements Recipe<FishPondRecipe.RecipeInput> {
 
             @Override
             public ResourceLocation getAdvancementId() {
-                return new ResourceLocation(this.id.getNamespace(), "recipes/" + this.id.getPath());
+                return ResourceLocation.fromNamespaceAndPath(this.id.getNamespace(), "recipes/" + this.id.getPath());
             }
         }
     }

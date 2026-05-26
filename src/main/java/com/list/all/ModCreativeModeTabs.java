@@ -64,13 +64,21 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.COLLAPSE_QUEEN.get());
                     output.accept(ModItems.COLLAPSE_PRINCESS.get());
                     output.accept(ModItems.HARSH_WINTER_CREDIT.get());
-                    //output.accept(ModItems..get());
+                    output.accept(ModBlocks.Y271727UY_PLUSHIE.get());
+                    output.accept(ModBlocks.DANCINGSNOW_PLUSHIE.get());
+                    output.accept(ModBlocks.TEDXENON_PLUSHIE.get());
+                    output.accept(ModBlocks.ZHURUOLING_PLUSHIE.get());
+                    output.accept(ModBlocks.HAOZ_DAHA_PLUSHIE.get());
+                    output.accept(ModBlocks.SISISISIJIE_PLUSHIE.get());
+                    output.accept(ModBlocks.PIG_PLUSHIE.get());
+                    //output.accept(ModBlocks..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModBlocks.TREE_COMPOST.get());  //树坑
                     output.accept(ModBlocks.FISHPOND_CORE.get());
+                    output.accept(ModBlocks.FISHSMOKER.get());
                     output.accept(ModBlocks.GREENHOUSE_FURNACE.get());
                     output.accept(ModBlocks.FORESTRY_GREENHOUSE.get());
                     output.accept(ModBlocks.FORESTRY_HYBRIDIZER.get());
@@ -1081,6 +1089,7 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());      
                 //output.accept(ModItems..get());
+                output.accept(ModItems.BETEL_NUT_DRIED.get());       //干制槟榔
                 /*
                 output.accept(ModItems.ADZUKI_CURRY_CUP.get()); //集成式捆绑
                 output.accept(ModItems.ADZUKI_MILK_TEA_CUP.get());
@@ -1465,6 +1474,7 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());       //木橘 Aegle marmelos
                     //output.accept(ModItems..get());       //象橘 Limonia acidissima
                     output.accept(ModItems.CHOCOLAT_PERSIMMON.get());       //巧克力柿/黑肉柿
+                    output.accept(ModItems.BETEL_NUT.get());       //槟榔
                     //output.accept(ModItems..get());       //黑柿
                     //output.accept(ModItems..get());       //德州小黑柿
                     //output.accept(ModItems..get());       //火晶柿子

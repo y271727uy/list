@@ -18,6 +18,7 @@
   "item.list.harsh_winter_credit": "凛冬币",
   "item.list.salmon_fish_pool": "鲑鱼群",
   "block.list.fishpond_core": "珠海渔场",
+  "block.list.fish_smoker": "熏鱼机",
   "tooltip.fishpond.formed": "§2结构已成型",
   "tooltip.fishpond.lava_mode": "模式:熔岩",
   "tooltip.fishpond.not_formed": "§4结构不完整",
@@ -1057,6 +1058,7 @@
   "gui.list.category.forestry_hybridizer.chance": "概率: %s%%",
   "gui.list.category.fish_pond": "珠海渔场",
   "gui.list.category.fish_pond.chance": "概率: %s%%",
+  "gui.list.category.fish_smoker": "熏鱼机",
   "item.list.copper_gt_credit": "铜GT币",
   "item.list.cupronickel_gt_credit": "白铜GT币",
   "item.list.silver_gt_credit": "银GT币",
@@ -1209,5 +1211,7 @@
   "item.list.village_lime_jelly": "灾厄青柠果冻",
   "item.list.thunder_fruit_jelly": "雷电果果冻",
   "item.list.cloud_berries_jelly": "云莓果冻",
-  "item.list.cherry_jelly": "樱桃果冻"
+  "item.list.cherry_jelly": "樱桃果冻",
+  "item.list.betel_nut_dried": "干制槟榔",
+  "item.list.betel_nut": "槟榔"
 }

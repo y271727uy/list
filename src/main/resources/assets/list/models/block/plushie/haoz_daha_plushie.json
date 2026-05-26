@@ -1,0 +1,7 @@
+{
+    "parent": "list:block/plushie/plushie_thick",
+    "textures": {
+        "0": "list:block/plushie/haoz_daha",
+        "particle": "list:block/plushie/haoz_daha"
+    }
+}

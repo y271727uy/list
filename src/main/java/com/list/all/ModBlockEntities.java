@@ -18,6 +18,11 @@ public class ModBlockEntities {
         .blockEntity("fishpond_core", FishPondCoreBlockEntity::new)
         .validBlocks(ModBlocks.FISHPOND_CORE)
         .register();
+
+    public static final BlockEntityEntry<com.list.block.entity.FishSmokerBlockEntity> FISH_SMOKER = REGISTRATE
+        .blockEntity("fish_smoker", com.list.block.entity.FishSmokerBlockEntity::new)
+        .validBlocks(ModBlocks.FISHSMOKER)
+        .register();
 /*
     public static final BlockEntityEntry<TreeCompostBlockEntity> TREE_COMPOST = REGISTRATE
         .blockEntity("tree_compost", (BlockEntityType<TreeCompostBlockEntity> type, BlockPos pos, BlockState state) -> new TreeCompostBlockEntity(type, pos, state))
@@ -38,6 +43,11 @@ public class ModBlockEntities {
     public static final BlockEntityEntry<TapperBlockEntity> TAPPER = REGISTRATE
         .blockEntity("tapper", TapperBlockEntity::new)
         .validBlocks(ModBlocks.TAPPER)
+        .register();
+
+    public static final BlockEntityEntry<com.list.block.entity.CommonPlushieBlockEntity> COMMON_PLUSHIE = REGISTRATE
+        .blockEntity("common_plushie", com.list.block.entity.CommonPlushieBlockEntity::new)
+        .validBlocks(ModBlocks.Y271727UY_PLUSHIE, ModBlocks.DANCINGSNOW_PLUSHIE, ModBlocks.TEDXENON_PLUSHIE)
         .register();
 
     public static void register() {
