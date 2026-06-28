@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "list:block/gem_melon",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "list:block/gem_melon"
+    },
+    "facing=south": {
+      "model": "list:block/gem_melon",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "list:block/gem_melon",
+      "y": 270
+    }
+  }
+}

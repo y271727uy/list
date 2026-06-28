@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/crop/melon/qi_fruit_top",
+    "east": "list:block/crop/melon/qi_fruit_side",
+    "north": "list:block/crop/melon/qi_fruit_front",
+    "particle": "list:block/crop/melon/qi_fruit_back",
+    "south": "list:block/crop/melon/qi_fruit_back",
+    "up": "list:block/crop/melon/qi_fruit_top",
+    "west": "list:block/crop/melon/qi_fruit_side_2"
+  }
+}

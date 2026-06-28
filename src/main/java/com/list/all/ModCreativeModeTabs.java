@@ -1,6 +1,10 @@
 package com.list.all;
 
 import com.list.ListMod;
+import com.list.all.moditem.ModItemsEgg;
+import com.list.all.moditem.ModItemsJelly;
+import com.list.all.moditem.ModItemsMooncake;
+import com.list.all.moditem.ModItemsSmokerFish;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -44,6 +48,7 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.JUST_BREAD.get());
                     output.accept(ModItems.FOOD_STAR.get());
                     output.accept(ModItems.FISHERY_STAR.get());
+                    output.accept(ModItems.FISH_BOOK.get());
                     output.accept(ModItems.FARMING_STAR.get());
                     output.accept(ModItems.FORESTRY_STAR.get());
                     output.accept(ModItems.WEALTH_STAR.get());
@@ -418,183 +423,183 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> EGG_TAB = CREATIVE_TABS.register("list_egg", () ->
             CreativeModeTab.builder()
                     .title(REGISTRATE.addLang("itemGroup", ListMod.rl("list_egg"), "Egg"))  // 语言键: itemGroup.listmod.list
-                    .icon(() -> new ItemStack(ModItems.EMPEROR_CRAB_EGG.get()))
+                    .icon(() -> new ItemStack(ModItemsEgg.EMPEROR_CRAB_EGG.get()))
                     .displayItems((parameters, output) -> {
-                         output.accept(ModItems.EMPEROR_CRAB_EGG.get());
-                    output.accept(ModItems.JONAH_CRAB_EGG.get());
-                    output.accept(ModItems.PELAGIC_SWIMMING_CRAB_EGG.get());
-                    output.accept(ModItems.DUNGENESS_CRAB_EGG.get());
-                    output.accept(ModItems.SWIMMING_CRAB_EGG.get());
-                    output.accept(ModItems.HERMIT_CRAB_EGG.get());
-                    output.accept(ModItems.RIVER_CRAB_EGG.get());
-                    output.accept(ModItems.BLUE_LOBSTER_EGG.get());
-                    output.accept(ModItems.MARBLED_LOBSTER_EGG.get());
-                    output.accept(ModItems.DEEP_SEA_STAG_SHRIMP_EGG.get());
-                    output.accept(ModItems.VANNAMEI_SHRIMP_EGG.get());
-                    output.accept(ModItems.MANTIS_SHRIMP_EGG.get());
-                    output.accept(ModItems.RIVER_SHRIMP_EGG.get());
+                         output.accept(ModItemsEgg.EMPEROR_CRAB_EGG.get());
+                    output.accept(ModItemsEgg.JONAH_CRAB_EGG.get());
+                    output.accept(ModItemsEgg.PELAGIC_SWIMMING_CRAB_EGG.get());
+                    output.accept(ModItemsEgg.DUNGENESS_CRAB_EGG.get());
+                    output.accept(ModItemsEgg.SWIMMING_CRAB_EGG.get());
+                    output.accept(ModItemsEgg.HERMIT_CRAB_EGG.get());
+                    output.accept(ModItemsEgg.RIVER_CRAB_EGG.get());
+                    output.accept(ModItemsEgg.BLUE_LOBSTER_EGG.get());
+                    output.accept(ModItemsEgg.MARBLED_LOBSTER_EGG.get());
+                    output.accept(ModItemsEgg.DEEP_SEA_STAG_SHRIMP_EGG.get());
+                    output.accept(ModItemsEgg.VANNAMEI_SHRIMP_EGG.get());
+                    output.accept(ModItemsEgg.MANTIS_SHRIMP_EGG.get());
+                    output.accept(ModItemsEgg.RIVER_SHRIMP_EGG.get());
                     //output.accept(ModItems.海螺卵.get());
                     //output.accept(ModItems.甲鱼卵.get());
-                    output.accept(ModItems.GRASS_CARO_EGG.get());
-                    output.accept(ModItems.MANDARIN_FISH_EGG.get());
-                    output.accept(ModItems.LARGE_YELLOW_CROAKER_EGG.get());
-                    output.accept(ModItems.SILVER_POMFRET_EGG.get());
-                    output.accept(ModItems.TURBOT_EGG.get());
-                    output.accept(ModItems.RED_GROUPER_EGG.get());
-                    output.accept(ModItems.PARROT_FISH_EGG.get());
-                    output.accept(ModItems.CAMOUFLAGE_GROUPER_EGG.get());
-                    output.accept(ModItems.KOI_EGG.get());   //锦鲤卵
-                    output.accept(ModItems.THREADFIN_BREAM_EGG.get());
-                    output.accept(ModItems.CHECKERBOARD_WRASSE_EGG.get());
-                    output.accept(ModItems.MORAY_EEL_EGG.get());
-                    output.accept(ModItems.SPANISH_MACKEREL_EGG.get());
-                    output.accept(ModItems.STRIPED_BASS_EGG.get());
-                    output.accept(ModItems.BIGHEAD_CARP_EGG.get());
-                    output.accept(ModItems.CHINESE_SHAD_EGG.get());
-                    output.accept(ModItems.PACIFIC_SAURY_EGG.get());
-                    output.accept(ModItems.FIRE_RAT_FISH_EGG.get());
-                    output.accept(ModItems.ICETHORN_FISH_EGG.get());
-                    output.accept(ModItems.SNAKEHEAD_FISH_EGG.get());          // 蛇鱼卵
-                    output.accept(ModItems.RED_SNAPPER_EGG.get());             // 红鲷鱼卵
-                    output.accept(ModItems.DEVIL_RAY_EGG.get());               // 魔鬼鱼卵
-                    output.accept(ModItems.LONGJAW_COILIA_EGG.get());          // 长颌鲚卵
-                    output.accept(ModItems.SMALL_WHITEBAIT_EGG.get());         // 小银鱼卵
-                    output.accept(ModItems.ROSY_BARB_EGG.get());               // 胭脂鱼卵
-                    output.accept(ModItems.ANCHOVY_EGG.get());                 // 凤尾鱼卵
-                    output.accept(ModItems.HORSEFACE_FISH_EGG.get());          // 马面鱼卵
-                    output.accept(ModItems.RICE_PADDY_EEL_EGG.get());          // 黄鳝卵
-                    output.accept(ModItems.FLUKE_EGG.get());                   // 鲽鱼卵
-                    output.accept(ModItems.BLACK_AMUR_BREAM_EGG.get());        // 乌青鱼卵
-                    output.accept(ModItems.BREAM_EGG.get());                   // 鳊鱼卵
-                    output.accept(ModItems.SARDINE_EGG.get());                 // 沙丁鱼卵
-                    output.accept(ModItems.SEA_BASS_EGG.get());                // 海鲈鱼卵
-                    output.accept(ModItems.RED_SONG_CARP_EGG.get());           // 红歌鲤卵
-                    output.accept(ModItems.BARRACUDA_EGG.get());               // 巴浪鱼卵
-                    output.accept(ModItems.THREE_KNIFE_FISH_EGG.get());        // 三刀鱼卵
-                    output.accept(ModItems.HORSEHEAD_FISH_EGG.get());          // 马头鱼卵
-                    output.accept(ModItems.FLOWER_SPOTTED_GROUPER_EGG.get());  // 花英斑卵
-                    output.accept(ModItems.DEEP_SEA_SALMON_EGG.get());         // 深海鲑鱼卵
-                    output.accept(ModItems.BLUE_FLYING_FISH_EGG.get());        // 蓝飞鱼卵
-                    output.accept(ModItems.FLYING_FISH_EGG.get());             // 飞鱼卵
-                    output.accept(ModItems.RAINFISH_EGG.get());                // 雨鱼卵
-                    output.accept(ModItems.WHITE_STRIPE_FISH_EGG.get());       // 白条鱼卵
-                    output.accept(ModItems.RED_STINGRAY_EGG.get());            // 赤魟卵
-                    output.accept(ModItems.NEEDLEFISH_EGG.get());              // 针鱼卵
-                    output.accept(ModItems.SOLE_FISH_EGG.get());               // 龙利鱼卵
-                    output.accept(ModItems.CHUB_MACKEREL_EGG.get());           // 青花鱼卵
-                    output.accept(ModItems.CHINESE_PERCH_EGG.get());           // 桂鱼卵
-                    output.accept(ModItems.HAIRTAIL_EGG.get());                // 带鱼卵
-                    output.accept(ModItems.CHUM_SALMON_EGG.get());             // 大马哈鱼卵
-                    output.accept(ModItems.BLACKFIN_SHARK_EGG.get());          // 乌翅真鲨卵
-                    output.accept(ModItems.BLOOD_RED_DRAGONFISH_EGG.get());    // 血红龙卵
-                    output.accept(ModItems.RED_SEA_GOLDEN_BUTTERFLY_EGG.get()); // 红海黄金蝶卵
-                    output.accept(ModItems.PURPLE_SEA_JELLYFISH_EGG.get());    // 紫海刺水母卵
-                    output.accept(ModItems.CROWN_DOGHEAD_EGG.get());           // 皇冠狗头卵
-                    output.accept(ModItems.FLOWER_HIGHHEAD_DRAGONEYE_EGG.get());// 花高头龙睛卵
-                    output.accept(ModItems.STRIPED_SEAHORSE_EGG.get());        // 线纹海马卵
-                    output.accept(ModItems.YELLOWTAIL_BLUE_DEMON_EGG.get());   // 黄尾蓝魔卵
-                    output.accept(ModItems.PERUVIAN_FAIRYFISH_EGG.get());      // 秘鲁神仙卵
-                    output.accept(ModItems.THREE_SPOTTED_ROCKETFISH_EGG.get());// 三间火箭卵
-                    output.accept(ModItems.RED_SWORDFISH_EGG.get());           // 红剑卵
-                    output.accept(ModItems.LUZON_SPINY_STARFISH_EGG.get());    // 吕宋棘海星卵
-                    output.accept(ModItems.RED_BELLIED_PIRANHA_EGG.get());     // 红腹食人鲳卵
-                    output.accept(ModItems.LAVA_PUFFERFISH_EGG.get());  //熔岩河豚卵
-                    output.accept(ModItems.OBSIDIANFISH_EGG.get());
-                    output.accept(ModItems.SEARING_COD_EGG.get());
-                    output.accept(ModItems.BONEFISH_EGG.get());
-                    output.accept(ModItems.WITHER_BONEFISH_EGG.get());
-                    output.accept(ModItems.BLAZEFISH_EGG.get());
-                    output.accept(ModItems.MAGMACUBEFISH_EGG.get());
-                    output.accept(ModItems.GLOWDINE_EGG.get());
-                    output.accept(ModItems.SOULSUCKER_EGG.get());
-                    output.accept(ModItems.FORTRESS_GROUPER_EGG.get());
-                    output.accept(ModItems.EYEBALL_FISH_EGG.get());  //眼球鱼卵
-                    output.accept(ModItems.FLAME_SQUAT_LOBSTER_EGG.get());    // 烈焰铠甲虾卵
-                    output.accept(ModItems.OBSIDIAN_SWORD_FISH_EGG.get());    // 黑曜石剑鱼卵
-                    output.accept(ModItems.STEAM_FLYING_FISH_EGG.get());      // 蒸汽飞鱼卵
-                    output.accept(ModItems.AGNI_FISH_EGG.get());              // 火神鱼卵
-                    output.accept(ModItems.AROWANA_FISH_EGG.get());           // 龙鱼卵
-                    output.accept(ModItems.QUARTZ_FISH_EGG.get());            // 石英鱼卵
-                    output.accept(ModItems.SCALY_FOOT_SNAIL_EGG.get());       // 鳞足蜗牛卵
-                    output.accept(ModItems.YETI_CRAB_EGG.get());              // 雪人蟹卵
-                    output.accept(ModItems.LAVA_LAMPREY_EGG.get());           // 熔岩七鳃鳗卵
-                    output.accept(ModItems.EYELASH_EGG.get());                    // 睫鱼卵
-                    output.accept(ModItems.SPINDLEFISH_EGG.get());                // 纺锤鲉卵
-                    output.accept(ModItems.SNOWFLAKE_EGG.get());                  // 雪尾鱼卵
-                    output.accept(ModItems.AERO_MONO_EGG.get());                  // 气旋鲳鱼卵
-                    output.accept(ModItems.PICKLEFISH_EGG.get());                 // 泡菜鱼卵
-                    output.accept(ModItems.AMBER_GOBY_EGG.get());                 // 琥珀虾虎鱼卵
-                    output.accept(ModItems.BEAKED_HERRING_EGG.get());             // 喙鲱鱼卵
-                    output.accept(ModItems.BLIND_SAILFIN_EGG.get());              // 盲帆鳍鱼卵
-                    output.accept(ModItems.CIRCUS_FISH_EGG.get());                // 马戏鱼卵
-                    output.accept(ModItems.COPPERFLAME_ANTHIAS_EGG.get());        // 铜焰花鮨卵
-                    output.accept(ModItems.DEMON_HERRING_EGG.get());              // 恶魔鲱鱼卵
-                    output.accept(ModItems.DROOPING_GOURAMI_EGG.get());           // 垂丝攀鲈卵
-                    output.accept(ModItems.DUALITY_DAMSELFISH_EGG.get());         // 阴阳雀鲷卵
-                    output.accept(ModItems.FORKFISH_EGG.get());                   // 叉鱼卵
-                    output.accept(ModItems.HATCHETFISH_EGG.get());                // 斧鱼卵
-                    output.accept(ModItems.SNEEP_SNORP_EGG.get());                // 长鼻鱼卵
-                    output.accept(ModItems.TRIPLE_TWIRL_PLECO_EGG.get());         // 三旋甲鲶卵
-                    output.accept(ModItems.SAILOR_BARB_EGG.get());                // 水手钩鱼卵
-                    output.accept(ModItems.BARK_ANGELFISH_EGG.get());             // 树皮神仙鱼卵
-                    output.accept(ModItems.BOULTI_EGG.get());            // 尼罗罗非鱼卵
-                    output.accept(ModItems.CAPITAINE_EGG.get());         // 尼罗河尖吻鲈卵
-                    output.accept(ModItems.SYNODONTIS_EGG.get());        // 反游猫鱼卵
-                    output.accept(ModItems.SMALLMOUTH_BASS_EGG.get());   // 小口黑鲈卵
-                    output.accept(ModItems.BROWN_TROUT_EGG.get());       // 褐鳟鱼卵
-                    output.accept(ModItems.BLUEGILL_EGG.get());          // 蓝鳃太阳鱼卵
-                    output.accept(ModItems.BAYAD_EGG.get());             // 鲿鱼卵
-                    output.accept(ModItems.RAINBOW_TROUT_EGG.get());     // 虹鳟鱼卵
-                    output.accept(ModItems.POLLOCK_EGG.get());           // 绿青鳕卵
-                    output.accept(ModItems.JELLYFISH_EGG.get());             // 水母卵
-                    output.accept(ModItems.CARP_EGG.get());          // 鲤鱼卵
-                    output.accept(ModItems.CATFISH_EGG.get());       // 鲶鱼卵
-                    output.accept(ModItems.GAR_EGG.get());           // 雀鳝卵
-                    output.accept(ModItems.MUSKELLUNGE_EGG.get());   // 北美狗鱼卵
-                    output.accept(ModItems.MINNOW_EGG.get());        // 鲦鱼卵
-                    output.accept(ModItems.PERCH_EGG.get());         // 河鲈鱼卵
-                    output.accept(ModItems.ARAPAIMA_EGG.get());      // 巨骨舌鱼卵
-                    output.accept(ModItems.PIRANHA_EGG.get());       // 水虎鱼卵
-                    output.accept(ModItems.TAMBAQUI_EGG.get());      // 大盖巨脂鲤卵
-                    output.accept(ModItems.BROWN_SHROOMA_EGG.get());  // 褐菇鱼卵
-                    output.accept(ModItems.RED_SHROOMA_EGG.get());    // 红菇鱼卵
-                    output.accept(ModItems.TUNA_EGG.get());           // 金枪鱼卵
-                    output.accept(ModItems.RED_DOT_EGG.get());    // 赤点石斑鱼卵
-                    output.accept(ModItems.GOLDFISH_EGG.get());       // 金鱼卵
-                    output.accept(ModItems.BLACKFISH_EGG.get());          // 黑鱼卵
-                    output.accept(ModItems.ATLANTIC_COD_EGG.get());       // 大西洋鳕鱼卵
-                    output.accept(ModItems.ATLANTIC_HERRING_EGG.get());   // 大西洋鲱鱼卵
-                    output.accept(ModItems.PACIFIC_HALIBUT_EGG.get());    // 太平洋比目鱼卵
-                    output.accept(ModItems.ATLANTIC_HALIBUT_EGG.get());   // 大西洋比目鱼卵
-                    output.accept(ModItems.PINK_SALMON_EGG.get());        // 粉鲑
-                    output.accept(ModItems.TREVALLY_EGG.get());          // 鲹鱼卵
-                    output.accept(ModItems.AROWANA_EGG.get());           // 龙鱼卵
-                    output.accept(ModItems.SUNFISH_EGG.get());           // 翻车鱼卵
-                    output.accept(ModItems.TRIGGERFISH_EGG.get());       // 鳞鲀卵
-                    output.accept(ModItems.FOOTBALL_FISH_EGG.get());     // 鮟鱇鱼卵
-                    output.accept(ModItems.SPADEFISH_EGG.get());         // 白鲳鱼卵
-                    output.accept(ModItems.KING_CRAB_EGG.get());         // 帝王蟹卵
-                    output.accept(ModItems.LANTERNFISH_EGG.get());       // 灯笼鱼卵
-                    output.accept(ModItems.TRIPODFISH_EGG.get());        // 三角鱼卵
-                    output.accept(ModItems.TRILOCARIS_EGG.get());        // 三叶虾卵
-                    output.accept(ModItems.RADGILL_EGG.get());           // 腮辐鱼卵
-                    output.accept(ModItems.SEA_PIG_EGG.get());               // 海猪卵
-                    output.accept(ModItems.MUSSEL_EGG.get());                // 贻贝卵
-                    output.accept(ModItems.SWEETISH_FISH_PINK_EGG.get());    // 粉色软糖鱼卵
-                    output.accept(ModItems.SWEETISH_FISH_RED_EGG.get());     // 红色软糖鱼卵
-                    output.accept(ModItems.SWEETISH_FISH_BLUE_EGG.get());    // 蓝色软糖鱼卵
-                    output.accept(ModItems.SWEETISH_FISH_GREEN_EGG.get());   // 绿色软糖鱼卵
-                    output.accept(ModItems.SWEETISH_FISH_YELLOW_EGG.get());  // 黄色软糖鱼卵
-                    output.accept(ModItems.CLAWSTER_EGG.get());              // 龙虾卵
-                    output.accept(ModItems.CLAM_EGG.get());                  // 蛤蜊卵
-                    output.accept(ModItems.PLATINUM_BASS_EGG.get());    // 白金鲈鱼卵
-                    output.accept(ModItems.URCHIN_EGG.get());           // 海胆卵
-                    output.accept(ModItems.SEA_CLAM_EGG.get());         // 海潮蛤卵
-                    output.accept(ModItems.TIGER_PRAWN_EGG.get());      // 黑虎虾卵
-                    output.accept(ModItems.SHRIMP_EGG.get());           // 虾卵
-                    output.accept(ModItems.LAMPREY_EGG.get());          // 八目鳗卵
-                    output.accept(ModItems.ABALONE_EGG.get());          // 鲍鱼卵
-                    output.accept(ModItems.GUARDIAN_EGG.get());         // 守卫者卵
+                    output.accept(ModItemsEgg.GRASS_CARO_EGG.get());
+                    output.accept(ModItemsEgg.MANDARIN_FISH_EGG.get());
+                    output.accept(ModItemsEgg.LARGE_YELLOW_CROAKER_EGG.get());
+                    output.accept(ModItemsEgg.SILVER_POMFRET_EGG.get());
+                    output.accept(ModItemsEgg.TURBOT_EGG.get());
+                    output.accept(ModItemsEgg.RED_GROUPER_EGG.get());
+                    output.accept(ModItemsEgg.PARROT_FISH_EGG.get());
+                    output.accept(ModItemsEgg.CAMOUFLAGE_GROUPER_EGG.get());
+                    output.accept(ModItemsEgg.KOI_EGG.get());   //锦鲤卵
+                    output.accept(ModItemsEgg.THREADFIN_BREAM_EGG.get());
+                    output.accept(ModItemsEgg.CHECKERBOARD_WRASSE_EGG.get());
+                    output.accept(ModItemsEgg.MORAY_EEL_EGG.get());
+                    output.accept(ModItemsEgg.SPANISH_MACKEREL_EGG.get());
+                    output.accept(ModItemsEgg.STRIPED_BASS_EGG.get());
+                    output.accept(ModItemsEgg.BIGHEAD_CARP_EGG.get());
+                    output.accept(ModItemsEgg.CHINESE_SHAD_EGG.get());
+                    output.accept(ModItemsEgg.PACIFIC_SAURY_EGG.get());
+                    output.accept(ModItemsEgg.FIRE_RAT_FISH_EGG.get());
+                    output.accept(ModItemsEgg.ICETHORN_FISH_EGG.get());
+                    output.accept(ModItemsEgg.SNAKEHEAD_FISH_EGG.get());          // 蛇鱼卵
+                    output.accept(ModItemsEgg.RED_SNAPPER_EGG.get());             // 红鲷鱼卵
+                    output.accept(ModItemsEgg.DEVIL_RAY_EGG.get());               // 魔鬼鱼卵
+                    output.accept(ModItemsEgg.LONGJAW_COILIA_EGG.get());          // 长颌鲚卵
+                    output.accept(ModItemsEgg.SMALL_WHITEBAIT_EGG.get());         // 小银鱼卵
+                    output.accept(ModItemsEgg.ROSY_BARB_EGG.get());               // 胭脂鱼卵
+                    output.accept(ModItemsEgg.ANCHOVY_EGG.get());                 // 凤尾鱼卵
+                    output.accept(ModItemsEgg.HORSEFACE_FISH_EGG.get());          // 马面鱼卵
+                    output.accept(ModItemsEgg.RICE_PADDY_EEL_EGG.get());          // 黄鳝卵
+                    output.accept(ModItemsEgg.FLUKE_EGG.get());                   // 鲽鱼卵
+                    output.accept(ModItemsEgg.BLACK_AMUR_BREAM_EGG.get());        // 乌青鱼卵
+                    output.accept(ModItemsEgg.BREAM_EGG.get());                   // 鳊鱼卵
+                    output.accept(ModItemsEgg.SARDINE_EGG.get());                 // 沙丁鱼卵
+                    output.accept(ModItemsEgg.SEA_BASS_EGG.get());                // 海鲈鱼卵
+                    output.accept(ModItemsEgg.RED_SONG_CARP_EGG.get());           // 红歌鲤卵
+                    output.accept(ModItemsEgg.BARRACUDA_EGG.get());               // 巴浪鱼卵
+                    output.accept(ModItemsEgg.THREE_KNIFE_FISH_EGG.get());        // 三刀鱼卵
+                    output.accept(ModItemsEgg.HORSEHEAD_FISH_EGG.get());          // 马头鱼卵
+                    output.accept(ModItemsEgg.FLOWER_SPOTTED_GROUPER_EGG.get());  // 花英斑卵
+                    output.accept(ModItemsEgg.DEEP_SEA_SALMON_EGG.get());         // 深海鲑鱼卵
+                    output.accept(ModItemsEgg.BLUE_FLYING_FISH_EGG.get());        // 蓝飞鱼卵
+                    output.accept(ModItemsEgg.FLYING_FISH_EGG.get());             // 飞鱼卵
+                    output.accept(ModItemsEgg.RAINFISH_EGG.get());                // 雨鱼卵
+                    output.accept(ModItemsEgg.WHITE_STRIPE_FISH_EGG.get());       // 白条鱼卵
+                    output.accept(ModItemsEgg.RED_STINGRAY_EGG.get());            // 赤魟卵
+                    output.accept(ModItemsEgg.NEEDLEFISH_EGG.get());              // 针鱼卵
+                    output.accept(ModItemsEgg.SOLE_FISH_EGG.get());               // 龙利鱼卵
+                    output.accept(ModItemsEgg.CHUB_MACKEREL_EGG.get());           // 青花鱼卵
+                    output.accept(ModItemsEgg.CHINESE_PERCH_EGG.get());           // 桂鱼卵
+                    output.accept(ModItemsEgg.HAIRTAIL_EGG.get());                // 带鱼卵
+                    output.accept(ModItemsEgg.CHUM_SALMON_EGG.get());             // 大马哈鱼卵
+                    output.accept(ModItemsEgg.BLACKFIN_SHARK_EGG.get());          // 乌翅真鲨卵
+                    output.accept(ModItemsEgg.BLOOD_RED_DRAGONFISH_EGG.get());    // 血红龙卵
+                    output.accept(ModItemsEgg.RED_SEA_GOLDEN_BUTTERFLY_EGG.get()); // 红海黄金蝶卵
+                    output.accept(ModItemsEgg.PURPLE_SEA_JELLYFISH_EGG.get());    // 紫海刺水母卵
+                    output.accept(ModItemsEgg.CROWN_DOGHEAD_EGG.get());           // 皇冠狗头卵
+                    output.accept(ModItemsEgg.FLOWER_HIGHHEAD_DRAGONEYE_EGG.get());// 花高头龙睛卵
+                    output.accept(ModItemsEgg.STRIPED_SEAHORSE_EGG.get());        // 线纹海马卵
+                    output.accept(ModItemsEgg.YELLOWTAIL_BLUE_DEMON_EGG.get());   // 黄尾蓝魔卵
+                    output.accept(ModItemsEgg.PERUVIAN_FAIRYFISH_EGG.get());      // 秘鲁神仙卵
+                    output.accept(ModItemsEgg.THREE_SPOTTED_ROCKETFISH_EGG.get());// 三间火箭卵
+                    output.accept(ModItemsEgg.RED_SWORDFISH_EGG.get());           // 红剑卵
+                    output.accept(ModItemsEgg.LUZON_SPINY_STARFISH_EGG.get());    // 吕宋棘海星卵
+                    output.accept(ModItemsEgg.RED_BELLIED_PIRANHA_EGG.get());     // 红腹食人鲳卵
+                    output.accept(ModItemsEgg.LAVA_PUFFERFISH_EGG.get());  //熔岩河豚卵
+                    output.accept(ModItemsEgg.OBSIDIANFISH_EGG.get());
+                    output.accept(ModItemsEgg.SEARING_COD_EGG.get());
+                    output.accept(ModItemsEgg.BONEFISH_EGG.get());
+                    output.accept(ModItemsEgg.WITHER_BONEFISH_EGG.get());
+                    output.accept(ModItemsEgg.BLAZEFISH_EGG.get());
+                    output.accept(ModItemsEgg.MAGMACUBEFISH_EGG.get());
+                    output.accept(ModItemsEgg.GLOWDINE_EGG.get());
+                    output.accept(ModItemsEgg.SOULSUCKER_EGG.get());
+                    output.accept(ModItemsEgg.FORTRESS_GROUPER_EGG.get());
+                    output.accept(ModItemsEgg.EYEBALL_FISH_EGG.get());  //眼球鱼卵
+                    output.accept(ModItemsEgg.FLAME_SQUAT_LOBSTER_EGG.get());    // 烈焰铠甲虾卵
+                    output.accept(ModItemsEgg.OBSIDIAN_SWORD_FISH_EGG.get());    // 黑曜石剑鱼卵
+                    output.accept(ModItemsEgg.STEAM_FLYING_FISH_EGG.get());      // 蒸汽飞鱼卵
+                    output.accept(ModItemsEgg.AGNI_FISH_EGG.get());              // 火神鱼卵
+                    output.accept(ModItemsEgg.AROWANA_FISH_EGG.get());           // 龙鱼卵
+                    output.accept(ModItemsEgg.QUARTZ_FISH_EGG.get());            // 石英鱼卵
+                    output.accept(ModItemsEgg.SCALY_FOOT_SNAIL_EGG.get());       // 鳞足蜗牛卵
+                    output.accept(ModItemsEgg.YETI_CRAB_EGG.get());              // 雪人蟹卵
+                    output.accept(ModItemsEgg.LAVA_LAMPREY_EGG.get());           // 熔岩七鳃鳗卵
+                    output.accept(ModItemsEgg.EYELASH_EGG.get());                    // 睫鱼卵
+                    output.accept(ModItemsEgg.SPINDLEFISH_EGG.get());                // 纺锤鲉卵
+                    output.accept(ModItemsEgg.SNOWFLAKE_EGG.get());                  // 雪尾鱼卵
+                    output.accept(ModItemsEgg.AERO_MONO_EGG.get());                  // 气旋鲳鱼卵
+                    output.accept(ModItemsEgg.PICKLEFISH_EGG.get());                 // 泡菜鱼卵
+                    output.accept(ModItemsEgg.AMBER_GOBY_EGG.get());                 // 琥珀虾虎鱼卵
+                    output.accept(ModItemsEgg.BEAKED_HERRING_EGG.get());             // 喙鲱鱼卵
+                    output.accept(ModItemsEgg.BLIND_SAILFIN_EGG.get());              // 盲帆鳍鱼卵
+                    output.accept(ModItemsEgg.CIRCUS_FISH_EGG.get());                // 马戏鱼卵
+                    output.accept(ModItemsEgg.COPPERFLAME_ANTHIAS_EGG.get());        // 铜焰花鮨卵
+                    output.accept(ModItemsEgg.DEMON_HERRING_EGG.get());              // 恶魔鲱鱼卵
+                    output.accept(ModItemsEgg.DROOPING_GOURAMI_EGG.get());           // 垂丝攀鲈卵
+                    output.accept(ModItemsEgg.DUALITY_DAMSELFISH_EGG.get());         // 阴阳雀鲷卵
+                    output.accept(ModItemsEgg.FORKFISH_EGG.get());                   // 叉鱼卵
+                    output.accept(ModItemsEgg.HATCHETFISH_EGG.get());                // 斧鱼卵
+                    output.accept(ModItemsEgg.SNEEP_SNORP_EGG.get());                // 长鼻鱼卵
+                    output.accept(ModItemsEgg.TRIPLE_TWIRL_PLECO_EGG.get());         // 三旋甲鲶卵
+                    output.accept(ModItemsEgg.SAILOR_BARB_EGG.get());                // 水手钩鱼卵
+                    output.accept(ModItemsEgg.BARK_ANGELFISH_EGG.get());             // 树皮神仙鱼卵
+                    output.accept(ModItemsEgg.BOULTI_EGG.get());            // 尼罗罗非鱼卵
+                    output.accept(ModItemsEgg.CAPITAINE_EGG.get());         // 尼罗河尖吻鲈卵
+                    output.accept(ModItemsEgg.SYNODONTIS_EGG.get());        // 反游猫鱼卵
+                    output.accept(ModItemsEgg.SMALLMOUTH_BASS_EGG.get());   // 小口黑鲈卵
+                    output.accept(ModItemsEgg.BROWN_TROUT_EGG.get());       // 褐鳟鱼卵
+                    output.accept(ModItemsEgg.BLUEGILL_EGG.get());          // 蓝鳃太阳鱼卵
+                    output.accept(ModItemsEgg.BAYAD_EGG.get());             // 鲿鱼卵
+                    output.accept(ModItemsEgg.RAINBOW_TROUT_EGG.get());     // 虹鳟鱼卵
+                    output.accept(ModItemsEgg.POLLOCK_EGG.get());           // 绿青鳕卵
+                    output.accept(ModItemsEgg.JELLYFISH_EGG.get());             // 水母卵
+                    output.accept(ModItemsEgg.CARP_EGG.get());          // 鲤鱼卵
+                    output.accept(ModItemsEgg.CATFISH_EGG.get());       // 鲶鱼卵
+                    output.accept(ModItemsEgg.GAR_EGG.get());           // 雀鳝卵
+                    output.accept(ModItemsEgg.MUSKELLUNGE_EGG.get());   // 北美狗鱼卵
+                    output.accept(ModItemsEgg.MINNOW_EGG.get());        // 鲦鱼卵
+                    output.accept(ModItemsEgg.PERCH_EGG.get());         // 河鲈鱼卵
+                    output.accept(ModItemsEgg.ARAPAIMA_EGG.get());      // 巨骨舌鱼卵
+                    output.accept(ModItemsEgg.PIRANHA_EGG.get());       // 水虎鱼卵
+                    output.accept(ModItemsEgg.TAMBAQUI_EGG.get());      // 大盖巨脂鲤卵
+                    output.accept(ModItemsEgg.BROWN_SHROOMA_EGG.get());  // 褐菇鱼卵
+                    output.accept(ModItemsEgg.RED_SHROOMA_EGG.get());    // 红菇鱼卵
+                    output.accept(ModItemsEgg.TUNA_EGG.get());           // 金枪鱼卵
+                    output.accept(ModItemsEgg.RED_DOT_EGG.get());    // 赤点石斑鱼卵
+                    output.accept(ModItemsEgg.GOLDFISH_EGG.get());       // 金鱼卵
+                    output.accept(ModItemsEgg.BLACKFISH_EGG.get());          // 黑鱼卵
+                    output.accept(ModItemsEgg.ATLANTIC_COD_EGG.get());       // 大西洋鳕鱼卵
+                    output.accept(ModItemsEgg.ATLANTIC_HERRING_EGG.get());   // 大西洋鲱鱼卵
+                    output.accept(ModItemsEgg.PACIFIC_HALIBUT_EGG.get());    // 太平洋比目鱼卵
+                    output.accept(ModItemsEgg.ATLANTIC_HALIBUT_EGG.get());   // 大西洋比目鱼卵
+                    output.accept(ModItemsEgg.PINK_SALMON_EGG.get());        // 粉鲑
+                    output.accept(ModItemsEgg.TREVALLY_EGG.get());          // 鲹鱼卵
+                    output.accept(ModItemsEgg.AROWANA_EGG.get());           // 龙鱼卵
+                    output.accept(ModItemsEgg.SUNFISH_EGG.get());           // 翻车鱼卵
+                    output.accept(ModItemsEgg.TRIGGERFISH_EGG.get());       // 鳞鲀卵
+                    output.accept(ModItemsEgg.FOOTBALL_FISH_EGG.get());     // 鮟鱇鱼卵
+                    output.accept(ModItemsEgg.SPADEFISH_EGG.get());         // 白鲳鱼卵
+                    output.accept(ModItemsEgg.KING_CRAB_EGG.get());         // 帝王蟹卵
+                    output.accept(ModItemsEgg.LANTERNFISH_EGG.get());       // 灯笼鱼卵
+                    output.accept(ModItemsEgg.TRIPODFISH_EGG.get());        // 三角鱼卵
+                    output.accept(ModItemsEgg.TRILOCARIS_EGG.get());        // 三叶虾卵
+                    output.accept(ModItemsEgg.RADGILL_EGG.get());           // 腮辐鱼卵
+                    output.accept(ModItemsEgg.SEA_PIG_EGG.get());               // 海猪卵
+                    output.accept(ModItemsEgg.MUSSEL_EGG.get());                // 贻贝卵
+                    output.accept(ModItemsEgg.SWEETISH_FISH_PINK_EGG.get());    // 粉色软糖鱼卵
+                    output.accept(ModItemsEgg.SWEETISH_FISH_RED_EGG.get());     // 红色软糖鱼卵
+                    output.accept(ModItemsEgg.SWEETISH_FISH_BLUE_EGG.get());    // 蓝色软糖鱼卵
+                    output.accept(ModItemsEgg.SWEETISH_FISH_GREEN_EGG.get());   // 绿色软糖鱼卵
+                    output.accept(ModItemsEgg.SWEETISH_FISH_YELLOW_EGG.get());  // 黄色软糖鱼卵
+                    output.accept(ModItemsEgg.CLAWSTER_EGG.get());              // 龙虾卵
+                    output.accept(ModItemsEgg.CLAM_EGG.get());                  // 蛤蜊卵
+                    output.accept(ModItemsEgg.PLATINUM_BASS_EGG.get());    // 白金鲈鱼卵
+                    output.accept(ModItemsEgg.URCHIN_EGG.get());           // 海胆卵
+                    output.accept(ModItemsEgg.SEA_CLAM_EGG.get());         // 海潮蛤卵
+                    output.accept(ModItemsEgg.TIGER_PRAWN_EGG.get());      // 黑虎虾卵
+                    output.accept(ModItemsEgg.SHRIMP_EGG.get());           // 虾卵
+                    output.accept(ModItemsEgg.LAMPREY_EGG.get());          // 八目鳗卵
+                    output.accept(ModItemsEgg.ABALONE_EGG.get());          // 鲍鱼卵
+                    output.accept(ModItemsEgg.GUARDIAN_EGG.get());         // 守卫者卵
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
@@ -638,11 +643,11 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
                     //output.accept(ModItems..get());
-                    output.accept(ModItems.CRAYFISH_EGG.get());     // 小龙虾卵
-                    output.accept(ModItems.TASMANIAN_GIANT_FRESHWATER_EGG.get());     // 塔斯马尼亚巨型淡水龙虾卵
-                    output.accept(ModItems.EUASTACUS_ARMATUS_EGG.get());     //  墨累河白刺鳌虾卵
-                    output.accept(ModItems.MARRON_CRAYFISH_EGG.get());     // 马龙鳌虾卵
-                    output.accept(ModItems.CAMBAROIDES_DAURICUS_EGG.get());     // 东北鳌虾/蝲蛄卵
+                    output.accept(ModItemsEgg.CRAYFISH_EGG.get());     // 小龙虾卵
+                    output.accept(ModItemsEgg.TASMANIAN_GIANT_FRESHWATER_EGG.get());     // 塔斯马尼亚巨型淡水龙虾卵
+                    output.accept(ModItemsEgg.EUASTACUS_ARMATUS_EGG.get());     //  墨累河白刺鳌虾卵
+                    output.accept(ModItemsEgg.MARRON_CRAYFISH_EGG.get());     // 马龙鳌虾卵
+                    output.accept(ModItemsEgg.CAMBAROIDES_DAURICUS_EGG.get());     // 东北鳌虾/蝲蛄卵
                     //output.accept(ModItems..get());     // 卵
                     //output.accept(ModItems..get());     // 卵
                     //output.accept(ModItems..get());     // 卵
@@ -670,29 +675,29 @@ public class ModCreativeModeTabs {
                             .title(REGISTRATE.addLang("itemGroup", ListMod.rl("food_and_product"), "Food and Product"))
                             .icon(() -> new ItemStack(ModItems.RED_CABBAGE_LEAF.get()))
             .displayItems((parameters, output) -> {
-                output.accept(ModItems.COOK_GOOSE_EGG.get());       //煎鹅蛋
-                output.accept(ModItems.COOK_DUCK_EGG.get());       //煎鸭蛋
-                output.accept(ModItems.COOK_TURKEY_EGG.get());       //煎火鸡蛋
-                output.accept(ModItems.COOK_BLACK_GOOSE_EGG.get());       //煎黑金蛋
-                output.accept(ModItems.COOK_WHITE_GOOSE_EGG.get());       //煎白玉蛋
-                output.accept(ModItems.COOK_TORTOISE_EGG.get());       //煎tortoise乌龟蛋
-                output.accept(ModItems.COOK_ALLIGATOR_EGG.get());       //煎alligator短吻鳄
-                output.accept(ModItems.COOK_ASTRO_EGG.get());       //煎austro南方盗龙蛋
-                output.accept(ModItems.COOK_BARINA_EGG.get());       //煎barina巴里纳斯鳄蛋
-                output.accept(ModItems.COOK_BRACHI_EGG.get());       //煎brachi蜿龙蛋
-                output.accept(ModItems.COOK_HWACHA_EGG.get());       //煎cook_hwacha_egg 箭炮猎龙蛋
-                output.accept(ModItems.COOK_COTY_EGG.get());       //煎coty杯鼻龙蛋
-                output.accept(ModItems.COOK_KENTRO_EGG.get());       //煎kentro肯式龙蛋
-                output.accept(ModItems.COOK_MAJUNGA_EGG.get());       //煎majunga玛君龙蛋
-                output.accept(ModItems.COOK_PACHY_EGG.get());       //煎pachy肿头龙蛋 
-                output.accept(ModItems.COOK_RAPTRO_EGG.get());       //煎raptro伶盗龙蛋
-                output.accept(ModItems.COOK_REX_EGG.get());       //煎rex霸王龙蛋
-                output.accept(ModItems.COOK_MEGALA_EGG.get());       //煎megala古巨蜥蛋
-                output.accept(ModItems.COOK_ANTARCTO_EGG.get());       //煎antarcto南极甲龙蛋
-                output.accept(ModItems.COOK_TRIKE_EGG.get());       //煎trike三角龙蛋
-                output.accept(ModItems.COOK_ANURO_EGG.get());       //煎anuro蛙嘴龙蛋 
-                output.accept(ModItems.COOK_ULUGH_EGG.get());       //煎ulugh乌鲁伯戈龙蛋
-                output.accept(ModItems.COOK_TALPANAS_EGG.get());       //煎talpanas鼹鸭蛋
+                output.accept(ModItemsEgg.COOK_GOOSE_EGG.get());       //煎鹅蛋
+                output.accept(ModItemsEgg.COOK_DUCK_EGG.get());       //煎鸭蛋
+                output.accept(ModItemsEgg.COOK_TURKEY_EGG.get());       //煎火鸡蛋
+                output.accept(ModItemsEgg.COOK_BLACK_GOOSE_EGG.get());       //煎黑金蛋
+                output.accept(ModItemsEgg.COOK_WHITE_GOOSE_EGG.get());       //煎白玉蛋
+                output.accept(ModItemsEgg.COOK_TORTOISE_EGG.get());       //煎tortoise乌龟蛋
+                output.accept(ModItemsEgg.COOK_ALLIGATOR_EGG.get());       //煎alligator短吻鳄
+                output.accept(ModItemsEgg.COOK_ASTRO_EGG.get());       //煎austro南方盗龙蛋
+                output.accept(ModItemsEgg.COOK_BARINA_EGG.get());       //煎barina巴里纳斯鳄蛋
+                output.accept(ModItemsEgg.COOK_BRACHI_EGG.get());       //煎brachi蜿龙蛋
+                output.accept(ModItemsEgg.COOK_HWACHA_EGG.get());       //煎cook_hwacha_egg 箭炮猎龙蛋
+                output.accept(ModItemsEgg.COOK_COTY_EGG.get());       //煎coty杯鼻龙蛋
+                output.accept(ModItemsEgg.COOK_KENTRO_EGG.get());       //煎kentro肯式龙蛋
+                output.accept(ModItemsEgg.COOK_MAJUNGA_EGG.get());       //煎majunga玛君龙蛋
+                output.accept(ModItemsEgg.COOK_PACHY_EGG.get());       //煎pachy肿头龙蛋 
+                output.accept(ModItemsEgg.COOK_RAPTRO_EGG.get());       //煎raptro伶盗龙蛋
+                output.accept(ModItemsEgg.COOK_REX_EGG.get());       //煎rex霸王龙蛋
+                output.accept(ModItemsEgg.COOK_MEGALA_EGG.get());       //煎megala古巨蜥蛋
+                output.accept(ModItemsEgg.COOK_ANTARCTO_EGG.get());       //煎antarcto南极甲龙蛋
+                output.accept(ModItemsEgg.COOK_TRIKE_EGG.get());       //煎trike三角龙蛋
+                output.accept(ModItemsEgg.COOK_ANURO_EGG.get());       //煎anuro蛙嘴龙蛋 
+                output.accept(ModItemsEgg.COOK_ULUGH_EGG.get());       //煎ulugh乌鲁伯戈龙蛋
+                output.accept(ModItemsEgg.COOK_TALPANAS_EGG.get());       //煎talpanas鼹鸭蛋
                 output.accept(ModItems.GROTTOSCERATOPS_AMLETTE.get());     
                 output.accept(ModItems.RELICHEIRUS_AMLETTE.get());     
                 output.accept(ModItems.SUBTERRANODON_AMLETTEX.get());    
@@ -703,6 +708,10 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.AMMLET_FROM_EMBRYO.get());     
                 output.accept(ModItems.RED_CABBAGE_LEAF.get());//红卷心菜叶
                 output.accept(ModItems.RED_PINEAPPLE_SLICE.get());//红凤梨切块
+                output.accept(ModItems.BLACK_BEAUTY_MELON_SLICE.get());   //瓜切块
+                output.accept(ModItems.GEM_MELON_SLICE.get());
+                output.accept(ModItems.FROST_MELON_SLICE.get());
+                output.accept(ModItems.QI_FRUIT_SLICE.get());
                 output.accept(ModItems.AGLIO_ROSSO_DI_SULMONA_CLOVES.get()); //
                 output.accept(ModItems.AGLIO_BIANCO_POLESANO_CLOVES.get());  //
                 output.accept(ModItems.BEEFSTEAK_TOMATO_SLICE.get());  //
@@ -1002,87 +1011,87 @@ public class ModCreativeModeTabs {
                 //output.accept(ModItems..get());  //黑芝麻和豆沙
                 //output.accept(ModItems..get());  //糯米和椰蓉
                 //output.accept(ModItems..get());  //莲蓉双黄月饼
-                output.accept(ModItems.FIVE_KERNALS_HAM_MOONCAKE.get());  //五仁火腿月饼
-                output.accept(ModItems.BLACK_SESAME_RED_BEAN_PASTE_MOONCAKE.get());  //芝麻豆沙月饼
-                output.accept(ModItems.SNOW_SKIN_COCONUT_MOONCAKE.get());  //冰皮椰蓉月饼    
-                output.accept(ModItems.SLOE_BERRIES_MOONCAKE.get());  //换色月饼
-                output.accept(ModItems.MUSCADINE_GRAPES_MOONCAKE.get());
-                output.accept(ModItems.MEMBRILLO_MOONCAKE.get());
-                output.accept(ModItems.OXYGRAPE_MOONCAKE.get());
-                output.accept(ModItems.PEARLIPEARL_MOONCAKE.get());
-                output.accept(ModItems.WARPED_LAUREL_MOONCAKE.get());
-                output.accept(ModItems.ROSE_HIPS_MOONCAKE.get());
-                output.accept(ModItems.BLACK_OLIVE_FRUIT_MOONCAKE.get());
-                output.accept(ModItems.LANTERN_FRUIT_MOONCAKE.get());
-                output.accept(ModItems.HIMEKAIDO_MOONCAKE.get());
-                output.accept(ModItems.LUCUMA_MOONCAKE.get());
-                output.accept(ModItems.HOARY_APPLE_MOONCAKE.get());
-                output.accept(ModItems.SEA_GRAPE_MOONCAKE.get());
-                output.accept(ModItems.ARBUTUS_BERRIES_MOONCAKE.get());
-                output.accept(ModItems.WILDBERRY_MOONCAKE.get());
-                output.accept(ModItems.GEARO_BERRY_MOONCAKE.get());
-                output.accept(ModItems.BLACK_GRAPE_MOONCAKE.get());
-                output.accept(ModItems.WARPED_GRAPE_MOONCAKE.get());
-                output.accept(ModItems.CRIMSON_GRAPE_MOONCAKE.get());
-                output.accept(ModItems.LAPISBERRIES_MOONCAKE.get());
-                output.accept(ModItems.SPONGEKIN_MOONCAKE.get());
-                output.accept(ModItems.ROTBULB_MOONCAKE.get());
-                output.accept(ModItems.UBE_MOONCAKE.get());
-                output.accept(ModItems.STARFRUIT_MOONCAKE.get());
-                output.accept(ModItems.DURIAN_MOONCAKE.get());
-                output.accept(ModItems.GREEN_POMELO_MOONCAKE.get());
-                output.accept(ModItems.CANTALOUPE_MOONCAKE.get());
-                output.accept(ModItems.BLACKBERRY_MOONCAKE.get());
-                output.accept(ModItems.RASPBERRY_MOONCAKE.get());
-                output.accept(ModItems.BLACKCURRANT_MOONCAKE.get());
-                output.accept(ModItems.GOOSEBERRY_MOONCAKE.get());
-                output.accept(ModItems.CHERRY_MOONCAKE.get());
-                output.accept(ModItems.OLIVE_MOONCAKE.get());
-                output.accept(ModItems.PLUM_MOONCAKE.get());
-                output.accept(ModItems.APRICOT_MOONCAKE.get());
-                output.accept(ModItems.GREEN_PLUM_MOONCAKE.get());
-                output.accept(ModItems.GREEN_GRAPE_MOONCAKE.get());
-                output.accept(ModItems.PASSION_FRUIT_MOONCAKE.get());
-                output.accept(ModItems.DRAGON_FRUIT_MOONCAKE.get());
-                output.accept(ModItems.RED_DRAGON_FRUIT_MOONCAKE.get());
-                output.accept(ModItems.HOLLY_BERRY_MOONCAKE.get());
-                output.accept(ModItems.HAWTHORN_MOONCAKE.get());
-                output.accept(ModItems.POMEGRANATE_MOONCAKE.get());
-                output.accept(ModItems.FIG_MOONCAKE.get());
-                output.accept(ModItems.AVOCADO_MOONCAKE.get());
-                output.accept(ModItems.GRAPEFRUIT_MOONCAKE.get());
-                output.accept(ModItems.LYCHEE_MOONCAKE.get());
-                output.accept(ModItems.PAPAYA_MOONCAKE.get());
-                output.accept(ModItems.MANGOSTEEN_MOONCAKE.get());
-                output.accept(ModItems.WAXBERRY_MOONCAKE.get());
-                output.accept(ModItems.DATE_MOONCAKE.get());
-                output.accept(ModItems.BERGAMOT_MOONCAKE.get());
-                output.accept(ModItems.JABUTICABA_MOONCAKE.get());
-                output.accept(ModItems.KIWANO_MOONCAKE.get());
-                output.accept(ModItems.RAMBUTAN_MOONCAKE.get());
-                output.accept(ModItems.KUMQUAT_MOONCAKE.get());
-                output.accept(ModItems.BANANA_MOONCAKE.get());
-                output.accept(ModItems.ELDERBERRY_MOONCAKE.get());
-                output.accept(ModItems.ALMOND_MOONCAKE.get());
-                output.accept(ModItems.PISTACHIO_MOONCAKE.get());
-                output.accept(ModItems.PINE_NUT_MOONCAKE.get());
-                output.accept(ModItems.CHESTNUT_MOONCAKE.get());
-                output.accept(ModItems.CASHEW_MOONCAKE.get());
-                output.accept(ModItems.HAZELNUT_MOONCAKE.get());
-                output.accept(ModItems.WALNUT_MOONCAKE.get());
-                output.accept(ModItems.WHITE_GRAPE_MOONCAKE.get());
-                output.accept(ModItems.RED_GRAPE_MOONCAKE.get());
-                output.accept(ModItems.CITRON_MOONCAKE.get());
-                output.accept(ModItems.GREEN_APPLE_MOONCAKE.get());
-                output.accept(ModItems.KIWI_MOONCAKE.get());
-                output.accept(ModItems.PERSIMMON_MOONCAKE.get());   
-                output.accept(ModItems.WHITE_STRAWBERRIES_MOONCAKE.get());
-                output.accept(ModItems.STYGIAN_POMEGRANATE_MOONCAKE.get());
-                output.accept(ModItems.VILLAGE_LIME_MOONCAKE.get());
-                output.accept(ModItems.THUNDER_FRUIT_MOONCAKE.get());
-                output.accept(ModItems.CLOUD_BERRIES_MOONCAKE.get());
-                output.accept(ModItems.LEMON_MOONCAKE.get());
-                output.accept(ModItems.PEACH_MOONCAKE.get());             
+                output.accept(ModItemsMooncake.FIVE_KERNALS_HAM_MOONCAKE.get());  //五仁火腿月饼
+                output.accept(ModItemsMooncake.BLACK_SESAME_RED_BEAN_PASTE_MOONCAKE.get());  //芝麻豆沙月饼
+                output.accept(ModItemsMooncake.SNOW_SKIN_COCONUT_MOONCAKE.get());  //冰皮椰蓉月饼    
+                output.accept(ModItemsMooncake.SLOE_BERRIES_MOONCAKE.get());  //换色月饼
+                output.accept(ModItemsMooncake.MUSCADINE_GRAPES_MOONCAKE.get());
+                output.accept(ModItemsMooncake.MEMBRILLO_MOONCAKE.get());
+                output.accept(ModItemsMooncake.OXYGRAPE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.PEARLIPEARL_MOONCAKE.get());
+                output.accept(ModItemsMooncake.WARPED_LAUREL_MOONCAKE.get());
+                output.accept(ModItemsMooncake.ROSE_HIPS_MOONCAKE.get());
+                output.accept(ModItemsMooncake.BLACK_OLIVE_FRUIT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.LANTERN_FRUIT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.HIMEKAIDO_MOONCAKE.get());
+                output.accept(ModItemsMooncake.LUCUMA_MOONCAKE.get());
+                output.accept(ModItemsMooncake.HOARY_APPLE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.SEA_GRAPE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.ARBUTUS_BERRIES_MOONCAKE.get());
+                output.accept(ModItemsMooncake.WILDBERRY_MOONCAKE.get());
+                output.accept(ModItemsMooncake.GEARO_BERRY_MOONCAKE.get());
+                output.accept(ModItemsMooncake.BLACK_GRAPE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.WARPED_GRAPE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.CRIMSON_GRAPE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.LAPISBERRIES_MOONCAKE.get());
+                output.accept(ModItemsMooncake.SPONGEKIN_MOONCAKE.get());
+                output.accept(ModItemsMooncake.ROTBULB_MOONCAKE.get());
+                output.accept(ModItemsMooncake.UBE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.STARFRUIT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.DURIAN_MOONCAKE.get());
+                output.accept(ModItemsMooncake.GREEN_POMELO_MOONCAKE.get());
+                output.accept(ModItemsMooncake.CANTALOUPE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.PEAR_MOONCAKE.get());
+                output.accept(ModItemsMooncake.RASPBERRY_MOONCAKE.get());
+                output.accept(ModItemsMooncake.BLACKCURRANT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.GOOSEBERRY_MOONCAKE.get());
+                output.accept(ModItemsMooncake.CHERRY_MOONCAKE.get());
+                output.accept(ModItemsMooncake.OLIVE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.PLUM_MOONCAKE.get());
+                output.accept(ModItemsMooncake.APRICOT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.GREEN_PLUM_MOONCAKE.get());
+                output.accept(ModItemsMooncake.GREEN_GRAPE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.PASSION_FRUIT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.DRAGON_FRUIT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.RED_DRAGON_FRUIT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.HOLLY_BERRY_MOONCAKE.get());
+                output.accept(ModItemsMooncake.HAWTHORN_MOONCAKE.get());
+                output.accept(ModItemsMooncake.POMEGRANATE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.FIG_MOONCAKE.get());
+                output.accept(ModItemsMooncake.AVOCADO_MOONCAKE.get());
+                output.accept(ModItemsMooncake.GRAPEFRUIT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.LYCHEE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.PAPAYA_MOONCAKE.get());
+                output.accept(ModItemsMooncake.MANGOSTEEN_MOONCAKE.get());
+                output.accept(ModItemsMooncake.WAXBERRY_MOONCAKE.get());
+                output.accept(ModItemsMooncake.DATE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.BERGAMOT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.JABUTICABA_MOONCAKE.get());
+                output.accept(ModItemsMooncake.KIWANO_MOONCAKE.get());
+                output.accept(ModItemsMooncake.RAMBUTAN_MOONCAKE.get());
+                output.accept(ModItemsMooncake.KUMQUAT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.BANANA_MOONCAKE.get());
+                output.accept(ModItemsMooncake.ELDERBERRY_MOONCAKE.get());
+                output.accept(ModItemsMooncake.ALMOND_MOONCAKE.get());
+                output.accept(ModItemsMooncake.PISTACHIO_MOONCAKE.get());
+                output.accept(ModItemsMooncake.PINE_NUT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.CHESTNUT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.CASHEW_MOONCAKE.get());
+                output.accept(ModItemsMooncake.HAZELNUT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.WALNUT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.WHITE_GRAPE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.RED_GRAPE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.CITRON_MOONCAKE.get());
+                output.accept(ModItemsMooncake.GREEN_APPLE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.KIWI_MOONCAKE.get());
+                output.accept(ModItemsMooncake.PERSIMMON_MOONCAKE.get());   
+                output.accept(ModItemsMooncake.WHITE_STRAWBERRIES_MOONCAKE.get());
+                output.accept(ModItemsMooncake.STYGIAN_POMEGRANATE_MOONCAKE.get());
+                output.accept(ModItemsMooncake.VILLAGE_LIME_MOONCAKE.get());
+                output.accept(ModItemsMooncake.THUNDER_FRUIT_MOONCAKE.get());
+                output.accept(ModItemsMooncake.CLOUD_BERRIES_MOONCAKE.get());
+                output.accept(ModItemsMooncake.LEMON_MOONCAKE.get());
+                output.accept(ModItemsMooncake.PEACH_MOONCAKE.get());             
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get()); 
                 //output.accept(ModItems..get());       
@@ -1232,34 +1241,39 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.ROACH_SKEWER.get());
                 output.accept(ModItems.ROACH_WHISKER_CANDY.get());
                 output.accept(ModItems.ROACH_MEATBALL.get());
-                output.accept(ModItems.SLOE_BERRIES_JELLY.get());
-                output.accept(ModItems.MUSCADINE_GRAPES_JELLY.get());
-                output.accept(ModItems.MEMBRILLO_JELLY.get());
-                output.accept(ModItems.OXYGRAPE_JELLY.get());
-                output.accept(ModItems.PEARLIPEARL_JELLY.get());
-                output.accept(ModItems.WARPED_LAUREL_JELLY.get());
-                output.accept(ModItems.ROSE_HIPS_JELLY.get());
-                output.accept(ModItems.BLACK_OLIVE_FRUIT_JELLY.get());
-                output.accept(ModItems.LANTERN_FRUIT_JELLY.get());
-                output.accept(ModItems.HIMEKAIDO_JELLY.get());
-                output.accept(ModItems.LUCUMA_JELLY.get());
-                output.accept(ModItems.HOARY_APPLE_JELLY.get());
-                output.accept(ModItems.SEA_GRAPE_JELLY.get());
-                output.accept(ModItems.ARBUTUS_BERRIES_JELLY.get());
-                output.accept(ModItems.WILDBERRY_JELLY.get());
-                output.accept(ModItems.GEARO_BERRY_JELLY.get());
-                output.accept(ModItems.BLACK_GRAPE_JELLY.get());
-                output.accept(ModItems.WARPED_GRAPE_JELLY.get());
-                output.accept(ModItems.CRIMSON_GRAPE_JELLY.get());
-                output.accept(ModItems.LAPISBERRIES_JELLY.get());
-                output.accept(ModItems.SPONGEKIN_JELLY.get());
-                output.accept(ModItems.STRAWBERRIES_JELLY.get());
-                output.accept(ModItems.WHITE_STRAWBERRIES_JELLY.get());
-                output.accept(ModItems.STYGIAN_POMEGRANATE_JELLY.get());
-                output.accept(ModItems.VILLAGE_LIME_JELLY.get());
-                output.accept(ModItems.THUNDER_FRUIT_JELLY.get());
-                output.accept(ModItems.CLOUD_BERRIES_JELLY.get());
-                output.accept(ModItems.CHERRY_JELLY.get());
+                output.accept(ModItemsJelly.SLOE_BERRIES_JELLY.get());
+                output.accept(ModItemsJelly.MUSCADINE_GRAPES_JELLY.get());
+                output.accept(ModItemsJelly.MEMBRILLO_JELLY.get());
+                output.accept(ModItemsJelly.OXYGRAPE_JELLY.get());
+                output.accept(ModItemsJelly.PEARLIPEARL_JELLY.get());
+                output.accept(ModItemsJelly.WARPED_LAUREL_JELLY.get());
+                output.accept(ModItemsJelly.ROSE_HIPS_JELLY.get());
+                output.accept(ModItemsJelly.BLACK_OLIVE_FRUIT_JELLY.get());
+                output.accept(ModItemsJelly.LANTERN_FRUIT_JELLY.get());
+                output.accept(ModItemsJelly.HIMEKAIDO_JELLY.get());
+                output.accept(ModItemsJelly.LUCUMA_JELLY.get());
+                output.accept(ModItemsJelly.HOARY_APPLE_JELLY.get());
+                output.accept(ModItemsJelly.SEA_GRAPE_JELLY.get());
+                output.accept(ModItemsJelly.ARBUTUS_BERRIES_JELLY.get());
+                output.accept(ModItemsJelly.WILDBERRY_JELLY.get());
+                output.accept(ModItemsJelly.GEARO_BERRY_JELLY.get());
+                output.accept(ModItemsJelly.BLACK_GRAPE_JELLY.get());
+                output.accept(ModItemsJelly.WARPED_GRAPE_JELLY.get());
+                output.accept(ModItemsJelly.CRIMSON_GRAPE_JELLY.get());
+                output.accept(ModItemsJelly.LAPISBERRIES_JELLY.get());
+                output.accept(ModItemsJelly.SPONGEKIN_JELLY.get());
+                output.accept(ModItemsJelly.STRAWBERRIES_JELLY.get());
+                output.accept(ModItemsJelly.WHITE_STRAWBERRIES_JELLY.get());
+                output.accept(ModItemsJelly.STYGIAN_POMEGRANATE_JELLY.get());
+                output.accept(ModItemsJelly.VILLAGE_LIME_JELLY.get());
+                output.accept(ModItemsJelly.THUNDER_FRUIT_JELLY.get());
+                output.accept(ModItemsJelly.CLOUD_BERRIES_JELLY.get());
+                output.accept(ModItemsJelly.CHERRY_JELLY.get());
+                output.accept(ModItemsSmokerFish.SMOKER_COD.get());   //烟熏系列
+                output.accept(ModItemsSmokerFish.SMOKER_SALMON.get());
+                output.accept(ModItemsSmokerFish.SMOKER_TROPICAL_FISH.get());
+                output.accept(ModItemsSmokerFish.SMOKER_PUFFERFISH.get());
+                output.accept(ModItemsSmokerFish.SMOKER_CATFISH.get());
                 //output.accept(ModItems..get());
                 //output.accept(ModItems..get());
                 
@@ -1457,7 +1471,6 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.TAIWAN_GREEN_PINEAPPLE.get());       //台湾菠萝
                     //output.accept(ModItems..get());       //粉红菠萝 pinkglow 内部粉红
                     output.accept(ModItems.PERFUME_PINEAPPLE.get());       //香水凤梨
-                    //output.accept(ModItems..get());       //假菠萝 露兜果
                     //output.accept(ModItems..get());       //黄金椰子
                     //output.accept(ModItems..get());       //海底椰
                     output.accept(ModItems.NYPA.get());       //水椰
@@ -1548,7 +1561,15 @@ public class ModCreativeModeTabs {
                     output.accept(ModItems.LARGE_CRANBERRY.get());       //大果蔓越莓
                     output.accept(ModItems.EUROPEAN_RED_RASPBERRY.get());       //欧洲红莓
                     output.accept(ModItems.NORTHERN_HIGHBUSH_BLUEBERRY.get());       //北高从蓝莓
-                    //output.accept(ModItems..get());       //
+                    output.accept(ModItems.FINGER_LEMON.get());
+                    output.accept(ModItems.SMALL_LIME.get());
+                    output.accept(ModItems.GUIWEI_LITCHI.get());
+                    output.accept(ModItems.LITCHI_KING.get());
+                    output.accept(ModBlocks.BLACK_BEAUTY_MELON.get()); 
+                    output.accept(ModBlocks.GEM_MELON.get()); 
+                    output.accept(ModBlocks.FROST_MELON.get()); 
+                    output.accept(ModBlocks.QI_MELON.get()); 
+                        // output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
@@ -1661,6 +1682,19 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PURE_BEEF_FEED.get());       //纯净牛肉饲料
                         output.accept(ModItems.PURE_PORKCHOP_FEED.get());       //纯净猪肉饲料
                         output.accept(ModItems.ADVANCED_PURE_MEAT_FEED.get());       //高级肉类饲料
+                        output.accept(ModItems.PETRI_DISH.get());
+                        output.accept(ModItems.PENICILLIUM_ROQUEFORTI_PETRI_DISH.get());
+                        output.accept(ModItems.BACILLUS_SUBTILIS_PETRI_DISH.get());
+                        output.accept(ModItems.LACTOBACILLUS_PENTOSIS_PETRI_DISH.get());
+                        output.accept(ModItems.PHYCOMYCES_BLAKESLEEANUS_PETRI_DISH.get());
+                        output.accept(ModItems.BREVIBACTERIUM_PETRI_DISH.get());
+                        output.accept(ModItems.BIFIDOBACTERIUM_PETRI_DISH.get());
+                        output.accept(ModItems.ESCHERICHIA_PETRI_DISH.get());
+                        output.accept(ModItems.STREPTOCOCCUS_PYOGENES_PETRI_DISH.get());
+                        output.accept(ModItems.CUPRIAVIDUS_PETRI_DISH.get());
+                        output.accept(ModItems.SHEWANELLA_PETRI_DISH.get());
+                        output.accept(ModItems.CLOSTRIDIUM_PASTEURINUM_PETRI_DISH.get());
+                        //output.accept(ModItems..get());
                         output.accept(ModItems.PEARL_DUST.get());
                         output.accept(ModItems.WOODEN_SAND_FIXATION_GRID.get());       //木制固沙方格
                         output.accept(ModItems.WINE_VIAL.get());

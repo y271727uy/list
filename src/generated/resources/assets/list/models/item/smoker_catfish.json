@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "aquaculture:item/catfish",
+    "layer1": "list:item/food/component/smoke_large"
+  }
+}

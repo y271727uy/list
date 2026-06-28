@@ -7,14 +7,16 @@ import dev.latvian.mods.kubejs.recipe.schema.RegisterRecipeSchemasEvent;
 import dev.latvian.mods.kubejs.script.ScriptType;
 import dev.latvian.mods.kubejs.util.ClassFilter;
 
+import java.util.Objects;
+
 public class ListKubeJSPlugin extends KubeJSPlugin {
     @Override
     public void registerClasses(ScriptType type, ClassFilter filter) {
-        filter.allow("com.list");
+        filter.allow("com.list.integration.kubejs.api");
     }
 
     @Override
     public void registerRecipeSchemas(RegisterRecipeSchemasEvent event) {
-        event.register(ModRecipes.FISH_POND_RECIPE_TYPE.getId(), FishPondRecipeSchema.SCHEMA);
+        event.register(Objects.requireNonNull(ModRecipes.FISH_POND_RECIPE_TYPE.getId()), FishPondRecipeSchema.SCHEMA);
     }
 }

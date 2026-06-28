@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:pufferfish",
+  "order": 4,
+  "seasons": [
+    "list:season/all"
+  ],
+  "weather_tags": [
+    "list:weather/any"
+  ],
+  "time": "any",
+  "diet": "carnivore",
+  "habits": "saltwater"
+}

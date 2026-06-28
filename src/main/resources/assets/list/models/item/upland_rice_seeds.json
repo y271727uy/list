@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "list:block/crop/upland_rice_seeds"
+  }
+}
+

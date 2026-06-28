@@ -1,10 +1,8 @@
 package com.list.gameplay.fish_group.client;
 
 import com.list.ListMod;
-import com.list.gameplay.fish_group.client.model.entity.OceanFishPoolModel;
-import com.list.gameplay.fish_group.client.model.entity.RiverFishPoolModel;
-import com.list.gameplay.fish_group.client.renderer.entity.OceanFishPoolRenderer;
-import com.list.gameplay.fish_group.client.renderer.entity.RiverFishPoolRenderer;
+import com.list.gameplay.fish_group.client.model.OceanFishPoolModel;
+import com.list.gameplay.fish_group.client.model.RiverFishPoolModel;
 import com.list.gameplay.fish_group.item.FishGroupRegistry;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.world.entity.EntityType;

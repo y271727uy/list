@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:salmon",
+  "order": 2,
+  "seasons": [
+    "list:season/all"
+  ],
+  "weather_tags": [
+    "list:weather/any"
+  ],
+  "time": "any",
+  "diet": "omnivore",
+  "habits": "mix"
+}

@@ -2,17 +2,18 @@ package com.list.client;
 
 import com.list.ListMod;
 import com.list.gameplay.fish_group.item.FishGroupRegistry;
-import com.list.gameplay.fish_group.client.model.entity.OceanFishPoolModel;
-import com.list.gameplay.fish_group.client.model.entity.RiverFishPoolModel;
-import com.list.gameplay.fish_group.client.renderer.entity.OceanFishPoolRenderer;
-import com.list.gameplay.fish_group.client.renderer.entity.RiverFishPoolRenderer;
+import com.list.gameplay.fish_group.client.model.OceanFishPoolModel;
+import com.list.gameplay.fish_group.client.model.RiverFishPoolModel;
+import com.list.gameplay.fish_group.client.OceanFishPoolRenderer;
+import com.list.gameplay.fish_group.client.RiverFishPoolRenderer;
 import com.list.integration.jei.tooltip.SellingBinClientTooltipComponent;
 import com.list.integration.jei.tooltip.SellingBinTooltipComponent;
 import com.list.client.model.LayeredItemModel;
-import com.list.item.EggItem;
-import com.list.item.JellyItem;
-import com.list.item.LayeredItem;
-import com.list.item.MooncakeItem;
+import com.list.item.util.EggItem;
+import com.list.item.util.JellyItem;
+import com.list.item.util.LayeredItem;
+import com.list.item.util.MooncakeItem;
+import com.list.item.util.SmokerFish;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.FishingRodItem;
@@ -94,6 +95,9 @@ public class ClientEvents {
             // 这里仍然是按层 tint：灰度层次来自纹理本身，主色可按“应用XYZ色彩空间原理”来选取。
             for (JellyItem jelly : JellyItem.JELLY_ITEMS) {
                 event.register((stack, tintIndex) -> jelly.getColor(tintIndex), jelly);
+            }
+            for (SmokerFish smokerFish : SmokerFish.getSmokerFishItems()) {
+                event.register((stack, tintIndex) -> smokerFish.getColor(tintIndex), smokerFish);
             }
         }
 

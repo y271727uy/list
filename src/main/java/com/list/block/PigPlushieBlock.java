@@ -1,5 +1,6 @@
 package com.list.block;
 
+import com.list.block.common.CommonPlushieBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.state.BlockState;

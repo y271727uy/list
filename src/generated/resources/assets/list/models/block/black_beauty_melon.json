@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/crop/melon/black_beauty_melon_top",
+    "east": "list:block/crop/melon/black_beauty_melon_side",
+    "north": "list:block/crop/melon/black_beauty_melon_side",
+    "particle": "list:block/crop/melon/black_beauty_melon_side",
+    "south": "list:block/crop/melon/black_beauty_melon_side",
+    "up": "list:block/crop/melon/black_beauty_melon_top",
+    "west": "list:block/crop/melon/black_beauty_melon_side"
+  }
+}

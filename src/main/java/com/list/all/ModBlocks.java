@@ -2,10 +2,17 @@ package com.list.all;
 
 import com.list.block.*;
 import com.list.block.TapperBlock;
-import com.list.block.mushroom.StrawMushroomBlock;
-import com.list.block.mushroom.SeaMushroomBlock;
-import com.list.block.mushroom.CaveMushroomBlock;
-import com.list.block.colony.SeaMushroomColonyBlock;
+import com.list.block.common.CommonBlock;
+import com.list.block.common.CommonCakeBlock;
+import com.list.block.common.CommonPizzaBlock;
+import com.list.block.common.CommonPlushieBlock;
+import com.list.block.crop.mushroom.StrawMushroomBlock;
+import com.list.block.crop.mushroom.SeaMushroomBlock;
+import com.list.block.crop.mushroom.CaveMushroomBlock;
+import com.list.block.crop.colony.SeaMushroomColonyBlock;
+import com.list.block.crop.rice.UplandRiceBlock;
+import com.list.block.crop.rice.UplandRicePaniclesBlock;
+import com.list.item.crop.UplandRiceSeedsItem;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.SoundType;
@@ -69,6 +76,47 @@ public class ModBlocks {
                 provider.horizontalBlock(ctx.get(), model);
             })
             .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+            .register();
+//旱稻
+    public static final BlockEntry<UplandRiceBlock> UPLAND_RICE = REGISTRATE
+            .listBLock("upland_rice", UplandRiceBlock::new)
+            .initialProperties(() -> Blocks.WHEAT)
+            .properties(p -> p.noOcclusion().randomTicks())
+            .item(UplandRiceSeedsItem::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("block/crop/upland_rice_seeds")))
+            .build()
+            .blockstate((ctx, provider) -> provider.getVariantBuilder(ctx.get())
+                    .partialState().with(UplandRiceBlock.AGE, 0).with(UplandRiceBlock.SUPPORTING, false)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/crop/grow/upland_rice/rice_stage0"))).addModel()
+                    .partialState().with(UplandRiceBlock.AGE, 0).with(UplandRiceBlock.SUPPORTING, true)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/crop/grow/upland_rice/rice_stage0"))).addModel()
+                    .partialState().with(UplandRiceBlock.AGE, 1).with(UplandRiceBlock.SUPPORTING, false)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/crop/grow/upland_rice/rice_stage1"))).addModel()
+                    .partialState().with(UplandRiceBlock.AGE, 1).with(UplandRiceBlock.SUPPORTING, true)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/crop/grow/upland_rice/rice_stage1"))).addModel()
+                    .partialState().with(UplandRiceBlock.AGE, 2).with(UplandRiceBlock.SUPPORTING, false)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/crop/grow/upland_rice/rice_stage2"))).addModel()
+                    .partialState().with(UplandRiceBlock.AGE, 2).with(UplandRiceBlock.SUPPORTING, true)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/crop/grow/upland_rice/rice_stage2"))).addModel()
+                    .partialState().with(UplandRiceBlock.AGE, 3).with(UplandRiceBlock.SUPPORTING, false)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/crop/grow/upland_rice/rice_stage3"))).addModel()
+                    .partialState().with(UplandRiceBlock.AGE, 3).with(UplandRiceBlock.SUPPORTING, true)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/crop/grow/upland_rice/rice_supporting"))).addModel())
+            .register();
+
+    public static final BlockEntry<UplandRicePaniclesBlock> UPLAND_RICE_PANICLES = REGISTRATE
+            .listBLock("upland_rice_panicles", UplandRicePaniclesBlock::new)
+            .initialProperties(() -> Blocks.WHEAT)
+            .properties(p -> p.noOcclusion().randomTicks())
+            .blockstate((ctx, provider) -> provider.getVariantBuilder(ctx.get())
+                    .partialState().with(UplandRicePaniclesBlock.RICE_AGE, 0)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/crop/grow/upland_rice/rice_panicles_stage0"))).addModel()
+                    .partialState().with(UplandRicePaniclesBlock.RICE_AGE, 1)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/crop/grow/upland_rice/rice_panicles_stage1"))).addModel()
+                    .partialState().with(UplandRicePaniclesBlock.RICE_AGE, 2)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/crop/grow/upland_rice/rice_panicles_stage2"))).addModel()
+                    .partialState().with(UplandRicePaniclesBlock.RICE_AGE, 3)
+                    .modelForState().modelFile(provider.models().getExistingFile(provider.modLoc("block/crop/grow/upland_rice/rice_panicles_stage3"))).addModel())
             .register();
 /*
     //树坑
@@ -652,6 +700,86 @@ public static final BlockEntry<PigPlushieBlock> PIG_PLUSHIE = REGISTRATE
     .build()
     .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
     .register();
+
+//黑皮西瓜
+public static final BlockEntry<CommonBlock> BLACK_BEAUTY_MELON = REGISTRATE
+        .block("black_beauty_melon", CommonBlock::new)
+        .initialProperties(() -> Blocks.MELON)
+        .simpleItem()
+        .blockstate((ctx, provider) -> {
+            BlockModelBuilder model = provider.models().cube(
+                ctx.getName(),
+                provider.modLoc("block/crop/melon/black_beauty_melon_top"),         //底部 up
+                provider.modLoc("block/crop/melon/black_beauty_melon_top"),     //顶部 dowm
+                provider.modLoc("block/crop/melon/black_beauty_melon_side"),    //北 north
+                provider.modLoc("block/crop/melon/black_beauty_melon_side"),    //南 sorth
+                provider.modLoc("block/crop/melon/black_beauty_melon_side"),    //西 west
+                provider.modLoc("block/crop/melon/black_beauty_melon_side")     //东 east
+            ).texture("particle", provider.modLoc("block/crop/melon/black_beauty_melon_side"));
+             provider.horizontalBlock(ctx.get(), model);
+        })
+        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+        .register();
+
+//宝石甜瓜
+public static final BlockEntry<CommonBlock> GEM_MELON = REGISTRATE
+        .block("gem_melon", CommonBlock::new)
+        .initialProperties(() -> Blocks.MELON)
+        .simpleItem()
+        .blockstate((ctx, provider) -> {
+            BlockModelBuilder model = provider.models().cube(
+                ctx.getName(),
+                provider.modLoc("block/crop/melon/gem_melon_top"),         //底部 up
+                provider.modLoc("block/crop/melon/gem_melon_top"),     //顶部 dowm
+                provider.modLoc("block/crop/melon/gem_melon_side"),    //北 north
+                provider.modLoc("block/crop/melon/gem_melon_side"),    //南 sorth
+                provider.modLoc("block/crop/melon/gem_melon_side"),    //西 west
+                provider.modLoc("block/crop/melon/gem_melon_side")     //东 east
+            ).texture("particle", provider.modLoc("block/crop/melon/gem_melon_side"));
+             provider.horizontalBlock(ctx.get(), model);
+        })
+        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+        .register();   
+
+//霜瓜
+public static final BlockEntry<CommonBlock> FROST_MELON = REGISTRATE
+        .block("frost_melon", CommonBlock::new)
+        .initialProperties(() -> Blocks.MELON)
+        .simpleItem()
+        .blockstate((ctx, provider) -> {
+            BlockModelBuilder model = provider.models().cube(
+                ctx.getName(),
+                provider.modLoc("block/crop/melon/frost_melon_top"),         //底部 up
+                provider.modLoc("block/crop/melon/frost_melon_top"),     //顶部 dowm
+                provider.modLoc("block/crop/melon/frost_melon_side"),    //北 north
+                provider.modLoc("block/crop/melon/frost_melon_side"),    //南 sorth
+                provider.modLoc("block/crop/melon/frost_melon_side"),    //西 west
+                provider.modLoc("block/crop/melon/frost_melon_side")     //东 east
+            ).texture("particle", provider.modLoc("block/crop/melon/frost_melon_side"));
+             provider.horizontalBlock(ctx.get(), model);
+        })
+        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+        .register();   
+
+//齐瓜
+public static final BlockEntry<CommonBlock> QI_MELON = REGISTRATE
+        .block("qi_melon", CommonBlock::new)
+        .initialProperties(() -> Blocks.MELON)
+        .simpleItem()
+        .blockstate((ctx, provider) -> {
+            BlockModelBuilder model = provider.models().cube(
+                ctx.getName(),
+                provider.modLoc("block/crop/melon/qi_fruit_top"),         //底部 up
+                provider.modLoc("block/crop/melon/qi_fruit_top"),     //顶部 dowm
+                provider.modLoc("block/crop/melon/qi_fruit_front"),    //北 north
+                provider.modLoc("block/crop/melon/qi_fruit_back"),    //南 sorth
+                provider.modLoc("block/crop/melon/qi_fruit_side"),    //西 west
+                provider.modLoc("block/crop/melon/qi_fruit_side_2")     //东 east
+            ).texture("particle", provider.modLoc("block/crop/melon/qi_fruit_back"));
+             provider.horizontalBlock(ctx.get(), model);
+        })
+        .tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL)
+        .register(); 
 
 //大型西瓜块侧边wan
 public static final BlockEntry<CommonBlock> WATERMELON_BLOCK_SIDE = REGISTRATE

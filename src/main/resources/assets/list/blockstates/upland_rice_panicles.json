@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "list:block/crop/grow/upland_rice/rice_panicles_stage0"
+    },
+    "age=1": {
+      "model": "list:block/crop/grow/upland_rice/rice_panicles_stage1"
+    },
+    "age=2": {
+      "model": "list:block/crop/grow/upland_rice/rice_panicles_stage2"
+    },
+    "age=3": {
+      "model": "list:block/crop/grow/upland_rice/rice_panicles_stage3"
+    }
+  }
+}
+

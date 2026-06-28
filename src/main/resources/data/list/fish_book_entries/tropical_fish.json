@@ -1,0 +1,13 @@
+{
+  "item": "minecraft:tropical_fish",
+  "order": 3,
+  "seasons": [
+    "list:season/all"
+  ],
+  "weather_tags": [
+    "list:weather/any"
+  ],
+  "time": "any",
+  "diet": "omnivore",
+  "habits": "saltwater"
+}

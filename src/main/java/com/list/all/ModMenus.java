@@ -3,6 +3,8 @@ package com.list.all;
 import com.list.client.screen.ForestryHybridizerScreen;
 import com.list.client.screen.ForestryGreenhouseScreen;
 import com.list.client.screen.FishPondScreen;
+import com.list.gameplay.fish_book.FishBookMenu;
+import com.list.gameplay.fish_book.FishBookScreen;
 import com.list.menu.ForestryGreenhouseMenu;
 import com.list.menu.ForestryHybridizerMenu;
 import com.list.menu.FishPondMenu;
@@ -44,6 +46,11 @@ public class ModMenus {
     @SuppressWarnings("DataFlowIssue")
     public static final MenuEntry<ForestryGreenhouseMenu> FORESTRY_GREENHOUSE = REGISTRATE
         .menu("forestry_greenhouse", ForestryGreenhouseMenu::new, () -> ForestryGreenhouseScreen::new)
+        .register();
+
+    @SuppressWarnings("DataFlowIssue")
+    public static final MenuEntry<FishBookMenu> FISH_BOOK = REGISTRATE
+        .menu("fish_book", (type, id, inventory, buffer) -> new FishBookMenu(type, id, inventory, buffer), () -> FishBookScreen::new)
         .register();
 
     @SuppressWarnings("unused")

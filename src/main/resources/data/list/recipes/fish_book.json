@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:book"
+    },
+    "F": {
+      "tag": "list:fish_pool/fish_river"
+    }
+  },
+  "pattern": [
+    " F ",
+    " B ",
+    "   "
+  ],
+  "result": {
+    "item": "list:fish_book"
+  },
+  "show_notification": true
+}
