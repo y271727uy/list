@@ -1,3 +1,4 @@
+/*
 package com.list.gameplay.fish_group.entity;
 
 import com.list.gameplay.fish_group.pool.FishPoolDefinition;
@@ -44,3 +45,4 @@ public class OceanFishPoolEntity extends AbstractFishPoolEntity {
     }
 }
 
+*/

@@ -1,5 +1,6 @@
 package com.list.gameplay.fish_group.client.model;
 
+
 import com.google.gson.JsonObject;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.CustomLoaderBuilder;

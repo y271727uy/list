@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "recipe_book_tab": "meals",
+  "ingredients": [
+    {
+      "item": "mooncake_delight:snow_skin_mooncake_crust_dough"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "manors_bounty:grated_coconut"
+    },
+    {
+      "item": "manors_bounty:grated_coconut"
+    },
+    {
+      "item": "vietnam_delight:sticky_rice"
+    },
+    {
+      "item": "vietnam_delight:sticky_rice"
+    }
+  ],
+  "result": {
+    "item": "list:snow_skin_coconut_mooncake",
+    "count": 1
+  },
+  "container": {
+    "item": "mooncake_delight:mooncake_mold",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "ingredient": {
+    "item": "list:raw_turkey"
+  },
+  "result": {
+    "count": 1,
+    "item": "list:cooked_turkey"
+  }
+}

@@ -1,3 +1,4 @@
+/*
 package com.list.gameplay.fish_group.pool;
 
 import com.google.gson.Gson;
@@ -505,6 +506,6 @@ public final class FishPoolLootManager extends SimpleJsonResourceReloadListener 
     }
 }
 
-
+*/
 
 

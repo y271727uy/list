@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "farmersdelight:tomato"
+    },
+    "B": {
+      "item": "farmersdelight:tomato"
+    },
+    "C": {
+      "item": "farmersdelight:tomato"
+    },
+    "D": {
+      "item": "farmersdelight:tomato"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:pure_tomato_feed",
+    "count": 2
+  }
+}

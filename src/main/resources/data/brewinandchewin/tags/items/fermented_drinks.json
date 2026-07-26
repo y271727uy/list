@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "list:sweet_berry_wine",
+    "list:glowberry_wine",
+    "list:rose_wine",
+    "list:hasting_wine",
+    "list:spumante",
+    "list:dragonborn_wine",
+    "list:hellhound_wine"
+  ]
+}

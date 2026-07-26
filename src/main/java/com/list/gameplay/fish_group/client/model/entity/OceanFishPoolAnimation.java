@@ -1,4 +1,6 @@
+/*
 package com.list.gameplay.fish_group.client.model.entity;
+
 
 import net.minecraft.client.animation.AnimationDefinition;
 
@@ -10,4 +12,4 @@ public final class OceanFishPoolAnimation {
     }
 }
 
-
+ */

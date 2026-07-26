@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "item": "list:stuffing"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "tag": "forge:cooked_turkey"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "list:roast_turkey_block"
+  }
+}

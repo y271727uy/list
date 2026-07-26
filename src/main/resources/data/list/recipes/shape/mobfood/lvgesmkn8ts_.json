@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "luncheonmeatsdelight:minced_pork"
+    },
+    "B": {
+      "item": "luncheonmeatsdelight:minced_pork"
+    },
+    "C": {
+      "item": "luncheonmeatsdelight:minced_pork"
+    },
+    "D": {
+      "item": "luncheonmeatsdelight:minced_pork"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:pure_porkchop_feed",
+    "count": 2
+  }
+}

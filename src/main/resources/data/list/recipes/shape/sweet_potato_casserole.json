@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "veggiesdelight:baked_sweet_potato"
+    },
+    {
+      "item": "veggiesdelight:baked_sweet_potato"
+    },
+    {
+      "item": "list:pecan"
+    },
+    {
+      "item": "list:pecan"
+    },
+    {
+      "item": "list:pan"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "list:sweet_potato_casserole_block"
+  }
+}

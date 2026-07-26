@@ -2,7 +2,7 @@
   "type": "forge:add_features",
   "biomes": [
     "minecraft:river",
-    "minecraft:ocean",
+    "minecraft:frozen_river",
     "minecraft:swamp",
     "minecraft:mangrove_swamp"
   ],

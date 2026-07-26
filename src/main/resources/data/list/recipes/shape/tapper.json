@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A  ",
+    "BCD",
+    "EF "
+  ],
+  "key": {
+    "A": {
+      "item": "forestry:impregnated_stick"
+    },
+    "B": {
+      "item": "minecraft:oak_planks"
+    },
+    "C": {
+      "item": "minecraft:bucket"
+    },
+    "D": {
+      "item": "minecraft:oak_planks"
+    },
+    "E": {
+      "item": "minecraft:iron_nugget"
+    },
+    "F": {
+      "item": "minecraft:oak_planks"
+    }
+  },
+  "result": {
+    "item": "list:tapper",
+    "count": 1
+  }
+}

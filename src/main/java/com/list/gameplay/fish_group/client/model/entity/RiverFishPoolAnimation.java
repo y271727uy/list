@@ -1,3 +1,4 @@
+/*
 package com.list.gameplay.fish_group.client.model.entity;
 
 import net.minecraft.client.animation.AnimationChannel;
@@ -482,3 +483,4 @@ public class RiverFishPoolAnimation {
         .build();
 }
 
+ */

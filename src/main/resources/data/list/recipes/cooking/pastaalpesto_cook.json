@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1,
+  "ingredients": [
+    {
+      "item": "minecraft:kelp",
+      "count": 1
+    },
+    {
+      "tag": "forge:pasta",
+      "count": 1
+    },
+    {
+      "tag": "forge:crops/onion",
+      "count": 1
+    }
+  ],
+  "recipe_book_tab": "Meals",
+  "result": {
+    "item": "list:pasta_al_pesto",
+    "count": 1
+  },
+  "container": {
+    "item": "minecraft:bowl"
+  }
+}

@@ -22,11 +22,18 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import com.list.block.ForestryHybridizerBlock;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 
 import static com.list.ListMod.REGISTRATE;
 
 public class ModBlocks {
+
+    private static final VoxelShape LARGE_MEAL_TRAY_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 2.0D, 15.0D);
+    private static final VoxelShape MUSHROOM_POT_PIE_SHAPE = Shapes.or(LARGE_MEAL_TRAY_SHAPE, Block.box(2.0D, 2.0D, 2.0D, 14.0D, 6.0D, 14.0D));
+    private static final VoxelShape OMURICE_SHAPE = Shapes.or(LARGE_MEAL_TRAY_SHAPE, Block.box(4.0D, 2.0D, 4.0D, 12.0D, 10.0D, 12.0D));
+    private static final VoxelShape ROASTED_MUTTON_RACK_SHAPE = Shapes.or(LARGE_MEAL_TRAY_SHAPE, Block.box(2.0D, 2.0D, 2.0D, 14.0D, 10.0D, 14.0D));
 
     public static final BlockEntry<GreenhouseFurnaceBlock> GREENHOUSE_FURNACE = REGISTRATE
             .listBLock("greenhouse_furnace", GreenhouseFurnaceBlock::new)
@@ -379,6 +386,52 @@ public class ModBlocks {
             .register();
 
 
+    public static final BlockEntry<FacingFiveStageFoodBlock> MUSHROOM_POT_PIE_BLOCK = REGISTRATE
+            .block("mushroom_pot_pie_block", ctx -> new FacingFiveStageFoodBlock(
+                    BlockBehaviour.Properties.copy(Blocks.CAKE).noOcclusion(),
+                    () -> ModItems.MUSHROOM_POT_PIE.get(),
+                    MUSHROOM_POT_PIE_SHAPE,
+                    LARGE_MEAL_TRAY_SHAPE,
+                    true
+            ))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.getExistingFile(prov.modLoc("item/mushroom_pot_pie_block")))
+            .build()
+            .blockstate((ctx, prov) -> {})
+            .register();
+
+    public static final BlockEntry<FacingFiveStageFoodBlock> OMURICE_BLOCK = REGISTRATE
+            .block("omurice_block", ctx -> new FacingFiveStageFoodBlock(
+                    BlockBehaviour.Properties.copy(Blocks.CAKE).noOcclusion(),
+                    () -> ModItems.OMURICE.get(),
+                    OMURICE_SHAPE,
+                    LARGE_MEAL_TRAY_SHAPE,
+                    true
+            ))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.getExistingFile(prov.modLoc("item/omurice_block")))
+            .build()
+            .blockstate((ctx, prov) -> {})
+            .register();
+
+    public static final BlockEntry<FacingFiveStageFoodBlock> ROASTED_MUTTON_RACK_BLOCK = REGISTRATE
+            .block("roasted_mutton_rack_block", ctx -> new FacingFiveStageFoodBlock(
+                    BlockBehaviour.Properties.copy(Blocks.CAKE).noOcclusion(),
+                    () -> ModItems.ROASTED_MUTTON_RACK.get(),
+                    ROASTED_MUTTON_RACK_SHAPE,
+                    LARGE_MEAL_TRAY_SHAPE,
+                    true
+            ))
+            .initialProperties(() -> Blocks.CAKE)
+            .item()
+            .model((ctx, prov) -> prov.getExistingFile(prov.modLoc("item/roasted_mutton_rack_block")))
+            .build()
+            .blockstate((ctx, prov) -> {})
+            .register();
+
+
     //草菇
     public static final BlockEntry<StrawMushroomBlock> STRAW_MUSHROOM = REGISTRATE
             .block("straw_mushroom", StrawMushroomBlock::new)
@@ -492,6 +545,28 @@ public class ModBlocks {
             //.loot((lt, block) -> {})
             .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
             .register();
+   //有洞的繁茂洞穴粘土
+    public static final BlockEntry<Block> BURROWED_LUSH_CAVES_CLAY = REGISTRATE
+            .block("burrowed_lush_caves_clay", Block::new)
+            .initialProperties(() -> Blocks.CLAY)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.mcLoc("block/clay"),         //底部 up
+                        provider.modLoc("block/sea_food_hole/burrowed_clay"),     //顶部 dowm
+                        provider.mcLoc("block/clay"),    //北 north
+                        provider.mcLoc("block/clay"),    //南 sorth
+                        provider.mcLoc("block/clay"),    //西 west
+                        provider.mcLoc("block/clay")     //东 east
+                ).texture("particle", provider.mcLoc("block/clay"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_SHOVEL)
+            //.loot(NonNullBiConsumer.noop())
+            //.loot((lt, block) -> {})
+            .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
+            .register();
     //有洞的沙子
     public static final BlockEntry<FallingBlock> BURROWED_SAND = REGISTRATE
             .block("burrowed_sand", FallingBlock::new)
@@ -514,9 +589,53 @@ public class ModBlocks {
             //.loot((lt, block) -> {})
             .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
             .register();
+    //有洞的河流沙子
+    public static final BlockEntry<FallingBlock> BURROWED_RIVER_SAND = REGISTRATE
+            .block("burrowed_river_sand", FallingBlock::new)
+            .initialProperties(() -> Blocks.SAND)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.mcLoc("block/sand"),         //底部 up
+                        provider.modLoc("block/sea_food_hole/burrowed_sand"),     //顶部 dowm
+                        provider.mcLoc("block/sand"),    //北 north
+                        provider.mcLoc("block/sand"),    //南 sorth
+                        provider.mcLoc("block/sand"),    //西 west
+                        provider.mcLoc("block/sand")     //东 east
+                ).texture("particle", provider.mcLoc("block/sand"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_SHOVEL)
+            //.loot(NonNullBiConsumer.noop())
+            //.loot((lt, block) -> {})
+            .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
+            .register();
     //有洞的沙砾
     public static final BlockEntry<FallingBlock> BURROWED_GRAVEL = REGISTRATE
             .block("burrowed_gravel", FallingBlock::new)
+            .initialProperties(() -> Blocks.GRAVEL)
+            .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.mcLoc("block/gravel"),         //底部 up
+                        provider.modLoc("block/sea_food_hole/burrowed_gravel"),     //顶部 dowm
+                        provider.mcLoc("block/gravel"),    //北 north
+                        provider.mcLoc("block/gravel"),    //南 sorth
+                        provider.mcLoc("block/gravel"),    //西 west
+                        provider.mcLoc("block/gravel")     //东 east
+                ).texture("particle", provider.mcLoc("block/gravel"));
+                provider.simpleBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_SHOVEL)
+            //.loot(NonNullBiConsumer.noop())
+            //.loot((lt, block) -> {})
+            .loot((lt, block) -> lt.add(block, LootTable.lootTable()))
+            .register();
+    //有洞的河流沙砾
+    public static final BlockEntry<FallingBlock> BURROWED_RIVER_GRAVEL = REGISTRATE
+            .block("burrowed_river_gravel", FallingBlock::new)
             .initialProperties(() -> Blocks.GRAVEL)
             .simpleItem()
             .blockstate((ctx, provider) -> {

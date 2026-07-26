@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "farmersdelight:minced_beef"
+    },
+    "B": {
+      "item": "farmersdelight:minced_beef"
+    },
+    "C": {
+      "item": "farmersdelight:minced_beef"
+    },
+    "D": {
+      "item": "farmersdelight:minced_beef"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:pure_beef_feed",
+    "count": 2
+  }
+}

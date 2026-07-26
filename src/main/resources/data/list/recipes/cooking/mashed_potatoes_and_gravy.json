@@ -1,0 +1,24 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "item": "list:pan"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "farmersdelight:onion"
+    },
+    {
+      "tag": "forge:milk/milk"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "item": "list:mashed_potatoes_and_gravy"
+  }
+}

@@ -1,3 +1,4 @@
+/*
 package com.list.gameplay.fish_group.client.model.entity.client;
 
 import com.list.ListMod;
@@ -41,4 +42,4 @@ public class OceanFishPoolRenderer extends EntityRenderer<OceanFishPoolEntity> {
         super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
     }
 }
-
+ */

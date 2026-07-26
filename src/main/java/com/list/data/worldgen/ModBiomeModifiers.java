@@ -16,8 +16,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> DISK_BURROWED_SAND = create("disk_burrowed_sand");
+    public static final ResourceKey<BiomeModifier> DISK_BURROWED_RIVER_SAND = create("disk_burrowed_river_sand");
     public static final ResourceKey<BiomeModifier> DISK_BURROWED_GRAVEL = create("disk_burrowed_gravel");
+    public static final ResourceKey<BiomeModifier> DISK_BURROWED_RIVER_GRAVEL = create("disk_burrowed_river_gravel");
     public static final ResourceKey<BiomeModifier> DISK_BURROWED_CLAY = create("disk_burrowed_clay");
+    public static final ResourceKey<BiomeModifier> DISK_BURROWED_LUSH_CAVES_CLAY = create("disk_burrowed_lush_caves_clay");
     public static final ResourceKey<BiomeModifier> DISK_BURROWED_DIRT = create("disk_burrowed_dirt");
     public static final ResourceKey<BiomeModifier> DISK_BURROWED_MUD = create("disk_burrowed_mud");
 
@@ -65,13 +68,53 @@ public class ModBiomeModifiers {
         );
 
         context.register(
+                DISK_BURROWED_RIVER_SAND,
+                new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                        HolderSet.direct(
+                                biomes.getOrThrow(Biomes.RIVER),
+                                biomes.getOrThrow(Biomes.FROZEN_RIVER),
+                                biomes.getOrThrow(Biomes.SWAMP),
+                                biomes.getOrThrow(Biomes.MANGROVE_SWAMP)
+                        ),
+                        HolderSet.direct(features.getOrThrow(ModPlacedFeatures.DISK_BURROWED_RIVER_SAND)),
+                        GenerationStep.Decoration.UNDERGROUND_ORES
+                )
+        );
+
+        context.register(
+                DISK_BURROWED_RIVER_GRAVEL,
+                new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                        HolderSet.direct(
+                                biomes.getOrThrow(Biomes.RIVER),
+                                biomes.getOrThrow(Biomes.FROZEN_RIVER),
+                                biomes.getOrThrow(Biomes.SWAMP),
+                                biomes.getOrThrow(Biomes.MANGROVE_SWAMP)
+                        ),
+                        HolderSet.direct(features.getOrThrow(ModPlacedFeatures.DISK_BURROWED_RIVER_GRAVEL)),
+                        GenerationStep.Decoration.UNDERGROUND_ORES
+                )
+        );
+
+        context.register(
                 DISK_BURROWED_CLAY,
                 new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                         HolderSet.direct(
                                 biomes.getOrThrow(Biomes.RIVER),
+                                biomes.getOrThrow(Biomes.FROZEN_RIVER),
                                 biomes.getOrThrow(Biomes.SWAMP)
                         ),
                         HolderSet.direct(features.getOrThrow(ModPlacedFeatures.DISK_BURROWED_CLAY)),
+                        GenerationStep.Decoration.UNDERGROUND_ORES
+                )
+        );
+
+        context.register(
+                DISK_BURROWED_LUSH_CAVES_CLAY,
+                new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                        HolderSet.direct(
+                                biomes.getOrThrow(Biomes.LUSH_CAVES)
+                        ),
+                        HolderSet.direct(features.getOrThrow(ModPlacedFeatures.DISK_BURROWED_LUSH_CAVES_CLAY)),
                         GenerationStep.Decoration.UNDERGROUND_ORES
                 )
         );
@@ -81,7 +124,7 @@ public class ModBiomeModifiers {
                 new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                         HolderSet.direct(
                                 biomes.getOrThrow(Biomes.RIVER),
-                                biomes.getOrThrow(Biomes.OCEAN),
+                                biomes.getOrThrow(Biomes.FROZEN_RIVER),
                                 biomes.getOrThrow(Biomes.SWAMP),
                                 biomes.getOrThrow(Biomes.MANGROVE_SWAMP)
                         ),

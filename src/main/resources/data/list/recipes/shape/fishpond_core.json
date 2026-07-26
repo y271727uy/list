@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:smooth_stone"
+    },
+    "B": {
+      "item": "minecraft:smooth_stone"
+    },
+    "C": {
+      "item": "minecraft:smooth_stone"
+    },
+    "D": {
+      "item": "minecraft:iron_ingot"
+    },
+    "E": {
+      "item": "minecraft:bucket"
+    },
+    "F": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:smooth_stone"
+    },
+    "H": {
+      "item": "minecraft:smooth_stone"
+    },
+    "I": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "result": {
+    "item": "list:fishpond_core",
+    "count": 1
+  }
+}

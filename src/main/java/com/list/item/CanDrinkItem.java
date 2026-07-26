@@ -12,9 +12,8 @@ public class CanDrinkItem extends DrinkItem {
 	}
 
 	@Override
-	public @Nonnull ItemStack finishUsingItem(@Nonnull ItemStack stack, @Nonnull Level level, @Nonnull LivingEntity livingEntity) {
-		ItemStack result = super.finishUsingItem(stack, level, livingEntity);
-		return result.isEmpty() ? new ItemStack(ModItems.CAN.get()) : result;
+	protected ItemStack getFinishedContainerItem(@Nonnull ItemStack stack, @Nonnull Level level, @Nonnull LivingEntity livingEntity) {
+		return new ItemStack(ModItems.CAN.get());
 	}
 }
 

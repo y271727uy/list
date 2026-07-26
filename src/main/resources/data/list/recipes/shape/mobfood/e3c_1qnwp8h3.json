@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:beef"
+    },
+    "B": {
+      "item": "youkaishomecoming:raw_boarchop"
+    },
+    "C": {
+      "item": "minecraft:beef"
+    },
+    "D": {
+      "item": "youkaishomecoming:raw_boarchop"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:advanced_pure_meat_feed",
+    "count": 2
+  }
+}

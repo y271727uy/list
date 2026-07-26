@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:beef"
+    },
+    "B": {
+      "item": "mynethersdelight:hoglin_loin"
+    },
+    "C": {
+      "item": "minecraft:beef"
+    },
+    "D": {
+      "item": "mynethersdelight:hoglin_loin"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:advanced_pure_meat_feed",
+    "count": 2
+  }
+}

@@ -1,3 +1,4 @@
+/*
 package com.list.gameplay.fish_group.pool;
 
 import net.minecraft.core.BlockPos;
@@ -128,5 +129,5 @@ public record FishPoolDefinition(
         public abstract boolean matches(ServerLevel level);
     }
 }
-
+*/
 

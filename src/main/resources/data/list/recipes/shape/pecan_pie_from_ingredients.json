@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "farmersdelight:pie_crust"
+    },
+    "P": {
+      "item": "list:pecan"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "pattern": [
+    "WWW",
+    "PPP",
+    "SCS"
+  ],
+  "result": {
+    "count": 1,
+    "item": "list:pecan_pie"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "manors_bounty:tomato"
+    },
+    "B": {
+      "item": "manors_bounty:tomato"
+    },
+    "C": {
+      "item": "manors_bounty:tomato"
+    },
+    "D": {
+      "item": "manors_bounty:tomato"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:pure_tomato_feed",
+    "count": 2
+  }
+}

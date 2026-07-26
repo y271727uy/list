@@ -1,4 +1,6 @@
+/*
 package com.list.gameplay.fish_group.client.model.entity.client.model;
+
 
 import com.google.gson.JsonObject;
 import net.minecraft.resources.ResourceLocation;
@@ -35,3 +37,4 @@ public class HaloModelBuilder<T extends ModelBuilder<T>> extends CustomLoaderBui
         return jsonObject;
     }
 }
+ */

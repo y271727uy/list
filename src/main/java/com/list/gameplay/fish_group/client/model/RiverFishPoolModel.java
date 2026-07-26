@@ -1,3 +1,4 @@
+/*
 package com.list.gameplay.fish_group.client.model;
 
 import com.list.ListMod;
@@ -138,3 +139,4 @@ public class RiverFishPoolModel<T extends RiverFishPoolEntity> extends Hierarchi
         river_swarm.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 }
+ */

@@ -1,0 +1,18 @@
+{
+  "type": "brewinandchewin:fermenting",
+  "experience": 0.6,
+  "fermentingtime": 12000,
+  "ingredients": [
+  	  	    {      "item": "minecraft:glass_bottle"    },
+    {      "tag": "forge:grapes"    },
+    {      "item": "minecraft:sugar"    },
+    {      "item": "list:sweet_berry_wine"    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": 
+  {    
+  	"count": 1,
+    "item": "list:spumante"
+  },
+  "temperature": 3
+}

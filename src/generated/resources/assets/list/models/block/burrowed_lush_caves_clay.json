@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/clay",
+    "east": "minecraft:block/clay",
+    "north": "minecraft:block/clay",
+    "particle": "minecraft:block/clay",
+    "south": "minecraft:block/clay",
+    "up": "list:block/sea_food_hole/burrowed_clay",
+    "west": "minecraft:block/clay"
+  }
+}

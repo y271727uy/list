@@ -94,6 +94,8 @@ public class ModLangs {
 
         provider.add("gui.list.category.forestry_hybridizer", "Forestry Hybridizer");
         provider.add("gui.list.category.forestry_hybridizer.chance", "Chance: %s%%");
+        provider.add("gui.list.category.tapper", "Tapper");
+        provider.add("gui.list.category.tapper.time", "Time: %s");
 
         provider.add("item.list.purple_drink.desc.1", "§7§oHow about some lemonade? Or maybe some ice tea? I got a Purple Drink!");
         provider.add("item.list.purple_drink.desc.2", "§9From:GregTech");

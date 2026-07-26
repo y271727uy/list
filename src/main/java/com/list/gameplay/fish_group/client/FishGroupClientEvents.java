@@ -1,3 +1,4 @@
+/*
 package com.list.gameplay.fish_group.client;
 
 import com.list.ListMod;
@@ -41,3 +42,4 @@ public final class FishGroupClientEvents {
 }
 
 
+*/

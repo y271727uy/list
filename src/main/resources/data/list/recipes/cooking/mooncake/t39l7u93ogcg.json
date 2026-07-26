@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "recipe_book_tab": "meals",
+  "ingredients": [
+    {
+      "item": "mooncake_delight:mooncake_crust_dough"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "nethervinery:crimson_grape"
+    },
+    {
+      "item": "nethervinery:crimson_grape"
+    },
+    {
+      "item": "nethervinery:crimson_grape"
+    }
+  ],
+  "result": {
+    "item": "list:crimson_grape_mooncake",
+    "count": 1
+  },
+  "container": {
+    "item": "mooncake_delight:mooncake_mold",
+    "count": 1
+  }
+}

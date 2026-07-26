@@ -1,3 +1,4 @@
+/*
 package com.list.data;
 
 import com.google.gson.JsonArray;
@@ -67,5 +68,6 @@ public class FishPoolLootTableProvider implements DataProvider {
         return "Fish Pool Loot Tables";
     }
 }
+*/
 
 

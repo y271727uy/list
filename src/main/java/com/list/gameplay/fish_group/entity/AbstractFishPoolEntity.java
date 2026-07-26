@@ -1,3 +1,4 @@
+/*
 package com.list.gameplay.fish_group.entity;
 
 import com.list.ListMod;
@@ -248,4 +249,4 @@ public abstract class AbstractFishPoolEntity extends FishPoolBaseEntity {
 }
 
 
-
+*/

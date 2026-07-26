@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "list:pandoro",
+      "count": 1
+    }
+  ],
+  "result": [
+    {
+      "item": "list:pandoro_slice",
+      "count": 8,
+      "chance": 1
+    }
+  ],
+  "sound": "",
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

@@ -1,3 +1,4 @@
+/*
 package com.list.gameplay.fish_group.pool;
 
 import com.google.gson.JsonObject;
@@ -93,3 +94,4 @@ public record FishPoolLootEntryDefinition(
     }
 }
 
+*/

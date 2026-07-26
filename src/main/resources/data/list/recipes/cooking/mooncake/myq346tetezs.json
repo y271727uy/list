@@ -1,0 +1,33 @@
+{
+  "type": "farmersdelight:cooking",
+  "recipe_book_tab": "meals",
+  "ingredients": [
+    {
+      "item": "mooncake_delight:mooncake_crust_dough"
+    },
+    {
+      "item": "mooncake_delight:sugar_cube"
+    },
+    {
+      "item": "manors_bounty:black_olive_fruit"
+    },
+    {
+      "item": "manors_bounty:black_olive_fruit"
+    },
+    {
+      "item": "manors_bounty:black_olive_fruit"
+    },
+    {
+      "item": "manors_bounty:black_olive_fruit"
+    }
+  ],
+  "result": {
+    "item": "list:black_olive_fruit_mooncake",
+    "count": 1
+  },
+  "container": {
+    "item": "mooncake_delight:mooncake_mold",
+    "count": 1
+  },
+  "cookingtime": 400
+}

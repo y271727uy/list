@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "recipe_book_tab": "meals",
+  "ingredients": [
+    {
+      "item": "mooncake_delight:mooncake_crust_dough"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "collectorsreap:pink_dragon_fruit"
+    },
+    {
+      "item": "collectorsreap:pink_dragon_fruit"
+    },
+    {
+      "item": "collectorsreap:pink_dragon_fruit"
+    }
+  ],
+  "result": {
+    "item": "list:red_dragon_fruit_mooncake",
+    "count": 1
+  },
+  "container": {
+    "item": "mooncake_delight:mooncake_mold",
+    "count": 1
+  }
+}

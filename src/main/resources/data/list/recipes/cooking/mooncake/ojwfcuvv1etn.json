@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "recipe_book_tab": "meals",
+  "ingredients": [
+    {
+      "item": "mooncake_delight:mooncake_crust_dough"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "oceanic_delight:sea_grape"
+    },
+    {
+      "item": "oceanic_delight:sea_grape"
+    },
+    {
+      "item": "oceanic_delight:sea_grape"
+    }
+  ],
+  "result": {
+    "item": "list:sea_grape_mooncake",
+    "count": 1
+  },
+  "container": {
+    "item": "mooncake_delight:mooncake_mold",
+    "count": 1
+  }
+}

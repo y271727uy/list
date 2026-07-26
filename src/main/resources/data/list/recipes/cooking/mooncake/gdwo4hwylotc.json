@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "recipe_book_tab": "meals",
+  "ingredients": [
+    {
+      "item": "mooncake_delight:mooncake_crust_dough"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "manors_bounty:passion_fruit_slice"
+    },
+    {
+      "item": "manors_bounty:passion_fruit_slice"
+    },
+    {
+      "item": "manors_bounty:passion_fruit_slice"
+    }
+  ],
+  "result": {
+    "item": "list:passion_fruit_mooncake",
+    "count": 1
+  },
+  "container": {
+    "item": "mooncake_delight:mooncake_mold",
+    "count": 1
+  }
+}

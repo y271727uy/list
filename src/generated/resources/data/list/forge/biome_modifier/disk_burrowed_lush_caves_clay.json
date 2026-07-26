@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:lush_caves",
+  "features": "list:disk_burrowed_lush_caves_clay",
+  "step": "underground_ores"
+}

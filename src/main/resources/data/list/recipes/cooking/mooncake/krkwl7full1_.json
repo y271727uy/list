@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "recipe_book_tab": "meals",
+  "ingredients": [
+    {
+      "item": "mooncake_delight:mooncake_crust_dough"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "nethers_exoticism:jaboticaba"
+    },
+    {
+      "item": "nethers_exoticism:jaboticaba"
+    },
+    {
+      "item": "nethers_exoticism:jaboticaba"
+    }
+  ],
+  "result": {
+    "item": "list:jabuticaba_mooncake",
+    "count": 1
+  },
+  "container": {
+    "item": "mooncake_delight:mooncake_mold",
+    "count": 1
+  }
+}

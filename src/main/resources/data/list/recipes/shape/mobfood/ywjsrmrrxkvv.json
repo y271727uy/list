@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "fruitsdelight:peach"
+    },
+    "B": {
+      "item": "list:yellow_peach"
+    },
+    "C": {
+      "item": "fruitsdelight:peach"
+    },
+    "D": {
+      "item": "list:yellow_peach"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:advanced_pure_peach_feed",
+    "count": 2
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "c:nuggets/iron"
+    }
+  },
+  "pattern": [
+    "I I",
+    "III"
+  ],
+  "result": {
+    "count": 1,
+    "item": "list:pan"
+  }
+}

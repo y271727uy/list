@@ -72,10 +72,24 @@ Project Name:Mooncake Delight
 Copyright (c) 2026 Wither_Redstone
 License: MIT
 
-Project Name:
-Copyright (c) 
+Project Name:Large Meals
+Copyright (c) FoundWiz
+License: MIT
+
+Project Name:Simple Farming
+Copyright (c) enemeez1
 License: MIT
 
 Project Name:
-Copyright (c) 
+Copyright (c)
 License: MIT
+
+
+CC-BY-NC-ND-4.0
+source text:https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+Project Name:
+Author:
+Copyright (c)
+License: CC BY-NC-ND 4.0
+License URL: https://creativecommons.org/licenses/by-nc-nd/4.0/

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:porkchop"
+    },
+    "B": {
+      "item": "minecraft:porkchop"
+    },
+    "C": {
+      "item": "minecraft:porkchop"
+    },
+    "D": {
+      "item": "minecraft:porkchop"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:pure_porkchop_feed",
+    "count": 2
+  }
+}

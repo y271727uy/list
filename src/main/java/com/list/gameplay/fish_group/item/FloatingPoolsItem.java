@@ -1,4 +1,5 @@
- package com.list.gameplay.fish_group.item;
+ /*
+package com.list.gameplay.fish_group.item;
 
 import com.list.gameplay.fish_group.entity.AbstractFishPoolEntity;
 import net.minecraft.MethodsReturnNonnullByDefault;
@@ -91,5 +92,5 @@ public class FloatingPoolsItem extends Item {
                 .setStyle(Style.EMPTY.withColor(TextColor.fromRgb(0xD27D46)).withItalic(true)));
     }
 }
-
+*/
 

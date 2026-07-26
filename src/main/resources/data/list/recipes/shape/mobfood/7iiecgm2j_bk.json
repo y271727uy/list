@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "avaritia_delight:blaze_tomato"
+    },
+    "B": {
+      "item": "avaritia_delight:blaze_tomato"
+    },
+    "C": {
+      "item": "avaritia_delight:blaze_tomato"
+    },
+    "D": {
+      "item": "avaritia_delight:blaze_tomato"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:pure_tomato_feed",
+    "count": 2
+  }
+}

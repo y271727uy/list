@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "mynethersdelight:hoglin_loin"
+    },
+    "B": {
+      "item": "mynethersdelight:hoglin_loin"
+    },
+    "C": {
+      "item": "mynethersdelight:hoglin_loin"
+    },
+    "D": {
+      "item": "mynethersdelight:hoglin_loin"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:pure_porkchop_feed",
+    "count": 2
+  }
+}

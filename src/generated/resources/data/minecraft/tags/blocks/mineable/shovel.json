@@ -1,8 +1,11 @@
 {
   "values": [
     "list:burrowed_clay",
+    "list:burrowed_lush_caves_clay",
     "list:burrowed_sand",
+    "list:burrowed_river_sand",
     "list:burrowed_gravel",
+    "list:burrowed_river_gravel",
     "list:burrowed_dirt",
     "list:burrowed_mud"
   ]

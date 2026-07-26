@@ -8,6 +8,7 @@ import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
@@ -17,8 +18,11 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> DISK_BURROWED_SAND = create("disk_burrowed_sand");
+    public static final ResourceKey<PlacedFeature> DISK_BURROWED_RIVER_SAND = create("disk_burrowed_river_sand");
     public static final ResourceKey<PlacedFeature> DISK_BURROWED_GRAVEL = create("disk_burrowed_gravel");
+    public static final ResourceKey<PlacedFeature> DISK_BURROWED_RIVER_GRAVEL = create("disk_burrowed_river_gravel");
     public static final ResourceKey<PlacedFeature> DISK_BURROWED_CLAY = create("disk_burrowed_clay");
+    public static final ResourceKey<PlacedFeature> DISK_BURROWED_LUSH_CAVES_CLAY = create("disk_burrowed_lush_caves_clay");
     public static final ResourceKey<PlacedFeature> DISK_BURROWED_DIRT = create("disk_burrowed_dirt");
     public static final ResourceKey<PlacedFeature> DISK_BURROWED_MUD = create("disk_burrowed_mud");
 
@@ -28,6 +32,17 @@ public class ModPlacedFeatures {
                 context,
                 DISK_BURROWED_SAND,
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.DISK_BURROWED_SAND),
+                List.of(
+                        InSquarePlacement.spread(),
+                        PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
+                        BiomeFilter.biome()
+                )
+        );
+
+        register(
+                context,
+                DISK_BURROWED_RIVER_SAND,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.DISK_BURROWED_RIVER_SAND),
                 List.of(
                         InSquarePlacement.spread(),
                         PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
@@ -49,11 +64,42 @@ public class ModPlacedFeatures {
 
         register(
                 context,
+                DISK_BURROWED_RIVER_GRAVEL,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.DISK_BURROWED_RIVER_GRAVEL),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(3),
+                        InSquarePlacement.spread(),
+                        PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
+                        BiomeFilter.biome()
+                )
+        );
+
+        register(
+                context,
                 DISK_BURROWED_CLAY,
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.DISK_BURROWED_CLAY),
                 List.of(
                         InSquarePlacement.spread(),
                         PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
+                        BiomeFilter.biome()
+                )
+        );
+
+        register(
+                context,
+                DISK_BURROWED_LUSH_CAVES_CLAY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.DISK_BURROWED_LUSH_CAVES_CLAY),
+                List.of(
+                        CountPlacement.of(60),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(64)),
+                        BlockPredicateFilter.forPredicate(BlockPredicate.anyOf(
+                                BlockPredicate.matchesFluids(Direction.UP.getNormal(), Fluids.WATER),
+                                BlockPredicate.matchesFluids(Direction.NORTH.getNormal(), Fluids.WATER),
+                                BlockPredicate.matchesFluids(Direction.SOUTH.getNormal(), Fluids.WATER),
+                                BlockPredicate.matchesFluids(Direction.WEST.getNormal(), Fluids.WATER),
+                                BlockPredicate.matchesFluids(Direction.EAST.getNormal(), Fluids.WATER)
+                        )),
                         BiomeFilter.biome()
                 )
         );

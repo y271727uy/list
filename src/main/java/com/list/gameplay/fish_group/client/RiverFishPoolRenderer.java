@@ -1,3 +1,4 @@
+/*
 package com.list.gameplay.fish_group.client;
 
 import com.list.ListMod;
@@ -41,4 +42,4 @@ public class RiverFishPoolRenderer extends EntityRenderer<RiverFishPoolEntity> {
         super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
     }
 }
-
+*/

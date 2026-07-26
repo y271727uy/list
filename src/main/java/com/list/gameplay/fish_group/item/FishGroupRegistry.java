@@ -1,3 +1,4 @@
+/*
 package com.list.gameplay.fish_group.item;
 
 import com.list.ListMod;
@@ -97,3 +98,4 @@ public final class FishGroupRegistry {
     }
 }
 
+*/

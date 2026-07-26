@@ -30,7 +30,7 @@ public class TapperRecipe {
     public static final TapperRecipe[] RECIPES = {
             new TapperRecipe("yeastnfeast:maple_log", "yeastnfeast:maple_syrup", 24000, "minecraft:glass_bottle"),
             new TapperRecipe("forestry:maple_log", "yeastnfeast:maple_syrup", 24000, "minecraft:glass_bottle"),
-            new TapperRecipe("minecraft:birch_log", "'cosmopolitan:birch_sap_bottle'", 24000, "minecraft:glass_bottle"),
+            new TapperRecipe("minecraft:birch_log", "cosmopolitan:birch_sap_bottle", 24000, "minecraft:glass_bottle"),
             new TapperRecipe("foragersinsight:sappy_birch_log", "foragersinsight:birch_syrup_bottle", 30000, "minecraft:glass_bottle"),
 
             new TapperRecipe("alexscaves:pewen_log","alexscaves:pewen_sap",30000,null),

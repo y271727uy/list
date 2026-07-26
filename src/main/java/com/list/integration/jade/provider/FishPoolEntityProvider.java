@@ -1,3 +1,4 @@
+/*
 package com.list.integration.jade.provider;
 
 import com.list.ListMod;
@@ -60,4 +61,4 @@ public enum FishPoolEntityProvider implements IEntityComponentProvider, IServerD
     }
 }
 
-
+*/

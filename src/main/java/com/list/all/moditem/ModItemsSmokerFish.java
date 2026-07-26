@@ -17,7 +17,7 @@ public class ModItemsSmokerFish {
                     .saturationMod(0.6f)
                     .build()))
             .model((ctx, provider) -> ItemModelUtil.smokerFishModel(ctx, provider,
-                    provider.mcLoc("item/cod"),
+                    provider.mcLoc("item/cod"),   //fish_slice_base  /food/component/   item/cod
                     ListMod.rl("item/food/component/smoke_lite")))
             .register();
 

@@ -7,7 +7,7 @@ import com.list.all.ModItems;
 import com.list.all.ModMenus;
 import com.list.all.ModRecipes;
 import com.list.data.ModDataGen;
-import com.list.gameplay.fish_group.item.FishGroupRegistry;
+//import com.list.gameplay.fish_group.item.FishGroupRegistry;
 import com.list.network.ModMessages;
 import com.list.registration.ListRegistrate;
 import net.minecraft.resources.ResourceLocation;
@@ -41,7 +41,7 @@ public class ListMod
         ModCreativeModeTabs.register(modEventBus);
         ModMenus.register();
         ModRecipes.register(modEventBus);
-        FishGroupRegistry.register(modEventBus);
+        //FishGroupRegistry.register(modEventBus);
         
         modEventBus.addListener(this::commonSetup);
         

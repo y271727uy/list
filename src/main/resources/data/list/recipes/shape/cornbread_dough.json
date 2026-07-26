@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "list:crops_corn"
+    },
+    {
+      "tag": "c:foods/milk"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "tag": "c:eggs"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "list:cornbread_dough"
+  }
+}

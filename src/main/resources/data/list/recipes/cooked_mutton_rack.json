@@ -1,0 +1,10 @@
+﻿{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "list:raw_mutton_rack"
+  },
+  "result": "list:cooked_mutton_rack"
+}

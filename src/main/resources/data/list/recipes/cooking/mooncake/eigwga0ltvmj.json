@@ -1,0 +1,33 @@
+{
+  "type": "farmersdelight:cooking",
+  "recipe_book_tab": "meals",
+  "ingredients": [
+    {
+      "item": "mooncake_delight:mooncake_crust_dough"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "fruitsdelight:hamimelon_slice"
+    },
+    {
+      "item": "fruitsdelight:hamimelon_slice"
+    },
+    {
+      "item": "fruitsdelight:hamimelon_slice"
+    }
+  ],
+  "result": {
+    "item": "list:cantaloupe_mooncake",
+    "count": 1
+  },
+  "container": {
+    "item": "mooncake_delight:mooncake_mold",
+    "count": 1
+  },
+  "cookingtime": 300
+}

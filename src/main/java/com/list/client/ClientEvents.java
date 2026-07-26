@@ -1,13 +1,17 @@
 package com.list.client;
 
 import com.list.ListMod;
+/*
 import com.list.gameplay.fish_group.item.FishGroupRegistry;
 import com.list.gameplay.fish_group.client.model.OceanFishPoolModel;
 import com.list.gameplay.fish_group.client.model.RiverFishPoolModel;
 import com.list.gameplay.fish_group.client.OceanFishPoolRenderer;
 import com.list.gameplay.fish_group.client.RiverFishPoolRenderer;
+*/
+/*
 import com.list.integration.jei.tooltip.SellingBinClientTooltipComponent;
 import com.list.integration.jei.tooltip.SellingBinTooltipComponent;
+*/
 import com.list.client.model.LayeredItemModel;
 import com.list.item.util.EggItem;
 import com.list.item.util.JellyItem;
@@ -29,6 +33,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class ClientEvents {
     @Mod.EventBusSubscriber(modid = ListMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ModBusEvents {
+        /*
         @SubscribeEvent
         public static void clientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> ItemProperties.register(
@@ -49,7 +54,9 @@ public class ClientEvents {
                     }
             ));
         }
+        */
 
+        /*
         @SubscribeEvent
         @SuppressWarnings("unchecked")
         public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
@@ -66,12 +73,15 @@ public class ClientEvents {
                 }
             }
         }
+        */
 
+        /*
         @SubscribeEvent
         public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
             event.registerLayerDefinition(RiverFishPoolModel.LAYER_LOCATION, RiverFishPoolModel::getTexturedModelData);
             event.registerLayerDefinition(OceanFishPoolModel.LAYER_LOCATION, OceanFishPoolModel::getTexturedModelData);
         }
+        */
 
         @SubscribeEvent
         public static void registerModelLoaders(ModelEvent.RegisterGeometryLoaders event) {
@@ -101,11 +111,11 @@ public class ClientEvents {
             }
         }
 
+        /*
         @SubscribeEvent
         public static void registerTooltipComponents(RegisterClientTooltipComponentFactoriesEvent event) {
             event.register(SellingBinTooltipComponent.class, SellingBinClientTooltipComponent::new);
         }
+        */
     }
 }
-
-

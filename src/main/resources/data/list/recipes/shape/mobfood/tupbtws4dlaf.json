@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "untameddelight:boar_chop"
+    },
+    "B": {
+      "item": "untameddelight:boar_chop"
+    },
+    "C": {
+      "item": "untameddelight:boar_chop"
+    },
+    "D": {
+      "item": "untameddelight:boar_chop"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:pure_porkchop_feed",
+    "count": 2
+  }
+}

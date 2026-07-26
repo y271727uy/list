@@ -34,25 +34,29 @@ public class DrinkItem extends Item {
     @Override
     public @Nonnull ItemStack finishUsingItem(@Nonnull ItemStack stack, @Nonnull Level level, @Nonnull LivingEntity livingEntity) {
         ItemStack result = super.finishUsingItem(stack, level, livingEntity);
-        ItemStack bottle = new ItemStack(Items.GLASS_BOTTLE);
+        ItemStack container = getFinishedContainerItem(stack, level, livingEntity);
 
-        if (livingEntity instanceof Player player && player.getAbilities().instabuild) {
+        if (container.isEmpty() || livingEntity instanceof Player player && player.getAbilities().instabuild) {
             return result;
         }
 
         if (result.isEmpty()) {
-            return bottle;
+            return container;
         }
 
         if (livingEntity instanceof Player player) {
-            if (!player.getInventory().add(bottle)) {
-                player.drop(bottle, false);
+            if (!player.getInventory().add(container)) {
+                player.drop(container, false);
             }
         } else {
-            livingEntity.spawnAtLocation(bottle);
+            livingEntity.spawnAtLocation(container);
         }
 
         return result;
+    }
+
+    protected ItemStack getFinishedContainerItem(@Nonnull ItemStack stack, @Nonnull Level level, @Nonnull LivingEntity livingEntity) {
+        return new ItemStack(Items.GLASS_BOTTLE);
     }
 }
 

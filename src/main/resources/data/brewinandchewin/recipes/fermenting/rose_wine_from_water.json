@@ -1,0 +1,22 @@
+{
+  "type": "brewinandchewin:fermenting",
+  "basefluid": {
+    "count": 1000,
+    "fluid": "minecraft:water"
+  },
+  "experience": 0.6,
+  "fermentingtime": 12000,
+  "ingredients": [
+  	  	    {      "item": "minecraft:glass_bottle"    },
+    {      "item": "minecraft:sugar"    },
+    {      "item": "minecraft:sugar"    },
+    {      "tag": "forge:grapes"    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": 
+  {
+    "count": 1,
+    "item": "list:rose_wine"
+  },
+  "temperature": 3
+}

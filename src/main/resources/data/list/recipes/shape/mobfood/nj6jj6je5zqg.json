@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "list:red_pineapple"
+    },
+    "B": {
+      "item": "fruitsdelight:persimmon"
+    },
+    "C": {
+      "item": "list:red_pineapple"
+    },
+    "D": {
+      "item": "fruitsdelight:persimmon"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:advanced_pure_fruit_feed",
+    "count": 2
+  }
+}

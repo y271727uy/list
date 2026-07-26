@@ -4,10 +4,12 @@ import com.list.ListMod;
 import com.list.all.ModBlocks;
 import com.list.all.ModMenus;
 import com.list.all.ModRecipes;
+import com.list.block.TapperRecipe;
 import com.list.integration.jei.category.ForestryGreenhouseCategory;
 import com.list.integration.jei.category.ForestryHybridizerCategory;
 import com.list.integration.jei.category.FishPondCategory;
 import com.list.integration.jei.category.FishSmokerCategory;
+import com.list.integration.jei.category.TapperCategory;
 import com.list.menu.ForestryGreenhouseMenu;
 import com.list.menu.ForestryHybridizerMenu;
 import com.list.menu.FishPondMenu;
@@ -29,6 +31,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeManager;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Arrays;
 
 @JeiPlugin
 @MethodsReturnNonnullByDefault
@@ -38,6 +41,7 @@ public class ListJeiPlugin implements IModPlugin {
     public static final RecipeType<FishSmokerRecipe> FISH_SMOKER = RecipeType.create(ListMod.MODID, "fish_smoker", FishSmokerRecipe.class);
     public static final RecipeType<ForestryHybridizerRecipe> FORESTRY_HYBRIDIZER = RecipeType.create(ListMod.MODID, "forestry_hybridizer", ForestryHybridizerRecipe.class);
     public static final RecipeType<ForestryGreenhouseRecipe> FORESTRY_GREENHOUSE = RecipeType.create(ListMod.MODID, "forestry_greenhouse", ForestryGreenhouseRecipe.class);
+    public static final RecipeType<TapperRecipe> TAPPER = RecipeType.create(ListMod.MODID, "tapper", TapperRecipe.class);
 
     @Override
     public ResourceLocation getPluginUid() {
@@ -51,7 +55,8 @@ public class ListJeiPlugin implements IModPlugin {
             new FishPondCategory(jeiHelpers),
             new FishSmokerCategory(jeiHelpers),
             new ForestryHybridizerCategory(jeiHelpers),
-            new ForestryGreenhouseCategory(jeiHelpers)
+            new ForestryGreenhouseCategory(jeiHelpers),
+            new TapperCategory(jeiHelpers)
         );
     }
 
@@ -82,6 +87,13 @@ public class ListJeiPlugin implements IModPlugin {
             recipeManager.getAllRecipesFor(ModRecipes.FORESTRY_GREENHOUSE_TYPE.get())
         );
 
+        registration.addRecipes(
+            TAPPER,
+            Arrays.stream(TapperRecipe.RECIPES)
+                .filter(TapperCategory::isDisplayable)
+                .toList()
+        );
+
     }
 
     @Override
@@ -90,6 +102,7 @@ public class ListJeiPlugin implements IModPlugin {
         registration.addRecipeCatalyst(ModBlocks.FISHSMOKER, FISH_SMOKER);
         registration.addRecipeCatalyst(ModBlocks.FORESTRY_HYBRIDIZER, FORESTRY_HYBRIDIZER);
         registration.addRecipeCatalyst(ModBlocks.FORESTRY_GREENHOUSE, FORESTRY_GREENHOUSE);
+        registration.addRecipeCatalyst(ModBlocks.TAPPER, TAPPER);
     }
 
     @Override

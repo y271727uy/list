@@ -1,3 +1,4 @@
+/*
 package com.list.gameplay.fish_group.pool;
 
 import net.minecraft.core.BlockPos;
@@ -308,29 +309,7 @@ public final class FishPoolFactory {
             .output(FishPoolLootEntryDefinition.item("list:threadfin_bream", 100, 1, 1))
             .register();
 
-/*
-        //群
-    public static final FishPoolDefinition  = river("")
-            .minFishCount(1)
-            .maxFishCount(4)
-            .fishKing((String) null)
-            .weather(null)
-            .time(null)
-            .biomes("minecraft:river")
-            .output(FishPoolLootEntryDefinition.item("", 100, 1, 1))
-            .register();
 
-        //群
-    public static final FishPoolDefinition  = ocean("")
-            .minFishCount(1)
-            .maxFishCount(4)
-            .fishKing((String) null)
-            .weather(null)
-            .time(null)
-            .biomes("minecraft:ocean")
-            .output(FishPoolLootEntryDefinition.item("", 100, 1, 1))
-            .register();
-*/
     private FishPoolFactory() {
     }
 
@@ -605,4 +584,29 @@ public final class FishPoolFactory {
 }
 
 
+*/
 
+
+/*
+        //群
+    public static final FishPoolDefinition  = river("")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:river")
+            .output(FishPoolLootEntryDefinition.item("", 100, 1, 1))
+            .register();
+
+        //群
+    public static final FishPoolDefinition  = ocean("")
+            .minFishCount(1)
+            .maxFishCount(4)
+            .fishKing((String) null)
+            .weather(null)
+            .time(null)
+            .biomes("minecraft:ocean")
+            .output(FishPoolLootEntryDefinition.item("", 100, 1, 1))
+            .register();
+*/

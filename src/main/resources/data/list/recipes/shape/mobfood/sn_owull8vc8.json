@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "alexsmobsdelight:raw_bison_meat"
+    },
+    "B": {
+      "item": "alexsmobsdelight:raw_bison_meat"
+    },
+    "C": {
+      "item": "alexsmobsdelight:raw_bison_meat"
+    },
+    "D": {
+      "item": "alexsmobsdelight:raw_bison_meat"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:pure_beef_feed",
+    "count": 2
+  }
+}

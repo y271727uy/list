@@ -1,0 +1,8 @@
+﻿{
+  "replace": false,
+  "entries": [
+    "list:scavenging_raw_mutton_rack_from_sheep",
+
+    "list:scavenging_cooked_mutton_rack_from_sheep"
+  ]
+}

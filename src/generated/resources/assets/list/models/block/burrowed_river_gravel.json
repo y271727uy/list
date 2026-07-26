@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/gravel",
+    "east": "minecraft:block/gravel",
+    "north": "minecraft:block/gravel",
+    "particle": "minecraft:block/gravel",
+    "south": "minecraft:block/gravel",
+    "up": "list:block/sea_food_hole/burrowed_gravel",
+    "west": "minecraft:block/gravel"
+  }
+}

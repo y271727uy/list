@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "recipe_book_tab": "meals",
+  "ingredients": [
+    {
+      "item": "mooncake_delight:mooncake_crust_dough"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "manors_bounty:blackcurrant"
+    },
+    {
+      "item": "manors_bounty:blackcurrant"
+    },
+    {
+      "item": "manors_bounty:blackcurrant"
+    }
+  ],
+  "result": {
+    "item": "list:blackcurrant_mooncake",
+    "count": 1
+  },
+  "container": {
+    "item": "mooncake_delight:mooncake_mold",
+    "count": 1
+  }
+}

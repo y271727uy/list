@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:pumpkin"
+    },
+    "B": {
+      "item": "regions_unexplored:duskmelon_slice"
+    },
+    "C": {
+      "item": "minecraft:pumpkin"
+    },
+    "D": {
+      "item": "regions_unexplored:duskmelon_slice"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:advanced_pure_melon_melon_feed",
+    "count": 2
+  }
+}

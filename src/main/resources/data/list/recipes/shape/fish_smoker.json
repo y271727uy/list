@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:mud_bricks"
+    },
+    "B": {
+      "item": "minecraft:oak_log"
+    },
+    "C": {
+      "item": "minecraft:mud_bricks"
+    },
+    "D": {
+      "item": "minecraft:oak_log"
+    },
+    "E": {
+      "item": "minecraft:smoker"
+    },
+    "F": {
+      "item": "minecraft:oak_log"
+    },
+    "G": {
+      "item": "minecraft:mud_bricks"
+    },
+    "H": {
+      "item": "minecraft:oak_log"
+    },
+    "I": {
+      "item": "minecraft:mud_bricks"
+    }
+  },
+  "result": {
+    "item": "list:fish_smoker",
+    "count": 1
+  }
+}

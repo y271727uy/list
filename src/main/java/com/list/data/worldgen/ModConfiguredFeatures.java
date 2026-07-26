@@ -18,14 +18,24 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> DISK_BURROWED_SAND = create("disk_burrowed_sand");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DISK_BURROWED_RIVER_SAND = create("disk_burrowed_river_sand");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DISK_BURROWED_GRAVEL = create("disk_burrowed_gravel");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DISK_BURROWED_RIVER_GRAVEL = create("disk_burrowed_river_gravel");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DISK_BURROWED_CLAY = create("disk_burrowed_clay");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DISK_BURROWED_LUSH_CAVES_CLAY = create("disk_burrowed_lush_caves_clay");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DISK_BURROWED_DIRT = create("disk_burrowed_dirt");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DISK_BURROWED_MUD = create("disk_burrowed_mud");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         register(context, DISK_BURROWED_SAND, Feature.DISK, new DiskConfiguration(
                 RuleBasedBlockStateProvider.simple(ModBlocks.BURROWED_SAND.get()),
+                BlockPredicate.matchesBlocks(List.of(Blocks.SAND)),
+                UniformInt.of(0, 1),
+                1
+        ));
+
+        register(context, DISK_BURROWED_RIVER_SAND, Feature.DISK, new DiskConfiguration(
+                RuleBasedBlockStateProvider.simple(ModBlocks.BURROWED_RIVER_SAND.get()),
                 BlockPredicate.matchesBlocks(List.of(Blocks.SAND)),
                 UniformInt.of(0, 1),
                 1
@@ -38,8 +48,22 @@ public class ModConfiguredFeatures {
                 1
         ));
 
+        register(context, DISK_BURROWED_RIVER_GRAVEL, Feature.DISK, new DiskConfiguration(
+                RuleBasedBlockStateProvider.simple(ModBlocks.BURROWED_RIVER_GRAVEL.get()),
+                BlockPredicate.matchesBlocks(List.of(Blocks.GRAVEL)),
+                UniformInt.of(1, 3),
+                1
+        ));
+
         register(context, DISK_BURROWED_CLAY, Feature.DISK, new DiskConfiguration(
                 RuleBasedBlockStateProvider.simple(ModBlocks.BURROWED_CLAY.get()),
+                BlockPredicate.matchesBlocks(List.of(Blocks.CLAY)),
+                UniformInt.of(0, 1),
+                1
+        ));
+
+        register(context, DISK_BURROWED_LUSH_CAVES_CLAY, Feature.DISK, new DiskConfiguration(
+                RuleBasedBlockStateProvider.simple(ModBlocks.BURROWED_LUSH_CAVES_CLAY.get()),
                 BlockPredicate.matchesBlocks(List.of(Blocks.CLAY)),
                 UniformInt.of(0, 1),
                 1

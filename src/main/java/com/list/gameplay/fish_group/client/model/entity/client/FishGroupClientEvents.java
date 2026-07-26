@@ -1,3 +1,4 @@
+/*
 package com.list.gameplay.fish_group.client.model.entity.client;
 
 import com.list.ListMod;
@@ -39,5 +40,5 @@ public final class FishGroupClientEvents {
         event.registerLayerDefinition(OceanFishPoolModel.LAYER_LOCATION, OceanFishPoolModel::getTexturedModelData);
     }
 }
-
+ */
 

@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "recipe_book_tab": "meals",
+  "ingredients": [
+    {
+      "item": "mooncake_delight:mooncake_crust_dough"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "delighto_flight:cloud_berries"
+    },
+    {
+      "item": "delighto_flight:cloud_berries"
+    },
+    {
+      "item": "delighto_flight:cloud_berries"
+    }
+  ],
+  "result": {
+    "item": "list:cloud_berries_mooncake",
+    "count": 1
+  },
+  "container": {
+    "item": "mooncake_delight:mooncake_mold",
+    "count": 1
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "ABC",
+    "DEF"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:oak_log"
+    },
+    "B": {
+      "item": "list:copper_gt_credit"
+    },
+    "C": {
+      "item": "minecraft:oak_log"
+    },
+    "D": {
+      "item": "minecraft:oak_planks"
+    },
+    "E": {
+      "item": "minecraft:chest"
+    },
+    "F": {
+      "item": "minecraft:oak_planks"
+    }
+  },
+  "result": {
+    "item": "shopcore:selling_bin",
+    "count": 1
+  }
+}

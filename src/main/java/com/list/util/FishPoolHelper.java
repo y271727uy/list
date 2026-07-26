@@ -1,4 +1,6 @@
+/*
 package com.list.util;
+
 
 import com.list.ListMod;
 import net.minecraft.resources.ResourceLocation;
@@ -11,4 +13,4 @@ public final class FishPoolHelper {
         return ListMod.rl(path);
     }
 }
-
+*/

@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "list:panettone",
+      "count": 1
+    }
+  ],
+  "result": [
+    {
+      "item": "list:panettone_slice",
+      "count": 8,
+      "chance": 1
+    }
+  ],
+  "sound": "",
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "manors_bounty:raw_beef_cubes"
+    },
+    "B": {
+      "item": "manors_bounty:raw_beef_cubes"
+    },
+    "C": {
+      "item": "manors_bounty:raw_beef_cubes"
+    },
+    "D": {
+      "item": "manors_bounty:raw_beef_cubes"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:pure_beef_feed",
+    "count": 2
+  }
+}

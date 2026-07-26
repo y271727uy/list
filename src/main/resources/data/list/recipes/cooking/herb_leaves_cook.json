@@ -1,0 +1,16 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 160,
+  "experience": 1,
+  "ingredients": [
+    {
+      "item": "minecraft:fern",
+      "count": 1
+    }
+  ],
+  "recipe_book_tab": "Meals",
+  "result": {
+    "item": "list:herb_leaves",
+    "count": 1
+  }
+}

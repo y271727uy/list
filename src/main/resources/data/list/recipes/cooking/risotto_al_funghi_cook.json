@@ -1,0 +1,29 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1,
+  
+  "ingredients": [
+    {
+      "tag": "forge:crops/rice",
+      "count": 1
+    },
+    {
+      "item": "brewinandchewin:flaxen_cheese_wedge",
+      "count": 1
+    },
+    {
+      "tag": "forge:mushrooms",
+      "count": 1
+    }
+  ],
+  "recipe_book_tab": "Meals",
+  "result": {
+    "item": "list:risotto_al_funghi",
+    "count": 1
+  },
+  "container": {
+    "item": "minecraft:bowl"
+  }
+   
+}

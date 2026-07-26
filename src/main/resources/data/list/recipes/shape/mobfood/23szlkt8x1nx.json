@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " AB",
+    " CD",
+    "E  "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:beef"
+    },
+    "B": {
+      "item": "minecraft:beef"
+    },
+    "C": {
+      "item": "minecraft:beef"
+    },
+    "D": {
+      "item": "minecraft:beef"
+    },
+    "E": {
+      "item": "farmersdelight:canvas"
+    }
+  },
+  "result": {
+    "item": "list:pure_beef_feed",
+    "count": 2
+  }
+}

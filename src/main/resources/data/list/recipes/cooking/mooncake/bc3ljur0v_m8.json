@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "recipe_book_tab": "meals",
+  "ingredients": [
+    {
+      "item": "mooncake_delight:mooncake_crust_dough"
+    },
+    {
+      "item": "vintagedelight:peanut"
+    },
+    {
+      "item": "bountifulfares:walnut"
+    },
+    {
+      "item": "manors_bounty:cooked_cashew"
+    },
+    {
+      "item": "list:pecan"
+    },
+    {
+      "item": "farmersdelight:ham"
+    }
+  ],
+  "result": {
+    "item": "list:five_kernals_ham_mooncake",
+    "count": 1
+  },
+  "container": {
+    "item": "mooncake_delight:mooncake_mold",
+    "count": 1
+  }
+}
