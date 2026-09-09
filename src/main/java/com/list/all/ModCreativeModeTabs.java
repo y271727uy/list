@@ -1009,7 +1009,6 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.BAGGED_GT_POPCORN.get());
                 output.accept(ModItems.APPLE_HARD_CANDY_PLATE.get());
                 output.accept(ModItems.APPLE_HARD_CANDY_FONDANT.get());
-                output.accept(ModItems.ANIMAL_FAT.get());
                 output.accept(ModItems.FISH_AND_CHIPS.get());
                 output.accept(ModItems.CRASHED_APPLE_HARD_CANDY.get());
                 output.accept(ModItems.COOKED_BEEF_SLICE.get());
@@ -1402,6 +1401,14 @@ public class ModCreativeModeTabs {
                 中秋节
                 端午节
                 感恩节
+
+                完事之后就是零食和餐厅快餐了
+                餐厅快餐有从神秘的kfc里面发现更神秘的吮指原味鸡全家桶了
+                吮指原味鸡和他的附庸 吮指原味鸡 原味鸡肉霸堡 原味鸡焖拌饭 奥利奥味原味鸡汉堡 原味鸡汉堡 原味鸡拿铁 汤咖喱原味鸡
+                奥利奥：
+                吮指原味鸡味奥利奥 满堂金橘味奥利奥
+                原神联动：
+                公爵茶歇红茶黑巧味脆脆鲨涂层威化饼干 蹦蹦火花草莓爆米花味脆脆鲨威化饼干
                 */
 
     // 农作物标签页

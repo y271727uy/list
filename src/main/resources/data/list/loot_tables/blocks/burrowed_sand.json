@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "list:blocks/burrowed_sand",
+  "pools": [
+    { "rolls": 1, "entries": [{ "type": "minecraft:item", "name": "minecraft:sand" }] },
+    {
+      "rolls": 1,
+      "conditions": [{ "condition": "minecraft:random_chance", "chance": 0.5 }],
+      "entries": [
+        { "type": "minecraft:item", "name": "alexscaves:mussel" },
+        { "type": "minecraft:item", "name": "crabbersdelight:clam" },
+        { "type": "minecraft:item", "name": "collectorsreap:clam" },
+        { "type": "minecraft:item", "name": "collectorsreap:urchin" },
+        { "type": "minecraft:item", "name": "list:swimming_crab" },
+        { "type": "minecraft:item", "name": "list:pelagic_swimming_crab" },
+        { "type": "minecraft:item", "name": "crabbersdelight:crab" },
+        { "type": "minecraft:item", "name": "list:hermit_crab" }
+      ]
+    }
+  ]
+}

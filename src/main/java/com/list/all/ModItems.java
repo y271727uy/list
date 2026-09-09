@@ -5800,15 +5800,6 @@ public static final ItemEntry<Item> APPLE_HARD_CANDY_FONDANT = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/apple_hard_candy_fondant")))
             .register();
 
-public static final ItemEntry<Item> ANIMAL_FAT = REGISTRATE
-            .item("animal_fat", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(2)
-                    .saturationMod(1.2f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/animal_fat")))
-            .register();
-
 public static final ItemEntry<Item> FISH_AND_CHIPS = REGISTRATE
             .item("fish_and_chips", Item::new)
             .properties(p -> p.food(new FoodProperties.Builder()

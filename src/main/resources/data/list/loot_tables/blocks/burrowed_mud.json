@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "list:blocks/burrowed_mud",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:mud"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.5
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "list:river_shrimp"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "list:river_crab"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "list:marron_crayfish"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "list:crayfish"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "vietnam_delight:apple_snail"
+        }
+      ]
+    }
+  ]
+}

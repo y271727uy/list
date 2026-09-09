@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "list:blocks/burrowed_gravel",
+  "pools": [
+    { "rolls": 1, "entries": [{ "type": "minecraft:item", "name": "minecraft:gravel" }] },
+    {
+      "rolls": 1,
+      "conditions": [{ "condition": "minecraft:random_chance", "chance": 0.5 }],
+      "entries": [
+        { "type": "minecraft:item", "name": "alexscaves:mussel" },
+        { "type": "minecraft:item", "name": "crabbersdelight:clam" },
+        { "type": "minecraft:item", "name": "collectorsreap:clam" },
+        { "type": "minecraft:item", "name": "collectorsreap:urchin" },
+        { "type": "minecraft:item", "name": "list:swimming_crab" },
+        { "type": "minecraft:item", "name": "list:pelagic_swimming_crab" },
+        { "type": "minecraft:item", "name": "crabbersdelight:crab" },
+        { "type": "minecraft:item", "name": "list:hermit_crab" },
+        { "type": "minecraft:item", "name": "list:mantis_shrimp" },
+        { "type": "minecraft:item", "name": "crabbersdelight:clawster" },
+        { "type": "minecraft:item", "name": "collectorsreap:tiger_prawn" },
+        { "type": "minecraft:item", "name": "braziliandelight:shrimp" },
+        { "type": "minecraft:item", "name": "list:dungeness_crab" },
+        { "type": "minecraft:item", "name": "list:jonah_crab" },
+        { "type": "minecraft:item", "name": "manors_bounty:abalone" }
+      ]
+    }
+  ]
+}

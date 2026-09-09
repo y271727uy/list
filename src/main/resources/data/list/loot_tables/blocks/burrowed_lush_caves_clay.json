@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "list:blocks/burrowed_lush_caves_clay",
+  "pools": [
+    { "rolls": 1, "entries": [{ "type": "minecraft:item", "name": "minecraft:clay" }] },
+    {
+      "rolls": 1,
+      "conditions": [{ "condition": "minecraft:random_chance", "chance": 0.5 }],
+      "entries": [
+        { "type": "minecraft:item", "name": "culturaldelights:glow_squid" }
+      ]
+    }
+  ]
+}
