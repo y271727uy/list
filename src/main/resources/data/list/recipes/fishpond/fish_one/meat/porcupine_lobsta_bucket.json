@@ -1,0 +1,27 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:porcupine_lobsta_egg"
+    },
+    {
+      "tag": "list:raw_meat"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "unusualfishmod:porcupine_lobsta_bucket"
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "list:porcupine_lobsta_egg"
+    }
+  ],
+  "time": 3200
+}

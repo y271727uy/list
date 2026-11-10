@@ -1820,6 +1820,297 @@ public static final ItemEntry<EggItem> CRAYFISH_EGG = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/cook_egg/cook_talpanas_egg")))
             .register();
 
+    // --- chest-paired fish eggs ---
+    // 福寿螺卵
+    public static final ItemEntry<EggItem> APPLE_SNAIL_EGG = REGISTRATE
+            .item("apple_snail_egg", p -> new EggItem(p, 0x8F6B3A))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 黑帽蜗牛卵
+    public static final ItemEntry<EggItem> BLACKCAP_SNAIL_EGG = REGISTRATE
+            .item("blackcap_snail_egg", p -> new EggItem(p, 0x555CF8))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 水滴鱼卵
+    public static final ItemEntry<EggItem> BLOBFISH_EGG = REGISTRATE
+            .item("blobfish_egg", p -> new EggItem(p, 0x77225A))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 砖红蜗牛卵
+    public static final ItemEntry<EggItem> BRICK_SNAIL_EGG = REGISTRATE
+            .item("brick_snail_egg", p -> new EggItem(p, 0xD513FE))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 小丑鲨卵
+    public static final ItemEntry<EggItem> CLOWNTHORN_SHARK_EGG = REGISTRATE
+            .item("clownthorn_shark_egg", p -> new EggItem(p, 0xA24467))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 珊瑚虾卵
+    public static final ItemEntry<EggItem> CORAL_SKRIMP_EGG = REGISTRATE
+            .item("coral_skrimp_egg", p -> new EggItem(p, 0x8C53AB))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 宇宙鳕鱼卵
+    public static final ItemEntry<EggItem> COSMIC_COD_EGG = REGISTRATE
+            .item("cosmic_cod_egg", p -> new EggItem(p, 0x2538C4))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 深层爬虫卵
+    public static final ItemEntry<EggItem> DEEP_CRAWLER_EGG = REGISTRATE
+            .item("deep_crawler_egg", p -> new EggItem(p, 0x8BCE38))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 魔鳉卵
+    public static final ItemEntry<EggItem> DEVILS_HOLE_PUPFISH_EGG = REGISTRATE
+            .item("devils_hole_pupfish_egg", p -> new EggItem(p, 0xFDC087))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 淡水螳螂卵
+    public static final ItemEntry<EggItem> FRESHWATER_MANTIS_EGG = REGISTRATE
+            .item("freshwater_mantis_egg", p -> new EggItem(p, 0x2CAFAD))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 发光鱿鱼卵
+    public static final ItemEntry<EggItem> GLOW_SQUID_EGG = REGISTRATE
+            .item("glow_squid_egg", p -> new EggItem(p, 0x00937F))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 基围虾卵
+    public static final ItemEntry<EggItem> GREASYBACK_SHRIMP_EGG = REGISTRATE
+            .item("greasyback_shrimp_egg", p -> new EggItem(p, 0x510BAF))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 裂纹弹涂鱼卵
+    public static final ItemEntry<EggItem> LOBED_SKIPPER_EGG = REGISTRATE
+            .item("lobed_skipper_egg", p -> new EggItem(p, 0x6D843C))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 苔藓牛鱼卵
+    public static final ItemEntry<EggItem> MOSSTHORN_EGG = REGISTRATE
+            .item("mossthorn_egg", p -> new EggItem(p, 0x3077FE))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 泥砖蜗牛卵
+    public static final ItemEntry<EggItem> MUDDYTOP_SNAIL_EGG = REGISTRATE
+            .item("muddytop_snail_egg", p -> new EggItem(p, 0x3F8FB1))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 弹涂鱼卵
+    public static final ItemEntry<EggItem> MUDSKIPPER_EGG = REGISTRATE
+            .item("mudskipper_egg", p -> new EggItem(p, 0x4B8F7F))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 粉鳍镰鱼卵
+    public static final ItemEntry<EggItem> PINKFIN_IDOL_EGG = REGISTRATE
+            .item("pinkfin_idol_egg", p -> new EggItem(p, 0x6CF0C3))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 豪猪龙虾卵
+    public static final ItemEntry<EggItem> PORCUPINE_LOBSTA_EGG = REGISTRATE
+            .item("porcupine_lobsta_egg", p -> new EggItem(p, 0x8F368A))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 河豚卵
+    public static final ItemEntry<EggItem> PUFFERFISH_EGG = REGISTRATE
+            .item("pufferfish_egg", p -> new EggItem(p, 0x527C89))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 裂锯鱼卵
+    public static final ItemEntry<EggItem> RIPPER_EGG = REGISTRATE
+            .item("ripper_egg", p -> new EggItem(p, 0xEFD411))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 海蚊卵
+    public static final ItemEntry<EggItem> SEA_MOSQUITO_EGG = REGISTRATE
+            .item("sea_mosquito_egg", p -> new EggItem(p, 0x496578))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 皇冠海蛛卵
+    public static final ItemEntry<EggItem> SEA_SPIDER_EGG = REGISTRATE
+            .item("sea_spider_egg", p -> new EggItem(p, 0x9D4E4C))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 震荡猫鲶卵
+    public static final ItemEntry<EggItem> SHOCKCAT_EGG = REGISTRATE
+            .item("shockcat_egg", p -> new EggItem(p, 0x25E481))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 勺鲨卵
+    public static final ItemEntry<EggItem> SPOON_SHARK_EGG = REGISTRATE
+            .item("spoon_shark_egg", p -> new EggItem(p, 0x2053F6))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 鱿鱼卵
+    public static final ItemEntry<EggItem> SQUID_EGG = REGISTRATE
+            .item("squid_egg", p -> new EggItem(p, 0xD7E583))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 斯奎德尔卵
+    public static final ItemEntry<EggItem> SQUODDLE_EGG = REGISTRATE
+            .item("squoddle_egg", p -> new EggItem(p, 0xBEA4B0))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 虎皮鲀卵
+    public static final ItemEntry<EggItem> TIGER_PUFFER_EGG = REGISTRATE
+            .item("tiger_puffer_egg", p -> new EggItem(p, 0xDACDD7))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 伏特鮟鱇鱼卵
+    public static final ItemEntry<EggItem> VOLT_ANGLER_EGG = REGISTRATE
+            .item("volt_angler_egg", p -> new EggItem(p, 0x904C2A))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
+    // 魔力水母卵
+    public static final ItemEntry<EggItem> WIZARD_JELLY_EGG = REGISTRATE
+            .item("wizard_jelly_egg", p -> new EggItem(p, 0xEC1BFF))
+            .properties(p -> p.food(new FoodProperties.Builder()
+                    .nutrition(1)
+                    .saturationMod(0.3f)
+                    .build()))
+            .model(ItemModelUtil::eggItemModel)
+            .register();
+
     public static void register() {
     }
 }

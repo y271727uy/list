@@ -2,7 +2,7 @@
   "type": "list:fish_pond",
   "ingredients": [
     {
-      "item": "list:tasmanian_giant_freshwater_crayfish_egg" 
+      "item": "list:tasmanian_giant_freshwater_egg" 
     },
     {
       "tag": "list:pure_meat_feed"
@@ -17,7 +17,7 @@
     {
       "count": 1,
       "chance": 0.25,
-      "item": "list:tasmanian_giant_freshwater_crayfish_egg" 
+      "item": "list:tasmanian_giant_freshwater_egg" 
     }
   ],
   "time": 9200

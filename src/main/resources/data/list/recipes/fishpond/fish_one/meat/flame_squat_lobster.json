@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:flame_squat_lobster_egg"
+    },
+    {
+      "tag": "list:raw_meat"
+    }
+  ],
+  "isLava": true,
+  "results": [
+    {
+      "count": 1,
+      "item": "lavafishing:flame_squat_lobster"
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "list:flame_squat_lobster_egg"
+    }
+  ],
+  "time": 3200
+}

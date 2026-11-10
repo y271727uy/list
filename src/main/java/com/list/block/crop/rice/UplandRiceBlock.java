@@ -15,6 +15,7 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.BushBlock;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -24,6 +25,7 @@ import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.common.PlantType;
 
 import javax.annotation.Nullable;
 
@@ -70,12 +72,20 @@ public class UplandRiceBlock extends BushBlock implements BonemealableBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        return super.canSurvive(state, level, pos);
+        BlockPos soilPos = pos.below();
+        BlockState soilState = level.getBlockState(soilPos);
+        return soilState.is(Blocks.FARMLAND)
+                && soilState.canSustainPlant(level, soilPos, Direction.UP, this);
+    }
+
+    @Override
+    public PlantType getPlantType(BlockGetter level, BlockPos pos) {
+        return PlantType.CROP;
     }
 
     @Override
     protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
-        return state.is(CommonDoubleCrop.PLANTABLE_ON);
+        return state.is(Blocks.FARMLAND);
     }
 
     @Override

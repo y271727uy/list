@@ -9,6 +9,7 @@ public class ModLangs {
         provider.add("item.list.just_bread.desc.3", "But that familiar aroma of wheat has long since faded.");
         provider.add("item.list.farmers_ranch_star.desc.1","§7§oA star synthesized through countless hardships, it is light with unknown mass.");
         provider.add("item.list.farmers_ranch_star.desc.2", "§7§oThank you for playing the Farmer's Ranch: Pastoral Serenade modpack. The entire development team and contributors send their regards.");
+        provider.add("item.list.upland_rice", "Upland Rice Seeds");
         provider.add("item.list.bad_item.desc", "§7§oTechnical item, please do not attempt to obtain");
         provider.add("item.list.tasmanian_giant_freshwater_crayfish.desc.1", "§7§oThe Tasmanian giant freshwater lobster is the largest freshwater lobster in the world.");
         provider.add("item.list.tasmanian_giant_freshwater_crayfish.desc.2", "§7§oValued for its enormous size and delicious meat, it is considered a luxury delicacy.");

@@ -1,0 +1,32 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:pinkfin_idol_egg"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "unusualfishmod:pinkfin_idol_bucket"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:pinkfin_idol_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:pinkfin_idol_egg"
+    }
+  ],
+  "time": 3200
+}

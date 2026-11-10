@@ -1,0 +1,27 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:lobed_skipper_egg"
+    },
+    {
+      "tag": "list:raw_meat"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "unusualfishmod:lobed_skipper_bucket"
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "list:lobed_skipper_egg"
+    }
+  ],
+  "time": 3200
+}

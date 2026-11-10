@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:eyelash_egg"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "unusualfishmod:raw_eyelash"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:eyelash_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:eyelash_egg"
+    }
+  ],
+  "time": 3200
+}

@@ -1,0 +1,32 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:spoon_shark_egg"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "unusualfishmod:spoon_shark_bucket"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:spoon_shark_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:spoon_shark_egg"
+    }
+  ],
+  "time": 3200
+}

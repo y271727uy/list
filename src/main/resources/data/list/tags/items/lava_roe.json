@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "list:agni_fish_egg",
+    "list:arowana_fish_egg",
+    "list:blazefish_egg",
+    "list:bonefish_egg",
+    "list:eyeball_fish_egg",
+    "list:flame_squat_lobster_egg",
+    "list:fortress_grouper_egg",
+    "list:glowdine_egg",
+    "list:lava_lamprey_egg",
+    "list:lava_pufferfish_egg",
+    "list:magmacubefish_egg",
+    "list:obsidian_sword_fish_egg",
+    "list:obsidianfish_egg",
+    "list:quartz_fish_egg",
+    "list:scaly_foot_snail_egg",
+    "list:searing_cod_egg",
+    "list:soulsucker_egg",
+    "list:steam_flying_fish_egg",
+    "list:wither_bonefish_egg",
+    "list:yeti_crab_egg"
+  ]
+}

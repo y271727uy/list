@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:bonefish_egg"
+    },
+    {
+      "tag": "list:pure_meat_feed"
+    }
+  ],
+  "isLava": true,
+  "results": [
+    {
+      "count": 1,
+      "item": "netherdepthsupgrade:bonefish"
+    },
+    {
+      "count": 1,
+      "chance": 0.25,
+      "item": "list:bonefish_egg"
+    }
+  ],
+  "time": 3200
+}

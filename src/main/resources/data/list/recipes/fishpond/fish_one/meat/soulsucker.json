@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:soulsucker_egg"
+    },
+    {
+      "tag": "list:raw_meat"
+    }
+  ],
+  "isLava": true,
+  "results": [
+    {
+      "count": 1,
+      "item": "netherdepthsupgrade:soulsucker"
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "list:soulsucker_egg"
+    }
+  ],
+  "time": 3200
+}

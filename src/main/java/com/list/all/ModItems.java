@@ -2462,6 +2462,43 @@ public static final ItemEntry<Item> BETEL_NUT = REGISTRATE
                 .build()))
         .register();
 
+//树菜
+public static final ItemEntry<Item> ELM_FRUITS = REGISTRATE
+        .item("elm_fruits", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/tree_vegetables/elm_fruits")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(1.0f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> LOCUST_FLOWERS = REGISTRATE
+        .item("locust_flowers", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/tree_vegetables/locust_flowers")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(1.0f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> OSMANTHUS = REGISTRATE
+        .item("osmanthus", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/tree_vegetables/osmanthus")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(1.0f)
+                .build()))
+        .register();
+
+public static final ItemEntry<Item> TOON_SPROUTS = REGISTRATE
+        .item("toon_sprouts", Item::new)
+        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/tree_vegetables/toon_sprouts")))
+        .properties(p -> p.food(new FoodProperties.Builder()
+                .nutrition(1)
+                .saturationMod(1.0f)
+                .build()))
+        .register();
+
     // 草菇
     public static final ItemEntry<Item> STRAW_MUSHROOM = REGISTRATE
             .item("straw_mushroom", Item::new)

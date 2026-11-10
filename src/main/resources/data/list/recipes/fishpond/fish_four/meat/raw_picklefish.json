@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:picklefish_egg"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "unusualfishmod:raw_picklefish"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:picklefish_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:picklefish_egg"
+    }
+  ],
+  "time": 3200
+}

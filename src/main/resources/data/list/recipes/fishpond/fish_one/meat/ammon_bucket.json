@@ -1,0 +1,27 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "unusualprehistory:ammon_eggs"
+    },
+    {
+      "tag": "list:raw_meat"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "unusualprehistory:ammon_bucket"
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "unusualprehistory:ammon_eggs"
+    }
+  ],
+  "time": 3200
+}

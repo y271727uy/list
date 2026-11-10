@@ -130,7 +130,24 @@ public class ModBlocks {
     public static final BlockEntry<TreeCompostBlock> TREE_COMPOST = REGISTRATE
             .block("tree_compost", TreeCompostBlock::new)
             .initialProperties(() -> Blocks.DIRT)
+            .simpleItem()   public static final BlockEntry<TreeCompostBlock> TREE_COMPOST = REGISTRATE
+            .block("tree_compost", TreeCompostBlock::new)
+            .initialProperties(() -> Blocks.DIRT)
             .simpleItem()
+            .blockstate((ctx, provider) -> {
+                BlockModelBuilder model = provider.models().cube(
+                        ctx.getName(),
+                        provider.modLoc("block/tree_compost/rich_soil"),
+                        provider.modLoc("block/tree_compost/tree_compost"),
+                        provider.modLoc("block/tree_compost/rich_soil"),
+                        provider.modLoc("block/tree_compost/rich_soil"),
+                        provider.modLoc("block/tree_compost/rich_soil"),
+                        provider.modLoc("block/tree_compost/rich_soil")
+                ).texture("particle", provider.mcLoc("block/smooth_stone")); //modLoc("block/tree_compost/tree_compost"));
+                provider.horizontalBlock(ctx.get(), model);
+            })
+            .tag(BlockTags.MINEABLE_WITH_SHOVEL)
+            .register();
             .blockstate((ctx, provider) -> {
                 BlockModelBuilder model = provider.models().cube(
                         ctx.getName(),

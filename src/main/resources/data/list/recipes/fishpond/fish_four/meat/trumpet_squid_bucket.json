@@ -1,0 +1,32 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "unusualfishmod:relucent_eggs"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "unusualfishmod:trumpet_squid_bucket"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "unusualfishmod:relucent_eggs"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "unusualfishmod:relucent_eggs"
+    }
+  ],
+  "time": 3200
+}

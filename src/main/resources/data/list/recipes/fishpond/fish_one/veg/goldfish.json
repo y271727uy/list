@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:goldfish_egg"
+    },
+    {
+      "tag": "list:sea_veg"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "aquaculture:goldfish"
+    },
+    {
+      "count": 1,
+      "chance": 0.05,
+      "item": "list:goldfish_egg"
+    }
+  ],
+  "time": 3200
+}

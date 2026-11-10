@@ -1,0 +1,32 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "unusualprehistory:scau_eggs"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "unusualprehistory:scau_bucket"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "unusualprehistory:scau_eggs"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "unusualprehistory:scau_eggs"
+    }
+  ],
+  "time": 3200
+}

@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:apple_snail_egg"
+    },
+    {
+      "tag": "list:raw_meat"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "vietnam_delight:apple_snail"
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "list:apple_snail_egg"
+    }
+  ],
+  "time": 3200
+}

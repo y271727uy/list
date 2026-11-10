@@ -1,0 +1,27 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "marvelous_menagerie:anomalocaris_eggs"
+    },
+    {
+      "tag": "list:raw_meat"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "marvelous_menagerie:anomalocaris_bucket"
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "marvelous_menagerie:anomalocaris_eggs"
+    }
+  ],
+  "time": 3200
+}

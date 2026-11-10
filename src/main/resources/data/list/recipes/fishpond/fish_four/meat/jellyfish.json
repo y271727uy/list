@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:jellyfish_egg"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "aquaculture:jellyfish"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:jellyfish_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:jellyfish_egg"
+    }
+  ],
+  "time": 3200
+}

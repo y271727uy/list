@@ -1,0 +1,27 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:mossthorn_egg"
+    },
+    {
+      "tag": "list:raw_meat"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "unusualfishmod:mossthorn_bucket"
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "list:mossthorn_egg"
+    }
+  ],
+  "time": 3200
+}

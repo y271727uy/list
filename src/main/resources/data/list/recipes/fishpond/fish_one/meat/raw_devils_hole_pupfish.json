@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:devils_hole_pupfish_egg"
+    },
+    {
+      "tag": "list:raw_meat"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "alexsmobsdelight:raw_devils_hole_pupfish"
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "list:devils_hole_pupfish_egg"
+    }
+  ],
+  "time": 3200
+}

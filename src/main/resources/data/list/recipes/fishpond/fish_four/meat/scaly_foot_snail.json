@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:scaly_foot_snail_egg"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    }
+  ],
+  "isLava": true,
+  "results": [
+    {
+      "count": 1,
+      "item": "lavafishing:scaly_foot_snail"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:scaly_foot_snail_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:scaly_foot_snail_egg"
+    }
+  ],
+  "time": 3200
+}

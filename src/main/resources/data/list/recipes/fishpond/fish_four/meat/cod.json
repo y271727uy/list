@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "manors_bounty:tarako"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "minecraft:cod"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "manors_bounty:tarako"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "manors_bounty:tarako"
+    }
+  ],
+  "time": 3200
+}

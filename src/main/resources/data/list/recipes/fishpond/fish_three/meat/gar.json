@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:gar_egg"
+    },
+    {
+      "tag": "list:pure_meat_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "aquaculture:gar"
+    },
+    {
+      "count": 1,
+      "chance": 0.25,
+      "item": "list:gar_egg"
+    }
+  ],
+  "time": 3200
+}

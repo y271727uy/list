@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:yeti_crab_egg"
+    },
+    {
+      "tag": "list:raw_meat"
+    }
+  ],
+  "isLava": true,
+  "results": [
+    {
+      "count": 1,
+      "item": "lavafishing:yeti_crab"
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "list:yeti_crab_egg"
+    }
+  ],
+  "time": 3200
+}

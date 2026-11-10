@@ -1,0 +1,27 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "marvelous_menagerie:trilo_eggs"
+    },
+    {
+      "tag": "list:pure_meat_feed"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "marvelous_menagerie:trilo_bucket"
+    },
+    {
+      "count": 1,
+      "chance": 0.25,
+      "item": "marvelous_menagerie:trilo_eggs"
+    }
+  ],
+  "time": 3200
+}

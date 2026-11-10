@@ -1,0 +1,27 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:wizard_jelly_egg"
+    },
+    {
+      "tag": "list:pure_meat_feed"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "unusualfishmod:wizard_jelly_bucket"
+    },
+    {
+      "count": 1,
+      "chance": 0.25,
+      "item": "list:wizard_jelly_egg"
+    }
+  ],
+  "time": 3200
+}

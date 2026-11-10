@@ -1,0 +1,32 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "marvelous_menagerie:saca_eggs"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "marvelous_menagerie:saca_bucket"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "marvelous_menagerie:saca_eggs"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "marvelous_menagerie:saca_eggs"
+    }
+  ],
+  "time": 3200
+}

@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:eyeball_fish_egg"
+    },
+    {
+      "tag": "list:raw_meat"
+    }
+  ],
+  "isLava": true,
+  "results": [
+    {
+      "count": 1,
+      "item": "netherdepthsupgrade:eyeball_fish"
+    },
+    {
+      "count": 1,
+      "chance": 0.1,
+      "item": "list:eyeball_fish_egg"
+    }
+  ],
+  "time": 3200
+}

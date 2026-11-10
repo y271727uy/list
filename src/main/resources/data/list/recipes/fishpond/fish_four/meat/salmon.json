@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "oceanic_delight:salmon_eggs"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "minecraft:salmon"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "oceanic_delight:salmon_eggs"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "oceanic_delight:salmon_eggs"
+    }
+  ],
+  "time": 3200
+}

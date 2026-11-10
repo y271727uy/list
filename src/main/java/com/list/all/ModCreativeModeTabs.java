@@ -648,6 +648,36 @@ public class ModCreativeModeTabs {
                     output.accept(ModItemsEgg.EUASTACUS_ARMATUS_EGG.get());     //  墨累河白刺鳌虾卵
                     output.accept(ModItemsEgg.MARRON_CRAYFISH_EGG.get());     // 马龙鳌虾卵
                     output.accept(ModItemsEgg.CAMBAROIDES_DAURICUS_EGG.get());     // 东北鳌虾/蝲蛄卵
+                    // chest-paired fish eggs
+                    output.accept(ModItemsEgg.APPLE_SNAIL_EGG.get()); // 福寿螺卵
+                    output.accept(ModItemsEgg.BLACKCAP_SNAIL_EGG.get()); // 黑帽蜗牛卵
+                    output.accept(ModItemsEgg.BLOBFISH_EGG.get()); // 水滴鱼卵
+                    output.accept(ModItemsEgg.BRICK_SNAIL_EGG.get()); // 砖红蜗牛卵
+                    output.accept(ModItemsEgg.CLOWNTHORN_SHARK_EGG.get()); // 小丑鲨卵
+                    output.accept(ModItemsEgg.CORAL_SKRIMP_EGG.get()); // 珊瑚虾卵
+                    output.accept(ModItemsEgg.COSMIC_COD_EGG.get()); // 宇宙鳕鱼卵
+                    output.accept(ModItemsEgg.DEEP_CRAWLER_EGG.get()); // 深层爬虫卵
+                    output.accept(ModItemsEgg.DEVILS_HOLE_PUPFISH_EGG.get()); // 魔鳉卵
+                    output.accept(ModItemsEgg.FRESHWATER_MANTIS_EGG.get()); // 淡水螳螂卵
+                    output.accept(ModItemsEgg.GLOW_SQUID_EGG.get()); // 发光鱿鱼卵
+                    output.accept(ModItemsEgg.GREASYBACK_SHRIMP_EGG.get()); // 基围虾卵
+                    output.accept(ModItemsEgg.LOBED_SKIPPER_EGG.get()); // 裂纹弹涂鱼卵
+                    output.accept(ModItemsEgg.MOSSTHORN_EGG.get()); // 苔藓牛鱼卵
+                    output.accept(ModItemsEgg.MUDDYTOP_SNAIL_EGG.get()); // 泥砖蜗牛卵
+                    output.accept(ModItemsEgg.MUDSKIPPER_EGG.get()); // 弹涂鱼卵
+                    output.accept(ModItemsEgg.PINKFIN_IDOL_EGG.get()); // 粉鳍镰鱼卵
+                    output.accept(ModItemsEgg.PORCUPINE_LOBSTA_EGG.get()); // 豪猪龙虾卵
+                    output.accept(ModItemsEgg.PUFFERFISH_EGG.get()); // 河豚卵
+                    output.accept(ModItemsEgg.RIPPER_EGG.get()); // 裂锯鱼卵
+                    output.accept(ModItemsEgg.SEA_MOSQUITO_EGG.get()); // 海蚊卵
+                    output.accept(ModItemsEgg.SEA_SPIDER_EGG.get()); // 皇冠海蛛卵
+                    output.accept(ModItemsEgg.SHOCKCAT_EGG.get()); // 震荡猫鲶卵
+                    output.accept(ModItemsEgg.SPOON_SHARK_EGG.get()); // 勺鲨卵
+                    output.accept(ModItemsEgg.SQUID_EGG.get()); // 鱿鱼卵
+                    output.accept(ModItemsEgg.SQUODDLE_EGG.get()); // 斯奎德尔卵
+                    output.accept(ModItemsEgg.TIGER_PUFFER_EGG.get()); // 虎皮鲀卵
+                    output.accept(ModItemsEgg.VOLT_ANGLER_EGG.get()); // 伏特鮟鱇鱼卵
+                    output.accept(ModItemsEgg.WIZARD_JELLY_EGG.get()); // 魔力水母卵
                     //output.accept(ModItems..get());     // 卵
                     //output.accept(ModItems..get());     // 卵
                     //output.accept(ModItems..get());     // 卵
@@ -1567,12 +1597,16 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());       //象橘 Limonia acidissima
                     output.accept(ModItems.CHOCOLAT_PERSIMMON.get());       //巧克力柿/黑肉柿
                     output.accept(ModItems.BETEL_NUT.get());       //槟榔
+                    output.accept(ModItems.ELM_FRUITS.get());   //榆树钱
+                    output.accept(ModItems.LOCUST_FLOWERS.get());  //槐花
+                    output.accept(ModItems.OSMANTHUS.get());  //桂花
+                    output.accept(ModItems.TOON_SPROUTS.get());   //香椿芽
                     //output.accept(ModItems..get());       //黑柿
                     //output.accept(ModItems..get());       //德州小黑柿
                     //output.accept(ModItems..get());       //火晶柿子
                     //output.accept(ModItems..get());       //老鸦柿
                     //output.accept(ModItems..get());       //君迁子
-                    //output.accept(ModItems..get());       //
+                        // output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //中国南瓜 Cucurbita moschata

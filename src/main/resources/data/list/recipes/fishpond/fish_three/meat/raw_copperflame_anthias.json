@@ -1,0 +1,24 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:copperflame_anthias_egg"
+    },
+    {
+      "tag": "list:pure_meat_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "unusualfishmod:raw_copperflame_anthias"
+    },
+    {
+      "count": 1,
+      "chance": 0.25,
+      "item": "list:copperflame_anthias_egg"
+    }
+  ],
+  "time": 3200
+}

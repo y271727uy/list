@@ -1,0 +1,29 @@
+{
+  "type": "list:fish_pond",
+  "ingredients": [
+    {
+      "item": "list:sweetish_fish_blue_egg"
+    },
+    {
+      "tag": "list:advanced_meat_feed"
+    }
+  ],
+  "isLava": false,
+  "results": [
+    {
+      "count": 1,
+      "item": "alexscaves:sweetish_fish_blue"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:sweetish_fish_blue_egg"
+    },
+    {
+      "count": 1,
+      "chance": 0.5,
+      "item": "list:sweetish_fish_blue_egg"
+    }
+  ],
+  "time": 3200
+}
