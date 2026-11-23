@@ -14,7 +14,7 @@ disabled_precise_base_gems = []
 disabled_precise_base_ores = []
 ```
 
-以上为代码内置默认值，用于首次创建配置或补齐缺失项；已有配置中的有效设置不会被覆盖。用户仍可将 `worldgen_ores` 改为 `true` 开启普通矿石，或清空 `disabled_base_gems` 允许所有宝石宿主。
+以上为代码内置默认值，用于首次创建配置或补齐缺失项；已有配置中的有效设置不会被覆盖。当前普通矿石方块未注册，`worldgen_ores` 和普通矿石禁用列表暂时没有生效对象。清空 `disabled_base_gems` 可允许所有已配置自然生成的宝石宿主。
 
 ## 规则与示例
 

@@ -2,24 +2,8 @@
   "values": [
     "list:aluminium_ingot",
     "list:aluminium_ingot",
-    "list:antimony_ingot",
-    "list:beryllium_ingot",
-    "list:cobalt_ingot",
     "minecraft:copper_ingot",
     "minecraft:gold_ingot",
-    "minecraft:iron_ingot",
-    "list:lead_ingot",
-    "list:manganese_ingot",
-    "list:molybdenum_ingot",
-    "list:naquadah_ingot",
-    "list:neodymium_ingot",
-    "list:nickel_ingot",
-    "list:palladium_ingot",
-    "list:platinum_ingot",
-    "list:plutonium_ingot",
-    "list:silver_ingot",
-    "list:thorium_ingot",
-    "list:tin_ingot",
-    "list:zinc_ingot"
+    "minecraft:iron_ingot"
   ]
 }

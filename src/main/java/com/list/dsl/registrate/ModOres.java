@@ -33,10 +33,10 @@ import static com.list.ListMod.REGISTRATE;
 /** Single registration and recipe entry point for all List gems, ores and metal forms. */
 public final class ModOres {
     private static boolean registered;
+    private static final String ALUMINIUM = "aluminium";
     /**
-     * Ordinary (non-gem) ore blocks are currently unused: their materials and DSL declarations stay,
-     * but the 17 host variants are not registered. Flip to true to bring them back.
-     * Raw/ingot/nugget items are unaffected. Gem ores are always registered.
+     * Ordinary ore blocks are disabled. Enabling this registers aluminium's 17 host variants.
+     * Aluminium's item forms and gem ores are registered independently.
      */
     private static final boolean REGISTER_ORDINARY_ORE_BLOCKS = false;
     private static final Map<String, String> CHINESE = new LinkedHashMap<>();
@@ -421,31 +421,30 @@ public final class ModOres {
 
     private static void registerOrdinaryOres() {
         for (Material metal : METAL_MATERIALS) {
+            if (!metal.id().equals(ALUMINIUM) && !isVanillaOre(metal.id())) continue;
             Supplier<? extends ItemLike> ingot = switch (metal.id()) {
                 case "iron" -> () -> Items.IRON_INGOT;
                 case "copper" -> () -> Items.COPPER_INGOT;
                 case "gold" -> () -> Items.GOLD_INGOT;
                 default -> item(metal.id() + "_ingot", metal, "ingot", metal.english() + " Ingot", metal.chinese() + "锭");
             };
+            INGOTS.put(metal.id(), ingot);
+            formTags("ingots", metal.id(), ingot);
+            if (metal.id().equals("copper")) continue;
             Supplier<? extends ItemLike> nugget = switch (metal.id()) {
                 case "iron" -> () -> Items.IRON_NUGGET;
                 case "gold" -> () -> Items.GOLD_NUGGET;
                 default -> item(metal.id() + "_nugget", metal, "nugget", metal.english() + " Nugget", metal.chinese() + "粒");
             };
-            INGOTS.put(metal.id(), ingot);
             NUGGETS.put(metal.id(), nugget);
-            formTags("ingots", metal.id(), ingot);
             formTags("nuggets", metal.id(), nugget);
-            if (metal.id().equals("aluminium")) {
+            if (metal.id().equals(ALUMINIUM)) {
                 formTags("ingots", "aluminum", ingot);
                 formTags("nuggets", "aluminum", nugget);
             }
         }
         for (Material material : ORE_MATERIALS) {
-            registerOre(material, true);
-        }
-        for (ExtraOre ore : EXTRA_ORDINARY) {
-            registerOre(ore.material(), ore.generates());
+            if (material.id().equals(ALUMINIUM) || isVanillaOre(material.id())) registerOre(material, true);
         }
     }
 
@@ -533,7 +532,7 @@ public final class ModOres {
 
     private static void industrialRecipes(RegistrateRecipeProvider provider) {
         for (Material material : ORE_MATERIALS) {
-            if (material.output().isBlank() || isVanillaOre(material.id())) continue;
+            if (!material.id().equals(ALUMINIUM)) continue;
             ItemLike raw = RAW.get(material.id()).get();
             ItemLike ingot = INGOTS.get(material.output()).get();
             List<ItemLike> inputs = new ArrayList<>();
@@ -548,7 +547,7 @@ public final class ModOres {
                     .save(provider, ListMod.rl("ores/" + material.id() + "/blasting"));
         }
         for (Material metal : METAL_MATERIALS) {
-            if (metal.id().equals("iron") || metal.id().equals("gold")) continue; // Vanilla already supplies both recipes.
+            if (!metal.id().equals(ALUMINIUM)) continue;
             ItemLike ingot = INGOTS.get(metal.id()).get();
             ItemLike nugget = NUGGETS.get(metal.id()).get();
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingot)

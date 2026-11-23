@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "list:item/gt_ores/emerald/raw_ore",
-    "layer1": "list:item/gt_ores/emerald/raw_ore_secondary",
-    "layer2": "list:item/gt_ores/emerald/raw_ore_overlay"
-  }
-}

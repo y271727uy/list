@@ -2,24 +2,7 @@
   "values": [
     "list:aluminium_nugget",
     "list:aluminium_nugget",
-    "list:antimony_nugget",
-    "list:beryllium_nugget",
-    "list:cobalt_nugget",
-    "list:copper_nugget",
     "minecraft:gold_nugget",
-    "minecraft:iron_nugget",
-    "list:lead_nugget",
-    "list:manganese_nugget",
-    "list:molybdenum_nugget",
-    "list:naquadah_nugget",
-    "list:neodymium_nugget",
-    "list:nickel_nugget",
-    "list:palladium_nugget",
-    "list:platinum_nugget",
-    "list:plutonium_nugget",
-    "list:silver_nugget",
-    "list:thorium_nugget",
-    "list:tin_nugget",
-    "list:zinc_nugget"
+    "minecraft:iron_nugget"
   ]
 }
