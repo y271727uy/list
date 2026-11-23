@@ -39,7 +39,6 @@ en = load(GEN / 'assets/list/lang/en_us.json')
 items = {}; ore_ids = []; item_count = 0
 item_suffixes = {
     'vinteum': '晶石', 'dilithium': '晶体',
-    **{f'infused_{aspect}': '水晶' for aspect in ('air', 'earth', 'entropy', 'fire', 'order', 'water')},
 }
 for id, english, chinese, icon, color, secondary, supplier, has_vanilla_ore in rows:
     ids = []

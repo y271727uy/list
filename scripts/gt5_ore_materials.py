@@ -21,7 +21,7 @@ def read_gt5_ores():
                 r'extraOre\("([^"]+)", "([^"]+)", "([^"]+)", "([^"]+)", 0x[\da-f]+, 0x[\da-f]+, (true|false)\)', body
             )
         ]
-    assert len(rows['ORDINARY']) == 79 and len(rows['GEMS']) == 20
+    assert len(rows['ORDINARY']) == 79 and len(rows['GEMS']) == 11
     all_rows = rows['ORDINARY'] + rows['GEMS']
     assert len({row['id'] for row in all_rows}) == len(all_rows), 'Duplicate GT5 material ID'
     assert {row['id'] for row in all_rows if row['generates']} == NATURAL, 'GT5 worldgen material set'

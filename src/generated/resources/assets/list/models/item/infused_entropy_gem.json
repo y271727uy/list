@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "list:item/gt_gems/certus/gem",
-    "layer1": "list:item/gt_gems/certus/gem_secondary",
-    "layer2": "list:item/gt_gems/certus/gem_overlay"
-  }
-}

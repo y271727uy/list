@@ -252,19 +252,10 @@ public final class ModOres {
 
     static final List<ExtraOre> EXTRA_GEM_ORES = List.of(
         extraOre("amber", "Amber", "琥珀", "ruby", 0xff8000, 0x944a00, true),
-        extraOre("charged_certus_quartz", "Charged Certus Quartz", "充能赛特斯石英", "certus", 0xd2d2e6, 0x7a7a85, false),
         extraOre("dilithium", "Dilithium", "二锂", "diamond", 0xfffafa, 0x949191, false),
-        extraOre("firestone", "Firestone", "火石", "quartz", 0xc81400, 0x740c00, false),
         extraOre("fools_ruby", "Fool's Ruby", "愚人红宝石", "ruby", 0xff6464, 0x943a3a, true),
-        extraOre("force", "Force", "力量", "diamond", 0xffff00, 0x949400, false),
         extraOre("forcicium", "Forcicium", "弗锡晶", "diamond", 0x323246, 0x1d1d29, false),
         extraOre("forcillium", "Forcillium", "弗西晶", "diamond", 0x323246, 0x1d1d29, false),
-        extraOre("infused_air", "Aer", "风之魔力", "certus", 0xffff00, 0x949400, false),
-        extraOre("infused_earth", "Terra", "地之魔力", "certus", 0x00ff00, 0x009400, false),
-        extraOre("infused_entropy", "Perditio", "混沌魔力", "certus", 0x3e3e3e, 0x242424, false),
-        extraOre("infused_fire", "Ignis", "火之魔力", "certus", 0xff0000, 0x940000, false),
-        extraOre("infused_order", "Ordo", "秩序魔力", "certus", 0xfcfcfc, 0x929292, false),
-        extraOre("infused_water", "Aqua", "水之魔力", "certus", 0x0000ff, 0x000094, false),
         extraOre("jasper", "Jasper", "碧玉", "emerald", 0xc85050, 0x742e2e, true),
         extraOre("lignite", "Lignite Coal", "褐煤", "lignite", 0x644646, 0x3a2929, true),
         extraOre("niter", "Niter", "硝石", "fine", 0xffc8c8, 0x947474, false),
@@ -353,8 +344,6 @@ public final class ModOres {
         String chineseItemName = chinese + switch (id) {
             case "vinteum" -> "晶石";
             case "dilithium" -> "晶体";
-            case "infused_air", "infused_earth", "infused_entropy",
-                    "infused_fire", "infused_order", "infused_water" -> "水晶";
             default -> "";
         };
         Map<Grade, Supplier<? extends ItemLike>> items = new EnumMap<>(Grade.class);

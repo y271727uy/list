@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "list:item/gt_gems/diamond/gem_exquisite",
-    "layer1": "list:item/gt_gems/diamond/gem_exquisite_secondary",
-    "layer2": "list:item/gt_gems/diamond/gem_exquisite_overlay"
-  }
-}
