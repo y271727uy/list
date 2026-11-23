@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:exquisite_rock_salt_gem"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "list:flawless_rock_salt_gem"
+  }
+}

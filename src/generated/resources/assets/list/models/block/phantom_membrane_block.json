@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/hoarding/phantom_membrane_block_bottom",
+    "east": "list:block/hoarding/phantom_membrane_block_side",
+    "north": "list:block/hoarding/phantom_membrane_block_front",
+    "particle": "list:block/hoarding/phantom_membrane_block_side",
+    "south": "list:block/hoarding/phantom_membrane_block_back",
+    "up": "list:block/hoarding/phantom_membrane_block_top",
+    "west": "list:block/hoarding/phantom_membrane_block_side"
+  }
+}

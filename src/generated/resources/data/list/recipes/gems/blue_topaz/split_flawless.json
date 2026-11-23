@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:flawless_blue_topaz_gem"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "list:blue_topaz_gem"
+  }
+}

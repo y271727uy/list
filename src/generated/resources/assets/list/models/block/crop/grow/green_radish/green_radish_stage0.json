@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/crop",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "crop": "list:block/crop/grow/green_radish/green_radish_stage0"
+  }
+}

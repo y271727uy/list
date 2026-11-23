@@ -27,6 +27,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> DISK_BURROWED_MUD = create("disk_burrowed_mud");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
+        com.list.dsl.OreDsl.bootstrapPlacedFeatures(context);
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
         register(
                 context,

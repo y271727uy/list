@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:lignite_gem"
+    },
+    {
+      "item": "list:lignite_gem"
+    }
+  ],
+  "result": {
+    "item": "list:flawless_lignite_gem"
+  }
+}

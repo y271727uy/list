@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:flawless_green_sapphire_gem"
+    },
+    {
+      "item": "list:flawless_green_sapphire_gem"
+    }
+  ],
+  "result": {
+    "item": "list:exquisite_green_sapphire_gem"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "list:block/crop/grow/black_beauty_tomato/black_beauty_tomato_stage2"
+  }
+}

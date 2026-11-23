@@ -1,0 +1,39 @@
+{
+  "type": "brewinandchewin:fermenting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "brewinandchewin"
+    },
+    {
+      "type": "forge:item_exists",
+      "item": "neapolitan:white_strawberries"
+    }
+  ],
+  "basefluid": {
+    "count": 1000,
+    "fluid": "minecraft:water"
+  },
+  "experience": 0.6,
+  "fermentingtime": 12000,
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "neapolitan:white_strawberries"
+    },
+    {
+      "item": "neapolitan:white_strawberries"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "count": 1,
+    "item": "list:white_strawberry_wine"
+  },
+  "temperature": 3
+}

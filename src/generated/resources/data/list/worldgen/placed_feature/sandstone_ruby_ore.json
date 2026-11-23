@@ -1,0 +1,37 @@
+{
+  "feature": "list:sandstone_ruby_ore",
+  "placement": [
+    {
+      "type": "list:ore_config_filter",
+      "base": "sandstone",
+      "gem": true,
+      "ore": "list:ruby_ore"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 1
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": {
+          "absolute": 256
+        },
+        "min_inclusive": {
+          "absolute": -64
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

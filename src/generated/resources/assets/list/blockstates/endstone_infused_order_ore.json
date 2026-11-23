@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "list:block/endstone_infused_order_ore"
+    }
+  }
+}

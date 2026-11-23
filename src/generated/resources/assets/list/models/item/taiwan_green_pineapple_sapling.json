@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "list:block/crop/grow/taiwan_green_pineapple/taiwan_green_pineapple_stage0"
+  }
+}

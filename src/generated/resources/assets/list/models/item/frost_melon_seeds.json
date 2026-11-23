@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "list:block/crop/seeds/frost_melon_seeds"
+  }
+}

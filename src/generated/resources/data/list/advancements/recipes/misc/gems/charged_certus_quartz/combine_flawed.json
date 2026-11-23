@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gem": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "list:chipped_charged_certus_quartz_gem"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "list:gems/charged_certus_quartz/combine_flawed"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_gem",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "list:gems/charged_certus_quartz/combine_flawed"
+    ]
+  },
+  "sends_telemetry_event": false
+}

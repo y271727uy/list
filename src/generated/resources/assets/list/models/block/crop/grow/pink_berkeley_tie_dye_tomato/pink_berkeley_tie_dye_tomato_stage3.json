@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "list:block/crop/grow/pink_berkeley_tie_dye_tomato/pink_berkeley_tie_dye_tomato_stage3"
+  }
+}

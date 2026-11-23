@@ -25,6 +25,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> DISK_BURROWED_MUD = create("disk_burrowed_mud");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
+        com.list.dsl.OreDsl.bootstrapBiomeModifiers(context);
         HolderGetter<Biome> biomes = context.lookup(Registries.BIOME);
         HolderGetter<PlacedFeature> features = context.lookup(Registries.PLACED_FEATURE);
 

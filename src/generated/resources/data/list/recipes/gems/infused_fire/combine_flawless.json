@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:infused_fire_gem"
+    },
+    {
+      "item": "list:infused_fire_gem"
+    }
+  ],
+  "result": {
+    "item": "list:flawless_infused_fire_gem"
+  }
+}

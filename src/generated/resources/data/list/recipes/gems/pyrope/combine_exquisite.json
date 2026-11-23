@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:flawless_pyrope_gem"
+    },
+    {
+      "item": "list:flawless_pyrope_gem"
+    }
+  ],
+  "result": {
+    "item": "list:exquisite_pyrope_gem"
+  }
+}

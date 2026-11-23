@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "list:block/crop/grow/striped_german_tomato/striped_german_tomato_stage0"
+    },
+    "age=1": {
+      "model": "list:block/crop/grow/striped_german_tomato/striped_german_tomato_stage1"
+    },
+    "age=2": {
+      "model": "list:block/crop/grow/striped_german_tomato/striped_german_tomato_stage2"
+    },
+    "age=3": {
+      "model": "list:block/crop/grow/striped_german_tomato/striped_german_tomato_stage3"
+    },
+    "age=4": {
+      "model": "list:block/crop/grow/striped_german_tomato/striped_german_tomato_stage4"
+    },
+    "age=5": {
+      "model": "list:block/crop/grow/striped_german_tomato/striped_german_tomato_stage5"
+    },
+    "age=6": {
+      "model": "list:block/crop/grow/striped_german_tomato/striped_german_tomato_stage6"
+    },
+    "age=7": {
+      "model": "list:block/crop/grow/striped_german_tomato/striped_german_tomato_stage7"
+    }
+  }
+}

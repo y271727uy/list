@@ -10,6 +10,7 @@ import com.tterrag.registrate.builders.BuilderCallback;
 import com.tterrag.registrate.providers.DataGenContext;
 import com.tterrag.registrate.providers.ProviderType;
 import com.tterrag.registrate.providers.RegistrateBlockstateProvider;
+import com.tterrag.registrate.providers.RegistrateLangProvider;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.providers.loot.RegistrateBlockLootTables;
 import com.tterrag.registrate.providers.loot.RegistrateLootTableProvider;
@@ -24,9 +25,11 @@ import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -63,6 +66,9 @@ public class ListBlockBuilder<T extends Block, P> extends AbstractBuilder<Block,
 
     @Nullable
     private NonNullSupplier<Supplier<BlockColor>> colorHandler;
+    @Nullable
+    private int[] tintColors;
+
     public ListBlockBuilder(AbstractRegistrate<?> owner, P parent, String name, BuilderCallback callback, NonNullFunction<BlockBehaviour.Properties, T> factory, NonNullSupplier<BlockBehaviour.Properties> initialProperties) {
         super(owner, parent, name, callback, ForgeRegistries.Keys.BLOCKS);
 
@@ -118,9 +124,22 @@ public class ListBlockBuilder<T extends Block, P> extends AbstractBuilder<Block,
     }
 
     public <I extends Item> ListItemBuilder<I, ListBlockBuilder<T, P>> item(NonNullBiFunction<? super T, Item.Properties, ? extends I> factory) {
+        return item(getName(), factory);
+    }
+
+    /**
+     * 绑定一个与方块不同名的物品（如作物方块 red_cabbages 绑定种子 red_cabbage_seeds）。
+     */
+    public <I extends Item> ListItemBuilder<I, ListBlockBuilder<T, P>> item(String itemName, NonNullBiFunction<? super T, Item.Properties, ? extends I> factory) {
         final var sup = asSupplier();
-        return ((ListRegistrate)getOwner()).<I, ListBlockBuilder<T, P>> listItem(this, getName(), p -> factory.apply(getEntry(), p))
-            .setData(ProviderType.LANG, NonNullBiConsumer.noop())
+        return ((ListRegistrate)getOwner()).<I, ListBlockBuilder<T, P>> listItem(this, itemName, p -> factory.apply(getEntry(), p))
+            // BlockItem 与方块共用翻译键，已由方块生成；ItemNameBlockItem 等有自己的键时才生成
+            .setData(ProviderType.LANG, (ctx, prov) -> {
+                String key = ctx.getEntry().getDescriptionId();
+                if (!key.equals(getEntry().getDescriptionId())) {
+                    prov.add(key, RegistrateLangProvider.toEnglishName(ctx.getName()));
+                }
+            })
             .model((ctx, prov) -> {
                 Optional<String> model = getOwner().getDataProvider(ProviderType.BLOCKSTATE)
                     .flatMap(p -> p.getExistingVariantBuilder(getEntry()))
@@ -160,6 +179,43 @@ public class ListBlockBuilder<T extends Block, P> extends AbstractBuilder<Block,
                 e.register(colorHandler.get().get(), getEntry());
             }
         });
+    }
+
+    /**
+     * Applies the same colors to the placed block and its block item.
+     * Each color is indexed by the model's tint index. Unspecified indices are untinted.
+     */
+    public ListBlockBuilder<T, P> tint(int... colors) {
+        if (tintColors == null) {
+            DistExecutor.runWhenOn(Dist.CLIENT, () -> this::registerItemTint);
+        }
+        tintColors = colors.clone();
+        return color(() -> () -> (state, level, pos, tintIndex) -> getTintColor(tintIndex));
+    }
+
+    /**
+     * Generates a full cube using a shared texture, with tint index zero on every face.
+     */
+    public ListBlockBuilder<T, P> tintedCube(ResourceLocation texture, int color) {
+        return tint(color).blockstate((ctx, provider) -> {
+            var model = provider.models().cubeAll(ctx.getName(), texture);
+            model.element().cube("#all").faces((direction, face) -> face.tintindex(0));
+            provider.simpleBlock(ctx.getEntry(), model);
+        });
+    }
+
+    private void registerItemTint() {
+        OneTimeEventReceiver.addModListener(getOwner(), RegisterColorHandlersEvent.Item.class, event -> {
+            Item item = getEntry().asItem();
+            if (item != Items.AIR) {
+                event.register((stack, tintIndex) -> getTintColor(tintIndex), item);
+            }
+        });
+    }
+
+    private int getTintColor(int tintIndex) {
+        int[] colors = tintColors;
+        return colors != null && tintIndex >= 0 && tintIndex < colors.length ? colors[tintIndex] : -1;
     }
 
     public ListBlockBuilder<T, P> defaultBlockstate() {

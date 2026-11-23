@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:tanzanite_gem"
+    },
+    {
+      "item": "list:tanzanite_gem"
+    }
+  ],
+  "result": {
+    "item": "list:flawless_tanzanite_gem"
+  }
+}

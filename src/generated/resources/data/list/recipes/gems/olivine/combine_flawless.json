@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:olivine_gem"
+    },
+    {
+      "item": "list:olivine_gem"
+    }
+  ],
+  "result": {
+    "item": "list:flawless_olivine_gem"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:exquisite_phosphorus_gem"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "list:flawless_phosphorus_gem"
+  }
+}

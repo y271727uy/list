@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:flawed_red_garnet_gem"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "list:chipped_red_garnet_gem"
+  }
+}

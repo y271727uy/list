@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "list:red_sand_quartzite_ore",
+  "step": "underground_ores"
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:spessartine_gem"
+    },
+    {
+      "item": "list:spessartine_gem"
+    }
+  ],
+  "result": {
+    "item": "list:flawless_spessartine_gem"
+  }
+}

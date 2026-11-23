@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "list:block/crop/grow/lemon_boy_tomato/lemon_boy_tomato_stage5"
+  }
+}

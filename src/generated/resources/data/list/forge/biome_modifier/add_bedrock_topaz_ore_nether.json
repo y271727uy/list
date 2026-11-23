@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_nether",
+  "features": "list:bedrock_topaz_ore",
+  "step": "underground_ores"
+}

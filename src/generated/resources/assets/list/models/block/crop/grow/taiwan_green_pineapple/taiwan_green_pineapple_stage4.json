@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "list:block/crop/grow/taiwan_green_pineapple/taiwan_green_pineapple_stage4"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "list:block/crop/grow/cipolla_di_certaldo/cipolla_di_certaldo_stage0"
+    },
+    "age=1": {
+      "model": "list:block/crop/grow/cipolla_di_certaldo/cipolla_di_certaldo_stage1"
+    },
+    "age=2": {
+      "model": "list:block/crop/grow/cipolla_di_certaldo/cipolla_di_certaldo_stage2"
+    },
+    "age=3": {
+      "model": "list:block/crop/grow/cipolla_di_certaldo/cipolla_di_certaldo_stage3"
+    }
+  }
+}

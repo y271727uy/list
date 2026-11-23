@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "list:block/crop/grow/red_la_soda/red_la_soda_stage0"
+    },
+    "age=1": {
+      "model": "list:block/crop/grow/red_la_soda/red_la_soda_stage1"
+    },
+    "age=2": {
+      "model": "list:block/crop/grow/red_la_soda/red_la_soda_stage2"
+    },
+    "age=3": {
+      "model": "list:block/crop/grow/red_la_soda/red_la_soda_stage3"
+    }
+  }
+}

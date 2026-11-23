@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/crop",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "crop": "list:block/crop/grow/ice_cream_radish/ice_cream_radish_stage2"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "list:block/crop/grow/harsh_winter_strawberry/harsh_winter_strawberry_stage4"
+  }
+}

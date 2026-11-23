@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "list:block/hoarding/leather_block_end",
+    "side": "list:block/hoarding/leather_block_side"
+  }
+}

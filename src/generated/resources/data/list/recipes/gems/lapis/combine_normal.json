@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:flawed_lapis_gem"
+    },
+    {
+      "item": "list:flawed_lapis_gem"
+    }
+  ],
+  "result": {
+    "item": "minecraft:lapis_lazuli"
+  }
+}

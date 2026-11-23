@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:monazite_gem"
+    },
+    {
+      "item": "list:monazite_gem"
+    }
+  ],
+  "result": {
+    "item": "list:flawless_monazite_gem"
+  }
+}

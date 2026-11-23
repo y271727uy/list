@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:flawless_fools_ruby_gem"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "list:fools_ruby_gem"
+  }
+}

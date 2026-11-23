@@ -1,0 +1,7 @@
+{
+  "parent": "list:block/crop/tall_cross_lower",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "list:block/crop/grow/ancient_fruit/ancient_fruit_stage0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:flawed_grossular_gem"
+    },
+    {
+      "item": "list:flawed_grossular_gem"
+    }
+  ],
+  "result": {
+    "item": "list:grossular_gem"
+  }
+}

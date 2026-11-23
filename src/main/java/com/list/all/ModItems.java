@@ -1,6 +1,7 @@
 package com.list.all;
 
 import com.list.all.moditem.ModItemsEgg;
+import com.list.all.moditem.ModItemWine;
 import com.list.all.moditem.ModItemsJelly;
 import com.list.all.moditem.ModItemsMooncake;
 import com.list.all.moditem.ModItemsSmokerFish;
@@ -17,6 +18,7 @@ import com.list.util.ItemModelUtil;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Tiers;
@@ -1440,16 +1442,6 @@ public static final ItemEntry<Item> MUSTARD = REGISTRATE
                 .build()))
         .register();
 
-// 牛至
-public static final ItemEntry<Item> OREGANO = REGISTRATE
-        .item("oregano", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/oregano")))
-        .properties(p -> p.food(new FoodProperties.Builder()
-                .nutrition(3)
-                .saturationMod(1.2f)
-                .build()))
-        .register();
-
 // 细香葱
 public static final ItemEntry<Item> CHIVES = REGISTRATE
         .item("chives", Item::new)
@@ -1640,27 +1632,9 @@ public static final ItemEntry<Item> RED_BEAN = REGISTRATE
                 .build()))
         .register();
 
-// 罗勒
-public static final ItemEntry<Item> BASIL = REGISTRATE
-        .item("basil", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/stardewvalley/basil")))
-        .properties(p -> p.food(new FoodProperties.Builder()
-                .nutrition(3)
-                .saturationMod(1.2f)
-                .build()))
-        .register();
-
 */
 
-    //红洋葱
-    public static final ItemEntry<Item> RED_ONION = REGISTRATE
-            .item("red_onion", Item::new)
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/red_onion")))
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(2)
-                    .saturationMod(1.2f)
-                    .build()))
-            .register();
+    //红洋葱 -> 已移至 ModBlocks.RED_ONION（作物方块自带物品）
 
     public static final ItemEntry<Item> RED_ONION_SLICE = REGISTRATE
             .item("red_onion_slice", Item::new)
@@ -1671,15 +1645,7 @@ public static final ItemEntry<Item> BASIL = REGISTRATE
                     .build()))
             .register();
 
-    //白萝卜
-    public static final ItemEntry<Item> WHITE_RADISH = REGISTRATE
-            .item("white_raddish", Item::new)
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/vegetable/white_raddish")))
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(3)
-                    .saturationMod(2.2f)
-                    .build()))
-            .register();
+    //白萝卜 -> 已移至 ModBlocks.WHITE_RADISH（作物方块自带物品）
 /*
 // 香花薄荷
 public static final ItemEntry<Item> SPEARMINT = REGISTRATE
@@ -1830,7 +1796,6 @@ public static final ItemEntry<Item> SAGE = REGISTRATE
                 .saturationMod(1.2f)
                 .build()))
         .register();
-*/
 // 人参
 public static final ItemEntry<Item> GINSENG = REGISTRATE
         .item("ginseng", Item::new)
@@ -1870,6 +1835,7 @@ public static final ItemEntry<Item> EUCALYPTUS_LEAF = REGISTRATE
                 .saturationMod(0.1f)
                 .build()))
         .register();
+*/
 
 // 上古水果（星露谷水果，反正分不清了就这样吧）
 public static final ItemEntry<Item> ANCIENT_FRUIT = REGISTRATE
@@ -2013,14 +1979,7 @@ public static final ItemEntry<Item> AGLIO_ROSSO_DI_SULMONA = REGISTRATE
                 .build()))
         .register();
 
-public static final ItemEntry<Item> AGLIO_ROSSO_DI_SULMONA_CLOVES = REGISTRATE
-        .item("aglio_rosso_di_sulmona_cloves", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/aglio_rosso_di_sulmona_cloves")))
-        .properties(p -> p.food(new FoodProperties.Builder()
-                .nutrition(3)
-                .saturationMod(1.2f)
-                .build()))
-        .register();
+// 苏尔莫纳红蒜瓣 -> 已移至 ModBlocks.AGLIO_ROSSO_DI_SULMONA（作物方块自带物品，用于种植）
 
 public static final ItemEntry<Item> AGLIO_BIANCO_POLESANO = REGISTRATE
         .item("aglio_bianco_polesano", Item::new)
@@ -2031,14 +1990,13 @@ public static final ItemEntry<Item> AGLIO_BIANCO_POLESANO = REGISTRATE
                 .build()))
         .register();
 
-public static final ItemEntry<Item> AGLIO_BIANCO_POLESANO_CLOVES = REGISTRATE
-        .item("aglio_bianco_polesano_cloves", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/aglio_bianco_polesano_cloves")))
-        .properties(p -> p.food(new FoodProperties.Builder()
-                .nutrition(3)
-                .saturationMod(1.2f)
-                .build()))
-        .register();
+// 波莱西亚白蒜瓣 -> 已移至 ModBlocks.AGLIO_BIANCO_POLESANO（作物方块自带物品，用于种植）
+
+    public static final ItemEntry<Item> AVALANCHE_BEETROOT = REGISTRATE
+            .item("avalanche_beetroot", Item::new)
+            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/avalanche_beetroot")))
+            .properties(p -> p.food(Foods.BEETROOT))
+            .register();
 
 public static final ItemEntry<Item> ARTICHOKES = REGISTRATE
         .item("artichokes", Item::new)
@@ -2069,6 +2027,21 @@ public static final ItemEntry<Item> BEEFSTEAK_TOMATO_SLICE = REGISTRATE
                 .saturationMod(1.2f)
                 .build()))
         .register();
+
+    public static final ItemEntry<Item> GREEN_ZEBRA_TOMATO = registerTomato("green_zebra_tomato");
+    public static final ItemEntry<Item> LEMON_BOY_TOMATO = registerTomato("lemon_boy_tomato");
+    public static final ItemEntry<Item> VALENCIA_TOMATO = registerTomato("valencia_tomato");
+    public static final ItemEntry<Item> BLACK_BEAUTY_TOMATO = registerTomato("black_beauty_tomato");
+    public static final ItemEntry<Item> WHITE_BEAUTY_TOMATO = registerTomato("white_beauty_tomato");
+    public static final ItemEntry<Item> PINK_BERKELEY_TIE_DYE_TOMATO = registerTomato("pink_berkeley_tie_dye_tomato");
+    public static final ItemEntry<Item> STRIPED_GERMAN_TOMATO = registerTomato("striped_german_tomato");
+
+    private static ItemEntry<Item> registerTomato(String name) {
+        return REGISTRATE.item(name, Item::new)
+                .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/" + name)))
+                .properties(p -> p.food(new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).build()))
+                .register();
+    }
 
 public static final ItemEntry<Item> BUTTERHEAD_LETTUCE = REGISTRATE
         .item("butterhead_lettuce", Item::new)
@@ -2124,14 +2097,7 @@ public static final ItemEntry<Item> CINNAMON_FRUIT = REGISTRATE
                 .build()))
         .register();
 
-public static final ItemEntry<Item> CIPOLLA_DI_CERTALDO = REGISTRATE
-        .item("cipolla_di_certaldo", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/cipolla_di_certaldo")))
-        .properties(p -> p.food(new FoodProperties.Builder()
-                .nutrition(3)
-                .saturationMod(1.2f)
-                .build()))
-        .register();
+// 切尔塔尔多洋葱 -> 已移至 ModBlocks.CIPOLLA_DI_CERTALDO（作物方块自带物品）
 
 public static final ItemEntry<Item> CORATION_OLIVE = REGISTRATE
         .item("coration_olive", Item::new)
@@ -2187,14 +2153,7 @@ public static final ItemEntry<Item> GROS_MICHEL_BANANA = REGISTRATE
                 .build()))
         .register();
 
-public static final ItemEntry<Item> HORSERADISH = REGISTRATE
-        .item("horseradish", Item::new)
-        .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/crop/horseradish")))
-        .properties(p -> p.food(new FoodProperties.Builder()
-                .nutrition(3)
-                .saturationMod(1.2f)
-                .build()))
-        .register();
+// 辣根 -> 已移至 ModBlocks.HORSERADISH（作物方块自带物品）
 
 public static final ItemEntry<Item> ITALIAN_LONG_EGGPLANT = REGISTRATE
         .item("italian_long_eggplant", Item::new)
@@ -5163,14 +5122,7 @@ public static final ItemEntry<Item> PEA_POD = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/pea_pod")))
             .register();
 
-public static final ItemEntry<Item> PEA = REGISTRATE
-            .item("pea", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(2)
-                    .saturationMod(1.4f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/pea")))
-            .register();
+// 豌豆 -> 已移至 ModBlocks.PEA（作物方块自带物品）
 
 public static final ItemEntry<Item> PEA_PASTE = REGISTRATE
             .item("pea_paste", Item::new)
@@ -5180,12 +5132,6 @@ public static final ItemEntry<Item> PEA_PASTE = REGISTRATE
                     .build()))
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/pea_paste")))
             .register();
-//硅岩
-public static final ItemEntry<Item> NAQUADAH_INGOT = REGISTRATE
-            .item("naquadah_ingot", Item::new)
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/gregtech/naquadah_ingot")))
-            .register();
-
 //包装袋
 public static final ItemEntry<Item> CHIPS_BAG = REGISTRATE
             .item("chips_bag", Item::new)
@@ -5990,14 +5936,7 @@ public static final ItemEntry<Item> SPOILED_MEAT = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/spoiled_meat")))
             .register();
 
-public static final ItemEntry<Item> GLYCINE_SOJA = REGISTRATE
-            .item("glycine_soja", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(2)
-                    .saturationMod(1.2f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/glycine_soja")))
-            .register();
+// 野生大豆 -> 已移至 ModBlocks.GLYCINE_SOJA（作物方块自带物品）
 
 public static final ItemEntry<Item> WILD_SOYBEAN_POD = REGISTRATE
             .item("wild_soybean_pod", Item::new)
@@ -6467,58 +6406,9 @@ public static final ItemEntry<Item> UNFILTERED_GRAHAM_CRACKER = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/food/gtfo/unfiltered_graham_cracker")))
             .register();
 
-//欧洲黑莓
-public static final ItemEntry<Item> EUROPEAN_BLACKBERRY = REGISTRATE
-            .listItem("european_blackberry", Item::new)
-            .tooltips(
-            "§7§oA member of the Rubus fruticosus agg.",
-            "§7§oIt is widespread across Britain and Ireland."
-        )
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(0.5f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/european_blackberry")))
-            .register();
+//欧洲黑莓 -> 已移至 ModBlocks.EUROPEAN_BLACKBERRY（浆果丛方块自带物品）
 
-//美洲黑醋栗
-public static final ItemEntry<Item> AMERICAN_BLACK_CURRANT = REGISTRATE
-            .listItem("american_black_currant", Item::new)
-            .tooltips(
-            "§7§oAmerican black currant is a common wild currant in North America."
-        )
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(0.5f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/american_black_currant")))
-            .register();
-
-//罗瓦达红醋栗
-public static final ItemEntry<Item> ROVADA_RED_CURRANT = REGISTRATE
-            .listItem("rovada_red_currant", Item::new)
-            .tooltips(
-            "§7§oKing of Red Currants!"
-        )
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(0.5f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/rovada_red_currant")))
-            .register();
-
-//凡尔赛白醋栗
-public static final ItemEntry<Item> VERSAILLES_WHITE_CURRANT = REGISTRATE
-            .listItem("versailles_white_currant", Item::new)
-            .tooltips(
-            "§7§oThe aristocrat of currants"
-        )
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(0.5f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/versailles_white_currant")))
-            .register();
+//美洲黑醋栗 / 罗瓦达红醋栗 / 凡尔赛白醋栗 -> 已移至 ModBlocks（浆果丛方块自带物品）
 
 //东方草莓
 public static final ItemEntry<Item> ORIENTAL_STRAWBERRY = REGISTRATE
@@ -6530,55 +6420,15 @@ public static final ItemEntry<Item> ORIENTAL_STRAWBERRY = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/oriental_strawberry")))
             .register();
 
-//越橘
-public static final ItemEntry<Item> LINGONBERRY = REGISTRATE
-            .item("lingonberry", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(1.5f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/lingonberry")))
-            .register();
+//越橘 -> 已移至 ModBlocks.LINGONBERRY（浆果丛方块自带物品）
 
-//哈施贝格接骨木莓
-public static final ItemEntry<Item> HASCHBERG_ELDERBERRY = REGISTRATE
-            .item("haschberg_elderberry", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(1.5f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/haschberg_elderberry")))
-            .register();
+//哈施贝格接骨木莓 -> 已移至 ModBlocks.HASCHBERG_ELDERBERRY（浆果丛方块自带物品）
 
-//大果蔓越莓
-public static final ItemEntry<Item> LARGE_CRANBERRY = REGISTRATE
-            .item("large_cranberry", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(1.5f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/large_cranberry")))
-            .register();
+//大果蔓越莓 -> 已移至 ModBlocks.LARGE_CRANBERRY（浆果丛方块自带物品）
 
-//欧洲红树莓
-public static final ItemEntry<Item> EUROPEAN_RED_RASPBERRY = REGISTRATE
-            .item("european_red_raspberry", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(1.5f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/european_red_raspberry")))
-            .register();
+//欧洲红树莓 -> 已移至 ModBlocks.EUROPEAN_RED_RASPBERRY（浆果丛方块自带物品）
 
-//北高丛蓝莓
-public static final ItemEntry<Item> NORTHERN_HIGHBUSH_BLUEBERRY = REGISTRATE
-            .item("northern_highbush_blueberry", Item::new)
-            .properties(p -> p.food(new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationMod(1.5f)
-                    .build()))
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/fruit/berry/northern_highbush_blueberry")))
-            .register();
+//北高丛蓝莓 -> 已移至 ModBlocks.NORTHERN_HIGHBUSH_BLUEBERRY（浆果丛方块自带物品）
 //什锦浆果
 public static final ItemEntry<BowlReturnFoodItem> BERRY_MEDLEY = REGISTRATE
             .item("berry_medley", BowlReturnFoodItem::new)
@@ -7250,12 +7100,6 @@ public static final ItemEntry<Item> BETEL_NUT_DRIED = REGISTRATE
             .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/gregtech/tungsten_steel")))
             .register();
 
-   //铝锭
-    public static final ItemEntry<Item> ALUMINUM_INGOT = REGISTRATE
-            .item("aluminum_ingot", Item::new)
-            .model((ctx, provider) -> provider.generated(ctx::get, provider.modLoc("item/manmade/gregtech/aluminum_ingot")))
-            .register();
-
    //铝箔
     public static final ItemEntry<Item> ALUMINUM_FOIL = REGISTRATE
             .item("aluminum_foil", Item::new)
@@ -7498,6 +7342,7 @@ public static final ItemEntry<Item> BETEL_NUT_DRIED = REGISTRATE
         ModItemsEgg.register();
         ModItemsMooncake.register();
         ModItemsJelly.register();
+        ModItemWine.register();
         ModItemsSmokerFish.register();
     }
 }

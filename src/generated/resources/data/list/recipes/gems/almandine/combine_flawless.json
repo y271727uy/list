@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:almandine_gem"
+    },
+    {
+      "item": "list:almandine_gem"
+    }
+  ],
+  "result": {
+    "item": "list:flawless_almandine_gem"
+  }
+}

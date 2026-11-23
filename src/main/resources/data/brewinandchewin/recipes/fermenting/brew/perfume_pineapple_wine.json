@@ -1,0 +1,35 @@
+{
+  "type": "brewinandchewin:fermenting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "brewinandchewin"
+    }
+  ],
+  "basefluid": {
+    "count": 1000,
+    "fluid": "minecraft:water"
+  },
+  "experience": 0.6,
+  "fermentingtime": 12000,
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "list:perfume_pineapple"
+    },
+    {
+      "item": "list:perfume_pineapple"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "count": 1,
+    "item": "list:perfume_pineapple_wine"
+  },
+  "temperature": 3
+}

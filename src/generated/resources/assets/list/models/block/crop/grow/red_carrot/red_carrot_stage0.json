@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/crop",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "crop": "list:block/crop/grow/red_carrot/red_carrot_stage0"
+  }
+}

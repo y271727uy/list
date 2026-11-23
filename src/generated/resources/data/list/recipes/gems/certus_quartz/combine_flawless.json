@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:certus_quartz_gem"
+    },
+    {
+      "item": "list:certus_quartz_gem"
+    }
+  ],
+  "result": {
+    "item": "list:flawless_certus_quartz_gem"
+  }
+}

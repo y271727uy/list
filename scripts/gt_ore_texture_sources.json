@@ -1,0 +1,238 @@
+{
+  "src/main/resources/assets/list/textures/block/gt_ores/dull/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/dull/ore.png",
+    "sha256": "58c6e2bd09c2f110a51b0c1b04eeaaa9b42d416dfad83e46fedf03c8f4b7e245"
+  },
+  "src/main/resources/assets/list/textures/block/gt_ores/emerald/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/diamond/ore.png",
+    "sha256": "ec8b718e5ab70dbfcc1006f89a433efcf398eb5fac6f58c59e5fdf80c44b7dcf"
+  },
+  "src/main/resources/assets/list/textures/block/gt_ores/fine/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/fine/ore.png",
+    "sha256": "a3d93f47f1026de532496ae3c01e5be724a04d30686a66ece25c20abcfb79fe8"
+  },
+  "src/main/resources/assets/list/textures/block/gt_ores/flint/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/flint/ore.png",
+    "sha256": "3d7fb22b4a84bc72672867c5258cf1da140266acab38ff190e0eb75054325018"
+  },
+  "src/main/resources/assets/list/textures/block/gt_ores/metallic/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/dull/ore.png",
+    "sha256": "58c6e2bd09c2f110a51b0c1b04eeaaa9b42d416dfad83e46fedf03c8f4b7e245"
+  },
+  "src/main/resources/assets/list/textures/block/gt_ores/radioactive/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/dull/ore.png",
+    "sha256": "58c6e2bd09c2f110a51b0c1b04eeaaa9b42d416dfad83e46fedf03c8f4b7e245"
+  },
+  "src/main/resources/assets/list/textures/block/gt_ores/rough/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/rough/ore.png",
+    "sha256": "90868aa64ab67ab7b309a0b4ceabbaa9417e5e5e915a40bdda62752fea1a0c3b"
+  },
+  "src/main/resources/assets/list/textures/block/gt_ores/sand/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/fine/ore.png",
+    "sha256": "a3d93f47f1026de532496ae3c01e5be724a04d30686a66ece25c20abcfb79fe8"
+  },
+  "src/main/resources/assets/list/textures/block/gt_ores/shiny/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/dull/ore.png",
+    "sha256": "58c6e2bd09c2f110a51b0c1b04eeaaa9b42d416dfad83e46fedf03c8f4b7e245"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/bright/nugget.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/bright/nugget.png",
+    "sha256": "32c001056b9b4bbaf6db88b16cee5ebda5e07fc790df624d3fa62cdfc77fe328"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/bright/nugget_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/bright/nugget_overlay.png",
+    "sha256": "db9c93c5cd0f3568c97d16eebe8993bc50da6959e9be382e26d78428306b5606"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/bright/nugget_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/bright/nugget_secondary.png",
+    "sha256": "e1e17e2194626da8cbf34774b3fabc04d6b2ddede44c39cf6e5cd8fd2e8e1811"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/dull/ingot.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/ingot.png",
+    "sha256": "8550ef4e3c6f1aff718c7cb33d6e314e09c36076ebb15f5362a7cc3e69a60dfc"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/dull/ingot_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/ingot_overlay.png",
+    "sha256": "aec44a8024c2b48ab6b9b28d3c9ca572cec66dda2f114a55294558a2af905904"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/dull/ingot_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/ingot_secondary.png",
+    "sha256": "115bb360a10328314be5d0943a894dac4ceb5ecb48fa8ea9f9efd4e91be07497"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/dull/nugget.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/nugget.png",
+    "sha256": "66ed2f0383b140205c1316f99a2ebbf89ec78be8b7231a3c2e4ed685db288870"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/dull/nugget_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/nugget_overlay.png",
+    "sha256": "5c2f97be53742265ff3c25276427de2921a33f3029bca8b386e3b3f4ea039f17"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/dull/nugget_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/nugget_secondary.png",
+    "sha256": "08cc7e846407cfda7fa1577e5765fe0685cd3067305c6cf52d41b1e7d36bd919"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/dull/raw_ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/raw_ore.png",
+    "sha256": "7f9c8d3a380903439be6b87ad376e7f524d89b9cb8d04be00771f2ce2b2e69bf"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/dull/raw_ore_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/raw_ore_secondary.png",
+    "sha256": "d745807db3c03e228da3508c6120e45a5c10d0058b09b36c9ba1439a3e08b243"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/emerald/raw_ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/raw_ore.png",
+    "sha256": "339f0536f951ed9632c3f6b0eecbf6481866d38866b36f3d83007c54e9b0b708"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/emerald/raw_ore_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/shiny/raw_ore_overlay.png",
+    "sha256": "85ef754cc662a27b34410e947311457b885311fed972ec7963b8d51fc5695352"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/emerald/raw_ore_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/raw_ore_secondary.png",
+    "sha256": "bde5bf1a2a567884d9a2df4c9ecaaa4988a0d1514fba675898807d8ac6fa10bc"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/fine/raw_ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/raw_ore.png",
+    "sha256": "8556d1b2b8c81f39ef03e0f59f07ba2472587e9ccbf99282001490981a2b94f0"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/fine/raw_ore_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/raw_ore_secondary.png",
+    "sha256": "b9c7dd09f4a1ae87a971d1211b050ee0824153eb7faa9eb111a32d2e11b5540d"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/flint/raw_ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/raw_ore.png",
+    "sha256": "8556d1b2b8c81f39ef03e0f59f07ba2472587e9ccbf99282001490981a2b94f0"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/flint/raw_ore_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/raw_ore_secondary.png",
+    "sha256": "b9c7dd09f4a1ae87a971d1211b050ee0824153eb7faa9eb111a32d2e11b5540d"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/metallic/ingot.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/metallic/ingot.png",
+    "sha256": "dfaeac914c24d570c9c10b4967835af5d704bdc3de9e3b4937ed7ab0ac8b189e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/metallic/ingot_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/metallic/ingot_overlay.png",
+    "sha256": "4095294c6d45435f1e6c5b0147ae6ed515dd861cd80340028d8ccf27b64fedd2"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/metallic/ingot_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/metallic/ingot_secondary.png",
+    "sha256": "580c031cdf421a332cef8013bec1ae04dcbd753dab87b5a231f10edf81bdd942"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/metallic/nugget.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/metallic/nugget.png",
+    "sha256": "d8fb5124b260881d7e5a646f4a3a85dd0b1dfbcbac3b6d6b618d9006d72b37d0"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/metallic/nugget_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/metallic/nugget_overlay.png",
+    "sha256": "c65eb782d99279180335f9aefd167f21fbb9f6b244b36156338db67bfd0166f9"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/metallic/nugget_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/metallic/nugget_secondary.png",
+    "sha256": "7fecfb01b12cf1fe0d8f824b2dd78ea3aae4f3abc2e9bf368cbb322262c38c19"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/metallic/raw_ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/metallic/raw_ore.png",
+    "sha256": "90007ae7ca6ac2649d3ca8a6254fa587b1b4afc971dde9f604686183a441b43f"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/metallic/raw_ore_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/metallic/raw_ore_secondary.png",
+    "sha256": "ed699b061fcd1d7b169993435ed857d9e04e5d649200276077f699937d7cf4d6"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/radioactive/ingot.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/metallic/ingot.png",
+    "sha256": "dfaeac914c24d570c9c10b4967835af5d704bdc3de9e3b4937ed7ab0ac8b189e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/radioactive/ingot_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/metallic/ingot_overlay.png",
+    "sha256": "4095294c6d45435f1e6c5b0147ae6ed515dd861cd80340028d8ccf27b64fedd2"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/radioactive/ingot_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/radioactive/ingot_secondary.png",
+    "sha256": "063a4b49565ed10a30953664304555bcaa2dee0f05100317cfd030e79aa49a01"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/radioactive/ingot_secondary.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/radioactive/ingot_secondary.png.mcmeta",
+    "sha256": "f50e7b18046f1282c7a84c04ddb1680b3600faa88312d553ca9f2a21cf8a177b"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/radioactive/nugget.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/metallic/nugget.png",
+    "sha256": "d8fb5124b260881d7e5a646f4a3a85dd0b1dfbcbac3b6d6b618d9006d72b37d0"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/radioactive/nugget_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/metallic/nugget_overlay.png",
+    "sha256": "c65eb782d99279180335f9aefd167f21fbb9f6b244b36156338db67bfd0166f9"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/radioactive/nugget_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/radioactive/nugget_secondary.png",
+    "sha256": "47b7c5bf638f75c9fb3f5449a9dca68beddc80e46dda10ef6492e7e099c37f79"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/radioactive/nugget_secondary.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/radioactive/nugget_secondary.png.mcmeta",
+    "sha256": "f50e7b18046f1282c7a84c04ddb1680b3600faa88312d553ca9f2a21cf8a177b"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/radioactive/raw_ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/metallic/raw_ore.png",
+    "sha256": "90007ae7ca6ac2649d3ca8a6254fa587b1b4afc971dde9f604686183a441b43f"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/radioactive/raw_ore_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/radioactive/raw_ore_secondary.png",
+    "sha256": "aa2e398afcd8b140c62a2778b5acff8dea5c477aae6160662b99015816fa5629"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/radioactive/raw_ore_secondary.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/radioactive/raw_ore_secondary.png.mcmeta",
+    "sha256": "f50e7b18046f1282c7a84c04ddb1680b3600faa88312d553ca9f2a21cf8a177b"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/rough/raw_ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/raw_ore.png",
+    "sha256": "8556d1b2b8c81f39ef03e0f59f07ba2472587e9ccbf99282001490981a2b94f0"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/rough/raw_ore_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/raw_ore_secondary.png",
+    "sha256": "b9c7dd09f4a1ae87a971d1211b050ee0824153eb7faa9eb111a32d2e11b5540d"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/sand/raw_ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/raw_ore.png",
+    "sha256": "8556d1b2b8c81f39ef03e0f59f07ba2472587e9ccbf99282001490981a2b94f0"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/sand/raw_ore_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/raw_ore_secondary.png",
+    "sha256": "b9c7dd09f4a1ae87a971d1211b050ee0824153eb7faa9eb111a32d2e11b5540d"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/shiny/ingot.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/shiny/ingot.png",
+    "sha256": "9c82b7f52858ec024f340d2d1b9167f0ec186d9126eb8744ace2628884a377dc"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/shiny/ingot_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/shiny/ingot_overlay.png",
+    "sha256": "d51c26708d8b5c02a3f522ade71f13e8393c856810025f3b2b60103f1e8f8567"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/shiny/ingot_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/shiny/ingot_secondary.png",
+    "sha256": "42e98bb04813879b2c7133130d737ddbcd9388443c4e3a83da276576d7d050e4"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/shiny/nugget.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/shiny/nugget.png",
+    "sha256": "8f3bcef702c96415fb8d2d8c246556aba4973f64a3651f338304c7bbfa88e244"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/shiny/nugget_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/shiny/nugget_overlay.png",
+    "sha256": "7dd62195c0e48b7a92f21eca85db8cd34213c242c768bc187ffc1e795a8adcbf"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/shiny/nugget_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/shiny/nugget_secondary.png",
+    "sha256": "c6f05958fb0615c64e244920db596f97c79e9e455cdeeeb3e134c8df2aeb66c2"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/shiny/raw_ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/shiny/raw_ore.png",
+    "sha256": "557c3e8214b844dbf090654017e320077bc8b75966ec649be9ce134de45e3629"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/shiny/raw_ore_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/shiny/raw_ore_overlay.png",
+    "sha256": "85ef754cc662a27b34410e947311457b885311fed972ec7963b8d51fc5695352"
+  },
+  "src/main/resources/assets/list/textures/item/gt_ores/shiny/raw_ore_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/shiny/raw_ore_secondary.png",
+    "sha256": "78489dedf3734af57640f093641bb47ee26450741d775c68d6d61d84ee8f59fb"
+  }
+}

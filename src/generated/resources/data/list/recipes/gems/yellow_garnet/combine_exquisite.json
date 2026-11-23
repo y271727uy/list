@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:flawless_yellow_garnet_gem"
+    },
+    {
+      "item": "list:flawless_yellow_garnet_gem"
+    }
+  ],
+  "result": {
+    "item": "list:exquisite_yellow_garnet_gem"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_nether",
+  "features": "list:netherrack_tanzanite_ore",
+  "step": "underground_ores"
+}

@@ -1,6 +1,8 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "list:item/manmade/gregtech/naquadah_ingot"
+    "layer0": "list:item/gt_ores/metallic/ingot",
+    "layer1": "list:item/gt_ores/metallic/ingot_secondary",
+    "layer2": "list:item/gt_ores/metallic/ingot_overlay"
   }
 }

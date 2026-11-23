@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "list:block/leather_block_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "list:block/leather_block"
+    },
+    "axis=z": {
+      "model": "list:block/leather_block_horizontal",
+      "x": 90
+    }
+  }
+}

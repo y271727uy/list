@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:flawless_niter_gem"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "list:niter_gem"
+  }
+}

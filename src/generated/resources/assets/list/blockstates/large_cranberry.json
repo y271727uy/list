@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "list:block/crop/grow/large_cranberry/large_cranberry_stage0"
+    },
+    "age=1": {
+      "model": "list:block/crop/grow/large_cranberry/large_cranberry_stage1"
+    },
+    "age=2": {
+      "model": "list:block/crop/grow/large_cranberry/large_cranberry_stage2"
+    },
+    "age=3": {
+      "model": "list:block/crop/grow/large_cranberry/large_cranberry_stage3"
+    }
+  }
+}

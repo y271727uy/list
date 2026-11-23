@@ -1,0 +1,16 @@
+// Run with: gradlew --init-script scripts/verify-ore-dsl.gradle runData
+// Adds fixture ores only to this verification invocation; normal builds do not include this source set.
+allprojects {
+    plugins.withId('net.neoforged.moddev.legacyforge') {
+        sourceSets.main.java.srcDir(rootProject.file('src/oreDslSmoke/java'))
+        afterEvaluate {
+            legacyForge.runs.named('data') {
+                programArguments.set([
+                    '--mod', project.mod_id, '--all',
+                    '--output', project.rootProject.file('build/ore-dsl-smoke/resources').absolutePath,
+                    '--existing', project.rootProject.file('src/main/resources').absolutePath
+                ])
+            }
+        }
+    }
+}

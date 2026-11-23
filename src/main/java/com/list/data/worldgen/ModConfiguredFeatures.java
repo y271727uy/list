@@ -27,6 +27,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> DISK_BURROWED_MUD = create("disk_burrowed_mud");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+        com.list.dsl.OreDsl.bootstrapConfiguredFeatures(context);
         register(context, DISK_BURROWED_SAND, Feature.DISK, new DiskConfiguration(
                 RuleBasedBlockStateProvider.simple(ModBlocks.BURROWED_SAND.get()),
                 BlockPredicate.matchesBlocks(List.of(Blocks.SAND)),

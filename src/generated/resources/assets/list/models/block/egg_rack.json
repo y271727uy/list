@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "list:block/hoarding/rack/rack_top",
+    "side": "list:block/hoarding/rack/egg_rack_side",
+    "top": "list:block/hoarding/rack/rack_top"
+  }
+}

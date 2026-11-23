@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "list:block/crop/grow/american_black_currant/american_black_currant_stage0"
+    },
+    "age=1": {
+      "model": "list:block/crop/grow/american_black_currant/american_black_currant_stage1"
+    },
+    "age=2": {
+      "model": "list:block/crop/grow/american_black_currant/american_black_currant_stage2"
+    },
+    "age=3": {
+      "model": "list:block/crop/grow/american_black_currant/american_black_currant_stage3"
+    }
+  }
+}

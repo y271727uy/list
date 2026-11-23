@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "list:block/sand_rock_salt_ore"
+    }
+  }
+}

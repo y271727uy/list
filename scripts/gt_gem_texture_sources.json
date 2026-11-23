@@ -1,0 +1,838 @@
+{
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/certus/gem.png",
+    "sha256": "c38e08763c0f9f98753b63a11d70f9ffa38ed7696a25a80862e416cd87de06be"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/certus/gem_secondary.png",
+    "sha256": "f479c9ed1b0634871d093e70676b7a1dc046ac4e0c7622b56cbd8649d7eb35e5"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/certus/gem_overlay.png",
+    "sha256": "dad7a87349c2c2e0e6815ce152812855f04f1778fd7ed9f057c65429804a65ae"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_chipped.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped.png",
+    "sha256": "6a6982058ad03d603e3f851c103d76d8a47741edd41825d44d358058653fcffa"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_chipped_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped_secondary.png",
+    "sha256": "1ecfec9fcbe26beca3a2d500a5a575df4e9c32a9ea6cda78d3f98f365bc258a1"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_chipped_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped_overlay.png",
+    "sha256": "4b322bd24b904f5edc146b8cd962a198270e51b096de8f675feaa99f7a8451e8"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_flawed.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed.png",
+    "sha256": "db88102627372b4a252dfa5e3985e5cfd24460b69842baeb75a59b5497febbd6"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_flawed_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed_secondary.png",
+    "sha256": "6798cc51bb6149f6e3cd3e69e8e2880d8c393355f5096ca29ab67c1743447440"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_flawed_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed_overlay.png",
+    "sha256": "4c3cedd3328e8c7a25cea2757ab512694d1a02bd59dedec015dfa501b1a344aa"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_flawless.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless.png",
+    "sha256": "2aebfb789d82be57e9e0160eb9e818029f39683da19cb42ec6e7ec521660342e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_flawless_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_secondary.png",
+    "sha256": "6b97701ff8fa6e8c7e1f95b9d496aa6242b15d833d96b846d75880c42c35c679"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_flawless_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_overlay.png",
+    "sha256": "dea3e05a06e847a6fbfec18868f96046591d3129d91c418ad5bbe701409afc05"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_exquisite.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png",
+    "sha256": "d37879ae868bd178b9601c5812166220f0f086f7cc5a4020b0df5278ee7f52ea"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_exquisite.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_exquisite_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png",
+    "sha256": "e524031e91b09c363a1656db83706da9cd0c47ae468e8516752fec5252793950"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_exquisite_secondary.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_exquisite_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png",
+    "sha256": "9932c8e67896cde583befa722d8db3476c24740153c785e2a7a06156cfece0eb"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/certus/gem_exquisite_overlay.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/block/gt_gems/certus/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/quartz/ore.png",
+    "sha256": "8266c7ec25288f35b114cb658230844429347658851e6e085c60b4f3f0ea0c42"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem.png",
+    "sha256": "f46d37e77a6aa73b5597875a0171574bbe7d7544d7d4b9c15cbc63f313010c2c"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_secondary.png",
+    "sha256": "adefb2192adabd4971ac7ba718d4cbe4a0c6651ed6b2e01ac9653273511aa97c"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_overlay.png",
+    "sha256": "543bbfc5e2995aa90819aa4fd87bac9f98cbeeb01268426da7049d82add36e16"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_chipped.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped.png",
+    "sha256": "c14ac7653a7474c7f7c57b73396ef4eabf9dec33c4301f563921a1fef1fd0384"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_chipped_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped_secondary.png",
+    "sha256": "07880c04afd77f4a74c2e0f59d2f3fb2bef47b35c9141a455384c3246f4abd0e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_chipped_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped_overlay.png",
+    "sha256": "da7d45b430ae5c0de7eadfd2af97949084f3c3b4ea3102d87f7d95157cdb6f9d"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_flawed.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed.png",
+    "sha256": "cfb6c766cdd68b531f53d98eaaade2e33a44f455715f7a8dcaa99afaba77e394"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_flawed_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed_secondary.png",
+    "sha256": "6798cc51bb6149f6e3cd3e69e8e2880d8c393355f5096ca29ab67c1743447440"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_flawed_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed_overlay.png",
+    "sha256": "7773e720fca507f1dc36a6fee71ebc9266a13439e0d1c3f9b5641a396de337ca"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_flawless.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless.png",
+    "sha256": "2aebfb789d82be57e9e0160eb9e818029f39683da19cb42ec6e7ec521660342e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_flawless_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_secondary.png",
+    "sha256": "6b97701ff8fa6e8c7e1f95b9d496aa6242b15d833d96b846d75880c42c35c679"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_flawless_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_overlay.png",
+    "sha256": "dea3e05a06e847a6fbfec18868f96046591d3129d91c418ad5bbe701409afc05"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_exquisite.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png",
+    "sha256": "d37879ae868bd178b9601c5812166220f0f086f7cc5a4020b0df5278ee7f52ea"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_exquisite.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_exquisite_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png",
+    "sha256": "e524031e91b09c363a1656db83706da9cd0c47ae468e8516752fec5252793950"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_exquisite_secondary.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_exquisite_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png",
+    "sha256": "9932c8e67896cde583befa722d8db3476c24740153c785e2a7a06156cfece0eb"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/diamond/gem_exquisite_overlay.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/block/gt_gems/diamond/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/diamond/ore.png",
+    "sha256": "ec8b718e5ab70dbfcc1006f89a433efcf398eb5fac6f58c59e5fdf80c44b7dcf"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/emerald/gem.png",
+    "sha256": "eff113ae0b7ea686dfabc533e113fcbd85d543ec521cac07e0319c970df37a25"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/emerald/gem_secondary.png",
+    "sha256": "5f31b963dbf5b7a169554f5f0843fae1c3898b7c9a255a08adf05cc3b204fa6a"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/emerald/gem_overlay.png",
+    "sha256": "0137eacf76cdfaccf12b9678b1eb19813b74ada428d9e2a3022ae713c10efbe3"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_chipped.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped.png",
+    "sha256": "c14ac7653a7474c7f7c57b73396ef4eabf9dec33c4301f563921a1fef1fd0384"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_chipped_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped_secondary.png",
+    "sha256": "07880c04afd77f4a74c2e0f59d2f3fb2bef47b35c9141a455384c3246f4abd0e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_chipped_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped_overlay.png",
+    "sha256": "da7d45b430ae5c0de7eadfd2af97949084f3c3b4ea3102d87f7d95157cdb6f9d"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_flawed.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed.png",
+    "sha256": "cfb6c766cdd68b531f53d98eaaade2e33a44f455715f7a8dcaa99afaba77e394"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_flawed_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed_secondary.png",
+    "sha256": "6798cc51bb6149f6e3cd3e69e8e2880d8c393355f5096ca29ab67c1743447440"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_flawed_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed_overlay.png",
+    "sha256": "7773e720fca507f1dc36a6fee71ebc9266a13439e0d1c3f9b5641a396de337ca"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_flawless.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless.png",
+    "sha256": "2aebfb789d82be57e9e0160eb9e818029f39683da19cb42ec6e7ec521660342e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_flawless_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_secondary.png",
+    "sha256": "6b97701ff8fa6e8c7e1f95b9d496aa6242b15d833d96b846d75880c42c35c679"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_flawless_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_overlay.png",
+    "sha256": "dea3e05a06e847a6fbfec18868f96046591d3129d91c418ad5bbe701409afc05"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_exquisite.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png",
+    "sha256": "d37879ae868bd178b9601c5812166220f0f086f7cc5a4020b0df5278ee7f52ea"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_exquisite.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_exquisite_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png",
+    "sha256": "e524031e91b09c363a1656db83706da9cd0c47ae468e8516752fec5252793950"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_exquisite_secondary.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_exquisite_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png",
+    "sha256": "9932c8e67896cde583befa722d8db3476c24740153c785e2a7a06156cfece0eb"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/emerald/gem_exquisite_overlay.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/block/gt_gems/emerald/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/diamond/ore.png",
+    "sha256": "ec8b718e5ab70dbfcc1006f89a433efcf398eb5fac6f58c59e5fdf80c44b7dcf"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem.png",
+    "sha256": "15d727c683925e3de215cdead8b4f711ea6df044ab888e65a3715eec4ddda745"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_secondary.png",
+    "sha256": "5dd2052733b820066a23af3dfaab19e2e0afd8a11f4aebc1915025dabd56d15e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_overlay.png",
+    "sha256": "12ab53e962642ee325eac6c7653d7a955ff4bba2f6d4cac706e80ea90c9a07b8"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_chipped.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped.png",
+    "sha256": "6a6982058ad03d603e3f851c103d76d8a47741edd41825d44d358058653fcffa"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_chipped_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped_secondary.png",
+    "sha256": "1ecfec9fcbe26beca3a2d500a5a575df4e9c32a9ea6cda78d3f98f365bc258a1"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_chipped_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped_overlay.png",
+    "sha256": "4b322bd24b904f5edc146b8cd962a198270e51b096de8f675feaa99f7a8451e8"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_flawed.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed.png",
+    "sha256": "db88102627372b4a252dfa5e3985e5cfd24460b69842baeb75a59b5497febbd6"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_flawed_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed_secondary.png",
+    "sha256": "6798cc51bb6149f6e3cd3e69e8e2880d8c393355f5096ca29ab67c1743447440"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_flawed_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed_overlay.png",
+    "sha256": "4c3cedd3328e8c7a25cea2757ab512694d1a02bd59dedec015dfa501b1a344aa"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_flawless.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless.png",
+    "sha256": "2aebfb789d82be57e9e0160eb9e818029f39683da19cb42ec6e7ec521660342e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_flawless_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_secondary.png",
+    "sha256": "6b97701ff8fa6e8c7e1f95b9d496aa6242b15d833d96b846d75880c42c35c679"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_flawless_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_overlay.png",
+    "sha256": "dea3e05a06e847a6fbfec18868f96046591d3129d91c418ad5bbe701409afc05"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_exquisite.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png",
+    "sha256": "d37879ae868bd178b9601c5812166220f0f086f7cc5a4020b0df5278ee7f52ea"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_exquisite.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_exquisite_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png",
+    "sha256": "e524031e91b09c363a1656db83706da9cd0c47ae468e8516752fec5252793950"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_exquisite_secondary.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_exquisite_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png",
+    "sha256": "9932c8e67896cde583befa722d8db3476c24740153c785e2a7a06156cfece0eb"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/fine/gem_exquisite_overlay.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/block/gt_gems/fine/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/fine/ore.png",
+    "sha256": "a3d93f47f1026de532496ae3c01e5be724a04d30686a66ece25c20abcfb79fe8"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/gem_horizontal/gem.png",
+    "sha256": "e41f2247d98c733e2994c6f80186e7bb68585d4e49ce03c47415515d9f4a6457"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/gem_horizontal/gem_secondary.png",
+    "sha256": "5f5c221e0be27946a923033cd772ae7e5c9b1ec2ebad0113f3edf181056eaafd"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/gem_horizontal/gem_overlay.png",
+    "sha256": "f7b5ad2230190e4f2b13e3d805cf804720b7baa0e1a393526134e845cfb10fe9"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_chipped.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped.png",
+    "sha256": "c14ac7653a7474c7f7c57b73396ef4eabf9dec33c4301f563921a1fef1fd0384"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_chipped_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped_secondary.png",
+    "sha256": "07880c04afd77f4a74c2e0f59d2f3fb2bef47b35c9141a455384c3246f4abd0e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_chipped_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped_overlay.png",
+    "sha256": "da7d45b430ae5c0de7eadfd2af97949084f3c3b4ea3102d87f7d95157cdb6f9d"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_flawed.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed.png",
+    "sha256": "cfb6c766cdd68b531f53d98eaaade2e33a44f455715f7a8dcaa99afaba77e394"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_flawed_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed_secondary.png",
+    "sha256": "6798cc51bb6149f6e3cd3e69e8e2880d8c393355f5096ca29ab67c1743447440"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_flawed_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed_overlay.png",
+    "sha256": "7773e720fca507f1dc36a6fee71ebc9266a13439e0d1c3f9b5641a396de337ca"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_flawless.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless.png",
+    "sha256": "2aebfb789d82be57e9e0160eb9e818029f39683da19cb42ec6e7ec521660342e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_flawless_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_secondary.png",
+    "sha256": "6b97701ff8fa6e8c7e1f95b9d496aa6242b15d833d96b846d75880c42c35c679"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_flawless_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_overlay.png",
+    "sha256": "dea3e05a06e847a6fbfec18868f96046591d3129d91c418ad5bbe701409afc05"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_exquisite.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png",
+    "sha256": "d37879ae868bd178b9601c5812166220f0f086f7cc5a4020b0df5278ee7f52ea"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_exquisite.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_exquisite_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png",
+    "sha256": "e524031e91b09c363a1656db83706da9cd0c47ae468e8516752fec5252793950"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_exquisite_secondary.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_exquisite_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png",
+    "sha256": "9932c8e67896cde583befa722d8db3476c24740153c785e2a7a06156cfece0eb"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_horizontal/gem_exquisite_overlay.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/block/gt_gems/gem_horizontal/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/diamond/ore.png",
+    "sha256": "ec8b718e5ab70dbfcc1006f89a433efcf398eb5fac6f58c59e5fdf80c44b7dcf"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/gem_vertical/gem.png",
+    "sha256": "eff113ae0b7ea686dfabc533e113fcbd85d543ec521cac07e0319c970df37a25"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/gem_vertical/gem_secondary.png",
+    "sha256": "5f31b963dbf5b7a169554f5f0843fae1c3898b7c9a255a08adf05cc3b204fa6a"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/gem_vertical/gem_overlay.png",
+    "sha256": "0137eacf76cdfaccf12b9678b1eb19813b74ada428d9e2a3022ae713c10efbe3"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_chipped.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped.png",
+    "sha256": "c14ac7653a7474c7f7c57b73396ef4eabf9dec33c4301f563921a1fef1fd0384"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_chipped_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped_secondary.png",
+    "sha256": "07880c04afd77f4a74c2e0f59d2f3fb2bef47b35c9141a455384c3246f4abd0e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_chipped_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped_overlay.png",
+    "sha256": "da7d45b430ae5c0de7eadfd2af97949084f3c3b4ea3102d87f7d95157cdb6f9d"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_flawed.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed.png",
+    "sha256": "cfb6c766cdd68b531f53d98eaaade2e33a44f455715f7a8dcaa99afaba77e394"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_flawed_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed_secondary.png",
+    "sha256": "6798cc51bb6149f6e3cd3e69e8e2880d8c393355f5096ca29ab67c1743447440"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_flawed_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed_overlay.png",
+    "sha256": "7773e720fca507f1dc36a6fee71ebc9266a13439e0d1c3f9b5641a396de337ca"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_flawless.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless.png",
+    "sha256": "2aebfb789d82be57e9e0160eb9e818029f39683da19cb42ec6e7ec521660342e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_flawless_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_secondary.png",
+    "sha256": "6b97701ff8fa6e8c7e1f95b9d496aa6242b15d833d96b846d75880c42c35c679"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_flawless_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_overlay.png",
+    "sha256": "dea3e05a06e847a6fbfec18868f96046591d3129d91c418ad5bbe701409afc05"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_exquisite.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png",
+    "sha256": "d37879ae868bd178b9601c5812166220f0f086f7cc5a4020b0df5278ee7f52ea"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_exquisite.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_exquisite_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png",
+    "sha256": "e524031e91b09c363a1656db83706da9cd0c47ae468e8516752fec5252793950"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_exquisite_secondary.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_exquisite_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png",
+    "sha256": "9932c8e67896cde583befa722d8db3476c24740153c785e2a7a06156cfece0eb"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/gem_vertical/gem_exquisite_overlay.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/block/gt_gems/gem_vertical/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/diamond/ore.png",
+    "sha256": "ec8b718e5ab70dbfcc1006f89a433efcf398eb5fac6f58c59e5fdf80c44b7dcf"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/lapis/gem.png",
+    "sha256": "e5d82196cc2219d4a3743f7747507da4a3803fda00dd5eb139a81491c675a636"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/lapis/gem_secondary.png",
+    "sha256": "36f6524fc9ab5eba955a3cf8b3cef31895e08262a9e9e2f6df4397cebb13c9e5"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_overlay.png",
+    "sha256": "12ab53e962642ee325eac6c7653d7a955ff4bba2f6d4cac706e80ea90c9a07b8"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_chipped.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped.png",
+    "sha256": "6a6982058ad03d603e3f851c103d76d8a47741edd41825d44d358058653fcffa"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_chipped_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped_secondary.png",
+    "sha256": "1ecfec9fcbe26beca3a2d500a5a575df4e9c32a9ea6cda78d3f98f365bc258a1"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_chipped_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped_overlay.png",
+    "sha256": "4b322bd24b904f5edc146b8cd962a198270e51b096de8f675feaa99f7a8451e8"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_flawed.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed.png",
+    "sha256": "db88102627372b4a252dfa5e3985e5cfd24460b69842baeb75a59b5497febbd6"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_flawed_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed_secondary.png",
+    "sha256": "6798cc51bb6149f6e3cd3e69e8e2880d8c393355f5096ca29ab67c1743447440"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_flawed_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed_overlay.png",
+    "sha256": "4c3cedd3328e8c7a25cea2757ab512694d1a02bd59dedec015dfa501b1a344aa"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_flawless.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless.png",
+    "sha256": "2aebfb789d82be57e9e0160eb9e818029f39683da19cb42ec6e7ec521660342e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_flawless_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_secondary.png",
+    "sha256": "6b97701ff8fa6e8c7e1f95b9d496aa6242b15d833d96b846d75880c42c35c679"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_flawless_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_overlay.png",
+    "sha256": "dea3e05a06e847a6fbfec18868f96046591d3129d91c418ad5bbe701409afc05"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_exquisite.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png",
+    "sha256": "d37879ae868bd178b9601c5812166220f0f086f7cc5a4020b0df5278ee7f52ea"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_exquisite.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_exquisite_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png",
+    "sha256": "e524031e91b09c363a1656db83706da9cd0c47ae468e8516752fec5252793950"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_exquisite_secondary.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_exquisite_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png",
+    "sha256": "9932c8e67896cde583befa722d8db3476c24740153c785e2a7a06156cfece0eb"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lapis/gem_exquisite_overlay.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/block/gt_gems/lapis/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/lapis/ore.png",
+    "sha256": "969a656b26e69ca6cdb4724323f56c312504f8ccadb9aa62d9b12af883b6d206"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/lignite/gem.png",
+    "sha256": "1bd635a968a17c0b3e5b977dd00c3f2316070a2d929a4ff0d5b1993368f978c1"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/lignite/gem_secondary.png",
+    "sha256": "536d5d249fc972648b9c95b74d48987d72ce6ad3581ce69fde7e16eb09d67218"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_overlay.png",
+    "sha256": "12ab53e962642ee325eac6c7653d7a955ff4bba2f6d4cac706e80ea90c9a07b8"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_chipped.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped.png",
+    "sha256": "6a6982058ad03d603e3f851c103d76d8a47741edd41825d44d358058653fcffa"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_chipped_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped_secondary.png",
+    "sha256": "1ecfec9fcbe26beca3a2d500a5a575df4e9c32a9ea6cda78d3f98f365bc258a1"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_chipped_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped_overlay.png",
+    "sha256": "4b322bd24b904f5edc146b8cd962a198270e51b096de8f675feaa99f7a8451e8"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_flawed.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed.png",
+    "sha256": "db88102627372b4a252dfa5e3985e5cfd24460b69842baeb75a59b5497febbd6"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_flawed_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed_secondary.png",
+    "sha256": "6798cc51bb6149f6e3cd3e69e8e2880d8c393355f5096ca29ab67c1743447440"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_flawed_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed_overlay.png",
+    "sha256": "4c3cedd3328e8c7a25cea2757ab512694d1a02bd59dedec015dfa501b1a344aa"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_flawless.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless.png",
+    "sha256": "2aebfb789d82be57e9e0160eb9e818029f39683da19cb42ec6e7ec521660342e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_flawless_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_secondary.png",
+    "sha256": "6b97701ff8fa6e8c7e1f95b9d496aa6242b15d833d96b846d75880c42c35c679"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_flawless_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_overlay.png",
+    "sha256": "dea3e05a06e847a6fbfec18868f96046591d3129d91c418ad5bbe701409afc05"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_exquisite.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png",
+    "sha256": "d37879ae868bd178b9601c5812166220f0f086f7cc5a4020b0df5278ee7f52ea"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_exquisite.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_exquisite_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png",
+    "sha256": "e524031e91b09c363a1656db83706da9cd0c47ae468e8516752fec5252793950"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_exquisite_secondary.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_exquisite_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png",
+    "sha256": "9932c8e67896cde583befa722d8db3476c24740153c785e2a7a06156cfece0eb"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/lignite/gem_exquisite_overlay.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/block/gt_gems/lignite/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/lignite/ore.png",
+    "sha256": "eb69a7fb2996da65d29c184e0eadd71c96c68da72bacbcc67bfca5e343041d24"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/ruby/gem.png",
+    "sha256": "95609a29a5dd3df52005f62a46033b596ac38fa8ae0b4ed0fe46eebfdcd864d0"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/ruby/gem_secondary.png",
+    "sha256": "7520d80445ae19e8bd078b7cabee0230581c3e444f1a60840ebbf5e34198a686"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/opal/gem_overlay.png",
+    "sha256": "3268489cf66b76257c3e7641208b2220e54fc428a4ec6951232c01ed937cf531"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_chipped.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped.png",
+    "sha256": "c14ac7653a7474c7f7c57b73396ef4eabf9dec33c4301f563921a1fef1fd0384"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_chipped_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped_secondary.png",
+    "sha256": "07880c04afd77f4a74c2e0f59d2f3fb2bef47b35c9141a455384c3246f4abd0e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_chipped_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped_overlay.png",
+    "sha256": "da7d45b430ae5c0de7eadfd2af97949084f3c3b4ea3102d87f7d95157cdb6f9d"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_flawed.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed.png",
+    "sha256": "cfb6c766cdd68b531f53d98eaaade2e33a44f455715f7a8dcaa99afaba77e394"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_flawed_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed_secondary.png",
+    "sha256": "6798cc51bb6149f6e3cd3e69e8e2880d8c393355f5096ca29ab67c1743447440"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_flawed_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed_overlay.png",
+    "sha256": "7773e720fca507f1dc36a6fee71ebc9266a13439e0d1c3f9b5641a396de337ca"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_flawless.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless.png",
+    "sha256": "2aebfb789d82be57e9e0160eb9e818029f39683da19cb42ec6e7ec521660342e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_flawless_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_secondary.png",
+    "sha256": "6b97701ff8fa6e8c7e1f95b9d496aa6242b15d833d96b846d75880c42c35c679"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_flawless_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_overlay.png",
+    "sha256": "dea3e05a06e847a6fbfec18868f96046591d3129d91c418ad5bbe701409afc05"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_exquisite.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png",
+    "sha256": "d37879ae868bd178b9601c5812166220f0f086f7cc5a4020b0df5278ee7f52ea"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_exquisite.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_exquisite_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png",
+    "sha256": "e524031e91b09c363a1656db83706da9cd0c47ae468e8516752fec5252793950"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_exquisite_secondary.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_exquisite_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png",
+    "sha256": "9932c8e67896cde583befa722d8db3476c24740153c785e2a7a06156cfece0eb"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/opal/gem_exquisite_overlay.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/block/gt_gems/opal/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/diamond/ore.png",
+    "sha256": "ec8b718e5ab70dbfcc1006f89a433efcf398eb5fac6f58c59e5fdf80c44b7dcf"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/quartz/gem.png",
+    "sha256": "9acdb8427e26a6c443466a013d4ecd5756a7c0eecce5b065152e2b2401f81200"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/quartz/gem_secondary.png",
+    "sha256": "d7321d05ad586f2933e1167303571caedfea2ae2f84797c36156ee5df02a3f59"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_overlay.png",
+    "sha256": "12ab53e962642ee325eac6c7653d7a955ff4bba2f6d4cac706e80ea90c9a07b8"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_chipped.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped.png",
+    "sha256": "6a6982058ad03d603e3f851c103d76d8a47741edd41825d44d358058653fcffa"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_chipped_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped_secondary.png",
+    "sha256": "1ecfec9fcbe26beca3a2d500a5a575df4e9c32a9ea6cda78d3f98f365bc258a1"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_chipped_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_chipped_overlay.png",
+    "sha256": "4b322bd24b904f5edc146b8cd962a198270e51b096de8f675feaa99f7a8451e8"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_flawed.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed.png",
+    "sha256": "db88102627372b4a252dfa5e3985e5cfd24460b69842baeb75a59b5497febbd6"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_flawed_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed_secondary.png",
+    "sha256": "6798cc51bb6149f6e3cd3e69e8e2880d8c393355f5096ca29ab67c1743447440"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_flawed_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/fine/gem_flawed_overlay.png",
+    "sha256": "4c3cedd3328e8c7a25cea2757ab512694d1a02bd59dedec015dfa501b1a344aa"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_flawless.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless.png",
+    "sha256": "2aebfb789d82be57e9e0160eb9e818029f39683da19cb42ec6e7ec521660342e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_flawless_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_secondary.png",
+    "sha256": "6b97701ff8fa6e8c7e1f95b9d496aa6242b15d833d96b846d75880c42c35c679"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_flawless_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_overlay.png",
+    "sha256": "dea3e05a06e847a6fbfec18868f96046591d3129d91c418ad5bbe701409afc05"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_exquisite.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png",
+    "sha256": "d37879ae868bd178b9601c5812166220f0f086f7cc5a4020b0df5278ee7f52ea"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_exquisite.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_exquisite_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png",
+    "sha256": "e524031e91b09c363a1656db83706da9cd0c47ae468e8516752fec5252793950"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_exquisite_secondary.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_exquisite_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png",
+    "sha256": "9932c8e67896cde583befa722d8db3476c24740153c785e2a7a06156cfece0eb"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/quartz/gem_exquisite_overlay.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/block/gt_gems/quartz/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/quartz/ore.png",
+    "sha256": "8266c7ec25288f35b114cb658230844429347658851e6e085c60b4f3f0ea0c42"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/ruby/gem.png",
+    "sha256": "95609a29a5dd3df52005f62a46033b596ac38fa8ae0b4ed0fe46eebfdcd864d0"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/ruby/gem_secondary.png",
+    "sha256": "7520d80445ae19e8bd078b7cabee0230581c3e444f1a60840ebbf5e34198a686"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/ruby/gem_overlay.png",
+    "sha256": "21f0231cfd4d651daacbaa8a476bac5111f2400d3e93529e5f36b8eb4d2dae4f"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_chipped.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped.png",
+    "sha256": "c14ac7653a7474c7f7c57b73396ef4eabf9dec33c4301f563921a1fef1fd0384"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_chipped_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped_secondary.png",
+    "sha256": "07880c04afd77f4a74c2e0f59d2f3fb2bef47b35c9141a455384c3246f4abd0e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_chipped_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/diamond/gem_chipped_overlay.png",
+    "sha256": "da7d45b430ae5c0de7eadfd2af97949084f3c3b4ea3102d87f7d95157cdb6f9d"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_flawed.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed.png",
+    "sha256": "cfb6c766cdd68b531f53d98eaaade2e33a44f455715f7a8dcaa99afaba77e394"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_flawed_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed_secondary.png",
+    "sha256": "6798cc51bb6149f6e3cd3e69e8e2880d8c393355f5096ca29ab67c1743447440"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_flawed_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawed_overlay.png",
+    "sha256": "7773e720fca507f1dc36a6fee71ebc9266a13439e0d1c3f9b5641a396de337ca"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_flawless.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless.png",
+    "sha256": "2aebfb789d82be57e9e0160eb9e818029f39683da19cb42ec6e7ec521660342e"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_flawless_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_secondary.png",
+    "sha256": "6b97701ff8fa6e8c7e1f95b9d496aa6242b15d833d96b846d75880c42c35c679"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_flawless_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_flawless_overlay.png",
+    "sha256": "dea3e05a06e847a6fbfec18868f96046591d3129d91c418ad5bbe701409afc05"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_exquisite.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png",
+    "sha256": "d37879ae868bd178b9601c5812166220f0f086f7cc5a4020b0df5278ee7f52ea"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_exquisite.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_exquisite_secondary.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png",
+    "sha256": "e524031e91b09c363a1656db83706da9cd0c47ae468e8516752fec5252793950"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_exquisite_secondary.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_secondary.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_exquisite_overlay.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png",
+    "sha256": "9932c8e67896cde583befa722d8db3476c24740153c785e2a7a06156cfece0eb"
+  },
+  "src/main/resources/assets/list/textures/item/gt_gems/ruby/gem_exquisite_overlay.png.mcmeta": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/item/material_sets/dull/gem_exquisite_overlay.png.mcmeta",
+    "sha256": "b1a03b9cc0f6743057b5aea7a1bbbfa9baf2bcc8f79e1e0b6c4c216d47026997"
+  },
+  "src/main/resources/assets/list/textures/block/gt_gems/ruby/ore.png": {
+    "source": "refar/GregTech-Modern-1.20.1/src/main/resources/assets/gtceu/textures/block/material_sets/diamond/ore.png",
+    "sha256": "ec8b718e5ab70dbfcc1006f89a433efcf398eb5fac6f58c59e5fdf80c44b7dcf"
+  }
+}

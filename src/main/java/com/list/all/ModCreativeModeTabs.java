@@ -1,10 +1,12 @@
 package com.list.all;
 
 import com.list.ListMod;
+import com.list.all.moditem.ModItemWine;
 import com.list.all.moditem.ModItemsEgg;
 import com.list.all.moditem.ModItemsJelly;
 import com.list.all.moditem.ModItemsMooncake;
 import com.list.all.moditem.ModItemsSmokerFish;
+import com.list.dsl.registrate.ModOres;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -742,8 +744,8 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.GEM_MELON_SLICE.get());
                 output.accept(ModItems.FROST_MELON_SLICE.get());
                 output.accept(ModItems.QI_FRUIT_SLICE.get());
-                output.accept(ModItems.AGLIO_ROSSO_DI_SULMONA_CLOVES.get()); //
-                output.accept(ModItems.AGLIO_BIANCO_POLESANO_CLOVES.get());  //
+                output.accept(ModBlocks.AGLIO_ROSSO_DI_SULMONA.asItem()); //
+                output.accept(ModBlocks.AGLIO_BIANCO_POLESANO.asItem());  //
                 output.accept(ModItems.BEEFSTEAK_TOMATO_SLICE.get());  //
                 output.accept(ModItems.BUTTERHEAD_LETTUCE_LEAF.get());
                 output.accept(ModItems.LABA_GARLIC.get());//腊八蒜
@@ -858,6 +860,137 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.HASTING_WINE.get());       
                 output.accept(ModItems.HELLHOUND_WINE.get()); 
                 output.accept(ModItems.ROSE_WINE.get()); 
+                output.accept(ModItemWine.SEA_GRAPE_WINE.get());
+                output.accept(ModItemWine.OXYGRAPE_WINE.get());
+                output.accept(ModItemWine.PASSION_FRUIT_WINE.get());
+                output.accept(ModItemWine.STRAWBERRY_WINE.get());
+                output.accept(ModItemWine.WILDBERRY_WINE.get());
+                output.accept(ModItemWine.CRANBERRY_WINE.get());
+                output.accept(ModItemWine.BLACKBERRY_WINE.get());
+                output.accept(ModItemWine.MELON_WINE.get());
+                output.accept(ModItemWine.HAMIMELON_WINE.get());
+                output.accept(ModItemWine.JABOTICABA_WINE.get());
+                output.accept(ModItemWine.DRAGON_FRUIT_WINE.get());
+                output.accept(ModItemWine.PINK_DRAGON_FRUIT_WINE.get());
+                output.accept(ModItemWine.JUNIPER_BERRY_WINE.get());
+                output.accept(ModItemWine.ROSEHIP_WINE.get());
+                output.accept(ModItemWine.HOLLY_BERRY_WINE.get());
+                output.accept(ModItemWine.PEARLIP_WINE.get());
+                output.accept(ModItemWine.PINEAPPLE_WINE.get());
+                output.accept(ModItemWine.BANANA_WINE.get());
+                output.accept(ModItemWine.GREEN_BANANA_WINE.get());
+                output.accept(ModItemWine.WITHER_BERRY_WINE.get());
+                output.accept(ModItemWine.SOUL_BERRY_WINE.get());
+                output.accept(ModItemWine.TEA_BERRY_WINE.get());
+                output.accept(ModItemWine.GEARO_BERRY_WINE.get());
+                output.accept(ModItemWine.SPONGEKIN_WINE.get());
+                output.accept(ModItemWine.CANTALOUPE_WINE.get());
+                output.accept(ModItemWine.MINI_MELON_WINE.get());
+                output.accept(ModItemWine.CLOUD_BERRY_WINE.get());
+                output.accept(ModItemWine.SALMONBERRY_WINE.get());
+                output.accept(ModItemWine.ACAI_WINE.get());
+                output.accept(ModItemWine.WHITE_STRAWBERRY_WINE.get());
+                output.accept(ModItemWine.ARBUTUS_BERRY_WINE.get());
+                output.accept(ModItemWine.GOOSEBERRY_WINE.get());
+                output.accept(ModItemWine.LANTERN_FRUIT_WINE.get());
+                output.accept(ModItemWine.BLACKCURRANT_WINE.get());
+                output.accept(ModItemWine.LYCHEE_WINE.get());
+                output.accept(ModItemWine.GUARANA_WINE.get());
+                output.accept(ModItemWine.KEY_LIME_WINE.get());
+                output.accept(ModItemWine.GREEN_MANGO_WINE.get());
+                output.accept(ModItemWine.GREEN_APPLE_WINE.get());
+                output.accept(ModItemWine.GREEN_KUMQUAT_WINE.get());
+                output.accept(ModItemWine.CITRON_WINE.get());
+                output.accept(ModItemWine.LEMON_WINE.get());
+                output.accept(ModItemWine.STYGIAN_POMEGRANATE_WINE.get());
+                output.accept(ModItemWine.DURIAN_WINE.get());
+                output.accept(ModItemWine.GREEN_COCONUT_WINE.get());
+                output.accept(ModItemWine.DATE_WINE.get());
+                output.accept(ModItemWine.COCONUT_WINE.get());
+                output.accept(ModItemWine.AVOCADO_WINE.get());
+                output.accept(ModItemWine.KIWI_WINE.get());
+                output.accept(ModItemWine.MUSANG_KING_DURIAN_WINE.get());
+                output.accept(ModItemWine.RAW_PAPAYA_WINE.get());
+                output.accept(ModItemWine.POMEGRANATE_WINE.get());
+                output.accept(ModItemWine.REDLOVE_WINE.get());
+                output.accept(ModItemWine.RAMBUTAN_WINE.get());
+                output.accept(ModItemWine.UME_WINE.get());
+                output.accept(ModItemWine.THUNDER_FRUIT_WINE.get());
+                output.accept(ModItemWine.KUMQUAT_WINE.get());
+                output.accept(ModItemWine.LIME_WINE.get());
+                output.accept(ModItemWine.WARPED_LAUREL_WINE.get());
+                output.accept(ModItemWine.LUCUMA_WINE.get());
+                output.accept(ModItemWine.HAWTHORN_WINE.get());
+                output.accept(ModItemWine.BUDDHAS_HAND_WINE.get());
+                output.accept(ModItemWine.GOLD_KIWI_WINE.get());
+                output.accept(ModItemWine.OLIVE_WINE.get());
+                output.accept(ModItemWine.ORANGE_WINE.get());
+                output.accept(ModItemWine.SWEET_ORANGE_WINE.get());
+                output.accept(ModItemWine.KIWANO_WINE.get());
+                output.accept(ModItemWine.ILLAGE_LIME_WINE.get());
+                output.accept(ModItemWine.PEAR_WINE.get());
+                output.accept(ModItemWine.PERSIMMON_WINE.get());
+                output.accept(ModItemWine.MANGOSTEEN_WINE.get());
+                output.accept(ModItemWine.POMELO_WINE.get());
+                output.accept(ModItemWine.BAYBERRY_WINE.get());
+                output.accept(ModItemWine.APRICOT_WINE.get());
+                output.accept(ModItemWine.PAPAYA_WINE.get());
+                output.accept(ModItemWine.HOARY_APPLE_WINE.get());
+                output.accept(ModItemWine.FIG_WINE.get());
+                output.accept(ModItemWine.DUSKMELON_WINE.get());
+                output.accept(ModItemWine.EARLIGHT_FRUIT_WINE.get());
+                output.accept(ModItemWine.BOILBERRY_WINE.get());
+                output.accept(ModItemWine.SPINALBERRY_WINE.get());
+                output.accept(ModItemWine.UNRIPE_CRYSTAL_CRABAPPLE_WINE.get());
+                output.accept(ModItemWine.CRYSTAL_CRABAPPLE_WINE.get());
+                output.accept(ModItemWine.FEIJOA_WINE.get());
+                output.accept(ModItemWine.ASTRAL_BERRY_WINE.get());
+                output.accept(ModItemWine.MIXING_CRESCENT_SILVERMELON_WINE.get());
+                output.accept(ModItemWine.WANING_CRESCENT_SILVERMELON_WINE.get());
+                output.accept(ModItemWine.SILVERMELON_WINE.get());
+                output.accept(ModItemWine.ANCIENT_FRUIT_WINE.get());
+                output.accept(ModItemWine.GEMBERRY_WINE.get());
+                output.accept(ModItemWine.CRYSTAL_FRUIT_WINE.get());
+                output.accept(ModItemWine.HEART_FRUIT_WINE.get());
+                output.accept(ModItemWine.MUSHROOM_BERRY_WINE.get());
+                output.accept(ModItemWine.NECTARINE_WINE.get());
+                output.accept(ModItemWine.ORIENTAL_STRAWBERRY_WINE.get());
+                output.accept(ModItemWine.HARSH_WINTER_STRAWBERRY_WINE.get());
+                output.accept(ModItemWine.NORTHERN_HIGHBUSH_BLUEBERRY_WINE.get());
+                output.accept(ModItemWine.AMERICAN_BLACK_CURRANT_WINE.get());
+                output.accept(ModItemWine.ROVADA_RED_CURRANT_WINE.get());
+                output.accept(ModItemWine.VERSAILLES_WHITE_CURRANT_WINE.get());
+                output.accept(ModItemWine.LARGE_CRANBERRY_WINE.get());
+                output.accept(ModItemWine.LINGONBERRY_WINE.get());
+                output.accept(ModItemWine.HASCHBERG_ELDERBERRY_WINE.get());
+                output.accept(ModItemWine.EUROPEAN_RED_RASPBERRY_WINE.get());
+                output.accept(ModItemWine.EUROPEAN_BLACKBERRY_WINE.get());
+                output.accept(ModItemWine.CAFONA_APRICOT_WINE.get());
+                output.accept(ModItemWine.CINNAMON_FRUIT_WINE.get());
+                output.accept(ModItemWine.CORATION_OLIVE_WINE.get());
+                output.accept(ModItemWine.DEKOPON_ORANGE_WINE.get());
+                output.accept(ModItemWine.FIANO_WHITE_GRAPE_WINE.get());
+                output.accept(ModItemWine.GROS_MICHEL_BANANA_WINE.get());
+                output.accept(ModItemWine.KENT_MANGO_WINE.get());
+                output.accept(ModItemWine.NEBBIOLO_GRAPE_WINE.get());
+                output.accept(ModItemWine.DWARF_COCONUT_FRUIT_WINE.get());
+                output.accept(ModItemWine.RED_PINEAPPLE_WINE.get());
+                output.accept(ModItemWine.TAIWAN_GREEN_PINEAPPLE_WINE.get());
+                output.accept(ModItemWine.PERFUME_PINEAPPLE_WINE.get());
+                output.accept(ModItemWine.NYPA_WINE.get());
+                output.accept(ModItemWine.CHOCOLAT_PERSIMMON_WINE.get());
+                output.accept(ModItemWine.YELLOW_PEACH_WINE.get());
+                output.accept(ModItemWine.RED_DACCA_BANANA_WINE.get());
+                output.accept(ModItemWine.BLUE_JAVA_BANANA_WINE.get());
+                output.accept(ModItemWine.PLANTAIN_WINE.get());
+                output.accept(ModItemWine.FINGER_LEMON_WINE.get());
+                output.accept(ModItemWine.SMALL_LIME_WINE.get());
+                output.accept(ModItemWine.GUIWEI_LITCHI_WINE.get());
+                output.accept(ModItemWine.LITCHI_KING_WINE.get());
+                output.accept(ModItemWine.BLACK_BEAUTY_MELON_WINE.get());
+                output.accept(ModItemWine.GEM_MELON_WINE.get());
+                output.accept(ModItemWine.FROST_MELON_WINE.get());
+                output.accept(ModItemWine.QI_MELON_WINE.get());
                 output.accept(ModItems.SPUMANTE.get());       
                 output.accept(ModItems.WINE_PRE_SUBSTANCE.get()); 
                 output.accept(ModItems.GOKIBURI_YAKI.get()); //蟑螂乐事？
@@ -1445,7 +1578,7 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> CROPS_TAB = CREATIVE_TABS.register("crops_crops", () ->
             CreativeModeTab.builder()
                     .title(REGISTRATE.addLang("itemGroup", ListMod.rl("crops_crops"), "Crops"))  // 语言键: itemGroup.listmod.crops
-                    .icon(() -> new ItemStack(ModItems.RED_ONION.get()))
+                    .icon(() -> new ItemStack(ModBlocks.RED_ONION.asItem()))
                     .displayItems((parameters, output) -> {
                     //output.accept(ModItems.SPRING_BAMBOO_SHOOT.get());     // 春笋   //明日之后蔬菜
                     //output.accept(ModItems.HAIRY_BAMBOO_SHOOT.get());      // 毛笋
@@ -1456,11 +1589,13 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.RAPESEED.get());                // 油菜
                     //output.accept(ModItems.CHRYSANTHEMUM.get());           // 菊花
                     output.accept(ModItems.HARSH_WINTER_STRAWBERRY.get());       //凛冬草莓
+                    output.accept(ModBlocks.HARSH_WINTER_STRAWBERRY.asItem());     //凛冬草莓种子
                     //output.accept(ModItems.PARSNIP.get());                 // 防风草     //蔬菜 星露谷
                     //output.accept(ModItems.SNOW_YAM.get());                // 雪山药
-                    //output.accept(ModItems.WHITE_RADISH.get());            // 白萝卜
+                    //output.accept(ModBlocks.WHITE_RADISH.asItem());            // 白萝卜
                     //output.accept(ModItems.AMARANTH.get());                // 苋菜
                     output.accept(ModItems.RED_CABBAGE.get());               //红叶卷心菜
+                    output.accept(ModBlocks.RED_CABBAGES.asItem());         //红叶卷心菜种子
                     //output.accept(ModItems.GOLDEN_ZUCCHINI.get());  //金皮西葫芦
                     //output.accept(ModItems.ARTICHOKE.get());        //洋蓟
                     //output.accept(ModItems.BOK_CHOY.get());         //小白菜
@@ -1473,7 +1608,6 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.WASABI_ROOT.get());       //山葵根       //蔬菜 星露谷聚宝盆mod
                     //output.accept(ModItems.HOROPPA.get());           //胡罗巴
                     //output.accept(ModItems.MUSTARD.get());           //芥菜
-                    //output.accept(ModItems.OREGANO.get());           //牛至
                     //output.accept(ModItems.CHIVES.get());            //细香葱
                     //output.accept(ModItems.OKRA.get());              //秋葵
                     //output.accept(ModItems.THYMUS.get());            //百里香
@@ -1492,12 +1626,26 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.RAPESEED_FLOWER.get());   //油菜花
                     //output.accept(ModItems.PERILLA_LEAF.get());      //紫苏叶
                     output.accept(ModItems.PEA_POD.get());
-                    output.accept(ModItems.PEA.get());
+                    output.accept(ModBlocks.PEA.asItem());
                     //output.accept(ModItems.RED_BEAN.get());          //赤豆
-                    //output.accept(ModItems.BASIL.get());             //罗勒
-                    output.accept(ModItems.RED_ONION.get());           //红洋葱
+                    output.accept(ModBlocks.RED_ONION.asItem());           //红洋葱
                     //output.accept(ModItems.WHITE_ONION.get());       //白洋葱
-                    output.accept(ModItems.WHITE_RADISH.get());        //白萝卜
+                    output.accept(ModBlocks.WHITE_RADISH.asItem());        //白萝卜
+                    output.accept(ModBlocks.GREEN_RADISH.asItem());
+                    output.accept(ModBlocks.ICE_CREAM_RADISH.asItem());
+                    output.accept(ModItems.AVALANCHE_BEETROOT.get());
+                    output.accept(ModBlocks.AVALANCHE_BEETROOT.asItem());
+                    output.accept(ModBlocks.BLACK_CARROT.asItem());
+                    output.accept(ModBlocks.JAUNE_DU_DOUBS.asItem());
+                    output.accept(ModBlocks.RED_CARROT.asItem());
+                    output.accept(ModBlocks.WHITE_CARROT.asItem());
+                    output.accept(ModBlocks.YELLOW_CARROT.asItem());
+                    output.accept(ModBlocks.ADIRONDACK_BLUE.asItem());
+                    output.accept(ModBlocks.AMAROSA.asItem());
+                    output.accept(ModBlocks.BLACKBERRY_POTATO.asItem());
+                    output.accept(ModBlocks.BLUE_BELLE.asItem());
+                    output.accept(ModBlocks.PINTO_GOLD.asItem());
+                    output.accept(ModBlocks.RED_LA_SODA.asItem());
                     //output.accept(ModItems.SPEARMINT.get());            //香花薄荷
                     //output.accept(ModItems.AGAVE.get());                //龙舌兰
                     //output.accept(ModItems.BLUE_AGAVE.get());           //蓝龙舌兰
@@ -1512,11 +1660,12 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems.QUINOA.get());               //藜麦
                     // output.accept(ModItems.BUCKWHEAT.get());            //荞麦
                     //output.accept(ModItems.SAGE.get());                 //鼠尾草
-                    output.accept(ModItems.GINSENG.get());              //人参
-                    output.accept(ModItems.LAYER_TREE_LEAF.get());      //千层树叶
-                    output.accept(ModItems.CAMPHOR_LEAF.get());         //樟树叶
-                    output.accept(ModItems.EUCALYPTUS_LEAF.get());      //桉树叶
+                    //output.accept(ModItems.GINSENG.get());              //人参
+                    //output.accept(ModItems.LAYER_TREE_LEAF.get());      //千层树叶
+                    //output.accept(ModItems.CAMPHOR_LEAF.get());         //樟树叶
+                    //output.accept(ModItems.EUCALYPTUS_LEAF.get());      //桉树叶
                     output.accept(ModItems.ANCIENT_FRUIT.get());          //上古水果（星露谷水果，反正分不清了就这样吧）
+                    output.accept(ModBlocks.ANCIENT_FRUIT.asItem());          //上古水果种子
                     output.accept(ModItems.GEMBERRY.get());               //宝石甜莓
                     output.accept(ModItems.CRYSTAL_FRUIT.get());          //水晶果
                     output.accept(ModItems.HEART_FRUIT.get());            //人心果
@@ -1577,9 +1726,12 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());       //野蕉（香蕉老祖）
                     //output.accept(ModItems..get());       //小果野蕉（香蕉老祖）
                     output.accept(ModItems.RED_PINEAPPLE.get());       //红菠萝 外皮红色
+                    output.accept(ModBlocks.RED_PINEAPPLE.asItem());            //红菠萝苗
                     output.accept(ModItems.TAIWAN_GREEN_PINEAPPLE.get());       //台湾菠萝
+                    output.accept(ModBlocks.TAIWAN_GREEN_PINEAPPLE.asItem());   //台湾菠萝苗
                     //output.accept(ModItems..get());       //粉红菠萝 pinkglow 内部粉红
                     output.accept(ModItems.PERFUME_PINEAPPLE.get());       //香水凤梨
+                    output.accept(ModBlocks.PERFUME_PINEAPPLE.asItem());        //香水凤梨苗
                     //output.accept(ModItems..get());       //黄金椰子
                     //output.accept(ModItems..get());       //海底椰
                     output.accept(ModItems.NYPA.get());       //水椰
@@ -1637,44 +1789,68 @@ public class ModCreativeModeTabs {
                     //output.accept(ModItems..get());       //马泡瓜 学名Cucumis melo var. agrestis
                     //output.accept(ModItems..get());       //拇指西瓜（糙毛马㼎儿）学名Melothria scabra
                     //output.accept(ModItems..get());       //蒙特可可 Theobroma bicolor
-                    output.accept(ModItems.GLYCINE_SOJA.get());
+                    output.accept(ModBlocks.GLYCINE_SOJA.asItem());
                     output.accept(ModItems.WILD_SOYBEAN_POD.get());
                     output.accept(ModItems.AGLIO_ROSSO_DI_SULMONA.get());
                     output.accept(ModItems.AGLIO_BIANCO_POLESANO.get());
                     output.accept(ModItems.ARTICHOKES.get());
                     output.accept(ModItems.BEEFSTEAK_TOMATO.get());
                     output.accept(ModItems.BUTTERHEAD_LETTUCE.get());
+                    output.accept(ModBlocks.ARTICHOKES.asItem());               //洋蓟种子
+                    output.accept(ModBlocks.BEEFSTEAK_TOMATO.asItem());         //牛排番茄种子
+                    output.accept(ModItems.GREEN_ZEBRA_TOMATO.get());
+                    output.accept(ModBlocks.GREEN_ZEBRA_TOMATO.asItem());
+                    output.accept(ModItems.LEMON_BOY_TOMATO.get());
+                    output.accept(ModBlocks.LEMON_BOY_TOMATO.asItem());
+                    output.accept(ModItems.VALENCIA_TOMATO.get());
+                    output.accept(ModBlocks.VALENCIA_TOMATO.asItem());
+                    output.accept(ModItems.BLACK_BEAUTY_TOMATO.get());
+                    output.accept(ModBlocks.BLACK_BEAUTY_TOMATO.asItem());
+                    output.accept(ModItems.WHITE_BEAUTY_TOMATO.get());
+                    output.accept(ModBlocks.WHITE_BEAUTY_TOMATO.asItem());
+                    output.accept(ModItems.PINK_BERKELEY_TIE_DYE_TOMATO.get());
+                    output.accept(ModBlocks.PINK_BERKELEY_TIE_DYE_TOMATO.asItem());
+                    output.accept(ModItems.STRIPED_GERMAN_TOMATO.get());
+                    output.accept(ModBlocks.STRIPED_GERMAN_TOMATO.asItem());
+                    output.accept(ModBlocks.BUTTERHEAD_LETTUCE.asItem());       //黄油头生菜种子
                     output.accept(ModItems.CAFONA_APRICOT.get());
                     output.accept(ModItems.CETRIOLO_IUNGO.get());
+                    output.accept(ModBlocks.CETRIOLO_IUNGO.asItem());          //意大利长黄瓜种子
                     output.accept(ModItems.CEYLON_CINNAMON.get());
                     output.accept(ModItems.CINNAMON_FRUIT.get());
-                    output.accept(ModItems.CIPOLLA_DI_CERTALDO.get());
+                    output.accept(ModBlocks.CIPOLLA_DI_CERTALDO.asItem());
                     output.accept(ModItems.CORATION_OLIVE.get());
                     output.accept(ModItems.DEKOPON_ORANGE.get());
                     output.accept(ModItems.GENOVESE_BASIL_LEAF.get());
-                    
-                    output.accept(ModItems.HORSERADISH.get());
+                    output.accept(ModBlocks.GENOVESE_BASIL.asItem());   //热那亚罗勒种子
+
+                    output.accept(ModBlocks.HORSERADISH.asItem());
                     output.accept(ModItems.ITALIAN_LONG_EGGPLANT.get());
+                    output.accept(ModBlocks.ITALIAN_LONG_EGGPLANT.asItem());   //意大利长黑茄种子
                     output.accept(ModItems.KENT_MANGO.get());
                     output.accept(ModItems.MAGNUM_HOP.get());
                     output.accept(ModItems.OREGANO_LEAF.get());
+                    output.accept(ModBlocks.OREGANO.asItem());   //牛至种子
                     output.accept(ModItems.SWEET_CORN.get());
+                    output.accept(ModBlocks.SWEET_CORN.asItem());              //水果玉米种子
                     output.accept(ModItems.LONG_GRAIN_RICE.get());
                     output.accept(ModItems.GROS_MICHEL_BANANA.get());         //大麦克香蕉
                     output.accept(ModItems.DWARF_COCONUT_FRUIT.get());       //矮种椰子果实
                     output.accept(ModItems.GIZA_COTTON.get());
+                    output.accept(ModBlocks.GIZA_COTTON.asItem());
                     output.accept(ModItems.NEBBIOLO_GRAPE.get());     //葡萄
                     output.accept(ModItems.FIANO_WHITE_GRAPE.get());     //葡萄
-                    output.accept(ModItems.EUROPEAN_BLACKBERRY.get());       //欧洲黑莓
-                    output.accept(ModItems.AMERICAN_BLACK_CURRANT.get());       //黑醋栗
-                    output.accept(ModItems.ROVADA_RED_CURRANT.get());       //红醋栗
-                    output.accept(ModItems.VERSAILLES_WHITE_CURRANT.get());       //白醋栗
+                    output.accept(ModBlocks.EUROPEAN_BLACKBERRY.asItem());       //欧洲黑莓
+                    output.accept(ModBlocks.AMERICAN_BLACK_CURRANT.asItem());       //黑醋栗
+                    output.accept(ModBlocks.ROVADA_RED_CURRANT.asItem());       //红醋栗
+                    output.accept(ModBlocks.VERSAILLES_WHITE_CURRANT.asItem());       //白醋栗
                     output.accept(ModItems.ORIENTAL_STRAWBERRY.get());       //东方草莓
-                    output.accept(ModItems.LINGONBERRY.get());       //越橘
-                    output.accept(ModItems.HASCHBERG_ELDERBERRY.get());       //哈施贝格接骨木莓
-                    output.accept(ModItems.LARGE_CRANBERRY.get());       //大果蔓越莓
-                    output.accept(ModItems.EUROPEAN_RED_RASPBERRY.get());       //欧洲红莓
-                    output.accept(ModItems.NORTHERN_HIGHBUSH_BLUEBERRY.get());       //北高从蓝莓
+                    output.accept(ModBlocks.ORIENTAL_STRAWBERRY.asItem());         //东方草莓种子
+                    output.accept(ModBlocks.LINGONBERRY.asItem());       //越橘
+                    output.accept(ModBlocks.HASCHBERG_ELDERBERRY.asItem());       //哈施贝格接骨木莓
+                    output.accept(ModBlocks.LARGE_CRANBERRY.asItem());       //大果蔓越莓
+                    output.accept(ModBlocks.EUROPEAN_RED_RASPBERRY.asItem());       //欧洲红莓
+                    output.accept(ModBlocks.NORTHERN_HIGHBUSH_BLUEBERRY.asItem());       //北高从蓝莓
                     output.accept(ModItems.FINGER_LEMON.get());
                     output.accept(ModItems.SMALL_LIME.get());
                     output.accept(ModItems.GUIWEI_LITCHI.get());
@@ -1683,6 +1859,10 @@ public class ModCreativeModeTabs {
                     output.accept(ModBlocks.GEM_MELON.get()); 
                     output.accept(ModBlocks.FROST_MELON.get()); 
                     output.accept(ModBlocks.QI_MELON.get()); 
+                    output.accept(ModBlocks.BLACK_BEAUTY_MELON_STEM.asItem());  //黑皮西瓜种子
+                    output.accept(ModBlocks.GEM_MELON_STEM.asItem());           //宝石甜瓜种子
+                    output.accept(ModBlocks.FROST_MELON_STEM.asItem());         //霜瓜种子
+                    output.accept(ModBlocks.QI_MELON_STEM.asItem());            //齐瓜种子
                         // output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
                     //output.accept(ModItems..get());       //
@@ -1779,7 +1959,7 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> MANMADETAB = CREATIVE_TABS.register("other", () ->
             CreativeModeTab.builder()
                     .title(REGISTRATE.addLang("itemGroup", ListMod.rl("other"), "other"))  // 语言键: itemGroup.listmod.crops
-                    .icon(() -> new ItemStack(ModItems.RED_ONION.get()))
+                    .icon(() -> new ItemStack(ModBlocks.RED_ONION.asItem()))
                     .displayItems((parameters, output) -> {
                         //output.accept(ModItems..get());       //粗制花瓣饲料
                         //output.accept(ModItems..get());       //粗制瓜藤饲料
@@ -1829,7 +2009,6 @@ public class ModCreativeModeTabs {
                         //output.accept(ModItems..get());
                         output.accept(ModItems.SYALS_BAG.get()); 
                         output.accept(ModItems.CHIPS_BAG.get());
-                        output.accept(ModItems.NAQUADAH_INGOT.get());
                         output.accept(ModItems.CERAMIC_CLAY.get());
                         output.accept(ModItems.EARTH_BRICK.get());
                         output.accept(ModItems.MUD_BRICK.get());
@@ -1838,7 +2017,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PORCELAIN_BOWL.get());
                         output.accept(ModItems.PORCELAIN_PLATE.get());
                         output.accept(ModItems.TUNGSTEN_STEEL.get()); 
-                        output.accept(ModItems.ALUMINUM_INGOT.get()); 
                         output.accept(ModItems.ALUMINUM_FOIL.get()); 
                         output.accept(ModItems.TREE_SAP.get());
                         output.accept(ModItems.RAW_LACQUER_BUCKET.get());
@@ -1849,6 +2027,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CURING_SAND.get());
                         output.accept(ModBlocks.CURING_RED_SAND.get());
                         output.accept(ModBlocks.CURING_GRAVEL.get());
+                        output.accept(ModBlocks.RED_GRANITE.get());
+                        output.accept(ModBlocks.BLACK_GRANITE.get());
+                        output.accept(ModBlocks.QUARTZITE.get());
+                        output.accept(ModBlocks.KIMBERLITE.get());
+                        output.accept(ModBlocks.BLUESCHIST.get());
+                        output.accept(ModBlocks.GREENSCHIST.get());
+                        output.accept(ModBlocks.KOMATIITE.get());
+                        output.accept(ModBlocks.SLATE.get());
+                        output.accept(ModBlocks.SHALE.get());
                         //output.accept(ModItems..get());       //
                         output.accept(ModBlocks.BURROWED_SAND.get());
                         output.accept(ModBlocks.BURROWED_GRAVEL.get());
@@ -1898,6 +2085,77 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CORNFLOWER_CRATE.get());
                         output.accept(ModBlocks.CRIMSON_FUNGUS_CRATE.get());
                         output.accept(ModBlocks.CYAN_DYE_BUCKET.get());
+                        output.accept(ModBlocks.DANDELION_CRATE.get());
+                        output.accept(ModBlocks.LILY_CRATE.get());
+                        output.accept(ModBlocks.OXEYE_DAISY_CRATE.get());
+                        output.accept(ModBlocks.POPPY_CRATE.get());
+                        output.accept(ModBlocks.ORANGE_TULIP_CRATE.get());
+                        output.accept(ModBlocks.PINK_TULIP_CRATE.get());
+                        output.accept(ModBlocks.RED_TULIP_CRATE.get());
+                        output.accept(ModBlocks.WHITE_TULIP_CRATE.get());
+                        output.accept(ModBlocks.TORCHFLOWER_CRATE.get());
+                        output.accept(ModBlocks.GOLDEN_APPLE_CRATE.get());
+                        output.accept(ModBlocks.POISONOUS_POTATO_CRATE.get());
+                        output.accept(ModBlocks.RED_MUSHROOM_CRATE.get());
+                        output.accept(ModBlocks.GOLDEN_CARROT_CRATE.get());
+                        output.accept(ModBlocks.SWEET_BERRIES_CRATE.get());
+                        output.accept(ModBlocks.GLOW_BERRIES_CRATE.get());
+                        output.accept(ModBlocks.MUTTON_CRATE.get());
+                        output.accept(ModBlocks.RABBIT_CRATE.get());
+                        output.accept(ModBlocks.RABBIT_FOOT_CRATE.get());
+                        output.accept(ModBlocks.PORKCHOP_CRATE.get());
+                        output.accept(ModBlocks.ENDER_EYE_CRATE.get());
+                        output.accept(ModBlocks.ENDER_PEARL_CRATE.get());
+                        output.accept(ModBlocks.ROTTEN_FLESH_CRATE.get());
+                        output.accept(ModBlocks.SPIDER_EYE_CRATE.get());
+                        output.accept(ModBlocks.FERMENTED_SPIDER_EYE_CRATE.get());
+                        output.accept(ModBlocks.WARPED_FUNGUS_CRATE.get());
+                        output.accept(ModBlocks.NETHER_WART_CRATE.get());
+                        output.accept(ModBlocks.WITHER_ROSE_CRATE.get());
+                        output.accept(ModBlocks.POPPED_CHORUS_FRUIT_CRATE.get());
+                        output.accept(ModBlocks.SALMON_BARREL.get());
+                        output.accept(ModBlocks.INK_SAC_BARREL.get());
+                        output.accept(ModBlocks.GLOW_INK_SAC_BARREL.get());
+                        output.accept(ModBlocks.PUFFERFISH_BARREL.get());
+                        output.accept(ModBlocks.TROPICAL_FISH_BARREL.get());
+                        output.accept(ModBlocks.WHITE_DYE_BUCKET.get());
+                        output.accept(ModBlocks.ORANGE_DYE_BUCKET.get());
+                        output.accept(ModBlocks.MAGENTA_DYE_BUCKET.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_DYE_BUCKET.get());
+                        output.accept(ModBlocks.YELLOW_DYE_BUCKET.get());
+                        output.accept(ModBlocks.LIME_DYE_BUCKET.get());
+                        output.accept(ModBlocks.PINK_DYE_BUCKET.get());
+                        output.accept(ModBlocks.GRAY_DYE_BUCKET.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_DYE_BUCKET.get());
+                        output.accept(ModBlocks.PURPLE_DYE_BUCKET.get());
+                        output.accept(ModBlocks.GREEN_DYE_BUCKET.get());
+                        output.accept(ModBlocks.RED_DYE_BUCKET.get());
+                        output.accept(ModBlocks.EGG_RACK.get());
+                        output.accept(ModBlocks.TURTLE_EGG_RACK.get());
+                        output.accept(ModBlocks.SUGAR_BAG.get());
+                        output.accept(ModBlocks.GUNPOWDER_BAG.get());
+                        output.accept(ModBlocks.FEATHER_BAG.get());
+                        output.accept(ModBlocks.WHEAT_SEEDS_BAG.get());
+                        output.accept(ModBlocks.MELON_SEEDS_BAG.get());
+                        output.accept(ModBlocks.PUMPKIN_SEEDS_BAG.get());
+                        output.accept(ModBlocks.TORCHFLOWER_SEEDS_BAG.get());
+                        output.accept(ModBlocks.FLINT_BLOCK.get());
+                        output.accept(ModBlocks.NETHER_STAR_BLOCK.get());
+                        output.accept(ModBlocks.LEATHER_BLOCK.get());
+                        output.accept(ModBlocks.SUGARCANE_BUNDLE.get());
+                        output.accept(ModBlocks.STICK_BUNDLE.get());
+                        output.accept(ModBlocks.GLISTERING_MELON.get());
+                        output.accept(ModBlocks.SPOOL.get());
+                        output.accept(ModBlocks.PAPER_STACK.get());
+                        output.accept(ModBlocks.SCUTE_BLOCK.get());
+                        output.accept(ModBlocks.PHANTOM_MEMBRANE_BLOCK.get());
+                        output.accept(ModBlocks.MAGMA_CREAM_BLOCK.get());
+                        output.accept(ModBlocks.NAUTILUS_BLOCK.get());
+                        for (ModOres.Gem gem : ModOres.gems()) {
+                            for (ModOres.Grade grade : ModOres.Grade.values()) output.accept(gem.item(grade));
+                        }
+                        ModOres.gemOres().forEach(ore -> output.accept(ore.get()));
+                        ModOres.displayItems(output);
                         //output.accept(ModBlocks..get());
                         //output.accept(ModBlocks..get());
                         //output.accept(ModBlocks..get());

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:apatite_gem"
+    },
+    {
+      "item": "list:apatite_gem"
+    }
+  ],
+  "result": {
+    "item": "list:flawless_apatite_gem"
+  }
+}

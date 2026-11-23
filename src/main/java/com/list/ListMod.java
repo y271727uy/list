@@ -37,6 +37,9 @@ public class ListMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register();
         ModBlocks.register();
+        com.list.all.modblock.ModBlockOre.register();
+        com.list.worldgen.OreConfigFilter.register(modEventBus);
+        com.list.config.OreManageConfig.register();
         ModBlockEntities.register();
         ModCreativeModeTabs.register(modEventBus);
         ModMenus.register();

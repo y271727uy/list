@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "list:block/scute_block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "list:block/scute_block"
+    },
+    "facing=south": {
+      "model": "list:block/scute_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "list:block/scute_block",
+      "y": 270
+    }
+  }
+}

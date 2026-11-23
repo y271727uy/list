@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:monazite_gem"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "list:flawed_monazite_gem"
+  }
+}

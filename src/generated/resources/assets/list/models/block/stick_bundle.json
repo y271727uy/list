@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "list:block/hoarding/stick_bundle_end",
+    "side": "list:block/hoarding/stick_bundle_side"
+  }
+}

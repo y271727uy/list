@@ -1,5 +1,17 @@
 package com.list.block.crop;
 
+import com.tterrag.registrate.providers.DataGenContext;
+import com.tterrag.registrate.providers.RegistrateBlockstateProvider;
+import com.tterrag.registrate.providers.loot.RegistrateBlockLootTables;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.ApplyExplosionDecay;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -33,7 +45,11 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public abstract class CommonBerryCrop extends BushBlock implements BonemealableBlock {
+/**
+ * 通用浆果丛（age 0~3，同原版甜浆果丛），直接用浆果种植，多个作物共用这一个类。
+ * 成熟后右键采摘 1~2 个，回退到 age 1。可穿过（无碰撞箱）。种植判定沿用 BushBlock / Forge IPlantable。
+ */
+public class CommonBerryCrop extends BushBlock implements BonemealableBlock {
 
 	public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
 	private static final VoxelShape[] DEFAULT_SHAPES = new VoxelShape[]{
@@ -43,7 +59,7 @@ public abstract class CommonBerryCrop extends BushBlock implements BonemealableB
 		Block.box(1.0D, 0.0D, 1.0D, 15.0D, 11.0D, 15.0D)
 	};
 
-	protected CommonBerryCrop(BlockBehaviour.Properties properties) {
+	public CommonBerryCrop(BlockBehaviour.Properties properties) {
 		super(properties);
 		this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0));
 	}
@@ -68,14 +84,6 @@ public abstract class CommonBerryCrop extends BushBlock implements BonemealableB
 		return 3;
 	}
 
-	protected boolean mayGrowOn(BlockState state, BlockGetter level, BlockPos pos) {
-		return state.is(Blocks.DIRT)
-				|| state.is(Blocks.GRASS_BLOCK)
-				|| state.is(Blocks.COARSE_DIRT)
-				|| state.is(Blocks.PODZOL)
-				|| state.is(Blocks.FARMLAND);
-	}
-
 	public IntegerProperty getAgeProperty() {
 		return AGE;
 	}
@@ -92,32 +100,6 @@ public abstract class CommonBerryCrop extends BushBlock implements BonemealableB
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return this.getShapes()[state.getValue(this.getAgeProperty())];
-	}
-
-	@Override
-	public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-		return this.getShape(state, level, pos, context);
-	}
-
-	@Override
-	public VoxelShape getOcclusionShape(BlockState state, BlockGetter level, BlockPos pos) {
-		return this.getShape(state, level, pos, CollisionContext.empty());
-	}
-
-	@Override
-	public boolean useShapeForLightOcclusion(BlockState state) {
-		return true;
-	}
-
-	@Override
-	public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-		BlockState belowState = level.getBlockState(pos.below());
-		return this.mayGrowOn(belowState, level, pos.below()) && super.canSurvive(state, level, pos);
-	}
-
-	@Override
-	protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
-		return this.mayGrowOn(state, level, pos);
 	}
 
 	@Override
@@ -175,15 +157,6 @@ public abstract class CommonBerryCrop extends BushBlock implements BonemealableB
 	}
 
 	@Override
-	public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos) {
-		if (!state.canSurvive(level, currentPos)) {
-			level.scheduleTick(currentPos, this, 1);
-		}
-
-		return state;
-	}
-
-	@Override
 	public ItemStack getCloneItemStack(BlockGetter level, BlockPos pos, BlockState state) {
 		return new ItemStack(this.getBerryItem());
 	}
@@ -196,5 +169,30 @@ public abstract class CommonBerryCrop extends BushBlock implements BonemealableB
 	@Override
 	public SoundType getSoundType(BlockState state) {
 		return SoundType.GRASS;
+	}
+
+	// ---------- 数据生成 ----------
+
+	/** blockstate：每个 age 生成一个 cross 模型，贴图 block/crop/grow/<注册名>/<注册名>_stage0~3 */
+	public static void blockstate(DataGenContext<Block, ? extends CommonBerryCrop> ctx, RegistrateBlockstateProvider provider) {
+		String name = ctx.getName();
+		provider.getVariantBuilder(ctx.get()).forAllStates(state -> {
+			String path = "block/crop/grow/" + name + "/" + name + "_stage" + state.getValue(AGE);
+			return ConfiguredModel.builder()
+				.modelFile(provider.models().cross(path, provider.modLoc(path)).renderType("cutout"))
+				.build();
+		});
+	}
+
+	/** 破坏掉落：始终掉 1 个浆果（用于重新种植）；成熟时额外掉 1~2 个 */
+	public static void loot(RegistrateBlockLootTables lt, CommonBerryCrop block) {
+		lt.add(block, LootTable.lootTable()
+			.withPool(LootPool.lootPool().add(LootItem.lootTableItem(block.getBerryItem())))
+			.withPool(LootPool.lootPool()
+				.when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
+					.setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(AGE, 3)))
+				.add(LootItem.lootTableItem(block.getBerryItem())
+					.apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))))
+			.apply(ApplyExplosionDecay.explosionDecay()));
 	}
 }

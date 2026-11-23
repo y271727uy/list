@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "list:block/crop/grow/perfume_pineapple/perfume_pineapple_stage0"
+    },
+    "age=1": {
+      "model": "list:block/crop/grow/perfume_pineapple/perfume_pineapple_stage1"
+    },
+    "age=2": {
+      "model": "list:block/crop/grow/perfume_pineapple/perfume_pineapple_stage2"
+    },
+    "age=3": {
+      "model": "list:block/crop/grow/perfume_pineapple/perfume_pineapple_stage3"
+    },
+    "age=4": {
+      "model": "list:block/crop/grow/perfume_pineapple/perfume_pineapple_stage4"
+    }
+  }
+}

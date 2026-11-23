@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "list:block/bedrock_cinnabar_ore"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "list:block/crop/grow/jaune_du_doubs/jaune_du_doubs_stage0"
+    },
+    "age=1": {
+      "model": "list:block/crop/grow/jaune_du_doubs/jaune_du_doubs_stage1"
+    },
+    "age=2": {
+      "model": "list:block/crop/grow/jaune_du_doubs/jaune_du_doubs_stage2"
+    },
+    "age=3": {
+      "model": "list:block/crop/grow/jaune_du_doubs/jaune_du_doubs_stage3"
+    }
+  }
+}

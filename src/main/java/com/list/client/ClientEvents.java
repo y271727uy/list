@@ -13,6 +13,7 @@ import com.list.integration.jei.tooltip.SellingBinClientTooltipComponent;
 import com.list.integration.jei.tooltip.SellingBinTooltipComponent;
 */
 import com.list.client.model.LayeredItemModel;
+import com.list.item.WineItem;
 import com.list.item.util.EggItem;
 import com.list.item.util.JellyItem;
 import com.list.item.util.LayeredItem;
@@ -105,6 +106,9 @@ public class ClientEvents {
             // 这里仍然是按层 tint：灰度层次来自纹理本身，主色可按“应用XYZ色彩空间原理”来选取。
             for (JellyItem jelly : JellyItem.JELLY_ITEMS) {
                 event.register((stack, tintIndex) -> jelly.getColor(tintIndex), jelly);
+            }
+            for (WineItem wine : WineItem.WINE_ITEMS) {
+                event.register((stack, tintIndex) -> wine.getColor(tintIndex), wine);
             }
             for (SmokerFish smokerFish : SmokerFish.getSmokerFishItems()) {
                 event.register((stack, tintIndex) -> smokerFish.getColor(tintIndex), smokerFish);

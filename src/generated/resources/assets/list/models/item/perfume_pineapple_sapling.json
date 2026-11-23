@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "list:block/crop/grow/perfume_pineapple/perfume_pineapple_stage0"
+  }
+}

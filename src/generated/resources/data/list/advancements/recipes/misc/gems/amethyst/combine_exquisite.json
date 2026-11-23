@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gem": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "list:flawless_amethyst_gem"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "list:gems/amethyst/combine_exquisite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_gem",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "list:gems/amethyst/combine_exquisite"
+    ]
+  },
+  "sends_telemetry_event": false
+}

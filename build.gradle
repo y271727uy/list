@@ -146,8 +146,20 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 // Make Gradle tolerate duplicate resource paths between src/main/resources and src/generated/resources.
 // This happens frequently when you have hand-authored JSONs (existing) and also run datagen.
 // We keep the build working by choosing the first copy encountered.
+def oreChineseBase = layout.projectDirectory.file('src/main/resources/assets/list/lang/zh_cn.json').asFile
+def oreChineseAdditions = layout.projectDirectory.file('src/generated/resources/assets/list/dsl_lang/zh_cn.json').asFile
+def oreChineseOutput = layout.buildDirectory.file('resources/main/assets/list/lang/zh_cn.json')
 tasks.named('processResources', ProcessResources).configure {
+    inputs.file(oreChineseAdditions)
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    doLast {
+        if (oreChineseAdditions.isFile()) {
+            def merged = new groovy.json.JsonSlurper().parse(oreChineseBase, 'UTF-8')
+            merged.putAll(new groovy.json.JsonSlurper().parse(oreChineseAdditions, 'UTF-8'))
+            oreChineseOutput.get().asFile.setText(
+                groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(merged)) + '\n', 'UTF-8')
+        }
+    }
 }
 
 // Sets up a dependency configuration called 'localRuntime' and a deobfuscating one called 'modLocalRuntime'

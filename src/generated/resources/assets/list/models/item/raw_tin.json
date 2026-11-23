@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "list:item/gt_ores/dull/raw_ore",
+    "layer1": "list:item/gt_ores/dull/raw_ore_secondary"
+  }
+}

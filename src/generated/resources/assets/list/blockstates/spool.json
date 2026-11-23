@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "list:block/spool_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "list:block/spool"
+    },
+    "axis=z": {
+      "model": "list:block/spool_horizontal",
+      "x": 90
+    }
+  }
+}

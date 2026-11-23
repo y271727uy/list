@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:flawed_red_garnet_gem"
+    },
+    {
+      "item": "list:flawed_red_garnet_gem"
+    }
+  ],
+  "result": {
+    "item": "list:red_garnet_gem"
+  }
+}

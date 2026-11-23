@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "list:block/nether_wart_crate"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "list:block/gunpowder_bag",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "list:block/gunpowder_bag"
+    },
+    "facing=south": {
+      "model": "list:block/gunpowder_bag",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "list:block/gunpowder_bag",
+      "y": 270
+    }
+  }
+}

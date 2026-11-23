@@ -1,0 +1,21 @@
+// Uses the existing Gradle distribution/cache; no production-world files are opened.
+// Run: gradlew --no-daemon --init-script scripts/verify-ore-manage.gradle runData
+allprojects {
+    plugins.withId('net.neoforged.moddev.legacyforge') {
+        sourceSets.main.java.srcDir(rootProject.file('src/oreManageSmoke/java'))
+        sourceSets.main.output.resourcesDir = project.file('build/ore-manage-smoke/processed-resources')
+        tasks.named('processResources') {
+            destinationDir = project.file('build/ore-manage-smoke/processed-resources')
+        }
+        afterEvaluate {
+            legacyForge.runs.named('data') {
+                gameDirectory = project.file('build/ore-manage-smoke/run')
+                programArguments.set([
+                    '--mod', project.mod_id, '--all',
+                    '--output', project.rootProject.file('build/ore-manage-smoke/resources').absolutePath,
+                    '--existing', project.rootProject.file('src/main/resources').absolutePath
+                ])
+            }
+        }
+    }
+}

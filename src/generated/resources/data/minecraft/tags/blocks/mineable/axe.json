@@ -1,5 +1,34 @@
 {
   "values": [
-    "list:cornucopia_block"
+    "list:cornucopia_block",
+    "list:dandelion_crate",
+    "list:lily_crate",
+    "list:oxeye_daisy_crate",
+    "list:poppy_crate",
+    "list:orange_tulip_crate",
+    "list:pink_tulip_crate",
+    "list:red_tulip_crate",
+    "list:white_tulip_crate",
+    "list:torchflower_crate",
+    "list:golden_apple_crate",
+    "list:poisonous_potato_crate",
+    "list:red_mushroom_crate",
+    "list:golden_carrot_crate",
+    "list:sweet_berries_crate",
+    "list:glow_berries_crate",
+    "list:mutton_crate",
+    "list:rabbit_crate",
+    "list:rabbit_foot_crate",
+    "list:porkchop_crate",
+    "list:warped_fungus_crate",
+    "list:nether_wart_crate",
+    "list:wither_rose_crate",
+    "list:salmon_barrel",
+    "list:ink_sac_barrel",
+    "list:glow_ink_sac_barrel",
+    "list:pufferfish_barrel",
+    "list:tropical_fish_barrel",
+    "list:egg_rack",
+    "list:turtle_egg_rack"
   ]
 }

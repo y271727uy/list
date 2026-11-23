@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "list:block/calcite_salt_ore"
+    }
+  }
+}

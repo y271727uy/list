@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "list:block/crop/attached_melon_stem",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "list:block/crop/attached_melon_stem",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "list:block/crop/attached_melon_stem",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "list:block/crop/attached_melon_stem"
+    }
+  }
+}

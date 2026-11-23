@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "list:block/hoarding/paper_stack_top",
+    "east": "list:block/hoarding/paper_stack_side",
+    "north": "list:block/hoarding/paper_stack_front",
+    "particle": "list:block/hoarding/paper_stack_side",
+    "south": "list:block/hoarding/paper_stack_front",
+    "up": "list:block/hoarding/paper_stack_top",
+    "west": "list:block/hoarding/paper_stack_side"
+  }
+}

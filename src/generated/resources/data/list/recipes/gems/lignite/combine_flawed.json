@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:chipped_lignite_gem"
+    },
+    {
+      "item": "list:chipped_lignite_gem"
+    }
+  ],
+  "result": {
+    "item": "list:flawed_lignite_gem"
+  }
+}

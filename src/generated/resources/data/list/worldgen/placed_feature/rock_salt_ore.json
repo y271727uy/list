@@ -1,0 +1,37 @@
+{
+  "feature": "list:rock_salt_ore",
+  "placement": [
+    {
+      "type": "list:ore_config_filter",
+      "base": "stone",
+      "gem": true,
+      "ore": "list:rock_salt_ore"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 1
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": {
+          "absolute": 64
+        },
+        "min_inclusive": {
+          "absolute": 0
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

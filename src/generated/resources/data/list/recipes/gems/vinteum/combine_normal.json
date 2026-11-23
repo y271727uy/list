@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "list:flawed_vinteum_gem"
+    },
+    {
+      "item": "list:flawed_vinteum_gem"
+    }
+  ],
+  "result": {
+    "item": "list:vinteum_gem"
+  }
+}

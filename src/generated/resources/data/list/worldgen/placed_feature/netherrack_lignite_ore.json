@@ -1,0 +1,37 @@
+{
+  "feature": "list:netherrack_lignite_ore",
+  "placement": [
+    {
+      "type": "list:ore_config_filter",
+      "base": "netherrack",
+      "gem": true,
+      "ore": "list:lignite_ore"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 2
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": {
+          "absolute": 120
+        },
+        "min_inclusive": {
+          "absolute": 8
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

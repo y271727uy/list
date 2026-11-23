@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "list:block/crop/grow/italian_long_eggplant/italian_long_eggplant_stage0"
+    },
+    "age=1": {
+      "model": "list:block/crop/grow/italian_long_eggplant/italian_long_eggplant_stage1"
+    },
+    "age=2": {
+      "model": "list:block/crop/grow/italian_long_eggplant/italian_long_eggplant_stage2"
+    },
+    "age=3": {
+      "model": "list:block/crop/grow/italian_long_eggplant/italian_long_eggplant_stage3"
+    },
+    "age=4": {
+      "model": "list:block/crop/grow/italian_long_eggplant/italian_long_eggplant_stage4"
+    },
+    "age=5": {
+      "model": "list:block/crop/grow/italian_long_eggplant/italian_long_eggplant_stage5"
+    }
+  }
+}
